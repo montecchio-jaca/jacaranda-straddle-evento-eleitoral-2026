@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Straddle | Evento Eleitoral 2026 · Jacarandá Investimentos</title>
+<style>
+  :root{
+    --navy:#1A2027;
+    --blue:#1F3249;
+    --deep:#132436;
+    --bronze:#BA8758;
+    --gray:#9D9FA2;
+    --light:#DCDDDE;
+    --paper:#F5F6F7;
+    --white:#FFFFFF;
+    --green:#2F6B54;
+    --red:#A14B4B;
+    --shadow:0 14px 40px rgba(19,36,54,.10);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--navy);
+    background:linear-gradient(180deg,#eef1f4 0,#f7f8f9 360px,#f5f6f7 100%);
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .topbar{height:7px;background:var(--bronze)}
+  .shell{max-width:1240px;margin:0 auto;padding:0 22px 44px}
+  header{
+    background:linear-gradient(135deg,var(--deep),var(--blue));
+    color:#fff;
+    padding:28px 30px 30px;
+    border-radius:0 0 26px 26px;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+  }
+  .brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+  .brand span{color:var(--bronze)}
+  h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-.02em}
+  .subtitle{max-width:850px;color:#d8e1e8;font-size:16px;line-height:1.5;margin:0}
+  .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;font-size:12px;background:rgba(255,255,255,.06)}
+  .eventline{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .eventpill{padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#edf2f6}
+  .eventpill strong{color:#fff}
+  .section{margin-top:22px}
+  .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .section-title h2{margin:0;font-size:21px;letter-spacing:-.01em}
+  .section-title p{margin:0;color:#677482;font-size:12px;text-align:right}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .asset-card{
+    background:#fff;border-radius:var(--radius);padding:17px;border:1px solid #e2e6e9;box-shadow:0 6px 20px rgba(19,36,54,.05);cursor:pointer;transition:.2s ease;
+  }
+  .asset-card:hover{transform:translateY(-2px);border-color:#c7ced4}
+  .asset-card.active{outline:2px solid var(--bronze);outline-offset:1px}
+  .asset-name{font-weight:700;font-size:20px;margin-bottom:3px}
+  .asset-meta{font-size:11px;color:#7c8791;margin-bottom:13px}
+  .minirow{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #edf0f2;padding-top:8px;margin-top:8px;font-size:12px}
+  .minirow strong{font-size:13px}
+  .panel{background:#fff;border:1px solid #e0e5e8;border-radius:var(--radius);box-shadow:0 8px 26px rgba(19,36,54,.06);overflow:hidden}
+  .panel-head{padding:16px 18px;border-bottom:1px solid #e6eaed;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .panel-head h3{margin:0;font-size:16px}
+  .panel-body{padding:18px}
+  .table-wrap{overflow:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f3f5f6;text-align:right;padding:11px 12px;color:#586573;font-weight:700;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  td{padding:11px 12px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}
+  tr.clickable{cursor:pointer}
+  tr.clickable:hover td{background:#fafbfb}
+  td.emph{font-weight:700;color:var(--blue)}
+  .muted{color:#7f8992}
+  .note{font-size:12px;line-height:1.55;color:#697683}
+  .layout2{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
+  .inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+  .field label{display:block;font-size:11px;font-weight:700;color:#697580;margin:0 0 6px;text-transform:uppercase;letter-spacing:.03em}
+  .field input,.field select{
+    width:100%;padding:10px 11px;border:1px solid #cfd6dc;border-radius:10px;font:inherit;color:var(--navy);background:#fff;outline:none;
+  }
+  .field input:focus,.field select:focus{border-color:var(--bronze);box-shadow:0 0 0 3px rgba(186,135,88,.14)}
+  .inline-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+  button{
+    border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;background:var(--blue);color:#fff;
+  }
+  button.secondary{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .kpi{background:#f7f8f9;border:1px solid #e5e8eb;border-radius:14px;padding:13px}
+  .kpi .label{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#78838d;margin-bottom:5px}
+  .kpi .value{font-size:20px;font-weight:700;line-height:1.05}
+  .kpi .sub{font-size:10px;color:#83909a;margin-top:5px}
+  .chart-wrap{position:relative;height:360px}
+  canvas{width:100%;height:100%;display:block}
+  .toggle{display:inline-flex;border:1px solid #d9dee2;background:#f4f6f7;border-radius:10px;padding:3px;gap:2px}
+  .toggle button{padding:7px 9px;background:transparent;color:#65727c;border-radius:7px}
+  .toggle button.active{background:#fff;color:var(--deep);box-shadow:0 1px 5px rgba(19,36,54,.12)}
+  .scenario-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+  .rangebox{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:13px}
+  .rangebox label{font-size:11px;font-weight:700;color:#65727e;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}
+  input[type=range]{width:100%;accent-color:var(--bronze)}
+  .positive{color:var(--green)!important}
+  .negative{color:var(--red)!important}
+  .warning{background:#fff8ef;border:1px solid #ead8c2;border-left:4px solid var(--bronze);padding:13px 14px;border-radius:12px;color:#5e5144;font-size:12px;line-height:1.55}
+  .info{background:#f0f4f7;border:1px solid #d7e0e6;border-left:4px solid var(--blue);padding:13px 14px;border-radius:12px;color:#4f5e6b;font-size:12px;line-height:1.55}
+  .footer{margin-top:26px;border-top:1px solid #dfe4e8;padding:20px 0 0;color:#707c86;font-size:11px;line-height:1.6}
+  .footer-brand{font-weight:700;color:var(--blue);margin-top:8px}
+  .accent-line{height:3px;background:linear-gradient(90deg,var(--bronze) 0 90px,transparent 90px);margin:0 0 15px}
+  .smallcaps{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#7a8791;font-weight:700}
+  .selected-structure{color:var(--bronze);font-weight:700}
+  .pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}
+  .source-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .source-links a{font-size:11px;border-bottom:1px dotted #8b98a3}
+  @media(max-width:980px){.grid4{grid-template-columns:repeat(2,1fr)}.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.grid4{grid-template-columns:1fr 1fr;gap:9px}.asset-card{padding:13px}.inputs{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenario-top{grid-template-columns:1fr}.panel-body{padding:14px}.chart-wrap{height:300px}.section-title{align-items:flex-start;flex-direction:column}.section-title p{text-align:left}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="shell">
+  <header>
+    <div class="brandrow">
+      <div>
+        <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
+        <h1>Straddle | Evento Eleitoral 2026</h1>
+        <p class="subtitle">Painel interno para comparar estruturas compradas de volatilidade em BBAS3, B3SA3, PETR4 e CEAB3, com payoff no vencimento e simulação de desmontagem no pregão pós-evento.</p>
+      </div>
+      <div class="badge">USO INTERNO · SIMULAÇÃO</div>
+    </div>
+    <div class="eventline">
+      <div class="eventpill"><strong>Entrada de referência</strong> 02/10/2026</div>
+      <div class="eventpill"><strong>1º turno</strong> 04/10/2026</div>
+      <div class="eventpill"><strong>Pregão pós-evento</strong> 05/10/2026</div>
+      <div class="eventpill"><strong>Modelo</strong> Straddle / Strangle comprado</div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Prêmios observados</h2>
+      <p>Base fornecida · custo total da estrutura em % do spot</p>
+    </div>
+    <div id="assetCards" class="grid4"></div>
+  </section>
+
+  <section class="section panel">
+    <div class="panel-head">
+      <div>
+        <h3>Comparação 100% · 102% · 103%</h3>
+        <div class="note">Hipótese operacional editável: 100% = ATM; 102% = Put 98% + Call 102%; 103% = Put 97% + Call 103%.</div>
+      </div>
+      <span class="pill">Clique em uma célula para carregar</span>
+    </div>
+    <div class="table-wrap">
+      <table id="premiumTable"></table>
+    </div>
+  </section>
+
+  <section class="section layout2">
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="smallcaps">Estrutura selecionada</div>
+          <h3><span id="selectedLabel">PETR4 · 100%</span></h3>
+        </div>
+        <span id="structureKind" class="selected-structure">Straddle ATM</span>
+      </div>
+      <div class="panel-body">
+        <div class="inputs">
+          <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
+          <div class="field"><label>Estrutura</label><select id="structureSelect"></select></div>
+          <div class="field"><label>Spot de referência</label><input id="spotInput" type="number" step="0.01" value="100"></div>
+          <div class="field"><label>Strike Put (% spot)</label><input id="putStrikePct" type="number" step="0.1" value="100"></div>
+          <div class="field"><label>Strike Call (% spot)</label><input id="callStrikePct" type="number" step="0.1" value="100"></div>
+          <div class="field"><label>Custo total (% spot)</label><input id="premiumPct" type="number" step="0.01" value="3.87"></div>
+          <div class="field"><label>Data de entrada</label><input id="entryDate" type="date" value="2026-10-02"></div>
+          <div class="field"><label>Data de desmontagem</label><input id="scenarioDate" type="date" value="2026-10-05"></div>
+          <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-09"></div>
+          <div class="field"><label>Taxa livre de risco (% a.a.)</label><input id="rateInput" type="number" step="0.10" value="0.00"></div>
+          <div class="field"><label>Dividend yield (% a.a.)</label><input id="divInput" type="number" step="0.10" value="0.00"></div>
+          <div class="field"><label>IV entrada (%) · vazio = calibrar</label><input id="ivEntryInput" type="number" step="0.10" placeholder="Automático"></div>
+        </div>
+        <div class="inline-actions">
+          <button id="resetStructure">Restaurar dados da tabela</button>
+          <button id="copyLinkData" class="secondary">Copiar parâmetros</button>
+        </div>
+        <p class="note" style="margin:12px 0 0">Sem spot real informado, o painel usa <strong>100</strong> como base relativa. Basta trocar pelo spot efetivo para converter strikes e prêmios em reais mantendo a mesma estrutura percentual.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><h3>Leitura rápida</h3><span class="pill">Atualização instantânea</span></div>
+      <div class="panel-body">
+        <div class="kpis">
+          <div class="kpi"><div class="label">Prêmio total</div><div class="value" id="premiumMoney">R$ 3,87</div><div class="sub" id="premiumSub">3,87% do spot</div></div>
+          <div class="kpi"><div class="label">Break-even baixo</div><div class="value" id="beLow">96,13</div><div class="sub" id="beLowSub">−3,87%</div></div>
+          <div class="kpi"><div class="label">Break-even alto</div><div class="value" id="beHigh">103,87</div><div class="sub" id="beHighSub">+3,87%</div></div>
+          <div class="kpi"><div class="label">IV implícita calibrada</div><div class="value" id="ivCalibrated">—</div><div class="sub">IV única · BSM ilustrativo</div></div>
+        </div>
+        <div class="warning" style="margin-top:12px"><strong>Importante:</strong> preço menor não significa automaticamente melhor relação risco/retorno. Ao afastar os strikes, o débito cai, mas o ativo precisa primeiro atravessar a distância até a perna ITM.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section panel">
+    <div class="panel-head">
+      <div>
+        <h3>Payoff e marcação a mercado</h3>
+        <div class="note">Linha contínua: P/L no vencimento. Linha pontilhada: estimativa na data de desmontagem.</div>
+      </div>
+      <div class="toggle" id="metricToggle">
+        <button data-metric="spot" class="active">% do spot</button>
+        <button data-metric="premium">% sobre prêmio</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="chart-wrap"><canvas id="payoffChart"></canvas></div>
+    </div>
+  </section>
+
+  <section class="section panel">
+    <div class="panel-head">
+      <div>
+        <h3>Simulador de desmontagem em 05/10</h3>
+        <div class="note">Ajuste movimento do ativo e IV pós-evento para testar o efeito do gap versus o IV crush.</div>
+      </div>
+      <span class="pill">Black-Scholes-Merton · aproximação</span>
+    </div>
+    <div class="panel-body">
+      <div class="scenario-top">
+        <div class="rangebox">
+          <label><span>Movimento do ativo</span><strong id="moveLabel">0,0%</strong></label>
+          <input id="moveRange" type="range" min="-15" max="15" step="0.25" value="0">
+        </div>
+        <div class="rangebox">
+          <label><span>IV pós-evento</span><strong id="ivPostLabel">—</strong></label>
+          <input id="ivPostRange" type="range" min="5" max="200" step="1" value="60">
+        </div>
+        <div class="rangebox">
+          <label><span>IV pós / IV entrada</span><strong id="ivRatioLabel">100%</strong></label>
+          <input id="ivRatioRange" type="range" min="25" max="150" step="1" value="100">
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="label">Spot simulado</div><div class="value" id="simSpot">100,00</div><div class="sub" id="simMove">0,0%</div></div>
+        <div class="kpi"><div class="label">Valor estimado estrutura</div><div class="value" id="simValue">—</div><div class="sub">Call + Put · MTM</div></div>
+        <div class="kpi"><div class="label">P/L estimado</div><div class="value" id="simPnl">—</div><div class="sub" id="simPnlSpot">—</div></div>
+        <div class="kpi"><div class="label">Retorno sobre prêmio</div><div class="value" id="simRop">—</div><div class="sub">sobre o débito inicial</div></div>
+      </div>
+      <div class="info" style="margin-top:12px">O cenário de segunda-feira preserva valor extrínseco até o vencimento e depende fortemente da IV remanescente. A simulação usa uma única IV para Call e Put; skew, bid-ask, slippage, dividendos discretos e microestrutura podem produzir preços diferentes.</div>
+    </div>
+  </section>
+
+  <section class="section panel">
+    <div class="panel-head">
+      <div>
+        <h3>Matriz de cenários</h3>
+        <div class="note">Comparação entre resultado no vencimento e valor estimado na desmontagem.</div>
+      </div>
+      <span class="pill">−10% a +10%</span>
+    </div>
+    <div class="table-wrap"><table id="scenarioTable"></table></div>
+  </section>
+
+  <section class="section panel">
+    <div class="panel-head">
+      <div>
+        <h3>Convexidade por estrutura</h3>
+        <div class="note">Retorno no vencimento sobre o prêmio para movimentos absolutos de 3%, 5%, 7% e 10%.</div>
+      </div>
+      <span class="pill">Mesmo ativo · mesma base</span>
+    </div>
+    <div class="table-wrap"><table id="convexityTable"></table></div>
+  </section>
+
+  <section class="section layout2">
+    <div class="panel">
+      <div class="panel-head"><h3>Contexto histórico da referência BTG</h3></div>
+      <div class="panel-body">
+        <div class="kpis">
+          <div class="kpi"><div class="label">1º turno · abertura sex. → fech. seg.</div><div class="value">+3,02%</div><div class="sub">média 2002–2022 · n=6</div></div>
+          <div class="kpi"><div class="label">1º turno · fech. sex. → fech. seg.</div><div class="value">+2,07%</div><div class="sub">média 2002–2022 · n=6</div></div>
+          <div class="kpi"><div class="label">Eventos de alta</div><div class="value">5 de 6</div><div class="sub">descrição histórica</div></div>
+          <div class="kpi"><div class="label">Uso</div><div class="value" style="font-size:15px">Contexto</div><div class="sub">não é probabilidade futura</div></div>
+        </div>
+        <p class="note" style="margin-bottom:0">A amostra é pequena e cobre eleições passadas; não deve ser tratada como previsão para 2026. O painel usa esses números apenas como referência descritiva da página BTG consultada.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Premissas e limitações</h3></div>
+      <div class="panel-body">
+        <div class="accent-line"></div>
+        <p class="note"><strong>Payoff no vencimento:</strong> valor intrínseco de Call + Put menos o prêmio inicial.</p>
+        <p class="note"><strong>MTM pós-evento:</strong> Black-Scholes-Merton europeu, com taxa e dividend yield editáveis e uma IV única para as duas pernas.</p>
+        <p class="note"><strong>Não incorporado:</strong> skew/smile, exercício americano, dividendos discretos, leilões, spread bid-ask, custos operacionais, tributação, slippage e eventual indisponibilidade de liquidez.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <strong>Material ilustrativo para uso interno.</strong> Não constitui oferta, recomendação, garantia de rentabilidade ou indicação de posição eleitoral. A decisão de investimento exige validação dos preços, séries, liquidez, vencimentos e condições efetivas de negociação na B3.
+    <div class="source-links">
+      <a href="https://btg-pactual.github.io/btg-distribuicao-rv/premio-bova11/" target="_blank" rel="noopener">Referência visual e estatística: BTG Pactual</a>
+      <a href="https://www.tse.jus.br/eleicoes/calendario-eleitoral/calendario-eleitoral" target="_blank" rel="noopener">Calendário eleitoral: TSE</a>
+    </div>
+    <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
+  </footer>
+</div>
+
+<script>
+const DATA = {
+  BBAS3:{'100':5.05,'102':3.31,'103':2.64},
+  B3SA3:{'100':4.03,'102':2.36,'103':1.76},
+  PETR4:{'100':3.87,'102':2.22,'103':1.64},
+  CEAB3:{'100':null,'102':null,'103':4.14}
+};
+const STRUCTURES={
+  '100':{put:100,call:100,label:'100%',kind:'Straddle ATM'},
+  '102':{put:98,call:102,label:'102%',kind:'Strangle ±2%'},
+  '103':{put:97,call:103,label:'103%',kind:'Strangle ±3%'}
+};
+let state={asset:'PETR4',structure:'100',metric:'spot',calibratedIV:0.60};
+const $=id=>document.getElementById(id);
+const fmt=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt1=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+
+function normCDF(x){
+  const a1=0.319381530,a2=-0.356563782,a3=1.781477937,a4=-1.821255978,a5=1.330274429;
+  const L=Math.abs(x),k=1/(1+0.2316419*L);
+  const w=1-1/Math.sqrt(2*Math.PI)*Math.exp(-L*L/2)*(a1*k+a2*k*k+a3*k**3+a4*k**4+a5*k**5);
+  return x<0?1-w:w;
+}
+function bsmPrice(type,S,K,T,r,q,sigma){
+  if(T<=0 || sigma<=0){return type==='call'?Math.max(S-K,0):Math.max(K-S,0)}
+  const sq=Math.sqrt(T);
+  const d1=(Math.log(S/K)+(r-q+0.5*sigma*sigma)*T)/(sigma*sq);
+  const d2=d1-sigma*sq;
+  if(type==='call') return S*Math.exp(-q*T)*normCDF(d1)-K*Math.exp(-r*T)*normCDF(d2);
+  return K*Math.exp(-r*T)*normCDF(-d2)-S*Math.exp(-q*T)*normCDF(-d1);
+}
+function dateYears(a,b){
+  const d1=new Date(a+'T12:00:00'),d2=new Date(b+'T12:00:00');
+  return Math.max(0,(d2-d1)/86400000/365);
+}
+function params(){
+  const S=Number($('spotInput').value)||100;
+  const kp=S*(Number($('putStrikePct').value)||100)/100;
+  const kc=S*(Number($('callStrikePct').value)||100)/100;
+  const premPct=Number($('premiumPct').value)||0;
+  const premium=S*premPct/100;
+  const r=(Number($('rateInput').value)||0)/100;
+  const q=(Number($('divInput').value)||0)/100;
+  const Tentry=dateYears($('entryDate').value,$('expiryDate').value);
+  const Tscenario=dateYears($('scenarioDate').value,$('expiryDate').value);
+  return {S,kp,kc,premPct,premium,r,q,Tentry,Tscenario};
+}
+function calibrateIV(p){
+  const override=Number($('ivEntryInput').value);
+  if(override>0) return override/100;
+  if(p.premium<=0) return 0.01;
+  let lo=0.001,hi=5.0;
+  for(let i=0;i<100;i++){
+    const mid=(lo+hi)/2;
+    const val=bsmPrice('put',p.S,p.kp,p.Tentry,p.r,p.q,mid)+bsmPrice('call',p.S,p.kc,p.Tentry,p.r,p.q,mid);
+    if(val>p.premium) hi=mid; else lo=mid;
+  }
+  return (lo+hi)/2;
+}
+function expiryPL(move,p){
+  const Sf=p.S*(1+move/100);
+  const intrinsic=Math.max(p.kp-Sf,0)+Math.max(Sf-p.kc,0);
+  return {Sf,intrinsic,pl:intrinsic-p.premium};
+}
+function mtm(move,p,iv){
+  const Sf=p.S*(1+move/100);
+  const val=bsmPrice('put',Sf,p.kp,p.Tscenario,p.r,p.q,iv)+bsmPrice('call',Sf,p.kc,p.Tscenario,p.r,p.q,iv);
+  return {Sf,val,pl:val-p.premium};
+}
+function breakEvens(p){return {low:p.kp-p.premium,high:p.kc+p.premium}}
+
+function renderAssetCards(){
+  $('assetCards').innerHTML=Object.keys(DATA).map(a=>{
+    const d=DATA[a];
+    const rows=['100','102','103'].map(k=>`<div class="minirow"><span>${k==='100'?'ATM':k+'%'}</span><strong>${d[k]==null?'—':fmt(d[k])+'%'}</strong></div>`).join('');
+    return `<div class="asset-card ${state.asset===a?'active':''}" data-asset="${a}"><div class="asset-name">${a}</div><div class="asset-meta">Compra de volatilidade · evento</div>${rows}</div>`;
+  }).join('');
+  document.querySelectorAll('.asset-card').forEach(el=>el.onclick=()=>{state.asset=el.dataset.asset;const valid=DATA[state.asset][state.structure]!=null;if(!valid)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
+}
+function renderPremiumTable(){
+  const head=`<thead><tr><th>Ativo</th><th>100% · ATM</th><th>102% · ±2%</th><th>103% · ±3%</th></tr></thead>`;
+  const body=Object.entries(DATA).map(([a,d])=>`<tr><td><strong>${a}</strong></td>${['100','102','103'].map(k=>`<td class="${d[k]!=null?'clickable emph':'muted'}" data-a="${a}" data-k="${k}">${d[k]==null?'—':fmt(d[k])+'%'}</td>`).join('')}</tr>`).join('');
+  $('premiumTable').innerHTML=head+'<tbody>'+body+'</tbody>';
+  $('premiumTable').querySelectorAll('td[data-a]').forEach(td=>td.onclick=()=>{if(DATA[td.dataset.a][td.dataset.k]!=null){state.asset=td.dataset.a;state.structure=td.dataset.k;loadFromData();}});
+}
+function renderSelects(){
+  $('assetSelect').innerHTML=Object.keys(DATA).map(a=>`<option ${a===state.asset?'selected':''}>${a}</option>`).join('');
+  $('structureSelect').innerHTML=Object.keys(STRUCTURES).filter(k=>DATA[state.asset][k]!=null).map(k=>`<option value="${k}" ${k===state.structure?'selected':''}>${STRUCTURES[k].label} · ${STRUCTURES[k].kind}</option>`).join('');
+}
+function loadFromData(){
+  const s=STRUCTURES[state.structure];
+  $('putStrikePct').value=s.put;
+  $('callStrikePct').value=s.call;
+  $('premiumPct').value=DATA[state.asset][state.structure];
+  $('ivEntryInput').value='';
+  $('ivRatioRange').value=100;
+  renderAll();
+}
+
+function updateKpis(){
+  const p=params(); state.calibratedIV=calibrateIV(p); const be=breakEvens(p);
+  $('selectedLabel').textContent=`${state.asset} · ${STRUCTURES[state.structure].label}`;
+  $('structureKind').textContent=STRUCTURES[state.structure].kind;
+  $('premiumMoney').textContent='R$ '+fmt(p.premium);
+  $('premiumSub').textContent=fmt(p.premPct)+'% do spot';
+  $('beLow').textContent=fmt(be.low); $('beHigh').textContent=fmt(be.high);
+  $('beLowSub').textContent=pct((be.low/p.S-1)*100);
+  $('beHighSub').textContent=pct((be.high/p.S-1)*100);
+  $('ivCalibrated').textContent=fmt1(state.calibratedIV*100)+'%';
+  syncIvControls(false);
+}
+function syncIvControls(fromRatio=true){
+  const ivE=state.calibratedIV*100;
+  if(fromRatio){
+    const ratio=Number($('ivRatioRange').value)/100;
+    $('ivPostRange').value=clamp(ivE*ratio,Number($('ivPostRange').min),Number($('ivPostRange').max));
+  }
+  const ivPost=Number($('ivPostRange').value);
+  const ratio=ivE>0?ivPost/ivE*100:0;
+  $('ivPostLabel').textContent=fmt1(ivPost)+'%';
+  $('ivRatioLabel').textContent=fmt1(ratio)+'%';
+}
+function updateSimulator(){
+  const p=params(); const move=Number($('moveRange').value); const iv=Number($('ivPostRange').value)/100;
+  const r=mtm(move,p,iv);
+  $('moveLabel').textContent=pct(move); $('simSpot').textContent=fmt(r.Sf); $('simMove').textContent=pct(move);
+  $('simValue').textContent='R$ '+fmt(r.val);
+  $('simPnl').textContent=(r.pl>=0?'+':'')+'R$ '+fmt(r.pl);
+  $('simPnl').className='value '+(r.pl>=0?'positive':'negative');
+  $('simPnlSpot').textContent=pct(r.pl/p.S*100)+' do spot';
+  const rop=p.premium? r.pl/p.premium*100:0;
+  $('simRop').textContent=pct(rop); $('simRop').className='value '+(rop>=0?'positive':'negative');
+}
+function renderScenarioTable(){
+  const p=params(),iv=Number($('ivPostRange').value)/100;
+  const moves=[-10,-8,-6,-5,-4,-3,0,3,4,5,6,8,10];
+  let html='<thead><tr><th>Movimento</th><th>Spot</th><th>P/L venc. (% spot)</th><th>Ret. prêmio venc.</th><th>Valor 05/10</th><th>P/L 05/10 (% spot)</th><th>Ret. prêmio 05/10</th></tr></thead><tbody>';
+  moves.forEach(m=>{
+    const e=expiryPL(m,p),x=mtm(m,p,iv);
+    const ev=e.pl/p.S*100, er=p.premium?e.pl/p.premium*100:0, xv=x.pl/p.S*100, xr=p.premium?x.pl/p.premium*100:0;
+    html+=`<tr><td>${pct(m)}</td><td>${fmt(e.Sf)}</td><td class="${ev>=0?'positive':'negative'}">${pct(ev)}</td><td class="${er>=0?'positive':'negative'}">${pct(er)}</td><td>${fmt(x.val)}</td><td class="${xv>=0?'positive':'negative'}">${pct(xv)}</td><td class="${xr>=0?'positive':'negative'}">${pct(xr)}</td></tr>`;
+  });
+  $('scenarioTable').innerHTML=html+'</tbody>';
+}
+function renderConvexity(){
+  const p=params(),S=p.S,asset=state.asset,moves=[3,5,7,10];
+  let html='<thead><tr><th>Estrutura</th><th>Custo</th>'+moves.map(m=>`<th>|Mov.| ${m}%</th>`).join('')+'</tr></thead><tbody>';
+  ['100','102','103'].forEach(k=>{
+    const cost=DATA[asset][k]; if(cost==null)return;
+    const st=STRUCTURES[k],kp=S*st.put/100,kc=S*st.call/100,prem=S*cost/100;
+    html+=`<tr><td><strong>${st.label}</strong> · ${st.kind}</td><td>${fmt(cost)}%</td>`;
+    moves.forEach(m=>{const Sf=S*(1+m/100),intr=Math.max(kp-Sf,0)+Math.max(Sf-kc,0),pl=intr-prem,rop=pl/prem*100;html+=`<td class="${rop>=0?'positive':'negative'}">${pct(rop)}</td>`});
+    html+='</tr>';
+  });
+  $('convexityTable').innerHTML=html+'</tbody>';
+}
+function drawChart(){
+  const canvas=$('payoffChart'); const rect=canvas.getBoundingClientRect(); const dpr=window.devicePixelRatio||1;
+  canvas.width=Math.max(600,Math.floor(rect.width*dpr)); canvas.height=Math.max(300,Math.floor(rect.height*dpr));
+  const ctx=canvas.getContext('2d'); ctx.scale(dpr,dpr);
+  const W=canvas.width/dpr,H=canvas.height/dpr;
+  const pad={l:58,r:18,t:18,b:42}; const iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
+  const p=params(),iv=Number($('ivPostRange').value)/100;
+  const xs=[];for(let m=-15;m<=15.0001;m+=.25)xs.push(m);
+  const ys1=xs.map(m=>{const v=expiryPL(m,p).pl;return state.metric==='spot'?v/p.S*100:(p.premium?v/p.premium*100:0)});
+  const ys2=xs.map(m=>{const v=mtm(m,p,iv).pl;return state.metric==='spot'?v/p.S*100:(p.premium?v/p.premium*100:0)});
+  let ymin=Math.min(...ys1,...ys2,0),ymax=Math.max(...ys1,...ys2,0); const extra=(ymax-ymin||1)*.12;ymin-=extra;ymax+=extra;
+  const xPx=m=>pad.l+(m+15)/30*iw; const yPx=y=>pad.t+(ymax-y)/(ymax-ymin)*ih;
+  ctx.clearRect(0,0,W,H);
+  ctx.font='11px Arial';ctx.fillStyle='#75828d';ctx.strokeStyle='#e4e8eb';ctx.lineWidth=1;
+  [-15,-10,-5,0,5,10,15].forEach(x=>{const px=xPx(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+x+'%',px-11,H-16)});
+  const steps=5;for(let i=0;i<=steps;i++){const y=ymin+(ymax-ymin)*i/steps,py=yPx(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText((y>=0?'+':'')+Math.round(y)+'%',5,py+4)}
+  ctx.strokeStyle='#87939d';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(pad.l,yPx(0));ctx.lineTo(W-pad.r,yPx(0));ctx.stroke();
+  function line(ys,color,dash=[]){ctx.save();ctx.strokeStyle=color;ctx.lineWidth=2.4;ctx.setLineDash(dash);ctx.beginPath();ys.forEach((y,i)=>{const px=xPx(xs[i]),py=yPx(y);if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)});ctx.stroke();ctx.restore();}
+  line(ys1,'#1F3249'); line(ys2,'#BA8758',[7,5]);
+  const st=STRUCTURES[state.structure];[st.put-100,st.call-100].forEach(m=>{if(m>=-15&&m<=15){ctx.save();ctx.strokeStyle='rgba(19,36,54,.35)';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(xPx(m),pad.t);ctx.lineTo(xPx(m),H-pad.b);ctx.stroke();ctx.restore();}});
+  ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
+  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('05/10 MTM',W-116,21);
+}
+function renderAll(){
+  renderAssetCards();renderPremiumTable();renderSelects();updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();
+}
+
+$('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;if(DATA[state.asset][state.structure]==null)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
+$('structureSelect').addEventListener('change',e=>{state.structure=e.target.value;loadFromData();});
+['spotInput','putStrikePct','callStrikePct','premiumPct','entryDate','scenarioDate','expiryDate','rateInput','divInput','ivEntryInput'].forEach(id=>$(id).addEventListener('input',()=>{updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();}));
+$('moveRange').addEventListener('input',()=>{updateSimulator();});
+$('ivRatioRange').addEventListener('input',()=>{syncIvControls(true);updateSimulator();renderScenarioTable();drawChart();});
+$('ivPostRange').addEventListener('input',()=>{syncIvControls(false);updateSimulator();renderScenarioTable();drawChart();});
+$('resetStructure').onclick=()=>loadFromData();
+$('copyLinkData').onclick=async()=>{const p=params();const text=`${state.asset} ${STRUCTURES[state.structure].label} | Spot ${fmt(p.S)} | Put ${fmt(p.kp)} | Call ${fmt(p.kc)} | Prêmio ${fmt(p.premium)} (${fmt(p.premPct)}%) | Entrada ${$('entryDate').value} | Saída ${$('scenarioDate').value} | Venc. ${$('expiryDate').value}`;try{await navigator.clipboard.writeText(text);$('copyLinkData').textContent='Copiado';setTimeout(()=>$('copyLinkData').textContent='Copiar parâmetros',1300)}catch(e){prompt('Copie os parâmetros:',text)}};
+document.querySelectorAll('#metricToggle button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#metricToggle button').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.metric=b.dataset.metric;drawChart();});
+window.addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(drawChart,100)});
+
+renderAll();
+</script>
+</body>
+</html>
