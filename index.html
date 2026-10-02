@@ -117,11 +117,11 @@
 
   .export-overlay{position:fixed;inset:0;background:rgba(19,36,54,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
   .export-overlay.open{display:flex}
-  .export-dialog{width:min(1480px,98vw);max-height:95vh;background:#fff;border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.28);overflow:hidden;display:flex;flex-direction:column}
-  .export-head{padding:14px 16px;border-bottom:1px solid #e2e6e9;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .export-dialog{width:min(1480px,98vw);max-height:95vh;background:#132436;border:1px solid rgba(186,135,88,.35);border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.38);overflow:hidden;display:flex;flex-direction:column}
+  .export-head{padding:14px 16px;border-bottom:1px solid rgba(186,135,88,.28);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#fff;background:#132436}
   .export-head strong{font-size:15px}
-  .export-preview{background:#e9edf0;padding:14px;overflow:auto;flex:1}
-  #factsheetCanvas{display:block;width:100%;height:auto;max-width:100%;background:#fff;box-shadow:0 6px 22px rgba(19,36,54,.15)}
+  .export-preview{background:#0B1722;padding:14px;overflow:auto;flex:1}
+  #factsheetCanvas{display:block;width:100%;height:auto;max-width:100%;background:#0B1722;box-shadow:0 8px 28px rgba(0,0,0,.38)}
   .export-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
   .export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
   @media(max-width:980px){.grid4{grid-template-columns:repeat(2,1fr)}.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
@@ -197,7 +197,7 @@
         <div class="inline-actions">
           <button id="resetStructure">Restaurar dados da tabela</button>
           <button id="copyLinkData" class="secondary">Copiar parâmetros</button>
-          <button id="generateJpg" class="secondary">Gerar JPG</button>
+          <button id="generateJpg" class="secondary">Gerar Factsheet JPG</button>
         </div>
         <p class="note" style="margin:12px 0 0">PETR4 está pré-carregada com o spot de <strong>R$ 49,66</strong> da referência enviada. Nos demais ativos, enquanto o spot efetivo não for informado, o painel usa <strong>100</strong> como base relativa.</p>
       </div>
@@ -328,7 +328,7 @@
 <div id="exportOverlay" class="export-overlay" aria-hidden="true">
   <div class="export-dialog">
     <div class="export-head">
-      <strong>Factsheet · prévia para JPG 1600 × 900</strong>
+      <strong>Factsheet Jacarandá · prévia JPG 1600 × 900</strong>
       <div class="export-actions">
         <button id="downloadJpg">Baixar JPG</button>
         <button id="closeExport" class="export-close">Fechar</button>
@@ -579,117 +579,215 @@ function factsheetLevels(p){
 function drawFactsheet(){
   const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1600,H=900;
   c.width=W;c.height=H;
-  const C={navy:'#1A2027',blue:'#1F3249',deep:'#132436',bronze:'#BA8758',gray:'#747B82',line:'#D8D5D0',paper:'#F4F1EC',paper2:'#EEE9E2',green:'#23916F',red:'#C84F52',greenFill:'#BBDCCD',redFill:'#E8B7B2',white:'#FFFFFF'};
-  const p=params(),be=breakEvens(p),st=STRUCTURES[state.structure];
+
+  const C={
+    bg:'#0B1722',
+    deep:'#102333',
+    panel:'#142A3B',
+    panel2:'#193247',
+    panel3:'#0F2231',
+    blue:'#1F3249',
+    gold:'#BA8758',
+    gold2:'#D2A26F',
+    white:'#FFFFFF',
+    text:'#E8EEF3',
+    muted:'#9EACB7',
+    line:'#29485F',
+    soft:'#DCDDDE',
+    green:'#59C59E',
+    greenFill:'rgba(89,197,158,.18)',
+    red:'#F07C7C',
+    redFill:'rgba(240,124,124,.16)'
+  };
+
+  const p=params(),be=breakEvens(p);
   const type=Math.abs(p.kc-p.kp)<1e-8?'Straddle':'Strangle';
   const callPct=p.kc/p.S*100,putPct=p.kp/p.S*100;
   const days=calendarDays($('entryDate').value,$('expiryDate').value);
-  ctx.fillStyle=C.white;ctx.fillRect(0,0,W,H);
 
-  canvasText(ctx,'JACARANDÁ INVESTIMENTOS',50,53,16,700,C.bronze);
-  canvasText(ctx,'Estruturadas Jacarandá',50,99,40,700,C.navy);
-  canvasText(ctx,'Compra de '+type+' · '+state.asset,50,130,21,400,C.bronze);
+  ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
 
-  const badgeY=100;
-  canvasRoundRect(ctx,1310,badgeY,155,35,8,C.bronze);
-  canvasText(ctx,'Venc. '+formatDateBr($('expiryDate').value),1388,badgeY+23,14,700,C.white,'center');
-  canvasRoundRect(ctx,1475,badgeY,75,35,8,C.bronze);
-  canvasText(ctx,days+' dias',1512,badgeY+23,14,700,C.white,'center');
-  ctx.fillStyle=C.bronze;ctx.fillRect(50,148,1500,2);
+  // detalhes de marca - linhas e acentos
+  ctx.fillStyle=C.gold;ctx.fillRect(0,0,12,H);
+  ctx.fillStyle=C.deep;ctx.fillRect(12,0,W-12,156);
+  ctx.fillStyle=C.gold;ctx.fillRect(60,154,W-120,2);
 
-  const lx=50,lw=590,gap=14,half=(lw-gap)/2,rx=670,rw=880;
-  function infoBox(x,y,w,h,label,value,sub,valueColor){
-    canvasRoundRect(ctx,x,y,w,h,10,C.paper);
-    canvasText(ctx,label,x+15,y+23,12,400,C.gray);
-    canvasText(ctx,value,x+15,y+47,20,700,valueColor||C.navy);
-    if(sub)canvasText(ctx,sub,x+15,y+47,12,400,C.gray,'left');
+  // cabeçalho premium
+  canvasText(ctx,'JACARANDÁ INVESTIMENTOS',62,50,16,700,C.gold2);
+  canvasText(ctx,'Estruturadas Jacarandá',62,96,43,700,C.white);
+  canvasText(ctx,type+' comprado · '+state.asset+' · Evento Eleitoral 2026',62,128,21,400,C.text);
+
+  function chip(x,y,w,text,filled){
+    canvasRoundRect(ctx,x,y,w,34,17,filled?C.gold:C.panel2,filled?null:C.line);
+    canvasText(ctx,text,x+w/2,y+22,12,700,filled?C.bg:C.text,'center');
   }
-  canvasRoundRect(ctx,lx,168,lw,56,10,C.paper);
-  canvasText(ctx,'Estrutura',lx+15,190,12,400,C.gray);
-  canvasText(ctx,'Compra Call a '+fmt1(callPct)+'% + Compra Put a '+fmt1(putPct)+'%',lx+15,214,18,700,C.navy);
+  chip(1170,48,150,'VENC. '+formatDateBr($('expiryDate').value),true);
+  chip(1330,48,96,days+' DIAS',false);
+  chip(1436,48,104,state.asset,false);
 
-  const rowYs=[234,298,362,426,490],bh=54;
-  infoBox(lx,rowYs[0],half,bh,'Ativo',state.asset);
-  infoBox(lx+half+gap,rowYs[0],half,bh,'Preço atual',brl(p.S));
-  infoBox(lx,rowYs[1],half,bh,'Prêmio pago',fmt(p.premPct)+'%');
-  canvasText(ctx,brl(p.premium),lx+122,rowYs[1]+47,12,400,C.gray);
-  infoBox(lx+half+gap,rowYs[1],half,bh,'Valor alocado',brl(p.allocation));
-  infoBox(lx,rowYs[2],half,bh,'Risco máximo',fmt(p.premPct)+'%',null,C.red);
-  canvasText(ctx,brl(p.allocation),lx+122,rowYs[2]+47,12,400,C.gray);
-  infoBox(lx+half+gap,rowYs[2],half,bh,'Lucro máximo','Ilimitado',null,C.green);
-  infoBox(lx,rowYs[3],half,bh,'Breakeven de alta',brl(be.high));
-  canvasText(ctx,pct((be.high/p.S-1)*100),lx+168,rowYs[3]+47,12,400,C.gray);
-  infoBox(lx+half+gap,rowYs[3],half,bh,'Breakeven de baixa',brl(be.low));
-  canvasText(ctx,pct((be.low/p.S-1)*100),lx+half+gap+175,rowYs[3]+47,12,400,C.gray);
-  infoBox(lx,rowYs[4],half,bh,'Quantidade por perna',fmt0(p.qty));
-  infoBox(lx+half+gap,rowYs[4],half,bh,'Notional equivalente',brl(p.notional));
+  // layout principal
+  const leftX=60,leftW=515,gap=28,rightX=leftX+leftW+gap,rightW=1600-rightX-60;
+  const topY=184;
 
-  // Gráfico de payoff (% sobre o prêmio)
-  const gx=50,gy=558,gw=590,gh=268;
-  canvasRoundRect(ctx,gx,gy,gw,gh,10,C.paper);
-  canvasText(ctx,'Resultado no vencimento (% sobre o prêmio)',gx+15,gy+25,12,400,C.gray);
-  const plot={x:gx+80,y:gy+40,w:gw-115,h:gh-78};
-  const samples=[];for(let m=-9;m<=9.0001;m+=0.1){const e=expiryPL(m,p),r=p.premium?e.pl/p.premium*100:0;samples.push({m:m,r:r})}
-  const maxR=Math.max(100,...samples.map(o=>o.r));const yMax=Math.ceil(maxR/50)*50,yMin=-100;
-  const xp=m=>plot.x+(m+9)/18*plot.w,yp=v=>plot.y+(yMax-v)/(yMax-yMin)*plot.h,y0=yp(0);
-  ctx.strokeStyle='#A8A9A8';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(plot.x,y0);ctx.lineTo(plot.x+plot.w,y0);ctx.stroke();ctx.setLineDash([]);
-  ctx.strokeStyle=C.line;ctx.beginPath();ctx.moveTo(xp(0),plot.y);ctx.lineTo(xp(0),plot.y+plot.h);ctx.stroke();
+  // painel de estrutura
+  canvasRoundRect(ctx,leftX,topY,leftW,134,18,C.panel);
+  canvasText(ctx,'ESTRUTURA',leftX+22,topY+29,11,700,C.gold2);
+  canvasText(ctx,'Compra Call '+fmt1(callPct)+'%  +  Compra Put '+fmt1(putPct)+'%',leftX+22,topY+63,23,700,C.white);
+  canvasText(ctx,'Prêmio total '+fmt(p.premPct)+'% do spot  ·  risco máximo limitado ao prêmio',leftX+22,topY+91,13,400,C.muted);
+  canvasText(ctx,'Entrada '+formatDateBr($('entryDate').value)+'  |  Desmontagem de referência '+formatDateBr($('scenarioDate').value),leftX+22,topY+115,12,400,C.muted);
+
+  // cards executivos
+  const cardGap=12,cardW=(leftW-cardGap)/2,cardH=78;
+  function metricCard(x,y,label,value,sub,accent){
+    canvasRoundRect(ctx,x,y,cardW,cardH,14,C.panel2,C.line);
+    canvasText(ctx,label.toUpperCase(),x+16,y+22,10,700,C.muted);
+    canvasText(ctx,value,x+16,y+49,21,700,accent||C.white);
+    if(sub)canvasText(ctx,sub,x+16,y+67,10,400,C.muted);
+  }
+  let cy=topY+150;
+  metricCard(leftX,cy,'Preço atual',brl(p.S),'spot de referência');
+  metricCard(leftX+cardW+cardGap,cy,'Prêmio pago',fmt(p.premPct)+'% · '+brl(p.premium),'por unidade');
+  cy+=cardH+cardGap;
+  metricCard(leftX,cy,'Breakeven baixa',brl(be.low),pct((be.low/p.S-1)*100),C.gold2);
+  metricCard(leftX+cardW+cardGap,cy,'Breakeven alta',brl(be.high),pct((be.high/p.S-1)*100),C.gold2);
+  cy+=cardH+cardGap;
+  metricCard(leftX,cy,'Valor alocado',brl(p.allocation),'prêmio total');
+  metricCard(leftX+cardW+cardGap,cy,'Notional equivalente',brl(p.notional),fmt0(p.qty)+' por perna');
+
+  // payoff
+  const chartY=cy+cardH+18,chartH=260;
+  canvasRoundRect(ctx,leftX,chartY,leftW,chartH,18,C.panel3,C.line);
+  canvasText(ctx,'PAYOFF NO VENCIMENTO',leftX+20,chartY+28,11,700,C.gold2);
+  canvasText(ctx,'% sobre o prêmio pago',leftX+20,chartY+49,11,400,C.muted);
+
+  const plot={x:leftX+58,y:chartY+64,w:leftW-92,h:chartH-102};
+  const samples=[];
+  for(let m=-10;m<=10.0001;m+=0.1){
+    const e=expiryPL(m,p),r=p.premium?e.pl/p.premium*100:0;
+    samples.push({m:m,r:r});
+  }
+  const maxR=Math.max(100,...samples.map(o=>o.r));
+  const yMax=Math.max(100,Math.ceil(maxR/50)*50),yMin=-100;
+  const xp=m=>plot.x+(m+10)/20*plot.w;
+  const yp=v=>plot.y+(yMax-v)/(yMax-yMin)*plot.h;
+  const y0=yp(0);
+
+  ctx.strokeStyle=C.line;ctx.lineWidth=1;
+  [-10,-5,0,5,10].forEach(m=>{
+    const x=xp(m);ctx.beginPath();ctx.moveTo(x,plot.y);ctx.lineTo(x,plot.y+plot.h);ctx.stroke();
+    canvasText(ctx,(m>0?'+':'')+m+'%',x,chartY+chartH-14,10,400,C.muted,'center');
+  });
+  [yMin,0,yMax].forEach(v=>{
+    const y=yp(v);ctx.beginPath();ctx.moveTo(plot.x,y);ctx.lineTo(plot.x+plot.w,y);ctx.stroke();
+  });
+
   for(let i=0;i<samples.length-1;i++){
-    let a=samples[i],b=samples[i+1];
-    function fillSeg(aa,bb,col){
-      ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(xp(aa.m),y0);ctx.lineTo(xp(aa.m),yp(aa.r));ctx.lineTo(xp(bb.m),yp(bb.r));ctx.lineTo(xp(bb.m),y0);ctx.closePath();ctx.fill();
+    const a=samples[i],b=samples[i+1];
+    function fillSegment(aa,bb,col){
+      ctx.fillStyle=col;ctx.beginPath();
+      ctx.moveTo(xp(aa.m),y0);ctx.lineTo(xp(aa.m),yp(aa.r));
+      ctx.lineTo(xp(bb.m),yp(bb.r));ctx.lineTo(xp(bb.m),y0);ctx.closePath();ctx.fill();
     }
-    if((a.r>=0&&b.r>=0)||(a.r<=0&&b.r<=0))fillSeg(a,b,a.r>=0?C.greenFill:C.redFill);
+    if((a.r>=0&&b.r>=0)||(a.r<=0&&b.r<=0)) fillSegment(a,b,a.r>=0?C.greenFill:C.redFill);
     else{
       const t=(0-a.r)/(b.r-a.r),cross={m:a.m+t*(b.m-a.m),r:0};
-      fillSeg(a,cross,a.r>=0?C.greenFill:C.redFill);fillSeg(cross,b,b.r>=0?C.greenFill:C.redFill);
+      fillSegment(a,cross,a.r>=0?C.greenFill:C.redFill);
+      fillSegment(cross,b,b.r>=0?C.greenFill:C.redFill);
     }
   }
-  ctx.strokeStyle=C.bronze;ctx.lineWidth=2.5;ctx.beginPath();samples.forEach((o,i)=>{if(i===0)ctx.moveTo(xp(o.m),yp(o.r));else ctx.lineTo(xp(o.m),yp(o.r))});ctx.stroke();ctx.lineWidth=1;
+  ctx.strokeStyle=C.gold2;ctx.lineWidth=3;ctx.beginPath();
+  samples.forEach((o,i)=>{if(i===0)ctx.moveTo(xp(o.m),yp(o.r));else ctx.lineTo(xp(o.m),yp(o.r))});
+  ctx.stroke();ctx.lineWidth=1;
+
   const beMoves=[(be.low/p.S-1)*100,(be.high/p.S-1)*100];
-  beMoves.forEach(m=>{if(m>=-9&&m<=9){ctx.fillStyle=C.bronze;ctx.beginPath();ctx.arc(xp(m),y0,5,0,Math.PI*2);ctx.fill()}});
-  canvasText(ctx,'+'+fmt0(yMax)+'%',gx+38,plot.y+5,11,400,C.gray,'center');
-  canvasText(ctx,'0%',gx+48,y0+4,11,400,C.gray,'center');
-  canvasText(ctx,'-100%',gx+40,plot.y+plot.h+4,11,400,C.gray,'center');
-  [-9,-4.5,0,4.5,9].forEach(m=>canvasText(ctx,(100+m).toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:1})+'%',xp(m),gy+gh-14,11,400,C.gray,'center'));
+  beMoves.forEach(m=>{
+    if(m>=-10&&m<=10){
+      ctx.fillStyle=C.gold2;ctx.beginPath();ctx.arc(xp(m),y0,5,0,Math.PI*2);ctx.fill();
+    }
+  });
+  canvasText(ctx,'+'+fmt0(yMax)+'%',leftX+30,plot.y+4,10,400,C.muted,'center');
+  canvasText(ctx,'0%',leftX+30,y0+4,10,400,C.muted,'center');
+  canvasText(ctx,'-100%',leftX+30,plot.y+plot.h+4,10,400,C.muted,'center');
 
-  // Tabela de cenários do vencimento
-  const levels=factsheetLevels(p),ty=168,headerH=46,rowH=32;
-  const widths=[195,150,175,175,185],headers=[['Ativo','(% do preço atual)'],['Ativo','(R$)'],['Resultado sobre','notional'],['Resultado sobre','prêmio (%)'],['Resultado sobre','prêmio (R$)']];
-  let cx=rx;
+  // painel direito - tabela de cenários
+  canvasRoundRect(ctx,rightX,topY,rightW,472,18,C.panel,C.line);
+  canvasText(ctx,'CENÁRIOS NO VENCIMENTO',rightX+22,topY+30,11,700,C.gold2);
+  canvasText(ctx,'Retorno da estrutura para movimentos do ativo',rightX+22,topY+53,13,400,C.muted);
+
+  const tableX=rightX+20,tableY=topY+76,tableW=rightW-40;
+  const widths=[145,145,180,190,190],headerH=42,rowH=27;
+  const headers=['MOVIMENTO','ATIVO (R$)','P/L / NOTIONAL','RET. / PRÊMIO','P/L SOBRE ALOCAÇÃO'];
+  let hx=tableX;
   headers.forEach((h,i)=>{
-    ctx.fillStyle='#E6DFD6';ctx.fillRect(cx,ty,widths[i],headerH);
-    canvasText(ctx,h[0],cx+widths[i]-12,ty+18,11,700,C.bronze,'right');
-    canvasText(ctx,h[1],cx+widths[i]-12,ty+33,11,700,C.bronze,'right');cx+=widths[i];
+    ctx.fillStyle=C.deep;ctx.fillRect(hx,tableY,widths[i],headerH);
+    canvasText(ctx,h,hx+widths[i]-12,tableY+26,10,700,C.gold2,'right');
+    hx+=widths[i];
   });
+
+  const levels=factsheetLevels(p);
   levels.forEach((lv,idx)=>{
-    const yy=ty+headerH+idx*rowH,e=expiryPL(lv.move,p),rn=e.pl/p.S*100,rr=p.premium?e.pl/p.premium*100:0,rrMoney=rr/100*p.allocation;
-    const bg=lv.kind==='spot'?C.bronze:(lv.kind==='be'?'#E7DED3':(idx%2?'#FBFAF8':'#F5F2EE'));
-    ctx.fillStyle=bg;ctx.fillRect(rx,yy,rw,rowH);
-    ctx.strokeStyle='#DDD9D3';ctx.beginPath();ctx.moveTo(rx,yy+rowH);ctx.lineTo(rx+rw,yy+rowH);ctx.stroke();
-    let xx=rx;
-    const first=(100+lv.move).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'%';
-    canvasText(ctx,first,xx+12,yy+21,13,400,lv.kind==='spot'?C.navy:C.navy);
-    if(lv.label){canvasRoundRect(ctx,xx+95,yy+8,58,17,7,'#EFE5D8',C.bronze);canvasText(ctx,lv.label,xx+124,yy+20,9,700,C.bronze,'center')}
+    const yy=tableY+headerH+idx*rowH;
+    const e=expiryPL(lv.move,p);
+    const rn=e.pl/p.S*100;
+    const rr=p.premium?e.pl/p.premium*100:0;
+    const rrMoney=rr/100*p.allocation;
+    const isSpot=lv.kind==='spot';
+    const isBE=lv.kind==='be';
+
+    ctx.fillStyle=isSpot?'rgba(186,135,88,.22)':(idx%2?C.panel2:C.panel3);
+    ctx.fillRect(tableX,yy,tableW,rowH);
+
+    if(isSpot){ctx.fillStyle=C.gold;ctx.fillRect(tableX,yy,4,rowH);}
+    if(isBE){ctx.fillStyle=C.gold2;ctx.fillRect(tableX,yy,3,rowH);}
+
+    let xx=tableX;
+    const moveTxt=pct(lv.move);
+    canvasText(ctx,moveTxt,xx+12,yy+19,12,isSpot?700:400,isSpot?C.gold2:C.text);
+    if(lv.label){
+      canvasRoundRect(ctx,xx+78,yy+6,56,16,8,isBE?'rgba(186,135,88,.18)':C.deep,isBE?C.gold:null);
+      canvasText(ctx,lv.label,xx+106,yy+18,8,700,C.gold2,'center');
+    }
     xx+=widths[0];
-    canvasText(ctx,brl(e.Sf),xx+widths[1]-12,yy+21,13,400,C.navy,'right');xx+=widths[1];
-    const rnCol=rn>0.0001?C.green:(rn<-0.0001?C.red:C.gray),rrCol=rr>0.0001?C.green:(rr<-0.0001?C.red:C.gray);
-    canvasText(ctx,pct(rn),xx+widths[2]-12,yy+21,13,rr!==0?700:400,rnCol,'right');xx+=widths[2];
-    canvasText(ctx,pct(rr),xx+widths[3]-12,yy+21,13,rr!==0?700:400,rrCol,'right');xx+=widths[3];
-    const money=(rrMoney>0?'+':'')+brl(rrMoney);
-    canvasText(ctx,money,xx+widths[4]-12,yy+21,13,rr!==0?700:400,rrCol,'right');
+
+    canvasText(ctx,brl(e.Sf),xx+widths[1]-12,yy+19,12,400,C.text,'right');xx+=widths[1];
+    const rnCol=rn>0.0001?C.green:(rn<-0.0001?C.red:C.muted);
+    const rrCol=rr>0.0001?C.green:(rr<-0.0001?C.red:C.muted);
+    canvasText(ctx,pct(rn),xx+widths[2]-12,yy+19,12,700,rnCol,'right');xx+=widths[2];
+    canvasText(ctx,pct(rr),xx+widths[3]-12,yy+19,12,700,rrCol,'right');xx+=widths[3];
+    canvasText(ctx,(rrMoney>0?'+':'')+brl(rrMoney),xx+widths[4]-12,yy+19,12,700,rrCol,'right');
   });
 
-  const tableBottom=ty+headerH+levels.length*rowH;
-  const ey=Math.max(620,tableBottom+12),eh=826-ey;
-  canvasRoundRect(ctx,rx,ey,rw,eh,10,C.paper);
-  canvasText(ctx,'Explicação',rx+15,ey+25,12,400,C.gray);
-  const lossText=type==='Straddle'?'se o ativo encerrar próximo ao strike comum':'se o ativo encerrar entre os strikes';
-  const expl='O investidor compra uma Call (strike em '+fmt1(callPct)+'% do preço atual) e uma Put (strike em '+fmt1(putPct)+'%) de '+state.asset+', ambas com vencimento em '+formatDateBr($('expiryDate').value)+'. A operação lucra se o ativo se mover com força para qualquer lado: o ganho aparece acima de '+brl(be.high)+' ou abaixo de '+brl(be.low)+'. A perda máxima é o prêmio pago, atingida '+lossText+'.';
-  canvasWrap(ctx,expl,rx+15,ey+49,rw-30,20,5,C.navy,14,400);
+  // painel de leitura/insights
+  const infoY=topY+492,infoH=chartY+chartH-infoY;
+  canvasRoundRect(ctx,rightX,infoY,rightW,infoH,18,C.panel3,C.line);
+  canvasText(ctx,'LEITURA DA ESTRUTURA',rightX+22,infoY+28,11,700,C.gold2);
 
-  canvasText(ctx,'Resultados calculados no vencimento, antes de custos operacionais, taxas e impostos, e sem marcação a mercado. Não constitui recomendação de investimento. Operações com opções podem resultar na perda total do prêmio pago.',50,857,11,400,C.gray);
-  canvasText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1550,857,11,400,C.gray,'right');
+  const riskText='Risco máximo';
+  const lossValue=brl(p.allocation);
+  const payoffText='Lucro máximo';
+  const payoffValue='Ilimitado';
+  const qtyText='Quantidade';
+  const qtyValue=fmt0(p.qty)+' / perna';
+
+  function insight(x,label,value,color){
+    canvasText(ctx,label.toUpperCase(),x,infoY+58,9,700,C.muted);
+    canvasText(ctx,value,x,infoY+84,18,700,color||C.white);
+  }
+  insight(rightX+22,riskText,lossValue,C.red);
+  insight(rightX+212,payoffText,payoffValue,C.green);
+  insight(rightX+392,qtyText,qtyValue,C.white);
+
+  ctx.strokeStyle=C.line;ctx.beginPath();ctx.moveTo(rightX+22,infoY+104);ctx.lineTo(rightX+rightW-22,infoY+104);ctx.stroke();
+
+  const lossText=type==='Straddle'?'próximo ao strike comum':'entre os strikes';
+  const expl='A estrutura compra volatilidade dos dois lados do ativo. No vencimento, passa a apresentar resultado positivo acima de '+brl(be.high)+' ou abaixo de '+brl(be.low)+'. O risco é limitado ao prêmio desembolsado e a perda máxima ocorre com o ativo '+lossText+'.';
+  canvasWrap(ctx,expl,rightX+22,infoY+132,rightW-44,20,4,C.text,13,400);
+
+  // rodapé premium
+  ctx.fillStyle=C.gold;ctx.fillRect(60,838,1480,1);
+  canvasText(ctx,'SIMULAÇÃO ILUSTRATIVA · USO INTERNO',60,866,10,700,C.gold2);
+  canvasText(ctx,'Resultados no vencimento, antes de custos, taxas e impostos. Não constitui recomendação de investimento. Opções podem resultar na perda integral do prêmio pago.',60,884,10,400,C.muted);
+  canvasText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1540,874,10,400,C.muted,'right');
 }
 function openFactsheetExport(){
   drawFactsheet();
