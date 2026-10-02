@@ -114,6 +114,10 @@
   .pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}
   .source-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
   .source-links a{font-size:11px;border-bottom:1px dotted #8b98a3}
+  .view-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .view-nav a{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.20);color:#fff;background:rgba(255,255,255,.06)}
+  .view-nav a:hover{text-decoration:none;background:rgba(255,255,255,.12)}
+  .view-nav a.active{background:var(--bronze);border-color:var(--bronze);color:var(--deep)}
 
   .export-overlay{position:fixed;inset:0;background:rgba(19,36,54,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
   .export-overlay.open{display:flex}
@@ -138,7 +142,10 @@
         <h1>Straddle &amp; Strangle | Evento Eleitoral 2026</h1>
         <p class="subtitle">Painel interno para comparar estruturas compradas de volatilidade em BBAS3, B3SA3, PETR4 e CEAB3, com payoff no vencimento e simulação de desmontagem no pregão pós-evento.</p>
       </div>
-      <div class="badge">USO INTERNO · SIMULAÇÃO</div>
+      <div class="view-nav">
+        <a class="active" href="index.html">Simulador Base</a>
+        <a href="simulador-mercado.html">Mercado Beta</a>
+      </div>
     </div>
     <div class="eventline">
       <div class="eventpill"><strong>Entrada de referência</strong> 02/10/2026</div>
