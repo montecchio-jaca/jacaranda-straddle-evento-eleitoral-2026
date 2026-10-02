@@ -18,3 +18,11 @@ Painel interativo da Jacarandá Investimentos para simulação de estruturas com
 O site é servido pelo arquivo `index.html` na branch `main`.
 
 Uso interno. Simulação ilustrativa; não constitui recomendação de investimento ou posição eleitoral.
+
+
+## Duas camadas
+
+- `index.html`: simulador base, preservado.
+- `simulador-mercado.html`: versão beta pré-operacional com tentativa de captura automática do spot via Yahoo Finance, strikes reais/editáveis, Ask manual das opções, fee, custos, custo all-in, metas de retorno e range elástico.
+
+A camada Mercado Beta usa dados indicativos e pode sofrer atraso ou indisponibilidade. Os preços das opções devem ser confirmados no book antes de qualquer execução.
