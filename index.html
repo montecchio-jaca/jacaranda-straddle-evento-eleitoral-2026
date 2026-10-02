@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Straddle | Evento Eleitoral 2026 · Jacarandá Investimentos</title>
+<title>Straddle &amp; Strangle | Evento Eleitoral 2026 · Jacarandá Investimentos</title>
 <style>
   :root{
     --navy:#1A2027;
@@ -114,6 +114,16 @@
   .pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}
   .source-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
   .source-links a{font-size:11px;border-bottom:1px dotted #8b98a3}
+
+  .export-overlay{position:fixed;inset:0;background:rgba(19,36,54,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
+  .export-overlay.open{display:flex}
+  .export-dialog{width:min(1480px,98vw);max-height:95vh;background:#fff;border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.28);overflow:hidden;display:flex;flex-direction:column}
+  .export-head{padding:14px 16px;border-bottom:1px solid #e2e6e9;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .export-head strong{font-size:15px}
+  .export-preview{background:#e9edf0;padding:14px;overflow:auto;flex:1}
+  #factsheetCanvas{display:block;width:100%;height:auto;max-width:100%;background:#fff;box-shadow:0 6px 22px rgba(19,36,54,.15)}
+  .export-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
   @media(max-width:980px){.grid4{grid-template-columns:repeat(2,1fr)}.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:620px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.grid4{grid-template-columns:1fr 1fr;gap:9px}.asset-card{padding:13px}.inputs{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenario-top{grid-template-columns:1fr}.panel-body{padding:14px}.chart-wrap{height:300px}.section-title{align-items:flex-start;flex-direction:column}.section-title p{text-align:left}}
 </style>
@@ -125,7 +135,7 @@
     <div class="brandrow">
       <div>
         <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
-        <h1>Straddle | Evento Eleitoral 2026</h1>
+        <h1>Straddle &amp; Strangle | Evento Eleitoral 2026</h1>
         <p class="subtitle">Painel interno para comparar estruturas compradas de volatilidade em BBAS3, B3SA3, PETR4 e CEAB3, com payoff no vencimento e simulação de desmontagem no pregão pós-evento.</p>
       </div>
       <div class="badge">USO INTERNO · SIMULAÇÃO</div>
@@ -164,21 +174,22 @@
       <div class="panel-head">
         <div>
           <div class="smallcaps">Estrutura selecionada</div>
-          <h3><span id="selectedLabel">PETR4 · 100%</span></h3>
+          <h3><span id="selectedLabel">PETR4 · 103%</span></h3>
         </div>
-        <span id="structureKind" class="selected-structure">Straddle ATM</span>
+        <span id="structureKind" class="selected-structure">Strangle ±3%</span>
       </div>
       <div class="panel-body">
         <div class="inputs">
           <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
           <div class="field"><label>Estrutura</label><select id="structureSelect"></select></div>
-          <div class="field"><label>Spot de referência</label><input id="spotInput" type="number" step="0.01" value="100"></div>
-          <div class="field"><label>Strike Put (% spot)</label><input id="putStrikePct" type="number" step="0.1" value="100"></div>
-          <div class="field"><label>Strike Call (% spot)</label><input id="callStrikePct" type="number" step="0.1" value="100"></div>
-          <div class="field"><label>Custo total (% spot)</label><input id="premiumPct" type="number" step="0.01" value="3.87"></div>
+          <div class="field"><label>Spot de referência</label><input id="spotInput" type="number" step="0.01" value="49.66"></div>
+          <div class="field"><label>Strike Put (% spot)</label><input id="putStrikePct" type="number" step="0.1" value="97"></div>
+          <div class="field"><label>Strike Call (% spot)</label><input id="callStrikePct" type="number" step="0.1" value="103"></div>
+          <div class="field"><label>Custo total (% spot)</label><input id="premiumPct" type="number" step="0.01" value="1.64"></div>
+          <div class="field"><label>Valor alocado (R$)</label><input id="allocationInput" type="number" step="100" min="0" value="10000"></div>
           <div class="field"><label>Data de entrada</label><input id="entryDate" type="date" value="2026-10-02"></div>
           <div class="field"><label>Data de desmontagem</label><input id="scenarioDate" type="date" value="2026-10-05"></div>
-          <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-09"></div>
+          <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-07"></div>
           <div class="field"><label>Taxa livre de risco (% a.a.)</label><input id="rateInput" type="number" step="0.10" value="0.00"></div>
           <div class="field"><label>Dividend yield (% a.a.)</label><input id="divInput" type="number" step="0.10" value="0.00"></div>
           <div class="field"><label>IV entrada (%) · vazio = calibrar</label><input id="ivEntryInput" type="number" step="0.10" placeholder="Automático"></div>
@@ -186,8 +197,9 @@
         <div class="inline-actions">
           <button id="resetStructure">Restaurar dados da tabela</button>
           <button id="copyLinkData" class="secondary">Copiar parâmetros</button>
+          <button id="generateJpg" class="secondary">Gerar JPG</button>
         </div>
-        <p class="note" style="margin:12px 0 0">Sem spot real informado, o painel usa <strong>100</strong> como base relativa. Basta trocar pelo spot efetivo para converter strikes e prêmios em reais mantendo a mesma estrutura percentual.</p>
+        <p class="note" style="margin:12px 0 0">PETR4 está pré-carregada com o spot de <strong>R$ 49,66</strong> da referência enviada. Nos demais ativos, enquanto o spot efetivo não for informado, o painel usa <strong>100</strong> como base relativa.</p>
       </div>
     </div>
 
@@ -199,6 +211,8 @@
           <div class="kpi"><div class="label">Break-even baixo</div><div class="value" id="beLow">96,13</div><div class="sub" id="beLowSub">−3,87%</div></div>
           <div class="kpi"><div class="label">Break-even alto</div><div class="value" id="beHigh">103,87</div><div class="sub" id="beHighSub">+3,87%</div></div>
           <div class="kpi"><div class="label">IV implícita calibrada</div><div class="value" id="ivCalibrated">—</div><div class="sub">IV única · BSM ilustrativo</div></div>
+          <div class="kpi"><div class="label">Quantidade por perna</div><div class="value" id="qtyLeg">—</div><div class="sub">aprox. · unidades</div></div>
+          <div class="kpi"><div class="label">Notional equivalente</div><div class="value" id="notionalEq">—</div><div class="sub">spot × quantidade</div></div>
         </div>
         <div class="warning" style="margin-top:12px"><strong>Importante:</strong> preço menor não significa automaticamente melhor relação risco/retorno. Ao afastar os strikes, o débito cai, mas o ativo precisa primeiro atravessar a distância até a perna ITM.</div>
       </div>
@@ -310,6 +324,22 @@
   </footer>
 </div>
 
+
+<div id="exportOverlay" class="export-overlay" aria-hidden="true">
+  <div class="export-dialog">
+    <div class="export-head">
+      <strong>Factsheet · prévia para JPG 1600 × 900</strong>
+      <div class="export-actions">
+        <button id="downloadJpg">Baixar JPG</button>
+        <button id="closeExport" class="export-close">Fechar</button>
+      </div>
+    </div>
+    <div class="export-preview">
+      <canvas id="factsheetCanvas" width="1600" height="900"></canvas>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA = {
   BBAS3:{'100':5.05,'102':3.31,'103':2.64},
@@ -322,10 +352,13 @@ const STRUCTURES={
   '102':{put:98,call:102,label:'102%',kind:'Strangle ±2%'},
   '103':{put:97,call:103,label:'103%',kind:'Strangle ±3%'}
 };
-let state={asset:'PETR4',structure:'100',metric:'spot',calibratedIV:0.60};
+const SPOT_DEFAULTS={BBAS3:100,B3SA3:100,PETR4:49.66,CEAB3:100};
+let state={asset:'PETR4',structure:'103',metric:'spot',calibratedIV:0.60};
 const $=id=>document.getElementById(id);
 const fmt=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmt1=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const fmt0=n=>Math.round(Number(n)).toLocaleString('pt-BR');
+const brl=n=>'R$ '+Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 
@@ -357,7 +390,10 @@ function params(){
   const q=(Number($('divInput').value)||0)/100;
   const Tentry=dateYears($('entryDate').value,$('expiryDate').value);
   const Tscenario=dateYears($('scenarioDate').value,$('expiryDate').value);
-  return {S,kp,kc,premPct,premium,r,q,Tentry,Tscenario};
+  const allocation=Math.max(0,Number($('allocationInput').value)||0);
+  const qty=premium>0?allocation/premium:0;
+  const notional=qty*S;
+  return {S,kp,kc,premPct,premium,r,q,Tentry,Tscenario,allocation,qty,notional};
 }
 function calibrateIV(p){
   const override=Number($('ivEntryInput').value);
@@ -389,13 +425,13 @@ function renderAssetCards(){
     const rows=['100','102','103'].map(k=>`<div class="minirow"><span>${k==='100'?'ATM':k+'%'}</span><strong>${d[k]==null?'—':fmt(d[k])+'%'}</strong></div>`).join('');
     return `<div class="asset-card ${state.asset===a?'active':''}" data-asset="${a}"><div class="asset-name">${a}</div><div class="asset-meta">Compra de volatilidade · evento</div>${rows}</div>`;
   }).join('');
-  document.querySelectorAll('.asset-card').forEach(el=>el.onclick=()=>{state.asset=el.dataset.asset;const valid=DATA[state.asset][state.structure]!=null;if(!valid)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
+  document.querySelectorAll('.asset-card').forEach(el=>el.onclick=()=>{state.asset=el.dataset.asset;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;const valid=DATA[state.asset][state.structure]!=null;if(!valid)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
 }
 function renderPremiumTable(){
   const head=`<thead><tr><th>Ativo</th><th>100% · ATM</th><th>102% · ±2%</th><th>103% · ±3%</th></tr></thead>`;
   const body=Object.entries(DATA).map(([a,d])=>`<tr><td><strong>${a}</strong></td>${['100','102','103'].map(k=>`<td class="${d[k]!=null?'clickable emph':'muted'}" data-a="${a}" data-k="${k}">${d[k]==null?'—':fmt(d[k])+'%'}</td>`).join('')}</tr>`).join('');
   $('premiumTable').innerHTML=head+'<tbody>'+body+'</tbody>';
-  $('premiumTable').querySelectorAll('td[data-a]').forEach(td=>td.onclick=()=>{if(DATA[td.dataset.a][td.dataset.k]!=null){state.asset=td.dataset.a;state.structure=td.dataset.k;loadFromData();}});
+  $('premiumTable').querySelectorAll('td[data-a]').forEach(td=>td.onclick=()=>{if(DATA[td.dataset.a][td.dataset.k]!=null){state.asset=td.dataset.a;state.structure=td.dataset.k;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;loadFromData();}});
 }
 function renderSelects(){
   $('assetSelect').innerHTML=Object.keys(DATA).map(a=>`<option ${a===state.asset?'selected':''}>${a}</option>`).join('');
@@ -421,6 +457,8 @@ function updateKpis(){
   $('beLowSub').textContent=pct((be.low/p.S-1)*100);
   $('beHighSub').textContent=pct((be.high/p.S-1)*100);
   $('ivCalibrated').textContent=fmt1(state.calibratedIV*100)+'%';
+  $('qtyLeg').textContent=p.qty>0?fmt0(p.qty):'—';
+  $('notionalEq').textContent=p.notional>0?brl(p.notional):'—';
   syncIvControls(false);
 }
 function syncIvControls(fromRatio=true){
@@ -491,18 +529,201 @@ function drawChart(){
   ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
   ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('05/10 MTM',W-116,21);
 }
+
+function formatDateBr(iso){
+  if(!iso)return '—';
+  const a=iso.split('-'); return a.length===3?(a[2]+'/'+a[1]+'/'+a[0]):iso;
+}
+function calendarDays(a,b){
+  const d1=new Date(a+'T12:00:00'),d2=new Date(b+'T12:00:00');
+  return Math.max(0,Math.round((d2-d1)/86400000));
+}
+function canvasRoundRect(ctx,x,y,w,h,r,fill,stroke){
+  const rr=Math.min(r,w/2,h/2);
+  ctx.beginPath();ctx.moveTo(x+rr,y);ctx.arcTo(x+w,y,x+w,y+h,rr);ctx.arcTo(x+w,y+h,x,y+h,rr);ctx.arcTo(x,y+h,x,y,rr);ctx.arcTo(x,y,x+w,y,rr);ctx.closePath();
+  if(fill){ctx.fillStyle=fill;ctx.fill()} if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}
+}
+function canvasText(ctx,text,x,y,size,weight,color,align){
+  ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color||'#1A2027';ctx.textAlign=align||'left';ctx.textBaseline='alphabetic';ctx.fillText(String(text),x,y);
+}
+function canvasWrap(ctx,text,x,y,maxWidth,lineHeight,maxLines,color,size,weight){
+  ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color;ctx.textAlign='left';ctx.textBaseline='alphabetic';
+  const words=String(text).split(/\s+/);let line='',lines=[],i=0;
+  for(i=0;i<words.length;i++){const test=line?line+' '+words[i]:words[i];if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=words[i]}else line=test}
+  if(line)lines.push(line);
+  if(maxLines&&lines.length>maxLines){lines=lines.slice(0,maxLines);lines[maxLines-1]=lines[maxLines-1].replace(/[. ]*$/,'')+'…'}
+  lines.forEach((ln,idx)=>ctx.fillText(ln,x,y+idx*lineHeight));
+  return lines.length;
+}
+function factsheetLevels(p){
+  const be=breakEvens(p),callMove=(p.kc/p.S-1)*100,putMove=(p.kp/p.S-1)*100;
+  const hiMove=(be.high/p.S-1)*100,loMove=(be.low/p.S-1)*100;
+  const raw=[
+    {move:9},{move:7.2},{move:5.4},{move:hiMove,label:'BE ▲',kind:'be'},
+    {move:callMove,label:'CALL',kind:'strike'},{move:1.8},{move:0,kind:'spot'},
+    {move:-1.8},{move:putMove,label:'PUT',kind:'strike'},{move:loMove,label:'BE ▼',kind:'be'},
+    {move:-5.4},{move:-7.2},{move:-9}
+  ];
+  const m=new Map();
+  raw.forEach(r=>{
+    const key=r.move.toFixed(3);
+    if(!m.has(key))m.set(key,Object.assign({},r));
+    else{
+      const e=m.get(key);
+      if(r.label)e.label=e.label?e.label+'/'+r.label:r.label;
+      if(r.kind==='spot'||(r.kind==='be'&&e.kind!=='spot'))e.kind=r.kind;
+    }
+  });
+  return Array.from(m.values()).sort((a,b)=>b.move-a.move);
+}
+function drawFactsheet(){
+  const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1600,H=900;
+  c.width=W;c.height=H;
+  const C={navy:'#1A2027',blue:'#1F3249',deep:'#132436',bronze:'#BA8758',gray:'#747B82',line:'#D8D5D0',paper:'#F4F1EC',paper2:'#EEE9E2',green:'#23916F',red:'#C84F52',greenFill:'#BBDCCD',redFill:'#E8B7B2',white:'#FFFFFF'};
+  const p=params(),be=breakEvens(p),st=STRUCTURES[state.structure];
+  const type=Math.abs(p.kc-p.kp)<1e-8?'Straddle':'Strangle';
+  const callPct=p.kc/p.S*100,putPct=p.kp/p.S*100;
+  const days=calendarDays($('entryDate').value,$('expiryDate').value);
+  ctx.fillStyle=C.white;ctx.fillRect(0,0,W,H);
+
+  canvasText(ctx,'JACARANDÁ INVESTIMENTOS',50,53,16,700,C.bronze);
+  canvasText(ctx,'Estruturadas Jacarandá',50,99,40,700,C.navy);
+  canvasText(ctx,'Compra de '+type+' · '+state.asset,50,130,21,400,C.bronze);
+
+  const badgeY=100;
+  canvasRoundRect(ctx,1310,badgeY,155,35,8,C.bronze);
+  canvasText(ctx,'Venc. '+formatDateBr($('expiryDate').value),1388,badgeY+23,14,700,C.white,'center');
+  canvasRoundRect(ctx,1475,badgeY,75,35,8,C.bronze);
+  canvasText(ctx,days+' dias',1512,badgeY+23,14,700,C.white,'center');
+  ctx.fillStyle=C.bronze;ctx.fillRect(50,148,1500,2);
+
+  const lx=50,lw=590,gap=14,half=(lw-gap)/2,rx=670,rw=880;
+  function infoBox(x,y,w,h,label,value,sub,valueColor){
+    canvasRoundRect(ctx,x,y,w,h,10,C.paper);
+    canvasText(ctx,label,x+15,y+23,12,400,C.gray);
+    canvasText(ctx,value,x+15,y+47,20,700,valueColor||C.navy);
+    if(sub)canvasText(ctx,sub,x+15,y+47,12,400,C.gray,'left');
+  }
+  canvasRoundRect(ctx,lx,168,lw,56,10,C.paper);
+  canvasText(ctx,'Estrutura',lx+15,190,12,400,C.gray);
+  canvasText(ctx,'Compra Call a '+fmt1(callPct)+'% + Compra Put a '+fmt1(putPct)+'%',lx+15,214,18,700,C.navy);
+
+  const rowYs=[234,298,362,426,490],bh=54;
+  infoBox(lx,rowYs[0],half,bh,'Ativo',state.asset);
+  infoBox(lx+half+gap,rowYs[0],half,bh,'Preço atual',brl(p.S));
+  infoBox(lx,rowYs[1],half,bh,'Prêmio pago',fmt(p.premPct)+'%');
+  canvasText(ctx,brl(p.premium),lx+122,rowYs[1]+47,12,400,C.gray);
+  infoBox(lx+half+gap,rowYs[1],half,bh,'Valor alocado',brl(p.allocation));
+  infoBox(lx,rowYs[2],half,bh,'Risco máximo',fmt(p.premPct)+'%',null,C.red);
+  canvasText(ctx,brl(p.allocation),lx+122,rowYs[2]+47,12,400,C.gray);
+  infoBox(lx+half+gap,rowYs[2],half,bh,'Lucro máximo','Ilimitado',null,C.green);
+  infoBox(lx,rowYs[3],half,bh,'Breakeven de alta',brl(be.high));
+  canvasText(ctx,pct((be.high/p.S-1)*100),lx+168,rowYs[3]+47,12,400,C.gray);
+  infoBox(lx+half+gap,rowYs[3],half,bh,'Breakeven de baixa',brl(be.low));
+  canvasText(ctx,pct((be.low/p.S-1)*100),lx+half+gap+175,rowYs[3]+47,12,400,C.gray);
+  infoBox(lx,rowYs[4],half,bh,'Quantidade por perna',fmt0(p.qty));
+  infoBox(lx+half+gap,rowYs[4],half,bh,'Notional equivalente',brl(p.notional));
+
+  // Gráfico de payoff (% sobre o prêmio)
+  const gx=50,gy=558,gw=590,gh=268;
+  canvasRoundRect(ctx,gx,gy,gw,gh,10,C.paper);
+  canvasText(ctx,'Resultado no vencimento (% sobre o prêmio)',gx+15,gy+25,12,400,C.gray);
+  const plot={x:gx+80,y:gy+40,w:gw-115,h:gh-78};
+  const samples=[];for(let m=-9;m<=9.0001;m+=0.1){const e=expiryPL(m,p),r=p.premium?e.pl/p.premium*100:0;samples.push({m:m,r:r})}
+  const maxR=Math.max(100,...samples.map(o=>o.r));const yMax=Math.ceil(maxR/50)*50,yMin=-100;
+  const xp=m=>plot.x+(m+9)/18*plot.w,yp=v=>plot.y+(yMax-v)/(yMax-yMin)*plot.h,y0=yp(0);
+  ctx.strokeStyle='#A8A9A8';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(plot.x,y0);ctx.lineTo(plot.x+plot.w,y0);ctx.stroke();ctx.setLineDash([]);
+  ctx.strokeStyle=C.line;ctx.beginPath();ctx.moveTo(xp(0),plot.y);ctx.lineTo(xp(0),plot.y+plot.h);ctx.stroke();
+  for(let i=0;i<samples.length-1;i++){
+    let a=samples[i],b=samples[i+1];
+    function fillSeg(aa,bb,col){
+      ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(xp(aa.m),y0);ctx.lineTo(xp(aa.m),yp(aa.r));ctx.lineTo(xp(bb.m),yp(bb.r));ctx.lineTo(xp(bb.m),y0);ctx.closePath();ctx.fill();
+    }
+    if((a.r>=0&&b.r>=0)||(a.r<=0&&b.r<=0))fillSeg(a,b,a.r>=0?C.greenFill:C.redFill);
+    else{
+      const t=(0-a.r)/(b.r-a.r),cross={m:a.m+t*(b.m-a.m),r:0};
+      fillSeg(a,cross,a.r>=0?C.greenFill:C.redFill);fillSeg(cross,b,b.r>=0?C.greenFill:C.redFill);
+    }
+  }
+  ctx.strokeStyle=C.bronze;ctx.lineWidth=2.5;ctx.beginPath();samples.forEach((o,i)=>{if(i===0)ctx.moveTo(xp(o.m),yp(o.r));else ctx.lineTo(xp(o.m),yp(o.r))});ctx.stroke();ctx.lineWidth=1;
+  const beMoves=[(be.low/p.S-1)*100,(be.high/p.S-1)*100];
+  beMoves.forEach(m=>{if(m>=-9&&m<=9){ctx.fillStyle=C.bronze;ctx.beginPath();ctx.arc(xp(m),y0,5,0,Math.PI*2);ctx.fill()}});
+  canvasText(ctx,'+'+fmt0(yMax)+'%',gx+38,plot.y+5,11,400,C.gray,'center');
+  canvasText(ctx,'0%',gx+48,y0+4,11,400,C.gray,'center');
+  canvasText(ctx,'-100%',gx+40,plot.y+plot.h+4,11,400,C.gray,'center');
+  [-9,-4.5,0,4.5,9].forEach(m=>canvasText(ctx,(100+m).toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:1})+'%',xp(m),gy+gh-14,11,400,C.gray,'center'));
+
+  // Tabela de cenários do vencimento
+  const levels=factsheetLevels(p),ty=168,headerH=46,rowH=32;
+  const widths=[195,150,175,175,185],headers=[['Ativo','(% do preço atual)'],['Ativo','(R$)'],['Resultado sobre','notional'],['Resultado sobre','prêmio (%)'],['Resultado sobre','prêmio (R$)']];
+  let cx=rx;
+  headers.forEach((h,i)=>{
+    ctx.fillStyle='#E6DFD6';ctx.fillRect(cx,ty,widths[i],headerH);
+    canvasText(ctx,h[0],cx+widths[i]-12,ty+18,11,700,C.bronze,'right');
+    canvasText(ctx,h[1],cx+widths[i]-12,ty+33,11,700,C.bronze,'right');cx+=widths[i];
+  });
+  levels.forEach((lv,idx)=>{
+    const yy=ty+headerH+idx*rowH,e=expiryPL(lv.move,p),rn=e.pl/p.S*100,rr=p.premium?e.pl/p.premium*100:0,rrMoney=rr/100*p.allocation;
+    const bg=lv.kind==='spot'?C.bronze:(lv.kind==='be'?'#E7DED3':(idx%2?'#FBFAF8':'#F5F2EE'));
+    ctx.fillStyle=bg;ctx.fillRect(rx,yy,rw,rowH);
+    ctx.strokeStyle='#DDD9D3';ctx.beginPath();ctx.moveTo(rx,yy+rowH);ctx.lineTo(rx+rw,yy+rowH);ctx.stroke();
+    let xx=rx;
+    const first=(100+lv.move).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'%';
+    canvasText(ctx,first,xx+12,yy+21,13,400,lv.kind==='spot'?C.navy:C.navy);
+    if(lv.label){canvasRoundRect(ctx,xx+95,yy+8,58,17,7,'#EFE5D8',C.bronze);canvasText(ctx,lv.label,xx+124,yy+20,9,700,C.bronze,'center')}
+    xx+=widths[0];
+    canvasText(ctx,brl(e.Sf),xx+widths[1]-12,yy+21,13,400,C.navy,'right');xx+=widths[1];
+    const rnCol=rn>0.0001?C.green:(rn<-0.0001?C.red:C.gray),rrCol=rr>0.0001?C.green:(rr<-0.0001?C.red:C.gray);
+    canvasText(ctx,pct(rn),xx+widths[2]-12,yy+21,13,rr!==0?700:400,rnCol,'right');xx+=widths[2];
+    canvasText(ctx,pct(rr),xx+widths[3]-12,yy+21,13,rr!==0?700:400,rrCol,'right');xx+=widths[3];
+    const money=(rrMoney>0?'+':'')+brl(rrMoney);
+    canvasText(ctx,money,xx+widths[4]-12,yy+21,13,rr!==0?700:400,rrCol,'right');
+  });
+
+  const tableBottom=ty+headerH+levels.length*rowH;
+  const ey=Math.max(620,tableBottom+12),eh=826-ey;
+  canvasRoundRect(ctx,rx,ey,rw,eh,10,C.paper);
+  canvasText(ctx,'Explicação',rx+15,ey+25,12,400,C.gray);
+  const lossText=type==='Straddle'?'se o ativo encerrar próximo ao strike comum':'se o ativo encerrar entre os strikes';
+  const expl='O investidor compra uma Call (strike em '+fmt1(callPct)+'% do preço atual) e uma Put (strike em '+fmt1(putPct)+'%) de '+state.asset+', ambas com vencimento em '+formatDateBr($('expiryDate').value)+'. A operação lucra se o ativo se mover com força para qualquer lado: o ganho aparece acima de '+brl(be.high)+' ou abaixo de '+brl(be.low)+'. A perda máxima é o prêmio pago, atingida '+lossText+'.';
+  canvasWrap(ctx,expl,rx+15,ey+49,rw-30,20,5,C.navy,14,400);
+
+  canvasText(ctx,'Resultados calculados no vencimento, antes de custos operacionais, taxas e impostos, e sem marcação a mercado. Não constitui recomendação de investimento. Operações com opções podem resultar na perda total do prêmio pago.',50,857,11,400,C.gray);
+  canvasText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1550,857,11,400,C.gray,'right');
+}
+function openFactsheetExport(){
+  drawFactsheet();
+  $('exportOverlay').classList.add('open');
+  $('exportOverlay').setAttribute('aria-hidden','false');
+}
+function closeFactsheetExport(){
+  $('exportOverlay').classList.remove('open');
+  $('exportOverlay').setAttribute('aria-hidden','true');
+}
+function downloadFactsheetJpg(){
+  drawFactsheet();
+  const c=$('factsheetCanvas'),a=document.createElement('a');
+  a.download='Estruturadas_Jacaranda_'+state.asset+'_'+state.structure+'_'+$('entryDate').value+'.jpg';
+  a.href=c.toDataURL('image/jpeg',0.95);document.body.appendChild(a);a.click();a.remove();
+}
+
 function renderAll(){
   renderAssetCards();renderPremiumTable();renderSelects();updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();
 }
 
-$('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;if(DATA[state.asset][state.structure]==null)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
+$('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;if(DATA[state.asset][state.structure]==null)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
 $('structureSelect').addEventListener('change',e=>{state.structure=e.target.value;loadFromData();});
-['spotInput','putStrikePct','callStrikePct','premiumPct','entryDate','scenarioDate','expiryDate','rateInput','divInput','ivEntryInput'].forEach(id=>$(id).addEventListener('input',()=>{updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();}));
+['spotInput','putStrikePct','callStrikePct','premiumPct','allocationInput','entryDate','scenarioDate','expiryDate','rateInput','divInput','ivEntryInput'].forEach(id=>$(id).addEventListener('input',()=>{updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();}));
 $('moveRange').addEventListener('input',()=>{updateSimulator();});
 $('ivRatioRange').addEventListener('input',()=>{syncIvControls(true);updateSimulator();renderScenarioTable();drawChart();});
 $('ivPostRange').addEventListener('input',()=>{syncIvControls(false);updateSimulator();renderScenarioTable();drawChart();});
 $('resetStructure').onclick=()=>loadFromData();
-$('copyLinkData').onclick=async()=>{const p=params();const text=`${state.asset} ${STRUCTURES[state.structure].label} | Spot ${fmt(p.S)} | Put ${fmt(p.kp)} | Call ${fmt(p.kc)} | Prêmio ${fmt(p.premium)} (${fmt(p.premPct)}%) | Entrada ${$('entryDate').value} | Saída ${$('scenarioDate').value} | Venc. ${$('expiryDate').value}`;try{await navigator.clipboard.writeText(text);$('copyLinkData').textContent='Copiado';setTimeout(()=>$('copyLinkData').textContent='Copiar parâmetros',1300)}catch(e){prompt('Copie os parâmetros:',text)}};
+$('copyLinkData').onclick=async()=>{const p=params();const text=`${state.asset} ${STRUCTURES[state.structure].label} | Spot ${fmt(p.S)} | Put ${fmt(p.kp)} | Call ${fmt(p.kc)} | Prêmio ${fmt(p.premium)} (${fmt(p.premPct)}%) | Alocação ${brl(p.allocation)} | Entrada ${$('entryDate').value} | Saída ${$('scenarioDate').value} | Venc. ${$('expiryDate').value}`;try{await navigator.clipboard.writeText(text);$('copyLinkData').textContent='Copiado';setTimeout(()=>$('copyLinkData').textContent='Copiar parâmetros',1300)}catch(e){prompt('Copie os parâmetros:',text)}};
+$('generateJpg').onclick=openFactsheetExport;
+$('downloadJpg').onclick=downloadFactsheetJpg;
+$('closeExport').onclick=closeFactsheetExport;
+$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheetExport();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheetExport();});
 document.querySelectorAll('#metricToggle button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#metricToggle button').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.metric=b.dataset.metric;drawChart();});
 window.addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(drawChart,100)});
 
