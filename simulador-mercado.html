@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercado Beta | Straddle & Strangle · Jacarandá Investimentos</title>
+<style>
+:root{
+  --navy:#1A2027;--blue:#1F3249;--deep:#132436;--bronze:#BA8758;
+  --gray:#9D9FA2;--light:#DCDDDE;--paper:#F5F6F7;--white:#FFF;
+  --green:#2F6B54;--red:#A14B4B;--shadow:0 14px 40px rgba(19,36,54,.10);
+  --radius:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:linear-gradient(180deg,#eef1f4 0,#f7f8f9 360px,#f5f6f7 100%)}
+.topbar{height:7px;background:var(--bronze)}
+.shell{max-width:1280px;margin:0 auto;padding:0 22px 44px}
+header{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:28px 30px 26px;border-radius:0 0 26px 26px;box-shadow:var(--shadow);margin-bottom:22px}
+.brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.brand span{color:var(--bronze)}
+h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-.02em}
+.subtitle{max-width:890px;color:#d8e1e8;font-size:15px;line-height:1.5;margin:0}
+.view-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.view-nav a{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.20);color:#fff;background:rgba(255,255,255,.06)}
+.view-nav a:hover{background:rgba(255,255,255,.12)}
+.view-nav a.active{background:var(--bronze);border-color:var(--bronze);color:var(--deep)}
+.eventline{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.eventpill{padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#edf2f6}
+.eventpill strong{color:#fff}
+.section{margin-top:18px}
+.panel{background:#fff;border:1px solid #e0e5e8;border-radius:var(--radius);box-shadow:0 8px 26px rgba(19,36,54,.06);overflow:hidden}
+.panel-head{padding:15px 18px;border-bottom:1px solid #e6eaed;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.panel-head h2,.panel-head h3{margin:0}.panel-head h2{font-size:19px}.panel-head h3{font-size:16px}
+.panel-body{padding:18px}
+.layout2{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
+.layout3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.field label{display:block;font-size:10px;font-weight:700;color:#697580;margin:0 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.field input,.field select{width:100%;padding:10px 11px;border:1px solid #cfd6dc;border-radius:10px;font:inherit;color:var(--navy);background:#fff;outline:none}
+.field input:focus,.field select:focus{border-color:var(--bronze);box-shadow:0 0 0 3px rgba(186,135,88,.14)}
+.field .hint{font-size:10px;color:#8a959e;margin-top:5px;line-height:1.35}
+button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;background:var(--blue);color:#fff}
+button.secondary{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
+.inline-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{background:#f7f8f9;border:1px solid #e5e8eb;border-radius:14px;padding:13px;min-height:83px}
+.kpi .label{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#78838d;margin-bottom:5px}
+.kpi .value{font-size:19px;font-weight:700;line-height:1.08}
+.kpi .sub{font-size:10px;color:#83909a;margin-top:6px;line-height:1.35}
+.kpi.accent{background:#f8f2ec;border-color:#e5d3c1}
+.kpi.accent .value{color:#8e6039}
+.positive{color:var(--green)!important}.negative{color:var(--red)!important}
+.source-box{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#f0f4f7;border:1px solid #d7e0e6;border-left:4px solid var(--blue);padding:12px 14px;border-radius:12px}
+.source-main{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#9D9FA2;box-shadow:0 0 0 4px rgba(157,159,162,.14)}
+.status-dot.ok{background:#2F6B54;box-shadow:0 0 0 4px rgba(47,107,84,.14)}
+.status-dot.err{background:#A14B4B;box-shadow:0 0 0 4px rgba(161,75,75,.14)}
+.source-title{font-size:12px;font-weight:700;color:var(--blue)}
+.source-meta{font-size:11px;color:#71808c}
+.note{font-size:12px;line-height:1.55;color:#697683}
+.warning{background:#fff8ef;border:1px solid #ead8c2;border-left:4px solid var(--bronze);padding:12px 14px;border-radius:12px;color:#5e5144;font-size:12px;line-height:1.5}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:#f3f5f6;text-align:right;padding:10px 11px;color:#586573;font-weight:700;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:10px 11px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}
+.chart-wrap{position:relative;height:370px}
+canvas{width:100%;height:100%;display:block}
+.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}
+.rangegrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.rangebox{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:12px}
+.rangebox label{font-size:11px;font-weight:700;color:#65727e;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}
+input[type=range]{width:100%;accent-color:var(--bronze)}
+.footer{margin-top:24px;border-top:1px solid #dfe4e8;padding:18px 0 0;color:#707c86;font-size:11px;line-height:1.6}
+.footer-brand{font-weight:700;color:var(--blue);margin-top:7px}
+@media(max-width:980px){.layout2{grid-template-columns:1fr}.layout3{grid-template-columns:1fr 1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.inputs,.layout3,.rangegrid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.chart-wrap{height:310px}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="shell">
+<header>
+  <div class="brandrow">
+    <div>
+      <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
+      <h1>Straddle & Strangle | Mercado Beta</h1>
+      <p class="subtitle">Segunda camada do simulador: captura automática de spot com atraso, seleção de strikes reais/editáveis, prêmio por perna, fee, custo all-in e metas de retorno. A versão original permanece preservada.</p>
+    </div>
+    <div class="view-nav">
+      <a href="index.html">Simulador Base</a>
+      <a class="active" href="simulador-mercado.html">Mercado Beta</a>
+    </div>
+  </div>
+  <div class="eventline">
+    <div class="eventpill"><strong>Spot</strong> automático quando disponível</div>
+    <div class="eventpill"><strong>Opções</strong> prêmio manual nesta fase</div>
+    <div class="eventpill"><strong>Entrada</strong> 02/10/2026</div>
+    <div class="eventpill"><strong>Evento</strong> 04/10/2026</div>
+    <div class="eventpill"><strong>Saída simulada</strong> 05/10/2026</div>
+  </div>
+</header>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div>
+      <h2>Cotação e montagem</h2>
+      <div class="note">Selecione o ativo. O painel tenta atualizar o spot pelo Yahoo Finance; se a consulta falhar, o valor permanece editável.</div>
+    </div>
+    <span class="pill">BETA · DADOS INDICATIVOS</span>
+  </div>
+  <div class="panel-body">
+    <div class="source-box">
+      <div class="source-main">
+        <span id="statusDot" class="status-dot"></span>
+        <div>
+          <div id="sourceTitle" class="source-title">Aguardando cotação</div>
+          <div id="sourceMeta" class="source-meta">Selecione um ativo ou clique em atualizar.</div>
+        </div>
+      </div>
+      <button id="refreshQuote">Atualizar cotação</button>
+    </div>
+
+    <div class="inputs" style="margin-top:14px">
+      <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
+      <div class="field"><label>Estrutura alvo</label><select id="structureSelect"></select></div>
+      <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-07"></div>
+
+      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01" value="49.66"><div class="hint">Auto via Yahoo quando possível; sempre editável.</div></div>
+      <div class="field"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"><div class="hint">Usado apenas para sugerir o strike mais próximo.</div></div>
+      <div class="field"><label>Lote de negociação</label><input id="roundLot" type="number" step="1" min="1" value="100"></div>
+
+      <div class="field"><label>Strike Call real (R$)</label><input id="callStrike" type="number" step="0.01" value="51.00"></div>
+      <div class="field"><label>Ask Call (R$)</label><input id="callAsk" type="number" step="0.01" min="0" placeholder="Ex.: 0,46"><div class="hint">Preço de compra da perna. Deixe vazio para usar a estimativa percentual.</div></div>
+      <div class="field"><label>Código Call</label><input id="callCode" type="text" placeholder="Opcional"></div>
+
+      <div class="field"><label>Strike Put real (R$)</label><input id="putStrike" type="number" step="0.01" value="48.00"></div>
+      <div class="field"><label>Ask Put (R$)</label><input id="putAsk" type="number" step="0.01" min="0" placeholder="Ex.: 0,37"><div class="hint">Preço de compra da perna. Deixe vazio para usar a estimativa percentual.</div></div>
+      <div class="field"><label>Código Put</label><input id="putCode" type="text" placeholder="Opcional"></div>
+    </div>
+    <div class="inline-actions">
+      <button id="suggestStrikes">Sugerir strikes pelo spot</button>
+      <button id="clearAsks" class="secondary">Limpar Ask manual</button>
+    </div>
+  </div>
+</section>
+
+<section class="section layout2">
+  <div class="panel">
+    <div class="panel-head"><h3>Fee, custos e alocação</h3><span id="priceModePill" class="pill">Estimativa %</span></div>
+    <div class="panel-body">
+      <div class="inputs">
+        <div class="field"><label>Valor alocado (R$)</label><input id="allocation" type="number" step="100" min="0" value="10000"></div>
+        <div class="field"><label>Fee</label><select id="feeType">
+          <option value="none">Sem fee</option>
+          <option value="premium">% sobre prêmio</option>
+          <option value="notional">% sobre notional</option>
+          <option value="fixed">R$ fixo por operação</option>
+        </select></div>
+        <div class="field"><label>Fee valor</label><input id="feeValue" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Custos adicionais entrada (R$)</label><input id="entryFixedCost" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Custo estimado saída 05/10 (R$)</label><input id="exitFixedCost" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Preço quando Ask vazio</label><select id="fallbackMode"><option value="table">Usar % da tabela original</option><option value="zero">Exigir Ask manual</option></select></div>
+      </div>
+      <div class="warning" style="margin-top:12px"><strong>Leitura correta:</strong> para uma compra, o Ask é a melhor referência indicativa de custo executável. Nesta versão beta o spot é automático, mas os prêmios das opções permanecem manuais; quando vazios, o painel pode usar a tabela percentual apenas para simulação.</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h3>Custo da estrutura agora</h3><span class="pill">ALL-IN</span></div>
+    <div class="panel-body">
+      <div class="kpis">
+        <div class="kpi"><div class="label">Prêmio bruto / un.</div><div id="rawPremium" class="value">—</div><div id="rawPremiumSub" class="sub">Call + Put</div></div>
+        <div class="kpi"><div class="label">Fee variável / un.</div><div id="feePerUnit" class="value">—</div><div class="sub">conforme base selecionada</div></div>
+        <div class="kpi accent"><div class="label">Custo all-in</div><div id="allInTotal" class="value">—</div><div id="allInSub" class="sub">alocação efetivamente utilizada</div></div>
+        <div class="kpi"><div class="label">Quantidade / perna</div><div id="qty" class="value">—</div><div id="qtySub" class="sub">respeitando lote</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div><h3>Quanto precisa andar?</h3><div class="note">Metas no vencimento usam custo all-in de entrada. A coluna 05/10 incorpora valor extrínseco, IV pós-evento e custo de saída.</div></div>
+    <span class="pill">BREAKEVEN · +50% · +100%</span>
+  </div>
+  <div class="panel-body">
+    <div class="kpis">
+      <div class="kpi"><div class="label">Break-even baixa</div><div id="beLow" class="value">—</div><div id="beLowSub" class="sub">—</div></div>
+      <div class="kpi"><div class="label">Break-even alta</div><div id="beHigh" class="value">—</div><div id="beHighSub" class="sub">—</div></div>
+      <div class="kpi"><div class="label">+50% no vencimento</div><div id="target50" class="value">—</div><div class="sub">baixa / alta</div></div>
+      <div class="kpi"><div class="label">+100% no vencimento</div><div id="target100" class="value">—</div><div class="sub">baixa / alta</div></div>
+    </div>
+    <div class="kpis" style="margin-top:10px">
+      <div class="kpi"><div class="label">IV implícita entrada</div><div id="entryIV" class="value">—</div><div class="sub">calibrada pelo prêmio bruto</div></div>
+      <div class="kpi"><div class="label">+50% em 05/10</div><div id="target50Mtm" class="value">—</div><div class="sub">com IV pós-evento</div></div>
+      <div class="kpi"><div class="label">+100% em 05/10</div><div id="target100Mtm" class="value">—</div><div class="sub">com IV pós-evento</div></div>
+      <div class="kpi"><div class="label">Saldo não utilizado</div><div id="cashLeft" class="value">—</div><div class="sub">após arredondamento por lote</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div><h3>Simulação 05/10 + range elástico</h3><div class="note">O modo Auto abre a escala conforme strikes, break-evens e metas de retorno.</div></div>
+    <div class="field" style="min-width:170px"><label>Amplitude do gráfico</label><select id="rangeMode">
+      <option value="auto">Auto</option><option value="5">±5%</option><option value="10">±10%</option><option value="15">±15%</option><option value="20">±20%</option><option value="30">±30%</option><option value="50">±50%</option>
+    </select></div>
+  </div>
+  <div class="panel-body">
+    <div class="rangegrid">
+      <div class="rangebox"><label><span>Movimento do ativo</span><strong id="moveLabel">0,0%</strong></label><input id="moveRange" type="range" min="-15" max="15" step="0.25" value="0"></div>
+      <div class="rangebox"><label><span>IV pós / IV entrada</span><strong id="ivRatioLabel">70%</strong></label><input id="ivRatio" type="range" min="20" max="150" step="1" value="70"></div>
+      <div class="rangebox"><label><span>Data da desmontagem</span><strong>05/10/2026</strong></label><input id="scenarioDate" type="date" value="2026-10-05"></div>
+    </div>
+    <div class="kpis" style="margin-top:12px">
+      <div class="kpi"><div class="label">Spot simulado</div><div id="simSpot" class="value">—</div><div id="simSpotSub" class="sub">—</div></div>
+      <div class="kpi"><div class="label">Valor estimado opções</div><div id="simOptionValue" class="value">—</div><div class="sub">Call + Put · BSM</div></div>
+      <div class="kpi"><div class="label">P/L líquido estimado</div><div id="simPnl" class="value">—</div><div class="sub">após custo de saída informado</div></div>
+      <div class="kpi"><div class="label">Retorno sobre custo</div><div id="simReturn" class="value">—</div><div id="simReturnSub" class="sub">—</div></div>
+    </div>
+    <div class="chart-wrap" style="margin-top:12px"><canvas id="chart"></canvas></div>
+  </div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head"><h3>Matriz de movimentos</h3><span id="matrixRange" class="pill">AUTO</span></div>
+  <div class="table-wrap"><table id="scenarioTable"></table></div>
+</section>
+
+<footer class="footer">
+  <strong>Beta de simulação pré-operacional.</strong> Spot automático pode ter atraso e não representa garantia de execução. Os preços de opções devem ser confirmados no book da corretora antes de qualquer ordem.
+  <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
+</footer>
+</div>
+
+<script>
+const ASSETS={
+  BBAS3:{yahoo:'BBAS3.SA',fallbackSpot:100},
+  B3SA3:{yahoo:'B3SA3.SA',fallbackSpot:100},
+  PETR4:{yahoo:'PETR4.SA',fallbackSpot:49.66},
+  CEAB3:{yahoo:'CEAB3.SA',fallbackSpot:100}
+};
+const COSTS={
+  BBAS3:{'100':5.05,'102':3.31,'103':2.64},
+  B3SA3:{'100':4.03,'102':2.36,'103':1.76},
+  PETR4:{'100':3.87,'102':2.22,'103':1.64},
+  CEAB3:{'100':null,'102':null,'103':4.14}
+};
+const STRUCTURES={
+  '100':{put:100,call:100,label:'100% · Straddle ATM'},
+  '102':{put:98,call:102,label:'102% · Strangle ±2%'},
+  '103':{put:97,call:103,label:'103% · Strangle ±3%'}
+};
+let state={asset:'PETR4',structure:'103',quote:null};
+const $=id=>document.getElementById(id);
+const num=v=>{const n=Number(v);return Number.isFinite(n)?n:0};
+const fmt=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt1=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const fmt0=n=>Math.round(Number(n)).toLocaleString('pt-BR');
+const brl=n=>'R$ '+Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+
+function normCDF(x){
+  const a1=.319381530,a2=-.356563782,a3=1.781477937,a4=-1.821255978,a5=1.330274429;
+  const L=Math.abs(x),k=1/(1+.2316419*L);
+  const w=1-1/Math.sqrt(2*Math.PI)*Math.exp(-L*L/2)*(a1*k+a2*k*k+a3*k**3+a4*k**4+a5*k**5);
+  return x<0?1-w:w;
+}
+function bsm(type,S,K,T,r,q,sigma){
+  if(T<=0||sigma<=0)return type==='call'?Math.max(S-K,0):Math.max(K-S,0);
+  const sq=Math.sqrt(T),d1=(Math.log(S/K)+(r-q+.5*sigma*sigma)*T)/(sigma*sq),d2=d1-sigma*sq;
+  return type==='call'?S*Math.exp(-q*T)*normCDF(d1)-K*Math.exp(-r*T)*normCDF(d2):K*Math.exp(-r*T)*normCDF(-d2)-S*Math.exp(-q*T)*normCDF(-d1);
+}
+function years(a,b){
+  if(!a||!b)return 0;
+  return Math.max(0,(new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/86400000/365);
+}
+function roundStrike(x,step){
+  step=Math.max(.01,step||.5);
+  return Math.round(x/step)*step;
+}
+function setStatus(kind,title,meta){
+  $('statusDot').className='status-dot'+(kind?' '+kind:'');
+  $('sourceTitle').textContent=title;
+  $('sourceMeta').textContent=meta;
+}
+function selectedCostPct(){
+  return COSTS[state.asset][state.structure]??0;
+}
+function buildSelects(){
+  $('assetSelect').innerHTML=Object.keys(ASSETS).map(a=>'<option '+(a===state.asset?'selected':'')+'>'+a+'</option>').join('');
+  $('structureSelect').innerHTML=Object.keys(STRUCTURES).filter(k=>COSTS[state.asset][k]!=null).map(k=>'<option value="'+k+'" '+(k===state.structure?'selected':'')+'>'+STRUCTURES[k].label+'</option>').join('');
+}
+function suggestStrikes(){
+  const S=num($('spotInput').value),step=num($('strikeStep').value)||.5,st=STRUCTURES[state.structure];
+  $('callStrike').value=roundStrike(S*st.call/100,step).toFixed(2);
+  $('putStrike').value=roundStrike(S*st.put/100,step).toFixed(2);
+  updateAll();
+}
+function priceModel(){
+  const S=num($('spotInput').value),Kc=num($('callStrike').value),Kp=num($('putStrike').value);
+  const askC=num($('callAsk').value),askP=num($('putAsk').value);
+  const manual=askC>0&&askP>0;
+  const fallback=$('fallbackMode').value;
+  let raw=0,mode='';
+  if(manual){raw=askC+askP;mode='Ask manual';}
+  else if(fallback==='table'&&selectedCostPct()>0){raw=S*selectedCostPct()/100;mode='Estimativa '+fmt(selectedCostPct())+'%';}
+  else{raw=0;mode='Aguardando Ask';}
+
+  const alloc=Math.max(0,num($('allocation').value)),lot=Math.max(1,Math.floor(num($('roundLot').value)||1));
+  const feeType=$('feeType').value,feeValue=Math.max(0,num($('feeValue').value));
+  let variableFee=0,fixedFee=0;
+  if(feeType==='premium')variableFee=raw*feeValue/100;
+  if(feeType==='notional')variableFee=S*feeValue/100;
+  if(feeType==='fixed')fixedFee=feeValue;
+  const fixedEntry=fixedFee+Math.max(0,num($('entryFixedCost').value));
+  const perUnitEntry=raw+variableFee;
+  const available=Math.max(0,alloc-fixedEntry);
+  const rawQty=perUnitEntry>0?Math.floor(available/perUnitEntry):0;
+  const qty=Math.floor(rawQty/lot)*lot;
+  const used=qty>0?qty*perUnitEntry+fixedEntry:0;
+  const effectivePerUnit=qty>0?used/qty:0;
+  const cashLeft=Math.max(0,alloc-used);
+  return {S,Kc,Kp,askC,askP,raw,mode,alloc,lot,variableFee,fixedFee,fixedEntry,perUnitEntry,qty,used,effectivePerUnit,cashLeft};
+}
+function entryIV(m){
+  if(!(m.raw>0&&m.S>0&&m.Kc>0&&m.Kp>0))return 0;
+  const T=years('2026-10-02',$('expiryDate').value);
+  if(T<=0)return 0;
+  let lo=.001,hi=5;
+  for(let i=0;i<90;i++){
+    const mid=(lo+hi)/2;
+    const v=bsm('call',m.S,m.Kc,T,0,0,mid)+bsm('put',m.S,m.Kp,T,0,0,mid);
+    if(v>m.raw)hi=mid;else lo=mid;
+  }
+  return (lo+hi)/2;
+}
+function expiryIntrinsic(Sf,m){return Math.max(Sf-m.Kc,0)+Math.max(m.Kp-Sf,0)}
+function expiryPL(Sf,m){
+  if(m.qty<=0)return {pl:0,ret:0};
+  const proceeds=expiryIntrinsic(Sf,m)*m.qty;
+  const pl=proceeds-m.used;
+  return {pl,ret:m.used?pl/m.used*100:0};
+}
+function mtmPL(Sf,m,iv){
+  if(m.qty<=0)return {value:0,pl:0,ret:0};
+  const T=years($('scenarioDate').value,$('expiryDate').value);
+  const perUnit=bsm('call',Sf,m.Kc,T,0,0,iv)+bsm('put',Sf,m.Kp,T,0,0,iv);
+  const gross=perUnit*m.qty;
+  const exitCost=Math.max(0,num($('exitFixedCost').value));
+  const pl=gross-m.used-exitCost;
+  return {value:perUnit,pl,ret:m.used?pl/m.used*100:0};
+}
+function targetsExpiry(m,target){
+  if(m.qty<=0)return {low:null,high:null};
+  const needed=m.used*(1+target/100)/m.qty;
+  return {low:Math.max(0,m.Kp-needed),high:m.Kc+needed};
+}
+function thresholdMtm(m,iv,target,dir){
+  if(m.qty<=0)return null;
+  const max=60,step=.1;
+  for(let a=0;a<=max;a+=step){
+    const move=dir>0?a:-a,Sf=m.S*(1+move/100);
+    if(Sf<=0)continue;
+    if(mtmPL(Sf,m,iv).ret>=target)return move;
+  }
+  return null;
+}
+function autoRange(m){
+  if(!(m.S>0))return 15;
+  const beLow=m.effectivePerUnit?m.Kp-m.effectivePerUnit:m.Kp;
+  const beHigh=m.effectivePerUnit?m.Kc+m.effectivePerUnit:m.Kc;
+  const t100=targetsExpiry(m,100);
+  let need=6;
+  [beLow,beHigh,t100.low,t100.high,m.Kp,m.Kc].forEach(v=>{if(v!=null)need=Math.max(need,Math.abs((v/m.S-1)*100));});
+  return clamp(Math.ceil((need*1.25)/5)*5,5,50);
+}
+function chartRange(m){
+  const v=$('rangeMode').value;
+  return v==='auto'?autoRange(m):num(v);
+}
+function updateMoveSlider(m){
+  const r=chartRange(m);
+  $('moveRange').min=-r;$('moveRange').max=r;
+  const cur=clamp(num($('moveRange').value),-r,r);$('moveRange').value=cur;
+  $('matrixRange').textContent='±'+fmt0(r)+'%';
+}
+function updateMetrics(){
+  const m=priceModel(),ivE=entryIV(m),ivPost=ivE*num($('ivRatio').value)/100;
+  $('priceModePill').textContent=m.mode;
+  $('rawPremium').textContent=m.raw>0?brl(m.raw):'—';
+  $('rawPremiumSub').textContent=m.mode+(m.S>0&&m.raw>0?' · '+fmt(m.raw/m.S*100)+'% do spot':'');
+  $('feePerUnit').textContent=brl(m.variableFee);
+  $('allInTotal').textContent=m.used>0?brl(m.used):'—';
+  $('allInSub').textContent=m.qty>0?'custo efetivo '+brl(m.effectivePerUnit)+' / un.':'preencha prêmio/Ask';
+  $('qty').textContent=m.qty>0?fmt0(m.qty):'—';
+  $('qtySub').textContent='lote '+fmt0(m.lot)+' · '+(m.qty>0?fmt0(m.qty/m.lot)+' lotes':'—');
+  $('cashLeft').textContent=brl(m.cashLeft);
+  $('entryIV').textContent=ivE>0?fmt1(ivE*100)+'%':'—';
+
+  if(m.qty>0){
+    const beL=m.Kp-m.effectivePerUnit,beH=m.Kc+m.effectivePerUnit;
+    $('beLow').textContent=brl(beL);$('beLowSub').textContent=pct((beL/m.S-1)*100);
+    $('beHigh').textContent=brl(beH);$('beHighSub').textContent=pct((beH/m.S-1)*100);
+    const t50=targetsExpiry(m,50),t100=targetsExpiry(m,100);
+    $('target50').textContent=brl(t50.low)+' / '+brl(t50.high);
+    $('target100').textContent=brl(t100.low)+' / '+brl(t100.high);
+
+    const d50=thresholdMtm(m,ivPost,50,-1),u50=thresholdMtm(m,ivPost,50,1);
+    const d100=thresholdMtm(m,ivPost,100,-1),u100=thresholdMtm(m,ivPost,100,1);
+    $('target50Mtm').textContent=(d50==null?'—':pct(d50))+' / '+(u50==null?'—':pct(u50));
+    $('target100Mtm').textContent=(d100==null?'—':pct(d100))+' / '+(u100==null?'—':pct(u100));
+  }else{
+    ['beLow','beHigh','target50','target100','target50Mtm','target100Mtm'].forEach(id=>$(id).textContent='—');
+    $('beLowSub').textContent='—';$('beHighSub').textContent='—';
+  }
+  updateMoveSlider(m);
+  updateScenario(m,ivPost);
+  drawChart(m,ivPost);
+  renderTable(m,ivPost);
+}
+function updateScenario(m,ivPost){
+  const move=num($('moveRange').value),Sf=m.S*(1+move/100),x=mtmPL(Sf,m,ivPost);
+  $('moveLabel').textContent=pct(move);$('ivRatioLabel').textContent=fmt0(num($('ivRatio').value))+'%';
+  $('simSpot').textContent=brl(Sf);$('simSpotSub').textContent=pct(move);
+  $('simOptionValue').textContent=m.qty>0?brl(x.value):'—';
+  $('simPnl').textContent=m.qty>0?(x.pl>=0?'+':'')+brl(x.pl):'—';
+  $('simPnl').className='value '+(x.pl>=0?'positive':'negative');
+  $('simReturn').textContent=m.qty>0?pct(x.ret):'—';
+  $('simReturn').className='value '+(x.ret>=0?'positive':'negative');
+  $('simReturnSub').textContent=ivPost>0?'IV pós '+fmt1(ivPost*100)+'%':'IV indisponível';
+}
+function renderTable(m,ivPost){
+  const r=chartRange(m),moves=[-r,-r*.75,-r*.5,-r*.25,0,r*.25,r*.5,r*.75,r].map(x=>Math.round(x*10)/10);
+  let h='<thead><tr><th>Movimento</th><th>Spot</th><th>Ret. vencimento</th><th>P/L vencimento</th><th>Ret. 05/10</th><th>P/L 05/10</th></tr></thead><tbody>';
+  moves.forEach(mv=>{
+    const Sf=m.S*(1+mv/100),e=expiryPL(Sf,m),x=mtmPL(Sf,m,ivPost);
+    h+='<tr><td>'+pct(mv)+'</td><td>'+brl(Sf)+'</td><td class="'+(e.ret>=0?'positive':'negative')+'">'+pct(e.ret)+'</td><td>'+(e.pl>=0?'+':'')+brl(e.pl)+'</td><td class="'+(x.ret>=0?'positive':'negative')+'">'+pct(x.ret)+'</td><td>'+(x.pl>=0?'+':'')+brl(x.pl)+'</td></tr>';
+  });
+  $('scenarioTable').innerHTML=h+'</tbody>';
+}
+function drawChart(m,ivPost){
+  const c=$('chart'),rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  c.width=Math.max(600,Math.floor(rect.width*dpr));c.height=Math.max(310,Math.floor(rect.height*dpr));
+  const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+  const W=c.width/dpr,H=c.height/dpr,pad={l:58,r:18,t:22,b:42},iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
+  const R=chartRange(m),xs=[];for(let x=-R;x<=R+.001;x+=R/120)xs.push(x);
+  const yExp=xs.map(x=>expiryPL(m.S*(1+x/100),m).ret);
+  const yMtm=xs.map(x=>mtmPL(m.S*(1+x/100),m,ivPost).ret);
+  let ymin=Math.min(-100,...yExp,...yMtm),ymax=Math.max(100,...yExp,...yMtm),extra=(ymax-ymin||1)*.1;ymin-=extra;ymax+=extra;
+  const xp=x=>pad.l+(x+R)/(2*R)*iw,yp=y=>pad.t+(ymax-y)/(ymax-ymin)*ih;
+  ctx.clearRect(0,0,W,H);ctx.font='11px Arial';ctx.strokeStyle='#e4e8eb';ctx.fillStyle='#75828d';
+  [-R,-R/2,0,R/2,R].forEach(x=>{const px=xp(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+fmt1(x)+'%',px-16,H-15)});
+  for(let i=0;i<=5;i++){const y=ymin+(ymax-ymin)*i/5,py=yp(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText((y>=0?'+':'')+Math.round(y)+'%',6,py+4)}
+  ctx.strokeStyle='#87939d';ctx.beginPath();ctx.moveTo(pad.l,yp(0));ctx.lineTo(W-pad.r,yp(0));ctx.stroke();
+  function line(arr,col,dash=[]){ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2.5;ctx.setLineDash(dash);ctx.beginPath();arr.forEach((y,i)=>{if(i===0)ctx.moveTo(xp(xs[i]),yp(y));else ctx.lineTo(xp(xs[i]),yp(y))});ctx.stroke();ctx.restore();}
+  line(yExp,'#1F3249');line(yMtm,'#BA8758',[7,5]);
+  ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
+  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('05/10 MTM',W-116,21);
+}
+async function fetchYahooSpot(){
+  const ticker=ASSETS[state.asset].yahoo;
+  setStatus('', 'Buscando '+ticker+'…','Consulta indicativa via Yahoo Finance.');
+  $('refreshQuote').disabled=true;
+  const urls=[
+    'https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(ticker)+'?range=1d&interval=1m&includePrePost=false&events=div%2Csplits',
+    'https://query2.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(ticker)+'?range=1d&interval=1m&includePrePost=false&events=div%2Csplits'
+  ];
+  let lastErr=null;
+  for(const url of urls){
+    try{
+      const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
+      const res=await fetch(url,{cache:'no-store',signal:controller.signal});clearTimeout(timer);
+      if(!res.ok)throw new Error('HTTP '+res.status);
+      const j=await res.json(),r=j?.chart?.result?.[0];if(!r)throw new Error('sem dados');
+      const meta=r.meta||{},q=r.indicators?.quote?.[0]||{},closes=q.close||[],ts=r.timestamp||[];
+      let price=num(meta.regularMarketPrice),stamp=num(meta.regularMarketTime);
+      if(!(price>0)){
+        for(let i=closes.length-1;i>=0;i--){if(Number.isFinite(closes[i])){price=closes[i];stamp=ts[i]||stamp;break;}}
+      }
+      if(!(price>0))throw new Error('preço inválido');
+      $('spotInput').value=price.toFixed(2);
+      state.quote={price,stamp,ticker,currency:meta.currency||'BRL'};
+      const when=stamp?new Date(stamp*1000).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'horário não informado';
+      setStatus('ok','Yahoo Finance · cotação carregada',ticker+' · '+brl(price)+' · '+when+' · dados podem ter atraso.');
+      suggestStrikes();updateAll();
+      $('refreshQuote').disabled=false;return;
+    }catch(e){lastErr=e;}
+  }
+  setStatus('err','Cotação automática indisponível','Mantido o spot manual. Motivo: '+(lastErr?.message||'falha de consulta')+'.');
+  $('refreshQuote').disabled=false;updateAll();
+}
+function updateAll(){updateMetrics();}
+function resetAsset(){
+  if(COSTS[state.asset][state.structure]==null)state.structure=Object.keys(COSTS[state.asset]).find(k=>COSTS[state.asset][k]!=null);
+  buildSelects();
+  const fb=ASSETS[state.asset].fallbackSpot;
+  if(!state.quote)$('spotInput').value=fb;
+  $('callAsk').value='';$('putAsk').value='';
+  suggestStrikes();fetchYahooSpot();
+}
+$('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;state.quote=null;resetAsset();});
+$('structureSelect').addEventListener('change',e=>{state.structure=e.target.value;suggestStrikes();});
+$('refreshQuote').onclick=fetchYahooSpot;
+$('suggestStrikes').onclick=suggestStrikes;
+$('clearAsks').onclick=()=>{$('callAsk').value='';$('putAsk').value='';updateAll();};
+['spotInput','strikeStep','roundLot','callStrike','callAsk','putStrike','putAsk','allocation','feeType','feeValue','entryFixedCost','exitFixedCost','fallbackMode','expiryDate','scenarioDate','rangeMode'].forEach(id=>$(id).addEventListener('input',updateAll));
+$('moveRange').addEventListener('input',()=>{const m=priceModel(),iv=entryIV(m)*num($('ivRatio').value)/100;updateScenario(m,iv);});
+$('ivRatio').addEventListener('input',updateAll);
+window.addEventListener('resize',()=>{clearTimeout(window.__r);window.__r=setTimeout(updateAll,100)});
+buildSelects();suggestStrikes();fetchYahooSpot();
+</script>
+</body>
+</html>
