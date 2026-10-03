@@ -1,0 +1,37 @@
+name: Atualizar universo B3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-universe.yml"
+      - "scripts/update_universe.py"
+  schedule:
+    - cron: "15 11 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: universe-b3
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Atualizar universo
+        run: python3 scripts/update_universe.py
+      - name: Publicar se houver mudança
+        run: |
+          if git diff --quiet -- data/universe-b3.json; then
+            echo "Sem alteração no universo."
+            exit 0
+          fi
+          git config user.name "jacaranda-market-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/universe-b3.json
+          git commit -m "data: atualizar universo B3"
+          git push
