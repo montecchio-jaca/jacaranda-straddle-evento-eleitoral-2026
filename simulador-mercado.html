@@ -206,6 +206,8 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
     </div>
     <div class="kpis" style="margin-top:10px">
       <div class="kpi"><div class="label">IV calibrada pelo modelo</div><div id="entryIV" class="value">—</div><div class="sub">derivada do prêmio informado · BSM</div></div>
+      <div class="kpi"><div class="label">IV Call</div><div id="callIV" class="value">—</div><div class="sub">calibrada pelo Ask da Call</div></div>
+      <div class="kpi"><div class="label">IV Put</div><div id="putIV" class="value">—</div><div class="sub">calibrada pelo Ask da Put</div></div>
       <div class="kpi"><div class="label">+50% em 05/10</div><div id="target50Mtm" class="value">—</div><div class="sub">com IV do cenário</div></div>
       <div class="kpi"><div class="label">+100% em 05/10</div><div id="target100Mtm" class="value">—</div><div class="sub">com IV pós-evento</div></div>
       <div class="kpi"><div class="label">Saldo não utilizado</div><div id="cashLeft" class="value">—</div><div class="sub">após arredondamento por lote</div></div>
@@ -215,7 +217,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
         <span class="status-dot ok"></span>
         <div>
           <div class="source-title">IV calculada internamente</div>
-          <div class="source-meta">É a volatilidade que iguala o Black-Scholes-Merton ao prêmio informado (Ask Call + Ask Put, ou estimativa histórica quando usada). Não é uma IV oficial nem uma superfície de volatilidade capturada do mercado.</div>
+          <div class="source-meta">A IV total é a volatilidade única que iguala o Black-Scholes-Merton ao prêmio da estrutura. Quando Ask Call e Ask Put são informados, o painel também calibra IV por perna. São estimativas do modelo — não uma superfície oficial capturada do mercado.</div>
         </div>
       </div>
     </div>
@@ -394,6 +396,18 @@ function priceModel(){
   const cashLeft=Math.max(0,alloc-used);
   return {S,Kc,Kp,askC,askP,raw,mode,alloc,lot,variableFee,fixedFee,fixedEntry,perUnitEntry,qty,used,effectivePerUnit,cashLeft};
 }
+function impliedVolLeg(type,S,K,T,price){
+  if(!(price>0&&S>0&&K>0&&T>0))return 0;
+  const intrinsic=type==='call'?Math.max(S-K,0):Math.max(K-S,0);
+  if(price<intrinsic-1e-8)return 0;
+  let lo=.0001,hi=5;
+  for(let i=0;i<90;i++){
+    const mid=(lo+hi)/2;
+    const v=bsm(type,S,K,T,0,0,mid);
+    if(v>price)hi=mid;else lo=mid;
+  }
+  return (lo+hi)/2;
+}
 function entryIV(m){
   if(!(m.raw>0&&m.S>0&&m.Kc>0&&m.Kp>0))return 0;
   const T=years($('entryDate').value,$('expiryDate').value);
@@ -468,6 +482,11 @@ function updateMetrics(){
   $('qtySub').textContent='lote '+fmt0(m.lot)+' · '+(m.qty>0?fmt0(m.qty/m.lot)+' lotes':'—');
   $('cashLeft').textContent=brl(m.cashLeft);
   $('entryIV').textContent=ivE>0?fmt1(ivE*100)+'%':'—';
+  const Tleg=years($('entryDate').value,$('expiryDate').value);
+  const callIv=m.askC>0?impliedVolLeg('call',m.S,m.Kc,Tleg,m.askC):0;
+  const putIv=m.askP>0?impliedVolLeg('put',m.S,m.Kp,Tleg,m.askP):0;
+  $('callIV').textContent=callIv>0?fmt1(callIv*100)+'%':'—';
+  $('putIV').textContent=putIv>0?fmt1(putIv*100)+'%':'—';
 
   if(m.qty>0){
     const beL=m.Kp-m.effectivePerUnit,beH=m.Kc+m.effectivePerUnit;
