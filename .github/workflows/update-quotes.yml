@@ -1,0 +1,41 @@
+name: Atualizar cotações indicativas
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-quotes.yml"
+      - "scripts/update_quotes.py"
+  schedule:
+    # 09:00–18:45 de Brasília (UTC-3), dias úteis, a cada 15 minutos.
+    - cron: "*/15 12-21 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quotes-snapshot
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Atualizar snapshot
+        run: python3 scripts/update_quotes.py
+
+      - name: Publicar se houver mudança
+        run: |
+          if git diff --quiet -- data/quotes.json; then
+            echo "Sem nova cotação para publicar."
+            exit 0
+          fi
+          git config user.name "jacaranda-market-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/quotes.json
+          git commit -m "data: atualizar cotacoes indicativas"
+          git push
