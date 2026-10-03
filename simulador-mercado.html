@@ -352,7 +352,7 @@ function renderLegs(){
       '<div class="mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
       '<div class="mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
       '<div class="mini"><label>Qtd.</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'"></div>'+
-      '<div class="mini"><label>Strike</label><input data-f="strike" type="number" min="0" step="0.01" value="'+fmt(l.strike).replace('.','')+'"></div>'+
+      '<div class="mini"><label>Strike</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
       '<div class="mini"><label>'+priceLabel+'</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
       '<div class="mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
