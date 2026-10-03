@@ -100,14 +100,14 @@ def main():
 
     for symbol, yahoo in TICKERS.items():
         try:
-            quotes[symbol] = brapi_quote(symbol)
+            quotes[symbol] = yahoo_quote(symbol, yahoo)
             continue
-        except Exception as brapi_exc:
+        except Exception as yahoo_exc:
             try:
-                quotes[symbol] = yahoo_quote(symbol, yahoo)
+                quotes[symbol] = brapi_quote(symbol)
                 continue
-            except Exception as yahoo_exc:
-                errors[symbol] = f"brapi: {brapi_exc}; Yahoo: {yahoo_exc}"
+            except Exception as brapi_exc:
+                errors[symbol] = f"Yahoo: {yahoo_exc}; brapi: {brapi_exc}"
 
         if symbol in old_quotes:
             quotes[symbol] = old_quotes[symbol]
@@ -120,7 +120,7 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "source_note": "Snapshot indicativo. brapi.dev é a fonte primária; Yahoo Finance é fallback server-side pelo GitHub Actions.",
+        "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; brapi.dev é fallback.",
         "quotes": quotes,
         "errors": errors,
     }
