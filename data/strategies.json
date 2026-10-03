@@ -1,0 +1,666 @@
+{
+  "version": "1.0",
+  "note": "Catálogo inicial de estratégias vanilla com mesmo vencimento. Calendar e diagonal ficam para fase multi-vencimento.",
+  "strategies": [
+    {
+      "id": "long_call",
+      "name": "Compra de Call",
+      "category": "Direcional",
+      "tier": "Essencial",
+      "bias": "Alta",
+      "risk": "Perda limitada ao prêmio",
+      "description": "Compra de call para exposição convexa à alta.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "short_call",
+      "name": "Venda de Call",
+      "category": "Renda / Direcional",
+      "tier": "Essencial",
+      "bias": "Neutro a baixa",
+      "risk": "Perda potencial ilimitada se descoberta",
+      "description": "Venda de call. Se não houver posição no ativo, a perda na alta pode ser ilimitada.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 103
+        }
+      ]
+    },
+    {
+      "id": "long_put",
+      "name": "Compra de Put",
+      "category": "Direcional / Hedge",
+      "tier": "Essencial",
+      "bias": "Baixa",
+      "risk": "Perda limitada ao prêmio",
+      "description": "Compra de put para proteção ou exposição convexa à queda.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "short_put",
+      "name": "Venda de Put (cash-secured)",
+      "category": "Renda / Direcional",
+      "tier": "Essencial",
+      "bias": "Neutro a alta",
+      "risk": "Perda elevada até o ativo chegar a zero",
+      "description": "Venda de put com caixa/garantia. Recebe prêmio e assume obrigação de compra no strike.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 97
+        }
+      ]
+    },
+    {
+      "id": "covered_call",
+      "name": "Financiamento / Covered Call",
+      "category": "Renda",
+      "tier": "Essencial",
+      "bias": "Neutro a alta moderada",
+      "risk": "Risco do ativo até zero; alta limitada",
+      "description": "Compra/manutenção do ativo e venda de call para gerar prêmio.",
+      "stockQty": 1,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "protective_put",
+      "name": "Protective Put",
+      "category": "Proteção",
+      "tier": "Essencial",
+      "bias": "Alta com proteção",
+      "risk": "Perda limitada abaixo do strike da put",
+      "description": "Ativo comprado com put de proteção.",
+      "stockQty": 1,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        }
+      ]
+    },
+    {
+      "id": "collar",
+      "name": "Collar",
+      "category": "Proteção",
+      "tier": "Essencial",
+      "bias": "Faixa definida",
+      "risk": "Baixa protegida; alta limitada",
+      "description": "Ativo + compra de put + venda de call.",
+      "stockQty": 1,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "fence",
+      "name": "Fence / Collar Financiado",
+      "category": "Proteção",
+      "tier": "Comum",
+      "bias": "Proteção com financiamento",
+      "risk": "Proteção parcial; pode reabrir risco abaixo da put vendida",
+      "description": "Ativo + compra de put + venda de put mais baixa + venda de call.",
+      "stockQty": 1,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 90
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "bull_call_spread",
+      "name": "Trava de Alta com Calls",
+      "category": "Direcional",
+      "tier": "Essencial",
+      "bias": "Alta moderada",
+      "risk": "Perda e ganho limitados",
+      "description": "Compra call de strike menor e vende call de strike maior.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "bear_put_spread",
+      "name": "Trava de Baixa com Puts",
+      "category": "Direcional",
+      "tier": "Essencial",
+      "bias": "Baixa moderada",
+      "risk": "Perda e ganho limitados",
+      "description": "Compra put de strike maior e vende put de strike menor.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        }
+      ]
+    },
+    {
+      "id": "bull_put_spread",
+      "name": "Trava de Alta com Puts (crédito)",
+      "category": "Renda / Direcional",
+      "tier": "Comum",
+      "bias": "Neutro a alta",
+      "risk": "Perda limitada",
+      "description": "Venda put de strike maior e compra put de strike menor.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        }
+      ]
+    },
+    {
+      "id": "bear_call_spread",
+      "name": "Trava de Baixa com Calls (crédito)",
+      "category": "Renda / Direcional",
+      "tier": "Comum",
+      "bias": "Neutro a baixa",
+      "risk": "Perda limitada",
+      "description": "Venda call de strike menor e compra call de strike maior.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "long_straddle",
+      "name": "Straddle Comprado",
+      "category": "Volatilidade",
+      "tier": "Essencial",
+      "bias": "Movimento forte",
+      "risk": "Perda limitada aos prêmios",
+      "description": "Compra call e put no mesmo strike.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "long_strangle",
+      "name": "Strangle Comprado",
+      "category": "Volatilidade",
+      "tier": "Essencial",
+      "bias": "Movimento forte",
+      "risk": "Perda limitada aos prêmios",
+      "description": "Compra call OTM e put OTM.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 103
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 97
+        }
+      ]
+    },
+    {
+      "id": "short_straddle",
+      "name": "Straddle Vendido",
+      "category": "Volatilidade / Renda",
+      "tier": "Avançada",
+      "bias": "Baixa volatilidade",
+      "risk": "Perda potencial ilimitada na alta",
+      "description": "Venda call e put no mesmo strike.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "short_strangle",
+      "name": "Strangle Vendido",
+      "category": "Volatilidade / Renda",
+      "tier": "Avançada",
+      "bias": "Baixa volatilidade",
+      "risk": "Perda potencial ilimitada na alta",
+      "description": "Venda call OTM e put OTM.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 103
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 97
+        }
+      ]
+    },
+    {
+      "id": "call_butterfly",
+      "name": "Borboleta de Calls",
+      "category": "Volatilidade",
+      "tier": "Comum",
+      "bias": "Preço próximo ao strike central",
+      "risk": "Perda e ganho limitados",
+      "description": "Compra 1 call baixa, vende 2 calls centrais e compra 1 call alta.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 2,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "iron_butterfly",
+      "name": "Iron Butterfly",
+      "category": "Volatilidade / Renda",
+      "tier": "Comum",
+      "bias": "Preço próximo ao strike central",
+      "risk": "Perda limitada",
+      "description": "Compra put baixa, vende put e call centrais e compra call alta.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "iron_condor",
+      "name": "Iron Condor",
+      "category": "Volatilidade / Renda",
+      "tier": "Comum",
+      "bias": "Lateral",
+      "risk": "Perda limitada",
+      "description": "Put spread de crédito + call spread de crédito.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 90
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 110
+        }
+      ]
+    },
+    {
+      "id": "long_condor",
+      "name": "Condor Comprado de Calls",
+      "category": "Volatilidade",
+      "tier": "Avançada",
+      "bias": "Faixa intermediária",
+      "risk": "Perda e ganho limitados",
+      "description": "Compra call K1, vende K2/K3 e compra K4.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 110
+        }
+      ]
+    },
+    {
+      "id": "synthetic_long",
+      "name": "Long Sintético",
+      "category": "Sintéticas",
+      "tier": "Comum",
+      "bias": "Alta",
+      "risk": "Equivalente econômico a posição comprada",
+      "description": "Compra call e vende put no mesmo strike.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "synthetic_short",
+      "name": "Short Sintético",
+      "category": "Sintéticas",
+      "tier": "Avançada",
+      "bias": "Baixa",
+      "risk": "Perda potencial ilimitada na alta",
+      "description": "Vende call e compra put no mesmo strike.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        }
+      ]
+    },
+    {
+      "id": "call_backspread",
+      "name": "Call Backspread 1x2",
+      "category": "Convexidade",
+      "tier": "Avançada",
+      "bias": "Alta forte",
+      "risk": "Risco limitado em faixa intermediária",
+      "description": "Vende 1 call menor e compra 2 calls maiores.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 2,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "put_backspread",
+      "name": "Put Backspread 1x2",
+      "category": "Convexidade",
+      "tier": "Avançada",
+      "bias": "Baixa forte",
+      "risk": "Risco limitado em faixa intermediária",
+      "description": "Vende 1 put maior e compra 2 puts menores.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 2,
+          "strikePct": 95
+        }
+      ]
+    },
+    {
+      "id": "ratio_call_spread",
+      "name": "Ratio Call Spread 1x2 vendido",
+      "category": "Convexidade",
+      "tier": "Avançada",
+      "bias": "Alta moderada",
+      "risk": "Perda potencial ilimitada em alta extrema",
+      "description": "Compra 1 call menor e vende 2 calls maiores.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 100
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 2,
+          "strikePct": 105
+        }
+      ]
+    },
+    {
+      "id": "box_spread",
+      "name": "Box Spread",
+      "category": "Arbitragem / Financiamento",
+      "tier": "Avançada",
+      "bias": "Neutro",
+      "risk": "Payoff fixo antes de custos e riscos operacionais",
+      "description": "Call spread comprado combinado com put spread complementar.",
+      "stockQty": 0,
+      "legs": [
+        {
+          "side": "buy",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 95
+        },
+        {
+          "side": "sell",
+          "type": "call",
+          "qty": 1,
+          "strikePct": 105
+        },
+        {
+          "side": "buy",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 105
+        },
+        {
+          "side": "sell",
+          "type": "put",
+          "qty": 1,
+          "strikePct": 95
+        }
+      ]
+    }
+  ],
+  "backlog": [
+    {
+      "id": "calendar",
+      "name": "Calendar Spread",
+      "reason": "Exige dois vencimentos e MTM da perna longa no vencimento curto."
+    },
+    {
+      "id": "diagonal",
+      "name": "Diagonal Spread",
+      "reason": "Exige strikes e vencimentos diferentes por perna."
+    }
+  ]
+}
