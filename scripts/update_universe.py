@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import re
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -39,6 +40,15 @@ def load_all():
                 continue
             if subtype not in ("stock", "unit", ""):
                 continue
+            # Mantém o mercado padrão das ações/units e exclui fracionário,
+            # direitos/recibos e outros códigos acessórios que a fonte
+            # eventualmente classifica como stock.
+            m = re.fullmatch(r"([A-Z]{4})(\d{1,2})", symbol)
+            if not m:
+                continue
+            suffix = int(m.group(2))
+            if suffix not in (3, 4, 5, 6, 7, 8, 11):
+                continue
             assets.append({
                 "symbol": symbol,
                 "name": row.get("name") or symbol,
@@ -70,7 +80,7 @@ def main():
     payload = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "source": "brapi.dev /api/quote/list?type=stock",
-        "scope": "Ações e units classificadas como stock; fundos e BDRs excluídos.",
+        "scope": "Ações e units no mercado padrão (sufixos 3–8 e 11); fracionário, direitos/recibos, fundos e BDRs excluídos.",
         "count": len(assets),
         "assets": assets,
     }
