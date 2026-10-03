@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mercado Beta | Straddle & Strangle · Jacarandá Investimentos</title>
+<title>Estruturadas Jacarandá | Precificador Beta</title>
 <style>
 :root{
   --navy:#1A2027;--blue:#1F3249;--deep:#132436;--bronze:#BA8758;
@@ -85,20 +85,20 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
   <div class="brandrow">
     <div>
       <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
-      <h1>Straddle & Strangle | Mercado Beta</h1>
-      <p class="subtitle">Segunda camada do simulador: captura automática de spot com atraso, seleção de strikes reais/editáveis, prêmio por perna, fee, custo all-in e metas de retorno. A versão original permanece preservada.</p>
+      <h1>Estruturadas Jacarandá | Precificador Beta</h1>
+      <p class="subtitle">Camada pré-operacional para estimar quanto custa montar uma estrutura e quanto o ativo precisa andar. Usa snapshot indicativo de mercado, strikes e prêmios editáveis, fee, custo all-in e metas de retorno.</p>
     </div>
     <div class="view-nav">
-      <a href="index.html">Simulador Base</a>
-      <a class="active" href="simulador-mercado.html">Mercado Beta</a>
+      <a href="index.html">Laboratório</a>
+      <a class="active" href="simulador-mercado.html">Precificador Beta</a>
     </div>
   </div>
   <div class="eventline">
-    <div class="eventpill"><strong>Spot</strong> automático quando disponível</div>
-    <div class="eventpill"><strong>Opções</strong> prêmio manual nesta fase</div>
-    <div class="eventpill"><strong>Entrada</strong> 02/10/2026</div>
-    <div class="eventpill"><strong>Evento</strong> 04/10/2026</div>
-    <div class="eventpill"><strong>Saída simulada</strong> 05/10/2026</div>
+    <div class="eventpill"><strong>Spot</strong> snapshot automático delayed</div>
+    <div class="eventpill"><strong>Opções</strong> Ask manual nesta fase</div>
+    <div class="eventpill"><strong>Strikes</strong> reais e editáveis</div>
+    <div class="eventpill"><strong>Fee</strong> incorporada ao custo</div>
+    <div class="eventpill"><strong>Cenário MTM</strong> data editável</div>
   </div>
 </header>
 
@@ -106,7 +106,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
   <div class="panel-head">
     <div>
       <h2>Cotação e montagem</h2>
-      <div class="note">Selecione o ativo. O painel tenta atualizar o spot pelo Yahoo Finance; se a consulta falhar, o valor permanece editável.</div>
+      <div class="note">Selecione o ativo. O painel lê um snapshot de mercado atualizado server-side; se o ativo não estiver disponível, o spot permanece manual e editável.</div>
     </div>
     <span class="pill">BETA · DADOS INDICATIVOS</span>
   </div>
@@ -115,11 +115,11 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
       <div class="source-main">
         <span id="statusDot" class="status-dot"></span>
         <div>
-          <div id="sourceTitle" class="source-title">Aguardando cotação</div>
-          <div id="sourceMeta" class="source-meta">Selecione um ativo ou clique em atualizar.</div>
+          <div id="sourceTitle" class="source-title">Aguardando snapshot de mercado</div>
+          <div id="sourceMeta" class="source-meta">Carregando a última cotação indicativa disponível.</div>
         </div>
       </div>
-      <button id="refreshQuote">Atualizar cotação</button>
+      <button id="refreshQuote">Recarregar snapshot</button>
     </div>
 
     <div class="inputs" style="margin-top:14px">
@@ -127,7 +127,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
       <div class="field"><label>Estrutura alvo</label><select id="structureSelect"></select></div>
       <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-07"></div>
 
-      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01" value="49.66"><div class="hint">Auto via Yahoo quando possível; sempre editável.</div></div>
+      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01" value="49.66"><div class="hint">Snapshot delayed quando disponível; sempre editável.</div></div>
       <div class="field"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"><div class="hint">Usado apenas para sugerir o strike mais próximo.</div></div>
       <div class="field"><label>Lote de negociação</label><input id="roundLot" type="number" step="1" min="1" value="100"></div>
 
@@ -230,7 +230,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
 </section>
 
 <footer class="footer">
-  <strong>Beta de simulação pré-operacional.</strong> Spot automático pode ter atraso e não representa garantia de execução. Os preços de opções devem ser confirmados no book da corretora antes de qualquer ordem.
+  <strong>Beta de simulação pré-operacional.</strong> O spot é um snapshot indicativo e pode estar defasado. Os preços das opções permanecem editáveis e devem ser confirmados no book da corretora antes de qualquer ordem.
   <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
 </footer>
 </div>
@@ -459,39 +459,44 @@ function drawChart(m,ivPost){
   function line(arr,col,dash=[]){ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2.5;ctx.setLineDash(dash);ctx.beginPath();arr.forEach((y,i)=>{if(i===0)ctx.moveTo(xp(xs[i]),yp(y));else ctx.lineTo(xp(xs[i]),yp(y))});ctx.stroke();ctx.restore();}
   line(yExp,'#1F3249');line(yMtm,'#BA8758',[7,5]);
   ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
-  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('05/10 MTM',W-116,21);
+  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('MTM cenário',W-116,21);
 }
-async function fetchYahooSpot(){
-  const ticker=ASSETS[state.asset].yahoo;
-  setStatus('', 'Buscando '+ticker+'…','Consulta indicativa via Yahoo Finance.');
+async function fetchMarketSnapshot(){
+  setStatus('', 'Carregando snapshot…','Leitura same-origin do arquivo data/quotes.json.');
   $('refreshQuote').disabled=true;
-  const urls=[
-    'https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(ticker)+'?range=1d&interval=1m&includePrePost=false&events=div%2Csplits',
-    'https://query2.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(ticker)+'?range=1d&interval=1m&includePrePost=false&events=div%2Csplits'
-  ];
-  let lastErr=null;
-  for(const url of urls){
-    try{
-      const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
-      const res=await fetch(url,{cache:'no-store',signal:controller.signal});clearTimeout(timer);
-      if(!res.ok)throw new Error('HTTP '+res.status);
-      const j=await res.json(),r=j?.chart?.result?.[0];if(!r)throw new Error('sem dados');
-      const meta=r.meta||{},q=r.indicators?.quote?.[0]||{},closes=q.close||[],ts=r.timestamp||[];
-      let price=num(meta.regularMarketPrice),stamp=num(meta.regularMarketTime);
-      if(!(price>0)){
-        for(let i=closes.length-1;i>=0;i--){if(Number.isFinite(closes[i])){price=closes[i];stamp=ts[i]||stamp;break;}}
-      }
-      if(!(price>0))throw new Error('preço inválido');
-      $('spotInput').value=price.toFixed(2);
-      state.quote={price,stamp,ticker,currency:meta.currency||'BRL'};
-      const when=stamp?new Date(stamp*1000).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'horário não informado';
-      setStatus('ok','Yahoo Finance · cotação carregada',ticker+' · '+brl(price)+' · '+when+' · dados podem ter atraso.');
-      suggestStrikes();updateAll();
-      $('refreshQuote').disabled=false;return;
-    }catch(e){lastErr=e;}
+  try{
+    const res=await fetch('data/quotes.json?v='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const payload=await res.json();
+    const q=(payload.quotes||{})[state.asset];
+    if(!q || !(Number(q.price)>0)) throw new Error('ativo sem cotação no snapshot');
+
+    const price=Number(q.price);
+    $('spotInput').value=price.toFixed(2);
+    state.quote={price,stamp:q.market_time_utc||null,provider:q.provider||'snapshot',ticker:q.provider_symbol||state.asset};
+
+    let when='horário não informado';
+    if(q.market_time_utc){
+      const d=new Date(q.market_time_utc);
+      if(!Number.isNaN(d.getTime())) when=d.toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'});
+    }
+    const gen=payload.generated_at_utc ? new Date(payload.generated_at_utc) : null;
+    const genText=gen && !Number.isNaN(gen.getTime()) ? gen.toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}) : null;
+    setStatus('ok',
+      'Snapshot carregado · '+(q.provider||'fonte indicativa'),
+      state.asset+' · '+brl(price)+' · mercado '+when+(genText?' · snapshot '+genText:'')+'.'
+    );
+    suggestStrikes();
+    updateAll();
+  }catch(e){
+    state.quote=null;
+    setStatus('err','Snapshot automático indisponível',
+      'Mantido o spot manual. '+(e&&e.message?e.message:'Falha ao carregar data/quotes.json')+'.'
+    );
+    updateAll();
+  }finally{
+    $('refreshQuote').disabled=false;
   }
-  setStatus('err','Cotação automática indisponível','Mantido o spot manual. Motivo: '+(lastErr?.message||'falha de consulta')+'.');
-  $('refreshQuote').disabled=false;updateAll();
 }
 function updateAll(){updateMetrics();}
 function resetAsset(){
@@ -500,18 +505,18 @@ function resetAsset(){
   const fb=ASSETS[state.asset].fallbackSpot;
   if(!state.quote)$('spotInput').value=fb;
   $('callAsk').value='';$('putAsk').value='';
-  suggestStrikes();fetchYahooSpot();
+  suggestStrikes();fetchMarketSnapshot();
 }
 $('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;state.quote=null;resetAsset();});
 $('structureSelect').addEventListener('change',e=>{state.structure=e.target.value;suggestStrikes();});
-$('refreshQuote').onclick=fetchYahooSpot;
+$('refreshQuote').onclick=fetchMarketSnapshot;
 $('suggestStrikes').onclick=suggestStrikes;
 $('clearAsks').onclick=()=>{$('callAsk').value='';$('putAsk').value='';updateAll();};
 ['spotInput','strikeStep','roundLot','callStrike','callAsk','putStrike','putAsk','allocation','feeType','feeValue','entryFixedCost','exitFixedCost','fallbackMode','expiryDate','scenarioDate','rangeMode'].forEach(id=>$(id).addEventListener('input',updateAll));
 $('moveRange').addEventListener('input',()=>{const m=priceModel(),iv=entryIV(m)*num($('ivRatio').value)/100;updateScenario(m,iv);});
 $('ivRatio').addEventListener('input',updateAll);
 window.addEventListener('resize',()=>{clearTimeout(window.__r);window.__r=setTimeout(updateAll,100)});
-buildSelects();suggestStrikes();fetchYahooSpot();
+buildSelects();suggestStrikes();fetchMarketSnapshot();
 </script>
 </body>
 </html>
