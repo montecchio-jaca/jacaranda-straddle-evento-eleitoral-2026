@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-10-03T17:28:36.546226Z",
+  "generated_at_utc": "2026-10-03T17:29:17.138265Z",
   "source": "brapi.dev /api/quote/list?type=stock",
-  "scope": "Ações e units classificadas como stock; fundos e BDRs excluídos.",
-  "count": 781,
+  "scope": "Ações e units no mercado padrão (sufixos 3–8 e 11); fracionário, direitos/recibos, fundos e BDRs excluídos.",
+  "count": 368,
   "assets": [
     {
       "symbol": "AALR3",
@@ -17,42 +17,6 @@
       "yahoo": "AALR3.SA"
     },
     {
-      "symbol": "AALR3F",
-      "name": "ALLIANÇA SAÚDE E PARTICIPAÇÕES S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.26,
-      "change": 0.31,
-      "volume": 300,
-      "market_cap": 502486576,
-      "yahoo": "AALR3F.SA"
-    },
-    {
-      "symbol": "ABCB10",
-      "name": "BCO ABC BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25.93,
-      "change": 2.09,
-      "volume": 34500,
-      "market_cap": 6650567130,
-      "yahoo": "ABCB10.SA"
-    },
-    {
-      "symbol": "ABCB10F",
-      "name": "BCO ABC BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25.96,
-      "change": 4.26,
-      "volume": 342,
-      "market_cap": 6650567130,
-      "yahoo": "ABCB10F.SA"
-    },
-    {
       "symbol": "ABCB4",
       "name": "BCO ABC BRASIL S.A.",
       "sector": "Finance",
@@ -63,18 +27,6 @@
       "volume": 1023600,
       "market_cap": 6650567130,
       "yahoo": "ABCB4.SA"
-    },
-    {
-      "symbol": "ABCB4F",
-      "name": "BCO ABC BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 26.01,
-      "change": 1.52,
-      "volume": 14102,
-      "market_cap": 6650567130,
-      "yahoo": "ABCB4F.SA"
     },
     {
       "symbol": "ABEV3",
@@ -89,18 +41,6 @@
       "yahoo": "ABEV3.SA"
     },
     {
-      "symbol": "ABEV3F",
-      "name": "AMBEV S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.89,
-      "change": 2.91,
-      "volume": 18729,
-      "market_cap": 238707233095,
-      "yahoo": "ABEV3F.SA"
-    },
-    {
       "symbol": "AERI3",
       "name": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
       "sector": "Producer Manufacturing",
@@ -111,18 +51,6 @@
       "volume": 31600,
       "market_cap": 138528033,
       "yahoo": "AERI3.SA"
-    },
-    {
-      "symbol": "AERI3F",
-      "name": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.18,
-      "change": -1.8,
-      "volume": 1291,
-      "market_cap": 138528033,
-      "yahoo": "AERI3F.SA"
     },
     {
       "symbol": "AFLT3",
@@ -137,18 +65,6 @@
       "yahoo": "AFLT3.SA"
     },
     {
-      "symbol": "AFLT3F",
-      "name": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.2,
-      "change": -2.17,
-      "volume": 126,
-      "market_cap": 441592884,
-      "yahoo": "AFLT3F.SA"
-    },
-    {
       "symbol": "AGRO3",
       "name": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
       "sector": "Finance",
@@ -159,18 +75,6 @@
       "volume": 183300,
       "market_cap": 1756269295,
       "yahoo": "AGRO3.SA"
-    },
-    {
-      "symbol": "AGRO3F",
-      "name": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.17,
-      "change": 2.19,
-      "volume": 11476,
-      "market_cap": 1756269295,
-      "yahoo": "AGRO3F.SA"
     },
     {
       "symbol": "AGXY3",
@@ -185,18 +89,6 @@
       "yahoo": "AGXY3.SA"
     },
     {
-      "symbol": "AGXY3F",
-      "name": "AGROGALAXY PARTICIPAÇÕES S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.71,
-      "change": 0,
-      "volume": 407,
-      "market_cap": 13325840,
-      "yahoo": "AGXY3F.SA"
-    },
-    {
       "symbol": "AHEB3",
       "name": "SAO PAULO TURISMO S.A.",
       "sector": "Commercial Services",
@@ -207,30 +99,6 @@
       "volume": 100,
       "market_cap": 201023252,
       "yahoo": "AHEB3.SA"
-    },
-    {
-      "symbol": "AHEB3F",
-      "name": "SAO PAULO TURISMO S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.69,
-      "change": 0,
-      "volume": 35,
-      "market_cap": 201023252,
-      "yahoo": "AHEB3F.SA"
-    },
-    {
-      "symbol": "AHEB6F",
-      "name": "SAO PAULO TURISMO S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 40,
-      "change": 0,
-      "volume": 20,
-      "market_cap": 201023252,
-      "yahoo": "AHEB6F.SA"
     },
     {
       "symbol": "ALLD3",
@@ -245,18 +113,6 @@
       "yahoo": "ALLD3.SA"
     },
     {
-      "symbol": "ALLD3F",
-      "name": "ALLIED TECNOLOGIA S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.38,
-      "change": 1.32,
-      "volume": 13924,
-      "market_cap": 508596181,
-      "yahoo": "ALLD3F.SA"
-    },
-    {
       "symbol": "ALOS3",
       "name": "ALLOS S.A",
       "sector": "Finance",
@@ -267,18 +123,6 @@
       "volume": 10273900,
       "market_cap": 14970461973,
       "yahoo": "ALOS3.SA"
-    },
-    {
-      "symbol": "ALOS3F",
-      "name": "ALLOS S.A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 30.29,
-      "change": 1.71,
-      "volume": 40264,
-      "market_cap": 14970461973,
-      "yahoo": "ALOS3F.SA"
     },
     {
       "symbol": "ALPA3",
@@ -293,18 +137,6 @@
       "yahoo": "ALPA3.SA"
     },
     {
-      "symbol": "ALPA3F",
-      "name": "ALPARGATAS S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.05,
-      "change": 3.95,
-      "volume": 682,
-      "market_cap": 8489566137,
-      "yahoo": "ALPA3F.SA"
-    },
-    {
       "symbol": "ALPA4",
       "name": "ALPARGATAS S.A.",
       "sector": "Consumer Non-Durables",
@@ -315,18 +147,6 @@
       "volume": 1983600,
       "market_cap": 8489566137,
       "yahoo": "ALPA4.SA"
-    },
-    {
-      "symbol": "ALPA4F",
-      "name": "ALPARGATAS S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.06,
-      "change": 4.37,
-      "volume": 9162,
-      "market_cap": 8489566137,
-      "yahoo": "ALPA4F.SA"
     },
     {
       "symbol": "ALPK3",
@@ -341,18 +161,6 @@
       "yahoo": "ALPK3.SA"
     },
     {
-      "symbol": "ALPK3F",
-      "name": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.53,
-      "change": 0.44,
-      "volume": 5896,
-      "market_cap": 984682724,
-      "yahoo": "ALPK3F.SA"
-    },
-    {
       "symbol": "ALUP11",
       "name": "ALUPAR INVESTIMENTO S/A",
       "sector": "Utilities",
@@ -363,18 +171,6 @@
       "volume": 794100,
       "market_cap": null,
       "yahoo": "ALUP11.SA"
-    },
-    {
-      "symbol": "ALUP11F",
-      "name": "ALUPAR INVESTIMENTO S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 33.68,
-      "change": 2.84,
-      "volume": 12877,
-      "market_cap": null,
-      "yahoo": "ALUP11F.SA"
     },
     {
       "symbol": "ALUP3",
@@ -389,18 +185,6 @@
       "yahoo": "ALUP3.SA"
     },
     {
-      "symbol": "ALUP3F",
-      "name": "ALUPAR INVESTIMENTO S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.82,
-      "change": 2.87,
-      "volume": 893,
-      "market_cap": 10765613248,
-      "yahoo": "ALUP3F.SA"
-    },
-    {
       "symbol": "ALUP4",
       "name": "ALUPAR INVESTIMENTO S/A",
       "sector": "Utilities",
@@ -411,18 +195,6 @@
       "volume": 11500,
       "market_cap": 10765613248,
       "yahoo": "ALUP4.SA"
-    },
-    {
-      "symbol": "ALUP4F",
-      "name": "ALUPAR INVESTIMENTO S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.86,
-      "change": 1.02,
-      "volume": 1772,
-      "market_cap": 10765613248,
-      "yahoo": "ALUP4F.SA"
     },
     {
       "symbol": "AMAR3",
@@ -437,18 +209,6 @@
       "yahoo": "AMAR3.SA"
     },
     {
-      "symbol": "AMAR3F",
-      "name": "MARISA LOJAS S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.79,
-      "change": -2.47,
-      "volume": 1659,
-      "market_cap": 405667277,
-      "yahoo": "AMAR3F.SA"
-    },
-    {
       "symbol": "AMBP3",
       "name": "AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A",
       "sector": "Commercial Services",
@@ -459,18 +219,6 @@
       "volume": 64233500,
       "market_cap": 150337689,
       "yahoo": "AMBP3.SA"
-    },
-    {
-      "symbol": "AMBP3F",
-      "name": "AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.08,
-      "change": -20,
-      "volume": 23605,
-      "market_cap": 150337689,
-      "yahoo": "AMBP3F.SA"
     },
     {
       "symbol": "AMER3",
@@ -485,18 +233,6 @@
       "yahoo": "AMER3.SA"
     },
     {
-      "symbol": "AMER3F",
-      "name": "AMERICANAS S.A",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.43,
-      "change": 1.5,
-      "volume": 7296,
-      "market_cap": 1055292326.9999999,
-      "yahoo": "AMER3F.SA"
-    },
-    {
       "symbol": "AMOB3",
       "name": "AUTOMOB PARTICIPAÇÕES S.A.",
       "sector": "Retail Trade",
@@ -507,18 +243,6 @@
       "volume": 1340400,
       "market_cap": 459179028,
       "yahoo": "AMOB3.SA"
-    },
-    {
-      "symbol": "AMOB3F",
-      "name": "AUTOMOB PARTICIPAÇÕES S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.35,
-      "change": 0.82,
-      "volume": 2526,
-      "market_cap": 459179028,
-      "yahoo": "AMOB3F.SA"
     },
     {
       "symbol": "ANIM3",
@@ -533,18 +257,6 @@
       "yahoo": "ANIM3.SA"
     },
     {
-      "symbol": "ANIM3F",
-      "name": "ANIMA HOLDING S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.32,
-      "change": 9.21,
-      "volume": 4768,
-      "market_cap": 1231092252,
-      "yahoo": "ANIM3F.SA"
-    },
-    {
       "symbol": "ARML3",
       "name": "ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.",
       "sector": "Finance",
@@ -555,18 +267,6 @@
       "volume": 1144900,
       "market_cap": 1521108963,
       "yahoo": "ARML3.SA"
-    },
-    {
-      "symbol": "ARML3F",
-      "name": "ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.54,
-      "change": 6.32,
-      "volume": 3860,
-      "market_cap": 1521108963,
-      "yahoo": "ARML3F.SA"
     },
     {
       "symbol": "ARND3",
@@ -581,18 +281,6 @@
       "yahoo": "ARND3.SA"
     },
     {
-      "symbol": "ARND3F",
-      "name": "ARANDU INVESTIMENTOS S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.58,
-      "change": 5.45,
-      "volume": 17,
-      "market_cap": 78955412,
-      "yahoo": "ARND3F.SA"
-    },
-    {
       "symbol": "ASAI3",
       "name": "SENDAS DISTRIBUIDORA S.A.",
       "sector": "Retail Trade",
@@ -603,18 +291,6 @@
       "volume": 31033400,
       "market_cap": 15115030501,
       "yahoo": "ASAI3.SA"
-    },
-    {
-      "symbol": "ASAI3F",
-      "name": "SENDAS DISTRIBUIDORA S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.19,
-      "change": 0.81,
-      "volume": 11502,
-      "market_cap": 15115030501,
-      "yahoo": "ASAI3F.SA"
     },
     {
       "symbol": "ATED3",
@@ -629,18 +305,6 @@
       "yahoo": "ATED3.SA"
     },
     {
-      "symbol": "ATED3F",
-      "name": "ATOM EDUCAÇÃO E EDITORA S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.1,
-      "change": 0,
-      "volume": 175,
-      "market_cap": 26423438,
-      "yahoo": "ATED3F.SA"
-    },
-    {
       "symbol": "AUAU3",
       "name": "PET CENTER COMERCIO  E PARTICIPACOES S.A.",
       "sector": "Process Industries",
@@ -651,18 +315,6 @@
       "volume": 4954900,
       "market_cap": 3795896048,
       "yahoo": "AUAU3.SA"
-    },
-    {
-      "symbol": "AUAU3F",
-      "name": "PET CENTER COMERCIO  E PARTICIPACOES S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.5,
-      "change": 0.45,
-      "volume": 4838,
-      "market_cap": 3795896048,
-      "yahoo": "AUAU3F.SA"
     },
     {
       "symbol": "AURE3",
@@ -677,18 +329,6 @@
       "yahoo": "AURE3.SA"
     },
     {
-      "symbol": "AURE3F",
-      "name": "AUREN ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 13.8,
-      "change": 4.62,
-      "volume": 31600,
-      "market_cap": 13843983043,
-      "yahoo": "AURE3F.SA"
-    },
-    {
       "symbol": "AVLL3",
       "name": "ALPHAVILLE S.A.",
       "sector": "Finance",
@@ -699,18 +339,6 @@
       "volume": 200,
       "market_cap": 44064796,
       "yahoo": "AVLL3.SA"
-    },
-    {
-      "symbol": "AVLL3F",
-      "name": "ALPHAVILLE S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.7,
-      "change": -0.18,
-      "volume": 95,
-      "market_cap": 44064796,
-      "yahoo": "AVLL3F.SA"
     },
     {
       "symbol": "AXIA3",
@@ -725,18 +353,6 @@
       "yahoo": "AXIA3.SA"
     },
     {
-      "symbol": "AXIA3F",
-      "name": "AXIA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 56.55,
-      "change": 2.71,
-      "volume": 42786,
-      "market_cap": 130863576518,
-      "yahoo": "AXIA3F.SA"
-    },
-    {
       "symbol": "AXIA7",
       "name": "AXIA ENERGIA S.A.",
       "sector": "Utilities",
@@ -747,18 +363,6 @@
       "volume": 1602300,
       "market_cap": 130863576518,
       "yahoo": "AXIA7.SA"
-    },
-    {
-      "symbol": "AXIA7F",
-      "name": "AXIA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 56.46,
-      "change": 2.65,
-      "volume": 7743,
-      "market_cap": 130863576518,
-      "yahoo": "AXIA7F.SA"
     },
     {
       "symbol": "AZEV3",
@@ -773,18 +377,6 @@
       "yahoo": "AZEV3.SA"
     },
     {
-      "symbol": "AZEV3F",
-      "name": "AZEVEDO E TRAVASSOS S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.76,
-      "change": -2.73,
-      "volume": 1760,
-      "market_cap": 343886349,
-      "yahoo": "AZEV3F.SA"
-    },
-    {
       "symbol": "AZEV4",
       "name": "AZEVEDO E TRAVASSOS S.A.",
       "sector": "Industrial Services",
@@ -795,18 +387,6 @@
       "volume": 403200,
       "market_cap": 343886349,
       "yahoo": "AZEV4.SA"
-    },
-    {
-      "symbol": "AZEV4F",
-      "name": "AZEVEDO E TRAVASSOS S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.16,
-      "change": 0,
-      "volume": 3444,
-      "market_cap": 343886349,
-      "yahoo": "AZEV4F.SA"
     },
     {
       "symbol": "AZTE3",
@@ -821,18 +401,6 @@
       "yahoo": "AZTE3.SA"
     },
     {
-      "symbol": "AZTE3F",
-      "name": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.23,
-      "change": -0.81,
-      "volume": 1929,
-      "market_cap": 48413937,
-      "yahoo": "AZTE3F.SA"
-    },
-    {
       "symbol": "AZUL3",
       "name": "AZUL S.A.",
       "sector": "Transportation",
@@ -843,54 +411,6 @@
       "volume": 155000,
       "market_cap": 6748295362,
       "yahoo": "AZUL3.SA"
-    },
-    {
-      "symbol": "AZUL3F",
-      "name": "AZUL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.5,
-      "change": 2.61,
-      "volume": 2797,
-      "market_cap": 6748295362,
-      "yahoo": "AZUL3F.SA"
-    },
-    {
-      "symbol": "AZUL97",
-      "name": "AZUL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "unit",
-      "close": 4,
-      "change": -10.51,
-      "volume": 1389,
-      "market_cap": 6748295362,
-      "yahoo": "AZUL97.SA"
-    },
-    {
-      "symbol": "AZUL98",
-      "name": "AZUL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "unit",
-      "close": 7.1,
-      "change": 0,
-      "volume": 6,
-      "market_cap": 6748295362,
-      "yahoo": "AZUL98.SA"
-    },
-    {
-      "symbol": "AZUL99",
-      "name": "AZUL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "unit",
-      "close": 4.45,
-      "change": 0.91,
-      "volume": 72,
-      "market_cap": 6748295362,
-      "yahoo": "AZUL99.SA"
     },
     {
       "symbol": "AZZA3",
@@ -905,66 +425,6 @@
       "yahoo": "AZZA3.SA"
     },
     {
-      "symbol": "AZZA3F",
-      "name": "AZZAS 2154 S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19.3,
-      "change": 3.71,
-      "volume": 28711,
-      "market_cap": 3837830068,
-      "yahoo": "AZZA3F.SA"
-    },
-    {
-      "symbol": "B1003",
-      "name": "B100 S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 30,
-      "change": 3.45,
-      "volume": 900,
-      "market_cap": 883799458,
-      "yahoo": "B1003.SA"
-    },
-    {
-      "symbol": "B1003F",
-      "name": "B100 S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 29,
-      "change": 23.19,
-      "volume": 3,
-      "market_cap": 883799458,
-      "yahoo": "B1003F.SA"
-    },
-    {
-      "symbol": "B3SA3",
-      "name": "B3 S.A. - BRASIL. BOLSA. BALCÃO",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19,
-      "change": 2.65,
-      "volume": 40016700,
-      "market_cap": 89930709579,
-      "yahoo": "B3SA3.SA"
-    },
-    {
-      "symbol": "B3SA3F",
-      "name": "B3 S.A. - BRASIL. BOLSA. BALCÃO",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.99,
-      "change": 2.65,
-      "volume": 50762,
-      "market_cap": 89930709579,
-      "yahoo": "B3SA3F.SA"
-    },
-    {
       "symbol": "BALM3",
       "name": "BAUMER S.A.",
       "sector": "Health Technology",
@@ -975,18 +435,6 @@
       "volume": 4600,
       "market_cap": 178536213,
       "yahoo": "BALM3.SA"
-    },
-    {
-      "symbol": "BALM3F",
-      "name": "BAUMER S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 22.01,
-      "change": -13.99,
-      "volume": 40,
-      "market_cap": 178536213,
-      "yahoo": "BALM3F.SA"
     },
     {
       "symbol": "BALM4",
@@ -1001,18 +449,6 @@
       "yahoo": "BALM4.SA"
     },
     {
-      "symbol": "BALM4F",
-      "name": "BAUMER S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.99,
-      "change": 3.38,
-      "volume": 231,
-      "market_cap": 178536213,
-      "yahoo": "BALM4F.SA"
-    },
-    {
       "symbol": "BAZA3",
       "name": "BCO AMAZONIA S.A.",
       "sector": "Finance",
@@ -1023,18 +459,6 @@
       "volume": 1700,
       "market_cap": 3884280717,
       "yahoo": "BAZA3.SA"
-    },
-    {
-      "symbol": "BAZA3F",
-      "name": "BCO AMAZONIA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 69.53,
-      "change": 0.36,
-      "volume": 721,
-      "market_cap": 3884280717,
-      "yahoo": "BAZA3F.SA"
     },
     {
       "symbol": "BBAS3",
@@ -1049,18 +473,6 @@
       "yahoo": "BBAS3.SA"
     },
     {
-      "symbol": "BBAS3F",
-      "name": "BCO BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.72,
-      "change": 2.77,
-      "volume": 207468,
-      "market_cap": 131647156290.00002,
-      "yahoo": "BBAS3F.SA"
-    },
-    {
       "symbol": "BBDC3",
       "name": "BCO BRADESCO S.A.",
       "sector": "Finance",
@@ -1071,18 +483,6 @@
       "volume": 26344000,
       "market_cap": 194710826962,
       "yahoo": "BBDC3.SA"
-    },
-    {
-      "symbol": "BBDC3F",
-      "name": "BCO BRADESCO S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 16.79,
-      "change": 3.32,
-      "volume": 44943,
-      "market_cap": 194710826962,
-      "yahoo": "BBDC3F.SA"
     },
     {
       "symbol": "BBDC4",
@@ -1097,18 +497,6 @@
       "yahoo": "BBDC4.SA"
     },
     {
-      "symbol": "BBDC4F",
-      "name": "BCO BRADESCO S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19.2,
-      "change": 3.5,
-      "volume": 93487,
-      "market_cap": 194710826962,
-      "yahoo": "BBDC4F.SA"
-    },
-    {
       "symbol": "BBSE3",
       "name": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
       "sector": "Finance",
@@ -1119,18 +507,6 @@
       "volume": 8697900,
       "market_cap": 75953609149,
       "yahoo": "BBSE3.SA"
-    },
-    {
-      "symbol": "BBSE3F",
-      "name": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 40.47,
-      "change": 2.95,
-      "volume": 77788,
-      "market_cap": 75953609149,
-      "yahoo": "BBSE3F.SA"
     },
     {
       "symbol": "BDLL3",
@@ -1145,18 +521,6 @@
       "yahoo": "BDLL3.SA"
     },
     {
-      "symbol": "BDLL3F",
-      "name": "BARDELLA S.A. INDUSTRIAS MECANICAS",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.44,
-      "change": 8.29,
-      "volume": 1,
-      "market_cap": 6304025,
-      "yahoo": "BDLL3F.SA"
-    },
-    {
       "symbol": "BDLL4",
       "name": "BARDELLA S.A. INDUSTRIAS MECANICAS",
       "sector": "Producer Manufacturing",
@@ -1167,18 +531,6 @@
       "volume": 600,
       "market_cap": 6304025,
       "yahoo": "BDLL4.SA"
-    },
-    {
-      "symbol": "BDLL4F",
-      "name": "BARDELLA S.A. INDUSTRIAS MECANICAS",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.15,
-      "change": 1.61,
-      "volume": 1,
-      "market_cap": 6304025,
-      "yahoo": "BDLL4F.SA"
     },
     {
       "symbol": "BEEF3",
@@ -1193,18 +545,6 @@
       "yahoo": "BEEF3.SA"
     },
     {
-      "symbol": "BEEF3F",
-      "name": "MINERVA S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.9,
-      "change": -0.26,
-      "volume": 22249,
-      "market_cap": 3828180727,
-      "yahoo": "BEEF3F.SA"
-    },
-    {
       "symbol": "BEES3",
       "name": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
       "sector": "Finance",
@@ -1215,18 +555,6 @@
       "volume": 21200,
       "market_cap": 3231788594,
       "yahoo": "BEES3.SA"
-    },
-    {
-      "symbol": "BEES3F",
-      "name": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.24,
-      "change": -0.32,
-      "volume": 2855,
-      "market_cap": 3231788594,
-      "yahoo": "BEES3F.SA"
     },
     {
       "symbol": "BEES4",
@@ -1241,18 +569,6 @@
       "yahoo": "BEES4.SA"
     },
     {
-      "symbol": "BEES4F",
-      "name": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.3,
-      "change": -0.96,
-      "volume": 1440,
-      "market_cap": 3231788594,
-      "yahoo": "BEES4F.SA"
-    },
-    {
       "symbol": "BGIP3",
       "name": "BCO ESTADO DE SERGIPE S.A. - BANESE",
       "sector": "Finance",
@@ -1263,18 +579,6 @@
       "volume": 200,
       "market_cap": 956738073,
       "yahoo": "BGIP3.SA"
-    },
-    {
-      "symbol": "BGIP3F",
-      "name": "BCO ESTADO DE SERGIPE S.A. - BANESE",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 48.89,
-      "change": -0.18,
-      "volume": 16,
-      "market_cap": 956738073,
-      "yahoo": "BGIP3F.SA"
     },
     {
       "symbol": "BGIP4",
@@ -1289,18 +593,6 @@
       "yahoo": "BGIP4.SA"
     },
     {
-      "symbol": "BGIP4F",
-      "name": "BCO ESTADO DE SERGIPE S.A. - BANESE",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 36.6,
-      "change": 4.75,
-      "volume": 279,
-      "market_cap": 956738073,
-      "yahoo": "BGIP4F.SA"
-    },
-    {
       "symbol": "BHIA3",
       "name": "GRUPO CASAS BAHIA S.A.",
       "sector": "Retail Trade",
@@ -1311,18 +603,6 @@
       "volume": 25823600,
       "market_cap": 1288121661,
       "yahoo": "BHIA3.SA"
-    },
-    {
-      "symbol": "BHIA3F",
-      "name": "GRUPO CASAS BAHIA S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.39,
-      "change": 2.96,
-      "volume": 30561,
-      "market_cap": 1288121661,
-      "yahoo": "BHIA3F.SA"
     },
     {
       "symbol": "BIED3",
@@ -1337,18 +617,6 @@
       "yahoo": "BIED3.SA"
     },
     {
-      "symbol": "BIED3F",
-      "name": "BIOMA EDUCAÇÃO S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.6,
-      "change": 1.82,
-      "volume": 50,
-      "market_cap": 152775290,
-      "yahoo": "BIED3F.SA"
-    },
-    {
       "symbol": "BIOM3",
       "name": "BIOMM S.A.",
       "sector": "Health Technology",
@@ -1359,18 +627,6 @@
       "volume": 57300,
       "market_cap": 829326009,
       "yahoo": "BIOM3.SA"
-    },
-    {
-      "symbol": "BIOM3F",
-      "name": "BIOMM S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.31,
-      "change": 4.82,
-      "volume": 490,
-      "market_cap": 829326009,
-      "yahoo": "BIOM3F.SA"
     },
     {
       "symbol": "BLAU3",
@@ -1385,18 +641,6 @@
       "yahoo": "BLAU3.SA"
     },
     {
-      "symbol": "BLAU3F",
-      "name": "BLAU FARMACÊUTICA S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.77,
-      "change": 1.8,
-      "volume": 2065,
-      "market_cap": 2504698198,
-      "yahoo": "BLAU3F.SA"
-    },
-    {
       "symbol": "BMEB3",
       "name": "BCO MERCANTIL DO BRASIL S.A.",
       "sector": "Finance",
@@ -1407,18 +651,6 @@
       "volume": 4100,
       "market_cap": 6485637439,
       "yahoo": "BMEB3.SA"
-    },
-    {
-      "symbol": "BMEB3F",
-      "name": "BCO MERCANTIL DO BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 50.49,
-      "change": 1.26,
-      "volume": 278,
-      "market_cap": 6485637439,
-      "yahoo": "BMEB3F.SA"
     },
     {
       "symbol": "BMEB4",
@@ -1433,18 +665,6 @@
       "yahoo": "BMEB4.SA"
     },
     {
-      "symbol": "BMEB4F",
-      "name": "BCO MERCANTIL DO BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 60.5,
-      "change": 2.37,
-      "volume": 1730,
-      "market_cap": 6485637439,
-      "yahoo": "BMEB4F.SA"
-    },
-    {
       "symbol": "BMGB4",
       "name": "BANCO BMG S.A.",
       "sector": "Finance",
@@ -1455,18 +675,6 @@
       "volume": 2831000,
       "market_cap": 1522083271,
       "yahoo": "BMGB4.SA"
-    },
-    {
-      "symbol": "BMGB4F",
-      "name": "BANCO BMG S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.58,
-      "change": 1.08,
-      "volume": 21136,
-      "market_cap": 1522083271,
-      "yahoo": "BMGB4F.SA"
     },
     {
       "symbol": "BMIN3",
@@ -1481,18 +689,6 @@
       "yahoo": "BMIN3.SA"
     },
     {
-      "symbol": "BMIN3F",
-      "name": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 22.52,
-      "change": 19.72,
-      "volume": 1,
-      "market_cap": 94766037,
-      "yahoo": "BMIN3F.SA"
-    },
-    {
       "symbol": "BMIN4",
       "name": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
       "sector": "Finance",
@@ -1503,18 +699,6 @@
       "volume": 100,
       "market_cap": 94766037,
       "yahoo": "BMIN4.SA"
-    },
-    {
-      "symbol": "BMIN4F",
-      "name": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 20.14,
-      "change": -0.64,
-      "volume": 2,
-      "market_cap": 94766037,
-      "yahoo": "BMIN4F.SA"
     },
     {
       "symbol": "BMKS3",
@@ -1541,18 +725,6 @@
       "yahoo": "BMOB3.SA"
     },
     {
-      "symbol": "BMOB3F",
-      "name": "BEMOBI MOBILE TECH S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.28,
-      "change": 0.5,
-      "volume": 3441,
-      "market_cap": 2326265528,
-      "yahoo": "BMOB3F.SA"
-    },
-    {
       "symbol": "BNBR3",
       "name": "BCO NORDESTE DO BRASIL S.A.",
       "sector": "Finance",
@@ -1563,18 +735,6 @@
       "volume": 100,
       "market_cap": 10856972809,
       "yahoo": "BNBR3.SA"
-    },
-    {
-      "symbol": "BNBR3F",
-      "name": "BCO NORDESTE DO BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 111,
-      "change": -0.8,
-      "volume": 49,
-      "market_cap": 10856972809,
-      "yahoo": "BNBR3F.SA"
     },
     {
       "symbol": "BOBR4",
@@ -1589,18 +749,6 @@
       "yahoo": "BOBR4.SA"
     },
     {
-      "symbol": "BOBR4F",
-      "name": "BOMBRIL S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.57,
-      "change": 3.29,
-      "volume": 499,
-      "market_cap": 351201902,
-      "yahoo": "BOBR4F.SA"
-    },
-    {
       "symbol": "BPAC11",
       "name": "BCO BTG PACTUAL S.A.",
       "sector": "Finance",
@@ -1611,18 +759,6 @@
       "volume": 14513200,
       "market_cap": null,
       "yahoo": "BPAC11.SA"
-    },
-    {
-      "symbol": "BPAC11F",
-      "name": "BCO BTG PACTUAL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 65.9,
-      "change": 3.57,
-      "volume": 29249,
-      "market_cap": null,
-      "yahoo": "BPAC11F.SA"
     },
     {
       "symbol": "BPAC3",
@@ -1637,18 +773,6 @@
       "yahoo": "BPAC3.SA"
     },
     {
-      "symbol": "BPAC3F",
-      "name": "BCO BTG PACTUAL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25,
-      "change": 2.46,
-      "volume": 822,
-      "market_cap": 247794350440,
-      "yahoo": "BPAC3F.SA"
-    },
-    {
       "symbol": "BPAC5",
       "name": "BCO BTG PACTUAL S.A.",
       "sector": "Finance",
@@ -1659,30 +783,6 @@
       "volume": 5500,
       "market_cap": 247794350440,
       "yahoo": "BPAC5.SA"
-    },
-    {
-      "symbol": "BPAC5F",
-      "name": "BCO BTG PACTUAL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 21.2,
-      "change": 3.41,
-      "volume": 368,
-      "market_cap": 247794350440,
-      "yahoo": "BPAC5F.SA"
-    },
-    {
-      "symbol": "BPAR3F",
-      "name": "BCO ESTADO DO PARA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 191.9,
-      "change": 1,
-      "volume": 9,
-      "market_cap": 1713896885,
-      "yahoo": "BPAR3F.SA"
     },
     {
       "symbol": "BRAP3",
@@ -1697,18 +797,6 @@
       "yahoo": "BRAP3.SA"
     },
     {
-      "symbol": "BRAP3F",
-      "name": "BRADESPAR S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.06,
-      "change": 0.28,
-      "volume": 4644,
-      "market_cap": 7644963247,
-      "yahoo": "BRAP3F.SA"
-    },
-    {
       "symbol": "BRAP4",
       "name": "BRADESPAR S.A.",
       "sector": "Finance",
@@ -1719,18 +807,6 @@
       "volume": 2900600,
       "market_cap": 7644963247,
       "yahoo": "BRAP4.SA"
-    },
-    {
-      "symbol": "BRAP4F",
-      "name": "BRADESPAR S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 20.68,
-      "change": 1.72,
-      "volume": 14240,
-      "market_cap": 7644963247,
-      "yahoo": "BRAP4F.SA"
     },
     {
       "symbol": "BRAV3",
@@ -1745,30 +821,6 @@
       "yahoo": "BRAV3.SA"
     },
     {
-      "symbol": "BRAV3F",
-      "name": "BRAVA ENERGIA S.A.",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.75,
-      "change": 2.46,
-      "volume": 12941,
-      "market_cap": 8445651518.999999,
-      "yahoo": "BRAV3F.SA"
-    },
-    {
-      "symbol": "BRAX",
-      "name": "BRAX",
-      "sector": null,
-      "type": "stock",
-      "subType": "stock",
-      "close": 160.67,
-      "change": 2.63,
-      "volume": 0,
-      "market_cap": null,
-      "yahoo": "BRAX.SA"
-    },
-    {
       "symbol": "BRBI11",
       "name": "BRBI BR PARTNERS S.A.",
       "sector": "Finance",
@@ -1779,18 +831,6 @@
       "volume": 400400,
       "market_cap": null,
       "yahoo": "BRBI11.SA"
-    },
-    {
-      "symbol": "BRBI11F",
-      "name": "BRBI BR PARTNERS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.05,
-      "change": 2.87,
-      "volume": 12127,
-      "market_cap": null,
-      "yahoo": "BRBI11F.SA"
     },
     {
       "symbol": "BRKM3",
@@ -1805,18 +845,6 @@
       "yahoo": "BRKM3.SA"
     },
     {
-      "symbol": "BRKM3F",
-      "name": "BRASKEM S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.05,
-      "change": -0.49,
-      "volume": 997,
-      "market_cap": 3243814963,
-      "yahoo": "BRKM3F.SA"
-    },
-    {
       "symbol": "BRKM5",
       "name": "BRASKEM S.A.",
       "sector": "Process Industries",
@@ -1827,18 +855,6 @@
       "volume": 3943500,
       "market_cap": 3243814963,
       "yahoo": "BRKM5.SA"
-    },
-    {
-      "symbol": "BRKM5F",
-      "name": "BRASKEM S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.07,
-      "change": 2.26,
-      "volume": 8227,
-      "market_cap": 3243814963,
-      "yahoo": "BRKM5F.SA"
     },
     {
       "symbol": "BRKM6",
@@ -1853,18 +869,6 @@
       "yahoo": "BRKM6.SA"
     },
     {
-      "symbol": "BRKM6F",
-      "name": "BRASKEM S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.66,
-      "change": -11.57,
-      "volume": 116,
-      "market_cap": 3243814963,
-      "yahoo": "BRKM6F.SA"
-    },
-    {
       "symbol": "BRSR3",
       "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
       "sector": "Finance",
@@ -1875,18 +879,6 @@
       "volume": 4600,
       "market_cap": 6769022448,
       "yahoo": "BRSR3.SA"
-    },
-    {
-      "symbol": "BRSR3F",
-      "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.35,
-      "change": 2.57,
-      "volume": 1285,
-      "market_cap": 6769022448,
-      "yahoo": "BRSR3F.SA"
     },
     {
       "symbol": "BRSR5",
@@ -1901,18 +893,6 @@
       "yahoo": "BRSR5.SA"
     },
     {
-      "symbol": "BRSR5F",
-      "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.5,
-      "change": -2.78,
-      "volume": 43,
-      "market_cap": 6769022448,
-      "yahoo": "BRSR5F.SA"
-    },
-    {
       "symbol": "BRSR6",
       "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
       "sector": "Finance",
@@ -1923,18 +903,6 @@
       "volume": 2042900,
       "market_cap": 6769022448,
       "yahoo": "BRSR6.SA"
-    },
-    {
-      "symbol": "BRSR6F",
-      "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.91,
-      "change": 3.31,
-      "volume": 25037,
-      "market_cap": 6769022448,
-      "yahoo": "BRSR6F.SA"
     },
     {
       "symbol": "BRST3",
@@ -1949,18 +917,6 @@
       "yahoo": "BRST3.SA"
     },
     {
-      "symbol": "BRST3F",
-      "name": "BRISANET SERVIÇOS DE TELECOMUNICAÇÕES S.A.",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.9,
-      "change": 1.4,
-      "volume": 1340,
-      "market_cap": 1257081583,
-      "yahoo": "BRST3F.SA"
-    },
-    {
       "symbol": "BSLI3",
       "name": "BRB BCO DE BRASILIA S.A.",
       "sector": "Finance",
@@ -1971,18 +927,6 @@
       "volume": 23100,
       "market_cap": 1045188564.9999999,
       "yahoo": "BSLI3.SA"
-    },
-    {
-      "symbol": "BSLI3F",
-      "name": "BRB BCO DE BRASILIA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.12,
-      "change": 0,
-      "volume": 781,
-      "market_cap": 1045188564.9999999,
-      "yahoo": "BSLI3F.SA"
     },
     {
       "symbol": "BSLI4",
@@ -1997,30 +941,6 @@
       "yahoo": "BSLI4.SA"
     },
     {
-      "symbol": "BSLI4F",
-      "name": "BRB BCO DE BRASILIA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.49,
-      "change": 1.22,
-      "volume": 238,
-      "market_cap": 1045188564.9999999,
-      "yahoo": "BSLI4F.SA"
-    },
-    {
-      "symbol": "CALI3F",
-      "name": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 26.4,
-      "change": 1.27,
-      "volume": 19,
-      "market_cap": 209594098,
-      "yahoo": "CALI3F.SA"
-    },
-    {
       "symbol": "CAMB3",
       "name": "CAMBUCI S.A.",
       "sector": "Consumer Non-Durables",
@@ -2031,18 +951,6 @@
       "volume": 33300,
       "market_cap": 331013856,
       "yahoo": "CAMB3.SA"
-    },
-    {
-      "symbol": "CAMB3F",
-      "name": "CAMBUCI S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.9,
-      "change": 0.51,
-      "volume": 819,
-      "market_cap": 331013856,
-      "yahoo": "CAMB3F.SA"
     },
     {
       "symbol": "CAML3",
@@ -2057,18 +965,6 @@
       "yahoo": "CAML3.SA"
     },
     {
-      "symbol": "CAML3F",
-      "name": "CAMIL ALIMENTOS S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.57,
-      "change": 4.7,
-      "volume": 6816,
-      "market_cap": 1836612396,
-      "yahoo": "CAML3F.SA"
-    },
-    {
       "symbol": "CASH3",
       "name": "MÉLIUZ S.A.",
       "sector": "Commercial Services",
@@ -2079,30 +975,6 @@
       "volume": 1694200,
       "market_cap": 553749191,
       "yahoo": "CASH3.SA"
-    },
-    {
-      "symbol": "CASH3F",
-      "name": "MÉLIUZ S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.33,
-      "change": 1.14,
-      "volume": 6915,
-      "market_cap": 553749191,
-      "yahoo": "CASH3F.SA"
-    },
-    {
-      "symbol": "CASN3F",
-      "name": "CIA CATARINENSE DE AGUAS E SANEAM.-CASAN",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.95,
-      "change": -1.33,
-      "volume": 27,
-      "market_cap": 7468392094,
-      "yahoo": "CASN3F.SA"
     },
     {
       "symbol": "CBAV3",
@@ -2117,18 +989,6 @@
       "yahoo": "CBAV3.SA"
     },
     {
-      "symbol": "CBAV3F",
-      "name": "COMPANHIA BRASILEIRA DE ALUMÍNIO",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.16,
-      "change": 0.09,
-      "volume": 2102,
-      "market_cap": 7305035788,
-      "yahoo": "CBAV3F.SA"
-    },
-    {
       "symbol": "CBEE3",
       "name": "AMPLA ENERGIA E SERVICOS S.A.",
       "sector": "Utilities",
@@ -2139,18 +999,6 @@
       "volume": 200,
       "market_cap": 3906790294,
       "yahoo": "CBEE3.SA"
-    },
-    {
-      "symbol": "CBEE3F",
-      "name": "AMPLA ENERGIA E SERVICOS S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.62,
-      "change": 0,
-      "volume": 1,
-      "market_cap": 3906790294,
-      "yahoo": "CBEE3F.SA"
     },
     {
       "symbol": "CCTY3",
@@ -2165,18 +1013,6 @@
       "yahoo": "CCTY3.SA"
     },
     {
-      "symbol": "CCTY3F",
-      "name": "BELORA RDVC CITY DESENVOLVIMENTO  IMOBILIÁRIO S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.1,
-      "change": -3.95,
-      "volume": 67,
-      "market_cap": 767320,
-      "yahoo": "CCTY3F.SA"
-    },
-    {
       "symbol": "CEAB3",
       "name": "CEA MODAS S.A.",
       "sector": "Retail Trade",
@@ -2187,18 +1023,6 @@
       "volume": 12585000,
       "market_cap": 3060873502,
       "yahoo": "CEAB3.SA"
-    },
-    {
-      "symbol": "CEAB3F",
-      "name": "CEA MODAS S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.35,
-      "change": 3.92,
-      "volume": 17180,
-      "market_cap": 3060873502,
-      "yahoo": "CEAB3F.SA"
     },
     {
       "symbol": "CEBR3",
@@ -2213,18 +1037,6 @@
       "yahoo": "CEBR3.SA"
     },
     {
-      "symbol": "CEBR3F",
-      "name": "CIA ENERGETICA DE BRASILIA",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 24.28,
-      "change": 4.07,
-      "volume": 1133,
-      "market_cap": 1813962928,
-      "yahoo": "CEBR3F.SA"
-    },
-    {
       "symbol": "CEBR5",
       "name": "CIA ENERGETICA DE BRASILIA",
       "sector": "Utilities",
@@ -2235,18 +1047,6 @@
       "volume": 14400,
       "market_cap": 1813962928,
       "yahoo": "CEBR5.SA"
-    },
-    {
-      "symbol": "CEBR5F",
-      "name": "CIA ENERGETICA DE BRASILIA",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.51,
-      "change": 0.64,
-      "volume": 535,
-      "market_cap": 1813962928,
-      "yahoo": "CEBR5F.SA"
     },
     {
       "symbol": "CEBR6",
@@ -2261,30 +1061,6 @@
       "yahoo": "CEBR6.SA"
     },
     {
-      "symbol": "CEBR6F",
-      "name": "CIA ENERGETICA DE BRASILIA",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 27.79,
-      "change": 0.69,
-      "volume": 159,
-      "market_cap": 1813962928,
-      "yahoo": "CEBR6F.SA"
-    },
-    {
-      "symbol": "CEDO3F",
-      "name": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.71,
-      "change": -0.63,
-      "volume": 1,
-      "market_cap": 73686995,
-      "yahoo": "CEDO3F.SA"
-    },
-    {
       "symbol": "CEDO4",
       "name": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
       "sector": "Process Industries",
@@ -2295,18 +1071,6 @@
       "volume": 100,
       "market_cap": 73686995,
       "yahoo": "CEDO4.SA"
-    },
-    {
-      "symbol": "CEDO4F",
-      "name": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.49,
-      "change": 6.6,
-      "volume": 1,
-      "market_cap": 73686995,
-      "yahoo": "CEDO4F.SA"
     },
     {
       "symbol": "CEEB3",
@@ -2321,18 +1085,6 @@
       "yahoo": "CEEB3.SA"
     },
     {
-      "symbol": "CEEB3F",
-      "name": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 46.13,
-      "change": -0.06,
-      "volume": 146,
-      "market_cap": 8081521304,
-      "yahoo": "CEEB3F.SA"
-    },
-    {
       "symbol": "CEEB5",
       "name": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
       "sector": "Utilities",
@@ -2343,42 +1095,6 @@
       "volume": 100,
       "market_cap": 8081521304,
       "yahoo": "CEEB5.SA"
-    },
-    {
-      "symbol": "CEEB5F",
-      "name": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 42.3,
-      "change": 1.93,
-      "volume": 6,
-      "market_cap": 8081521304,
-      "yahoo": "CEEB5F.SA"
-    },
-    {
-      "symbol": "CEED3F",
-      "name": "CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10,
-      "change": 0,
-      "volume": 7,
-      "market_cap": 684189399,
-      "yahoo": "CEED3F.SA"
-    },
-    {
-      "symbol": "CEGR3F",
-      "name": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 56.8,
-      "change": 6.57,
-      "volume": 1,
-      "market_cap": 14103608734,
-      "yahoo": "CEGR3F.SA"
     },
     {
       "symbol": "CGAS3",
@@ -2393,18 +1109,6 @@
       "yahoo": "CGAS3.SA"
     },
     {
-      "symbol": "CGAS3F",
-      "name": "CIA GAS DE SAO PAULO - COMGAS",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 125.2,
-      "change": 0.32,
-      "volume": 18,
-      "market_cap": 16534803045,
-      "yahoo": "CGAS3F.SA"
-    },
-    {
       "symbol": "CGAS5",
       "name": "CIA GAS DE SAO PAULO - COMGAS",
       "sector": "Utilities",
@@ -2415,18 +1119,6 @@
       "volume": 500,
       "market_cap": 16534803045,
       "yahoo": "CGAS5.SA"
-    },
-    {
-      "symbol": "CGAS5F",
-      "name": "CIA GAS DE SAO PAULO - COMGAS",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 123.6,
-      "change": 1.39,
-      "volume": 280,
-      "market_cap": 16534803045,
-      "yahoo": "CGAS5F.SA"
     },
     {
       "symbol": "CGRA3",
@@ -2441,18 +1133,6 @@
       "yahoo": "CGRA3.SA"
     },
     {
-      "symbol": "CGRA3F",
-      "name": "GRAZZIOTIN S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.96,
-      "change": 1.44,
-      "volume": 39,
-      "market_cap": 595187283,
-      "yahoo": "CGRA3F.SA"
-    },
-    {
       "symbol": "CGRA4",
       "name": "GRAZZIOTIN S.A.",
       "sector": "Retail Trade",
@@ -2463,18 +1143,6 @@
       "volume": 5000,
       "market_cap": 595187283,
       "yahoo": "CGRA4.SA"
-    },
-    {
-      "symbol": "CGRA4F",
-      "name": "GRAZZIOTIN S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.16,
-      "change": 0,
-      "volume": 459,
-      "market_cap": 595187283,
-      "yahoo": "CGRA4F.SA"
     },
     {
       "symbol": "CLSC3",
@@ -2489,18 +1157,6 @@
       "yahoo": "CLSC3.SA"
     },
     {
-      "symbol": "CLSC3F",
-      "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 142.5,
-      "change": -3.24,
-      "volume": 281,
-      "market_cap": 6080321629,
-      "yahoo": "CLSC3F.SA"
-    },
-    {
       "symbol": "CLSC4",
       "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
       "sector": "Utilities",
@@ -2511,18 +1167,6 @@
       "volume": 7100,
       "market_cap": 6080321629,
       "yahoo": "CLSC4.SA"
-    },
-    {
-      "symbol": "CLSC4F",
-      "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 164,
-      "change": 0.8,
-      "volume": 665,
-      "market_cap": 6080321629,
-      "yahoo": "CLSC4F.SA"
     },
     {
       "symbol": "CMIG3",
@@ -2537,18 +1181,6 @@
       "yahoo": "CMIG3.SA"
     },
     {
-      "symbol": "CMIG3F",
-      "name": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.21,
-      "change": 1.35,
-      "volume": 7505,
-      "market_cap": 37545474724,
-      "yahoo": "CMIG3F.SA"
-    },
-    {
       "symbol": "CMIG4",
       "name": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
       "sector": "Utilities",
@@ -2559,18 +1191,6 @@
       "volume": 20941400,
       "market_cap": 37545474724,
       "yahoo": "CMIG4.SA"
-    },
-    {
-      "symbol": "CMIG4F",
-      "name": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.39,
-      "change": 2.06,
-      "volume": 90684,
-      "market_cap": 37545474724,
-      "yahoo": "CMIG4F.SA"
     },
     {
       "symbol": "CMIN3",
@@ -2585,18 +1205,6 @@
       "yahoo": "CMIN3.SA"
     },
     {
-      "symbol": "CMIN3F",
-      "name": "CSN MINERAÇÃO S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.99,
-      "change": 1.22,
-      "volume": 34354,
-      "market_cap": 26523097540,
-      "yahoo": "CMIN3F.SA"
-    },
-    {
       "symbol": "COCE3",
       "name": "CIA ENERGETICA DO CEARA - COELCE",
       "sector": "Utilities",
@@ -2607,18 +1215,6 @@
       "volume": 1100,
       "market_cap": 2555557305,
       "yahoo": "COCE3.SA"
-    },
-    {
-      "symbol": "COCE3F",
-      "name": "CIA ENERGETICA DO CEARA - COELCE",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.82,
-      "change": -9.91,
-      "volume": 1,
-      "market_cap": 2555557305,
-      "yahoo": "COCE3F.SA"
     },
     {
       "symbol": "COCE5",
@@ -2633,18 +1229,6 @@
       "yahoo": "COCE5.SA"
     },
     {
-      "symbol": "COCE5F",
-      "name": "CIA ENERGETICA DO CEARA - COELCE",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 32.9,
-      "change": 3.98,
-      "volume": 382,
-      "market_cap": 2555557305,
-      "yahoo": "COCE5F.SA"
-    },
-    {
       "symbol": "COGN3",
       "name": "COGNA EDUCAÇÃO S.A.",
       "sector": "Commercial Services",
@@ -2655,18 +1239,6 @@
       "volume": 44473400,
       "market_cap": 4843912633,
       "yahoo": "COGN3.SA"
-    },
-    {
-      "symbol": "COGN3F",
-      "name": "COGNA EDUCAÇÃO S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.43,
-      "change": 4.29,
-      "volume": 29347,
-      "market_cap": 4843912633,
-      "yahoo": "COGN3F.SA"
     },
     {
       "symbol": "CPFE3",
@@ -2681,18 +1253,6 @@
       "yahoo": "CPFE3.SA"
     },
     {
-      "symbol": "CPFE3F",
-      "name": "CPFL ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 48.28,
-      "change": 4.07,
-      "volume": 29711,
-      "market_cap": 53706583722,
-      "yahoo": "CPFE3F.SA"
-    },
-    {
       "symbol": "CPLE3",
       "name": "CIA PARANAENSE DE ENERGIA - COPEL",
       "sector": "Utilities",
@@ -2703,30 +1263,6 @@
       "volume": 21644700,
       "market_cap": 47788443582,
       "yahoo": "CPLE3.SA"
-    },
-    {
-      "symbol": "CPLE3F",
-      "name": "CIA PARANAENSE DE ENERGIA - COPEL",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 16.76,
-      "change": 4.23,
-      "volume": 43728,
-      "market_cap": 47788443582,
-      "yahoo": "CPLE3F.SA"
-    },
-    {
-      "symbol": "CRPG3F",
-      "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.38,
-      "change": -2.04,
-      "volume": 9,
-      "market_cap": 316683239,
-      "yahoo": "CRPG3F.SA"
     },
     {
       "symbol": "CRPG5",
@@ -2741,18 +1277,6 @@
       "yahoo": "CRPG5.SA"
     },
     {
-      "symbol": "CRPG5F",
-      "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.86,
-      "change": 5.08,
-      "volume": 585,
-      "market_cap": 316683239,
-      "yahoo": "CRPG5F.SA"
-    },
-    {
       "symbol": "CRPG6",
       "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
       "sector": "Process Industries",
@@ -2763,18 +1287,6 @@
       "volume": 400,
       "market_cap": 316683239,
       "yahoo": "CRPG6.SA"
-    },
-    {
-      "symbol": "CRPG6F",
-      "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.5,
-      "change": -2.6,
-      "volume": 1,
-      "market_cap": 316683239,
-      "yahoo": "CRPG6F.SA"
     },
     {
       "symbol": "CSAN3",
@@ -2789,18 +1301,6 @@
       "yahoo": "CSAN3.SA"
     },
     {
-      "symbol": "CSAN3F",
-      "name": "COSAN S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.05,
-      "change": 1.25,
-      "volume": 28193,
-      "market_cap": 15834705078,
-      "yahoo": "CSAN3F.SA"
-    },
-    {
       "symbol": "CSED3",
       "name": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
       "sector": "Consumer Services",
@@ -2811,18 +1311,6 @@
       "volume": 348200,
       "market_cap": 1943011881,
       "yahoo": "CSED3.SA"
-    },
-    {
-      "symbol": "CSED3F",
-      "name": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.49,
-      "change": 2.43,
-      "volume": 2228,
-      "market_cap": 1943011881,
-      "yahoo": "CSED3F.SA"
     },
     {
       "symbol": "CSMG3",
@@ -2837,18 +1325,6 @@
       "yahoo": "CSMG3.SA"
     },
     {
-      "symbol": "CSMG3F",
-      "name": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 56.3,
-      "change": -0.81,
-      "volume": 30484,
-      "market_cap": 21522316374,
-      "yahoo": "CSMG3F.SA"
-    },
-    {
       "symbol": "CSNA3",
       "name": "CIA SIDERURGICA NACIONAL",
       "sector": "Non-Energy Minerals",
@@ -2859,18 +1335,6 @@
       "volume": 16510400,
       "market_cap": 7885733026,
       "yahoo": "CSNA3.SA"
-    },
-    {
-      "symbol": "CSNA3F",
-      "name": "CIA SIDERURGICA NACIONAL",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.19,
-      "change": 2.31,
-      "volume": 19021,
-      "market_cap": 7885733026,
-      "yahoo": "CSNA3F.SA"
     },
     {
       "symbol": "CSUD3",
@@ -2885,18 +1349,6 @@
       "yahoo": "CSUD3.SA"
     },
     {
-      "symbol": "CSUD3F",
-      "name": "CSU DIGITAL S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.85,
-      "change": 1.86,
-      "volume": 6294,
-      "market_cap": 635263182,
-      "yahoo": "CSUD3F.SA"
-    },
-    {
       "symbol": "CTAX3",
       "name": "CTAX3",
       "sector": "Commercial Services",
@@ -2907,42 +1359,6 @@
       "volume": 320700,
       "market_cap": 14659755,
       "yahoo": "CTAX3.SA"
-    },
-    {
-      "symbol": "CTAX3F",
-      "name": "CTAX3F",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.27,
-      "change": -22.09,
-      "volume": 1076,
-      "market_cap": 14659755,
-      "yahoo": "CTAX3F.SA"
-    },
-    {
-      "symbol": "CTBA11B",
-      "name": "CTBA11B",
-      "sector": "Government",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1000,
-      "change": 0,
-      "volume": 10,
-      "market_cap": null,
-      "yahoo": "CTBA11B.SA"
-    },
-    {
-      "symbol": "CTKA3F",
-      "name": "KARSTEN S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 35,
-      "change": -12.52,
-      "volume": 9,
-      "market_cap": 225453869,
-      "yahoo": "CTKA3F.SA"
     },
     {
       "symbol": "CTKA4",
@@ -2957,18 +1373,6 @@
       "yahoo": "CTKA4.SA"
     },
     {
-      "symbol": "CTKA4F",
-      "name": "KARSTEN S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 30,
-      "change": -1.32,
-      "volume": 11,
-      "market_cap": 225453869,
-      "yahoo": "CTKA4F.SA"
-    },
-    {
       "symbol": "CURY3",
       "name": "CURY CONSTRUTORA E INCORPORADORA S.A.",
       "sector": "Finance",
@@ -2979,18 +1383,6 @@
       "volume": 4145300,
       "market_cap": 8431263274.000001,
       "yahoo": "CURY3.SA"
-    },
-    {
-      "symbol": "CURY3F",
-      "name": "CURY CONSTRUTORA E INCORPORADORA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.23,
-      "change": 3.29,
-      "volume": 18131,
-      "market_cap": 8431263274.000001,
-      "yahoo": "CURY3F.SA"
     },
     {
       "symbol": "CVCB3",
@@ -3005,18 +1397,6 @@
       "yahoo": "CVCB3.SA"
     },
     {
-      "symbol": "CVCB3F",
-      "name": "CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.41,
-      "change": -2.76,
-      "volume": 16798,
-      "market_cap": 756839034,
-      "yahoo": "CVCB3F.SA"
-    },
-    {
       "symbol": "CXSE3",
       "name": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
       "sector": "Finance",
@@ -3027,18 +1407,6 @@
       "volume": 10471900,
       "market_cap": 59699998856,
       "yahoo": "CXSE3.SA"
-    },
-    {
-      "symbol": "CXSE3F",
-      "name": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 20.54,
-      "change": 3.16,
-      "volume": 66832,
-      "market_cap": 59699998856,
-      "yahoo": "CXSE3F.SA"
     },
     {
       "symbol": "CYRE3",
@@ -3053,18 +1421,6 @@
       "yahoo": "CYRE3.SA"
     },
     {
-      "symbol": "CYRE3F",
-      "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 27.91,
-      "change": 2.42,
-      "volume": 15343,
-      "market_cap": 11779941940,
-      "yahoo": "CYRE3F.SA"
-    },
-    {
       "symbol": "CYRE4",
       "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
       "sector": "Finance",
@@ -3075,18 +1431,6 @@
       "volume": 620200,
       "market_cap": 11779941940,
       "yahoo": "CYRE4.SA"
-    },
-    {
-      "symbol": "CYRE4F",
-      "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 26.3,
-      "change": 3.02,
-      "volume": 3150,
-      "market_cap": 11779941940,
-      "yahoo": "CYRE4F.SA"
     },
     {
       "symbol": "DASA3",
@@ -3101,18 +1445,6 @@
       "yahoo": "DASA3.SA"
     },
     {
-      "symbol": "DASA3F",
-      "name": "DIAGNOSTICOS DA AMERICA S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.88,
-      "change": -0.51,
-      "volume": 1919,
-      "market_cap": 4911105970,
-      "yahoo": "DASA3F.SA"
-    },
-    {
       "symbol": "DESK3",
       "name": "DESKTOP S.A.",
       "sector": "Communications",
@@ -3123,18 +1455,6 @@
       "volume": 1429900,
       "market_cap": 2266805225,
       "yahoo": "DESK3.SA"
-    },
-    {
-      "symbol": "DESK3F",
-      "name": "DESKTOP S.A.",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19.2,
-      "change": -1.08,
-      "volume": 1335,
-      "market_cap": 2266805225,
-      "yahoo": "DESK3F.SA"
     },
     {
       "symbol": "DEXP3",
@@ -3149,18 +1469,6 @@
       "yahoo": "DEXP3.SA"
     },
     {
-      "symbol": "DEXP3F",
-      "name": "DEXXOS PARTICIPACOES S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.4,
-      "change": 0.27,
-      "volume": 1206,
-      "market_cap": 911913175,
-      "yahoo": "DEXP3F.SA"
-    },
-    {
       "symbol": "DEXP4",
       "name": "DEXXOS PARTICIPACOES S.A.",
       "sector": "Process Industries",
@@ -3171,18 +1479,6 @@
       "volume": 12300,
       "market_cap": 911913175,
       "yahoo": "DEXP4.SA"
-    },
-    {
-      "symbol": "DEXP4F",
-      "name": "DEXXOS PARTICIPACOES S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.53,
-      "change": 0,
-      "volume": 1,
-      "market_cap": 911913175,
-      "yahoo": "DEXP4F.SA"
     },
     {
       "symbol": "DIRR3",
@@ -3197,18 +1493,6 @@
       "yahoo": "DIRR3.SA"
     },
     {
-      "symbol": "DIRR3F",
-      "name": "DIRECIONAL ENGENHARIA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.42,
-      "change": 4.1,
-      "volume": 24785,
-      "market_cap": 5236531371,
-      "yahoo": "DIRR3F.SA"
-    },
-    {
       "symbol": "DMVF3",
       "name": "D1000 VAREJO FARMA PARTICIPAÇÕES S.A.",
       "sector": "Distribution Services",
@@ -3219,30 +1503,6 @@
       "volume": 26300,
       "market_cap": 306653233,
       "yahoo": "DMVF3.SA"
-    },
-    {
-      "symbol": "DMVF3F",
-      "name": "D1000 VAREJO FARMA PARTICIPAÇÕES S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.05,
-      "change": 1.85,
-      "volume": 305,
-      "market_cap": 306653233,
-      "yahoo": "DMVF3F.SA"
-    },
-    {
-      "symbol": "DOHL3F",
-      "name": "DOHLER S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.4,
-      "change": 0,
-      "volume": 35,
-      "market_cap": 430006963,
-      "yahoo": "DOHL3F.SA"
     },
     {
       "symbol": "DOHL4",
@@ -3257,18 +1517,6 @@
       "yahoo": "DOHL4.SA"
     },
     {
-      "symbol": "DOHL4F",
-      "name": "DOHLER S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.69,
-      "change": 0.82,
-      "volume": 26,
-      "market_cap": 430006963,
-      "yahoo": "DOHL4F.SA"
-    },
-    {
       "symbol": "DOTZ3",
       "name": "DOTZ S.A.",
       "sector": "Technology Services",
@@ -3279,18 +1527,6 @@
       "volume": 16300,
       "market_cap": 142678381,
       "yahoo": "DOTZ3.SA"
-    },
-    {
-      "symbol": "DOTZ3F",
-      "name": "DOTZ S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.68,
-      "change": 6.16,
-      "volume": 570,
-      "market_cap": 142678381,
-      "yahoo": "DOTZ3F.SA"
     },
     {
       "symbol": "DTCY3",
@@ -3305,18 +1541,6 @@
       "yahoo": "DTCY3.SA"
     },
     {
-      "symbol": "DTCY3F",
-      "name": "DTCOM - DIRECT TO COMPANY S.A.",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2,
-      "change": 4.17,
-      "volume": 17,
-      "market_cap": 22087403,
-      "yahoo": "DTCY3F.SA"
-    },
-    {
       "symbol": "DXCO3",
       "name": "DEXCO S.A.",
       "sector": "Producer Manufacturing",
@@ -3327,18 +1551,6 @@
       "volume": 7351100,
       "market_cap": 5257088752,
       "yahoo": "DXCO3.SA"
-    },
-    {
-      "symbol": "DXCO3F",
-      "name": "DEXCO S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.15,
-      "change": 5.85,
-      "volume": 6115,
-      "market_cap": 5257088752,
-      "yahoo": "DXCO3F.SA"
     },
     {
       "symbol": "EALT3",
@@ -3353,18 +1565,6 @@
       "yahoo": "EALT3.SA"
     },
     {
-      "symbol": "EALT3F",
-      "name": "ELECTRO ACO ALTONA S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.86,
-      "change": 9.26,
-      "volume": 18,
-      "market_cap": 278250129,
-      "yahoo": "EALT3F.SA"
-    },
-    {
       "symbol": "EALT4",
       "name": "ELECTRO ACO ALTONA S.A.",
       "sector": "Producer Manufacturing",
@@ -3375,18 +1575,6 @@
       "volume": 3900,
       "market_cap": 278250129,
       "yahoo": "EALT4.SA"
-    },
-    {
-      "symbol": "EALT4F",
-      "name": "ELECTRO ACO ALTONA S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.45,
-      "change": 1.33,
-      "volume": 409,
-      "market_cap": 278250129,
-      "yahoo": "EALT4F.SA"
     },
     {
       "symbol": "ECOM3",
@@ -3401,18 +1589,6 @@
       "yahoo": "ECOM3.SA"
     },
     {
-      "symbol": "ECOM3F",
-      "name": "ECONOMATICA S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.38,
-      "change": 0.73,
-      "volume": 197,
-      "market_cap": 55088379,
-      "yahoo": "ECOM3F.SA"
-    },
-    {
       "symbol": "ECOR3",
       "name": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
       "sector": "Transportation",
@@ -3423,18 +1599,6 @@
       "volume": 22505800,
       "market_cap": 6448409555,
       "yahoo": "ECOR3.SA"
-    },
-    {
-      "symbol": "ECOR3F",
-      "name": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.9,
-      "change": 7.61,
-      "volume": 10256,
-      "market_cap": 6448409555,
-      "yahoo": "ECOR3F.SA"
     },
     {
       "symbol": "EGIE3",
@@ -3449,30 +1613,6 @@
       "yahoo": "EGIE3.SA"
     },
     {
-      "symbol": "EGIE3F",
-      "name": "ENGIE BRASIL ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 30.6,
-      "change": 3.94,
-      "volume": 37200,
-      "market_cap": 41797417496,
-      "yahoo": "EGIE3F.SA"
-    },
-    {
-      "symbol": "EKTR3F",
-      "name": "ELEKTRO REDES S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 51.31,
-      "change": -0.37,
-      "volume": 1,
-      "market_cap": 8544974846.999999,
-      "yahoo": "EKTR3F.SA"
-    },
-    {
       "symbol": "EKTR4",
       "name": "ELEKTRO REDES S.A.",
       "sector": "Utilities",
@@ -3483,18 +1623,6 @@
       "volume": 300,
       "market_cap": 8544974846.999999,
       "yahoo": "EKTR4.SA"
-    },
-    {
-      "symbol": "EKTR4F",
-      "name": "ELEKTRO REDES S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 37.5,
-      "change": 0,
-      "volume": 81,
-      "market_cap": 8544974846.999999,
-      "yahoo": "EKTR4F.SA"
     },
     {
       "symbol": "EMAE4",
@@ -3509,18 +1637,6 @@
       "yahoo": "EMAE4.SA"
     },
     {
-      "symbol": "EMAE4F",
-      "name": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 36.1,
-      "change": 1.78,
-      "volume": 51,
-      "market_cap": 3006503660,
-      "yahoo": "EMAE4F.SA"
-    },
-    {
       "symbol": "EMBJ3",
       "name": "EMBRAER S.A.",
       "sector": "Electronic Technology",
@@ -3531,18 +1647,6 @@
       "volume": 8834700,
       "market_cap": 70129995089,
       "yahoo": "EMBJ3.SA"
-    },
-    {
-      "symbol": "EMBJ3F",
-      "name": "EMBRAER S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 98.37,
-      "change": 1.57,
-      "volume": 25551,
-      "market_cap": 70129995089,
-      "yahoo": "EMBJ3F.SA"
     },
     {
       "symbol": "ENEV3",
@@ -3557,18 +1661,6 @@
       "yahoo": "ENEV3.SA"
     },
     {
-      "symbol": "ENEV3F",
-      "name": "ENEVA S.A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.86,
-      "change": 3.03,
-      "volume": 10931,
-      "market_cap": 53513041064,
-      "yahoo": "ENEV3F.SA"
-    },
-    {
       "symbol": "ENGI11",
       "name": "ENERGISA S.A.",
       "sector": "Utilities",
@@ -3579,18 +1671,6 @@
       "volume": 5874100,
       "market_cap": null,
       "yahoo": "ENGI11.SA"
-    },
-    {
-      "symbol": "ENGI11F",
-      "name": "ENERGISA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 55.7,
-      "change": 4.7,
-      "volume": 8077,
-      "market_cap": null,
-      "yahoo": "ENGI11F.SA"
     },
     {
       "symbol": "ENGI3",
@@ -3605,18 +1685,6 @@
       "yahoo": "ENGI3.SA"
     },
     {
-      "symbol": "ENGI3F",
-      "name": "ENERGISA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.66,
-      "change": 1.2,
-      "volume": 801,
-      "market_cap": 20383149080,
-      "yahoo": "ENGI3F.SA"
-    },
-    {
       "symbol": "ENGI4",
       "name": "ENERGISA S.A.",
       "sector": "Utilities",
@@ -3627,18 +1695,6 @@
       "volume": 15700,
       "market_cap": 20383149080,
       "yahoo": "ENGI4.SA"
-    },
-    {
-      "symbol": "ENGI4F",
-      "name": "ENERGISA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.68,
-      "change": 5.22,
-      "volume": 1124,
-      "market_cap": 20383149080,
-      "yahoo": "ENGI4F.SA"
     },
     {
       "symbol": "ENJU3",
@@ -3653,18 +1709,6 @@
       "yahoo": "ENJU3.SA"
     },
     {
-      "symbol": "ENJU3F",
-      "name": "ENJOEI S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.73,
-      "change": 4.29,
-      "volume": 870,
-      "market_cap": 141462413,
-      "yahoo": "ENJU3F.SA"
-    },
-    {
       "symbol": "ENMT3",
       "name": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
       "sector": "Utilities",
@@ -3675,18 +1719,6 @@
       "volume": 800,
       "market_cap": 8143120162,
       "yahoo": "ENMT3.SA"
-    },
-    {
-      "symbol": "ENMT3F",
-      "name": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 36.21,
-      "change": -2.14,
-      "volume": 17,
-      "market_cap": 8143120162,
-      "yahoo": "ENMT3F.SA"
     },
     {
       "symbol": "ENMT4",
@@ -3701,18 +1733,6 @@
       "yahoo": "ENMT4.SA"
     },
     {
-      "symbol": "ENMT4F",
-      "name": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 37,
-      "change": -5.37,
-      "volume": 116,
-      "market_cap": 8143120162,
-      "yahoo": "ENMT4F.SA"
-    },
-    {
       "symbol": "EPAR3",
       "name": "EMBPAR PARTICIPACOES S.A.",
       "sector": "Producer Manufacturing",
@@ -3723,42 +1743,6 @@
       "volume": 3200,
       "market_cap": 18129893,
       "yahoo": "EPAR3.SA"
-    },
-    {
-      "symbol": "EPAR3F",
-      "name": "EMBPAR PARTICIPACOES S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.25,
-      "change": 0,
-      "volume": 391,
-      "market_cap": 18129893,
-      "yahoo": "EPAR3F.SA"
-    },
-    {
-      "symbol": "EQMA3B",
-      "name": "EQUATORIAL MARANHÃO DISTRIBUIDORA DE ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 29.55,
-      "change": 0.37,
-      "volume": 300,
-      "market_cap": 4766974531,
-      "yahoo": "EQMA3B.SA"
-    },
-    {
-      "symbol": "EQMA3BF",
-      "name": "EQUATORIAL MARANHÃO DISTRIBUIDORA DE ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 29.44,
-      "change": 0,
-      "volume": 12,
-      "market_cap": 4766974531,
-      "yahoo": "EQMA3BF.SA"
     },
     {
       "symbol": "EQPA3",
@@ -3773,42 +1757,6 @@
       "yahoo": "EQPA3.SA"
     },
     {
-      "symbol": "EQPA3F",
-      "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.6,
-      "change": 0.18,
-      "volume": 1050,
-      "market_cap": 12245656250,
-      "yahoo": "EQPA3F.SA"
-    },
-    {
-      "symbol": "EQPA5F",
-      "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.9,
-      "change": 2.07,
-      "volume": 5,
-      "market_cap": 12245656250,
-      "yahoo": "EQPA5F.SA"
-    },
-    {
-      "symbol": "EQPA7F",
-      "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.01,
-      "change": 0,
-      "volume": 2,
-      "market_cap": 12245656250,
-      "yahoo": "EQPA7F.SA"
-    },
-    {
       "symbol": "EQTL3",
       "name": "EQUATORIAL S.A.",
       "sector": "Utilities",
@@ -3819,18 +1767,6 @@
       "volume": 10327600,
       "market_cap": 50330252769,
       "yahoo": "EQTL3.SA"
-    },
-    {
-      "symbol": "EQTL3F",
-      "name": "EQUATORIAL S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 41.89,
-      "change": 2.42,
-      "volume": 15974,
-      "market_cap": 50330252769,
-      "yahoo": "EQTL3F.SA"
     },
     {
       "symbol": "ESPA3",
@@ -3845,18 +1781,6 @@
       "yahoo": "ESPA3.SA"
     },
     {
-      "symbol": "ESPA3F",
-      "name": "MPM CORPÓREOS S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.55,
-      "change": 0.67,
-      "volume": 503,
-      "market_cap": 267453049.00000003,
-      "yahoo": "ESPA3F.SA"
-    },
-    {
       "symbol": "ESTR4",
       "name": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
       "sector": "Consumer Durables",
@@ -3867,18 +1791,6 @@
       "volume": 400,
       "market_cap": 18403435,
       "yahoo": "ESTR4.SA"
-    },
-    {
-      "symbol": "ESTR4F",
-      "name": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.93,
-      "change": 2.12,
-      "volume": 47,
-      "market_cap": 18403435,
-      "yahoo": "ESTR4F.SA"
     },
     {
       "symbol": "ESUD11",
@@ -3905,18 +1817,6 @@
       "yahoo": "ETER3.SA"
     },
     {
-      "symbol": "ETER3F",
-      "name": "ETERNIT S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.59,
-      "change": 0.56,
-      "volume": 1130,
-      "market_cap": 218654415,
-      "yahoo": "ETER3F.SA"
-    },
-    {
       "symbol": "EUCA3",
       "name": "EUCATEX S.A. INDUSTRIA E COMERCIO",
       "sector": "Non-Energy Minerals",
@@ -3927,18 +1827,6 @@
       "volume": 1200,
       "market_cap": 1991451539,
       "yahoo": "EUCA3.SA"
-    },
-    {
-      "symbol": "EUCA3F",
-      "name": "EUCATEX S.A. INDUSTRIA E COMERCIO",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 21.74,
-      "change": 0.18,
-      "volume": 14,
-      "market_cap": 1991451539,
-      "yahoo": "EUCA3F.SA"
     },
     {
       "symbol": "EUCA4",
@@ -3953,18 +1841,6 @@
       "yahoo": "EUCA4.SA"
     },
     {
-      "symbol": "EUCA4F",
-      "name": "EUCATEX S.A. INDUSTRIA E COMERCIO",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23,
-      "change": 5.75,
-      "volume": 1682,
-      "market_cap": 1991451539,
-      "yahoo": "EUCA4F.SA"
-    },
-    {
       "symbol": "EVEN3",
       "name": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
       "sector": "Finance",
@@ -3975,18 +1851,6 @@
       "volume": 1037500,
       "market_cap": 870338364,
       "yahoo": "EVEN3.SA"
-    },
-    {
-      "symbol": "EVEN3F",
-      "name": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.78,
-      "change": 4.6,
-      "volume": 3579,
-      "market_cap": 870338364,
-      "yahoo": "EVEN3F.SA"
     },
     {
       "symbol": "EZTC3",
@@ -4001,18 +1865,6 @@
       "yahoo": "EZTC3.SA"
     },
     {
-      "symbol": "EZTC3F",
-      "name": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.6,
-      "change": 5.34,
-      "volume": 15231,
-      "market_cap": 3865544484,
-      "yahoo": "EZTC3F.SA"
-    },
-    {
       "symbol": "FASA3",
       "name": "FASA3",
       "sector": "Commercial Services",
@@ -4023,18 +1875,6 @@
       "volume": 57200,
       "market_cap": 10965550,
       "yahoo": "FASA3.SA"
-    },
-    {
-      "symbol": "FASA3F",
-      "name": "FASA3F",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.28,
-      "change": 3.7,
-      "volume": 474,
-      "market_cap": 10965550,
-      "yahoo": "FASA3F.SA"
     },
     {
       "symbol": "FESA3",
@@ -4049,18 +1889,6 @@
       "yahoo": "FESA3.SA"
     },
     {
-      "symbol": "FESA3F",
-      "name": "CIA FERRO LIGAS DA BAHIA - FERBASA",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.86,
-      "change": -0.4,
-      "volume": 175,
-      "market_cap": 2406376369,
-      "yahoo": "FESA3F.SA"
-    },
-    {
       "symbol": "FESA4",
       "name": "CIA FERRO LIGAS DA BAHIA - FERBASA",
       "sector": "Non-Energy Minerals",
@@ -4071,18 +1899,6 @@
       "volume": 1521800,
       "market_cap": 2406376369,
       "yahoo": "FESA4.SA"
-    },
-    {
-      "symbol": "FESA4F",
-      "name": "CIA FERRO LIGAS DA BAHIA - FERBASA",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.72,
-      "change": 6.12,
-      "volume": 11526,
-      "market_cap": 2406376369,
-      "yahoo": "FESA4F.SA"
     },
     {
       "symbol": "FHER3",
@@ -4097,18 +1913,6 @@
       "yahoo": "FHER3.SA"
     },
     {
-      "symbol": "FHER3F",
-      "name": "FERTILIZANTES HERINGER S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.68,
-      "change": 0.75,
-      "volume": 481,
-      "market_cap": 141106079,
-      "yahoo": "FHER3F.SA"
-    },
-    {
       "symbol": "FIEI3",
       "name": "FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A",
       "sector": "Finance",
@@ -4119,30 +1923,6 @@
       "volume": 800,
       "market_cap": 15743994,
       "yahoo": "FIEI3.SA"
-    },
-    {
-      "symbol": "FIEI3F",
-      "name": "FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.3,
-      "change": 1.39,
-      "volume": 28,
-      "market_cap": 15743994,
-      "yahoo": "FIEI3F.SA"
-    },
-    {
-      "symbol": "FIGE3F",
-      "name": "INVESTIMENTOS BEMGE S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 33.33,
-      "change": 1,
-      "volume": 15,
-      "market_cap": 35570965,
-      "yahoo": "FIGE3F.SA"
     },
     {
       "symbol": "FIQE3",
@@ -4157,18 +1937,6 @@
       "yahoo": "FIQE3.SA"
     },
     {
-      "symbol": "FIQE3F",
-      "name": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.45,
-      "change": 9.22,
-      "volume": 13796,
-      "market_cap": 1987451624,
-      "yahoo": "FIQE3F.SA"
-    },
-    {
       "symbol": "FLRY3",
       "name": "FLEURY S.A.",
       "sector": "Health Services",
@@ -4179,18 +1947,6 @@
       "volume": 11147800,
       "market_cap": 12972625732,
       "yahoo": "FLRY3.SA"
-    },
-    {
-      "symbol": "FLRY3F",
-      "name": "FLEURY S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.47,
-      "change": -1.39,
-      "volume": 26599,
-      "market_cap": 12972625732,
-      "yahoo": "FLRY3F.SA"
     },
     {
       "symbol": "FRAS3",
@@ -4205,66 +1961,6 @@
       "yahoo": "FRAS3.SA"
     },
     {
-      "symbol": "FRAS3F",
-      "name": "FRASLE MOBILITY S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 23.09,
-      "change": 2.53,
-      "volume": 1093,
-      "market_cap": 6320466796,
-      "yahoo": "FRAS3F.SA"
-    },
-    {
-      "symbol": "FRIO3F",
-      "name": "METALFRIO SOLUTIONS S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 165.02,
-      "change": -0.1,
-      "volume": 10,
-      "market_cap": 1308387315,
-      "yahoo": "FRIO3F.SA"
-    },
-    {
-      "symbol": "FSPE11F",
-      "name": "FSPE11F",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.2,
-      "change": -25.93,
-      "volume": 544,
-      "market_cap": null,
-      "yahoo": "FSPE11F.SA"
-    },
-    {
-      "symbol": "FSRF11F",
-      "name": "FSRF11F",
-      "sector": "Miscellaneous",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.07,
-      "change": -12.5,
-      "volume": 11150,
-      "market_cap": null,
-      "yahoo": "FSRF11F.SA"
-    },
-    {
-      "symbol": "FSTU11F",
-      "name": "FSTU11F",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.2,
-      "change": 5.26,
-      "volume": 1,
-      "market_cap": null,
-      "yahoo": "FSTU11F.SA"
-    },
-    {
       "symbol": "GEPA3",
       "name": "RIO PARANAPANEMA ENERGIA S.A.",
       "sector": "Utilities",
@@ -4275,18 +1971,6 @@
       "volume": 100,
       "market_cap": 3340420011,
       "yahoo": "GEPA3.SA"
-    },
-    {
-      "symbol": "GEPA3F",
-      "name": "RIO PARANAPANEMA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 34.48,
-      "change": 1.92,
-      "volume": 6,
-      "market_cap": 3340420011,
-      "yahoo": "GEPA3F.SA"
     },
     {
       "symbol": "GEPA4",
@@ -4301,18 +1985,6 @@
       "yahoo": "GEPA4.SA"
     },
     {
-      "symbol": "GEPA4F",
-      "name": "RIO PARANAPANEMA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 36.62,
-      "change": -4.88,
-      "volume": 18,
-      "market_cap": 3340420011,
-      "yahoo": "GEPA4F.SA"
-    },
-    {
       "symbol": "GFSA3",
       "name": "GAFISA S.A.",
       "sector": "Finance",
@@ -4323,18 +1995,6 @@
       "volume": 10548100,
       "market_cap": 37768157,
       "yahoo": "GFSA3.SA"
-    },
-    {
-      "symbol": "GFSA3F",
-      "name": "GAFISA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.26,
-      "change": 8.33,
-      "volume": 6887,
-      "market_cap": 37768157,
-      "yahoo": "GFSA3F.SA"
     },
     {
       "symbol": "GGBR3",
@@ -4349,18 +2009,6 @@
       "yahoo": "GGBR3.SA"
     },
     {
-      "symbol": "GGBR3F",
-      "name": "GERDAU S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 22.15,
-      "change": 5.33,
-      "volume": 11403,
-      "market_cap": 46318641825,
-      "yahoo": "GGBR3F.SA"
-    },
-    {
       "symbol": "GGBR4",
       "name": "GERDAU S.A.",
       "sector": "Non-Energy Minerals",
@@ -4371,18 +2019,6 @@
       "volume": 12849200,
       "market_cap": 46318641825,
       "yahoo": "GGBR4.SA"
-    },
-    {
-      "symbol": "GGBR4F",
-      "name": "GERDAU S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 26.17,
-      "change": 4.68,
-      "volume": 25671,
-      "market_cap": 46318641825,
-      "yahoo": "GGBR4F.SA"
     },
     {
       "symbol": "GGPS3",
@@ -4397,18 +2033,6 @@
       "yahoo": "GGPS3.SA"
     },
     {
-      "symbol": "GGPS3F",
-      "name": "GPS PARTICIPACOES E EMPREENDIMENTOS S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.91,
-      "change": 2.79,
-      "volume": 2212,
-      "market_cap": 9517233853,
-      "yahoo": "GGPS3F.SA"
-    },
-    {
       "symbol": "GMAT3",
       "name": "GRUPO MATEUS S.A.",
       "sector": "Retail Trade",
@@ -4419,18 +2043,6 @@
       "volume": 6800900,
       "market_cap": 11610609521,
       "yahoo": "GMAT3.SA"
-    },
-    {
-      "symbol": "GMAT3F",
-      "name": "GRUPO MATEUS S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.95,
-      "change": -1.98,
-      "volume": 10500,
-      "market_cap": 11610609521,
-      "yahoo": "GMAT3F.SA"
     },
     {
       "symbol": "GOAU3",
@@ -4445,18 +2057,6 @@
       "yahoo": "GOAU3.SA"
     },
     {
-      "symbol": "GOAU3F",
-      "name": "METALURGICA GERDAU S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.42,
-      "change": 2.66,
-      "volume": 11126,
-      "market_cap": 14272913121,
-      "yahoo": "GOAU3F.SA"
-    },
-    {
       "symbol": "GOAU4",
       "name": "METALURGICA GERDAU S.A.",
       "sector": "Non-Energy Minerals",
@@ -4467,30 +2067,6 @@
       "volume": 8168800,
       "market_cap": 14272913121,
       "yahoo": "GOAU4.SA"
-    },
-    {
-      "symbol": "GOAU4F",
-      "name": "METALURGICA GERDAU S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.6,
-      "change": 2.84,
-      "volume": 20843,
-      "market_cap": 14272913121,
-      "yahoo": "GOAU4F.SA"
-    },
-    {
-      "symbol": "GPAR3F",
-      "name": "CIA CELG DE PARTICIPACOES - CELGPAR",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.51,
-      "change": 0,
-      "volume": 10,
-      "market_cap": 837400017,
-      "yahoo": "GPAR3F.SA"
     },
     {
       "symbol": "GRND3",
@@ -4505,18 +2081,6 @@
       "yahoo": "GRND3.SA"
     },
     {
-      "symbol": "GRND3F",
-      "name": "GRENDENE S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.01,
-      "change": 4.16,
-      "volume": 16915,
-      "market_cap": 3500380799,
-      "yahoo": "GRND3F.SA"
-    },
-    {
       "symbol": "GSHP3",
       "name": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
       "sector": "Finance",
@@ -4527,18 +2091,6 @@
       "volume": 200,
       "market_cap": 5194686,
       "yahoo": "GSHP3.SA"
-    },
-    {
-      "symbol": "GSHP3F",
-      "name": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.77,
-      "change": 0.73,
-      "volume": 5,
-      "market_cap": 5194686,
-      "yahoo": "GSHP3F.SA"
     },
     {
       "symbol": "HAGA3",
@@ -4553,18 +2105,6 @@
       "yahoo": "HAGA3.SA"
     },
     {
-      "symbol": "HAGA3F",
-      "name": "HAGA S.A. INDUSTRIA E COMERCIO",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.57,
-      "change": -1.91,
-      "volume": 25,
-      "market_cap": 24038000,
-      "yahoo": "HAGA3F.SA"
-    },
-    {
       "symbol": "HAGA4",
       "name": "HAGA S.A. INDUSTRIA E COMERCIO",
       "sector": "Consumer Durables",
@@ -4575,18 +2115,6 @@
       "volume": 20000,
       "market_cap": 24038000,
       "yahoo": "HAGA4.SA"
-    },
-    {
-      "symbol": "HAGA4F",
-      "name": "HAGA S.A. INDUSTRIA E COMERCIO",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.84,
-      "change": 6.36,
-      "volume": 87,
-      "market_cap": 24038000,
-      "yahoo": "HAGA4F.SA"
     },
     {
       "symbol": "HAPV3",
@@ -4601,18 +2129,6 @@
       "yahoo": "HAPV3.SA"
     },
     {
-      "symbol": "HAPV3F",
-      "name": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.74,
-      "change": 11.53,
-      "volume": 26023,
-      "market_cap": 3467645539,
-      "yahoo": "HAPV3F.SA"
-    },
-    {
       "symbol": "HBOR3",
       "name": "HELBOR EMPREENDIMENTOS S.A.",
       "sector": "Consumer Durables",
@@ -4623,18 +2139,6 @@
       "volume": 1739000,
       "market_cap": 281311427,
       "yahoo": "HBOR3.SA"
-    },
-    {
-      "symbol": "HBOR3F",
-      "name": "HELBOR EMPREENDIMENTOS S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.15,
-      "change": 1.9,
-      "volume": 2472,
-      "market_cap": 281311427,
-      "yahoo": "HBOR3F.SA"
     },
     {
       "symbol": "HBRE3",
@@ -4649,18 +2153,6 @@
       "yahoo": "HBRE3.SA"
     },
     {
-      "symbol": "HBRE3F",
-      "name": "HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.65,
-      "change": 0,
-      "volume": 752,
-      "market_cap": 270355136,
-      "yahoo": "HBRE3F.SA"
-    },
-    {
       "symbol": "HBSA3",
       "name": "HIDROVIAS DO BRASIL S.A.",
       "sector": "Transportation",
@@ -4671,30 +2163,6 @@
       "volume": 1722900,
       "market_cap": 4557281474,
       "yahoo": "HBSA3.SA"
-    },
-    {
-      "symbol": "HBSA3F",
-      "name": "HIDROVIAS DO BRASIL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.4,
-      "change": 1.19,
-      "volume": 1169,
-      "market_cap": 4557281474,
-      "yahoo": "HBSA3F.SA"
-    },
-    {
-      "symbol": "HBTS5F",
-      "name": "CIA HABITASUL DE PARTICIPACOES",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 36.99,
-      "change": 2.75,
-      "volume": 18,
-      "market_cap": 205317806,
-      "yahoo": "HBTS5F.SA"
     },
     {
       "symbol": "HETA4",
@@ -4709,18 +2177,6 @@
       "yahoo": "HETA4.SA"
     },
     {
-      "symbol": "HETA4F",
-      "name": "HERCULES S.A. FABRICA DE TALHERES",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.53,
-      "change": -3.66,
-      "volume": 10,
-      "market_cap": 2664981,
-      "yahoo": "HETA4F.SA"
-    },
-    {
       "symbol": "HOOT4",
       "name": "HOTEIS OTHON S.A.",
       "sector": "Consumer Services",
@@ -4731,18 +2187,6 @@
       "volume": 4400,
       "market_cap": 57892481,
       "yahoo": "HOOT4.SA"
-    },
-    {
-      "symbol": "HOOT4F",
-      "name": "HOTEIS OTHON S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.17,
-      "change": -11.37,
-      "volume": 127,
-      "market_cap": 57892481,
-      "yahoo": "HOOT4F.SA"
     },
     {
       "symbol": "HYPE3",
@@ -4757,18 +2201,6 @@
       "yahoo": "HYPE3.SA"
     },
     {
-      "symbol": "HYPE3F",
-      "name": "HYPERA S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25,
-      "change": 0.6,
-      "volume": 6990,
-      "market_cap": 17368817113,
-      "yahoo": "HYPE3F.SA"
-    },
-    {
       "symbol": "IFCM3",
       "name": "INFRACOMMERCE CXAAS S.A.",
       "sector": "Distribution Services",
@@ -4779,18 +2211,6 @@
       "volume": 118600,
       "market_cap": 35826371,
       "yahoo": "IFCM3.SA"
-    },
-    {
-      "symbol": "IFCM3F",
-      "name": "INFRACOMMERCE CXAAS S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.27,
-      "change": -2.31,
-      "volume": 968,
-      "market_cap": 35826371,
-      "yahoo": "IFCM3F.SA"
     },
     {
       "symbol": "IGTI11",
@@ -4805,18 +2225,6 @@
       "yahoo": "IGTI11.SA"
     },
     {
-      "symbol": "IGTI11F",
-      "name": "IGUATEMI S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.5,
-      "change": 3.56,
-      "volume": 10490,
-      "market_cap": null,
-      "yahoo": "IGTI11F.SA"
-    },
-    {
       "symbol": "IGTI3",
       "name": "IGUATEMI S.A.",
       "sector": "Finance",
@@ -4827,18 +2235,6 @@
       "volume": 134100,
       "market_cap": 7774955910,
       "yahoo": "IGTI3.SA"
-    },
-    {
-      "symbol": "IGTI3F",
-      "name": "IGUATEMI S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.45,
-      "change": 6.48,
-      "volume": 952,
-      "market_cap": 7774955910,
-      "yahoo": "IGTI3F.SA"
     },
     {
       "symbol": "IGTI4",
@@ -4853,18 +2249,6 @@
       "yahoo": "IGTI4.SA"
     },
     {
-      "symbol": "IGTI4F",
-      "name": "IGUATEMI S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.75,
-      "change": -1.85,
-      "volume": 13,
-      "market_cap": 7774955910,
-      "yahoo": "IGTI4F.SA"
-    },
-    {
       "symbol": "INEP3",
       "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
       "sector": "Producer Manufacturing",
@@ -4875,18 +2259,6 @@
       "volume": 3300,
       "market_cap": 66367339,
       "yahoo": "INEP3.SA"
-    },
-    {
-      "symbol": "INEP3F",
-      "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.23,
-      "change": 0.82,
-      "volume": 253,
-      "market_cap": 66367339,
-      "yahoo": "INEP3F.SA"
     },
     {
       "symbol": "INEP4",
@@ -4901,18 +2273,6 @@
       "yahoo": "INEP4.SA"
     },
     {
-      "symbol": "INEP4F",
-      "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.21,
-      "change": -7.63,
-      "volume": 138,
-      "market_cap": 66367339,
-      "yahoo": "INEP4F.SA"
-    },
-    {
       "symbol": "INTB3",
       "name": "INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA",
       "sector": "Technology Services",
@@ -4923,18 +2283,6 @@
       "volume": 2072200,
       "market_cap": 4887957853,
       "yahoo": "INTB3.SA"
-    },
-    {
-      "symbol": "INTB3F",
-      "name": "INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.78,
-      "change": 6.41,
-      "volume": 10155,
-      "market_cap": 4887957853,
-      "yahoo": "INTB3F.SA"
     },
     {
       "symbol": "IRBR3",
@@ -4949,18 +2297,6 @@
       "yahoo": "IRBR3.SA"
     },
     {
-      "symbol": "IRBR3F",
-      "name": "IRB - BRASIL RESSEGUROS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 63.43,
-      "change": 2.31,
-      "volume": 12775,
-      "market_cap": 5043223803,
-      "yahoo": "IRBR3F.SA"
-    },
-    {
       "symbol": "ISAE3",
       "name": "ISA ENERGIA BRASIL S.A",
       "sector": "Utilities",
@@ -4971,18 +2307,6 @@
       "volume": 2100,
       "market_cap": 20739939982,
       "yahoo": "ISAE3.SA"
-    },
-    {
-      "symbol": "ISAE3F",
-      "name": "ISA ENERGIA BRASIL S.A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 33.25,
-      "change": -2.32,
-      "volume": 528,
-      "market_cap": 20739939982,
-      "yahoo": "ISAE3F.SA"
     },
     {
       "symbol": "ISAE4",
@@ -4997,18 +2321,6 @@
       "yahoo": "ISAE4.SA"
     },
     {
-      "symbol": "ISAE4F",
-      "name": "ISA ENERGIA BRASIL S.A",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.18,
-      "change": 1.88,
-      "volume": 27417,
-      "market_cap": 20739939982,
-      "yahoo": "ISAE4F.SA"
-    },
-    {
       "symbol": "ITSA3",
       "name": "ITAUSA S.A.",
       "sector": "Finance",
@@ -5019,18 +2331,6 @@
       "volume": 209000,
       "market_cap": 162133972135,
       "yahoo": "ITSA3.SA"
-    },
-    {
-      "symbol": "ITSA3F",
-      "name": "ITAUSA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.84,
-      "change": 1.3,
-      "volume": 14718,
-      "market_cap": 162133972135,
-      "yahoo": "ITSA3F.SA"
     },
     {
       "symbol": "ITSA4",
@@ -5045,18 +2345,6 @@
       "yahoo": "ITSA4.SA"
     },
     {
-      "symbol": "ITSA4F",
-      "name": "ITAUSA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.64,
-      "change": 1.67,
-      "volume": 103642,
-      "market_cap": 162133972135,
-      "yahoo": "ITSA4F.SA"
-    },
-    {
       "symbol": "ITUB3",
       "name": "ITAU UNIBANCO HOLDING S.A.",
       "sector": "Finance",
@@ -5067,18 +2355,6 @@
       "volume": 2624100,
       "market_cap": 508292878736,
       "yahoo": "ITUB3.SA"
-    },
-    {
-      "symbol": "ITUB3F",
-      "name": "ITAU UNIBANCO HOLDING S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 49.3,
-      "change": 2.49,
-      "volume": 15380,
-      "market_cap": 508292878736,
-      "yahoo": "ITUB3F.SA"
     },
     {
       "symbol": "ITUB4",
@@ -5093,18 +2369,6 @@
       "yahoo": "ITUB4.SA"
     },
     {
-      "symbol": "ITUB4F",
-      "name": "ITAU UNIBANCO HOLDING S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 44.83,
-      "change": 1.56,
-      "volume": 99663,
-      "market_cap": 508292878736,
-      "yahoo": "ITUB4F.SA"
-    },
-    {
       "symbol": "JALL3",
       "name": "JALLES MACHADO S.A.",
       "sector": "Process Industries",
@@ -5115,18 +2379,6 @@
       "volume": 1190100,
       "market_cap": 743677596,
       "yahoo": "JALL3.SA"
-    },
-    {
-      "symbol": "JALL3F",
-      "name": "JALLES MACHADO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.56,
-      "change": 5.35,
-      "volume": 4309,
-      "market_cap": 743677596,
-      "yahoo": "JALL3F.SA"
     },
     {
       "symbol": "JFEN3",
@@ -5141,18 +2393,6 @@
       "yahoo": "JFEN3.SA"
     },
     {
-      "symbol": "JFEN3F",
-      "name": "JOAO FORTES ENGENHARIA S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.09,
-      "change": -1.42,
-      "volume": 383,
-      "market_cap": 5351547,
-      "yahoo": "JFEN3F.SA"
-    },
-    {
       "symbol": "JHSF3",
       "name": "JHSF PARTICIPACOES S.A.",
       "sector": "Finance",
@@ -5163,30 +2403,6 @@
       "volume": 5672000,
       "market_cap": 7964154927,
       "yahoo": "JHSF3.SA"
-    },
-    {
-      "symbol": "JHSF3F",
-      "name": "JHSF PARTICIPACOES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.05,
-      "change": 3.88,
-      "volume": 22224,
-      "market_cap": 7964154927,
-      "yahoo": "JHSF3F.SA"
-    },
-    {
-      "symbol": "JOPA3F",
-      "name": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.9,
-      "change": 5.29,
-      "volume": 25,
-      "market_cap": 189437404,
-      "yahoo": "JOPA3F.SA"
     },
     {
       "symbol": "JSLG3",
@@ -5201,18 +2417,6 @@
       "yahoo": "JSLG3.SA"
     },
     {
-      "symbol": "JSLG3F",
-      "name": "JSL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.28,
-      "change": 8.38,
-      "volume": 8821,
-      "market_cap": 2192404346,
-      "yahoo": "JSLG3F.SA"
-    },
-    {
       "symbol": "KEPL3",
       "name": "KEPLER WEBER S.A.",
       "sector": "Producer Manufacturing",
@@ -5223,18 +2427,6 @@
       "volume": 1786700,
       "market_cap": 1169880398,
       "yahoo": "KEPL3.SA"
-    },
-    {
-      "symbol": "KEPL3F",
-      "name": "KEPLER WEBER S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.72,
-      "change": 2.6,
-      "volume": 13550,
-      "market_cap": 1169880398,
-      "yahoo": "KEPL3F.SA"
     },
     {
       "symbol": "KLBN11",
@@ -5249,18 +2441,6 @@
       "yahoo": "KLBN11.SA"
     },
     {
-      "symbol": "KLBN11F",
-      "name": "KLABIN S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.8,
-      "change": 4.27,
-      "volume": 23312,
-      "market_cap": null,
-      "yahoo": "KLBN11F.SA"
-    },
-    {
       "symbol": "KLBN3",
       "name": "KLABIN S.A.",
       "sector": "Non-Energy Minerals",
@@ -5271,18 +2451,6 @@
       "volume": 549800,
       "market_cap": 21702691087,
       "yahoo": "KLBN3.SA"
-    },
-    {
-      "symbol": "KLBN3F",
-      "name": "KLABIN S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.77,
-      "change": 1.07,
-      "volume": 15231,
-      "market_cap": 21702691087,
-      "yahoo": "KLBN3F.SA"
     },
     {
       "symbol": "KLBN4",
@@ -5297,18 +2465,6 @@
       "yahoo": "KLBN4.SA"
     },
     {
-      "symbol": "KLBN4F",
-      "name": "KLABIN S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.69,
-      "change": 2.5,
-      "volume": 104428,
-      "market_cap": 21702691087,
-      "yahoo": "KLBN4F.SA"
-    },
-    {
       "symbol": "LAND3",
       "name": "TERRA SANTA PROPRIEDADES AGRICOLAS S.A.",
       "sector": "Finance",
@@ -5319,18 +2475,6 @@
       "volume": 72000,
       "market_cap": 881438932,
       "yahoo": "LAND3.SA"
-    },
-    {
-      "symbol": "LAND3F",
-      "name": "TERRA SANTA PROPRIEDADES AGRICOLAS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.75,
-      "change": 7.26,
-      "volume": 380,
-      "market_cap": 881438932,
-      "yahoo": "LAND3F.SA"
     },
     {
       "symbol": "LAVV3",
@@ -5345,18 +2489,6 @@
       "yahoo": "LAVV3.SA"
     },
     {
-      "symbol": "LAVV3F",
-      "name": "LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.32,
-      "change": 4.43,
-      "volume": 8244,
-      "market_cap": 2137303629,
-      "yahoo": "LAVV3F.SA"
-    },
-    {
       "symbol": "LEVE3",
       "name": "MAHLE-METAL LEVE S.A.",
       "sector": "Producer Manufacturing",
@@ -5367,18 +2499,6 @@
       "volume": 309600,
       "market_cap": 4594772356,
       "yahoo": "LEVE3.SA"
-    },
-    {
-      "symbol": "LEVE3F",
-      "name": "MAHLE-METAL LEVE S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 34.36,
-      "change": 1.36,
-      "volume": 11423,
-      "market_cap": 4594772356,
-      "yahoo": "LEVE3F.SA"
     },
     {
       "symbol": "LIGT3",
@@ -5393,18 +2513,6 @@
       "yahoo": "LIGT3.SA"
     },
     {
-      "symbol": "LIGT3F",
-      "name": "LIGHT S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.71,
-      "change": 3.06,
-      "volume": 2224,
-      "market_cap": 5911205328,
-      "yahoo": "LIGT3F.SA"
-    },
-    {
       "symbol": "LJQQ3",
       "name": "LOJAS QUERO-QUERO S/A",
       "sector": "Retail Trade",
@@ -5415,18 +2523,6 @@
       "volume": 3522700,
       "market_cap": 302099217,
       "yahoo": "LJQQ3.SA"
-    },
-    {
-      "symbol": "LJQQ3F",
-      "name": "LOJAS QUERO-QUERO S/A",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.52,
-      "change": 5.56,
-      "volume": 3053,
-      "market_cap": 302099217,
-      "yahoo": "LJQQ3F.SA"
     },
     {
       "symbol": "LOGG3",
@@ -5441,18 +2537,6 @@
       "yahoo": "LOGG3.SA"
     },
     {
-      "symbol": "LOGG3F",
-      "name": "LOG COMMERCIAL PROPERTIES",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25.53,
-      "change": 3.28,
-      "volume": 8421,
-      "market_cap": 2158219392,
-      "yahoo": "LOGG3F.SA"
-    },
-    {
       "symbol": "LOGN3",
       "name": "LOG-IN LOGISTICA INTERMODAL S.A.",
       "sector": "Transportation",
@@ -5463,18 +2547,6 @@
       "volume": 70000,
       "market_cap": 2969394909,
       "yahoo": "LOGN3.SA"
-    },
-    {
-      "symbol": "LOGN3F",
-      "name": "LOG-IN LOGISTICA INTERMODAL S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28,
-      "change": 1.12,
-      "volume": 33,
-      "market_cap": 2969394909,
-      "yahoo": "LOGN3F.SA"
     },
     {
       "symbol": "LPSB3",
@@ -5489,18 +2561,6 @@
       "yahoo": "LPSB3.SA"
     },
     {
-      "symbol": "LPSB3F",
-      "name": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.35,
-      "change": 0.75,
-      "volume": 1284,
-      "market_cap": 193575300,
-      "yahoo": "LPSB3F.SA"
-    },
-    {
       "symbol": "LREN3",
       "name": "LOJAS RENNER S.A.",
       "sector": "Retail Trade",
@@ -5511,18 +2571,6 @@
       "volume": 31642300,
       "market_cap": 11452055419,
       "yahoo": "LREN3.SA"
-    },
-    {
-      "symbol": "LREN3F",
-      "name": "LOJAS RENNER S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.76,
-      "change": 2.71,
-      "volume": 21538,
-      "market_cap": 11452055419,
-      "yahoo": "LREN3F.SA"
     },
     {
       "symbol": "LUPA3",
@@ -5537,18 +2585,6 @@
       "yahoo": "LUPA3.SA"
     },
     {
-      "symbol": "LUPA3F",
-      "name": "LUPATECH S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.8,
-      "change": 2.15,
-      "volume": 488,
-      "market_cap": 17271107,
-      "yahoo": "LUPA3F.SA"
-    },
-    {
       "symbol": "LUXM4",
       "name": "TREVISA INVESTIMENTOS S.A.",
       "sector": "Transportation",
@@ -5559,18 +2595,6 @@
       "volume": 2500,
       "market_cap": 87936001,
       "yahoo": "LUXM4.SA"
-    },
-    {
-      "symbol": "LUXM4F",
-      "name": "TREVISA INVESTIMENTOS S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.03,
-      "change": -2.26,
-      "volume": 78,
-      "market_cap": 87936001,
-      "yahoo": "LUXM4F.SA"
     },
     {
       "symbol": "LWSA3",
@@ -5585,30 +2609,6 @@
       "yahoo": "LWSA3.SA"
     },
     {
-      "symbol": "LWSA3F",
-      "name": "LWSA S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.98,
-      "change": 0.25,
-      "volume": 4099,
-      "market_cap": 2198503418,
-      "yahoo": "LWSA3F.SA"
-    },
-    {
-      "symbol": "MAPT3F",
-      "name": "CEMEPE INVESTIMENTOS S.A.",
-      "sector": "Miscellaneous",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.21,
-      "change": 7.28,
-      "volume": 1,
-      "market_cap": 1869702,
-      "yahoo": "MAPT3F.SA"
-    },
-    {
       "symbol": "MAPT4",
       "name": "CEMEPE INVESTIMENTOS S.A.",
       "sector": "Miscellaneous",
@@ -5619,18 +2619,6 @@
       "volume": 300,
       "market_cap": 1869702,
       "yahoo": "MAPT4.SA"
-    },
-    {
-      "symbol": "MAPT4F",
-      "name": "CEMEPE INVESTIMENTOS S.A.",
-      "sector": "Miscellaneous",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.49,
-      "change": 15.18,
-      "volume": 13,
-      "market_cap": 1869702,
-      "yahoo": "MAPT4F.SA"
     },
     {
       "symbol": "MATD3",
@@ -5645,18 +2633,6 @@
       "yahoo": "MATD3.SA"
     },
     {
-      "symbol": "MATD3F",
-      "name": "HOSPITAL MATER DEI S/A",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.2,
-      "change": 0.97,
-      "volume": 355,
-      "market_cap": 1694427866,
-      "yahoo": "MATD3F.SA"
-    },
-    {
       "symbol": "MBRF3",
       "name": "BRF S.A.",
       "sector": "Consumer Non-Durables",
@@ -5667,18 +2643,6 @@
       "volume": 4358500,
       "market_cap": 23319284581,
       "yahoo": "MBRF3.SA"
-    },
-    {
-      "symbol": "MBRF3F",
-      "name": "BRF S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.01,
-      "change": -0.18,
-      "volume": 11543,
-      "market_cap": 23319284581,
-      "yahoo": "MBRF3F.SA"
     },
     {
       "symbol": "MDIA3",
@@ -5693,18 +2657,6 @@
       "yahoo": "MDIA3.SA"
     },
     {
-      "symbol": "MDIA3F",
-      "name": "M.DIAS BRANCO S.A. IND COM DE ALIMENTOS",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 16.99,
-      "change": 2.97,
-      "volume": 10606,
-      "market_cap": 5605046766,
-      "yahoo": "MDIA3F.SA"
-    },
-    {
       "symbol": "MDNE3",
       "name": "MOURA DUBEUX ENGENHARIA S/A",
       "sector": "Finance",
@@ -5715,18 +2667,6 @@
       "volume": 1879300,
       "market_cap": 2590967168,
       "yahoo": "MDNE3.SA"
-    },
-    {
-      "symbol": "MDNE3F",
-      "name": "MOURA DUBEUX ENGENHARIA S/A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 25.8,
-      "change": 4.03,
-      "volume": 7949,
-      "market_cap": 2590967168,
-      "yahoo": "MDNE3F.SA"
     },
     {
       "symbol": "MEAL3",
@@ -5741,18 +2681,6 @@
       "yahoo": "MEAL3.SA"
     },
     {
-      "symbol": "MEAL3F",
-      "name": "INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.92,
-      "change": -1.08,
-      "volume": 779,
-      "market_cap": 271462526,
-      "yahoo": "MEAL3F.SA"
-    },
-    {
       "symbol": "MELK3",
       "name": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
       "sector": "Industrial Services",
@@ -5763,30 +2691,6 @@
       "volume": 559800,
       "market_cap": 607467835,
       "yahoo": "MELK3.SA"
-    },
-    {
-      "symbol": "MELK3F",
-      "name": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.09,
-      "change": -1.9,
-      "volume": 5021,
-      "market_cap": 607467835,
-      "yahoo": "MELK3F.SA"
-    },
-    {
-      "symbol": "MGEL3F",
-      "name": "MANGELS INDUSTRIAL S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 40,
-      "change": 0,
-      "volume": 1,
-      "market_cap": 175416529,
-      "yahoo": "MGEL3F.SA"
     },
     {
       "symbol": "MGEL4",
@@ -5801,18 +2705,6 @@
       "yahoo": "MGEL4.SA"
     },
     {
-      "symbol": "MGEL4F",
-      "name": "MANGELS INDUSTRIAL S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.49,
-      "change": 18.21,
-      "volume": 5,
-      "market_cap": 175416529,
-      "yahoo": "MGEL4F.SA"
-    },
-    {
       "symbol": "MGLU3",
       "name": "MAGAZINE LUIZA S.A.",
       "sector": "Retail Trade",
@@ -5823,18 +2715,6 @@
       "volume": 41637200,
       "market_cap": 5335795755,
       "yahoo": "MGLU3.SA"
-    },
-    {
-      "symbol": "MGLU3F",
-      "name": "MAGAZINE LUIZA S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.61,
-      "change": 0.93,
-      "volume": 51344,
-      "market_cap": 5335795755,
-      "yahoo": "MGLU3F.SA"
     },
     {
       "symbol": "MILS3",
@@ -5849,18 +2729,6 @@
       "yahoo": "MILS3.SA"
     },
     {
-      "symbol": "MILS3F",
-      "name": "MILLS LOCAÇÃO. SERVIÇOS E LOGÍSTICA S.A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.93,
-      "change": 0.25,
-      "volume": 2200,
-      "market_cap": 3669350433,
-      "yahoo": "MILS3F.SA"
-    },
-    {
       "symbol": "MLAS3",
       "name": "GRUPO MULTI S.A.",
       "sector": "Electronic Technology",
@@ -5871,18 +2739,6 @@
       "volume": 3223300,
       "market_cap": 1576535884,
       "yahoo": "MLAS3.SA"
-    },
-    {
-      "symbol": "MLAS3F",
-      "name": "GRUPO MULTI S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.95,
-      "change": 2.63,
-      "volume": 2500,
-      "market_cap": 1576535884,
-      "yahoo": "MLAS3F.SA"
     },
     {
       "symbol": "MNDL3",
@@ -5897,18 +2753,6 @@
       "yahoo": "MNDL3.SA"
     },
     {
-      "symbol": "MNDL3F",
-      "name": "MUNDIAL S.A. - PRODUTOS DE CONSUMO",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.04,
-      "change": -1.15,
-      "volume": 23,
-      "market_cap": 181044735,
-      "yahoo": "MNDL3F.SA"
-    },
-    {
       "symbol": "MNPR3",
       "name": "MINUPAR PARTICIPACOES S.A.",
       "sector": "Process Industries",
@@ -5919,18 +2763,6 @@
       "volume": 28800,
       "market_cap": 266253747.99999997,
       "yahoo": "MNPR3.SA"
-    },
-    {
-      "symbol": "MNPR3F",
-      "name": "MINUPAR PARTICIPACOES S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.77,
-      "change": -0.79,
-      "volume": 259,
-      "market_cap": 266253747.99999997,
-      "yahoo": "MNPR3F.SA"
     },
     {
       "symbol": "MOTV3",
@@ -5945,18 +2777,6 @@
       "yahoo": "MOTV3.SA"
     },
     {
-      "symbol": "MOTV3F",
-      "name": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.55,
-      "change": 2.63,
-      "volume": 6667,
-      "market_cap": 34440965158,
-      "yahoo": "MOTV3F.SA"
-    },
-    {
       "symbol": "MOVI3",
       "name": "MOVIDA PARTICIPACOES SA",
       "sector": "Finance",
@@ -5967,78 +2787,6 @@
       "volume": 48875600,
       "market_cap": 4293391864,
       "yahoo": "MOVI3.SA"
-    },
-    {
-      "symbol": "MOVI3F",
-      "name": "MOVIDA PARTICIPACOES SA",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.8,
-      "change": 8.22,
-      "volume": 17715,
-      "market_cap": 4293391864,
-      "yahoo": "MOVI3F.SA"
-    },
-    {
-      "symbol": "MRSA3B",
-      "name": "MRS LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 37.85,
-      "change": -0.26,
-      "volume": 100,
-      "market_cap": 12591640781,
-      "yahoo": "MRSA3B.SA"
-    },
-    {
-      "symbol": "MRSA3BF",
-      "name": "MRS LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 40.91,
-      "change": 1.69,
-      "volume": 91,
-      "market_cap": 12591640781,
-      "yahoo": "MRSA3BF.SA"
-    },
-    {
-      "symbol": "MRSA5BF",
-      "name": "MRS LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 38.68,
-      "change": 12.05,
-      "volume": 50,
-      "market_cap": 12591640781,
-      "yahoo": "MRSA5BF.SA"
-    },
-    {
-      "symbol": "MRSA6B",
-      "name": "MRS LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 34.5,
-      "change": -1.12,
-      "volume": 100,
-      "market_cap": 12591640781,
-      "yahoo": "MRSA6B.SA"
-    },
-    {
-      "symbol": "MRSA6BF",
-      "name": "MRS LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 33,
-      "change": 0,
-      "volume": 2,
-      "market_cap": 12591640781,
-      "yahoo": "MRSA6BF.SA"
     },
     {
       "symbol": "MRVE3",
@@ -6053,30 +2801,6 @@
       "yahoo": "MRVE3.SA"
     },
     {
-      "symbol": "MRVE3F",
-      "name": "MRV ENGENHARIA E PARTICIPACOES S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.66,
-      "change": 2.91,
-      "volume": 11162,
-      "market_cap": 3067447436,
-      "yahoo": "MRVE3F.SA"
-    },
-    {
-      "symbol": "MSPA3F",
-      "name": "CIA MELHORAMENTOS DE SAO PAULO",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 46.34,
-      "change": 30.54,
-      "volume": 36,
-      "market_cap": 236704373,
-      "yahoo": "MSPA3F.SA"
-    },
-    {
       "symbol": "MTRE3",
       "name": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
       "sector": "Finance",
@@ -6087,18 +2811,6 @@
       "volume": 448300,
       "market_cap": 362807608,
       "yahoo": "MTRE3.SA"
-    },
-    {
-      "symbol": "MTRE3F",
-      "name": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.52,
-      "change": 0.57,
-      "volume": 5595,
-      "market_cap": 362807608,
-      "yahoo": "MTRE3F.SA"
     },
     {
       "symbol": "MTSA4",
@@ -6113,18 +2825,6 @@
       "yahoo": "MTSA4.SA"
     },
     {
-      "symbol": "MTSA4F",
-      "name": "METISA METALURGICA TIMBOENSE S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 44.81,
-      "change": 0.25,
-      "volume": 117,
-      "market_cap": 526914436,
-      "yahoo": "MTSA4F.SA"
-    },
-    {
       "symbol": "MULT3",
       "name": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
       "sector": "Finance",
@@ -6135,30 +2835,6 @@
       "volume": 6846000,
       "market_cap": 9624299603,
       "yahoo": "MULT3.SA"
-    },
-    {
-      "symbol": "MULT3F",
-      "name": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 32.88,
-      "change": 2.75,
-      "volume": 7767,
-      "market_cap": 9624299603,
-      "yahoo": "MULT3F.SA"
-    },
-    {
-      "symbol": "MWET3F",
-      "name": "WETZEL S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 24.5,
-      "change": 0,
-      "volume": 3,
-      "market_cap": 49967485,
-      "yahoo": "MWET3F.SA"
     },
     {
       "symbol": "MYPK3",
@@ -6173,18 +2849,6 @@
       "yahoo": "MYPK3.SA"
     },
     {
-      "symbol": "MYPK3F",
-      "name": "IOCHPE MAXION S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 9.39,
-      "change": 3.19,
-      "volume": 3019,
-      "market_cap": 1395707035,
-      "yahoo": "MYPK3F.SA"
-    },
-    {
       "symbol": "NATU3",
       "name": "NATURA COSMETICOS S.A.",
       "sector": "Consumer Non-Durables",
@@ -6195,18 +2859,6 @@
       "volume": 16940800,
       "market_cap": 9276959564,
       "yahoo": "NATU3.SA"
-    },
-    {
-      "symbol": "NATU3F",
-      "name": "NATURA COSMETICOS S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.36,
-      "change": 8.24,
-      "volume": 17224,
-      "market_cap": 9276959564,
-      "yahoo": "NATU3F.SA"
     },
     {
       "symbol": "NEXP3",
@@ -6221,18 +2873,6 @@
       "yahoo": "NEXP3.SA"
     },
     {
-      "symbol": "NEXP3F",
-      "name": "NEXPE PARTICIPAÇÕES S.A",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.3,
-      "change": -0.86,
-      "volume": 54,
-      "market_cap": 4976992,
-      "yahoo": "NEXP3F.SA"
-    },
-    {
       "symbol": "NORD3",
       "name": "NORDON INDUSTRIAS METALURGICAS S.A.",
       "sector": "Producer Manufacturing",
@@ -6243,18 +2883,6 @@
       "volume": 200,
       "market_cap": 8343071.999999999,
       "yahoo": "NORD3.SA"
-    },
-    {
-      "symbol": "NORD3F",
-      "name": "NORDON INDUSTRIAS METALURGICAS S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.3,
-      "change": 3.17,
-      "volume": 210,
-      "market_cap": 8343071.999999999,
-      "yahoo": "NORD3F.SA"
     },
     {
       "symbol": "NUTR3",
@@ -6269,18 +2897,6 @@
       "yahoo": "NUTR3.SA"
     },
     {
-      "symbol": "NUTR3F",
-      "name": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.32,
-      "change": -4.53,
-      "volume": 15,
-      "market_cap": 33905383,
-      "yahoo": "NUTR3F.SA"
-    },
-    {
       "symbol": "OBTC3",
       "name": "ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO",
       "sector": "Technology Services",
@@ -6291,30 +2907,6 @@
       "volume": 1032200,
       "market_cap": 1235693688,
       "yahoo": "OBTC3.SA"
-    },
-    {
-      "symbol": "OBTC3F",
-      "name": "ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.97,
-      "change": -0.38,
-      "volume": 13123,
-      "market_cap": 1235693688,
-      "yahoo": "OBTC3F.SA"
-    },
-    {
-      "symbol": "ODER4F",
-      "name": "CONSERVAS ODERICH S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 94.01,
-      "change": -1.04,
-      "volume": 1,
-      "market_cap": 142851698,
-      "yahoo": "ODER4F.SA"
     },
     {
       "symbol": "OFSA3",
@@ -6329,18 +2921,6 @@
       "yahoo": "OFSA3.SA"
     },
     {
-      "symbol": "OFSA3F",
-      "name": "OUROFINO S.A.",
-      "sector": "Health Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 27.58,
-      "change": 3.65,
-      "volume": 219,
-      "market_cap": 1488992667,
-      "yahoo": "OFSA3F.SA"
-    },
-    {
       "symbol": "ONCO11",
       "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
       "sector": "Health Services",
@@ -6351,18 +2931,6 @@
       "volume": 406100,
       "market_cap": 1240022721,
       "yahoo": "ONCO11.SA"
-    },
-    {
-      "symbol": "ONCO11F",
-      "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.22,
-      "change": 0,
-      "volume": 126,
-      "market_cap": 1240022721,
-      "yahoo": "ONCO11F.SA"
     },
     {
       "symbol": "ONCO3",
@@ -6377,18 +2945,6 @@
       "yahoo": "ONCO3.SA"
     },
     {
-      "symbol": "ONCO3F",
-      "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.03,
-      "change": 0.98,
-      "volume": 2796,
-      "market_cap": 1240022721,
-      "yahoo": "ONCO3F.SA"
-    },
-    {
       "symbol": "OPCT3",
       "name": "OCEANPACT SERVICOS MARITIMOS S.A.",
       "sector": "Commercial Services",
@@ -6399,18 +2955,6 @@
       "volume": 1054900,
       "market_cap": 4002723662,
       "yahoo": "OPCT3.SA"
-    },
-    {
-      "symbol": "OPCT3F",
-      "name": "OCEANPACT SERVICOS MARITIMOS S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.71,
-      "change": 1.4,
-      "volume": 2712,
-      "market_cap": 4002723662,
-      "yahoo": "OPCT3F.SA"
     },
     {
       "symbol": "ORVR3",
@@ -6425,18 +2969,6 @@
       "yahoo": "ORVR3.SA"
     },
     {
-      "symbol": "ORVR3F",
-      "name": "ORIZON VALORIZACAO DE RESIDUOS S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.25,
-      "change": -1.32,
-      "volume": 5053,
-      "market_cap": 9535785609,
-      "yahoo": "ORVR3F.SA"
-    },
-    {
       "symbol": "OSXB3",
       "name": "OSX BRASIL S.A.",
       "sector": "Industrial Services",
@@ -6447,30 +2979,6 @@
       "volume": 2500,
       "market_cap": 4092449,
       "yahoo": "OSXB3.SA"
-    },
-    {
-      "symbol": "OSXB3F",
-      "name": "OSX BRASIL S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.3,
-      "change": 5.69,
-      "volume": 10,
-      "market_cap": 4092449,
-      "yahoo": "OSXB3F.SA"
-    },
-    {
-      "symbol": "P1EG34",
-      "name": "P1EG34",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 358.4,
-      "change": -12.12,
-      "volume": 21,
-      "market_cap": 177253726972.23676,
-      "yahoo": "P1EG34.SA"
     },
     {
       "symbol": "PASS3",
@@ -6485,18 +2993,6 @@
       "yahoo": "PASS3.SA"
     },
     {
-      "symbol": "PASS3F",
-      "name": "COMPASS GAS E ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 24.1,
-      "change": 2.64,
-      "volume": 4277,
-      "market_cap": 16769183797.000002,
-      "yahoo": "PASS3F.SA"
-    },
-    {
       "symbol": "PATI3",
       "name": "PANATLANTICA S.A.",
       "sector": "Producer Manufacturing",
@@ -6507,18 +3003,6 @@
       "volume": 300,
       "market_cap": 659780566,
       "yahoo": "PATI3.SA"
-    },
-    {
-      "symbol": "PATI3F",
-      "name": "PANATLANTICA S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.19,
-      "change": -0.14,
-      "volume": 7,
-      "market_cap": 659780566,
-      "yahoo": "PATI3F.SA"
     },
     {
       "symbol": "PATI4",
@@ -6533,18 +3017,6 @@
       "yahoo": "PATI4.SA"
     },
     {
-      "symbol": "PATI4F",
-      "name": "PANATLANTICA S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 29.34,
-      "change": 2.95,
-      "volume": 10,
-      "market_cap": 659780566,
-      "yahoo": "PATI4F.SA"
-    },
-    {
       "symbol": "PCAR3",
       "name": "CIA BRASILEIRA DE DISTRIBUICAO",
       "sector": "Retail Trade",
@@ -6555,18 +3027,6 @@
       "volume": 10018100,
       "market_cap": 1622445661,
       "yahoo": "PCAR3.SA"
-    },
-    {
-      "symbol": "PCAR3F",
-      "name": "CIA BRASILEIRA DE DISTRIBUICAO",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.12,
-      "change": -6.87,
-      "volume": 5799,
-      "market_cap": 1622445661,
-      "yahoo": "PCAR3F.SA"
     },
     {
       "symbol": "PDGR3",
@@ -6581,18 +3041,6 @@
       "yahoo": "PDGR3.SA"
     },
     {
-      "symbol": "PDGR3F",
-      "name": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.1,
-      "change": 0.92,
-      "volume": 501,
-      "market_cap": 3517610,
-      "yahoo": "PDGR3F.SA"
-    },
-    {
       "symbol": "PDTC3",
       "name": "PADTEC HOLDING S.A.",
       "sector": "Electronic Technology",
@@ -6603,18 +3051,6 @@
       "volume": 29600,
       "market_cap": 126356701,
       "yahoo": "PDTC3.SA"
-    },
-    {
-      "symbol": "PDTC3F",
-      "name": "PADTEC HOLDING S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.58,
-      "change": 1.94,
-      "volume": 279,
-      "market_cap": 126356701,
-      "yahoo": "PDTC3F.SA"
     },
     {
       "symbol": "PEAB3",
@@ -6629,18 +3065,6 @@
       "yahoo": "PEAB3.SA"
     },
     {
-      "symbol": "PEAB3F",
-      "name": "CIA PARTICIPACOES ALIANCA DA BAHIA",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 38.59,
-      "change": -1.86,
-      "volume": 163,
-      "market_cap": 678659310,
-      "yahoo": "PEAB3F.SA"
-    },
-    {
       "symbol": "PEAB4",
       "name": "CIA PARTICIPACOES ALIANCA DA BAHIA",
       "sector": "Finance",
@@ -6651,18 +3075,6 @@
       "volume": 300,
       "market_cap": 678659310,
       "yahoo": "PEAB4.SA"
-    },
-    {
-      "symbol": "PEAB4F",
-      "name": "CIA PARTICIPACOES ALIANCA DA BAHIA",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 35.01,
-      "change": -4.16,
-      "volume": 142,
-      "market_cap": 678659310,
-      "yahoo": "PEAB4F.SA"
     },
     {
       "symbol": "PETR3",
@@ -6677,18 +3089,6 @@
       "yahoo": "PETR3.SA"
     },
     {
-      "symbol": "PETR3F",
-      "name": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 56.53,
-      "change": 3.4,
-      "volume": 20105,
-      "market_cap": 672473847136,
-      "yahoo": "PETR3F.SA"
-    },
-    {
       "symbol": "PETR4",
       "name": "PETROLEO BRASILEIRO S.A. PETROBRAS",
       "sector": "Energy Minerals",
@@ -6699,18 +3099,6 @@
       "volume": 57295600,
       "market_cap": 672473847136,
       "yahoo": "PETR4.SA"
-    },
-    {
-      "symbol": "PETR4F",
-      "name": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 51.04,
-      "change": 2.43,
-      "volume": 173707,
-      "market_cap": 672473847136,
-      "yahoo": "PETR4F.SA"
     },
     {
       "symbol": "PFRM3",
@@ -6725,18 +3113,6 @@
       "yahoo": "PFRM3.SA"
     },
     {
-      "symbol": "PFRM3F",
-      "name": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.81,
-      "change": 4.97,
-      "volume": 1971,
-      "market_cap": 935520198,
-      "yahoo": "PFRM3F.SA"
-    },
-    {
       "symbol": "PGMN3",
       "name": "EMPREENDIMENTOS PAGUE MENOS S.A.",
       "sector": "Retail Trade",
@@ -6747,18 +3123,6 @@
       "volume": 6784600,
       "market_cap": 2498912345,
       "yahoo": "PGMN3.SA"
-    },
-    {
-      "symbol": "PGMN3F",
-      "name": "EMPREENDIMENTOS PAGUE MENOS S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.63,
-      "change": 5.22,
-      "volume": 8731,
-      "market_cap": 2498912345,
-      "yahoo": "PGMN3F.SA"
     },
     {
       "symbol": "PINE3",
@@ -6773,18 +3137,6 @@
       "yahoo": "PINE3.SA"
     },
     {
-      "symbol": "PINE3F",
-      "name": "BCO PINE S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.43,
-      "change": 3.72,
-      "volume": 213,
-      "market_cap": 3061512611,
-      "yahoo": "PINE3F.SA"
-    },
-    {
       "symbol": "PINE4",
       "name": "BCO PINE S.A.",
       "sector": "Finance",
@@ -6795,18 +3147,6 @@
       "volume": 1311000,
       "market_cap": 3061512611,
       "yahoo": "PINE4.SA"
-    },
-    {
-      "symbol": "PINE4F",
-      "name": "BCO PINE S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.53,
-      "change": 0.89,
-      "volume": 8730,
-      "market_cap": 3061512611,
-      "yahoo": "PINE4F.SA"
     },
     {
       "symbol": "PLAS3",
@@ -6821,18 +3161,6 @@
       "yahoo": "PLAS3.SA"
     },
     {
-      "symbol": "PLAS3F",
-      "name": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.86,
-      "change": 0.35,
-      "volume": 100,
-      "market_cap": 36033713,
-      "yahoo": "PLAS3F.SA"
-    },
-    {
       "symbol": "PLPL3",
       "name": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
       "sector": "Finance",
@@ -6843,18 +3171,6 @@
       "volume": 5200000,
       "market_cap": 1398750426,
       "yahoo": "PLPL3.SA"
-    },
-    {
-      "symbol": "PLPL3F",
-      "name": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.98,
-      "change": 2.8,
-      "volume": 6561,
-      "market_cap": 1398750426,
-      "yahoo": "PLPL3F.SA"
     },
     {
       "symbol": "PMAM3",
@@ -6869,18 +3185,6 @@
       "yahoo": "PMAM3.SA"
     },
     {
-      "symbol": "PMAM3F",
-      "name": "PARANAPANEMA S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.4,
-      "change": 5.26,
-      "volume": 18372,
-      "market_cap": 120173592,
-      "yahoo": "PMAM3F.SA"
-    },
-    {
       "symbol": "PNVL3",
       "name": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
       "sector": "Retail Trade",
@@ -6891,18 +3195,6 @@
       "volume": 1260600,
       "market_cap": 1889781476,
       "yahoo": "PNVL3.SA"
-    },
-    {
-      "symbol": "PNVL3F",
-      "name": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 13.04,
-      "change": 3.99,
-      "volume": 3120,
-      "market_cap": 1889781476,
-      "yahoo": "PNVL3F.SA"
     },
     {
       "symbol": "POMO3",
@@ -6917,18 +3209,6 @@
       "yahoo": "POMO3.SA"
     },
     {
-      "symbol": "POMO3F",
-      "name": "MARCOPOLO S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.07,
-      "change": 2.78,
-      "volume": 20982,
-      "market_cap": 5118664883,
-      "yahoo": "POMO3F.SA"
-    },
-    {
       "symbol": "POMO4",
       "name": "MARCOPOLO S.A.",
       "sector": "Producer Manufacturing",
@@ -6939,18 +3219,6 @@
       "volume": 18329500,
       "market_cap": 5118664883,
       "yahoo": "POMO4.SA"
-    },
-    {
-      "symbol": "POMO4F",
-      "name": "MARCOPOLO S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.32,
-      "change": 2.61,
-      "volume": 93100,
-      "market_cap": 5118664883,
-      "yahoo": "POMO4F.SA"
     },
     {
       "symbol": "POSI3",
@@ -6965,18 +3233,6 @@
       "yahoo": "POSI3.SA"
     },
     {
-      "symbol": "POSI3F",
-      "name": "POSITIVO TECNOLOGIA S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.78,
-      "change": 5,
-      "volume": 3811,
-      "market_cap": 512953406,
-      "yahoo": "POSI3F.SA"
-    },
-    {
       "symbol": "PRIO3",
       "name": "PRIO S.A.",
       "sector": "Energy Minerals",
@@ -6987,18 +3243,6 @@
       "volume": 8042200,
       "market_cap": 51221848840,
       "yahoo": "PRIO3.SA"
-    },
-    {
-      "symbol": "PRIO3F",
-      "name": "PRIO S.A.",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 63.08,
-      "change": 2.49,
-      "volume": 31653,
-      "market_cap": 51221848840,
-      "yahoo": "PRIO3F.SA"
     },
     {
       "symbol": "PRNR3",
@@ -7013,18 +3257,6 @@
       "yahoo": "PRNR3.SA"
     },
     {
-      "symbol": "PRNR3F",
-      "name": "PRINER SERVIÇOS INDUSTRIAIS S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.81,
-      "change": 1.02,
-      "volume": 2800,
-      "market_cap": 1056855935.9999999,
-      "yahoo": "PRNR3F.SA"
-    },
-    {
       "symbol": "PSSA3",
       "name": "PORTO SEGURO S.A.",
       "sector": "Finance",
@@ -7035,30 +3267,6 @@
       "volume": 1798300,
       "market_cap": 30724098409,
       "yahoo": "PSSA3.SA"
-    },
-    {
-      "symbol": "PSSA3F",
-      "name": "PORTO SEGURO S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 49.5,
-      "change": 3.38,
-      "volume": 32448,
-      "market_cap": 30724098409,
-      "yahoo": "PSSA3F.SA"
-    },
-    {
-      "symbol": "PSVM11F",
-      "name": "PORTO SUDESTE V.M. S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.99,
-      "change": 13.56,
-      "volume": 1,
-      "market_cap": 2663520,
-      "yahoo": "PSVM11F.SA"
     },
     {
       "symbol": "PTBL3",
@@ -7073,18 +3281,6 @@
       "yahoo": "PTBL3.SA"
     },
     {
-      "symbol": "PTBL3F",
-      "name": "PBG S/A",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.01,
-      "change": 5.79,
-      "volume": 3163,
-      "market_cap": 260821487,
-      "yahoo": "PTBL3F.SA"
-    },
-    {
       "symbol": "QUAL3",
       "name": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
       "sector": "Health Services",
@@ -7095,18 +3291,6 @@
       "volume": 2910700,
       "market_cap": 455295487,
       "yahoo": "QUAL3.SA"
-    },
-    {
-      "symbol": "QUAL3F",
-      "name": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.68,
-      "change": 3.7,
-      "volume": 4060,
-      "market_cap": 455295487,
-      "yahoo": "QUAL3F.SA"
     },
     {
       "symbol": "RADL3",
@@ -7121,18 +3305,6 @@
       "yahoo": "RADL3.SA"
     },
     {
-      "symbol": "RADL3F",
-      "name": "RAIA DROGASIL S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19.32,
-      "change": 2.33,
-      "volume": 18304,
-      "market_cap": 32732491870,
-      "yahoo": "RADL3F.SA"
-    },
-    {
       "symbol": "RAIL3",
       "name": "RUMO S.A.",
       "sector": "Transportation",
@@ -7143,18 +3315,6 @@
       "volume": 14983400,
       "market_cap": 30637634528,
       "yahoo": "RAIL3.SA"
-    },
-    {
-      "symbol": "RAIL3F",
-      "name": "RUMO S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 16.94,
-      "change": 3.29,
-      "volume": 8959,
-      "market_cap": 30637634528,
-      "yahoo": "RAIL3F.SA"
     },
     {
       "symbol": "RAIZ4",
@@ -7169,18 +3329,6 @@
       "yahoo": "RAIZ4.SA"
     },
     {
-      "symbol": "RAIZ4F",
-      "name": "RAIZEN S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.35,
-      "change": 6.06,
-      "volume": 84373,
-      "market_cap": 3312802958,
-      "yahoo": "RAIZ4F.SA"
-    },
-    {
       "symbol": "RANI3",
       "name": "IRANI PAPEL E EMBALAGEM S.A.",
       "sector": "Process Industries",
@@ -7191,18 +3339,6 @@
       "volume": 1651700,
       "market_cap": 1765688275,
       "yahoo": "RANI3.SA"
-    },
-    {
-      "symbol": "RANI3F",
-      "name": "IRANI PAPEL E EMBALAGEM S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.97,
-      "change": 2.44,
-      "volume": 11537,
-      "market_cap": 1765688275,
-      "yahoo": "RANI3F.SA"
     },
     {
       "symbol": "RAPT3",
@@ -7217,18 +3353,6 @@
       "yahoo": "RAPT3.SA"
     },
     {
-      "symbol": "RAPT3F",
-      "name": "RANDONCORP S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.4,
-      "change": 2.07,
-      "volume": 436,
-      "market_cap": 2129898800,
-      "yahoo": "RAPT3F.SA"
-    },
-    {
       "symbol": "RAPT4",
       "name": "RANDONCORP S.A.",
       "sector": "Producer Manufacturing",
@@ -7239,18 +3363,6 @@
       "volume": 5021800,
       "market_cap": 2129898800,
       "yahoo": "RAPT4.SA"
-    },
-    {
-      "symbol": "RAPT4F",
-      "name": "RANDONCORP S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.44,
-      "change": 4.62,
-      "volume": 8454,
-      "market_cap": 2129898800,
-      "yahoo": "RAPT4F.SA"
     },
     {
       "symbol": "RCSL3",
@@ -7265,18 +3377,6 @@
       "yahoo": "RCSL3.SA"
     },
     {
-      "symbol": "RCSL3F",
-      "name": "RECRUSUL S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.47,
-      "change": -7.84,
-      "volume": 951,
-      "market_cap": 45025180,
-      "yahoo": "RCSL3F.SA"
-    },
-    {
       "symbol": "RCSL4",
       "name": "RECRUSUL S.A.",
       "sector": "Producer Manufacturing",
@@ -7287,18 +3387,6 @@
       "volume": 1176600,
       "market_cap": 45025180,
       "yahoo": "RCSL4.SA"
-    },
-    {
-      "symbol": "RCSL4F",
-      "name": "RECRUSUL S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.29,
-      "change": 0,
-      "volume": 2231,
-      "market_cap": 45025180,
-      "yahoo": "RCSL4F.SA"
     },
     {
       "symbol": "RDOR3",
@@ -7313,18 +3401,6 @@
       "yahoo": "RDOR3.SA"
     },
     {
-      "symbol": "RDOR3F",
-      "name": "REDE DOR SÃO LUIZ S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 39.9,
-      "change": 3.5,
-      "volume": 13006,
-      "market_cap": 84643011238,
-      "yahoo": "RDOR3F.SA"
-    },
-    {
       "symbol": "RECV3",
       "name": "PETRORECÔNCAVO S.A.",
       "sector": "Energy Minerals",
@@ -7335,18 +3411,6 @@
       "volume": 1548400,
       "market_cap": 3239463065,
       "yahoo": "RECV3.SA"
-    },
-    {
-      "symbol": "RECV3F",
-      "name": "PETRORECÔNCAVO S.A.",
-      "sector": "Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.3,
-      "change": 3.76,
-      "volume": 17444,
-      "market_cap": 3239463065,
-      "yahoo": "RECV3F.SA"
     },
     {
       "symbol": "REDE3",
@@ -7361,18 +3425,6 @@
       "yahoo": "REDE3.SA"
     },
     {
-      "symbol": "REDE3F",
-      "name": "REDE ENERGIA PARTICIPAÇÕES S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.45,
-      "change": -0.73,
-      "volume": 175,
-      "market_cap": 13791258354,
-      "yahoo": "REDE3F.SA"
-    },
-    {
       "symbol": "RENT3",
       "name": "LOCALIZA RENT A CAR S.A.",
       "sector": "Finance",
@@ -7383,18 +3435,6 @@
       "volume": 16362800,
       "market_cap": 43086102523,
       "yahoo": "RENT3.SA"
-    },
-    {
-      "symbol": "RENT3F",
-      "name": "LOCALIZA RENT A CAR S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 41.33,
-      "change": 2.71,
-      "volume": 17559,
-      "market_cap": 43086102523,
-      "yahoo": "RENT3F.SA"
     },
     {
       "symbol": "RENT4",
@@ -7409,18 +3449,6 @@
       "yahoo": "RENT4.SA"
     },
     {
-      "symbol": "RENT4F",
-      "name": "LOCALIZA RENT A CAR S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 40.67,
-      "change": 4.79,
-      "volume": 1350,
-      "market_cap": 43086102523,
-      "yahoo": "RENT4F.SA"
-    },
-    {
       "symbol": "RIAA3",
       "name": "GUARARAPES CONFECCOES S.A.",
       "sector": "Distribution Services",
@@ -7431,18 +3459,6 @@
       "volume": 3519800,
       "market_cap": 3685142635,
       "yahoo": "RIAA3.SA"
-    },
-    {
-      "symbol": "RIAA3F",
-      "name": "GUARARAPES CONFECCOES S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.48,
-      "change": 3.74,
-      "volume": 5258,
-      "market_cap": 3685142635,
-      "yahoo": "RIAA3F.SA"
     },
     {
       "symbol": "RNEW3",
@@ -7457,18 +3473,6 @@
       "yahoo": "RNEW3.SA"
     },
     {
-      "symbol": "RNEW3F",
-      "name": "RENOVA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.79,
-      "change": -1.25,
-      "volume": 422,
-      "market_cap": 297868641,
-      "yahoo": "RNEW3F.SA"
-    },
-    {
       "symbol": "RNEW4",
       "name": "RENOVA ENERGIA S.A.",
       "sector": "Utilities",
@@ -7479,18 +3483,6 @@
       "volume": 56500,
       "market_cap": 297868641,
       "yahoo": "RNEW4.SA"
-    },
-    {
-      "symbol": "RNEW4F",
-      "name": "RENOVA ENERGIA S.A.",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.79,
-      "change": -2.47,
-      "volume": 651,
-      "market_cap": 297868641,
-      "yahoo": "RNEW4F.SA"
     },
     {
       "symbol": "ROMI3",
@@ -7505,18 +3497,6 @@
       "yahoo": "ROMI3.SA"
     },
     {
-      "symbol": "ROMI3F",
-      "name": "ROMI S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.29,
-      "change": 3.8,
-      "volume": 7174,
-      "market_cap": 560887934,
-      "yahoo": "ROMI3F.SA"
-    },
-    {
       "symbol": "RPAD3",
       "name": "ALFA HOLDINGS S.A.",
       "sector": "Finance",
@@ -7529,18 +3509,6 @@
       "yahoo": "RPAD3.SA"
     },
     {
-      "symbol": "RPAD3F",
-      "name": "ALFA HOLDINGS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.5,
-      "change": -6.02,
-      "volume": 25,
-      "market_cap": 642273952,
-      "yahoo": "RPAD3F.SA"
-    },
-    {
       "symbol": "RPAD5",
       "name": "ALFA HOLDINGS S.A.",
       "sector": "Finance",
@@ -7551,18 +3519,6 @@
       "volume": 1100,
       "market_cap": 642273952,
       "yahoo": "RPAD5.SA"
-    },
-    {
-      "symbol": "RPAD5F",
-      "name": "ALFA HOLDINGS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.7,
-      "change": 2.67,
-      "volume": 10,
-      "market_cap": 642273952,
-      "yahoo": "RPAD5F.SA"
     },
     {
       "symbol": "RPAD6",
@@ -7589,18 +3545,6 @@
       "yahoo": "RSUL4.SA"
     },
     {
-      "symbol": "RSUL4F",
-      "name": "METALURGICA RIOSULENSE S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 43.55,
-      "change": 3.94,
-      "volume": 158,
-      "market_cap": 105086475,
-      "yahoo": "RSUL4F.SA"
-    },
-    {
       "symbol": "RVEE3",
       "name": "REVEE S.A.",
       "sector": "Miscellaneous",
@@ -7611,18 +3555,6 @@
       "volume": 100,
       "market_cap": 7119805,
       "yahoo": "RVEE3.SA"
-    },
-    {
-      "symbol": "RVEE3F",
-      "name": "REVEE S.A.",
-      "sector": "Miscellaneous",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.68,
-      "change": -2.86,
-      "volume": 13,
-      "market_cap": 7119805,
-      "yahoo": "RVEE3F.SA"
     },
     {
       "symbol": "SANB11",
@@ -7637,18 +3569,6 @@
       "yahoo": "SANB11.SA"
     },
     {
-      "symbol": "SANB11F",
-      "name": "BCO SANTANDER (BRASIL) S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.1,
-      "change": 1.08,
-      "volume": 14522,
-      "market_cap": null,
-      "yahoo": "SANB11F.SA"
-    },
-    {
       "symbol": "SANB3",
       "name": "BCO SANTANDER (BRASIL) S.A.",
       "sector": "Finance",
@@ -7659,18 +3579,6 @@
       "volume": 173800,
       "market_cap": 104604510240,
       "yahoo": "SANB3.SA"
-    },
-    {
-      "symbol": "SANB3F",
-      "name": "BCO SANTANDER (BRASIL) S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.06,
-      "change": 0.29,
-      "volume": 6426,
-      "market_cap": 104604510240,
-      "yahoo": "SANB3F.SA"
     },
     {
       "symbol": "SANB4",
@@ -7685,18 +3593,6 @@
       "yahoo": "SANB4.SA"
     },
     {
-      "symbol": "SANB4F",
-      "name": "BCO SANTANDER (BRASIL) S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.03,
-      "change": 1.01,
-      "volume": 10033,
-      "market_cap": 104604510240,
-      "yahoo": "SANB4F.SA"
-    },
-    {
       "symbol": "SAPR11",
       "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
       "sector": "Utilities",
@@ -7707,18 +3603,6 @@
       "volume": 2074000,
       "market_cap": null,
       "yahoo": "SAPR11.SA"
-    },
-    {
-      "symbol": "SAPR11F",
-      "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 35.23,
-      "change": 5.16,
-      "volume": 24906,
-      "market_cap": null,
-      "yahoo": "SAPR11F.SA"
     },
     {
       "symbol": "SAPR3",
@@ -7733,18 +3617,6 @@
       "yahoo": "SAPR3.SA"
     },
     {
-      "symbol": "SAPR3F",
-      "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.58,
-      "change": 3.41,
-      "volume": 12992,
-      "market_cap": 10286272196,
-      "yahoo": "SAPR3F.SA"
-    },
-    {
       "symbol": "SAPR4",
       "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
       "sector": "Utilities",
@@ -7755,18 +3627,6 @@
       "volume": 1614900,
       "market_cap": 10286272196,
       "yahoo": "SAPR4.SA"
-    },
-    {
-      "symbol": "SAPR4F",
-      "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.89,
-      "change": 4.55,
-      "volume": 57798,
-      "market_cap": 10286272196,
-      "yahoo": "SAPR4F.SA"
     },
     {
       "symbol": "SAUD3",
@@ -7781,18 +3641,6 @@
       "yahoo": "SAUD3.SA"
     },
     {
-      "symbol": "SAUD3F",
-      "name": "BRADSAUDE S.A.",
-      "sector": "Health Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 13.92,
-      "change": 3.42,
-      "volume": 17685,
-      "market_cap": 39086763796,
-      "yahoo": "SAUD3F.SA"
-    },
-    {
       "symbol": "SBFG3",
       "name": "GRUPO SBF SA",
       "sector": "Retail Trade",
@@ -7803,18 +3651,6 @@
       "volume": 8123900,
       "market_cap": 1877605051,
       "yahoo": "SBFG3.SA"
-    },
-    {
-      "symbol": "SBFG3F",
-      "name": "GRUPO SBF SA",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.08,
-      "change": 0.75,
-      "volume": 4572,
-      "market_cap": 1877605051,
-      "yahoo": "SBFG3F.SA"
     },
     {
       "symbol": "SBSP3",
@@ -7829,18 +3665,6 @@
       "yahoo": "SBSP3.SA"
     },
     {
-      "symbol": "SBSP3F",
-      "name": "CIA SANEAMENTO BASICO EST SAO PAULO",
-      "sector": "Utilities",
-      "type": "stock",
-      "subType": "stock",
-      "close": 28.34,
-      "change": 2.9,
-      "volume": 32394,
-      "market_cap": 96924683228,
-      "yahoo": "SBSP3F.SA"
-    },
-    {
       "symbol": "SCAR3",
       "name": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
       "sector": "Finance",
@@ -7851,18 +3675,6 @@
       "volume": 2200,
       "market_cap": 709919755,
       "yahoo": "SCAR3.SA"
-    },
-    {
-      "symbol": "SCAR3F",
-      "name": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 12.82,
-      "change": 0.94,
-      "volume": 449,
-      "market_cap": 709919755,
-      "yahoo": "SCAR3F.SA"
     },
     {
       "symbol": "SEER3",
@@ -7877,18 +3689,6 @@
       "yahoo": "SEER3.SA"
     },
     {
-      "symbol": "SEER3F",
-      "name": "SER EDUCACIONAL S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.61,
-      "change": 3.54,
-      "volume": 5259,
-      "market_cap": 1838143808,
-      "yahoo": "SEER3F.SA"
-    },
-    {
       "symbol": "SEQL3",
       "name": "SEQUOIA LOGISTICA E TRANSPORTES S.A",
       "sector": "Transportation",
@@ -7899,18 +3699,6 @@
       "volume": 2698800,
       "market_cap": 445934182,
       "yahoo": "SEQL3.SA"
-    },
-    {
-      "symbol": "SEQL3F",
-      "name": "SEQUOIA LOGISTICA E TRANSPORTES S.A",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.08,
-      "change": 0,
-      "volume": 7031,
-      "market_cap": 445934182,
-      "yahoo": "SEQL3F.SA"
     },
     {
       "symbol": "SHUL4",
@@ -7925,18 +3713,6 @@
       "yahoo": "SHUL4.SA"
     },
     {
-      "symbol": "SHUL4F",
-      "name": "SCHULZ S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.65,
-      "change": 3.33,
-      "volume": 6071,
-      "market_cap": 4972433929,
-      "yahoo": "SHUL4F.SA"
-    },
-    {
       "symbol": "SIMH3",
       "name": "SIMPAR S.A.",
       "sector": "Transportation",
@@ -7947,18 +3723,6 @@
       "volume": 11491500,
       "market_cap": 5734033227,
       "yahoo": "SIMH3.SA"
-    },
-    {
-      "symbol": "SIMH3F",
-      "name": "SIMPAR S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.68,
-      "change": 6.48,
-      "volume": 26136,
-      "market_cap": 5734033227,
-      "yahoo": "SIMH3F.SA"
     },
     {
       "symbol": "SLCE3",
@@ -7973,18 +3737,6 @@
       "yahoo": "SLCE3.SA"
     },
     {
-      "symbol": "SLCE3F",
-      "name": "SLC AGRICOLA S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.09,
-      "change": 2.58,
-      "volume": 16707,
-      "market_cap": 8268255590.000001,
-      "yahoo": "SLCE3F.SA"
-    },
-    {
       "symbol": "SMFT3",
       "name": "SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.",
       "sector": "Consumer Services",
@@ -7995,18 +3747,6 @@
       "volume": 8153900,
       "market_cap": 10585111575,
       "yahoo": "SMFT3.SA"
-    },
-    {
-      "symbol": "SMFT3F",
-      "name": "SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.",
-      "sector": "Consumer Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.7,
-      "change": 2.67,
-      "volume": 9703,
-      "market_cap": 10585111575,
-      "yahoo": "SMFT3F.SA"
     },
     {
       "symbol": "SMTO3",
@@ -8021,30 +3761,6 @@
       "yahoo": "SMTO3.SA"
     },
     {
-      "symbol": "SMTO3F",
-      "name": "SAO MARTINHO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 19.33,
-      "change": 5.46,
-      "volume": 15230,
-      "market_cap": 5966560351,
-      "yahoo": "SMTO3F.SA"
-    },
-    {
-      "symbol": "SNSY3F",
-      "name": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.31,
-      "change": -0.14,
-      "volume": 1,
-      "market_cap": 33966149,
-      "yahoo": "SNSY3F.SA"
-    },
-    {
       "symbol": "SNSY5",
       "name": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
       "sector": "Producer Manufacturing",
@@ -8055,18 +3771,6 @@
       "volume": 400,
       "market_cap": 33966149,
       "yahoo": "SNSY5.SA"
-    },
-    {
-      "symbol": "SNSY5F",
-      "name": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.53,
-      "change": 6.3,
-      "volume": 9,
-      "market_cap": 33966149,
-      "yahoo": "SNSY5F.SA"
     },
     {
       "symbol": "SOJA3",
@@ -8081,18 +3785,6 @@
       "yahoo": "SOJA3.SA"
     },
     {
-      "symbol": "SOJA3F",
-      "name": "BOA SAFRA SEMENTES S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.69,
-      "change": 3.78,
-      "volume": 7627,
-      "market_cap": 1060013099.9999999,
-      "yahoo": "SOJA3F.SA"
-    },
-    {
       "symbol": "SOND5",
       "name": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
       "sector": "Industrial Services",
@@ -8103,18 +3795,6 @@
       "volume": 100,
       "market_cap": 156513597,
       "yahoo": "SOND5.SA"
-    },
-    {
-      "symbol": "SOND5F",
-      "name": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 88.99,
-      "change": 2.29,
-      "volume": 23,
-      "market_cap": 156513597,
-      "yahoo": "SOND5F.SA"
     },
     {
       "symbol": "SOND6",
@@ -8129,18 +3809,6 @@
       "yahoo": "SOND6.SA"
     },
     {
-      "symbol": "SOND6F",
-      "name": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 76,
-      "change": 0,
-      "volume": 8,
-      "market_cap": 156513597,
-      "yahoo": "SOND6F.SA"
-    },
-    {
       "symbol": "SUZB3",
       "name": "SUZANO S.A.",
       "sector": "Process Industries",
@@ -8151,18 +3819,6 @@
       "volume": 7186600,
       "market_cap": 54164791971,
       "yahoo": "SUZB3.SA"
-    },
-    {
-      "symbol": "SUZB3F",
-      "name": "SUZANO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 44.4,
-      "change": 2.75,
-      "volume": 17102,
-      "market_cap": 54164791971,
-      "yahoo": "SUZB3F.SA"
     },
     {
       "symbol": "SYNE3",
@@ -8177,18 +3833,6 @@
       "yahoo": "SYNE3.SA"
     },
     {
-      "symbol": "SYNE3F",
-      "name": "SYN PROP E TECH S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.53,
-      "change": 0,
-      "volume": 6032,
-      "market_cap": 534255539,
-      "yahoo": "SYNE3F.SA"
-    },
-    {
       "symbol": "TAEE11",
       "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
       "sector": "Industrial Services",
@@ -8199,18 +3843,6 @@
       "volume": 2273200,
       "market_cap": null,
       "yahoo": "TAEE11.SA"
-    },
-    {
-      "symbol": "TAEE11F",
-      "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 42.75,
-      "change": 1.81,
-      "volume": 35032,
-      "market_cap": null,
-      "yahoo": "TAEE11F.SA"
     },
     {
       "symbol": "TAEE3",
@@ -8225,18 +3857,6 @@
       "yahoo": "TAEE3.SA"
     },
     {
-      "symbol": "TAEE3F",
-      "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.05,
-      "change": 2.18,
-      "volume": 12237,
-      "market_cap": 14413833976,
-      "yahoo": "TAEE3F.SA"
-    },
-    {
       "symbol": "TAEE4",
       "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
       "sector": "Industrial Services",
@@ -8247,18 +3867,6 @@
       "volume": 220600,
       "market_cap": 14413833976,
       "yahoo": "TAEE4.SA"
-    },
-    {
-      "symbol": "TAEE4F",
-      "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
-      "sector": "Industrial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 14.43,
-      "change": 3,
-      "volume": 19504,
-      "market_cap": 14413833976,
-      "yahoo": "TAEE4F.SA"
     },
     {
       "symbol": "TASA3",
@@ -8273,18 +3881,6 @@
       "yahoo": "TASA3.SA"
     },
     {
-      "symbol": "TASA3F",
-      "name": "TAURUS ARMAS S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.41,
-      "change": 2.81,
-      "volume": 4516,
-      "market_cap": 1134395607,
-      "yahoo": "TASA3F.SA"
-    },
-    {
       "symbol": "TASA4",
       "name": "TAURUS ARMAS S.A.",
       "sector": "Electronic Technology",
@@ -8295,18 +3891,6 @@
       "volume": 1431700,
       "market_cap": 1134395607,
       "yahoo": "TASA4.SA"
-    },
-    {
-      "symbol": "TASA4F",
-      "name": "TAURUS ARMAS S.A.",
-      "sector": "Electronic Technology",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.47,
-      "change": 3.55,
-      "volume": 18737,
-      "market_cap": 1134395607,
-      "yahoo": "TASA4F.SA"
     },
     {
       "symbol": "TCSA3",
@@ -8321,18 +3905,6 @@
       "yahoo": "TCSA3.SA"
     },
     {
-      "symbol": "TCSA3F",
-      "name": "TECNISA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.67,
-      "change": 0,
-      "volume": 688,
-      "market_cap": 47116308,
-      "yahoo": "TCSA3F.SA"
-    },
-    {
       "symbol": "TECN3",
       "name": "TECHNOS S.A.",
       "sector": "Consumer Durables",
@@ -8343,18 +3915,6 @@
       "volume": 17400,
       "market_cap": 575765199,
       "yahoo": "TECN3.SA"
-    },
-    {
-      "symbol": "TECN3F",
-      "name": "TECHNOS S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.39,
-      "change": 0.97,
-      "volume": 753,
-      "market_cap": 575765199,
-      "yahoo": "TECN3F.SA"
     },
     {
       "symbol": "TELB3",
@@ -8369,18 +3929,6 @@
       "yahoo": "TELB3.SA"
     },
     {
-      "symbol": "TELB3F",
-      "name": "TELEC BRASILEIRAS S.A. TELEBRAS",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 20.5,
-      "change": 6.27,
-      "volume": 56,
-      "market_cap": 1778255783,
-      "yahoo": "TELB3F.SA"
-    },
-    {
       "symbol": "TELB4",
       "name": "TELEC BRASILEIRAS S.A. TELEBRAS",
       "sector": "Communications",
@@ -8391,18 +3939,6 @@
       "volume": 14400,
       "market_cap": 1778255783,
       "yahoo": "TELB4.SA"
-    },
-    {
-      "symbol": "TELB4F",
-      "name": "TELEC BRASILEIRAS S.A. TELEBRAS",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.54,
-      "change": -3.61,
-      "volume": 313,
-      "market_cap": 1778255783,
-      "yahoo": "TELB4F.SA"
     },
     {
       "symbol": "TEND3",
@@ -8417,18 +3953,6 @@
       "yahoo": "TEND3.SA"
     },
     {
-      "symbol": "TEND3F",
-      "name": "CONSTRUTORA TENDA S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 27.97,
-      "change": 1.67,
-      "volume": 24484,
-      "market_cap": 3134734776,
-      "yahoo": "TEND3F.SA"
-    },
-    {
       "symbol": "TFCO4",
       "name": "TRACK & FIELD CO S.A.",
       "sector": "Retail Trade",
@@ -8439,18 +3963,6 @@
       "volume": 729300,
       "market_cap": 1969191396,
       "yahoo": "TFCO4.SA"
-    },
-    {
-      "symbol": "TFCO4F",
-      "name": "TRACK & FIELD CO S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 13.27,
-      "change": 1.76,
-      "volume": 1595,
-      "market_cap": 1969191396,
-      "yahoo": "TFCO4F.SA"
     },
     {
       "symbol": "TGMA3",
@@ -8465,18 +3977,6 @@
       "yahoo": "TGMA3.SA"
     },
     {
-      "symbol": "TGMA3F",
-      "name": "TEGMA GESTAO LOGISTICA S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 39.02,
-      "change": 1.32,
-      "volume": 3516,
-      "market_cap": 2532010647,
-      "yahoo": "TGMA3F.SA"
-    },
-    {
       "symbol": "TIMS3",
       "name": "TIM S.A.",
       "sector": "Communications",
@@ -8487,18 +3987,6 @@
       "volume": 7489900,
       "market_cap": 43584311238,
       "yahoo": "TIMS3.SA"
-    },
-    {
-      "symbol": "TIMS3F",
-      "name": "TIM S.A.",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.5,
-      "change": 1.54,
-      "volume": 39382,
-      "market_cap": 43584311238,
-      "yahoo": "TIMS3F.SA"
     },
     {
       "symbol": "TOKY3",
@@ -8513,18 +4001,6 @@
       "yahoo": "TOKY3.SA"
     },
     {
-      "symbol": "TOKY3F",
-      "name": "GRUPO TOKY S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.9,
-      "change": 6.86,
-      "volume": 205,
-      "market_cap": 27992621,
-      "yahoo": "TOKY3F.SA"
-    },
-    {
       "symbol": "TOTS3",
       "name": "TOTVS S.A.",
       "sector": "Technology Services",
@@ -8535,18 +4011,6 @@
       "volume": 6894000,
       "market_cap": 19720860650,
       "yahoo": "TOTS3.SA"
-    },
-    {
-      "symbol": "TOTS3F",
-      "name": "TOTVS S.A.",
-      "sector": "Technology Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 35.49,
-      "change": 2.22,
-      "volume": 15259,
-      "market_cap": 19720860650,
-      "yahoo": "TOTS3F.SA"
     },
     {
       "symbol": "TPIS3",
@@ -8561,18 +4025,6 @@
       "yahoo": "TPIS3.SA"
     },
     {
-      "symbol": "TPIS3F",
-      "name": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
-      "sector": "Transportation",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.9,
-      "change": -0.55,
-      "volume": 398,
-      "market_cap": 459893161,
-      "yahoo": "TPIS3F.SA"
-    },
-    {
       "symbol": "TRIS3",
       "name": "TRISUL S.A.",
       "sector": "Consumer Durables",
@@ -8583,18 +4035,6 @@
       "volume": 682500,
       "market_cap": 1144523837,
       "yahoo": "TRIS3.SA"
-    },
-    {
-      "symbol": "TRIS3F",
-      "name": "TRISUL S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 5.29,
-      "change": 5.17,
-      "volume": 4248,
-      "market_cap": 1144523837,
-      "yahoo": "TRIS3F.SA"
     },
     {
       "symbol": "TTEN3",
@@ -8609,18 +4049,6 @@
       "yahoo": "TTEN3.SA"
     },
     {
-      "symbol": "TTEN3F",
-      "name": "TRÊS TENTOS AGROINDUSTRIAL S/A",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 10.8,
-      "change": 4.85,
-      "volume": 15498,
-      "market_cap": 5217686569,
-      "yahoo": "TTEN3F.SA"
-    },
-    {
       "symbol": "TUPY3",
       "name": "TUPY S.A.",
       "sector": "Producer Manufacturing",
@@ -8631,30 +4059,6 @@
       "volume": 982800,
       "market_cap": 2225167025,
       "yahoo": "TUPY3.SA"
-    },
-    {
-      "symbol": "TUPY3F",
-      "name": "TUPY S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 16.55,
-      "change": -1.49,
-      "volume": 5633,
-      "market_cap": 2225167025,
-      "yahoo": "TUPY3F.SA"
-    },
-    {
-      "symbol": "TXRX3F",
-      "name": "TEXTIL RENAUXVIEW S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.01,
-      "change": 33.78,
-      "volume": 14,
-      "market_cap": 18602677,
-      "yahoo": "TXRX3F.SA"
     },
     {
       "symbol": "TXRX4",
@@ -8669,18 +4073,6 @@
       "yahoo": "TXRX4.SA"
     },
     {
-      "symbol": "TXRX4F",
-      "name": "TEXTIL RENAUXVIEW S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.93,
-      "change": -1.53,
-      "volume": 1,
-      "market_cap": 18602677,
-      "yahoo": "TXRX4F.SA"
-    },
-    {
       "symbol": "UCAS3",
       "name": "UNICASA INDÚSTRIA DE MÓVEIS S.A.",
       "sector": "Consumer Durables",
@@ -8691,18 +4083,6 @@
       "volume": 18200,
       "market_cap": 74016729,
       "yahoo": "UCAS3.SA"
-    },
-    {
-      "symbol": "UCAS3F",
-      "name": "UNICASA INDÚSTRIA DE MÓVEIS S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.12,
-      "change": 0.9,
-      "volume": 102,
-      "market_cap": 74016729,
-      "yahoo": "UCAS3F.SA"
     },
     {
       "symbol": "UGPA3",
@@ -8717,18 +4097,6 @@
       "yahoo": "UGPA3.SA"
     },
     {
-      "symbol": "UGPA3F",
-      "name": "ULTRAPAR PARTICIPACOES S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 38.44,
-      "change": 0.89,
-      "volume": 13067,
-      "market_cap": 41560388808,
-      "yahoo": "UGPA3F.SA"
-    },
-    {
       "symbol": "UNIP3",
       "name": "UNIPAR CARBOCLORO S.A.",
       "sector": "Process Industries",
@@ -8739,18 +4107,6 @@
       "volume": 3500,
       "market_cap": 6305036705,
       "yahoo": "UNIP3.SA"
-    },
-    {
-      "symbol": "UNIP3F",
-      "name": "UNIPAR CARBOCLORO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 55.13,
-      "change": 1.42,
-      "volume": 1247,
-      "market_cap": 6305036705,
-      "yahoo": "UNIP3F.SA"
     },
     {
       "symbol": "UNIP5",
@@ -8765,18 +4121,6 @@
       "yahoo": "UNIP5.SA"
     },
     {
-      "symbol": "UNIP5F",
-      "name": "UNIPAR CARBOCLORO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 57.22,
-      "change": -0.93,
-      "volume": 131,
-      "market_cap": 6305036705,
-      "yahoo": "UNIP5F.SA"
-    },
-    {
       "symbol": "UNIP6",
       "name": "UNIPAR CARBOCLORO S.A.",
       "sector": "Process Industries",
@@ -8787,18 +4131,6 @@
       "volume": 350700,
       "market_cap": 6305036705,
       "yahoo": "UNIP6.SA"
-    },
-    {
-      "symbol": "UNIP6F",
-      "name": "UNIPAR CARBOCLORO S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 57.24,
-      "change": 1.67,
-      "volume": 10991,
-      "market_cap": 6305036705,
-      "yahoo": "UNIP6F.SA"
     },
     {
       "symbol": "USIM3",
@@ -8813,18 +4145,6 @@
       "yahoo": "USIM3.SA"
     },
     {
-      "symbol": "USIM3F",
-      "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.98,
-      "change": 4.8,
-      "volume": 4155,
-      "market_cap": 8387738759,
-      "yahoo": "USIM3F.SA"
-    },
-    {
       "symbol": "USIM5",
       "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
       "sector": "Non-Energy Minerals",
@@ -8835,18 +4155,6 @@
       "volume": 13175200,
       "market_cap": 8387738759,
       "yahoo": "USIM5.SA"
-    },
-    {
-      "symbol": "USIM5F",
-      "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 7.4,
-      "change": 2.64,
-      "volume": 18462,
-      "market_cap": 8387738759,
-      "yahoo": "USIM5F.SA"
     },
     {
       "symbol": "USIM6",
@@ -8861,18 +4169,6 @@
       "yahoo": "USIM6.SA"
     },
     {
-      "symbol": "USIM6F",
-      "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 6.52,
-      "change": -0.76,
-      "volume": 1,
-      "market_cap": 8387738759,
-      "yahoo": "USIM6F.SA"
-    },
-    {
       "symbol": "VALE3",
       "name": "VALE S.A.",
       "sector": "Non-Energy Minerals",
@@ -8883,18 +4179,6 @@
       "volume": 32540400,
       "market_cap": 280183048675,
       "yahoo": "VALE3.SA"
-    },
-    {
-      "symbol": "VALE3F",
-      "name": "VALE S.A.",
-      "sector": "Non-Energy Minerals",
-      "type": "stock",
-      "subType": "stock",
-      "close": 71.94,
-      "change": 2.2,
-      "volume": 109076,
-      "market_cap": 280183048675,
-      "yahoo": "VALE3F.SA"
     },
     {
       "symbol": "VAMO3",
@@ -8909,18 +4193,6 @@
       "yahoo": "VAMO3.SA"
     },
     {
-      "symbol": "VAMO3F",
-      "name": "VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 4.78,
-      "change": 5.99,
-      "volume": 36006,
-      "market_cap": 5421129456,
-      "yahoo": "VAMO3F.SA"
-    },
-    {
       "symbol": "VBBR3",
       "name": "VIBRA ENERGIA S.A.",
       "sector": "Retail Trade",
@@ -8931,18 +4203,6 @@
       "volume": 18322900,
       "market_cap": 43595807826,
       "yahoo": "VBBR3.SA"
-    },
-    {
-      "symbol": "VBBR3F",
-      "name": "VIBRA ENERGIA S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 38,
-      "change": -0.16,
-      "volume": 15425,
-      "market_cap": 43595807826,
-      "yahoo": "VBBR3F.SA"
     },
     {
       "symbol": "VITT3",
@@ -8957,18 +4217,6 @@
       "yahoo": "VITT3.SA"
     },
     {
-      "symbol": "VITT3F",
-      "name": "VITTIA S.A.",
-      "sector": "Process Industries",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.14,
-      "change": 2.61,
-      "volume": 1114,
-      "market_cap": 488528926,
-      "yahoo": "VITT3F.SA"
-    },
-    {
       "symbol": "VIVA3",
       "name": "VIVARA PARTICIPAÇOES S.A",
       "sector": "Consumer Durables",
@@ -8979,18 +4227,6 @@
       "volume": 3029700,
       "market_cap": 5590801575,
       "yahoo": "VIVA3.SA"
-    },
-    {
-      "symbol": "VIVA3F",
-      "name": "VIVARA PARTICIPAÇOES S.A",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 24.85,
-      "change": 5.3,
-      "volume": 14022,
-      "market_cap": 5590801575,
-      "yahoo": "VIVA3F.SA"
     },
     {
       "symbol": "VIVR3",
@@ -9005,18 +4241,6 @@
       "yahoo": "VIVR3.SA"
     },
     {
-      "symbol": "VIVR3F",
-      "name": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 1.53,
-      "change": -1.29,
-      "volume": 1054,
-      "market_cap": 7515262,
-      "yahoo": "VIVR3F.SA"
-    },
-    {
       "symbol": "VIVT3",
       "name": "TELEFÔNICA BRASIL S.A",
       "sector": "Communications",
@@ -9027,18 +4251,6 @@
       "volume": 6840000,
       "market_cap": 95096074472,
       "yahoo": "VIVT3.SA"
-    },
-    {
-      "symbol": "VIVT3F",
-      "name": "TELEFÔNICA BRASIL S.A",
-      "sector": "Communications",
-      "type": "stock",
-      "subType": "stock",
-      "close": 30,
-      "change": 1.45,
-      "volume": 31311,
-      "market_cap": 95096074472,
-      "yahoo": "VIVT3F.SA"
     },
     {
       "symbol": "VLID3",
@@ -9053,18 +4265,6 @@
       "yahoo": "VLID3.SA"
     },
     {
-      "symbol": "VLID3F",
-      "name": "VALID SOLUÇÕES S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 17.85,
-      "change": 3.42,
-      "volume": 4952,
-      "market_cap": 1290518652,
-      "yahoo": "VLID3F.SA"
-    },
-    {
       "symbol": "VSTE3",
       "name": "VESTE S.A. ESTILO",
       "sector": "Consumer Non-Durables",
@@ -9075,18 +4275,6 @@
       "volume": 19500,
       "market_cap": 305716374,
       "yahoo": "VSTE3.SA"
-    },
-    {
-      "symbol": "VSTE3F",
-      "name": "VESTE S.A. ESTILO",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 2.66,
-      "change": -0.37,
-      "volume": 593,
-      "market_cap": 305716374,
-      "yahoo": "VSTE3F.SA"
     },
     {
       "symbol": "VTRU3",
@@ -9101,18 +4289,6 @@
       "yahoo": "VTRU3.SA"
     },
     {
-      "symbol": "VTRU3F",
-      "name": "VITRU EDUCAÇÃO S.A",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.45,
-      "change": 2.39,
-      "volume": 3699,
-      "market_cap": 2276968853,
-      "yahoo": "VTRU3F.SA"
-    },
-    {
       "symbol": "VULC3",
       "name": "VULCABRAS S.A.",
       "sector": "Consumer Non-Durables",
@@ -9123,18 +4299,6 @@
       "volume": 3287800,
       "market_cap": 4268795393.0000005,
       "yahoo": "VULC3.SA"
-    },
-    {
-      "symbol": "VULC3F",
-      "name": "VULCABRAS S.A.",
-      "sector": "Consumer Non-Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 13.93,
-      "change": 2.73,
-      "volume": 18142,
-      "market_cap": 4268795393.0000005,
-      "yahoo": "VULC3F.SA"
     },
     {
       "symbol": "VVEO3",
@@ -9149,18 +4313,6 @@
       "yahoo": "VVEO3.SA"
     },
     {
-      "symbol": "VVEO3F",
-      "name": "CM HOSPITALAR S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 0.78,
-      "change": 1.3,
-      "volume": 1346,
-      "market_cap": 243172400,
-      "yahoo": "VVEO3F.SA"
-    },
-    {
       "symbol": "WDCN3",
       "name": "LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A",
       "sector": "Distribution Services",
@@ -9171,18 +4323,6 @@
       "volume": 13500,
       "market_cap": 193557462,
       "yahoo": "WDCN3.SA"
-    },
-    {
-      "symbol": "WDCN3F",
-      "name": "LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3,
-      "change": 2.74,
-      "volume": 306,
-      "market_cap": 193557462,
-      "yahoo": "WDCN3F.SA"
     },
     {
       "symbol": "WEGE3",
@@ -9197,18 +4337,6 @@
       "yahoo": "WEGE3.SA"
     },
     {
-      "symbol": "WEGE3F",
-      "name": "WEG S.A.",
-      "sector": "Producer Manufacturing",
-      "type": "stock",
-      "subType": "stock",
-      "close": 51.3,
-      "change": 3.12,
-      "volume": 38286,
-      "market_cap": 207954346544,
-      "yahoo": "WEGE3F.SA"
-    },
-    {
       "symbol": "WEST3",
       "name": "WESTWING COMERCIO VAREJISTA S.A.",
       "sector": "Retail Trade",
@@ -9219,18 +4347,6 @@
       "volume": 40600,
       "market_cap": 36141596,
       "yahoo": "WEST3.SA"
-    },
-    {
-      "symbol": "WEST3F",
-      "name": "WESTWING COMERCIO VAREJISTA S.A.",
-      "sector": "Retail Trade",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.52,
-      "change": 8.98,
-      "volume": 413,
-      "market_cap": 36141596,
-      "yahoo": "WEST3F.SA"
     },
     {
       "symbol": "WHRL3",
@@ -9245,18 +4361,6 @@
       "yahoo": "WHRL3.SA"
     },
     {
-      "symbol": "WHRL3F",
-      "name": "WHIRLPOOL S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.36,
-      "change": 0.6,
-      "volume": 62,
-      "market_cap": 5107770835,
-      "yahoo": "WHRL3F.SA"
-    },
-    {
       "symbol": "WHRL4",
       "name": "WHIRLPOOL S.A.",
       "sector": "Consumer Durables",
@@ -9267,18 +4371,6 @@
       "volume": 54000,
       "market_cap": 5107770835,
       "yahoo": "WHRL4.SA"
-    },
-    {
-      "symbol": "WHRL4F",
-      "name": "WHIRLPOOL S.A.",
-      "sector": "Consumer Durables",
-      "type": "stock",
-      "subType": "stock",
-      "close": 3.61,
-      "change": 0.56,
-      "volume": 577,
-      "market_cap": 5107770835,
-      "yahoo": "WHRL4F.SA"
     },
     {
       "symbol": "WIZC3",
@@ -9293,18 +4385,6 @@
       "yahoo": "WIZC3.SA"
     },
     {
-      "symbol": "WIZC3F",
-      "name": "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
-      "sector": "Finance",
-      "type": "stock",
-      "subType": "stock",
-      "close": 8.17,
-      "change": 2.64,
-      "volume": 16852,
-      "market_cap": 1276060158,
-      "yahoo": "WIZC3F.SA"
-    },
-    {
       "symbol": "WLMM3",
       "name": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
       "sector": "Distribution Services",
@@ -9315,18 +4395,6 @@
       "volume": 100,
       "market_cap": 605120815,
       "yahoo": "WLMM3.SA"
-    },
-    {
-      "symbol": "WLMM3F",
-      "name": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 18.31,
-      "change": 9.97,
-      "volume": 23,
-      "market_cap": 605120815,
-      "yahoo": "WLMM3F.SA"
     },
     {
       "symbol": "WLMM4",
@@ -9341,18 +4409,6 @@
       "yahoo": "WLMM4.SA"
     },
     {
-      "symbol": "WLMM4F",
-      "name": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
-      "sector": "Distribution Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 15.85,
-      "change": -0.81,
-      "volume": 126,
-      "market_cap": 605120815,
-      "yahoo": "WLMM4F.SA"
-    },
-    {
       "symbol": "YDUQ3",
       "name": "YDUQS PARTICIPACOES S.A.",
       "sector": "Commercial Services",
@@ -9363,18 +4419,6 @@
       "volume": 5084700,
       "market_cap": 2862922618,
       "yahoo": "YDUQ3.SA"
-    },
-    {
-      "symbol": "YDUQ3F",
-      "name": "YDUQS PARTICIPACOES S.A.",
-      "sector": "Commercial Services",
-      "type": "stock",
-      "subType": "stock",
-      "close": 11.18,
-      "change": 1.54,
-      "volume": 4931,
-      "market_cap": 2862922618,
-      "yahoo": "YDUQ3F.SA"
     }
   ]
 }
