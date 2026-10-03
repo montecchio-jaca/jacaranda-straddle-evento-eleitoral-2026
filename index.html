@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Straddle &amp; Strangle | Evento Eleitoral 2026 · Jacarandá Investimentos</title>
+<title>Estruturadas Jacarandá | Laboratório de Opções</title>
 <style>
   :root{
     --navy:#1A2027;
@@ -139,26 +139,26 @@
     <div class="brandrow">
       <div>
         <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
-        <h1>Straddle &amp; Strangle | Evento Eleitoral 2026</h1>
-        <p class="subtitle">Painel interno para comparar estruturas compradas de volatilidade em BBAS3, B3SA3, PETR4 e CEAB3, com payoff no vencimento e simulação de desmontagem no pregão pós-evento.</p>
+        <h1>Estruturadas Jacarandá | Laboratório de Opções</h1>
+        <p class="subtitle">Laboratório interno para estudar estruturas com opções, comparar custos, payoff, break-even, convexidade e cenários de marcação a mercado.</p>
       </div>
       <div class="view-nav">
-        <a class="active" href="index.html">Simulador Base</a>
-        <a href="simulador-mercado.html">Mercado Beta</a>
+        <a class="active" href="index.html">Laboratório</a>
+        <a href="simulador-mercado.html">Precificador Beta</a>
       </div>
     </div>
     <div class="eventline">
-      <div class="eventpill"><strong>Entrada de referência</strong> 02/10/2026</div>
-      <div class="eventpill"><strong>1º turno</strong> 04/10/2026</div>
-      <div class="eventpill"><strong>Pregão pós-evento</strong> 05/10/2026</div>
-      <div class="eventpill"><strong>Modelo</strong> Straddle / Strangle comprado</div>
+      <div class="eventpill"><strong>Snapshot-base</strong> 02/10/2026</div>
+      <div class="eventpill"><strong>Estruturas</strong> Straddle / Strangle</div>
+      <div class="eventpill"><strong>Cenário MTM</strong> data editável</div>
+      <div class="eventpill"><strong>Uso</strong> estudo e pré-precificação</div>
     </div>
   </header>
 
   <section class="section">
     <div class="section-title">
-      <h2>Prêmios observados</h2>
-      <p>Base fornecida · custo total da estrutura em % do spot</p>
+      <h2>Snapshot de prêmios</h2>
+      <p>Base histórica 02/10/2026 · custo total informado em % do spot</p>
     </div>
     <div id="assetCards" class="grid4"></div>
   </section>
@@ -230,7 +230,7 @@
     <div class="panel-head">
       <div>
         <h3>Payoff e marcação a mercado</h3>
-        <div class="note">Linha contínua: P/L no vencimento. Linha pontilhada: estimativa na data de desmontagem.</div>
+        <div class="note">Linha contínua: P/L no vencimento. Linha pontilhada: estimativa na data de cenário escolhida.</div>
       </div>
       <div class="toggle" id="metricToggle">
         <button data-metric="spot" class="active">% do spot</button>
@@ -245,8 +245,8 @@
   <section class="section panel">
     <div class="panel-head">
       <div>
-        <h3>Simulador de desmontagem em 05/10</h3>
-        <div class="note">Ajuste movimento do ativo e IV pós-evento para testar o efeito do gap versus o IV crush.</div>
+        <h3>Simulação de marcação a mercado</h3>
+        <div class="note">Ajuste movimento do ativo e IV do cenário para testar a sensibilidade da estrutura antes do vencimento.</div>
       </div>
       <span class="pill">Black-Scholes-Merton · aproximação</span>
     </div>
@@ -299,7 +299,7 @@
 
   <section class="section layout2">
     <div class="panel">
-      <div class="panel-head"><h3>Contexto histórico da referência BTG</h3></div>
+      <div class="panel-head"><h3>Estudo de caso arquivado · outubro/2026</h3></div>
       <div class="panel-body">
         <div class="kpis">
           <div class="kpi"><div class="label">1º turno · abertura sex. → fech. seg.</div><div class="value">+3,02%</div><div class="sub">média 2002–2022 · n=6</div></div>
@@ -307,7 +307,7 @@
           <div class="kpi"><div class="label">Eventos de alta</div><div class="value">5 de 6</div><div class="sub">descrição histórica</div></div>
           <div class="kpi"><div class="label">Uso</div><div class="value" style="font-size:15px">Contexto</div><div class="sub">não é probabilidade futura</div></div>
         </div>
-        <p class="note" style="margin-bottom:0">A amostra é pequena e cobre eleições passadas; não deve ser tratada como previsão para 2026. O painel usa esses números apenas como referência descritiva da página BTG consultada.</p>
+        <p class="note" style="margin-bottom:0">Este bloco preserva o estudo de caso que originou o laboratório. Os dados históricos são apenas contexto e não fazem parte da precificação corrente.</p>
       </div>
     </div>
     <div class="panel">
@@ -534,7 +534,7 @@ function drawChart(){
   line(ys1,'#1F3249'); line(ys2,'#BA8758',[7,5]);
   const st=STRUCTURES[state.structure];[st.put-100,st.call-100].forEach(m=>{if(m>=-15&&m<=15){ctx.save();ctx.strokeStyle='rgba(19,36,54,.35)';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(xPx(m),pad.t);ctx.lineTo(xPx(m),H-pad.b);ctx.stroke();ctx.restore();}});
   ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
-  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('05/10 MTM',W-116,21);
+  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('MTM cenário',W-116,21);
 }
 
 function formatDateBr(iso){
@@ -622,7 +622,7 @@ function drawFactsheet(){
   // cabeçalho premium
   canvasText(ctx,'JACARANDÁ INVESTIMENTOS',62,50,16,700,C.gold2);
   canvasText(ctx,'Estruturadas Jacarandá',62,96,43,700,C.white);
-  canvasText(ctx,type+' comprado · '+state.asset+' · Evento Eleitoral 2026',62,128,21,400,C.text);
+  canvasText(ctx,type+' comprado · '+state.asset+' · Simulação de Opções',62,128,21,400,C.text);
 
   function chip(x,y,w,text,filled){
     canvasRoundRect(ctx,x,y,w,34,17,filled?C.gold:C.panel2,filled?null:C.line);
