@@ -6,9 +6,10 @@ on:
     paths:
       - ".github/workflows/update-quotes.yml"
       - "scripts/update_quotes.py"
+      - "data/universe-b3.json"
   schedule:
-    # 09:00–18:45 de Brasília (UTC-3), dias úteis, a cada 15 minutos.
-    - cron: "*/15 12-21 * * 1-5"
+    # Dias úteis, 09:00–18:30 de Brasília, a cada 30 minutos.
+    - cron: "*/30 12-21 * * 1-5"
 
 permissions:
   contents: write
@@ -20,14 +21,11 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - name: Atualizar snapshot
         run: python3 scripts/update_quotes.py
-
       - name: Publicar se houver mudança
         run: |
           if git diff --quiet -- data/quotes.json; then
