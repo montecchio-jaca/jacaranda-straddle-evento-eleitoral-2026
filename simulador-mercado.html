@@ -125,6 +125,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
     <div class="inputs" style="margin-top:14px">
       <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
       <div class="field"><label>Estrutura alvo</label><select id="structureSelect"></select></div>
+      <div class="field"><label>Data-base</label><input id="entryDate" type="date" value="2026-10-02"><div class="hint">Data do snapshot/prêmio usado na montagem.</div></div>
       <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-07"></div>
 
       <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01" value="49.66"><div class="hint">Snapshot delayed quando disponível; sempre editável.</div></div>
@@ -194,7 +195,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
     </div>
     <div class="kpis" style="margin-top:10px">
       <div class="kpi"><div class="label">IV implícita entrada</div><div id="entryIV" class="value">—</div><div class="sub">calibrada pelo prêmio bruto</div></div>
-      <div class="kpi"><div class="label">+50% em 05/10</div><div id="target50Mtm" class="value">—</div><div class="sub">com IV pós-evento</div></div>
+      <div class="kpi"><div class="label">+50% em 05/10</div><div id="target50Mtm" class="value">—</div><div class="sub">com IV do cenário</div></div>
       <div class="kpi"><div class="label">+100% em 05/10</div><div id="target100Mtm" class="value">—</div><div class="sub">com IV pós-evento</div></div>
       <div class="kpi"><div class="label">Saldo não utilizado</div><div id="cashLeft" class="value">—</div><div class="sub">após arredondamento por lote</div></div>
     </div>
@@ -212,7 +213,7 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
     <div class="rangegrid">
       <div class="rangebox"><label><span>Movimento do ativo</span><strong id="moveLabel">0,0%</strong></label><input id="moveRange" type="range" min="-15" max="15" step="0.25" value="0"></div>
       <div class="rangebox"><label><span>IV pós / IV entrada</span><strong id="ivRatioLabel">70%</strong></label><input id="ivRatio" type="range" min="20" max="150" step="1" value="70"></div>
-      <div class="rangebox"><label><span>Data da desmontagem</span><strong>05/10/2026</strong></label><input id="scenarioDate" type="date" value="2026-10-05"></div>
+      <div class="rangebox"><label><span>Data do cenário MTM</span><strong id="scenarioDateLabel">05/10/2026</strong></label><input id="scenarioDate" type="date" value="2026-10-05"></div>
     </div>
     <div class="kpis" style="margin-top:12px">
       <div class="kpi"><div class="label">Spot simulado</div><div id="simSpot" class="value">—</div><div id="simSpotSub" class="sub">—</div></div>
@@ -237,10 +238,10 @@ input[type=range]{width:100%;accent-color:var(--bronze)}
 
 <script>
 const ASSETS={
-  BBAS3:{yahoo:'BBAS3.SA',fallbackSpot:100},
-  B3SA3:{yahoo:'B3SA3.SA',fallbackSpot:100},
-  PETR4:{yahoo:'PETR4.SA',fallbackSpot:49.66},
-  CEAB3:{yahoo:'CEAB3.SA',fallbackSpot:100}
+  BBAS3:{fallbackSpot:null},
+  B3SA3:{fallbackSpot:null},
+  PETR4:{fallbackSpot:49.66},
+  CEAB3:{fallbackSpot:null}
 };
 const COSTS={
   BBAS3:{'100':5.05,'102':3.31,'103':2.64},
@@ -328,7 +329,7 @@ function priceModel(){
 }
 function entryIV(m){
   if(!(m.raw>0&&m.S>0&&m.Kc>0&&m.Kp>0))return 0;
-  const T=years('2026-10-02',$('expiryDate').value);
+  const T=years($('entryDate').value,$('expiryDate').value);
   if(T<=0)return 0;
   let lo=.001,hi=5;
   for(let i=0;i<90;i++){
@@ -498,12 +499,17 @@ async function fetchMarketSnapshot(){
     $('refreshQuote').disabled=false;
   }
 }
-function updateAll(){updateMetrics();}
+function updateScenarioDateLabel(){
+  const v=$('scenarioDate').value;
+  if(!v){$('scenarioDateLabel').textContent='editável';return;}
+  const a=v.split('-');$('scenarioDateLabel').textContent=a.length===3?(a[2]+'/'+a[1]+'/'+a[0]):v;
+}
+function updateAll(){updateScenarioDateLabel();updateMetrics();}
 function resetAsset(){
   if(COSTS[state.asset][state.structure]==null)state.structure=Object.keys(COSTS[state.asset]).find(k=>COSTS[state.asset][k]!=null);
   buildSelects();
   const fb=ASSETS[state.asset].fallbackSpot;
-  if(!state.quote)$('spotInput').value=fb;
+  if(!state.quote){ $('spotInput').value=(fb&&fb>0)?fb:''; }
   $('callAsk').value='';$('putAsk').value='';
   suggestStrikes();fetchMarketSnapshot();
 }
@@ -512,7 +518,7 @@ $('structureSelect').addEventListener('change',e=>{state.structure=e.target.valu
 $('refreshQuote').onclick=fetchMarketSnapshot;
 $('suggestStrikes').onclick=suggestStrikes;
 $('clearAsks').onclick=()=>{$('callAsk').value='';$('putAsk').value='';updateAll();};
-['spotInput','strikeStep','roundLot','callStrike','callAsk','putStrike','putAsk','allocation','feeType','feeValue','entryFixedCost','exitFixedCost','fallbackMode','expiryDate','scenarioDate','rangeMode'].forEach(id=>$(id).addEventListener('input',updateAll));
+['spotInput','strikeStep','roundLot','callStrike','callAsk','putStrike','putAsk','allocation','feeType','feeValue','entryFixedCost','exitFixedCost','fallbackMode','entryDate','expiryDate','scenarioDate','rangeMode'].forEach(id=>$(id).addEventListener('input',updateAll));
 $('moveRange').addEventListener('input',()=>{const m=priceModel(),iv=entryIV(m)*num($('ivRatio').value)/100;updateScenario(m,iv);});
 $('ivRatio').addEventListener('input',updateAll);
 window.addEventListener('resize',()=>{clearTimeout(window.__r);window.__r=setTimeout(updateAll,100)});
