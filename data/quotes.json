@@ -1,15 +1,45 @@
 {
-  "generated_at_utc": "2026-10-02T20:02:06Z",
-  "source_note": "Snapshot inicial; a automação substituirá este arquivo quando houver nova coleta.",
+  "generated_at_utc": "2026-10-03T16:53:36.904776Z",
+  "source_note": "Snapshot indicativo. brapi.dev é a fonte primária; Yahoo Finance é fallback server-side pelo GitHub Actions.",
   "quotes": {
+    "BBAS3": {
+      "symbol": "BBAS3",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBAS3.SA",
+      "price": 23.72,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-02T20:10:34Z",
+      "previous_close": 21.59,
+      "market_state": null
+    },
+    "B3SA3": {
+      "symbol": "B3SA3",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "B3SA3.SA",
+      "price": 19.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-02T20:05:39Z",
+      "previous_close": 17.96,
+      "market_state": null
+    },
     "PETR4": {
       "symbol": "PETR4",
       "provider": "brapi.dev",
       "provider_symbol": "PETR4",
-      "price": 51.04,
+      "price": 51.17,
       "currency": "BRL",
-      "market_time_utc": "2026-10-02T20:00:30.000Z",
-      "previous_close": 51.03,
+      "market_time_utc": "2026-10-03T06:09:15.000Z",
+      "previous_close": 51.15,
+      "market_state": null
+    },
+    "CEAB3": {
+      "symbol": "CEAB3",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CEAB3.SA",
+      "price": 10.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-02T20:05:36Z",
+      "previous_close": 9.26,
       "market_state": null
     }
   },
