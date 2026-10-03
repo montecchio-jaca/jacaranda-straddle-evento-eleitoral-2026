@@ -1,19 +1,11 @@
 {
-  "generated_at_utc": "2026-10-03T16:55:02.917565Z",
-  "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; brapi.dev é fallback.",
+  "generated_at_utc": "2026-10-03T17:25:53.580511Z",
+  "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
+  "universe_count": 4,
   "quotes": {
-    "BBAS3": {
-      "symbol": "BBAS3",
-      "provider": "Yahoo Finance",
-      "provider_symbol": "BBAS3.SA",
-      "price": 23.72,
-      "currency": "BRL",
-      "market_time_utc": "2026-10-02T20:10:34Z",
-      "previous_close": 21.59,
-      "market_state": null
-    },
     "B3SA3": {
       "symbol": "B3SA3",
+      "name": "B3 S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "B3SA3.SA",
       "price": 19.0,
@@ -22,24 +14,37 @@
       "previous_close": 17.96,
       "market_state": null
     },
-    "PETR4": {
-      "symbol": "PETR4",
+    "BBAS3": {
+      "symbol": "BBAS3",
+      "name": "Banco do Brasil ON",
       "provider": "Yahoo Finance",
-      "provider_symbol": "PETR4.SA",
-      "price": 51.17,
+      "provider_symbol": "BBAS3.SA",
+      "price": 23.72,
       "currency": "BRL",
-      "market_time_utc": "2026-10-02T20:05:53Z",
-      "previous_close": 48.07,
+      "market_time_utc": "2026-10-02T20:10:34Z",
+      "previous_close": 21.59,
       "market_state": null
     },
     "CEAB3": {
       "symbol": "CEAB3",
+      "name": "C&A Modas ON",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEAB3.SA",
       "price": 10.3,
       "currency": "BRL",
       "market_time_utc": "2026-10-02T20:05:36Z",
       "previous_close": 9.26,
+      "market_state": null
+    },
+    "PETR4": {
+      "symbol": "PETR4",
+      "name": "Petrobras PN",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PETR4.SA",
+      "price": 51.17,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-02T20:05:53Z",
+      "previous_close": 48.07,
       "market_state": null
     }
   },
