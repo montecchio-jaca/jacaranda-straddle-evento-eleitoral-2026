@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-10-02T20:02:06Z",
+  "source_note": "Snapshot inicial; a automação substituirá este arquivo quando houver nova coleta.",
+  "quotes": {
+    "PETR4": {
+      "symbol": "PETR4",
+      "provider": "brapi.dev",
+      "provider_symbol": "PETR4",
+      "price": 51.04,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-02T20:00:30.000Z",
+      "previous_close": 51.03,
+      "market_state": null
+    }
+  },
+  "errors": {}
+}
