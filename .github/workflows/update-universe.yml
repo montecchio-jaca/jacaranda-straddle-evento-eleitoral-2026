@@ -26,7 +26,7 @@ jobs:
         run: python3 scripts/update_universe.py
       - name: Publicar se houver mudança
         run: |
-          if git diff --quiet -- data/universe-b3.json; then
+          if [ -z "$(git status --porcelain -- data/universe-b3.json)" ]; then
             echo "Sem alteração no universo."
             exit 0
           fi
