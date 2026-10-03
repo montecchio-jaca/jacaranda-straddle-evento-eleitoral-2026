@@ -2,6 +2,7 @@
 import json
 import sys
 import urllib.request
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -62,17 +63,20 @@ def yahoo_quote(symbol, yahoo):
         "market_state": meta.get("marketState"),
     }
 
-def brapi_petr4():
-    payload = http_json("https://brapi.dev/api/v2/stocks/quote?symbols=PETR4")
+def brapi_quote(symbol):
+    payload = http_json(
+        "https://brapi.dev/api/v2/stocks/quote?symbols="
+        + urllib.parse.quote(symbol)
+    )
     item = ((payload.get("results") or [None])[0]) or {}
     data = item.get("data") or {}
     price = data.get("regularMarketPrice")
     if not isinstance(price, (int, float)) or price <= 0:
         raise RuntimeError("brapi sem preço válido")
     return {
-        "symbol": "PETR4",
+        "symbol": symbol,
         "provider": "brapi.dev",
-        "provider_symbol": "PETR4",
+        "provider_symbol": symbol,
         "price": round(float(price), 4),
         "currency": data.get("currency") or "BRL",
         "market_time_utc": data.get("regularMarketTime"),
@@ -96,19 +100,17 @@ def main():
 
     for symbol, yahoo in TICKERS.items():
         try:
-            quotes[symbol] = yahoo_quote(symbol, yahoo)
-        except Exception as exc:
-            if symbol == "PETR4":
-                try:
-                    quotes[symbol] = brapi_petr4()
-                    continue
-                except Exception as exc2:
-                    errors[symbol] = f"Yahoo: {exc}; brapi: {exc2}"
-            else:
-                errors[symbol] = str(exc)
+            quotes[symbol] = brapi_quote(symbol)
+            continue
+        except Exception as brapi_exc:
+            try:
+                quotes[symbol] = yahoo_quote(symbol, yahoo)
+                continue
+            except Exception as yahoo_exc:
+                errors[symbol] = f"brapi: {brapi_exc}; Yahoo: {yahoo_exc}"
 
-            if symbol in old_quotes:
-                quotes[symbol] = old_quotes[symbol]
+        if symbol in old_quotes:
+            quotes[symbol] = old_quotes[symbol]
 
     # Não gera commit apenas por horário de coleta: só escreve se a cotação material mudou.
     if quotes == old_quotes and OUT.exists():
@@ -118,7 +120,7 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "source_note": "Snapshot indicativo. Yahoo Finance consultado server-side pelo GitHub Actions; PETR4 pode usar brapi.dev como fallback.",
+        "source_note": "Snapshot indicativo. brapi.dev é a fonte primária; Yahoo Finance é fallback server-side pelo GitHub Actions.",
         "quotes": quotes,
         "errors": errors,
     }
