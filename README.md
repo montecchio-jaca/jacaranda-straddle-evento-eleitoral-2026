@@ -1,28 +1,22 @@
-# Straddle | Evento Eleitoral 2026
+# Estruturadas Jacarandá | Laboratório de Opções
 
-Painel interativo da Jacarandá Investimentos para simulação de estruturas compradas de volatilidade em opções da B3 no contexto do 1º turno de 2026.
+Projeto estático da Jacarandá Investimentos para estudo, comparação e pré-precificação de estruturas com opções da B3.
 
-## Conteúdo
+## Camadas
 
-- BBAS3, B3SA3, PETR4 e CEAB3
-- comparação 100% / 102% / 103%
-- payoff no vencimento
-- simulação de desmontagem em 05/10
-- IV crush configurável
-- matriz de cenários
-- break-even e retorno sobre o prêmio
-- comparação de convexidade
+- `index.html` — **Laboratório**: comparação de estruturas, payoff, break-even, convexidade, IV e cenários. Mantém o snapshot histórico que originou o projeto como estudo de caso.
+- `simulador-mercado.html` — **Precificador Beta**: spot indicativo via snapshot automatizado, strikes reais/editáveis, Ask manual por perna, fee/custos, custo all-in, metas de retorno e range elástico.
+
+## Market data beta
+
+O navegador não consulta mais Yahoo Finance diretamente, evitando o bloqueio/CORS observado no GitHub Pages.
+
+O workflow `.github/workflows/update-quotes.yml` atualiza `data/quotes.json` server-side em dias úteis, com brapi.dev como fonte primária e Yahoo Finance como fallback. O frontend lê esse arquivo no mesmo domínio do GitHub Pages.
+
+Os dados são indicativos e podem ter atraso. Preços de opções e condições de execução devem ser confirmados no book da corretora.
 
 ## Publicação
 
-O site é servido pelo arquivo `index.html` na branch `main`.
+GitHub Pages publica a branch `main`.
 
-Uso interno. Simulação ilustrativa; não constitui recomendação de investimento ou posição eleitoral.
-
-
-## Duas camadas
-
-- `index.html`: simulador base, preservado.
-- `simulador-mercado.html`: versão beta pré-operacional com tentativa de captura automática do spot via Yahoo Finance, strikes reais/editáveis, Ask manual das opções, fee, custos, custo all-in, metas de retorno e range elástico.
-
-A camada Mercado Beta usa dados indicativos e pode sofrer atraso ou indisponibilidade. Os preços das opções devem ser confirmados no book antes de qualquer execução.
+Uso interno. Simulação ilustrativa; não constitui recomendação de investimento.
