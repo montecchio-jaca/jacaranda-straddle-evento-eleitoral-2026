@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-10-03T17:00:00Z",
+  "source": "bootstrap",
+  "scope": "Ações e units; universo completo será atualizado automaticamente.",
+  "count": 4,
+  "assets": [
+    {"symbol":"B3SA3","name":"B3 S.A.","sector":null,"type":"stock","subType":"stock","close":19.0,"change":null,"volume":null,"market_cap":null,"yahoo":"B3SA3.SA"},
+    {"symbol":"BBAS3","name":"Banco do Brasil ON","sector":null,"type":"stock","subType":"stock","close":23.72,"change":null,"volume":null,"market_cap":null,"yahoo":"BBAS3.SA"},
+    {"symbol":"CEAB3","name":"C&A Modas ON","sector":null,"type":"stock","subType":"stock","close":10.30,"change":null,"volume":null,"market_cap":null,"yahoo":"CEAB3.SA"},
+    {"symbol":"PETR4","name":"Petrobras PN","sector":null,"type":"stock","subType":"stock","close":51.17,"change":null,"volume":null,"market_cap":null,"yahoo":"PETR4.SA"}
+  ]
+}
