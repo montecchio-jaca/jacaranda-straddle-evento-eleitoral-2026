@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-03T16:53:36.904776Z",
-  "source_note": "Snapshot indicativo. brapi.dev é a fonte primária; Yahoo Finance é fallback server-side pelo GitHub Actions.",
+  "generated_at_utc": "2026-10-03T16:55:02.917565Z",
+  "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; brapi.dev é fallback.",
   "quotes": {
     "BBAS3": {
       "symbol": "BBAS3",
@@ -24,12 +24,12 @@
     },
     "PETR4": {
       "symbol": "PETR4",
-      "provider": "brapi.dev",
-      "provider_symbol": "PETR4",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PETR4.SA",
       "price": 51.17,
       "currency": "BRL",
-      "market_time_utc": "2026-10-03T06:09:15.000Z",
-      "previous_close": 51.15,
+      "market_time_utc": "2026-10-02T20:05:53Z",
+      "previous_close": 48.07,
       "market_state": null
     },
     "CEAB3": {
