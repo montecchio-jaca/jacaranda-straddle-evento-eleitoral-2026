@@ -1,5 +1,7 @@
 name: Atualizar cotações indicativas
 
+# Universo B3 completo: Yahoo server-side com fallback do snapshot diário.
+
 on:
   workflow_dispatch:
   push:
