@@ -224,7 +224,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
       <strong>Factsheet Jacarandá · Estratégia de Opções</strong>
       <div class="export-actions"><button id="downloadJpg">Baixar JPG</button><button id="closeExport" class="export-close">Fechar</button></div>
     </div>
-    <div class="export-preview"><canvas id="factsheetCanvas" width="1600" height="900"></canvas></div>
+    <div class="export-preview"><canvas id="factsheetCanvas" width="1920" height="1080"></canvas></div>
   </div>
 </div>
 
@@ -625,23 +625,102 @@ function renderTable(m,risk){
   $('scenarioTable').innerHTML=h+'</tbody>';
 }
 
+const PRESENTATION_MODE='nominal';
+
+function buildPresentationModel(){
+  syncStateFromLegInputs();
+  const m=model(),risk=analyzeRisk(m),st=currentStrategy(),payload=enginePayload(m);
+  const range=OptionEngine.presentationRange(payload);
+  const low=range.lowPct,high=range.highPct,ratio=num($('ivRatio').value)/100;
+  const xs=[];
+  for(let x=low;x<=high+.001;x+=(high-low)/260)xs.push(x);
+  const expiry=xs.map(x=>expiryPnlTotal(Math.max(.0001,m.S*(1+x/100)),m));
+  const mtm=m.pricingComplete?xs.map(x=>mtmPnlTotal(Math.max(.0001,m.S*(1+x/100)),m,ratio)):null;
+  const allY=mtm?[...expiry,...mtm]:expiry.slice();
+  let ymin=Math.min(0,...allY),ymax=Math.max(0,...allY),ypad=(ymax-ymin||1)*.12;
+  ymin-=ypad;ymax+=ypad;
+
+  const move=num($('moveRange').value);
+  const scenarioSpot=Math.max(.0001,m.S*(1+move/100));
+  const scenarioExpiry=m.pricingComplete?expiryPnlTotal(scenarioSpot,m):null;
+  const scenarioMtm=m.pricingComplete?mtmPnlTotal(scenarioSpot,m,ratio):null;
+
+  const legs=state.legs.map((l,i)=>({
+    side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),
+    strikePct:m.S>0?valuePctSpot(l.strike,m.S):0,code:l.code||'',
+    price:num(l.price),pricePct:m.S>0?valuePctSpot(l.price,m.S):0,iv:m.legIV[i]||0
+  }));
+
+  const anchors=[];
+  legs.forEach(l=>{if(m.S>0&&l.strike>0)anchors.push({mv:(l.strike/m.S-1)*100,tag:l.type.toUpperCase()})});
+  if(m.pricingComplete)(risk.bes||[]).forEach(be=>{if(m.S>0&&be>0)anchors.push({mv:(be/m.S-1)*100,tag:'BE'})});
+  anchors.push({mv:0,tag:'SPOT'});
+  if(Number.isFinite(move))anchors.push({mv:move,tag:'CEN.'});
+
+  const base=[low,-30,-20,-10,0,10,20,30,high,move].filter(v=>Number.isFinite(v)&&v>=low-.01&&v<=high+.01);
+  anchors.forEach(a=>{if(a.mv>=low-.01&&a.mv<=high+.01)base.push(a.mv)});
+  const clean=[];
+  base.sort((a,b)=>a-b).forEach(v=>{
+    const x=Math.round(v*10)/10;
+    if(!clean.length||Math.abs(x-clean[clean.length-1])>.15)clean.push(x);
+  });
+
+  let rows=clean;
+  if(rows.length>11){
+    const priority=[];
+    [low,high,0,move].forEach(v=>{if(Number.isFinite(v))priority.push(v)});
+    anchors.forEach(a=>priority.push(a.mv));
+    [-30,-20,-10,10,20,30].forEach(v=>priority.push(v));
+    const picked=[];
+    priority.filter(v=>v>=low-.01&&v<=high+.01).forEach(v=>{
+      const x=Math.round(v*10)/10;
+      if(!picked.some(p=>Math.abs(p-x)<=.15)&&picked.length<11)picked.push(x);
+    });
+    rows=picked.sort((a,b)=>a-b);
+  }
+
+  function tagFor(mv){
+    const matches=anchors.filter(a=>Math.abs(a.mv-mv)<=.16).map(a=>a.tag);
+    return [...new Set(matches)].join('/');
+  }
+
+  const riskBase=m.pricingComplete&&risk.maxLoss!==-Infinity?Math.abs(Math.min(0,risk.maxLoss)):0;
+  const tableRows=rows.map(mv=>{
+    const spot=Math.max(.0001,m.S*(1+mv/100));
+    const pExp=m.pricingComplete?expiryPnlTotal(spot,m):null;
+    const pMtm=m.pricingComplete?mtmPnlTotal(spot,m,ratio):null;
+    return {
+      movePct:mv,spot,pExp,pMtm,tag:tagFor(mv),
+      returnPct:riskBase>0&&pExp!=null?pExp/riskBase*100:null
+    };
+  });
+
+  return {
+    presentationMode:PRESENTATION_MODE,m,risk,st,range:{lowPct:low,highPct:high},
+    ratio,movePct:move,scenarioSpot,scenarioExpiry,scenarioMtm,
+    xs,expiry,mtm,ymin,ymax,legs,tableRows,riskBase
+  };
+}
+
 function formatDateBr(iso){if(!iso)return'—';const a=iso.split('-');return a.length===3?a[2]+'/'+a[1]+'/'+a[0]:iso}
 function cRound(ctx,x,y,w,h,r,fill,stroke){const rr=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+rr,y);ctx.arcTo(x+w,y,x+w,y+h,rr);ctx.arcTo(x+w,y+h,x,y+h,rr);ctx.arcTo(x,y+h,x,y,rr);ctx.arcTo(x,y,x+w,y,rr);ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}}
 function cText(ctx,text,x,y,size,weight,color,align){ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color||'#fff';ctx.textAlign=align||'left';ctx.textBaseline='alphabetic';ctx.fillText(String(text),x,y)}
 function cWrap(ctx,text,x,y,maxWidth,lineHeight,maxLines,color,size,weight){ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color;ctx.textAlign='left';const words=String(text).split(/\s+/),lines=[];let line='';words.forEach(w=>{const t=line?line+' '+w:w;if(ctx.measureText(t).width>maxWidth&&line){lines.push(line);line=w}else line=t});if(line)lines.push(line);if(maxLines&&lines.length>maxLines){lines.length=maxLines;lines[maxLines-1]=lines[maxLines-1].replace(/[. ]*$/,'')+'…'}lines.forEach((ln,i)=>ctx.fillText(ln,x,y+i*lineHeight))}
 function drawFactsheet(){
-  syncStateFromLegInputs();
-  const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1600,H=900;c.width=W;c.height=H;
+  const pm=buildPresentationModel();
+  const {m,risk,st}=pm;
+  const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1920,H=1080;c.width=W;c.height=H;
   const C={
     bg:'#0B1722',deep:'#132436',panel:'#193247',panel2:'#102333',gold:'#BA8758',
     gold2:'#D2A26F',white:'#FFFFFF',text:'#E7EEF3',muted:'#A5B2BC',line:'#2B495F',
     green:'#59C59E',red:'#F07C7C',amber:'#F0BE78',row:'#173047',row2:'#10283A',zero:'#4C4A43'
   };
-  const m=model(),risk=analyzeRisk(m),st=currentStrategy(),d=chartSeries(m,risk);
-  const move=num($('moveRange').value),scenarioSpot=Math.max(.0001,m.S*(1+move/100)),ratio=num($('ivRatio').value)/100;
-  const scenarioExpiry=m.pricingComplete?expiryPnlTotal(scenarioSpot,m):null;
-  const scenarioMtm=m.pricingComplete?mtmPnlTotal(scenarioSpot,m,ratio):null;
 
+  function dayDiff(){
+    const a=$('entryDate').value,b=$('expiryDate').value;
+    if(!a||!b)return null;
+    return Math.max(0,Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/86400000));
+  }
   function finiteLoss(){
     if(!m.pricingComplete)return '—';
     if(risk.maxLoss===-Infinity)return 'Ilimitada';
@@ -652,220 +731,150 @@ function drawFactsheet(){
     if(risk.maxGain===Infinity)return 'Ilimitado';
     return brl(Math.max(0,risk.maxGain));
   }
-  function dayDiff(){
-    const a=$('entryDate').value,b=$('expiryDate').value;
-    if(!a||!b)return null;
-    return Math.max(0,Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/86400000));
-  }
   function legSummary(){
     const parts=[];
     if(st.stockQty)parts.push((st.stockQty>0?'Compra':'Venda')+' ativo '+Math.abs(st.stockQty)+'× @ '+brl(m.S));
-    state.legs.forEach(l=>{
+    pm.legs.forEach(l=>{
       const side=l.side==='buy'?'Compra':'Venda';
-      const strikePct=m.S>0?valuePctSpot(l.strike,m.S):0;
-      const premiumPct=m.S>0?valuePctSpot(l.price,m.S):0;
-      const px=num(l.price)>0?(isSpotPercentMode()?' @ '+fmt(premiumPct)+'% spot ('+brl(l.price)+')':' @ '+brl(l.price)+' ('+fmt(premiumPct)+'% spot)'):' @ prêmio n/i';
       const code=l.code?' · '+l.code:'';
-      const strikeText=isSpotPercentMode()?fmt(strikePct)+'% ('+brl(l.strike)+')':brl(l.strike)+' ('+fmt(strikePct)+'%)';
-      parts.push(side+' '+l.type.toUpperCase()+' '+fmt0(l.qty)+'× K '+strikeText+code+px);
+      const price=l.price>0?' @ '+brl(l.price)+' ('+fmt(l.pricePct)+'% spot)':' @ prêmio n/i';
+      parts.push(side+' '+l.type.toUpperCase()+' '+fmt0(l.qty)+'× K '+brl(l.strike)+' ('+fmt(l.strikePct)+'%)'+code+price);
     });
     return parts.join('  +  ');
   }
-  function riskReturn(pnl){
-    if(!m.pricingComplete||pnl==null||risk.maxLoss===-Infinity)return '—';
-    const base=Math.abs(Math.min(0,risk.maxLoss));
-    if(!(base>0))return '—';
-    return pct(pnl/base*100);
-  }
-  function moveTag(mv){
-    const eps=.16;
-    for(let i=0;i<state.legs.length;i++){
-      const l=state.legs[i],legMv=(num(l.strike)/m.S-1)*100;
-      if(Math.abs(mv-legMv)<=eps)return l.type.toUpperCase();
-    }
-    if(m.pricingComplete){
-      for(const be of risk.bes||[]){
-        const beMv=(be/m.S-1)*100;
-        if(Math.abs(mv-beMv)<=eps)return 'BE';
-      }
-    }
-    if(Math.abs(mv)<eps)return 'SPOT';
-    if(Math.abs(mv-move)<=eps)return 'CEN.';
-    return '';
-  }
-  function scenarioMoves(){
-    const R=d.R,lo=d.lo,vals=[lo,lo*.75,lo*.5,lo*.25,0,R*.25,R*.5,R*.75,R,move];
-    state.legs.forEach(l=>{if(m.S>0)vals.push((num(l.strike)/m.S-1)*100)});
-    if(m.pricingComplete)(risk.bes||[]).forEach(be=>vals.push((be/m.S-1)*100));
-    const clean=[];
-    vals.filter(v=>Number.isFinite(v)&&v>=lo-.01&&v<=R+.01).sort((a,b)=>a-b).forEach(v=>{
-      const rounded=Math.round(v*10)/10;
-      if(!clean.length||Math.abs(rounded-clean[clean.length-1])>.15)clean.push(rounded);
-    });
-    if(clean.length<=13)return clean;
-    const keep=[clean[0],clean[clean.length-1],0,move];
-    state.legs.forEach(l=>{if(m.S>0)keep.push((num(l.strike)/m.S-1)*100)});
-    if(m.pricingComplete)(risk.bes||[]).forEach(be=>keep.push((be/m.S-1)*100));
-    const fixed=[];
-    keep.filter(v=>Number.isFinite(v)&&v>=lo-.01&&v<=R+.01).sort((a,b)=>a-b).forEach(v=>{
-      const x=Math.round(v*10)/10;if(!fixed.length||Math.abs(x-fixed[fixed.length-1])>.15)fixed.push(x);
-    });
-    for(const v of clean){
-      if(fixed.length>=13)break;
-      if(!fixed.some(x=>Math.abs(x-v)<=.15)){fixed.push(v);fixed.sort((a,b)=>a-b)}
-    }
-    return fixed.slice(0,13);
-  }
 
-  // Fundo e cabeçalho: padrão premium aprovado.
   ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle=C.gold;ctx.fillRect(0,0,12,H);
-  ctx.fillStyle=C.deep;ctx.fillRect(12,0,W-12,156);
-  ctx.fillStyle=C.gold;ctx.fillRect(60,154,W-120,2);
+  ctx.fillStyle=C.gold;ctx.fillRect(0,0,14,H);
+  ctx.fillStyle=C.deep;ctx.fillRect(14,0,W-14,178);
+  ctx.fillStyle=C.gold;ctx.fillRect(72,176,W-144,2);
 
-  cText(ctx,'JACARANDÁ INVESTIMENTOS',62,50,16,700,C.gold2);
-  cText(ctx,'Estruturadas Jacarandá',62,96,42,700,C.white);
-  cText(ctx,st.name+' · '+state.asset,62,128,20,400,C.text);
+  cText(ctx,'JACARANDÁ INVESTIMENTOS',74,56,18,700,C.gold2);
+  cText(ctx,'Estruturadas Jacarandá',74,108,48,700,C.white);
+  cText(ctx,st.name+' · '+state.asset,74,145,23,400,C.text);
 
-  const days=dayDiff();
-  const badgeY=48;
-  if(isSpotPercentMode()){
-    cRound(ctx,1088,badgeY,178,38,19,C.gold);
-    cText(ctx,'VENC. '+formatDateBr($('expiryDate').value),1177,badgeY+25,10,700,C.bg,'center');
-    cRound(ctx,1276,badgeY,76,38,19,C.panel,C.line);
-    cText(ctx,days==null?'—':days+' DIAS',1314,badgeY+25,10,700,C.white,'center');
-    cRound(ctx,1362,badgeY,80,38,19,C.panel,C.line);
-    cText(ctx,state.asset,1402,badgeY+25,10,700,C.white,'center');
-    cRound(ctx,1452,badgeY,90,38,19,C.panel,C.line);
-    cText(ctx,'SPOT 100%',1497,badgeY+25,9,700,C.gold2,'center');
-  }else{
-    cRound(ctx,1180,badgeY,185,38,19,C.gold);
-    cText(ctx,'VENC. '+formatDateBr($('expiryDate').value),1272,badgeY+25,11,700,C.bg,'center');
-    cRound(ctx,1375,badgeY,78,38,19,C.panel,C.line);
-    cText(ctx,days==null?'—':days+' DIAS',1414,badgeY+25,11,700,C.white,'center');
-    cRound(ctx,1463,badgeY,78,38,19,C.panel,C.line);
-    cText(ctx,state.asset,1502,badgeY+25,11,700,C.white,'center');
-  }
+  const days=dayDiff(),badgeY=52;
+  cRound(ctx,1410,badgeY,220,42,21,C.gold);
+  cText(ctx,'VENC. '+formatDateBr($('expiryDate').value),1520,badgeY+28,12,700,C.bg,'center');
+  cRound(ctx,1642,badgeY,92,42,21,C.panel,C.line);
+  cText(ctx,days==null?'—':days+' DIAS',1688,badgeY+28,11,700,C.white,'center');
+  cRound(ctx,1746,badgeY,100,42,21,C.panel,C.line);
+  cText(ctx,state.asset,1796,badgeY+28,12,700,C.white,'center');
 
-  const lx=60,lw=520,rx=608,rw=932,top=184;
+  const lx=72,lw=690,rx=790,rw=1056,top=206;
 
-  // Coluna esquerda: estrutura + KPIs.
-  cRound(ctx,lx,top,lw,134,18,C.panel2,C.line);
-  cText(ctx,'ESTRUTURA',lx+20,top+27,10,700,C.gold2);
-  cText(ctx,st.name,lx+20,top+57,22,700,C.white);
-  cWrap(ctx,legSummary(),lx+20,top+82,lw-40,17,2,m.pricingComplete?C.text:C.amber,11,400);
-  cText(ctx,'Base '+formatDateBr($('entryDate').value)+'  |  Cenário '+formatDateBr($('scenarioDate').value)+'  |  '+(isSpotPercentMode()?'Spot = 100%':'R$ / Book')+'  |  '+(m.pricingComplete?'precificação completa':'prêmios pendentes'),lx+20,top+119,10,400,m.pricingComplete?C.muted:C.amber);
+  // Coluna esquerda: resumo e KPIs nominais.
+  cRound(ctx,lx,top,lw,142,18,C.panel2,C.line);
+  cText(ctx,'ESTRUTURA',lx+22,top+29,11,700,C.gold2);
+  cText(ctx,st.name,lx+22,top+62,25,700,C.white);
+  cWrap(ctx,legSummary(),lx+22,top+90,lw-44,18,2,m.pricingComplete?C.text:C.amber,11,400);
+  cText(ctx,'Base '+formatDateBr($('entryDate').value)+'  |  Cenário '+formatDateBr($('scenarioDate').value)+'  |  apresentação nominal em R$',lx+22,top+127,10,400,C.muted);
 
-  const gap=12,cardW=(lw-gap)/2,cardH=76;
+  const gap=14,cardW=(lw-gap)/2,cardH=78;
   function card(x,y,label,value,sub,color){
     cRound(ctx,x,y,cardW,cardH,14,C.panel,C.line);
-    cText(ctx,label.toUpperCase(),x+15,y+20,9,700,C.muted);
-    cText(ctx,value,x+15,y+49,20,700,color||C.white);
-    if(sub)cText(ctx,sub,x+15,y+67,9,400,C.muted);
+    cText(ctx,label.toUpperCase(),x+16,y+21,9,700,C.muted);
+    cText(ctx,value,x+16,y+51,21,700,color||C.white);
+    if(sub)cText(ctx,sub,x+16,y+70,9,400,C.muted);
   }
-  let cy=332;
-  card(lx,cy,isSpotPercentMode()?'Spot base':'Preço atual',isSpotPercentMode()?'100,00%':brl(m.S),isSpotPercentMode()?brl(m.S)+' · '+(CORE[state.asset]?.name||state.asset):(CORE[state.asset]?.name||state.asset)+' · 100,00% do spot');
-  const flowType=m.optionCashflowTotal>=0?'crédito':'débito';
-  const flowPct=fmt(Math.abs(m.netPremiumPctSpot))+'% spot';
-  card(lx+cardW+gap,cy,'Fluxo inicial',m.pricingComplete?(isSpotPercentMode()?flowPct:(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal))):'—',m.pricingComplete?(isSpotPercentMode()?flowType+' · '+brl(Math.abs(m.optionCashflowTotal)):flowType+' · '+flowPct):'prêmios pendentes',m.pricingComplete?(m.optionCashflowTotal>=0?C.green:C.red):C.amber);
-  cy+=88;
+  let cy=362;
+  card(lx,cy,'Preço atual',brl(m.S),CORE[state.asset]?.name||state.asset);
+  card(lx+cardW+gap,cy,'Fluxo inicial',m.pricingComplete?(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal)):'—',m.pricingComplete?((m.optionCashflowTotal>=0?'crédito':'débito')+' · '+fmt(Math.abs(m.netPremiumPctSpot))+'% do spot'):'prêmios pendentes',m.pricingComplete?(m.optionCashflowTotal>=0?C.green:C.red):C.amber);
+  cy+=91;
   card(lx,cy,'Risco máximo',finiteLoss(),m.pricingComplete?st.risk:'aguardando Bid/Ask',m.pricingComplete?C.red:C.amber);
   card(lx+cardW+gap,cy,'Lucro máximo',finiteGain(),m.pricingComplete?'no vencimento':'aguardando Bid/Ask',m.pricingComplete?C.green:C.amber);
-  cy+=88;
-  const beMain=m.pricingComplete&&risk.bes.length?(isSpotPercentMode()?risk.bes.slice(0,2).map(v=>fmt(v/m.S*100)+'%').join(' / '):risk.bes.slice(0,2).map(brl).join(' / ')):'—';
-  const beSub=m.pricingComplete&&risk.bes.length?(isSpotPercentMode()?risk.bes.slice(0,2).map(brl).join(' / '):risk.bes.slice(0,2).map(v=>pct((v/m.S-1)*100)).join(' / ')):(m.pricingComplete?'sem break-even':'prêmios pendentes');
+  cy+=91;
+  const beMain=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(brl).join(' / '):'—';
+  const beSub=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(v=>fmt(v/m.S*100)+'% do spot').join(' / '):(m.pricingComplete?'sem break-even':'prêmios pendentes');
   card(lx,cy,'Break-even(s)',beMain,beSub,C.gold2);
   card(lx+cardW+gap,cy,m.stockNotional>0?'Notional ativo':'Quantidade',m.stockNotional>0?brl(m.stockNotional):fmt0(m.units)+' un.',m.stockNotional>0?(fmt0(m.units)+' unidades-base'):(fmt0(m.lot)+' × '+fmt0(m.lots)),C.white);
 
-  // Payoff inferior esquerdo.
-  const gy=610,gh=220;
-  cRound(ctx,lx,gy,lw,gh,18,C.panel2,C.line);
-  cText(ctx,m.pricingComplete?'PAYOFF E MTM':'PAYOFF ESTRUTURAL',lx+20,gy+27,10,700,C.gold2);
-  cText(ctx,'P/L total (R$)',lx+20,gy+47,10,400,C.muted);
-  const plot={x:lx+56,y:gy+62,w:lw-88,h:116};
-  const xp=v=>plot.x+(v-d.lo)/(d.R-d.lo)*plot.w,yp=v=>plot.y+(d.ymax-v)/(d.ymax-d.ymin)*plot.h;
-  ctx.strokeStyle=C.line;ctx.lineWidth=1;
-  [d.lo,d.lo/2,0,d.R/2,d.R].forEach(v=>{ctx.beginPath();ctx.moveTo(xp(v),plot.y);ctx.lineTo(xp(v),plot.y+plot.h);ctx.stroke()});
-  for(let i=0;i<=3;i++){const val=d.ymin+(d.ymax-d.ymin)*i/3,py=yp(val);ctx.beginPath();ctx.moveTo(plot.x,py);ctx.lineTo(plot.x+plot.w,py);ctx.stroke();cText(ctx,Math.round(val).toLocaleString('pt-BR'),plot.x-9,py+3,8,400,C.muted,'right')}
-  ctx.strokeStyle='#788996';ctx.beginPath();ctx.moveTo(plot.x,yp(0));ctx.lineTo(plot.x+plot.w,yp(0));ctx.stroke();
-  function chartLine(arr,col,dash){
-    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2.7;ctx.setLineDash(dash||[]);ctx.beginPath();
-    arr.forEach((v,i)=>{if(!i)ctx.moveTo(xp(d.xs[i]),yp(v));else ctx.lineTo(xp(d.xs[i]),yp(v))});ctx.stroke();ctx.restore();
-  }
-  chartLine(d.expiry,C.gold2);
-  if(d.mtm)chartLine(d.mtm,C.text,[7,5]);
-  [d.lo,0,d.R].forEach(v=>cText(ctx,axisXLabel(v),xp(v),gy+202,8,400,C.muted,'center'));
-  ctx.fillStyle=C.gold2;ctx.fillRect(lx+22,gy+54,17,3);cText(ctx,'Vencimento',lx+44,gy+58,8,700,C.text);
-  if(d.mtm){ctx.strokeStyle=C.text;ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(lx+118,gy+55);ctx.lineTo(lx+135,gy+55);ctx.stroke();ctx.setLineDash([]);cText(ctx,'MTM cenário',lx+141,gy+58,8,700,C.text)}
+  // Coluna direita: cenários nominais + leitura.
+  cRound(ctx,rx,top,rw,328,18,C.panel2,C.line);
+  cText(ctx,'CENÁRIOS',rx+22,top+29,11,700,C.gold2);
+  cText(ctx,'Preço do ativo e P/L em valores nominais',rx+22,top+50,10,400,C.muted);
 
-  // Coluna direita: matriz de cenários.
-  const tableH=466;
-  cRound(ctx,rx,top,rw,tableH,18,C.panel2,C.line);
-  cText(ctx,'CENÁRIOS',rx+20,top+28,10,700,C.gold2);
-  cText(ctx,'Mesmo motor da tela · vencimento e MTM do cenário',rx+20,top+48,10,400,C.muted);
-
-  const rows=scenarioMoves();
-  const tx=rx+20,ty=top+64;
-  const widths=[130,150,190,190,190],heads=[isSpotPercentMode()?'ATIVO (% SPOT)':'MOVIMENTO','ATIVO (R$)','P/L VENC.','P/L MTM','RET. / RISCO'];
+  const tx=rx+22,ty=top+66;
+  const widths=[145,175,220,220,220],heads=['MOVIMENTO','ATIVO (R$)','P/L VENC. (R$)','P/L MTM (R$)','RET. / RISCO'];
   let hx=tx;
   heads.forEach((h,i)=>{ctx.fillStyle=C.deep;ctx.fillRect(hx,ty,widths[i],36);cText(ctx,h,hx+widths[i]-9,ty+23,8,700,C.gold2,'right');hx+=widths[i]});
-  const rowH=Math.min(29,(tableH-112)/Math.max(1,rows.length));
-  rows.forEach((mv,i)=>{
-    const yy=ty+36+i*rowH,Sf=Math.max(.0001,m.S*(1+mv/100));
-    const pExp=m.pricingComplete?expiryPnlTotal(Sf,m):null;
-    const pMtm=m.pricingComplete?mtmPnlTotal(Sf,m,ratio):null;
-    const tag=moveTag(mv);
-    ctx.fillStyle=Math.abs(mv)<.16?C.zero:(i%2?C.row:C.row2);
+  const rowH=Math.min(25,(328-116)/Math.max(1,pm.tableRows.length));
+  pm.tableRows.forEach((row,i)=>{
+    const yy=ty+36+i*rowH;
+    ctx.fillStyle=Math.abs(row.movePct)<.16?C.zero:(i%2?C.row:C.row2);
     ctx.fillRect(tx,yy,widths.reduce((a,b)=>a+b,0),rowH);
     let x=tx;
-    cText(ctx,isSpotPercentMode()?fmt1(100+mv)+'%':pct(mv),x+12,yy+rowH*.68,10,700,C.text);
-    if(tag){
-      cRound(ctx,x+72,yy+5,48,Math.max(16,rowH-10),8,'rgba(186,135,88,.14)',C.gold);
-      cText(ctx,tag,x+96,yy+rowH*.67,7,700,C.gold2,'center');
+    cText(ctx,pct(row.movePct),x+10,yy+rowH*.69,9,700,C.text);
+    if(row.tag){
+      cRound(ctx,x+76,yy+4,58,Math.max(15,rowH-8),8,'rgba(186,135,88,.14)',C.gold);
+      cText(ctx,row.tag,x+105,yy+rowH*.68,7,700,C.gold2,'center');
     }
     x+=widths[0];
-    cText(ctx,brl(Sf),x+widths[1]-9,yy+rowH*.68,10,400,C.text,'right');x+=widths[1];
-    if(pExp==null)cText(ctx,'—',x+widths[2]-9,yy+rowH*.68,10,700,C.amber,'right');
-    else cText(ctx,(pExp>=0?'+':'')+brl(pExp),x+widths[2]-9,yy+rowH*.68,10,700,pExp>=0?C.green:C.red,'right');
+    cText(ctx,brl(row.spot),x+widths[1]-9,yy+rowH*.69,10,600,C.white,'right');x+=widths[1];
+    if(row.pExp==null)cText(ctx,'—',x+widths[2]-9,yy+rowH*.69,10,700,C.amber,'right');
+    else cText(ctx,(row.pExp>=0?'+':'')+brl(row.pExp),x+widths[2]-9,yy+rowH*.69,10,700,row.pExp>=0?C.green:C.red,'right');
     x+=widths[2];
-    if(pMtm==null)cText(ctx,'—',x+widths[3]-9,yy+rowH*.68,10,700,C.amber,'right');
-    else cText(ctx,(pMtm>=0?'+':'')+brl(pMtm),x+widths[3]-9,yy+rowH*.68,10,700,pMtm>=0?C.green:C.red,'right');
+    if(row.pMtm==null)cText(ctx,'—',x+widths[3]-9,yy+rowH*.69,10,700,C.amber,'right');
+    else cText(ctx,(row.pMtm>=0?'+':'')+brl(row.pMtm),x+widths[3]-9,yy+rowH*.69,10,700,row.pMtm>=0?C.green:C.red,'right');
     x+=widths[3];
-    cText(ctx,pExp==null?'—':riskReturn(pExp),x+widths[4]-9,yy+rowH*.68,10,700,pExp!=null&&pExp>=0?C.green:(pExp!=null?C.red:C.amber),'right');
+    cText(ctx,row.returnPct==null?'—':pct(row.returnPct),x+widths[4]-9,yy+rowH*.69,10,700,row.returnPct==null?C.muted:(row.returnPct>=0?C.green:C.red),'right');
   });
 
-  // Leitura executiva: padrão aprovado.
-  const ly=top+tableH+18,lh=172;
+  const ly=548,lh=96;
   cRound(ctx,rx,ly,rw,lh,18,C.panel2,C.line);
-  cText(ctx,'LEITURA DA ESTRUTURA',rx+20,ly+27,10,700,C.gold2);
-
-  const miniW=(rw-72)/3;
-  function miniKpi(x,label,value,color){
-    cText(ctx,label.toUpperCase(),x,ly+57,8,700,C.muted);
-    cText(ctx,value,x,ly+83,16,700,color||C.white);
-  }
-  miniKpi(rx+22,'Risco máximo',finiteLoss(),m.pricingComplete?C.red:C.amber);
-  miniKpi(rx+22+miniW,'Lucro máximo',finiteGain(),m.pricingComplete?C.green:C.amber);
-  miniKpi(rx+22+miniW*2,'Quantidade',fmt0(m.units)+' un.',C.white);
-  ctx.fillStyle=C.line;ctx.fillRect(rx+22,ly+96,rw-44,1);
-
+  cText(ctx,'LEITURA DA ESTRUTURA',rx+22,ly+27,10,700,C.gold2);
   let narrative='';
   if(!m.pricingComplete){
-    narrative='A estrutura está montada, mas ainda possui '+m.missingPrices+' perna(s) sem prêmio. Preencha Ask nas compras e Bid nas vendas para que risco, break-even, P/L e MTM reflitam uma operação econômica real.';
+    narrative='A estrutura ainda possui '+m.missingPrices+' perna(s) sem prêmio. Preencha Ask nas compras e Bid nas vendas para que risco, break-even, P/L e MTM representem a operação econômica.';
   }else{
     const bes=(risk.bes||[]).map(brl);
-    narrative='Estratégia '+st.name+' em '+state.asset+'. '+st.risk+'. ';
+    narrative=st.risk+'. ';
     if(bes.length)narrative+='Break-even'+(bes.length>1?'s ':' ')+bes.join(' e ')+'. ';
-    const scenarioLabel=isSpotPercentMode()?fmt1(100+move)+'% do spot':pct(move);
-    narrative+='No cenário selecionado ('+scenarioLabel+'), o P/L no vencimento é '+(scenarioExpiry>=0?'+':'')+brl(scenarioExpiry)+' e o MTM estimado é '+(scenarioMtm>=0?'+':'')+brl(scenarioMtm)+'.';
+    narrative+='No cenário selecionado ('+pct(pm.movePct)+', ativo em '+brl(pm.scenarioSpot)+'), o P/L no vencimento é '+(pm.scenarioExpiry>=0?'+':'')+brl(pm.scenarioExpiry)+' e o MTM estimado é '+(pm.scenarioMtm>=0?'+':'')+brl(pm.scenarioMtm)+'.';
   }
-  cWrap(ctx,narrative,rx+22,ly+120,rw-44,17,3,C.text,10,600);
+  cWrap(ctx,narrative,rx+22,ly+51,rw-44,17,3,C.text,10,600);
+
+  // Gráfico principal ampliado: eixo X nominal em R$ e P/L total em R$.
+  const gy=672,gh=330;
+  cRound(ctx,72,gy,1774,gh,18,C.panel2,C.line);
+  cText(ctx,m.pricingComplete?'PAYOFF DA ESTRUTURA · P/L TOTAL (R$)':'PAYOFF ESTRUTURAL · PRÊMIOS PENDENTES',94,gy+30,11,700,C.gold2);
+  cText(ctx,'Eixo horizontal: preço do ativo em R$ · faixa automática de apresentação',94,gy+51,10,400,C.muted);
+
+  const plot={x:154,y:gy+72,w:1618,h:205};
+  const low=pm.range.lowPct,high=pm.range.highPct;
+  const xpPct=v=>plot.x+(v-low)/(high-low)*plot.w;
+  const yp=v=>plot.y+(pm.ymax-v)/(pm.ymax-pm.ymin)*plot.h;
+  ctx.strokeStyle=C.line;ctx.lineWidth=1;
+
+  const xticks=[low,(low+0)/2,0,(0+high)/2,high];
+  xticks.forEach(v=>{
+    const px=xpPct(v),spot=m.S*(1+v/100);
+    ctx.beginPath();ctx.moveTo(px,plot.y);ctx.lineTo(px,plot.y+plot.h);ctx.stroke();
+    cText(ctx,brl(spot),px,gy+gh-22,9,400,C.muted,'center');
+  });
+  for(let i=0;i<=4;i++){
+    const val=pm.ymin+(pm.ymax-pm.ymin)*i/4,py=yp(val);
+    ctx.beginPath();ctx.moveTo(plot.x,py);ctx.lineTo(plot.x+plot.w,py);ctx.stroke();
+    cText(ctx,(val>=0?'+':'')+brl(val),plot.x-14,py+4,9,400,C.muted,'right');
+  }
+  ctx.strokeStyle='#7C8993';ctx.beginPath();ctx.moveTo(plot.x,yp(0));ctx.lineTo(plot.x+plot.w,yp(0));ctx.stroke();
+
+  function chartLine(arr,col,dash){
+    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=3.2;ctx.setLineDash(dash||[]);ctx.beginPath();
+    arr.forEach((v,i)=>{if(!i)ctx.moveTo(xpPct(pm.xs[i]),yp(v));else ctx.lineTo(xpPct(pm.xs[i]),yp(v))});
+    ctx.stroke();ctx.restore();
+  }
+  chartLine(pm.expiry,C.gold2);
+  if(pm.mtm)chartLine(pm.mtm,C.text,[10,7]);
+
+  ctx.fillStyle=C.gold2;ctx.fillRect(1210,gy+27,22,3);cText(ctx,'Vencimento',1240,gy+32,9,700,C.text);
+  if(pm.mtm){ctx.strokeStyle=C.text;ctx.setLineDash([10,7]);ctx.beginPath();ctx.moveTo(1360,gy+28);ctx.lineTo(1382,gy+28);ctx.stroke();ctx.setLineDash([]);cText(ctx,'MTM cenário',1392,gy+32,9,700,C.text)}
+  cText(ctx,'Faixa: '+pct(low)+' a '+pct(high)+' · '+brl(m.S*(1+low/100))+' a '+brl(m.S*(1+high/100)),1770,gy+52,9,400,C.muted,'right');
 
   // Rodapé.
-  ctx.fillStyle=C.gold;ctx.fillRect(60,850,1480,1);
-  cText(ctx,m.pricingComplete?'SIMULAÇÃO ILUSTRATIVA · USO INTERNO':'SIMULAÇÃO INCOMPLETA · PRÊMIOS PENDENTES',60,874,9,700,m.pricingComplete?C.gold2:C.amber);
-  cText(ctx,'Resultados antes de custos não informados, impostos e margem. Confirme Bid/Ask, códigos, liquidez, estilo de exercício e condições de execução.',60,892,9,400,C.muted);
-  cText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1540,882,9,400,C.muted,'right');
+  ctx.fillStyle=C.gold;ctx.fillRect(72,1026,1774,1);
+  cText(ctx,m.pricingComplete?'SIMULAÇÃO ILUSTRATIVA · APRESENTAÇÃO AO CLIENTE':'SIMULAÇÃO INCOMPLETA · PRÊMIOS PENDENTES',72,1050,9,700,m.pricingComplete?C.gold2:C.amber);
+  cText(ctx,'Valores nominais. Confirme Bid/Ask, códigos, liquidez, estilo de exercício, custos, impostos e margem antes de qualquer execução.',72,1069,9,400,C.muted);
+  cText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1846,1060,9,400,C.muted,'right');
 }
 function openFactsheet(){syncStateFromLegInputs();updateAll();drawFactsheet();$('exportOverlay').classList.add('open')}
 function closeFactsheet(){$('exportOverlay').classList.remove('open')}
