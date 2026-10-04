@@ -1,0 +1,54 @@
+name: E2E live acceptance
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/e2e-live-acceptance.yml"
+      - "tests/e2e-live-acceptance.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Wait for published page
+        run: |
+          for i in {1..30}; do
+            if curl -fsS --max-time 15 "https://montecchio-jaca.github.io/jacaranda-straddle-evento-eleitoral-2026/" | grep -q "Estruturadas Jacarandá"; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Published page did not become reachable"
+          exit 1
+
+      - name: Run end-to-end acceptance
+        run: node tests/e2e-live-acceptance.mjs
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-live-evidence
+          path: artifacts/e2e
+          if-no-files-found: warn
+          retention-days: 14
