@@ -436,7 +436,7 @@ function getSpotQuote(){
   if(q&&Number(q.price)>0)return q;
   return null;
 }
-function applyQuote(){
+function applyQuote(resetLegs){
   const q=getSpotQuote();
   if(q){
     const price=Number(q.price);$('spotInput').value=price.toFixed(2);
@@ -452,11 +452,13 @@ function applyQuote(){
     $('quotePill').textContent='Spot · manual';
     setStatus('err','Spot automático indisponível','Mantido spot manual/editável para '+state.asset+'.');
   }
-  suggestLegsFromStrategy();
+  if(resetLegs||!state.legs.length)suggestLegsFromStrategy();
+  else{renderLegs();updateAll()}
 }
 async function refreshSnapshot(){
-  setStatus('','Recarregando snapshot…','Atualizando o arquivo same-origin de cotações.');
-  await loadQuotesPayload();applyQuote();
+  syncStateFromLegInputs();
+  setStatus('','Recarregando snapshot…','Atualizando o spot sem apagar strikes, códigos ou prêmios já preenchidos.');
+  await loadQuotesPayload();applyQuote(false);
 }
 
 function impliedVolLeg(type,S,K,T,price,r,q){return OptionEngine.impliedVolLeg(type,S,K,T,price,r,q)}
@@ -871,7 +873,7 @@ function downloadFactsheet(){syncStateFromLegInputs();updateAll();drawFactsheet(
 
 function changeAsset(symbol){
   const hit=universeAssets().find(a=>a.symbol===symbol);if(!hit)return;
-  state.asset=symbol;state.quote=null;buildAssetControls();applyQuote();
+  state.asset=symbol;state.quote=null;buildAssetControls();applyQuote(true);
 }
 $('assetSelect').addEventListener('change',e=>changeAsset(e.target.value));
 $('assetSearch').addEventListener('change',e=>changeAsset((e.target.value||'').trim().toUpperCase()));
@@ -893,7 +895,7 @@ async function init(){
   await Promise.all([loadUniverse(),loadStrategies(),loadQuotesPayload()]);
   const savedMode=localStorage.getItem('jacaranda.options.pricingMode');if(savedMode==='book'||savedMode==='spot_pct')$('pricingMode').value=savedMode;
   buildAssetControls();buildStrategySelect();renderCatalog();
-  applyQuote();
+  applyQuote(true);
   selectStrategy(state.strategyId);
   applyPricingModeUI();
   updateComparatorButton();
