@@ -159,9 +159,44 @@
     return Math.max(10,Math.min(80,Math.ceil((need*1.4)/5)*5));
   }
 
+function presentationRange(raw){
+    const s=normalizeStrategy(raw),risk=analyzeRisk(s);
+    let low=-20,high=20;
+    let lowSlope=s.stockQty,highSlope=s.stockQty;
+    s.legs.forEach(l=>{
+      const sign=sideSign(l.side)*l.qty;
+      if(l.type==='put')lowSlope-=sign;
+      if(l.type==='call')highSlope+=sign;
+    });
+
+    // Estruturas com exposição relevante nas caudas precisam de espaço visual
+    // adicional para que a convexidade/assimetria fique evidente ao cliente.
+    if(Math.abs(lowSlope)>1e-9)low=-30;
+    if(Math.abs(highSlope)>1e-9)high=30;
+    if(Math.abs(lowSlope)>1e-9&&Math.abs(highSlope)>1e-9){low=-30;high=30}
+    if(risk.maxGain===Infinity||risk.maxLoss===-Infinity)high=Math.max(high,30);
+
+    const anchors=[];
+    s.legs.forEach(l=>{if(l.strike>0)anchors.push(l.strike)});
+    (risk.bes||[]).forEach(v=>{if(v>0)anchors.push(v)});
+    anchors.forEach(v=>{
+      if(!(s.spot>0))return;
+      const p=(v/s.spot-1)*100;
+      const pad=Math.max(5,Math.abs(p)*.30);
+      if(p<0)low=Math.min(low,p-pad);
+      else high=Math.max(high,p+pad);
+    });
+
+    low=Math.max(-60,Math.floor(low/5)*5);
+    high=Math.min(60,Math.ceil(high/5)*5);
+    if(low>-20)low=-20;
+    if(high<20)high=20;
+    return {lowPct:low,highPct:high,lowSlope,highSlope};
+  }
+
   global.OptionEngine={
     sideSign,years,normCDF,bsm,intrinsic,impliedVolLeg,normalizeStrategy,
     expiryPnlPerUnit,expiryPnlTotal,highSlope,analyzeRisk,calibrateLegIVs,
-    scenarioOptionNetValuePerUnit,mtmPnlTotal,autoRange
+    scenarioOptionNetValuePerUnit,mtmPnlTotal,autoRange,presentationRange
   };
 })(window);
