@@ -1,834 +1,604 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Estruturadas Jacarandá | Laboratório de Opções</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estruturadas Jacarandá | Estratégias</title>
 <style>
-  :root{
-    --navy:#1A2027;
-    --blue:#1F3249;
-    --deep:#132436;
-    --bronze:#BA8758;
-    --gray:#9D9FA2;
-    --light:#DCDDDE;
-    --paper:#F5F6F7;
-    --white:#FFFFFF;
-    --green:#2F6B54;
-    --red:#A14B4B;
-    --shadow:0 14px 40px rgba(19,36,54,.10);
-    --radius:18px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--navy);
-    background:linear-gradient(180deg,#eef1f4 0,#f7f8f9 360px,#f5f6f7 100%);
-  }
-  a{color:var(--blue);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .topbar{height:7px;background:var(--bronze)}
-  .shell{max-width:1240px;margin:0 auto;padding:0 22px 44px}
-  header{
-    background:linear-gradient(135deg,var(--deep),var(--blue));
-    color:#fff;
-    padding:28px 30px 30px;
-    border-radius:0 0 26px 26px;
-    box-shadow:var(--shadow);
-    margin-bottom:22px;
-  }
-  .brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  .brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
-  .brand span{color:var(--bronze)}
-  h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-.02em}
-  .subtitle{max-width:850px;color:#d8e1e8;font-size:16px;line-height:1.5;margin:0}
-  .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;font-size:12px;background:rgba(255,255,255,.06)}
-  .eventline{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-  .eventpill{padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#edf2f6}
-  .eventpill strong{color:#fff}
-  .section{margin-top:22px}
-  .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
-  .section-title h2{margin:0;font-size:21px;letter-spacing:-.01em}
-  .section-title p{margin:0;color:#677482;font-size:12px;text-align:right}
-  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  .asset-card{
-    background:#fff;border-radius:var(--radius);padding:17px;border:1px solid #e2e6e9;box-shadow:0 6px 20px rgba(19,36,54,.05);cursor:pointer;transition:.2s ease;
-  }
-  .asset-card:hover{transform:translateY(-2px);border-color:#c7ced4}
-  .asset-card.active{outline:2px solid var(--bronze);outline-offset:1px}
-  .asset-name{font-weight:700;font-size:20px;margin-bottom:3px}
-  .asset-meta{font-size:11px;color:#7c8791;margin-bottom:13px}
-  .minirow{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #edf0f2;padding-top:8px;margin-top:8px;font-size:12px}
-  .minirow strong{font-size:13px}
-  .panel{background:#fff;border:1px solid #e0e5e8;border-radius:var(--radius);box-shadow:0 8px 26px rgba(19,36,54,.06);overflow:hidden}
-  .panel-head{padding:16px 18px;border-bottom:1px solid #e6eaed;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-  .panel-head h3{margin:0;font-size:16px}
-  .panel-body{padding:18px}
-  .table-wrap{overflow:auto}
-  table{width:100%;border-collapse:collapse;font-size:13px}
-  th{background:#f3f5f6;text-align:right;padding:11px 12px;color:#586573;font-weight:700;white-space:nowrap}
-  th:first-child,td:first-child{text-align:left}
-  td{padding:11px 12px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}
-  tr.clickable{cursor:pointer}
-  tr.clickable:hover td{background:#fafbfb}
-  td.emph{font-weight:700;color:var(--blue)}
-  .muted{color:#7f8992}
-  .note{font-size:12px;line-height:1.55;color:#697683}
-  .layout2{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
-  .inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-  .field label{display:block;font-size:11px;font-weight:700;color:#697580;margin:0 0 6px;text-transform:uppercase;letter-spacing:.03em}
-  .field input,.field select{
-    width:100%;padding:10px 11px;border:1px solid #cfd6dc;border-radius:10px;font:inherit;color:var(--navy);background:#fff;outline:none;
-  }
-  .field input:focus,.field select:focus{border-color:var(--bronze);box-shadow:0 0 0 3px rgba(186,135,88,.14)}
-  .inline-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
-  button{
-    border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;background:var(--blue);color:#fff;
-  }
-  button.secondary{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .kpi{background:#f7f8f9;border:1px solid #e5e8eb;border-radius:14px;padding:13px}
-  .kpi .label{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#78838d;margin-bottom:5px}
-  .kpi .value{font-size:20px;font-weight:700;line-height:1.05}
-  .kpi .sub{font-size:10px;color:#83909a;margin-top:5px}
-  .chart-wrap{position:relative;height:360px}
-  canvas{width:100%;height:100%;display:block}
-  .toggle{display:inline-flex;border:1px solid #d9dee2;background:#f4f6f7;border-radius:10px;padding:3px;gap:2px}
-  .toggle button{padding:7px 9px;background:transparent;color:#65727c;border-radius:7px}
-  .toggle button.active{background:#fff;color:var(--deep);box-shadow:0 1px 5px rgba(19,36,54,.12)}
-  .scenario-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
-  .rangebox{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:13px}
-  .rangebox label{font-size:11px;font-weight:700;color:#65727e;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}
-  input[type=range]{width:100%;accent-color:var(--bronze)}
-  .positive{color:var(--green)!important}
-  .negative{color:var(--red)!important}
-  .warning{background:#fff8ef;border:1px solid #ead8c2;border-left:4px solid var(--bronze);padding:13px 14px;border-radius:12px;color:#5e5144;font-size:12px;line-height:1.55}
-  .info{background:#f0f4f7;border:1px solid #d7e0e6;border-left:4px solid var(--blue);padding:13px 14px;border-radius:12px;color:#4f5e6b;font-size:12px;line-height:1.55}
-  .footer{margin-top:26px;border-top:1px solid #dfe4e8;padding:20px 0 0;color:#707c86;font-size:11px;line-height:1.6}
-  .footer-brand{font-weight:700;color:var(--blue);margin-top:8px}
-  .accent-line{height:3px;background:linear-gradient(90deg,var(--bronze) 0 90px,transparent 90px);margin:0 0 15px}
-  .smallcaps{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#7a8791;font-weight:700}
-  .selected-structure{color:var(--bronze);font-weight:700}
-  .pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}
-  .source-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-  .source-links a{font-size:11px;border-bottom:1px dotted #8b98a3}
-  .view-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  .view-nav a{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.20);color:#fff;background:rgba(255,255,255,.06)}
-  .view-nav a:hover{text-decoration:none;background:rgba(255,255,255,.12)}
-  .view-nav a.active{background:var(--bronze);border-color:var(--bronze);color:var(--deep)}
-
-  .export-overlay{position:fixed;inset:0;background:rgba(19,36,54,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
-  .export-overlay.open{display:flex}
-  .export-dialog{width:min(1480px,98vw);max-height:95vh;background:#132436;border:1px solid rgba(186,135,88,.35);border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.38);overflow:hidden;display:flex;flex-direction:column}
-  .export-head{padding:14px 16px;border-bottom:1px solid rgba(186,135,88,.28);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#fff;background:#132436}
-  .export-head strong{font-size:15px}
-  .export-preview{background:#0B1722;padding:14px;overflow:auto;flex:1}
-  #factsheetCanvas{display:block;width:100%;height:auto;max-width:100%;background:#0B1722;box-shadow:0 8px 28px rgba(0,0,0,.38)}
-  .export-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  .export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
-  @media(max-width:980px){.grid4{grid-template-columns:repeat(2,1fr)}.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:620px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.grid4{grid-template-columns:1fr 1fr;gap:9px}.asset-card{padding:13px}.inputs{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenario-top{grid-template-columns:1fr}.panel-body{padding:14px}.chart-wrap{height:300px}.section-title{align-items:flex-start;flex-direction:column}.section-title p{text-align:left}}
+:root{
+  --navy:#1A2027;--blue:#1F3249;--deep:#132436;--bronze:#BA8758;
+  --gray:#9D9FA2;--light:#DCDDDE;--paper:#F5F6F7;--white:#FFF;
+  --green:#2F6B54;--red:#A14B4B;--amber:#996A32;
+  --shadow:0 14px 40px rgba(19,36,54,.10);--radius:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:linear-gradient(180deg,#eef1f4 0,#f7f8f9 360px,#f5f6f7 100%)}
+.topbar{height:7px;background:var(--bronze)}.shell{max-width:1360px;margin:0 auto;padding:0 22px 44px}
+header{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:28px 30px 26px;border-radius:0 0 26px 26px;box-shadow:var(--shadow);margin-bottom:22px}
+.brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px}.brand span{color:var(--bronze)}
+h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-.02em}
+.subtitle{max-width:920px;color:#d8e1e8;font-size:15px;line-height:1.5;margin:0}
+.view-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.view-nav a{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.20);color:#fff;background:rgba(255,255,255,.06)}
+.view-nav a:hover{background:rgba(255,255,255,.12)}.view-nav a.active{background:var(--bronze);border-color:var(--bronze);color:var(--deep)}
+.eventline{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.eventpill{padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#edf2f6}.eventpill strong{color:#fff}
+.section{margin-top:18px}.panel{background:#fff;border:1px solid #e0e5e8;border-radius:var(--radius);box-shadow:0 8px 26px rgba(19,36,54,.06);overflow:hidden}
+.panel-head{padding:15px 18px;border-bottom:1px solid #e6eaed;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.panel-head h2,.panel-head h3{margin:0}.panel-head h2{font-size:19px}.panel-head h3{font-size:16px}.panel-body{padding:18px}
+.layout2{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}.layout3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.inputs{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.field label{display:block;font-size:10px;font-weight:700;color:#697580;margin:0 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.field input,.field select{width:100%;padding:10px 11px;border:1px solid #cfd6dc;border-radius:10px;font:inherit;color:var(--navy);background:#fff;outline:none}
+.field input:focus,.field select:focus{border-color:var(--bronze);box-shadow:0 0 0 3px rgba(186,135,88,.14)}.field .hint{font-size:10px;color:#8a959e;margin-top:5px;line-height:1.35}
+button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;background:var(--blue);color:#fff}button.secondary{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
+.inline-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kpi{background:#f7f8f9;border:1px solid #e5e8eb;border-radius:14px;padding:13px;min-height:83px}.kpi .label{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#78838d;margin-bottom:5px}.kpi .value{font-size:19px;font-weight:700;line-height:1.08}.kpi .sub{font-size:10px;color:#83909a;margin-top:6px;line-height:1.35}.kpi.accent{background:#f8f2ec;border-color:#e5d3c1}.kpi.accent .value{color:#8e6039}.positive{color:var(--green)!important}.negative{color:var(--red)!important}
+.source-box{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#f0f4f7;border:1px solid #d7e0e6;border-left:4px solid var(--blue);padding:12px 14px;border-radius:12px}.source-main{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.status-dot{width:9px;height:9px;border-radius:50%;background:#9D9FA2;box-shadow:0 0 0 4px rgba(157,159,162,.14)}.status-dot.ok{background:#2F6B54;box-shadow:0 0 0 4px rgba(47,107,84,.14)}.status-dot.err{background:#A14B4B;box-shadow:0 0 0 4px rgba(161,75,75,.14)}.source-title{font-size:12px;font-weight:700;color:var(--blue)}.source-meta{font-size:11px;color:#71808c;line-height:1.4}
+.note{font-size:12px;line-height:1.55;color:#697683}.warning{background:#fff8ef;border:1px solid #ead8c2;border-left:4px solid var(--bronze);padding:12px 14px;border-radius:12px;color:#5e5144;font-size:12px;line-height:1.5}.danger{background:#fff1f1;border:1px solid #efcccc;border-left:4px solid var(--red);padding:12px 14px;border-radius:12px;color:#6b3d3d;font-size:12px;line-height:1.5}
+.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}.pill.gold{background:#f2e5d8;color:#7a512f}.pill.red{background:#f8e3e3;color:#8c4444}.pill.green{background:#e4f1eb;color:#315e4c}
+.strategy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.strategy-card{border:1px solid #e0e5e8;border-radius:14px;padding:12px;background:#fff;cursor:pointer;transition:.15s}.strategy-card:hover{border-color:#c7a583;box-shadow:0 6px 18px rgba(19,36,54,.07)}.strategy-card.active{border-color:var(--bronze);background:#fbf7f2}.strategy-card h4{margin:0 0 7px;font-size:13px}.strategy-card p{margin:6px 0 0;color:#74818b;font-size:10px;line-height:1.45}.strategy-tags{display:flex;gap:5px;flex-wrap:wrap}
+.strategy-summary{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:10px}.summary-box{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:13px}.summary-box .title{font-size:10px;color:#7c8892;text-transform:uppercase;font-weight:700;letter-spacing:.04em}.summary-box .main{font-size:16px;font-weight:700;margin-top:6px}.summary-box .small{font-size:11px;color:#73808b;line-height:1.45;margin-top:5px}
+.stock-leg{display:none;background:#f4f7f9;border:1px solid #dbe3e8;border-radius:14px;padding:12px;margin-top:12px}.stock-leg.show{display:block}
+.legs{display:grid;gap:10px}.leg-card{border:1px solid #dde3e7;border-radius:14px;padding:12px;background:#fafbfb}.leg-card.buy{border-left:4px solid var(--green)}.leg-card.sell{border-left:4px solid var(--red)}.leg-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}.leg-title{font-weight:700;font-size:13px}.leg-grid{display:grid;grid-template-columns:.9fr .9fr .7fr 1fr 1.1fr 1fr .8fr;gap:8px}.mini label{display:block;font-size:9px;font-weight:700;color:#79858f;margin-bottom:5px;text-transform:uppercase}.mini input,.mini select{width:100%;padding:8px 9px;border:1px solid #d2d9de;border-radius:9px;background:#fff;font:inherit;font-size:12px}.ivbox{padding-top:20px;font-size:12px;font-weight:700;color:var(--blue)}
+.chart-wrap{position:relative;height:420px}canvas{width:100%;height:100%;display:block}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{background:#f3f5f6;text-align:right;padding:10px 11px;color:#586573;font-weight:700;white-space:nowrap}th:first-child,td:first-child{text-align:left}td{padding:10px 11px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}
+.rangegrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.rangebox{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:12px}.rangebox label{font-size:11px;font-weight:700;color:#65727e;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}input[type=range]{width:100%;accent-color:var(--bronze)}
+.footer{margin-top:24px;border-top:1px solid #dfe4e8;padding:18px 0 0;color:#707c86;font-size:11px;line-height:1.6}.footer-brand{font-weight:700;color:var(--blue);margin-top:7px}
+.export-overlay{position:fixed;inset:0;background:rgba(11,23,34,.84);z-index:9999;display:none;align-items:center;justify-content:center;padding:16px}.export-overlay.open{display:flex}.export-dialog{width:min(1500px,98vw);max-height:96vh;background:#132436;border:1px solid rgba(186,135,88,.38);border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.42);overflow:hidden;display:flex;flex-direction:column}.export-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid rgba(186,135,88,.28);color:#fff}.export-actions{display:flex;gap:8px;flex-wrap:wrap}.export-preview{background:#0B1722;padding:12px;overflow:auto;flex:1}#factsheetCanvas{display:block;width:100%;height:auto;background:#0B1722;box-shadow:0 8px 28px rgba(0,0,0,.4)}.export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
+@media(max-width:1050px){.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.strategy-grid{grid-template-columns:repeat(2,1fr)}.leg-grid{grid-template-columns:repeat(4,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.inputs,.layout3,.strategy-summary,.rangegrid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}.leg-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}.chart-wrap{height:340px}}
 </style>
 </head>
 <body>
 <div class="topbar"></div>
 <div class="shell">
-  <header>
-    <div class="brandrow">
-      <div>
-        <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
-        <h1>Estruturadas Jacarandá | Laboratório de Opções</h1>
-        <p class="subtitle">Laboratório interno para estudar estruturas com opções, comparar custos, payoff, break-even, convexidade e cenários de marcação a mercado.</p>
-      </div>
-      <div class="view-nav">
-        <a class="active" href="index.html">Laboratório</a>
-        <a href="simulador-mercado.html">Estratégias</a>
-      </div>
+<header>
+  <div class="brandrow">
+    <div>
+      <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
+      <h1>Estruturadas Jacarandá | Estratégias</h1>
+      <p class="subtitle">Monte e precifique uma estratégia: escolha o ativo, selecione a estrutura, ajuste as pernas e veja custo, risco, break-even, payoff e marcação a mercado. Quando quiser comparar alternativas, envie a montagem ao Comparador.</p>
     </div>
-    <div class="eventline">
-      <div class="eventpill"><strong>Snapshot-base</strong> 02/10/2026</div>
-      <div class="eventpill"><strong>Estruturas</strong> Straddle / Strangle</div>
-      <div class="eventpill"><strong>Cenário MTM</strong> data editável</div>
-      <div class="eventpill"><strong>Uso</strong> estudo e pré-precificação</div>
+    <div class="view-nav">
+      <a class="active" href="index.html">Estratégias</a>
+      <a href="comparador.html">Comparador</a>
     </div>
-  </header>
+  </div>
+  <div class="eventline">
+    <div class="eventpill"><strong>1</strong> Escolha ativo e estratégia</div>
+    <div class="eventpill"><strong>2</strong> Ajuste strikes e prêmios</div>
+    <div class="eventpill"><strong>3</strong> Revise risco e payoff</div>
+    <div class="eventpill"><strong>4</strong> Adicione ao Comparador</div>
+  </div>
+</header>
 
-  <section class="section">
-    <div class="section-title">
-      <h2>Snapshot de prêmios</h2>
-      <p>Base histórica 02/10/2026 · custo total informado em % do spot</p>
+<section class="section panel">
+  <div class="panel-head">
+    <div>
+      <h2>Ativo e estratégia</h2>
+      <div class="note">A liquidez pertence às séries que compõem a estrutura, não ao nome da estratégia. Confirme Bid/Ask, spread e volume de cada perna antes de executar.</div>
     </div>
-    <div id="assetCards" class="grid4"></div>
-  </section>
-
-  <section class="section panel">
-    <div class="panel-head">
-      <div>
-        <h3>Comparação 100% · 102% · 103%</h3>
-        <div class="note">Hipótese operacional editável: 100% = ATM; 102% = Put 98% + Call 102%; 103% = Put 97% + Call 103%.</div>
-      </div>
-      <span class="pill">Clique em uma célula para carregar</span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span id="universePill" class="pill">Universo B3 · carregando</span>
+      <span id="quotePill" class="pill">Spot · carregando</span>
+      <span class="pill gold">BETA</span>
     </div>
-    <div class="table-wrap">
-      <table id="premiumTable"></table>
-    </div>
-  </section>
-
-  <section class="section layout2">
-    <div class="panel">
-      <div class="panel-head">
+  </div>
+  <div class="panel-body">
+    <div class="source-box">
+      <div class="source-main">
+        <span id="statusDot" class="status-dot"></span>
         <div>
-          <div class="smallcaps">Estrutura selecionada</div>
-          <h3><span id="selectedLabel">PETR4 · 103%</span></h3>
+          <div id="sourceTitle" class="source-title">Carregando dados</div>
+          <div id="sourceMeta" class="source-meta">Inicializando universo, catálogo e snapshot de mercado.</div>
         </div>
-        <span id="structureKind" class="selected-structure">Strangle ±3%</span>
       </div>
-      <div class="panel-body">
-        <div class="inputs">
-          <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
-          <div class="field"><label>Estrutura</label><select id="structureSelect"></select></div>
-          <div class="field"><label>Spot de referência</label><input id="spotInput" type="number" step="0.01" value="49.66"></div>
-          <div class="field"><label>Strike Put (% spot)</label><input id="putStrikePct" type="number" step="0.1" value="97"></div>
-          <div class="field"><label>Strike Call (% spot)</label><input id="callStrikePct" type="number" step="0.1" value="103"></div>
-          <div class="field"><label>Custo total (% spot)</label><input id="premiumPct" type="number" step="0.01" value="1.64"></div>
-          <div class="field"><label>Valor alocado (R$)</label><input id="allocationInput" type="number" step="100" min="0" value="10000"></div>
-          <div class="field"><label>Data de entrada</label><input id="entryDate" type="date" value="2026-10-02"></div>
-          <div class="field"><label>Data de desmontagem</label><input id="scenarioDate" type="date" value="2026-10-05"></div>
-          <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-07"></div>
-          <div class="field"><label>Taxa livre de risco (% a.a.)</label><input id="rateInput" type="number" step="0.10" value="0.00"></div>
-          <div class="field"><label>Dividend yield (% a.a.)</label><input id="divInput" type="number" step="0.10" value="0.00"></div>
-          <div class="field"><label>IV entrada (%) · vazio = calibrar</label><input id="ivEntryInput" type="number" step="0.10" placeholder="Automático"></div>
-        </div>
-        <div class="inline-actions">
-          <button id="resetStructure">Restaurar dados da tabela</button>
-          <button id="copyLinkData" class="secondary">Copiar parâmetros</button>
-          <button id="generateJpg" class="secondary">Gerar Factsheet JPG</button>
-        </div>
-        <p class="note" style="margin:12px 0 0">PETR4 está pré-carregada com o spot de <strong>R$ 49,66</strong> da referência enviada. Nos demais ativos, enquanto o spot efetivo não for informado, o painel usa <strong>100</strong> como base relativa.</p>
-      </div>
+      <button id="refreshQuote">Recarregar snapshot</button>
     </div>
 
-    <div class="panel">
-      <div class="panel-head"><h3>Leitura rápida</h3><span class="pill">Atualização instantânea</span></div>
-      <div class="panel-body">
-        <div class="kpis">
-          <div class="kpi"><div class="label">Prêmio total</div><div class="value" id="premiumMoney">R$ 3,87</div><div class="sub" id="premiumSub">3,87% do spot</div></div>
-          <div class="kpi"><div class="label">Break-even baixo</div><div class="value" id="beLow">96,13</div><div class="sub" id="beLowSub">−3,87%</div></div>
-          <div class="kpi"><div class="label">Break-even alto</div><div class="value" id="beHigh">103,87</div><div class="sub" id="beHighSub">+3,87%</div></div>
-          <div class="kpi"><div class="label">IV calibrada pelo modelo</div><div class="value" id="ivCalibrated">—</div><div class="sub">derivada do prêmio informado · não é IV de mercado</div></div>
-          <div class="kpi"><div class="label">Quantidade por perna</div><div class="value" id="qtyLeg">—</div><div class="sub">aprox. · unidades</div></div>
-          <div class="kpi"><div class="label">Notional equivalente</div><div class="value" id="notionalEq">—</div><div class="sub">spot × quantidade</div></div>
-        </div>
-        <div class="warning" style="margin-top:12px"><strong>Importante:</strong> preço menor não significa automaticamente melhor relação risco/retorno. Ao afastar os strikes, o débito cai, mas o ativo precisa primeiro atravessar a distância até a perna ITM.</div>
-      </div>
+    <div class="inputs" style="margin-top:14px">
+      <div class="field"><label>Buscar ativo B3</label><input id="assetSearch" list="assetList" type="text" placeholder="Ticker ou nome"><datalist id="assetList"></datalist></div>
+      <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
+      <div class="field"><label>Estratégia</label><select id="strategySelect"></select></div>
+      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01"><div class="hint">Snapshot delayed e editável.</div></div>
+      <div class="field"><label>Data-base</label><input id="entryDate" type="date" value="2026-10-02"></div>
+      <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-16"></div>
+      <div class="field"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"></div>
+      <div class="field"><label>Lote / multiplicador</label><input id="lotSize" type="number" step="1" min="1" value="100"></div>
     </div>
-  </section>
 
-  <section class="section panel">
-    <div class="panel-head">
-      <div>
-        <h3>Payoff e marcação a mercado</h3>
-        <div class="note">Linha contínua: P/L no vencimento. Linha pontilhada: estimativa na data de cenário escolhida.</div>
-      </div>
-      <div class="toggle" id="metricToggle">
-        <button data-metric="spot" class="active">% do spot</button>
-        <button data-metric="premium">% sobre prêmio</button>
-      </div>
+    <div id="strategySummary" class="strategy-summary" style="margin-top:14px"></div>
+    <div id="riskWarning" style="margin-top:12px"></div>
+  </div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div>
+      <h3>Pernas da estrutura</h3>
+      <div class="note">Para compra use o Ask como referência conservadora; para venda use o Bid. Os campos permanecem editáveis.</div>
     </div>
+    <div class="inline-actions" style="margin-top:0">
+      <button id="suggestStrikes">Sugerir strikes</button>
+      <button id="clearPrices" class="secondary">Limpar prêmios</button>
+      <button id="addComparator">Adicionar ao Comparador (0/4)</button>
+      <button id="generateJpg" class="secondary">Gerar Factsheet JPG</button>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div id="stockLeg" class="stock-leg"></div>
+    <div id="legs" class="legs"></div>
+  </div>
+</section>
+
+<section class="section layout2">
+  <div class="panel">
+    <div class="panel-head"><h3>Quantidade, fee e modelo</h3><span class="pill">CONFIGURAÇÃO</span></div>
     <div class="panel-body">
-      <div class="chart-wrap"><canvas id="payoffChart"></canvas></div>
+      <div class="inputs">
+        <div class="field"><label>Número de lotes</label><input id="lots" type="number" step="1" min="1" value="1"></div>
+        <div class="field"><label>Fee</label><select id="feeType">
+          <option value="none">Sem fee</option>
+          <option value="premium">% sobre prêmio absoluto</option>
+          <option value="notional">% sobre notional do ativo</option>
+          <option value="fixed">R$ fixo</option>
+        </select></div>
+        <div class="field"><label>Fee valor</label><input id="feeValue" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Custo adicional entrada (R$)</label><input id="entryFixedCost" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Custo estimado saída (R$)</label><input id="exitFixedCost" type="number" step="0.01" min="0" value="0"></div>
+        <div class="field"><label>Taxa modelo (% a.a.)</label><input id="rateInput" type="number" step="0.10" value="0"></div>
+        <div class="field"><label>Dividend yield (% a.a.)</label><input id="divInput" type="number" step="0.10" value="0"></div>
+        <div class="field"><label>IV fallback (%)</label><input id="ivFallback" type="number" step="1" min="1" value="40"><div class="hint">Usada no MTM quando uma perna não puder ser calibrada.</div></div>
+      </div>
+      <div class="warning" style="margin-top:12px"><strong>Margem e modelo:</strong> esta versão não calcula margem B3/corretora. O MTM usa Black-Scholes-Merton como aproximação europeia e não modela exercício antecipado de séries americanas. Estratégias com opções vendidas podem exigir garantias substanciais.</div>
     </div>
-  </section>
+  </div>
 
-  <section class="section panel">
-    <div class="panel-head">
-      <div>
-        <h3>Simulação de marcação a mercado</h3>
-        <div class="note">Ajuste movimento do ativo e IV do cenário para testar a sensibilidade da estrutura antes do vencimento.</div>
-      </div>
-      <span class="pill">Black-Scholes-Merton · aproximação</span>
-    </div>
+  <div class="panel">
+    <div class="panel-head"><h3>Resumo econômico</h3><span id="flowPill" class="pill">—</span></div>
     <div class="panel-body">
-      <div class="scenario-top">
-        <div class="rangebox">
-          <label><span>Movimento do ativo</span><strong id="moveLabel">0,0%</strong></label>
-          <input id="moveRange" type="range" min="-15" max="15" step="0.25" value="0">
-        </div>
-        <div class="rangebox">
-          <label><span>IV pós-evento</span><strong id="ivPostLabel">—</strong></label>
-          <input id="ivPostRange" type="range" min="5" max="200" step="1" value="60">
-        </div>
-        <div class="rangebox">
-          <label><span>IV pós / IV entrada</span><strong id="ivRatioLabel">100%</strong></label>
-          <input id="ivRatioRange" type="range" min="25" max="150" step="1" value="100">
-        </div>
-      </div>
       <div class="kpis">
-        <div class="kpi"><div class="label">Spot simulado</div><div class="value" id="simSpot">100,00</div><div class="sub" id="simMove">0,0%</div></div>
-        <div class="kpi"><div class="label">Valor estimado estrutura</div><div class="value" id="simValue">—</div><div class="sub">Call + Put · MTM</div></div>
-        <div class="kpi"><div class="label">P/L estimado</div><div class="value" id="simPnl">—</div><div class="sub" id="simPnlSpot">—</div></div>
-        <div class="kpi"><div class="label">Retorno sobre prêmio</div><div class="value" id="simRop">—</div><div class="sub">sobre o débito inicial</div></div>
+        <div class="kpi"><div class="label">Fluxo inicial opções</div><div id="initialFlow" class="value">—</div><div id="initialFlowSub" class="sub">—</div></div>
+        <div class="kpi"><div class="label">Fee + custos entrada</div><div id="feeTotal" class="value">—</div><div class="sub">não inclui margem</div></div>
+        <div class="kpi"><div class="label">Notional ativo</div><div id="stockNotional" class="value">—</div><div id="stockNotionalSub" class="sub">quando houver ação na estrutura</div></div>
+        <div class="kpi"><div class="label">Unidades por perna-base</div><div id="units" class="value">—</div><div class="sub">lote × nº de lotes</div></div>
       </div>
-      <div class="info" style="margin-top:12px">O cenário de segunda-feira preserva valor extrínseco até o vencimento e depende fortemente da IV remanescente. A simulação usa uma única IV para Call e Put; skew, bid-ask, slippage, dividendos discretos e microestrutura podem produzir preços diferentes.</div>
+      <div class="kpis" style="margin-top:10px">
+        <div class="kpi accent"><div class="label">Perda máxima</div><div id="maxLoss" class="value">—</div><div class="sub">no vencimento</div></div>
+        <div class="kpi"><div class="label">Ganho máximo</div><div id="maxGain" class="value">—</div><div class="sub">no vencimento</div></div>
+        <div class="kpi"><div class="label">Break-even(s)</div><div id="breakevens" class="value">—</div><div id="breakevensSub" class="sub">preço do ativo</div></div>
+        <div class="kpi"><div class="label">IV por perna</div><div id="ivSummary" class="value">—</div><div class="sub">BSM a partir do prêmio informado</div></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section panel">
-    <div class="panel-head">
-      <div>
-        <h3>Matriz de cenários</h3>
-        <div class="note">Comparação entre resultado no vencimento e valor estimado na desmontagem.</div>
-      </div>
-      <span class="pill">−10% a +10%</span>
+<section class="section panel">
+  <div class="panel-head">
+    <div><h3>Payoff e marcação a mercado</h3><div class="note">Linha contínua: P/L no vencimento. Linha pontilhada: estimativa na data de cenário, usando IV calibrada por perna ou IV fallback.</div></div>
+    <div class="field" style="min-width:180px"><label>Amplitude do gráfico</label><select id="rangeMode">
+      <option value="auto">Auto</option><option value="10">±10%</option><option value="20">±20%</option><option value="30">±30%</option><option value="50">±50%</option><option value="80">±80%</option>
+    </select></div>
+  </div>
+  <div class="panel-body">
+    <div class="rangegrid">
+      <div class="rangebox"><label><span>Movimento do ativo</span><strong id="moveLabel">0,0%</strong></label><input id="moveRange" type="range" min="-20" max="20" step="0.25" value="0"></div>
+      <div class="rangebox"><label><span>IV cenário / IV entrada</span><strong id="ivRatioLabel">70%</strong></label><input id="ivRatio" type="range" min="20" max="160" step="1" value="70"></div>
+      <div class="rangebox"><label><span>Data do cenário MTM</span><strong id="scenarioDateLabel">—</strong></label><input id="scenarioDate" type="date" value="2026-10-05"></div>
     </div>
-    <div class="table-wrap"><table id="scenarioTable"></table></div>
-  </section>
+    <div class="kpis" style="margin-top:12px">
+      <div class="kpi"><div class="label">Spot simulado</div><div id="simSpot" class="value">—</div><div id="simSpotSub" class="sub">—</div></div>
+      <div class="kpi"><div class="label">P/L vencimento</div><div id="simExpiryPnl" class="value">—</div><div class="sub">inclui fee de entrada</div></div>
+      <div class="kpi"><div class="label">P/L MTM cenário</div><div id="simMtmPnl" class="value">—</div><div class="sub">inclui custo de saída informado</div></div>
+      <div class="kpi"><div class="label">Valor MTM opções</div><div id="simOptionMtm" class="value">—</div><div class="sub">valor líquido das pernas no cenário</div></div>
+    </div>
+    <div class="chart-wrap" style="margin-top:12px"><canvas id="chart"></canvas></div>
+  </div>
+</section>
 
-  <section class="section panel">
-    <div class="panel-head">
-      <div>
-        <h3>Convexidade por estrutura</h3>
-        <div class="note">Retorno no vencimento sobre o prêmio para movimentos absolutos de 3%, 5%, 7% e 10%.</div>
-      </div>
-      <span class="pill">Mesmo ativo · mesma base</span>
-    </div>
-    <div class="table-wrap"><table id="convexityTable"></table></div>
-  </section>
+<section class="section panel">
+  <div class="panel-head"><h3>Matriz de cenários</h3><span id="matrixRange" class="pill">AUTO</span></div>
+  <div class="table-wrap"><table id="scenarioTable"></table></div>
+</section>
 
-  <section class="section layout2">
-    <div class="panel">
-      <div class="panel-head"><h3>Estudo de caso arquivado · outubro/2026</h3></div>
-      <div class="panel-body">
-        <div class="kpis">
-          <div class="kpi"><div class="label">1º turno · abertura sex. → fech. seg.</div><div class="value">+3,02%</div><div class="sub">média 2002–2022 · n=6</div></div>
-          <div class="kpi"><div class="label">1º turno · fech. sex. → fech. seg.</div><div class="value">+2,07%</div><div class="sub">média 2002–2022 · n=6</div></div>
-          <div class="kpi"><div class="label">Eventos de alta</div><div class="value">5 de 6</div><div class="sub">descrição histórica</div></div>
-          <div class="kpi"><div class="label">Uso</div><div class="value" style="font-size:15px">Contexto</div><div class="sub">não é probabilidade futura</div></div>
-        </div>
-        <p class="note" style="margin-bottom:0">Este bloco preserva o estudo de caso que originou o laboratório. Os dados históricos são apenas contexto e não fazem parte da precificação corrente.</p>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-head"><h3>Premissas e limitações</h3></div>
-      <div class="panel-body">
-        <div class="accent-line"></div>
-        <p class="note"><strong>Payoff no vencimento:</strong> valor intrínseco de Call + Put menos o prêmio inicial.</p>
-        <p class="note"><strong>MTM pós-evento:</strong> Black-Scholes-Merton europeu, com taxa e dividend yield editáveis e uma IV única para as duas pernas.</p>
-        <p class="note"><strong>Não incorporado:</strong> skew/smile, exercício americano, dividendos discretos, leilões, spread bid-ask, custos operacionais, tributação, slippage e eventual indisponibilidade de liquidez.</p>
-      </div>
-    </div>
-  </section>
+<section class="section panel">
+  <div class="panel-head">
+    <div><h3>Catálogo implementado</h3><div class="note">Priorizamos as estruturas vanilla mais recorrentes. Calendar e diagonal ficam para a próxima etapa porque exigem múltiplos vencimentos por perna.</div></div>
+    <span id="catalogCount" class="pill">—</span>
+  </div>
+  <div class="panel-body"><div id="catalogGrid" class="strategy-grid"></div></div>
+</section>
 
-  <footer class="footer">
-    <strong>Material ilustrativo para uso interno.</strong> Não constitui oferta, recomendação, garantia de rentabilidade ou indicação de posição eleitoral. A decisão de investimento exige validação dos preços, séries, liquidez, vencimentos e condições efetivas de negociação na B3.
-    <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
-  </footer>
+<footer class="footer">
+  <strong>Simulação pré-operacional.</strong> Spot e universo são indicativos e podem ter atraso. Prêmios das opções, existência da série, liquidez, estilo de exercício, lote, margem e condições efetivas devem ser confirmados no book e na tela da corretora.
+  <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
+</footer>
 </div>
-
 
 <div id="exportOverlay" class="export-overlay" aria-hidden="true">
   <div class="export-dialog">
     <div class="export-head">
-      <strong>Factsheet Jacarandá · prévia JPG 1600 × 900</strong>
-      <div class="export-actions">
-        <button id="downloadJpg">Baixar JPG</button>
-        <button id="closeExport" class="export-close">Fechar</button>
-      </div>
+      <strong>Factsheet Jacarandá · Estratégia de Opções</strong>
+      <div class="export-actions"><button id="downloadJpg">Baixar JPG</button><button id="closeExport" class="export-close">Fechar</button></div>
     </div>
-    <div class="export-preview">
-      <canvas id="factsheetCanvas" width="1600" height="900"></canvas>
-    </div>
+    <div class="export-preview"><canvas id="factsheetCanvas" width="1600" height="900"></canvas></div>
   </div>
 </div>
 
+<script src="js/options-engine.js"></script>
 <script>
-const DATA = {
-  BBAS3:{'100':5.05,'102':3.31,'103':2.64},
-  B3SA3:{'100':4.03,'102':2.36,'103':1.76},
-  PETR4:{'100':3.87,'102':2.22,'103':1.64},
-  CEAB3:{'100':null,'102':null,'103':4.14}
+const CORE={
+  PETR4:{name:'Petrobras PN',fallbackSpot:51.17},
+  VALE3:{name:'Vale ON',fallbackSpot:null},
+  ITUB4:{name:'Itaú Unibanco PN',fallbackSpot:null},
+  B3SA3:{name:'B3 S.A.',fallbackSpot:19.00},
+  BBAS3:{name:'Banco do Brasil ON',fallbackSpot:23.72}
 };
-const STRUCTURES={
-  '100':{put:100,call:100,label:'100%',kind:'Straddle ATM'},
-  '102':{put:98,call:102,label:'102%',kind:'Strangle ±2%'},
-  '103':{put:97,call:103,label:'103%',kind:'Strangle ±3%'}
-};
-const SPOT_DEFAULTS={BBAS3:100,B3SA3:100,PETR4:49.66,CEAB3:100};
-let state={asset:'PETR4',structure:'103',metric:'spot',calibratedIV:0.60};
+let state={asset:'PETR4',strategyId:'long_strangle',universe:[],strategies:[],backlog:[],quote:null,quotesPayload:null,legs:[]};
 const $=id=>document.getElementById(id);
+const num=v=>{const n=Number(v);return Number.isFinite(n)?n:0};
 const fmt=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmt1=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
 const fmt0=n=>Math.round(Number(n)).toLocaleString('pt-BR');
 const brl=n=>'R$ '+Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const sideSign=s=>s==='buy'?1:-1;
 
-function normCDF(x){
-  const a1=0.319381530,a2=-0.356563782,a3=1.781477937,a4=-1.821255978,a5=1.330274429;
-  const L=Math.abs(x),k=1/(1+0.2316419*L);
-  const w=1-1/Math.sqrt(2*Math.PI)*Math.exp(-L*L/2)*(a1*k+a2*k*k+a3*k**3+a4*k**4+a5*k**5);
-  return x<0?1-w:w;
+function setStatus(kind,title,meta){
+  $('statusDot').className='status-dot'+(kind?' '+kind:'');
+  $('sourceTitle').textContent=title;$('sourceMeta').textContent=meta;
 }
-function bsmPrice(type,S,K,T,r,q,sigma){
-  if(T<=0 || sigma<=0){return type==='call'?Math.max(S-K,0):Math.max(K-S,0)}
-  const sq=Math.sqrt(T);
-  const d1=(Math.log(S/K)+(r-q+0.5*sigma*sigma)*T)/(sigma*sq);
-  const d2=d1-sigma*sq;
-  if(type==='call') return S*Math.exp(-q*T)*normCDF(d1)-K*Math.exp(-r*T)*normCDF(d2);
-  return K*Math.exp(-r*T)*normCDF(-d2)-S*Math.exp(-q*T)*normCDF(-d1);
-}
-function dateYears(a,b){
-  const d1=new Date(a+'T12:00:00'),d2=new Date(b+'T12:00:00');
-  return Math.max(0,(d2-d1)/86400000/365);
-}
-function params(){
-  const S=Number($('spotInput').value)||100;
-  const kp=S*(Number($('putStrikePct').value)||100)/100;
-  const kc=S*(Number($('callStrikePct').value)||100)/100;
-  const premPct=Number($('premiumPct').value)||0;
-  const premium=S*premPct/100;
-  const r=(Number($('rateInput').value)||0)/100;
-  const q=(Number($('divInput').value)||0)/100;
-  const Tentry=dateYears($('entryDate').value,$('expiryDate').value);
-  const Tscenario=dateYears($('scenarioDate').value,$('expiryDate').value);
-  const allocation=Math.max(0,Number($('allocationInput').value)||0);
-  const qty=premium>0?allocation/premium:0;
-  const notional=qty*S;
-  return {S,kp,kc,premPct,premium,r,q,Tentry,Tscenario,allocation,qty,notional};
-}
-function calibrateIV(p){
-  const override=Number($('ivEntryInput').value);
-  if(override>0) return override/100;
-  if(p.premium<=0) return 0.01;
-  let lo=0.001,hi=5.0;
-  for(let i=0;i<100;i++){
-    const mid=(lo+hi)/2;
-    const val=bsmPrice('put',p.S,p.kp,p.Tentry,p.r,p.q,mid)+bsmPrice('call',p.S,p.kc,p.Tentry,p.r,p.q,mid);
-    if(val>p.premium) hi=mid; else lo=mid;
-  }
-  return (lo+hi)/2;
-}
-function expiryPL(move,p){
-  const Sf=p.S*(1+move/100);
-  const intrinsic=Math.max(p.kp-Sf,0)+Math.max(Sf-p.kc,0);
-  return {Sf,intrinsic,pl:intrinsic-p.premium};
-}
-function mtm(move,p,iv){
-  const Sf=p.S*(1+move/100);
-  const val=bsmPrice('put',Sf,p.kp,p.Tscenario,p.r,p.q,iv)+bsmPrice('call',Sf,p.kc,p.Tscenario,p.r,p.q,iv);
-  return {Sf,val,pl:val-p.premium};
-}
-function breakEvens(p){return {low:p.kp-p.premium,high:p.kc+p.premium}}
+function normCDF(x){return OptionEngine.normCDF(x)}
+function bsm(type,S,K,T,r,q,sigma){return OptionEngine.bsm(type,S,K,T,r,q,sigma)}
+function years(a,b){return OptionEngine.years(a,b)}
+function intrinsic(type,S,K){return OptionEngine.intrinsic(type,S,K)}
+function roundStrike(x,step){step=Math.max(.01,step||.5);return Math.round(x/step)*step}
+function intrinsic(type,S,K){return type==='call'?Math.max(S-K,0):Math.max(K-S,0)}
+function currentStrategy(){return state.strategies.find(x=>x.id===state.strategyId)||state.strategies[0]||null}
+function universeAssets(){return state.universe.length?state.universe:Object.keys(CORE).map(symbol=>({symbol,name:CORE[symbol].name||symbol,close:CORE[symbol].fallbackSpot}))}
 
-function renderAssetCards(){
-  $('assetCards').innerHTML=Object.keys(DATA).map(a=>{
-    const d=DATA[a];
-    const rows=['100','102','103'].map(k=>`<div class="minirow"><span>${k==='100'?'ATM':k+'%'}</span><strong>${d[k]==null?'—':fmt(d[k])+'%'}</strong></div>`).join('');
-    return `<div class="asset-card ${state.asset===a?'active':''}" data-asset="${a}"><div class="asset-name">${a}</div><div class="asset-meta">Compra de volatilidade · evento</div>${rows}</div>`;
+async function loadUniverse(){
+  try{
+    const res=await fetch('data/universe-b3.json?v='+Date.now(),{cache:'no-store'});
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const p=await res.json();state.universe=Array.isArray(p.assets)?p.assets:[];
+    state.universe.forEach(a=>{CORE[a.symbol]={name:a.name||a.symbol,fallbackSpot:Number(a.close)>0?Number(a.close):null}});
+    $('universePill').textContent='Universo B3 · '+state.universe.length+' ativos';
+  }catch(e){$('universePill').textContent='Universo B3 · fallback'}
+}
+async function loadStrategies(){
+  const res=await fetch('data/strategies.json?v='+Date.now(),{cache:'no-store'});
+  if(!res.ok)throw new Error('Falha ao carregar catálogo');
+  const p=await res.json();state.strategies=p.strategies||[];state.backlog=p.backlog||[];
+}
+async function loadQuotesPayload(){
+  try{
+    const res=await fetch('data/quotes.json?v='+Date.now(),{cache:'no-store'});
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    state.quotesPayload=await res.json();
+  }catch(e){state.quotesPayload=null}
+}
+function buildAssetControls(){
+  const assets=universeAssets();
+  $('assetSelect').innerHTML=assets.map(a=>'<option value="'+a.symbol+'" '+(a.symbol===state.asset?'selected':'')+'>'+a.symbol+' · '+(a.name||a.symbol)+'</option>').join('');
+  $('assetList').innerHTML=assets.map(a=>'<option value="'+a.symbol+'" label="'+String(a.name||a.symbol).replace(/"/g,'&quot;')+'"></option>').join('');
+  $('assetSearch').value=state.asset;
+}
+function buildStrategySelect(){
+  const sel=$('strategySelect');sel.innerHTML='';
+  const order=['Essencial','Comum','Avançada'];
+  order.forEach(tier=>{
+    const rows=state.strategies.filter(s=>s.tier===tier);
+    if(!rows.length)return;
+    const og=document.createElement('optgroup');og.label=tier;
+    rows.forEach(st=>{const o=document.createElement('option');o.value=st.id;o.textContent=st.name+' · '+st.category;if(st.id===state.strategyId)o.selected=true;og.appendChild(o)});
+    sel.appendChild(og);
+  });
+}
+function renderCatalog(){
+  $('catalogCount').textContent=state.strategies.length+' estruturas';
+  $('catalogGrid').innerHTML=state.strategies.map(st=>{
+    const cls=st.id===state.strategyId?'strategy-card active':'strategy-card';
+    return '<div class="'+cls+'" data-strategy="'+st.id+'"><div class="strategy-tags"><span class="pill">'+st.tier+'</span><span class="pill gold">'+st.category+'</span></div><h4>'+st.name+'</h4><p>'+st.description+'</p></div>';
   }).join('');
-  document.querySelectorAll('.asset-card').forEach(el=>el.onclick=()=>{state.asset=el.dataset.asset;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;const valid=DATA[state.asset][state.structure]!=null;if(!valid)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
+  document.querySelectorAll('.strategy-card').forEach(el=>el.onclick=()=>selectStrategy(el.dataset.strategy));
 }
-function renderPremiumTable(){
-  const head=`<thead><tr><th>Ativo</th><th>100% · ATM</th><th>102% · ±2%</th><th>103% · ±3%</th></tr></thead>`;
-  const body=Object.entries(DATA).map(([a,d])=>`<tr><td><strong>${a}</strong></td>${['100','102','103'].map(k=>`<td class="${d[k]!=null?'clickable emph':'muted'}" data-a="${a}" data-k="${k}">${d[k]==null?'—':fmt(d[k])+'%'}</td>`).join('')}</tr>`).join('');
-  $('premiumTable').innerHTML=head+'<tbody>'+body+'</tbody>';
-  $('premiumTable').querySelectorAll('td[data-a]').forEach(td=>td.onclick=()=>{if(DATA[td.dataset.a][td.dataset.k]!=null){state.asset=td.dataset.a;state.structure=td.dataset.k;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;loadFromData();}});
+function strategyRiskClass(st){
+  const t=(st.risk||'').toLowerCase();
+  if(t.includes('ilimitada')||t.includes('ilimitado'))return 'danger';
+  return 'warning';
 }
-function renderSelects(){
-  $('assetSelect').innerHTML=Object.keys(DATA).map(a=>`<option ${a===state.asset?'selected':''}>${a}</option>`).join('');
-  $('structureSelect').innerHTML=Object.keys(STRUCTURES).filter(k=>DATA[state.asset][k]!=null).map(k=>`<option value="${k}" ${k===state.structure?'selected':''}>${STRUCTURES[k].label} · ${STRUCTURES[k].kind}</option>`).join('');
+function renderStrategySummary(){
+  const st=currentStrategy();if(!st)return;
+  $('strategySummary').innerHTML=
+    '<div class="summary-box"><div class="title">Estratégia</div><div class="main">'+st.name+'</div><div class="small">'+st.description+'</div></div>'+
+    '<div class="summary-box"><div class="title">Viés</div><div class="main">'+st.bias+'</div><div class="small">'+st.category+' · '+st.tier+'</div></div>'+
+    '<div class="summary-box"><div class="title">Perfil de risco</div><div class="main">'+st.risk+'</div><div class="small">'+st.legs.length+' perna(s) de opções'+(st.stockQty?' + ativo':'')+'</div></div>';
+  $('riskWarning').innerHTML='<div class="'+strategyRiskClass(st)+'"><strong>Atenção:</strong> '+st.risk+'. O simulador calcula payoff econômico, mas não calcula margem exigida pela B3/corretora.</div>';
 }
-function loadFromData(){
-  const s=STRUCTURES[state.structure];
-  $('putStrikePct').value=s.put;
-  $('callStrikePct').value=s.call;
-  $('premiumPct').value=DATA[state.asset][state.structure];
-  $('ivEntryInput').value='';
-  $('ivRatioRange').value=100;
-  renderAll();
+function suggestLegsFromStrategy(){
+  const st=currentStrategy(),S=num($('spotInput').value),step=num($('strikeStep').value)||.5;
+  if(!st)return;
+  state.legs=st.legs.map((l,i)=>({
+    id:i,side:l.side,type:l.type,qty:l.qty,
+    strike:roundStrike(S*l.strikePct/100,step),price:0,code:''
+  }));
+  renderLegs();updateAll();
 }
-
-function updateKpis(){
-  const p=params(); state.calibratedIV=calibrateIV(p); const be=breakEvens(p);
-  $('selectedLabel').textContent=`${state.asset} · ${STRUCTURES[state.structure].label}`;
-  $('structureKind').textContent=STRUCTURES[state.structure].kind;
-  $('premiumMoney').textContent='R$ '+fmt(p.premium);
-  $('premiumSub').textContent=fmt(p.premPct)+'% do spot';
-  $('beLow').textContent=fmt(be.low); $('beHigh').textContent=fmt(be.high);
-  $('beLowSub').textContent=pct((be.low/p.S-1)*100);
-  $('beHighSub').textContent=pct((be.high/p.S-1)*100);
-  $('ivCalibrated').textContent=fmt1(state.calibratedIV*100)+'%';
-  $('qtyLeg').textContent=p.qty>0?fmt0(p.qty):'—';
-  $('notionalEq').textContent=p.notional>0?brl(p.notional):'—';
-  syncIvControls(false);
+function renderStockLeg(){
+  const st=currentStrategy(),box=$('stockLeg');
+  if(st&&st.stockQty){
+    box.classList.add('show');
+    box.innerHTML='<strong>Perna no ativo:</strong> '+(st.stockQty>0?'Comprado ':'Vendido ')+Math.abs(st.stockQty)+' × ativo por unidade-base. Entrada pelo spot atual de '+brl(num($('spotInput').value))+'.';
+  }else{box.classList.remove('show');box.innerHTML=''}
 }
-function syncIvControls(fromRatio=true){
-  const ivE=state.calibratedIV*100;
-  if(fromRatio){
-    const ratio=Number($('ivRatioRange').value)/100;
-    $('ivPostRange').value=clamp(ivE*ratio,Number($('ivPostRange').min),Number($('ivPostRange').max));
+function renderLegs(){
+  renderStockLeg();
+  $('legs').innerHTML=state.legs.map((l,i)=>{
+    const priceLabel=l.side==='buy'?'Preço compra (Ask)':'Preço venda (Bid)';
+    return '<div class="leg-card '+l.side+'" data-leg="'+i+'">'+
+      '<div class="leg-head"><div class="leg-title">Perna '+(i+1)+' · '+(l.side==='buy'?'COMPRA':'VENDA')+' '+l.type.toUpperCase()+'</div><span class="pill '+(l.side==='buy'?'green':'red')+'">'+(l.side==='buy'?'long':'short')+'</span></div>'+
+      '<div class="leg-grid">'+
+      '<div class="mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
+      '<div class="mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
+      '<div class="mini"><label>Qtd.</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'"></div>'+
+      '<div class="mini"><label>Strike</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
+      '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
+      '<div class="mini"><label>'+priceLabel+'</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
+      '<div class="mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
+      '</div></div>';
+  }).join('');
+  document.querySelectorAll('.leg-card').forEach(card=>{
+    const i=Number(card.dataset.leg);
+    card.querySelectorAll('[data-f]').forEach(inp=>{
+      inp.addEventListener('input',()=>{
+        const f=inp.dataset.f;
+        let v=inp.value;
+        if(['qty','strike','price'].includes(f))v=num(v);
+        state.legs[i][f]=v;
+        if(f==='side'||f==='type'){renderLegs();updateAll();}
+        else updateAll();
+      });
+    });
+  });
+}
+function selectStrategy(id){
+  state.strategyId=id;
+  $('strategySelect').value=id;
+  renderStrategySummary();renderCatalog();suggestLegsFromStrategy();
+}
+function getSpotQuote(){
+  const q=state.quotesPayload?.quotes?.[state.asset];
+  if(q&&Number(q.price)>0)return q;
+  return null;
+}
+function applyQuote(){
+  const q=getSpotQuote();
+  if(q){
+    const price=Number(q.price);$('spotInput').value=price.toFixed(2);
+    state.quote=q;
+    let when='horário não informado';
+    if(q.market_time_utc){const d=new Date(q.market_time_utc);if(!Number.isNaN(d.getTime()))when=d.toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'})}
+    $('quotePill').textContent='Spot · '+brl(price);
+    setStatus('ok','Snapshot carregado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when);
+  }else{
+    state.quote=null;
+    const fb=CORE[state.asset]?.fallbackSpot;
+    $('spotInput').value=fb?Number(fb).toFixed(2):'';
+    $('quotePill').textContent='Spot · manual';
+    setStatus('err','Spot automático indisponível','Mantido spot manual/editável para '+state.asset+'.');
   }
-  const ivPost=Number($('ivPostRange').value);
-  const ratio=ivE>0?ivPost/ivE*100:0;
-  $('ivPostLabel').textContent=fmt1(ivPost)+'%';
-  $('ivRatioLabel').textContent=fmt1(ratio)+'%';
+  suggestLegsFromStrategy();
 }
-function updateSimulator(){
-  const p=params(); const move=Number($('moveRange').value); const iv=Number($('ivPostRange').value)/100;
-  const r=mtm(move,p,iv);
-  $('moveLabel').textContent=pct(move); $('simSpot').textContent=fmt(r.Sf); $('simMove').textContent=pct(move);
-  $('simValue').textContent='R$ '+fmt(r.val);
-  $('simPnl').textContent=(r.pl>=0?'+':'')+'R$ '+fmt(r.pl);
-  $('simPnl').className='value '+(r.pl>=0?'positive':'negative');
-  $('simPnlSpot').textContent=pct(r.pl/p.S*100)+' do spot';
-  const rop=p.premium? r.pl/p.premium*100:0;
-  $('simRop').textContent=pct(rop); $('simRop').className='value '+(rop>=0?'positive':'negative');
-}
-function renderScenarioTable(){
-  const p=params(),iv=Number($('ivPostRange').value)/100;
-  const moves=[-10,-8,-6,-5,-4,-3,0,3,4,5,6,8,10];
-  let html='<thead><tr><th>Movimento</th><th>Spot</th><th>P/L venc. (% spot)</th><th>Ret. prêmio venc.</th><th>Valor 05/10</th><th>P/L 05/10 (% spot)</th><th>Ret. prêmio 05/10</th></tr></thead><tbody>';
-  moves.forEach(m=>{
-    const e=expiryPL(m,p),x=mtm(m,p,iv);
-    const ev=e.pl/p.S*100, er=p.premium?e.pl/p.premium*100:0, xv=x.pl/p.S*100, xr=p.premium?x.pl/p.premium*100:0;
-    html+=`<tr><td>${pct(m)}</td><td>${fmt(e.Sf)}</td><td class="${ev>=0?'positive':'negative'}">${pct(ev)}</td><td class="${er>=0?'positive':'negative'}">${pct(er)}</td><td>${fmt(x.val)}</td><td class="${xv>=0?'positive':'negative'}">${pct(xv)}</td><td class="${xr>=0?'positive':'negative'}">${pct(xr)}</td></tr>`;
-  });
-  $('scenarioTable').innerHTML=html+'</tbody>';
-}
-function renderConvexity(){
-  const p=params(),S=p.S,asset=state.asset,moves=[3,5,7,10];
-  let html='<thead><tr><th>Estrutura</th><th>Custo</th>'+moves.map(m=>`<th>|Mov.| ${m}%</th>`).join('')+'</tr></thead><tbody>';
-  ['100','102','103'].forEach(k=>{
-    const cost=DATA[asset][k]; if(cost==null)return;
-    const st=STRUCTURES[k],kp=S*st.put/100,kc=S*st.call/100,prem=S*cost/100;
-    html+=`<tr><td><strong>${st.label}</strong> · ${st.kind}</td><td>${fmt(cost)}%</td>`;
-    moves.forEach(m=>{const Sf=S*(1+m/100),intr=Math.max(kp-Sf,0)+Math.max(Sf-kc,0),pl=intr-prem,rop=pl/prem*100;html+=`<td class="${rop>=0?'positive':'negative'}">${pct(rop)}</td>`});
-    html+='</tr>';
-  });
-  $('convexityTable').innerHTML=html+'</tbody>';
-}
-function drawChart(){
-  const canvas=$('payoffChart'); const rect=canvas.getBoundingClientRect(); const dpr=window.devicePixelRatio||1;
-  canvas.width=Math.max(600,Math.floor(rect.width*dpr)); canvas.height=Math.max(300,Math.floor(rect.height*dpr));
-  const ctx=canvas.getContext('2d'); ctx.scale(dpr,dpr);
-  const W=canvas.width/dpr,H=canvas.height/dpr;
-  const pad={l:58,r:18,t:18,b:42}; const iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
-  const p=params(),iv=Number($('ivPostRange').value)/100;
-  const xs=[];for(let m=-15;m<=15.0001;m+=.25)xs.push(m);
-  const ys1=xs.map(m=>{const v=expiryPL(m,p).pl;return state.metric==='spot'?v/p.S*100:(p.premium?v/p.premium*100:0)});
-  const ys2=xs.map(m=>{const v=mtm(m,p,iv).pl;return state.metric==='spot'?v/p.S*100:(p.premium?v/p.premium*100:0)});
-  let ymin=Math.min(...ys1,...ys2,0),ymax=Math.max(...ys1,...ys2,0); const extra=(ymax-ymin||1)*.12;ymin-=extra;ymax+=extra;
-  const xPx=m=>pad.l+(m+15)/30*iw; const yPx=y=>pad.t+(ymax-y)/(ymax-ymin)*ih;
-  ctx.clearRect(0,0,W,H);
-  ctx.font='11px Arial';ctx.fillStyle='#75828d';ctx.strokeStyle='#e4e8eb';ctx.lineWidth=1;
-  [-15,-10,-5,0,5,10,15].forEach(x=>{const px=xPx(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+x+'%',px-11,H-16)});
-  const steps=5;for(let i=0;i<=steps;i++){const y=ymin+(ymax-ymin)*i/steps,py=yPx(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText((y>=0?'+':'')+Math.round(y)+'%',5,py+4)}
-  ctx.strokeStyle='#87939d';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(pad.l,yPx(0));ctx.lineTo(W-pad.r,yPx(0));ctx.stroke();
-  function line(ys,color,dash=[]){ctx.save();ctx.strokeStyle=color;ctx.lineWidth=2.4;ctx.setLineDash(dash);ctx.beginPath();ys.forEach((y,i)=>{const px=xPx(xs[i]),py=yPx(y);if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)});ctx.stroke();ctx.restore();}
-  line(ys1,'#1F3249'); line(ys2,'#BA8758',[7,5]);
-  const st=STRUCTURES[state.structure];[st.put-100,st.call-100].forEach(m=>{if(m>=-15&&m<=15){ctx.save();ctx.strokeStyle='rgba(19,36,54,.35)';ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(xPx(m),pad.t);ctx.lineTo(xPx(m),H-pad.b);ctx.stroke();ctx.restore();}});
-  ctx.fillStyle='#1F3249';ctx.fillRect(W-245,16,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-223,21);
-  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,17.5);ctx.lineTo(W-122,17.5);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('MTM cenário',W-116,21);
+async function refreshSnapshot(){
+  setStatus('','Recarregando snapshot…','Atualizando o arquivo same-origin de cotações.');
+  await loadQuotesPayload();applyQuote();
 }
 
-function formatDateBr(iso){
-  if(!iso)return '—';
-  const a=iso.split('-'); return a.length===3?(a[2]+'/'+a[1]+'/'+a[0]):iso;
+function impliedVolLeg(type,S,K,T,price,r,q){return OptionEngine.impliedVolLeg(type,S,K,T,price,r,q)}
+function model(){
+  const st=currentStrategy(),S=num($('spotInput').value),lot=Math.max(1,Math.floor(num($('lotSize').value)||1)),lots=Math.max(1,Math.floor(num($('lots').value)||1)),units=lot*lots;
+  const r=num($('rateInput').value)/100,q=num($('divInput').value)/100,T=years($('entryDate').value,$('expiryDate').value);
+  const grossAbsPrem=state.legs.reduce((a,l)=>a+Math.abs(num(l.price)*Math.max(1,num(l.qty))),0);
+  const optionCashflowPerUnit=state.legs.reduce((a,l)=>a+(l.side==='sell'?1:-1)*num(l.price)*Math.max(1,num(l.qty)),0);
+  const feeType=$('feeType').value,feeValue=Math.max(0,num($('feeValue').value));
+  let variableFee=0;
+  if(feeType==='premium')variableFee=grossAbsPrem*units*feeValue/100;
+  if(feeType==='notional')variableFee=S*units*feeValue/100;
+  if(feeType==='fixed')variableFee=feeValue;
+  const entryCost=variableFee+Math.max(0,num($('entryFixedCost').value));
+  const stockQty=st?num(st.stockQty):0;
+  const stockNotional=Math.abs(stockQty)*S*units;
+  const legIV=state.legs.map(l=>impliedVolLeg(l.type,S,num(l.strike),T,num(l.price),r,q));
+  return {st,S,lot,lots,units,r,q,T,grossAbsPrem,optionCashflowPerUnit,optionCashflowTotal:optionCashflowPerUnit*units,entryCost,stockQty,stockNotional,legIV};
 }
-function calendarDays(a,b){
-  const d1=new Date(a+'T12:00:00'),d2=new Date(b+'T12:00:00');
-  return Math.max(0,Math.round((d2-d1)/86400000));
-}
-function canvasRoundRect(ctx,x,y,w,h,r,fill,stroke){
-  const rr=Math.min(r,w/2,h/2);
-  ctx.beginPath();ctx.moveTo(x+rr,y);ctx.arcTo(x+w,y,x+w,y+h,rr);ctx.arcTo(x+w,y+h,x,y+h,rr);ctx.arcTo(x,y+h,x,y,rr);ctx.arcTo(x,y,x+w,y,rr);ctx.closePath();
-  if(fill){ctx.fillStyle=fill;ctx.fill()} if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}
-}
-function canvasText(ctx,text,x,y,size,weight,color,align){
-  ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color||'#1A2027';ctx.textAlign=align||'left';ctx.textBaseline='alphabetic';ctx.fillText(String(text),x,y);
-}
-function canvasWrap(ctx,text,x,y,maxWidth,lineHeight,maxLines,color,size,weight){
-  ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color;ctx.textAlign='left';ctx.textBaseline='alphabetic';
-  const words=String(text).split(/\s+/);let line='',lines=[],i=0;
-  for(i=0;i<words.length;i++){const test=line?line+' '+words[i]:words[i];if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=words[i]}else line=test}
-  if(line)lines.push(line);
-  if(maxLines&&lines.length>maxLines){lines=lines.slice(0,maxLines);lines[maxLines-1]=lines[maxLines-1].replace(/[. ]*$/,'')+'…'}
-  lines.forEach((ln,idx)=>ctx.fillText(ln,x,y+idx*lineHeight));
-  return lines.length;
-}
-function factsheetLevels(p){
-  const be=breakEvens(p),callMove=(p.kc/p.S-1)*100,putMove=(p.kp/p.S-1)*100;
-  const hiMove=(be.high/p.S-1)*100,loMove=(be.low/p.S-1)*100;
-  const raw=[
-    {move:9},{move:7.2},{move:5.4},{move:hiMove,label:'BE ▲',kind:'be'},
-    {move:callMove,label:'CALL',kind:'strike'},{move:1.8},{move:0,kind:'spot'},
-    {move:-1.8},{move:putMove,label:'PUT',kind:'strike'},{move:loMove,label:'BE ▼',kind:'be'},
-    {move:-5.4},{move:-7.2},{move:-9}
-  ];
-  const m=new Map();
-  raw.forEach(r=>{
-    const key=r.move.toFixed(3);
-    if(!m.has(key))m.set(key,Object.assign({},r));
-    else{
-      const e=m.get(key);
-      if(r.label)e.label=e.label?e.label+'/'+r.label:r.label;
-      if(r.kind==='spot'||(r.kind==='be'&&e.kind!=='spot'))e.kind=r.kind;
-    }
-  });
-  return Array.from(m.values()).sort((a,b)=>b.move-a.move);
-}
-function drawFactsheet(){
-  const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1600,H=900;
-  c.width=W;c.height=H;
-
-  const C={
-    bg:'#0B1722',
-    deep:'#102333',
-    panel:'#142A3B',
-    panel2:'#193247',
-    panel3:'#0F2231',
-    blue:'#1F3249',
-    gold:'#BA8758',
-    gold2:'#D2A26F',
-    white:'#FFFFFF',
-    text:'#E8EEF3',
-    muted:'#9EACB7',
-    line:'#29485F',
-    soft:'#DCDDDE',
-    green:'#59C59E',
-    greenFill:'rgba(89,197,158,.18)',
-    red:'#F07C7C',
-    redFill:'rgba(240,124,124,.16)'
+function enginePayload(m){
+  return {
+    spot:m.S,units:m.units,entryCost:m.entryCost,exitCost:Math.max(0,num($('exitFixedCost').value)),
+    stockQty:m.stockQty,rate:m.r,dividendYield:m.q,
+    entryDate:$('entryDate').value,expiryDate:$('expiryDate').value,scenarioDate:$('scenarioDate').value,
+    ivFallback:Math.max(.01,num($('ivFallback').value)/100),
+    legs:state.legs.map((l,i)=>({side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),price:num(l.price),iv:m.legIV[i]||0}))
   };
-
-  const p=params(),be=breakEvens(p);
-  const type=Math.abs(p.kc-p.kp)<1e-8?'Straddle':'Strangle';
-  const callPct=p.kc/p.S*100,putPct=p.kp/p.S*100;
-  const days=calendarDays($('entryDate').value,$('expiryDate').value);
-
-  ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
-
-  // detalhes de marca - linhas e acentos
-  ctx.fillStyle=C.gold;ctx.fillRect(0,0,12,H);
-  ctx.fillStyle=C.deep;ctx.fillRect(12,0,W-12,156);
-  ctx.fillStyle=C.gold;ctx.fillRect(60,154,W-120,2);
-
-  // cabeçalho premium
-  canvasText(ctx,'JACARANDÁ INVESTIMENTOS',62,50,16,700,C.gold2);
-  canvasText(ctx,'Estruturadas Jacarandá',62,96,43,700,C.white);
-  canvasText(ctx,type+' comprado · '+state.asset+' · Simulação de Opções',62,128,21,400,C.text);
-
-  function chip(x,y,w,text,filled){
-    canvasRoundRect(ctx,x,y,w,34,17,filled?C.gold:C.panel2,filled?null:C.line);
-    canvasText(ctx,text,x+w/2,y+22,12,700,filled?C.bg:C.text,'center');
-  }
-  chip(1170,48,150,'VENC. '+formatDateBr($('expiryDate').value),true);
-  chip(1330,48,96,days+' DIAS',false);
-  chip(1436,48,104,state.asset,false);
-
-  // layout principal
-  const leftX=60,leftW=515,gap=28,rightX=leftX+leftW+gap,rightW=1600-rightX-60;
-  const topY=184;
-
-  // painel de estrutura
-  canvasRoundRect(ctx,leftX,topY,leftW,134,18,C.panel);
-  canvasText(ctx,'ESTRUTURA',leftX+22,topY+29,11,700,C.gold2);
-  canvasText(ctx,'Compra Call '+fmt1(callPct)+'%  +  Compra Put '+fmt1(putPct)+'%',leftX+22,topY+63,23,700,C.white);
-  canvasText(ctx,'Prêmio total '+fmt(p.premPct)+'% do spot  ·  risco máximo limitado ao prêmio',leftX+22,topY+91,13,400,C.muted);
-  canvasText(ctx,'Entrada '+formatDateBr($('entryDate').value)+'  |  Desmontagem de referência '+formatDateBr($('scenarioDate').value),leftX+22,topY+115,12,400,C.muted);
-
-  // cards executivos
-  const cardGap=12,cardW=(leftW-cardGap)/2,cardH=78;
-  function metricCard(x,y,label,value,sub,accent){
-    canvasRoundRect(ctx,x,y,cardW,cardH,14,C.panel2,C.line);
-    canvasText(ctx,label.toUpperCase(),x+16,y+22,10,700,C.muted);
-    canvasText(ctx,value,x+16,y+49,21,700,accent||C.white);
-    if(sub)canvasText(ctx,sub,x+16,y+67,10,400,C.muted);
-  }
-  let cy=topY+150;
-  metricCard(leftX,cy,'Preço atual',brl(p.S),'spot de referência');
-  metricCard(leftX+cardW+cardGap,cy,'Prêmio pago',fmt(p.premPct)+'% · '+brl(p.premium),'por unidade');
-  cy+=cardH+cardGap;
-  metricCard(leftX,cy,'Breakeven baixa',brl(be.low),pct((be.low/p.S-1)*100),C.gold2);
-  metricCard(leftX+cardW+cardGap,cy,'Breakeven alta',brl(be.high),pct((be.high/p.S-1)*100),C.gold2);
-  cy+=cardH+cardGap;
-  metricCard(leftX,cy,'Valor alocado',brl(p.allocation),'prêmio total');
-  metricCard(leftX+cardW+cardGap,cy,'Notional equivalente',brl(p.notional),fmt0(p.qty)+' por perna');
-
-  // payoff
-  const chartY=cy+cardH+18,chartH=260;
-  canvasRoundRect(ctx,leftX,chartY,leftW,chartH,18,C.panel3,C.line);
-  canvasText(ctx,'PAYOFF NO VENCIMENTO',leftX+20,chartY+28,11,700,C.gold2);
-  canvasText(ctx,'% sobre o prêmio pago',leftX+20,chartY+49,11,400,C.muted);
-
-  const plot={x:leftX+58,y:chartY+64,w:leftW-92,h:chartH-102};
-  const samples=[];
-  for(let m=-10;m<=10.0001;m+=0.1){
-    const e=expiryPL(m,p),r=p.premium?e.pl/p.premium*100:0;
-    samples.push({m:m,r:r});
-  }
-  const maxR=Math.max(100,...samples.map(o=>o.r));
-  const yMax=Math.max(100,Math.ceil(maxR/50)*50),yMin=-100;
-  const xp=m=>plot.x+(m+10)/20*plot.w;
-  const yp=v=>plot.y+(yMax-v)/(yMax-yMin)*plot.h;
-  const y0=yp(0);
-
-  ctx.strokeStyle=C.line;ctx.lineWidth=1;
-  [-10,-5,0,5,10].forEach(m=>{
-    const x=xp(m);ctx.beginPath();ctx.moveTo(x,plot.y);ctx.lineTo(x,plot.y+plot.h);ctx.stroke();
-    canvasText(ctx,(m>0?'+':'')+m+'%',x,chartY+chartH-14,10,400,C.muted,'center');
-  });
-  [yMin,0,yMax].forEach(v=>{
-    const y=yp(v);ctx.beginPath();ctx.moveTo(plot.x,y);ctx.lineTo(plot.x+plot.w,y);ctx.stroke();
-  });
-
-  for(let i=0;i<samples.length-1;i++){
-    const a=samples[i],b=samples[i+1];
-    function fillSegment(aa,bb,col){
-      ctx.fillStyle=col;ctx.beginPath();
-      ctx.moveTo(xp(aa.m),y0);ctx.lineTo(xp(aa.m),yp(aa.r));
-      ctx.lineTo(xp(bb.m),yp(bb.r));ctx.lineTo(xp(bb.m),y0);ctx.closePath();ctx.fill();
-    }
-    if((a.r>=0&&b.r>=0)||(a.r<=0&&b.r<=0)) fillSegment(a,b,a.r>=0?C.greenFill:C.redFill);
-    else{
-      const t=(0-a.r)/(b.r-a.r),cross={m:a.m+t*(b.m-a.m),r:0};
-      fillSegment(a,cross,a.r>=0?C.greenFill:C.redFill);
-      fillSegment(cross,b,b.r>=0?C.greenFill:C.redFill);
-    }
-  }
-  ctx.strokeStyle=C.gold2;ctx.lineWidth=3;ctx.beginPath();
-  samples.forEach((o,i)=>{if(i===0)ctx.moveTo(xp(o.m),yp(o.r));else ctx.lineTo(xp(o.m),yp(o.r))});
-  ctx.stroke();ctx.lineWidth=1;
-
-  const beMoves=[(be.low/p.S-1)*100,(be.high/p.S-1)*100];
-  beMoves.forEach(m=>{
-    if(m>=-10&&m<=10){
-      ctx.fillStyle=C.gold2;ctx.beginPath();ctx.arc(xp(m),y0,5,0,Math.PI*2);ctx.fill();
-    }
-  });
-  canvasText(ctx,'+'+fmt0(yMax)+'%',leftX+30,plot.y+4,10,400,C.muted,'center');
-  canvasText(ctx,'0%',leftX+30,y0+4,10,400,C.muted,'center');
-  canvasText(ctx,'-100%',leftX+30,plot.y+plot.h+4,10,400,C.muted,'center');
-
-  // painel direito - tabela de cenários
-  canvasRoundRect(ctx,rightX,topY,rightW,472,18,C.panel,C.line);
-  canvasText(ctx,'CENÁRIOS NO VENCIMENTO',rightX+22,topY+30,11,700,C.gold2);
-  canvasText(ctx,'Retorno da estrutura para movimentos do ativo',rightX+22,topY+53,13,400,C.muted);
-
-  const tableX=rightX+20,tableY=topY+76,tableW=rightW-40;
-  const widths=[145,145,180,190,190],headerH=42,rowH=27;
-  const headers=['MOVIMENTO','ATIVO (R$)','P/L / NOTIONAL','RET. / PRÊMIO','P/L SOBRE ALOCAÇÃO'];
-  let hx=tableX;
-  headers.forEach((h,i)=>{
-    ctx.fillStyle=C.deep;ctx.fillRect(hx,tableY,widths[i],headerH);
-    canvasText(ctx,h,hx+widths[i]-12,tableY+26,10,700,C.gold2,'right');
-    hx+=widths[i];
-  });
-
-  const levels=factsheetLevels(p);
-  levels.forEach((lv,idx)=>{
-    const yy=tableY+headerH+idx*rowH;
-    const e=expiryPL(lv.move,p);
-    const rn=e.pl/p.S*100;
-    const rr=p.premium?e.pl/p.premium*100:0;
-    const rrMoney=rr/100*p.allocation;
-    const isSpot=lv.kind==='spot';
-    const isBE=lv.kind==='be';
-
-    ctx.fillStyle=isSpot?'rgba(186,135,88,.22)':(idx%2?C.panel2:C.panel3);
-    ctx.fillRect(tableX,yy,tableW,rowH);
-
-    if(isSpot){ctx.fillStyle=C.gold;ctx.fillRect(tableX,yy,4,rowH);}
-    if(isBE){ctx.fillStyle=C.gold2;ctx.fillRect(tableX,yy,3,rowH);}
-
-    let xx=tableX;
-    const moveTxt=pct(lv.move);
-    canvasText(ctx,moveTxt,xx+12,yy+19,12,isSpot?700:400,isSpot?C.gold2:C.text);
-    if(lv.label){
-      canvasRoundRect(ctx,xx+78,yy+6,56,16,8,isBE?'rgba(186,135,88,.18)':C.deep,isBE?C.gold:null);
-      canvasText(ctx,lv.label,xx+106,yy+18,8,700,C.gold2,'center');
-    }
-    xx+=widths[0];
-
-    canvasText(ctx,brl(e.Sf),xx+widths[1]-12,yy+19,12,400,C.text,'right');xx+=widths[1];
-    const rnCol=rn>0.0001?C.green:(rn<-0.0001?C.red:C.muted);
-    const rrCol=rr>0.0001?C.green:(rr<-0.0001?C.red:C.muted);
-    canvasText(ctx,pct(rn),xx+widths[2]-12,yy+19,12,700,rnCol,'right');xx+=widths[2];
-    canvasText(ctx,pct(rr),xx+widths[3]-12,yy+19,12,700,rrCol,'right');xx+=widths[3];
-    canvasText(ctx,(rrMoney>0?'+':'')+brl(rrMoney),xx+widths[4]-12,yy+19,12,700,rrCol,'right');
-  });
-
-  // painel de leitura/insights
-  const infoY=topY+492,infoH=chartY+chartH-infoY;
-  canvasRoundRect(ctx,rightX,infoY,rightW,infoH,18,C.panel3,C.line);
-  canvasText(ctx,'LEITURA DA ESTRUTURA',rightX+22,infoY+28,11,700,C.gold2);
-
-  const riskText='Risco máximo';
-  const lossValue=brl(p.allocation);
-  const payoffText='Lucro máximo';
-  const payoffValue='Ilimitado';
-  const qtyText='Quantidade';
-  const qtyValue=fmt0(p.qty)+' / perna';
-
-  function insight(x,label,value,color){
-    canvasText(ctx,label.toUpperCase(),x,infoY+58,9,700,C.muted);
-    canvasText(ctx,value,x,infoY+84,18,700,color||C.white);
-  }
-  insight(rightX+22,riskText,lossValue,C.red);
-  insight(rightX+212,payoffText,payoffValue,C.green);
-  insight(rightX+392,qtyText,qtyValue,C.white);
-
-  ctx.strokeStyle=C.line;ctx.beginPath();ctx.moveTo(rightX+22,infoY+104);ctx.lineTo(rightX+rightW-22,infoY+104);ctx.stroke();
-
-  const lossText=type==='Straddle'?'próximo ao strike comum':'entre os strikes';
-  const expl='A estrutura compra volatilidade dos dois lados do ativo. No vencimento, passa a apresentar resultado positivo acima de '+brl(be.high)+' ou abaixo de '+brl(be.low)+'. O risco é limitado ao prêmio desembolsado e a perda máxima ocorre com o ativo '+lossText+'.';
-  canvasWrap(ctx,expl,rightX+22,infoY+132,rightW-44,20,4,C.text,13,400);
-
-  // rodapé premium
-  ctx.fillStyle=C.gold;ctx.fillRect(60,838,1480,1);
-  canvasText(ctx,'SIMULAÇÃO ILUSTRATIVA · USO INTERNO',60,866,10,700,C.gold2);
-  canvasText(ctx,'Resultados no vencimento, antes de custos, taxas e impostos. Não constitui recomendação de investimento. Opções podem resultar na perda integral do prêmio pago.',60,884,10,400,C.muted);
-  canvasText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1540,874,10,400,C.muted,'right');
 }
-function openFactsheetExport(){
-  drawFactsheet();
-  $('exportOverlay').classList.add('open');
-  $('exportOverlay').setAttribute('aria-hidden','false');
+function expiryPnlPerUnit(Sf,m){return OptionEngine.expiryPnlPerUnit(enginePayload(m),Sf)}
+function expiryPnlTotal(Sf,m){return OptionEngine.expiryPnlTotal(enginePayload(m),Sf)}
+function scenarioOptionNetValuePerUnit(Sf,m,ivRatio){return OptionEngine.scenarioOptionNetValuePerUnit(enginePayload(m),Sf,ivRatio)}
+function mtmPnlTotal(Sf,m,ivRatio){return OptionEngine.mtmPnlTotal(enginePayload(m),Sf,ivRatio)}
+function analyzeRisk(m){return OptionEngine.analyzeRisk(enginePayload(m))}
+function autoRange(m,risk){return OptionEngine.autoRange(enginePayload(m))}
+function chartRange(m,risk){const v=$('rangeMode').value;return v==='auto'?autoRange(m,risk):num(v)}
+
+const COMPARATOR_KEY='jacaranda.options.comparator.v1';
+function comparatorItems(){
+  try{const x=JSON.parse(localStorage.getItem(COMPARATOR_KEY)||'[]');return Array.isArray(x)?x:[]}catch(e){return[]}
 }
-function closeFactsheetExport(){
-  $('exportOverlay').classList.remove('open');
-  $('exportOverlay').setAttribute('aria-hidden','true');
+function updateComparatorButton(){
+  const el=$('addComparator');if(!el)return;
+  const n=comparatorItems().length;el.textContent='Adicionar ao Comparador ('+n+'/4)';
 }
-function downloadFactsheetJpg(){
-  drawFactsheet();
-  const c=$('factsheetCanvas'),a=document.createElement('a');
-  a.download='Estruturadas_Jacaranda_'+state.asset+'_'+state.structure+'_'+$('entryDate').value+'.jpg';
-  a.href=c.toDataURL('image/jpeg',0.95);document.body.appendChild(a);a.click();a.remove();
+function serializeCurrent(){
+  const m=model(),st=currentStrategy(),risk=analyzeRisk(m);
+  return {
+    id:(window.crypto&&crypto.randomUUID)?crypto.randomUUID():'cmp-'+Date.now()+'-'+Math.random().toString(36).slice(2),
+    savedAt:new Date().toISOString(),
+    asset:state.asset,assetName:CORE[state.asset]?.name||state.asset,
+    strategyId:state.strategyId,strategyName:st?.name||state.strategyId,
+    category:st?.category||'',bias:st?.bias||'',riskLabel:st?.risk||'',
+    spot:m.S,units:m.units,entryCost:m.entryCost,exitCost:Math.max(0,num($('exitFixedCost').value)),
+    stockQty:m.stockQty,rate:m.r,dividendYield:m.q,
+    entryDate:$('entryDate').value,expiryDate:$('expiryDate').value,scenarioDate:$('scenarioDate').value,
+    ivFallback:Math.max(.01,num($('ivFallback').value)/100),
+    optionCashflowTotal:m.optionCashflowTotal,
+    legs:state.legs.map((l,i)=>({side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),price:num(l.price),code:l.code||'',iv:m.legIV[i]||0})),
+    risk:{maxGain:risk.maxGain,maxLoss:risk.maxLoss,bes:risk.bes}
+  };
+}
+function addToComparator(){
+  const item=serializeCurrent();
+  if(!(item.spot>0)){alert('Informe um spot válido antes de adicionar ao Comparador.');return}
+  if(item.legs.some(l=>!(l.strike>0))){alert('Revise os strikes antes de adicionar ao Comparador.');return}
+  const items=comparatorItems();
+  if(items.length>=4){alert('O Comparador aceita até 4 estruturas. Remova uma estrutura no Comparador antes de adicionar outra.');return}
+  items.push(item);localStorage.setItem(COMPARATOR_KEY,JSON.stringify(items));updateComparatorButton();
+  const go=confirm('Estrutura adicionada ao Comparador ('+items.length+'/4). Deseja abrir o Comparador agora?');
+  if(go)location.href='comparador.html';
 }
 
-function renderAll(){
-  renderAssetCards();renderPremiumTable();renderSelects();updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();
+function updateAll(){
+  const m=model(),risk=analyzeRisk(m);
+  const debitCredit=m.optionCashflowTotal>=0?'Crédito':'Débito';
+  $('initialFlow').textContent=(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal));
+  $('initialFlow').className='value '+(m.optionCashflowTotal>=0?'positive':'negative');
+  $('initialFlowSub').textContent=debitCredit+' bruto de opções';
+  $('flowPill').textContent=debitCredit;
+  $('feeTotal').textContent=brl(m.entryCost);
+  $('stockNotional').textContent=m.stockNotional>0?brl(m.stockNotional):'—';
+  $('stockNotionalSub').textContent=m.stockQty?'posição '+(m.stockQty>0?'comprada':'vendida')+' no ativo':'sem perna no ativo';
+  $('units').textContent=fmt0(m.units);
+  $('maxLoss').textContent=risk.maxLoss===-Infinity?'Ilimitada':(risk.maxLoss==null?'—':brl(Math.abs(Math.min(0,risk.maxLoss))));
+  $('maxGain').textContent=risk.maxGain===Infinity?'Ilimitado':(risk.maxGain==null?'—':brl(Math.max(0,risk.maxGain)));
+  $('breakevens').textContent=risk.bes.length?risk.bes.slice(0,4).map(brl).join(' · '):'—';
+  $('breakevensSub').textContent=risk.bes.length?risk.bes.map(v=>pct((v/m.S-1)*100)).join(' / '):'sem raiz no range econômico';
+  const ivs=m.legIV.filter(v=>v>0);$('ivSummary').textContent=ivs.length?ivs.map(v=>fmt1(v*100)+'%').join(' · '):'—';
+  state.legs.forEach((l,i)=>{const el=$('legIv'+i);if(el)el.textContent=m.legIV[i]>0?fmt1(m.legIV[i]*100)+'%':'—'});
+  updateScenarioDateLabel();
+  updateSlider(m,risk);
+  updateScenario(m);
+  drawChart(m,risk);
+  renderTable(m,risk);
+}
+function updateScenarioDateLabel(){
+  const v=$('scenarioDate').value;if(!v){$('scenarioDateLabel').textContent='editável';return}
+  const a=v.split('-');$('scenarioDateLabel').textContent=a.length===3?(a[2]+'/'+a[1]+'/'+a[0]):v;
+}
+function updateSlider(m,risk){
+  const r=chartRange(m,risk),lo=-Math.min(99,r);
+  $('moveRange').min=lo;$('moveRange').max=r;
+  $('moveRange').value=clamp(num($('moveRange').value),lo,r);
+  $('matrixRange').textContent=(lo===-r?'±'+fmt0(r)+'%':fmt0(lo)+'% / +'+fmt0(r)+'%');
+}
+function updateScenario(m){
+  const mv=num($('moveRange').value),Sf=Math.max(.0001,m.S*(1+mv/100)),ratio=num($('ivRatio').value)/100;
+  const exp=expiryPnlTotal(Sf,m),mtm=mtmPnlTotal(Sf,m,ratio),netOpt=scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units;
+  $('moveLabel').textContent=pct(mv);$('ivRatioLabel').textContent=fmt0(num($('ivRatio').value))+'%';
+  $('simSpot').textContent=brl(Sf);$('simSpotSub').textContent=pct(mv);
+  $('simExpiryPnl').textContent=(exp>=0?'+':'')+brl(exp);$('simExpiryPnl').className='value '+(exp>=0?'positive':'negative');
+  $('simMtmPnl').textContent=(mtm>=0?'+':'')+brl(mtm);$('simMtmPnl').className='value '+(mtm>=0?'positive':'negative');
+  $('simOptionMtm').textContent=(netOpt>=0?'+':'')+brl(netOpt);$('simOptionMtm').className='value '+(netOpt>=0?'positive':'negative');
+}
+function drawChart(m,risk){
+  const c=$('chart'),rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  c.width=Math.max(700,Math.floor(rect.width*dpr));c.height=Math.max(330,Math.floor(rect.height*dpr));
+  const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+  const W=c.width/dpr,H=c.height/dpr,pad={l:72,r:20,t:28,b:44},iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
+  const R=chartRange(m,risk),lo=-Math.min(99,R),xs=[];for(let x=lo;x<=R+.001;x+=(R-lo)/180)xs.push(x);
+  const ratio=num($('ivRatio').value)/100;
+  const yExp=xs.map(x=>expiryPnlTotal(Math.max(.0001,m.S*(1+x/100)),m));
+  const yMtm=xs.map(x=>mtmPnlTotal(Math.max(.0001,m.S*(1+x/100)),m,ratio));
+  let ymin=Math.min(0,...yExp,...yMtm),ymax=Math.max(0,...yExp,...yMtm),extra=(ymax-ymin||1)*.12;ymin-=extra;ymax+=extra;
+  const xp=x=>pad.l+(x-lo)/(R-lo)*iw,yp=y=>pad.t+(ymax-y)/(ymax-ymin)*ih;
+  ctx.clearRect(0,0,W,H);ctx.font='11px Arial';ctx.strokeStyle='#e4e8eb';ctx.fillStyle='#75828d';
+  [lo,(lo+0)/2,0,R/2,R].forEach(x=>{const px=xp(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+fmt1(x)+'%',px-18,H-15)});
+  for(let i=0;i<=5;i++){const y=ymin+(ymax-ymin)*i/5,py=yp(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText((y>=0?'+':'')+Math.round(y).toLocaleString('pt-BR'),6,py+4)}
+  ctx.strokeStyle='#87939d';ctx.beginPath();ctx.moveTo(pad.l,yp(0));ctx.lineTo(W-pad.r,yp(0));ctx.stroke();
+  function line(arr,col,dash){ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2.7;ctx.setLineDash(dash||[]);ctx.beginPath();arr.forEach((y,i)=>{if(i===0)ctx.moveTo(xp(xs[i]),yp(y));else ctx.lineTo(xp(xs[i]),yp(y))});ctx.stroke();ctx.restore()}
+  line(yExp,'#1F3249');line(yMtm,'#BA8758',[7,5]);
+  ctx.fillStyle='#1F3249';ctx.fillRect(W-250,17,16,3);ctx.fillStyle='#56636e';ctx.fillText('Vencimento',W-228,22);
+  ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-140,18);ctx.lineTo(W-124,18);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('MTM cenário',W-118,22);
+}
+function renderTable(m,risk){
+  const R=chartRange(m,risk),lo=-Math.min(99,R),moves=[lo,lo*.75,lo*.5,lo*.25,0,R*.25,R*.5,R*.75,R].map(x=>Math.round(x*10)/10);
+  const ratio=num($('ivRatio').value)/100;
+  let h='<thead><tr><th>Movimento</th><th>Spot</th><th>P/L vencimento</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
+  moves.forEach(mv=>{const Sf=Math.max(.0001,m.S*(1+mv/100)),e=expiryPnlTotal(Sf,m),x=mtmPnlTotal(Sf,m,ratio),v=scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units;
+    h+='<tr><td>'+pct(mv)+'</td><td>'+brl(Sf)+'</td><td class="'+(e>=0?'positive':'negative')+'">'+(e>=0?'+':'')+brl(e)+'</td><td class="'+(x>=0?'positive':'negative')+'">'+(x>=0?'+':'')+brl(x)+'</td><td>'+(v>=0?'+':'')+brl(v)+'</td></tr>'});
+  $('scenarioTable').innerHTML=h+'</tbody>';
 }
 
-$('assetSelect').addEventListener('change',e=>{state.asset=e.target.value;$('spotInput').value=SPOT_DEFAULTS[state.asset]||100;if(DATA[state.asset][state.structure]==null)state.structure=Object.keys(DATA[state.asset]).find(k=>DATA[state.asset][k]!=null);loadFromData();});
-$('structureSelect').addEventListener('change',e=>{state.structure=e.target.value;loadFromData();});
-['spotInput','putStrikePct','callStrikePct','premiumPct','allocationInput','entryDate','scenarioDate','expiryDate','rateInput','divInput','ivEntryInput'].forEach(id=>$(id).addEventListener('input',()=>{updateKpis();updateSimulator();renderScenarioTable();renderConvexity();drawChart();}));
-$('moveRange').addEventListener('input',()=>{updateSimulator();});
-$('ivRatioRange').addEventListener('input',()=>{syncIvControls(true);updateSimulator();renderScenarioTable();drawChart();});
-$('ivPostRange').addEventListener('input',()=>{syncIvControls(false);updateSimulator();renderScenarioTable();drawChart();});
-$('resetStructure').onclick=()=>loadFromData();
-$('copyLinkData').onclick=async()=>{const p=params();const text=`${state.asset} ${STRUCTURES[state.structure].label} | Spot ${fmt(p.S)} | Put ${fmt(p.kp)} | Call ${fmt(p.kc)} | Prêmio ${fmt(p.premium)} (${fmt(p.premPct)}%) | Alocação ${brl(p.allocation)} | Entrada ${$('entryDate').value} | Saída ${$('scenarioDate').value} | Venc. ${$('expiryDate').value}`;try{await navigator.clipboard.writeText(text);$('copyLinkData').textContent='Copiado';setTimeout(()=>$('copyLinkData').textContent='Copiar parâmetros',1300)}catch(e){prompt('Copie os parâmetros:',text)}};
-$('generateJpg').onclick=openFactsheetExport;
-$('downloadJpg').onclick=downloadFactsheetJpg;
-$('closeExport').onclick=closeFactsheetExport;
-$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheetExport();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheetExport();});
-document.querySelectorAll('#metricToggle button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#metricToggle button').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.metric=b.dataset.metric;drawChart();});
-window.addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(drawChart,100)});
+function formatDateBr(iso){if(!iso)return'—';const a=iso.split('-');return a.length===3?a[2]+'/'+a[1]+'/'+a[0]:iso}
+function cRound(ctx,x,y,w,h,r,fill,stroke){const rr=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+rr,y);ctx.arcTo(x+w,y,x+w,y+h,rr);ctx.arcTo(x+w,y+h,x,y+h,rr);ctx.arcTo(x,y+h,x,y,rr);ctx.arcTo(x,y,x+w,y,rr);ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}}
+function cText(ctx,text,x,y,size,weight,color,align){ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color||'#fff';ctx.textAlign=align||'left';ctx.textBaseline='alphabetic';ctx.fillText(String(text),x,y)}
+function cWrap(ctx,text,x,y,maxWidth,lineHeight,maxLines,color,size,weight){ctx.font=(weight||400)+' '+size+'px Arial';ctx.fillStyle=color;ctx.textAlign='left';const words=String(text).split(/\s+/),lines=[];let line='';words.forEach(w=>{const t=line?line+' '+w:w;if(ctx.measureText(t).width>maxWidth&&line){lines.push(line);line=w}else line=t});if(line)lines.push(line);if(maxLines&&lines.length>maxLines){lines.length=maxLines;lines[maxLines-1]=lines[maxLines-1].replace(/[. ]*$/,'')+'…'}lines.forEach((ln,i)=>ctx.fillText(ln,x,y+i*lineHeight))}
+function drawFactsheet(){
+  const c=$('factsheetCanvas'),ctx=c.getContext('2d'),W=1600,H=900;c.width=W;c.height=H;
+  const C={bg:'#0B1722',deep:'#132436',panel:'#193247',panel2:'#102333',gold:'#BA8758',gold2:'#D2A26F',white:'#FFF',text:'#E7EEF3',muted:'#A5B2BC',line:'#2B495F',green:'#59C59E',red:'#F07C7C'};
+  const m=model(),risk=analyzeRisk(m),st=currentStrategy();
+  ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);ctx.fillStyle=C.gold;ctx.fillRect(0,0,12,H);ctx.fillStyle=C.deep;ctx.fillRect(12,0,W-12,150);ctx.fillStyle=C.gold;ctx.fillRect(58,148,W-116,2);
+  cText(ctx,'JACARANDÁ INVESTIMENTOS',60,48,16,700,C.gold2);cText(ctx,'Estruturadas Jacarandá',60,93,42,700,C.white);cText(ctx,st.name+' · '+state.asset,60,126,20,400,C.text);
+  cRound(ctx,1270,45,270,36,18,C.gold);cText(ctx,'FACTSHEET DE SIMULAÇÃO',1405,69,11,700,C.bg,'center');
+  const lx=60,lw=600,rx=690,rw=850,top=178;
+  cRound(ctx,lx,top,lw,126,18,C.panel2,C.line);cText(ctx,'ESTRATÉGIA',lx+20,top+28,10,700,C.gold2);cText(ctx,st.name,lx+20,top+60,24,700,C.white);cText(ctx,st.bias+' · '+st.category+' · '+st.tier,lx+20,top+88,13,400,C.text);cText(ctx,'Base '+formatDateBr($('entryDate').value)+' · Venc. '+formatDateBr($('expiryDate').value),lx+20,top+111,11,400,C.muted);
+  const cardW=(lw-12)/2;
+  function card(x,y,label,value,sub,color){cRound(ctx,x,y,cardW,72,14,C.panel,C.line);cText(ctx,label.toUpperCase(),x+15,y+20,9,700,C.muted);cText(ctx,value,x+15,y+47,19,700,color||C.white);if(sub)cText(ctx,sub,x+15,y+64,9,400,C.muted)}
+  let y=318;card(lx,y,'Spot',brl(m.S),CORE[state.asset]?.name||state.asset);card(lx+cardW+12,y,'Fluxo inicial opções',(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal)),m.optionCashflowTotal>=0?'crédito':'débito',m.optionCashflowTotal>=0?C.green:C.red);
+  y+=84;card(lx,y,'Perda máxima',risk.maxLoss===-Infinity?'Ilimitada':brl(Math.abs(Math.min(0,risk.maxLoss))),st.risk,C.red);card(lx+cardW+12,y,'Ganho máximo',risk.maxGain===Infinity?'Ilimitado':brl(Math.max(0,risk.maxGain)),'no vencimento',C.green);
+  y+=84;card(lx,y,'Break-even(s)',risk.bes.length?risk.bes.slice(0,2).map(brl).join(' / '):'—',risk.bes.length?risk.bes.map(v=>pct((v/m.S-1)*100)).join(' / '):'');card(lx+cardW+12,y,'Fee + custos',brl(m.entryCost),'margem não calculada');
+  y+=84;card(lx,y,'Lote total',fmt0(m.units),'unidades-base');card(lx+cardW+12,y,'Notional do ativo',m.stockNotional>0?brl(m.stockNotional):'—',st.stockQty?'estrutura inclui ativo':'somente opções');
 
-renderAll();
+  cRound(ctx,rx,top,rw,376,18,C.panel2,C.line);cText(ctx,'PERNAS',rx+20,top+28,10,700,C.gold2);
+  const headers=['OPERAÇÃO','TIPO','QTD','STRIKE','PREÇO','IV'];const widths=[130,100,70,145,145,110];let hx=rx+20;
+  headers.forEach((h,i)=>{ctx.fillStyle=C.deep;ctx.fillRect(hx,top+48,widths[i],38);cText(ctx,h,hx+widths[i]-9,top+72,9,700,C.gold2,'right');hx+=widths[i]});
+  state.legs.forEach((l,i)=>{const yy=top+86+i*44;ctx.fillStyle=i%2?C.panel:C.bg;ctx.fillRect(rx+20,yy,widths.reduce((a,b)=>a+b,0),44);let x=rx+20;const vals=[l.side==='buy'?'COMPRA':'VENDA',l.type.toUpperCase(),fmt0(l.qty),brl(l.strike),brl(l.price),m.legIV[i]>0?fmt1(m.legIV[i]*100)+'%':'—'];vals.forEach((v,j)=>{cText(ctx,v,x+widths[j]-9,yy+27,11,j===0?700:400,j===0?(l.side==='buy'?C.green:C.red):C.text,'right');x+=widths[j]})});
+  if(st.stockQty){cText(ctx,'+ PERNA ATIVO: '+(st.stockQty>0?'COMPRADA ':'VENDIDA ')+Math.abs(st.stockQty)+' × ativo por unidade-base',rx+20,top+340,11,700,C.gold2)}
+
+  const gy=570,gh=240;cRound(ctx,60,gy,1480,gh,18,C.panel2,C.line);cText(ctx,'PAYOFF NO VENCIMENTO · P/L TOTAL',80,gy+28,10,700,C.gold2);
+  const R=chartRange(m,risk),lo=-Math.min(99,R),plot={x:100,y:gy+55,w:1400,h:145},xs=[],ys=[];for(let mv=lo;mv<=R+.001;mv+=(R-lo)/220){xs.push(mv);ys.push(expiryPnlTotal(Math.max(.0001,m.S*(1+mv/100)),m))}
+  let ymin=Math.min(0,...ys),ymax=Math.max(0,...ys),extra=(ymax-ymin||1)*.12;ymin-=extra;ymax+=extra;const xp=v=>plot.x+(v-lo)/(R-lo)*plot.w,yp=v=>plot.y+(ymax-v)/(ymax-ymin)*plot.h;
+  ctx.strokeStyle=C.line;[lo,0,R].forEach(v=>{ctx.beginPath();ctx.moveTo(xp(v),plot.y);ctx.lineTo(xp(v),plot.y+plot.h);ctx.stroke()});ctx.beginPath();ctx.moveTo(plot.x,yp(0));ctx.lineTo(plot.x+plot.w,yp(0));ctx.stroke();ctx.strokeStyle=C.gold2;ctx.lineWidth=3;ctx.beginPath();ys.forEach((v,i)=>{if(!i)ctx.moveTo(xp(xs[i]),yp(v));else ctx.lineTo(xp(xs[i]),yp(v))});ctx.stroke();ctx.lineWidth=1;cText(ctx,pct(lo),plot.x,gy+gh-18,10,400,C.muted,'center');cText(ctx,'0%',xp(0),gy+gh-18,10,400,C.muted,'center');cText(ctx,pct(R),plot.x+plot.w,gy+gh-18,10,400,C.muted,'center');
+  ctx.fillStyle=C.gold;ctx.fillRect(60,842,1480,1);cText(ctx,'SIMULAÇÃO · PRÊMIOS MANUAIS POR PERNA · MARGEM NÃO CALCULADA',60,866,10,700,C.gold2);cText(ctx,'Spot indicativo. Confirme Bid/Ask, liquidez, estilo de exercício, lote e condições de execução no book da corretora.',60,886,10,400,C.muted);cText(ctx,'Jacarandá Investimentos',1540,876,10,400,C.muted,'right');
+}
+function openFactsheet(){drawFactsheet();$('exportOverlay').classList.add('open')}
+function closeFactsheet(){$('exportOverlay').classList.remove('open')}
+function downloadFactsheet(){drawFactsheet();const a=document.createElement('a');a.download='Estruturadas_Jacaranda_'+state.asset+'_'+state.strategyId+'_'+$('entryDate').value+'.jpg';a.href=$('factsheetCanvas').toDataURL('image/jpeg',.95);document.body.appendChild(a);a.click();a.remove()}
+
+function changeAsset(symbol){
+  const hit=universeAssets().find(a=>a.symbol===symbol);if(!hit)return;
+  state.asset=symbol;state.quote=null;buildAssetControls();applyQuote();
+}
+$('assetSelect').addEventListener('change',e=>changeAsset(e.target.value));
+$('assetSearch').addEventListener('change',e=>changeAsset((e.target.value||'').trim().toUpperCase()));
+$('strategySelect').addEventListener('change',e=>selectStrategy(e.target.value));
+$('refreshQuote').onclick=refreshSnapshot;
+$('suggestStrikes').onclick=suggestLegsFromStrategy;
+$('clearPrices').onclick=()=>{state.legs.forEach(l=>l.price=0);renderLegs();updateAll()};
+$('addComparator').onclick=addToComparator;
+$('generateJpg').onclick=openFactsheet;$('downloadJpg').onclick=downloadFactsheet;$('closeExport').onclick=closeFactsheet;$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheet()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
+['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep')renderStockLeg();updateAll()}));
+$('moveRange').addEventListener('input',()=>updateScenario(model()));
+$('ivRatio').addEventListener('input',updateAll);
+window.addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(updateAll,100)});
+
+async function init(){
+  setStatus('','Carregando…','Universo B3, catálogo e cotações.');
+  await Promise.all([loadUniverse(),loadStrategies(),loadQuotesPayload()]);
+  buildAssetControls();buildStrategySelect();renderCatalog();
+  applyQuote();
+  selectStrategy(state.strategyId);
+  updateComparatorButton();
+}
+init();
 </script>
 </body>
 </html>
