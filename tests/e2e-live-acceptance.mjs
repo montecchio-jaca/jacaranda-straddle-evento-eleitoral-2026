@@ -25,7 +25,7 @@ function jpegDimensions(buf){
   throw new Error('Dimensões JPEG não encontradas');
 }
 async function waitReady(page){
-  await page.waitForSelector('#strategySelect option[value="long_call"]',{timeout:30000});
+  await page.waitForFunction(()=>!!document.querySelector('#strategySelect option[value="long_call"]'),{timeout:30000});
   await page.waitForFunction(()=>document.querySelectorAll('#assetSelect option').length>10,{timeout:30000});
   await page.waitForFunction(()=>Number(document.querySelector('#spotInput')?.value)>0,{timeout:30000});
 }
