@@ -39,7 +39,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
 .strategy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.strategy-card{border:1px solid #e0e5e8;border-radius:14px;padding:12px;background:#fff;cursor:pointer;transition:.15s}.strategy-card:hover{border-color:#c7a583;box-shadow:0 6px 18px rgba(19,36,54,.07)}.strategy-card.active{border-color:var(--bronze);background:#fbf7f2}.strategy-card h4{margin:0 0 7px;font-size:13px}.strategy-card p{margin:6px 0 0;color:#74818b;font-size:10px;line-height:1.45}.strategy-tags{display:flex;gap:5px;flex-wrap:wrap}
 .strategy-summary{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:10px}.summary-box{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:13px}.summary-box .title{font-size:10px;color:#7c8892;text-transform:uppercase;font-weight:700;letter-spacing:.04em}.summary-box .main{font-size:16px;font-weight:700;margin-top:6px}.summary-box .small{font-size:11px;color:#73808b;line-height:1.45;margin-top:5px}
 .stock-leg{display:none;background:#f4f7f9;border:1px solid #dbe3e8;border-radius:14px;padding:12px;margin-top:12px}.stock-leg.show{display:block}
-.legs{display:grid;gap:10px}.leg-card{border:1px solid #dde3e7;border-radius:14px;padding:12px;background:#fafbfb}.leg-card.buy{border-left:4px solid var(--green)}.leg-card.sell{border-left:4px solid var(--red)}.leg-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}.leg-title{font-weight:700;font-size:13px}.leg-grid{display:grid;grid-template-columns:.9fr .9fr .7fr 1fr 1.1fr 1fr .8fr;gap:8px}.mini label{display:block;font-size:9px;font-weight:700;color:#79858f;margin-bottom:5px;text-transform:uppercase}.mini input,.mini select{width:100%;padding:8px 9px;border:1px solid #d2d9de;border-radius:9px;background:#fff;font:inherit;font-size:12px}.ivbox{padding-top:20px;font-size:12px;font-weight:700;color:var(--blue)}
+.legs{display:grid;gap:10px}.leg-card{border:1px solid #dde3e7;border-radius:14px;padding:12px;background:#fafbfb}.leg-card.buy{border-left:4px solid var(--green)}.leg-card.sell{border-left:4px solid var(--red)}.leg-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}.leg-title{font-weight:700;font-size:13px}.leg-grid{display:grid;grid-template-columns:.78fr .72fr .58fr .82fr .88fr 1fr .82fr .88fr .68fr;gap:8px}.mini label{display:block;font-size:9px;font-weight:700;color:#79858f;margin-bottom:5px;text-transform:uppercase}.mini input,.mini select{width:100%;padding:8px 9px;border:1px solid #d2d9de;border-radius:9px;background:#fff;font:inherit;font-size:12px}.spot-percent-mode [data-f="strikePct"],.spot-percent-mode [data-f="pricePct"]{border-color:var(--bronze);background:#fffaf5;box-shadow:0 0 0 2px rgba(186,135,88,.08)}.book-mode [data-f="strike"],.book-mode [data-f="price"]{border-color:#9fb0bd;background:#f8fafb}.mode-note{margin-top:12px;padding:11px 13px;border-radius:12px;background:#f7f3ef;border:1px solid #ead8c7;font-size:11px;color:#66584c;line-height:1.45}.ivbox{padding-top:20px;font-size:12px;font-weight:700;color:var(--blue)}
 .chart-wrap{position:relative;height:420px}canvas{width:100%;height:100%;display:block}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{background:#f3f5f6;text-align:right;padding:10px 11px;color:#586573;font-weight:700;white-space:nowrap}th:first-child,td:first-child{text-align:left}td{padding:10px 11px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}
 .rangegrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.rangebox{background:#f7f8f9;border:1px solid #e4e8eb;border-radius:14px;padding:12px}.rangebox label{font-size:11px;font-weight:700;color:#65727e;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}input[type=range]{width:100%;accent-color:var(--bronze)}
 .footer{margin-top:24px;border-top:1px solid #dfe4e8;padding:18px 0 0;color:#707c86;font-size:11px;line-height:1.6}.footer-brand{font-weight:700;color:var(--blue);margin-top:7px}
@@ -99,13 +99,15 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
       <div class="field"><label>Buscar ativo B3</label><input id="assetSearch" list="assetList" type="text" placeholder="Ticker ou nome"><datalist id="assetList"></datalist></div>
       <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
       <div class="field"><label>Estratégia</label><select id="strategySelect"></select></div>
-      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01"><div class="hint">Snapshot delayed e editável.</div></div>
+      <div class="field"><label>Modo de precificação</label><select id="pricingMode"><option value="book">R$ / Book</option><option value="spot_pct">% do Spot · Spot = 100%</option></select><div class="hint">Os dois formatos permanecem sincronizados.</div></div>
+      <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01"><div class="hint">Snapshot delayed e editável. No modo percentual, este valor representa 100%.</div></div>
       <div class="field"><label>Data-base</label><input id="entryDate" type="date" value="2026-10-02"></div>
       <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-16"></div>
       <div class="field"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"></div>
       <div class="field"><label>Lote / multiplicador</label><input id="lotSize" type="number" step="1" min="1" value="100"></div>
     </div>
 
+    <div id="pricingModeNote" class="mode-note"></div>
     <div id="strategySummary" class="strategy-summary" style="margin-top:14px"></div>
     <div id="riskWarning" style="margin-top:12px"></div><div id="pricingStatus" style="margin-top:10px"></div>
   </div>
@@ -246,6 +248,20 @@ const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const sideSign=s=>s==='buy'?1:-1;
 
+function pricingMode(){return $('pricingMode')?.value||'book'}
+function isSpotPercentMode(){return pricingMode()==='spot_pct'}
+function valuePctSpot(value,S){return S>0?num(value)/S*100:0}
+function normalizedSpotPct(move){return 100+num(move)}
+function axisXLabel(move){return isSpotPercentMode()?fmt1(normalizedSpotPct(move))+'%':pct(move)}
+function roundOptionPrice(value){return Math.round(Math.max(0,num(value))*100)/100}
+function applyPricingModeUI(){
+  document.body.classList.toggle('spot-percent-mode',isSpotPercentMode());
+  document.body.classList.toggle('book-mode',!isSpotPercentMode());
+  const note=$('pricingModeNote');if(!note)return;
+  note.innerHTML=isSpotPercentMode()
+    ? '<strong>Spot = 100%:</strong> use Strike % e Prêmio % para desenhar a estrutura em termos relativos. Strike em R$, código da série e preço em R$ continuam preservados para a leitura operacional.'
+    : '<strong>R$ / Book:</strong> strike e Bid/Ask em reais são os campos principais. O simulador mostra automaticamente os equivalentes em % do spot para facilitar a comparação entre ativos e estruturas.';
+}
 function setStatus(kind,title,meta){
   $('statusDot').className='status-dot'+(kind?' '+kind:'');
   $('sourceTitle').textContent=title;$('sourceMeta').textContent=meta;
@@ -323,7 +339,7 @@ function suggestLegsFromStrategy(){
   if(!st)return;
   state.legs=st.legs.map((l,i)=>({
     id:i,side:l.side,type:l.type,qty:l.qty,
-    strike:roundStrike(S*l.strikePct/100,step),price:0,code:''
+    strike:roundStrike(S*l.strikePct/100,step),strikePct:l.strikePct,price:0,pricePct:0,code:''
   }));
   renderLegs();updateAll();
 }
@@ -336,46 +352,76 @@ function renderStockLeg(){
 }
 function renderLegs(){
   renderStockLeg();
+  const S=num($('spotInput').value);
   $('legs').innerHTML=state.legs.map((l,i)=>{
     const priceLabel=l.side==='buy'?'Preço compra (Ask)':'Preço venda (Bid)';
+    const strikePct=S>0?valuePctSpot(l.strike,S):(num(l.strikePct)||0);
+    const pricePct=S>0?valuePctSpot(l.price,S):(num(l.pricePct)||0);
     return '<div class="leg-card '+l.side+'" data-leg="'+i+'">'+
       '<div class="leg-head"><div class="leg-title">Perna '+(i+1)+' · '+(l.side==='buy'?'COMPRA':'VENDA')+' '+l.type.toUpperCase()+'</div><span class="pill '+(l.side==='buy'?'green':'red')+'">'+(l.side==='buy'?'long':'short')+'</span></div>'+
       '<div class="leg-grid">'+
       '<div class="mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
       '<div class="mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
       '<div class="mini"><label>Qtd.</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'"></div>'+
-      '<div class="mini"><label>Strike</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
+      '<div class="mini"><label>Strike % Spot</label><input data-f="strikePct" type="number" min="0" step="0.01" value="'+Number(strikePct||0).toFixed(2)+'"></div>'+
+      '<div class="mini"><label>Strike (R$)</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
-      '<div class="mini"><label>'+priceLabel+'</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
+      '<div class="mini"><label>Prêmio % Spot</label><input data-f="pricePct" type="number" min="0" step="0.01" value="'+Number(pricePct||0).toFixed(2)+'" placeholder="0,00"></div>'+
+      '<div class="mini"><label>'+priceLabel+' (R$)</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
       '<div class="mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
       '</div></div>';
   }).join('');
+
   document.querySelectorAll('.leg-card').forEach(card=>{
     const i=Number(card.dataset.leg);
     card.querySelectorAll('[data-f]').forEach(inp=>{
       inp.addEventListener('input',()=>{
-        const f=inp.dataset.f;
-        let v=inp.value;
-        if(['qty','strike','price'].includes(f))v=num(v);
-        state.legs[i][f]=v;
-        if(f==='side'||f==='type'){renderLegs();updateAll();}
-        else updateAll();
+        const leg=state.legs[i],f=inp.dataset.f,Snow=num($('spotInput').value),step=num($('strikeStep').value)||.5;
+        if(!leg)return;
+        if(f==='strikePct'){
+          const target=num(inp.value);
+          leg.strikePct=target;
+          leg.strike=Snow>0?roundStrike(Snow*target/100,step):0;
+          const pair=card.querySelector('[data-f="strike"]');if(pair)pair.value=leg.strike?Number(leg.strike).toFixed(2):'';
+        }else if(f==='pricePct'){
+          const target=num(inp.value);
+          leg.pricePct=target;
+          leg.price=Snow>0?roundOptionPrice(Snow*target/100):0;
+          const pair=card.querySelector('[data-f="price"]');if(pair)pair.value=leg.price?Number(leg.price).toFixed(2):'';
+        }else{
+          let v=inp.value;if(['qty','strike','price'].includes(f))v=num(v);leg[f]=v;
+          if(f==='strike'){
+            leg.strikePct=Snow>0?valuePctSpot(leg.strike,Snow):0;
+            const pair=card.querySelector('[data-f="strikePct"]');if(pair)pair.value=Number(leg.strikePct||0).toFixed(2);
+          }
+          if(f==='price'){
+            leg.pricePct=Snow>0?valuePctSpot(leg.price,Snow):0;
+            const pair=card.querySelector('[data-f="pricePct"]');if(pair)pair.value=Number(leg.pricePct||0).toFixed(2);
+          }
+        }
+        if(f==='side'||f==='type'){renderLegs();updateAll()}else updateAll();
       });
+      if(inp.dataset.f==='strikePct'||inp.dataset.f==='pricePct'){
+        inp.addEventListener('change',()=>{
+          const leg=state.legs[i],Snow=num($('spotInput').value);if(!leg||!(Snow>0))return;
+          if(inp.dataset.f==='strikePct'){leg.strikePct=valuePctSpot(leg.strike,Snow);inp.value=Number(leg.strikePct||0).toFixed(2)}
+          else{leg.pricePct=valuePctSpot(leg.price,Snow);inp.value=Number(leg.pricePct||0).toFixed(2)}
+        });
+      }
     });
   });
 }
 function syncStateFromLegInputs(){
-  const cards=[...document.querySelectorAll('.leg-card')];
+  const cards=[...document.querySelectorAll('.leg-card')],S=num($('spotInput').value);
   if(!cards.length)return;
   cards.forEach(card=>{
-    const i=Number(card.dataset.leg),leg=state.legs[i];
-    if(!leg)return;
+    const i=Number(card.dataset.leg),leg=state.legs[i];if(!leg)return;
     card.querySelectorAll('[data-f]').forEach(inp=>{
-      const key=inp.dataset.f;
-      let value=inp.value;
-      if(['qty','strike','price'].includes(key))value=num(value);
-      leg[key]=value;
+      const key=inp.dataset.f;if(key==='strikePct'||key==='pricePct')return;
+      let value=inp.value;if(['qty','strike','price'].includes(key))value=num(value);leg[key]=value;
     });
+    leg.strikePct=S>0?valuePctSpot(leg.strike,S):0;
+    leg.pricePct=S>0?valuePctSpot(leg.price,S):0;
   });
 }
 function selectStrategy(id){
@@ -429,7 +475,9 @@ function model(){
   const legIV=state.legs.map(l=>impliedVolLeg(l.type,S,num(l.strike),T,num(l.price),r,q));
   const missingPrices=state.legs.filter(l=>!(num(l.price)>0)).length;
   const pricingComplete=state.legs.length>0&&missingPrices===0;
-  return {st,S,lot,lots,units,r,q,T,grossAbsPrem,optionCashflowPerUnit,optionCashflowTotal:optionCashflowPerUnit*units,entryCost,stockQty,stockNotional,legIV,missingPrices,pricingComplete};
+  const grossPremiumPctSpot=S>0?grossAbsPrem/S*100:0;
+  const netPremiumPctSpot=S>0?optionCashflowPerUnit/S*100:0;
+  return {st,S,lot,lots,units,r,q,T,grossAbsPrem,grossPremiumPctSpot,netPremiumPctSpot,optionCashflowPerUnit,optionCashflowTotal:optionCashflowPerUnit*units,entryCost,stockQty,stockNotional,legIV,missingPrices,pricingComplete};
 }
 function enginePayload(m){
   return {
@@ -474,13 +522,13 @@ function serializeCurrent(){
     savedAt:new Date().toISOString(),
     asset:state.asset,assetName:CORE[state.asset]?.name||state.asset,
     strategyId:state.strategyId,strategyName:st?.name||state.strategyId,
-    category:st?.category||'',bias:st?.bias||'',riskLabel:st?.risk||'',
+    category:st?.category||'',bias:st?.bias||'',riskLabel:st?.risk||'',pricingMode:pricingMode(),
     spot:m.S,units:m.units,entryCost:m.entryCost,exitCost:Math.max(0,num($('exitFixedCost').value)),
     stockQty:m.stockQty,rate:m.r,dividendYield:m.q,
     entryDate:$('entryDate').value,expiryDate:$('expiryDate').value,scenarioDate:$('scenarioDate').value,
     ivFallback:Math.max(.01,num($('ivFallback').value)/100),
     optionCashflowTotal:m.optionCashflowTotal,
-    legs:state.legs.map((l,i)=>({side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),price:num(l.price),code:l.code||'',iv:m.legIV[i]||0})),
+    legs:state.legs.map((l,i)=>({side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),strikePct:m.S>0?valuePctSpot(l.strike,m.S):0,price:num(l.price),pricePct:m.S>0?valuePctSpot(l.price,m.S):0,code:l.code||'',iv:m.legIV[i]||0})),
     risk:{maxGain:risk.maxGain,maxLoss:risk.maxLoss,bes:risk.bes}
   };
 }
@@ -496,12 +544,13 @@ function addToComparator(){
 }
 
 function updateAll(){
+  applyPricingModeUI();
   const m=model(),risk=analyzeRisk(m);
   const debitCredit=m.optionCashflowTotal>=0?'Crédito':'Débito';
   if(m.pricingComplete){
     $('initialFlow').textContent=(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal));
     $('initialFlow').className='value '+(m.optionCashflowTotal>=0?'positive':'negative');
-    $('initialFlowSub').textContent=debitCredit+' bruto de opções';
+    $('initialFlowSub').textContent=debitCredit+' · '+fmt(Math.abs(m.netPremiumPctSpot))+'% do spot · bruto '+fmt(m.grossPremiumPctSpot)+'%';
     $('flowPill').textContent=debitCredit;
     $('pricingStatus').innerHTML='';
   }else{
@@ -535,13 +584,13 @@ function updateSlider(m,risk){
   const r=chartRange(m,risk),lo=-Math.min(99,r);
   $('moveRange').min=lo;$('moveRange').max=r;
   $('moveRange').value=clamp(num($('moveRange').value),lo,r);
-  $('matrixRange').textContent=(lo===-r?'±'+fmt0(r)+'%':fmt0(lo)+'% / +'+fmt0(r)+'%');
+  $('matrixRange').textContent=isSpotPercentMode()?(fmt1(100+lo)+'%–'+fmt1(100+r)+'% spot'):(lo===-r?'±'+fmt0(r)+'%':fmt0(lo)+'% / +'+fmt0(r)+'%');
 }
 function updateScenario(m){
   const mv=num($('moveRange').value),Sf=Math.max(.0001,m.S*(1+mv/100)),ratio=num($('ivRatio').value)/100;
   const exp=m.pricingComplete?expiryPnlTotal(Sf,m):null,mtm=m.pricingComplete?mtmPnlTotal(Sf,m,ratio):null,netOpt=m.pricingComplete?scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units:null;
-  $('moveLabel').textContent=pct(mv);$('ivRatioLabel').textContent=fmt0(num($('ivRatio').value))+'%';
-  $('simSpot').textContent=brl(Sf);$('simSpotSub').textContent=pct(mv);
+  $('moveLabel').textContent=isSpotPercentMode()?fmt1(100+mv)+'% do spot':pct(mv);$('ivRatioLabel').textContent=fmt0(num($('ivRatio').value))+'%';
+  $('simSpot').textContent=brl(Sf);$('simSpotSub').textContent=isSpotPercentMode()?fmt1(100+mv)+'% do spot':pct(mv);
   $('simExpiryPnl').textContent=exp==null?'—':(exp>=0?'+':'')+brl(exp);$('simExpiryPnl').className='value '+(exp==null?'':(exp>=0?'positive':'negative'));
   $('simMtmPnl').textContent=mtm==null?'—':(mtm>=0?'+':'')+brl(mtm);$('simMtmPnl').className='value '+(mtm==null?'':(mtm>=0?'positive':'negative'));
   $('simOptionMtm').textContent=netOpt==null?'—':(netOpt>=0?'+':'')+brl(netOpt);$('simOptionMtm').className='value '+(netOpt==null?'':(netOpt>=0?'positive':'negative'));
@@ -553,7 +602,7 @@ function drawChart(m,risk){
   const W=c.width/dpr,H=c.height/dpr,pad={l:72,r:20,t:28,b:44},iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
   const d=chartSeries(m,risk),xp=x=>pad.l+(x-d.lo)/(d.R-d.lo)*iw,yp=y=>pad.t+(d.ymax-y)/(d.ymax-d.ymin)*ih;
   ctx.clearRect(0,0,W,H);ctx.font='11px Arial';ctx.strokeStyle='#e4e8eb';ctx.fillStyle='#75828d';
-  [d.lo,d.lo/2,0,d.R/2,d.R].forEach(x=>{const px=xp(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+fmt1(x)+'%',px-18,H-15)});
+  [d.lo,d.lo/2,0,d.R/2,d.R].forEach(x=>{const px=xp(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText(axisXLabel(x),px-20,H-15)});
   for(let i=0;i<=5;i++){const y=d.ymin+(d.ymax-d.ymin)*i/5,py=yp(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText((y>=0?'+':'')+Math.round(y).toLocaleString('pt-BR'),6,py+4)}
   ctx.strokeStyle='#87939d';ctx.beginPath();ctx.moveTo(pad.l,yp(0));ctx.lineTo(W-pad.r,yp(0));ctx.stroke();
   function line(arr,col,dash){ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2.7;ctx.setLineDash(dash||[]);ctx.beginPath();arr.forEach((y,i)=>{if(i===0)ctx.moveTo(xp(d.xs[i]),yp(y));else ctx.lineTo(xp(d.xs[i]),yp(y))});ctx.stroke();ctx.restore()}
@@ -565,9 +614,10 @@ function drawChart(m,risk){
 function renderTable(m,risk){
   const R=chartRange(m,risk),lo=-Math.min(99,R),moves=[lo,lo*.75,lo*.5,lo*.25,0,R*.25,R*.5,R*.75,R].map(x=>Math.round(x*10)/10);
   const ratio=num($('ivRatio').value)/100;
-  let h='<thead><tr><th>Movimento</th><th>Spot</th><th>'+(m.pricingComplete?'P/L vencimento':'Payoff estrutural')+'</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
+  const firstHead=isSpotPercentMode()?'Ativo (% do spot)':'Movimento';
+  let h='<thead><tr><th>'+firstHead+'</th><th>Spot (R$)</th><th>'+(m.pricingComplete?'P/L vencimento':'Payoff estrutural')+'</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
   moves.forEach(mv=>{const Sf=Math.max(.0001,m.S*(1+mv/100)),e=expiryPnlTotal(Sf,m),x=m.pricingComplete?mtmPnlTotal(Sf,m,ratio):null,v=m.pricingComplete?scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units:null;
-    h+='<tr><td>'+pct(mv)+'</td><td>'+brl(Sf)+'</td><td class="'+(e>=0?'positive':'negative')+'">'+(e>=0?'+':'')+brl(e)+'</td><td class="'+(x==null?'':(x>=0?'positive':'negative'))+'">'+(x==null?'—':(x>=0?'+':'')+brl(x))+'</td><td>'+(v==null?'—':(v>=0?'+':'')+brl(v))+'</td></tr>'});
+    h+='<tr><td>'+(isSpotPercentMode()?fmt1(100+mv)+'%':pct(mv))+'</td><td>'+brl(Sf)+'</td><td class="'+(e>=0?'positive':'negative')+'">'+(e>=0?'+':'')+brl(e)+'</td><td class="'+(x==null?'':(x>=0?'positive':'negative'))+'">'+(x==null?'—':(x>=0?'+':'')+brl(x))+'</td><td>'+(v==null?'—':(v>=0?'+':'')+brl(v))+'</td></tr>'});
   $('scenarioTable').innerHTML=h+'</tbody>';
 }
 
@@ -813,7 +863,8 @@ $('clearPrices').onclick=()=>{state.legs.forEach(l=>l.price=0);renderLegs();upda
 $('addComparator').onclick=addToComparator;
 $('generateJpg').onclick=openFactsheet;$('downloadJpg').onclick=downloadFactsheet;$('closeExport').onclick=closeFactsheet;$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheet()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
-['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep')renderStockLeg();updateAll()}));
+['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep'){renderStockLeg();renderLegs()}updateAll()}));
+$('pricingMode').addEventListener('change',()=>{applyPricingModeUI();renderLegs();updateAll()});
 $('moveRange').addEventListener('input',()=>updateScenario(model()));
 $('ivRatio').addEventListener('input',updateAll);
 window.addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(updateAll,100)});
@@ -824,6 +875,7 @@ async function init(){
   buildAssetControls();buildStrategySelect();renderCatalog();
   applyQuote();
   selectStrategy(state.strategyId);
+  applyPricingModeUI();
   updateComparatorButton();
 }
 init();
