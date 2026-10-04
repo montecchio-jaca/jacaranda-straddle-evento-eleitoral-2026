@@ -33,6 +33,29 @@ Serve para:
 
 O Comparador não remonta operações: ele consome montagens produzidas pela página Estratégias.
 
+## Precificação em R$ e % do spot
+
+A página **Estratégias** oferece dois modos sincronizados:
+
+### R$ / Book
+- strike em R$ e Bid/Ask em R$ são os campos principais;
+- strike e prêmio em % do spot aparecem como leitura derivada.
+
+### % do Spot · Spot = 100%
+- o spot corrente é tratado como **100,00%**;
+- cada perna mantém:
+  - strike em % do spot;
+  - strike real em R$;
+  - código da série;
+  - prêmio em % do spot;
+  - prêmio em R$;
+  - compra/venda, Call/Put, quantidade e IV;
+- editar o strike percentual converte para o strike real usando o passo de strike configurado;
+- editar o prêmio percentual converte para R$;
+- alterar o spot não desloca automaticamente uma série já escolhida: o strike real permanece canônico e o percentual é recalculado.
+
+O resumo econômico mostra também o prêmio líquido e bruto em % do spot. No modo percentual, gráficos, matriz de cenários e factsheet usam o eixo normalizado com **Spot = 100%**, mantendo os valores em R$ em paralelo.
+
 ## Motor compartilhado
 
 `js/options-engine.js` é a fonte comum para:
