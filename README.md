@@ -56,6 +56,41 @@ A página **Estratégias** oferece dois modos sincronizados:
 
 O resumo econômico mostra também o prêmio líquido e bruto em % do spot. No modo percentual, gráficos, matriz de cenários e factsheet usam o eixo normalizado com **Spot = 100%**, mantendo os valores em R$ em paralelo.
 
+## Modo de apresentação ao cliente
+
+A montagem continua podendo ser feita em **% do spot (Spot = 100%)**, mas o **Factsheet JPG é sempre nominal em R$**, independentemente do modo usado na tela.
+
+A camada `buildPresentationModel()` traduz a montagem técnica para apresentação comercial e centraliza:
+- preço atual em R$;
+- strikes reais em R$;
+- prêmios em R$;
+- break-even(s) em R$;
+- P/L no vencimento em R$;
+- P/L MTM em R$;
+- referência percentual apenas como informação secundária.
+
+O range do factsheet é calculado por `OptionEngine.presentationRange()`:
+- estruturas limitadas: piso de aproximadamente ±20%;
+- exposição relevante nas caudas: piso de aproximadamente ±30%;
+- strikes e break-even(s) expandem a faixa automaticamente com folga;
+- limite visual de até cerca de 60% por lado.
+
+O gráfico do cliente usa:
+- eixo X: **preço nominal do ativo (R$)**;
+- eixo Y: **P/L total (R$)**;
+- linha sólida: vencimento;
+- linha pontilhada: MTM do cenário, quando a precificação estiver completa.
+
+A matriz do factsheet usa:
+- movimento percentual como contexto;
+- ativo em R$;
+- P/L vencimento em R$;
+- P/L MTM em R$;
+- retorno sobre risco quando aplicável;
+- inserção automática de strikes, break-even(s), spot e cenário selecionado.
+
+O canvas do factsheet é **1920×1080** e o JPG é gerado com qualidade **0,95**.
+
 ## Motor compartilhado
 
 `js/options-engine.js` é a fonte comum para:
