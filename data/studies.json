@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "studies": [
+    {
+      "id": "volatilidade-eleitoral-2026",
+      "name": "Volatilidade Eleitoral · 02/10/2026",
+      "status": "archived",
+      "description": "Caso que originou o projeto. Compara Straddle ATM e Strangles ±2%/±3% a partir do snapshot de prêmios informado em 02/10/2026.",
+      "entryDate": "2026-10-02",
+      "scenarioDate": "2026-10-05",
+      "expiryDate": "2026-10-07",
+      "referenceSpot": {
+        "PETR4": 49.66
+      },
+      "premiumsPct": {
+        "BBAS3": {
+          "100": 5.05,
+          "102": 3.31,
+          "103": 2.64
+        },
+        "B3SA3": {
+          "100": 4.03,
+          "102": 2.36,
+          "103": 1.76
+        },
+        "PETR4": {
+          "100": 3.87,
+          "102": 2.22,
+          "103": 1.64
+        },
+        "CEAB3": {
+          "100": null,
+          "102": null,
+          "103": 4.14
+        }
+      },
+      "structures": {
+        "100": {
+          "name": "Straddle Comprado",
+          "putPct": 100,
+          "callPct": 100
+        },
+        "102": {
+          "name": "Strangle Comprado ±2%",
+          "putPct": 98,
+          "callPct": 102
+        },
+        "103": {
+          "name": "Strangle Comprado ±3%",
+          "putPct": 97,
+          "callPct": 103
+        }
+      },
+      "historicalContext": {
+        "firstRoundOpenFridayToCloseMondayAvgPct": 3.02,
+        "firstRoundCloseFridayToCloseMondayAvgPct": 2.07,
+        "positiveEvents": "5 de 6",
+        "sample": "2002–2022 · n=6"
+      },
+      "defaultComparatorAsset": "PETR4"
+    }
+  ]
+}
