@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estruturadas Jacarandá | Comparador</title>
+<style>
+:root{--navy:#1A2027;--blue:#1F3249;--deep:#132436;--bronze:#BA8758;--gray:#9D9FA2;--light:#DCDDDE;--paper:#F5F6F7;--white:#FFF;--green:#2F6B54;--red:#A14B4B;--shadow:0 14px 40px rgba(19,36,54,.10);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:linear-gradient(180deg,#eef1f4 0,#f7f8f9 360px,#f5f6f7 100%)}
+.topbar{height:7px;background:var(--bronze)}.shell{max-width:1360px;margin:0 auto;padding:0 22px 44px}
+header{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:28px 30px 26px;border-radius:0 0 26px 26px;box-shadow:var(--shadow);margin-bottom:22px}
+.brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px}.brand span{color:var(--bronze)}
+h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-.02em}.subtitle{max-width:900px;color:#d8e1e8;font-size:15px;line-height:1.5;margin:0}
+.view-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.view-nav a{display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.20);color:#fff;background:rgba(255,255,255,.06)}.view-nav a.active{background:var(--bronze);border-color:var(--bronze);color:var(--deep)}
+.eventline{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.eventpill{padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#edf2f6}.eventpill strong{color:#fff}
+.section{margin-top:18px}.panel{background:#fff;border:1px solid #e0e5e8;border-radius:var(--radius);box-shadow:0 8px 26px rgba(19,36,54,.06);overflow:hidden}.panel-head{padding:15px 18px;border-bottom:1px solid #e6eaed;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.panel-head h2,.panel-head h3{margin:0}.panel-head h2{font-size:19px}.panel-head h3{font-size:16px}.panel-body{padding:18px}
+.note{font-size:12px;line-height:1.55;color:#697683}.warning{background:#fff8ef;border:1px solid #ead8c2;border-left:4px solid var(--bronze);padding:12px 14px;border-radius:12px;color:#5e5144;font-size:12px;line-height:1.5}
+button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;background:var(--blue);color:#fff}button.secondary{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}button.danger{background:#fff1f1;color:#8c4444;border:1px solid #efcccc}.actions{display:flex;gap:8px;flex-wrap:wrap}
+.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eef2f5;color:#586775;font-size:10px;font-weight:700}.pill.gold{background:#f2e5d8;color:#7a512f}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{border:1px solid #e1e6e9;border-radius:15px;padding:14px;background:#fafbfb;position:relative;min-height:202px}.card h4{margin:7px 0 4px;font-size:15px}.card .asset{font-size:12px;color:#73808b}.card .metric{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #e8ecef;padding-top:7px;margin-top:7px;font-size:11px}.card .metric strong{text-align:right}.card .remove{position:absolute;right:10px;top:10px;padding:5px 8px;background:#eef1f3;color:#65727c;border:1px solid #dce2e6}
+.empty{padding:34px 18px;text-align:center;color:#71808c}.empty strong{display:block;color:var(--blue);font-size:17px;margin-bottom:8px}
+.chart-wrap{position:relative;height:430px}canvas{width:100%;height:100%;display:block}
+.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{background:#f3f5f6;text-align:right;padding:10px 11px;color:#586573;font-weight:700;white-space:nowrap}th:first-child,td:first-child{text-align:left}td{padding:10px 11px;border-top:1px solid #edf0f2;text-align:right;white-space:nowrap}.positive{color:var(--green)!important}.negative{color:var(--red)!important}
+.study{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:#f7f8f9;border:1px solid #e2e7ea;border-radius:14px;padding:14px}.study h4{margin:0 0 5px;font-size:14px}.study p{margin:0;color:#6e7b86;font-size:11px;line-height:1.5}
+.footer{margin-top:24px;border-top:1px solid #dfe4e8;padding:18px 0 0;color:#707c86;font-size:11px;line-height:1.6}.footer-brand{font-weight:700;color:var(--blue);margin-top:7px}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.cards{grid-template-columns:1fr}.chart-wrap{height:340px}.study{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="shell">
+<header>
+  <div class="brandrow">
+    <div>
+      <div class="brand">JACARANDÁ <span>INVESTIMENTOS</span></div>
+      <h1>Estruturadas Jacarandá | Comparador</h1>
+      <p class="subtitle">Compare de duas a quatro montagens criadas em Estratégias. O eixo usa o mesmo movimento percentual para cada ativo; cada estrutura preserva seu próprio spot, strikes, quantidade, prêmios e custos.</p>
+    </div>
+    <div class="view-nav">
+      <a href="index.html">Estratégias</a>
+      <a class="active" href="comparador.html">Comparador</a>
+    </div>
+  </div>
+  <div class="eventline">
+    <div class="eventpill"><strong>1</strong> Monte em Estratégias</div>
+    <div class="eventpill"><strong>2</strong> Adicione até 4 alternativas</div>
+    <div class="eventpill"><strong>3</strong> Compare risco e payoff</div>
+  </div>
+</header>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div><h2>Estruturas em comparação</h2><div class="note">O Comparador não remonta operações. Ele recebe as alternativas do motor canônico de Estratégias.</div></div>
+    <div class="actions"><button onclick="location.href='index.html'">+ Nova estratégia</button><button id="clearAll" class="danger">Limpar comparador</button></div>
+  </div>
+  <div class="panel-body">
+    <div id="cards" class="cards"></div>
+    <div id="empty" class="empty" style="display:none"><strong>Nenhuma estrutura adicionada</strong>Vá para Estratégias, monte uma operação e use “Adicionar ao Comparador”.</div>
+  </div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head">
+    <div><h3>Payoffs sobrepostos</h3><div class="note">P/L total no vencimento. O eixo X representa movimento percentual em relação ao spot próprio de cada estrutura.</div></div>
+    <span id="rangePill" class="pill">AUTO</span>
+  </div>
+  <div class="panel-body"><div class="chart-wrap"><canvas id="chart"></canvas></div></div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head"><div><h3>Matriz comparativa</h3><div class="note">Mesmo choque percentual aplicado a todas as estruturas.</div></div><span class="pill gold">P/L no vencimento</span></div>
+  <div class="table-wrap"><table id="matrix"></table></div>
+</section>
+
+<section class="section panel">
+  <div class="panel-head"><div><h3>Casos salvos</h3><div class="note">O estudo que originou o projeto foi preservado como caso arquivado, sem ocupar o fluxo principal.</div></div></div>
+  <div class="panel-body"><div id="studies"></div></div>
+</section>
+
+<footer class="footer">
+  <strong>Comparação analítica.</strong> O comparador usa o mesmo motor de payoff no vencimento da aba Estratégias. Não calcula margem B3/corretora e não substitui validação de séries, Bid/Ask, liquidez e condições de execução.
+  <div class="footer-brand">Jacarandá Investimentos — conectando pessoas e investimentos.</div>
+</footer>
+</div>
+
+<script src="js/options-engine.js"></script>
+<script>
+const KEY='jacaranda.options.comparator.v1';
+const $=id=>document.getElementById(id);
+const brl=n=>'R$ '+Number(n).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt1=n=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const pct=n=>(n>=0?'+':'')+fmt1(n)+'%';
+let items=[],studies=[];
+
+function loadItems(){
+  try{const x=JSON.parse(localStorage.getItem(KEY)||'[]');items=Array.isArray(x)?x.slice(0,4):[]}catch(e){items=[]}
+}
+function saveItems(){localStorage.setItem(KEY,JSON.stringify(items))}
+function riskFor(item){return OptionEngine.analyzeRisk(item)}
+function flowLabel(item){
+  const v=Number(item.optionCashflowTotal||0);
+  return (v>=0?'+':'-')+brl(Math.abs(v))+' '+(v>=0?'crédito':'débito');
+}
+function finiteRisk(v,type){
+  if(v===Infinity)return 'Ilimitado';
+  if(v===-Infinity)return 'Ilimitada';
+  if(v==null)return '—';
+  return type==='loss'?brl(Math.abs(Math.min(0,v))):brl(Math.max(0,v));
+}
+function renderCards(){
+  $('empty').style.display=items.length?'none':'block';
+  $('cards').innerHTML=items.map((item,i)=>{
+    const r=riskFor(item),bes=(r.bes||[]).slice(0,3).map(brl).join(' · ')||'—';
+    return '<div class="card"><button class="remove" data-i="'+i+'">×</button>'+
+      '<span class="pill">'+(item.category||'Estratégia')+'</span>'+
+      '<h4>'+item.strategyName+'</h4><div class="asset">'+item.asset+' · '+(item.assetName||'')+' · spot '+brl(item.spot)+'</div>'+
+      '<div class="metric"><span>Fluxo opções</span><strong>'+flowLabel(item)+'</strong></div>'+
+      '<div class="metric"><span>Perda máxima</span><strong>'+finiteRisk(r.maxLoss,'loss')+'</strong></div>'+
+      '<div class="metric"><span>Ganho máximo</span><strong>'+finiteRisk(r.maxGain,'gain')+'</strong></div>'+
+      '<div class="metric"><span>Break-even(s)</span><strong>'+bes+'</strong></div>'+
+      '<div class="metric"><span>Vencimento</span><strong>'+(item.expiryDate||'—')+'</strong></div></div>';
+  }).join('');
+  document.querySelectorAll('.remove').forEach(b=>b.onclick=()=>{items.splice(Number(b.dataset.i),1);saveItems();renderAll()});
+}
+function commonRange(){
+  if(!items.length)return 20;
+  return Math.max(10,...items.map(i=>OptionEngine.autoRange(i)));
+}
+function renderChart(){
+  const c=$('chart'),rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  c.width=Math.max(700,Math.floor(rect.width*dpr));c.height=Math.max(340,Math.floor(rect.height*dpr));
+  const ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+  const W=c.width/dpr,H=c.height/dpr,pad={l:76,r:20,t:38,b:46},iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
+  const R=commonRange(),lo=-Math.min(99,R);$('rangePill').textContent=(lo===-R?'±'+R+'%':lo+'% / +'+R+'%');
+  const shocks=[];for(let x=lo;x<=R+.001;x+=(R-lo)/180)shocks.push(x);
+  const series=items.map(item=>shocks.map(mv=>OptionEngine.expiryPnlTotal(item,Math.max(.0001,item.spot*(1+mv/100)))));
+  let ymin=0,ymax=0;series.forEach(a=>a.forEach(v=>{ymin=Math.min(ymin,v);ymax=Math.max(ymax,v)}));let extra=(ymax-ymin||1)*.12;ymin-=extra;ymax+=extra;
+  const xp=x=>pad.l+(x-lo)/(R-lo)*iw,yp=y=>pad.t+(ymax-y)/(ymax-ymin)*ih;
+  ctx.clearRect(0,0,W,H);ctx.font='11px Arial';ctx.strokeStyle='#e4e8eb';ctx.fillStyle='#75828d';
+  [lo,lo/2,0,R/2,R].forEach(x=>{const px=xp(x);ctx.beginPath();ctx.moveTo(px,pad.t);ctx.lineTo(px,H-pad.b);ctx.stroke();ctx.fillText((x>0?'+':'')+fmt1(x)+'%',px-18,H-15)});
+  for(let j=0;j<=5;j++){const y=ymin+(ymax-ymin)*j/5,py=yp(y);ctx.beginPath();ctx.moveTo(pad.l,py);ctx.lineTo(W-pad.r,py);ctx.stroke();ctx.fillText(Math.round(y).toLocaleString('pt-BR'),6,py+4)}
+  ctx.strokeStyle='#909aa2';ctx.beginPath();ctx.moveTo(pad.l,yp(0));ctx.lineTo(W-pad.r,yp(0));ctx.stroke();
+  const colors=['#1F3249','#BA8758','#2F6B54','#A14B4B'];
+  series.forEach((arr,k)=>{ctx.strokeStyle=colors[k%colors.length];ctx.lineWidth=2.8;ctx.beginPath();arr.forEach((y,i)=>{if(!i)ctx.moveTo(xp(shocks[i]),yp(y));else ctx.lineTo(xp(shocks[i]),yp(y))});ctx.stroke()});
+  items.forEach((it,k)=>{const x=pad.l+k*Math.min(240,iw/Math.max(1,items.length));ctx.fillStyle=colors[k%colors.length];ctx.fillRect(x,pad.t-22,16,3);ctx.fillStyle='#56636e';ctx.fillText((k+1)+' · '+it.asset+' '+it.strategyName.slice(0,20),x+22,pad.t-17)});
+}
+function renderMatrix(){
+  if(!items.length){$('matrix').innerHTML='<tbody><tr><td>Adicione estratégias para comparar.</td></tr></tbody>';return}
+  const R=commonRange(),base=[-R,-R*.5,-10,-5,0,5,10,R*.5,R].filter((v,i,a)=>v>=-99&&a.findIndex(x=>Math.abs(x-v)<.1)===i).sort((a,b)=>a-b);
+  let h='<thead><tr><th>Movimento</th>'+items.map((it,i)=>'<th>'+(i+1)+' · '+it.asset+'<br>'+it.strategyName+'</th>').join('')+'</tr></thead><tbody>';
+  base.forEach(mv=>{h+='<tr><td>'+pct(mv)+'</td>';items.forEach(it=>{const p=OptionEngine.expiryPnlTotal(it,Math.max(.0001,it.spot*(1+mv/100)));h+='<td class="'+(p>=0?'positive':'negative')+'">'+(p>=0?'+':'')+brl(p)+'</td>'});h+='</tr>'});
+  $('matrix').innerHTML=h+'</tbody>';
+}
+async function loadStudies(){
+  try{const r=await fetch('data/studies.json?v='+Date.now(),{cache:'no-store'});const p=await r.json();studies=p.studies||[]}catch(e){studies=[]}
+  renderStudies();
+}
+function renderStudies(){
+  $('studies').innerHTML=studies.map(st=>'<div class="study"><div><h4>'+st.name+'</h4><p>'+st.description+' · '+st.historicalContext.sample+'</p></div><button data-study="'+st.id+'">Carregar caso PETR4</button></div>').join('')||'<div class="note">Nenhum caso salvo disponível.</div>';
+  document.querySelectorAll('[data-study]').forEach(b=>b.onclick=()=>loadStudy(b.dataset.study));
+}
+function loadStudy(id){
+  const st=studies.find(x=>x.id===id);if(!st)return;
+  if(items.length&& !confirm('Substituir as estruturas atuais pelo caso arquivado?'))return;
+  const asset=st.defaultComparatorAsset||'PETR4',spot=Number(st.referenceSpot?.[asset]||49.66),costs=st.premiumsPct?.[asset]||{};
+  const defs=['100','102','103'].filter(k=>costs[k]!=null);
+  items=defs.map(k=>{
+    const d=st.structures[k],premPct=Number(costs[k]),totalPrem=spot*premPct/100,half=totalPrem/2;
+    return {
+      id:'study-'+id+'-'+k,sourceStudy:id,savedAt:new Date().toISOString(),
+      asset,assetName:'Petrobras PN',strategyId:k==='100'?'long_straddle':'long_strangle',strategyName:d.name,
+      category:'Caso arquivado',bias:'Movimento forte',riskLabel:'Perda limitada aos prêmios',
+      spot,units:100,entryCost:0,exitCost:0,stockQty:0,rate:0,dividendYield:0,
+      entryDate:st.entryDate,expiryDate:st.expiryDate,scenarioDate:st.scenarioDate,ivFallback:.40,
+      optionCashflowTotal:-totalPrem*100,
+      legs:[
+        {side:'buy',type:'put',qty:1,strike:spot*d.putPct/100,price:half,iv:0},
+        {side:'buy',type:'call',qty:1,strike:spot*d.callPct/100,price:half,iv:0}
+      ]
+    };
+  });
+  saveItems();renderAll();
+}
+function renderAll(){renderCards();renderChart();renderMatrix()}
+$('clearAll').onclick=()=>{if(!items.length)return;if(confirm('Limpar todas as estruturas do Comparador?')){items=[];saveItems();renderAll()}};
+window.addEventListener('resize',()=>{clearTimeout(window.__r);window.__r=setTimeout(renderChart,100)});
+loadItems();renderAll();loadStudies();
+</script>
+</body>
+</html>
