@@ -1,125 +1,99 @@
-# Estruturadas Jacarandá | Laboratório de Opções
+# Estruturadas Jacarandá
 
-Projeto estático da Jacarandá Investimentos para estudo, comparação e pré-precificação de estruturas com opções da B3.
+Ferramenta interna para montagem, pré-precificação e comparação de estratégias com opções da B3.
 
-## Camadas
+## Fluxo canônico
 
-- `index.html` — **Laboratório**: comparação histórica, payoff, break-even, convexidade, IV e cenários.
-- `simulador-mercado.html` — **Estratégias**: motor multi-pernas com catálogo por nome, universo B3, spot delayed, prêmios manuais por perna, fee, risco, payoff, MTM e factsheet JPG.
-- `data/strategies.json` — catálogo canônico de estruturas e suas pernas.
+**Estratégias → Adicionar ao Comparador → Comparador**
 
-## Catálogo implementado
+### 1. Estratégias — `index.html`
 
-### Essenciais
-- Compra de Call
-- Venda de Call
-- Compra de Put
-- Venda de Put (cash-secured)
-- Financiamento / Covered Call
-- Protective Put
-- Collar
-- Trava de Alta com Calls
-- Trava de Baixa com Puts
-- Straddle Comprado
-- Strangle Comprado
+Página inicial e motor canônico do produto.
 
-### Comuns
-- Fence / Collar Financiado
-- Trava de Alta com Puts (crédito)
-- Trava de Baixa com Calls (crédito)
-- Borboleta de Calls
-- Iron Butterfly
-- Iron Condor
-- Long Sintético
+Serve para:
+- selecionar ativo do universo B3;
+- escolher a estratégia pelo nome;
+- montar até quatro pernas de opções e, quando aplicável, uma perna no ativo;
+- informar/ajustar strikes e prêmios por perna;
+- incorporar fee e custos;
+- calcular fluxo inicial, ganho/perda máxima, break-even(s), IV por perna, payoff e MTM;
+- gerar factsheet JPG;
+- adicionar a montagem ao Comparador.
 
-### Avançadas
-- Straddle Vendido
-- Strangle Vendido
-- Condor Comprado de Calls
-- Short Sintético
-- Call Backspread 1x2
-- Put Backspread 1x2
-- Ratio Call Spread 1x2 vendido
-- Box Spread
+### 2. Comparador — `comparador.html`
 
-Calendar Spread e Diagonal Spread estão registrados como backlog porque exigem múltiplos vencimentos e uma camada adicional de marcação a mercado por perna.
+Workspace analítico para comparar de duas a quatro montagens criadas em Estratégias.
 
-> Liquidez é uma característica das séries utilizadas em cada perna, não da estratégia em abstrato. Antes de executar, validar Bid/Ask, spread, volume, open interest quando disponível, lote, estilo de exercício e vencimento.
+Serve para:
+- comparar resumo de risco de cada alternativa;
+- sobrepor payoffs no vencimento;
+- aplicar o mesmo choque percentual às estruturas;
+- visualizar matriz comum de cenários;
+- carregar casos arquivados.
 
-## Motor de cálculo
+O Comparador não remonta operações: ele consome montagens produzidas pela página Estratégias.
 
-Cada estrutura é formada por:
-- zero ou uma perna no ativo;
-- uma a quatro pernas de opções;
-- lado de compra/venda;
-- Call/Put;
-- quantidade relativa;
-- strike;
-- preço de entrada;
-- código opcional da série.
+## Motor compartilhado
 
-O motor calcula:
-- fluxo inicial de opções;
-- fee/custos;
-- notional da perna no ativo;
-- P/L no vencimento;
-- ganho/perda máxima quando determináveis;
-- perda ilimitada na alta quando a inclinação terminal é negativa;
-- break-even(s);
-- IV calibrada por perna pelo Black-Scholes-Merton;
-- MTM em uma data de cenário;
-- gráfico de payoff e matriz de movimentos.
-
-A ferramenta **não calcula margem B3/corretora**.
-
-## Universo B3
-
-O workflow `.github/workflows/update-universe.yml` reconstrói diariamente `data/universe-b3.json`.
-
-Escopo:
-- ações e units classificadas como `stock`;
-- mercado padrão, sufixos 3–8 e 11;
-- exclusão do mercado fracionário, direitos/recibos, fundos e BDRs.
-
-A fonte de descoberta do universo é `brapi.dev /api/quote/list?type=stock`.
-
-## Cotações indicativas
-
-O navegador não consulta Yahoo Finance diretamente.
-
-O workflow `.github/workflows/update-quotes.yml` atualiza `data/quotes.json` server-side em dias úteis. Para cada ativo:
-1. Yahoo Finance é a fonte primária do spot;
-2. o snapshot diário do universo é fallback;
-3. o frontend lê o JSON no mesmo domínio do GitHub Pages.
-
-Os dados são indicativos e podem ter atraso.
-
-## Prêmios e volatilidade implícita
-
-Nesta fase, os preços das opções permanecem manuais por perna:
-- para compra, usar preferencialmente Ask;
-- para venda, usar preferencialmente Bid.
-
-A IV de cada perna é calibrada pelo modelo a partir do prêmio informado, strike, spot, prazo e premissas de taxa/dividend yield.
-
-Essas IVs são **estimativas do modelo**, não uma superfície oficial de volatilidade capturada do mercado.
-
-## Factsheet
-
-A aba Estratégias possui **Gerar Factsheet JPG**, com:
-- ativo e estratégia;
-- pernas;
-- spot;
-- prêmios;
-- fluxo inicial;
-- fee/custos;
+`js/options-engine.js` é a fonte comum para:
+- payoff no vencimento;
 - ganho/perda máxima;
-- break-evens;
-- IV por perna;
-- payoff.
+- break-even(s);
+- Black-Scholes-Merton;
+- IV calibrada por perna;
+- MTM por cenário;
+- range automático.
 
-## Publicação
+Isso evita manter dois motores matemáticos independentes entre Estratégias e Comparador.
 
-GitHub Pages publica a branch `main`.
+## Catálogo
 
-Uso interno. Simulação ilustrativa; não constitui recomendação de investimento. Antes de qualquer execução, preços, liquidez, séries, margem e condições efetivas devem ser confirmados no book e na corretora.
+`data/strategies.json` contém o catálogo canônico das estruturas implementadas, incluindo:
+- calls e puts compradas/vendidas;
+- covered call / financiamento;
+- protective put;
+- collar e fence;
+- travas de alta/baixa;
+- straddle e strangle;
+- borboletas e condor;
+- sintéticas;
+- backspreads e ratios;
+- box spread.
+
+Calendar e Diagonal permanecem em backlog porque exigem múltiplos vencimentos por perna.
+
+## Universo e market data
+
+- `data/universe-b3.json`: universo diário de ações/units B3.
+- `data/quotes.json`: snapshot indicativo de spot.
+- `.github/workflows/update-universe.yml`: atualiza o universo.
+- `.github/workflows/update-quotes.yml`: atualiza cotações delayed server-side.
+
+Yahoo Finance é a fonte primária do spot e o snapshot do universo atua como fallback.
+
+## Estudos arquivados
+
+`data/studies.json` registra estudos históricos reutilizáveis no Comparador.
+
+O primeiro caso preservado é **Volatilidade Eleitoral · 02/10/2026**, que originou o protótipo inicial de Straddle/Strangle.
+
+A interface antiga completa foi preservada apenas como arquivo histórico em:
+
+`archive/laboratorio-eleitoral-2026.html`
+
+Ela não faz mais parte do fluxo principal.
+
+## Compatibilidade
+
+`simulador-mercado.html` permanece apenas como redirecionamento para `index.html`, preservando links antigos.
+
+## Limitações atuais
+
+- preços das opções ainda são informados manualmente;
+- spot é delayed/indicativo;
+- não calcula margem B3/corretora;
+- MTM usa Black-Scholes-Merton como aproximação europeia;
+- não modela exercício antecipado;
+- Calendar/Diagonal ainda não estão implementados.
+
+Uso interno. Simulação ilustrativa; não constitui recomendação de investimento. Antes de execução, validar séries, Bid/Ask, liquidez, lote, margem e condições efetivas na corretora.
