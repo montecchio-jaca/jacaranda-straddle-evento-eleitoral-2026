@@ -117,7 +117,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
   <div class="panel-head">
     <div>
       <h3>Pernas da estrutura</h3>
-      <div class="note">Para compra use o Ask como referência conservadora; para venda use o Bid. Os campos permanecem editáveis.</div>
+      <div class="note">Cada perna mantém simultaneamente strike/prêmio em R$ e em % do spot. Para compra use o Ask como referência conservadora; para venda use o Bid.</div>
     </div>
     <div class="inline-actions" style="margin-top:0">
       <button id="suggestStrikes">Sugerir strikes</button>
@@ -258,9 +258,10 @@ function applyPricingModeUI(){
   document.body.classList.toggle('spot-percent-mode',isSpotPercentMode());
   document.body.classList.toggle('book-mode',!isSpotPercentMode());
   const note=$('pricingModeNote');if(!note)return;
+  const S=num($('spotInput')?.value),spotText=S>0?brl(S):'spot não informado';
   note.innerHTML=isSpotPercentMode()
-    ? '<strong>Spot = 100%:</strong> use Strike % e Prêmio % para desenhar a estrutura em termos relativos. Strike em R$, código da série e preço em R$ continuam preservados para a leitura operacional.'
-    : '<strong>R$ / Book:</strong> strike e Bid/Ask em reais são os campos principais. O simulador mostra automaticamente os equivalentes em % do spot para facilitar a comparação entre ativos e estruturas.';
+    ? '<strong>Spot = 100% ('+spotText+'):</strong> use Strike % e Prêmio % para desenhar a estrutura em termos relativos. Strike em R$, código da série e preço em R$ continuam preservados para a leitura operacional.'
+    : '<strong>R$ / Book:</strong> strike e Bid/Ask em reais são os campos principais. O simulador mostra automaticamente os equivalentes em % do spot (100% = '+spotText+') para facilitar a comparação entre ativos e estruturas.';
 }
 function setStatus(kind,title,meta){
   $('statusDot').className='status-dot'+(kind?' '+kind:'');
@@ -347,7 +348,8 @@ function renderStockLeg(){
   const st=currentStrategy(),box=$('stockLeg');
   if(st&&st.stockQty){
     box.classList.add('show');
-    box.innerHTML='<strong>Perna no ativo:</strong> '+(st.stockQty>0?'Comprado ':'Vendido ')+Math.abs(st.stockQty)+' × ativo por unidade-base. Entrada pelo spot atual de '+brl(num($('spotInput').value))+'.';
+    const S=num($('spotInput').value);
+    box.innerHTML='<strong>Perna no ativo:</strong> '+(st.stockQty>0?'Comprado ':'Vendido ')+Math.abs(st.stockQty)+' × ativo por unidade-base. Entrada pelo spot atual de '+(isSpotPercentMode()?'100,00% ('+brl(S)+')':brl(S))+'.';
   }else{box.classList.remove('show');box.innerHTML=''}
 }
 function renderLegs(){
@@ -366,7 +368,7 @@ function renderLegs(){
       '<div class="mini"><label>Strike % Spot</label><input data-f="strikePct" type="number" min="0" step="0.01" value="'+Number(strikePct||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Strike (R$)</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
-      '<div class="mini"><label>Prêmio % Spot</label><input data-f="pricePct" type="number" min="0" step="0.01" value="'+Number(pricePct||0).toFixed(2)+'" placeholder="0,00"></div>'+
+      '<div class="mini"><label>Prêmio % Spot</label><input data-f="pricePct" type="number" min="0" step="0.01" value="'+(num(l.price)>0?Number(pricePct).toFixed(2):'')+'" placeholder="0,00"></div>'+
       '<div class="mini"><label>'+priceLabel+' (R$)</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
       '<div class="mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
       '</div></div>';
@@ -881,7 +883,7 @@ $('addComparator').onclick=addToComparator;
 $('generateJpg').onclick=openFactsheet;$('downloadJpg').onclick=downloadFactsheet;$('closeExport').onclick=closeFactsheet;$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheet()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
 ['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep'){renderStockLeg();renderLegs()}updateAll()}));
-$('pricingMode').addEventListener('change',()=>{applyPricingModeUI();renderLegs();updateAll()});
+$('pricingMode').addEventListener('change',()=>{localStorage.setItem('jacaranda.options.pricingMode',$('pricingMode').value);applyPricingModeUI();renderLegs();updateAll()});
 $('moveRange').addEventListener('input',()=>updateScenario(model()));
 $('ivRatio').addEventListener('input',updateAll);
 window.addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(updateAll,100)});
@@ -889,6 +891,7 @@ window.addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setT
 async function init(){
   setStatus('','Carregando…','Universo B3, catálogo e cotações.');
   await Promise.all([loadUniverse(),loadStrategies(),loadQuotesPayload()]);
+  const savedMode=localStorage.getItem('jacaranda.options.pricingMode');if(savedMode==='book'||savedMode==='spot_pct')$('pricingMode').value=savedMode;
   buildAssetControls();buildStrategySelect();renderCatalog();
   applyQuote();
   selectStrategy(state.strategyId);
