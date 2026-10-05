@@ -117,7 +117,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
   <div class="panel-head">
     <div>
       <h3>Pernas da estrutura</h3>
-      <div class="note">Cada perna mantém simultaneamente strike/prêmio em R$ e em % do spot. Para compra use o Ask como referência conservadora; para venda use o Bid.</div>
+      <div class="note">Cada perna mantém strike/prêmio em R$ e em % do spot. <strong>Razão</strong> define a proporção entre as pernas (ex.: Strangle padrão = 1:1); para aumentar o tamanho da operação, mantenha a razão e use <strong>Número de lotes</strong>. Para compra use Ask; para venda, Bid.</div>
     </div>
     <div class="inline-actions" style="margin-top:0">
       <button id="suggestStrikes">Sugerir strikes</button>
@@ -128,6 +128,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
   </div>
   <div class="panel-body">
     <div id="stockLeg" class="stock-leg"></div>
+    <div id="ratioStatus" style="margin-bottom:10px"></div>
     <div id="legs" class="legs"></div>
   </div>
 </section>
@@ -344,6 +345,21 @@ function suggestLegsFromStrategy(){
   }));
   renderLegs();updateAll();
 }
+function strategyRatioInfo(){
+  const st=currentStrategy();
+  if(!st||!Array.isArray(st.legs)||st.legs.length!==state.legs.length)return {custom:false,current:'—',standard:'—'};
+  const standard=st.legs.map(l=>Math.max(1,num(l.qty)||1));
+  const current=state.legs.map(l=>Math.max(1,num(l.qty)||1));
+  const custom=current.some((v,i)=>Math.abs(v-standard[i])>1e-9);
+  return {custom,current:current.join(':'),standard:standard.join(':')};
+}
+function updateRatioStatus(){
+  const el=$('ratioStatus');if(!el)return;
+  const info=strategyRatioInfo(),st=currentStrategy();
+  if(!info.custom){el.innerHTML='';return}
+  el.innerHTML='<div class="warning"><strong>Razão customizada '+info.current+'</strong> (padrão '+info.standard+' para '+st.name+'). Isso altera o formato e a inclinação do payoff. Se a intenção era apenas aumentar a posição, restaure a razão padrão e ajuste <strong>Número de lotes</strong>.</div>';
+}
+
 function renderStockLeg(){
   const st=currentStrategy(),box=$('stockLeg');
   if(st&&st.stockQty){
@@ -364,7 +380,7 @@ function renderLegs(){
       '<div class="leg-grid">'+
       '<div class="mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
       '<div class="mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
-      '<div class="mini"><label>Qtd.</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'"></div>'+
+      '<div class="mini"><label>Razão</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'" title="Proporção desta perna. Para escalar a operação, use Número de lotes."></div>'+
       '<div class="mini"><label>Strike % Spot</label><input data-f="strikePct" type="number" min="0" step="0.01" value="'+Number(strikePct||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Strike (R$)</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
@@ -374,6 +390,7 @@ function renderLegs(){
       '</div></div>';
   }).join('');
 
+  updateRatioStatus();
   document.querySelectorAll('.leg-card').forEach(card=>{
     const i=Number(card.dataset.leg);
     card.querySelectorAll('[data-f]').forEach(inp=>{
@@ -401,7 +418,7 @@ function renderLegs(){
             const pair=card.querySelector('[data-f="pricePct"]');if(pair)pair.value=Number(leg.pricePct||0).toFixed(2);
           }
         }
-        if(f==='side'||f==='type'){renderLegs();updateAll()}else updateAll();
+        if(f==='side'||f==='type'){renderLegs();updateAll()}else{updateRatioStatus();updateAll()};
       });
       if(inp.dataset.f==='strikePct'||inp.dataset.f==='pricePct'){
         inp.addEventListener('change',()=>{
@@ -750,7 +767,8 @@ function drawFactsheet(){
 
   cText(ctx,'JACARANDÁ INVESTIMENTOS',74,56,18,700,C.gold2);
   cText(ctx,'Estruturadas Jacarandá',74,108,48,700,C.white);
-  cText(ctx,st.name+' · '+state.asset,74,145,23,400,C.text);
+  const ratioInfo=strategyRatioInfo();
+  cText(ctx,st.name+(ratioInfo.custom?' · razão '+ratioInfo.current:'')+' · '+state.asset,74,145,23,400,ratioInfo.custom?C.amber:C.text);
 
   const days=dayDiff(),badgeY=52;
   cRound(ctx,1410,badgeY,220,42,21,C.gold);
@@ -765,9 +783,194 @@ function drawFactsheet(){
   // Coluna esquerda: resumo e KPIs nominais.
   cRound(ctx,lx,top,lw,142,18,C.panel2,C.line);
   cText(ctx,'ESTRUTURA',lx+22,top+29,11,700,C.gold2);
-  cText(ctx,st.name,lx+22,top+62,25,700,C.white);
+  cText(ctx,st.name+(ratioInfo.custom?' · '+ratioInfo.current:'') ,lx+22,top+62,25,700,ratioInfo.custom?C.amber:C.white);
   cWrap(ctx,legSummary(),lx+22,top+90,lw-44,18,2,m.pricingComplete?C.text:C.amber,11,400);
-  cText(ctx,'Base '+formatDateBr($('entryDate').value)+'  |  Cenário '+formatDateBr($('scenarioDate').value)+'  |  apresentação nominal em R$',lx+22,top+127,10,400,C.muted);
+  cText(ctx,'Base '+formatDateBr($('entryDate').value)+'  |  Cenário '+formatDateBr($('scenarioDate').value)+'  |  apresentação nominal em R
+
+  const gap=14,cardW=(lw-gap)/2,cardH=78;
+  function card(x,y,label,value,sub,color){
+    cRound(ctx,x,y,cardW,cardH,14,C.panel,C.line);
+    cText(ctx,label.toUpperCase(),x+16,y+21,9,700,C.muted);
+    cText(ctx,value,x+16,y+51,21,700,color||C.white);
+    if(sub)cText(ctx,sub,x+16,y+70,9,400,C.muted);
+  }
+  let cy=362;
+  card(lx,cy,'Preço atual',brl(m.S),CORE[state.asset]?.name||state.asset);
+  card(lx+cardW+gap,cy,'Fluxo inicial',m.pricingComplete?(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal)):'—',m.pricingComplete?((m.optionCashflowTotal>=0?'crédito':'débito')+' · '+fmt(Math.abs(m.netPremiumPctSpot))+'% do spot'):'prêmios pendentes',m.pricingComplete?(m.optionCashflowTotal>=0?C.green:C.red):C.amber);
+  cy+=91;
+  card(lx,cy,'Risco máximo',finiteLoss(),m.pricingComplete?st.risk:'aguardando Bid/Ask',m.pricingComplete?C.red:C.amber);
+  card(lx+cardW+gap,cy,'Lucro máximo',finiteGain(),m.pricingComplete?'no vencimento':'aguardando Bid/Ask',m.pricingComplete?C.green:C.amber);
+  cy+=91;
+  const beMain=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(brl).join(' / '):'—';
+  const beSub=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(v=>fmt(v/m.S*100)+'% do spot').join(' / '):(m.pricingComplete?'sem break-even':'prêmios pendentes');
+  card(lx,cy,'Break-even(s)',beMain,beSub,C.gold2);
+  card(lx+cardW+gap,cy,m.stockNotional>0?'Notional ativo':'Quantidade',m.stockNotional>0?brl(m.stockNotional):fmt0(m.units)+' un.',m.stockNotional>0?(fmt0(m.units)+' unidades-base'):(fmt0(m.lot)+' × '+fmt0(m.lots)),C.white);
+
+  // Coluna direita: cenários nominais + leitura.
+  cRound(ctx,rx,top,rw,328,18,C.panel2,C.line);
+  cText(ctx,'CENÁRIOS',rx+22,top+29,11,700,C.gold2);
+  cText(ctx,'Preço do ativo e P/L em valores nominais',rx+22,top+50,10,400,C.muted);
+
+  const tx=rx+22,ty=top+66;
+  const widths=[145,175,220,220,220],heads=['MOVIMENTO','ATIVO (R$)','P/L VENC. (R$)','P/L MTM (R$)','RET. / RISCO'];
+  let hx=tx;
+  heads.forEach((h,i)=>{ctx.fillStyle=C.deep;ctx.fillRect(hx,ty,widths[i],36);cText(ctx,h,hx+widths[i]-9,ty+23,8,700,C.gold2,'right');hx+=widths[i]});
+  const rowH=Math.min(25,(328-116)/Math.max(1,pm.tableRows.length));
+  pm.tableRows.forEach((row,i)=>{
+    const yy=ty+36+i*rowH;
+    ctx.fillStyle=Math.abs(row.movePct)<.16?C.zero:(i%2?C.row:C.row2);
+    ctx.fillRect(tx,yy,widths.reduce((a,b)=>a+b,0),rowH);
+    let x=tx;
+    cText(ctx,pct(row.movePct),x+10,yy+rowH*.69,9,700,C.text);
+    if(row.tag){
+      cRound(ctx,x+76,yy+4,58,Math.max(15,rowH-8),8,'rgba(186,135,88,.14)',C.gold);
+      cText(ctx,row.tag,x+105,yy+rowH*.68,7,700,C.gold2,'center');
+    }
+    x+=widths[0];
+    cText(ctx,brl(row.spot),x+widths[1]-9,yy+rowH*.69,10,600,C.white,'right');x+=widths[1];
+    if(row.pExp==null)cText(ctx,'—',x+widths[2]-9,yy+rowH*.69,10,700,C.amber,'right');
+    else cText(ctx,(row.pExp>=0?'+':'')+brl(row.pExp),x+widths[2]-9,yy+rowH*.69,10,700,row.pExp>=0?C.green:C.red,'right');
+    x+=widths[2];
+    if(row.pMtm==null)cText(ctx,'—',x+widths[3]-9,yy+rowH*.69,10,700,C.amber,'right');
+    else cText(ctx,(row.pMtm>=0?'+':'')+brl(row.pMtm),x+widths[3]-9,yy+rowH*.69,10,700,row.pMtm>=0?C.green:C.red,'right');
+    x+=widths[3];
+    cText(ctx,row.returnPct==null?'—':pct(row.returnPct),x+widths[4]-9,yy+rowH*.69,10,700,row.returnPct==null?C.muted:(row.returnPct>=0?C.green:C.red),'right');
+  });
+
+  const ly=548,lh=96;
+  cRound(ctx,rx,ly,rw,lh,18,C.panel2,C.line);
+  cText(ctx,'LEITURA DA ESTRUTURA',rx+22,ly+27,10,700,C.gold2);
+  let narrative='';
+  if(!m.pricingComplete){
+    narrative='A estrutura ainda possui '+m.missingPrices+' perna(s) sem prêmio. Preencha Ask nas compras e Bid nas vendas para que risco, break-even, P/L e MTM representem a operação econômica.';
+  }else{
+    const bes=(risk.bes||[]).map(brl);
+    narrative=st.risk+'. ';
+    if(bes.length)narrative+='Break-even'+(bes.length>1?'s ':' ')+bes.join(' e ')+'. ';
+    narrative+='No cenário selecionado ('+pct(pm.movePct)+', ativo em '+brl(pm.scenarioSpot)+'), o P/L no vencimento é '+(pm.scenarioExpiry>=0?'+':'')+brl(pm.scenarioExpiry)+' e o MTM estimado é '+(pm.scenarioMtm>=0?'+':'')+brl(pm.scenarioMtm)+'.';
+  }
+  cWrap(ctx,narrative,rx+22,ly+51,rw-44,17,3,C.text,10,600);
+
+  // Gráfico principal ampliado: eixo X nominal em R$ e P/L total em R$.
+  const gy=672,gh=330;
+  cRound(ctx,72,gy,1774,gh,18,C.panel2,C.line);
+  cText(ctx,m.pricingComplete?'PAYOFF DA ESTRUTURA · P/L TOTAL (R$)':'PAYOFF ESTRUTURAL · PRÊMIOS PENDENTES',94,gy+30,11,700,C.gold2);
+  cText(ctx,'Eixo horizontal: preço do ativo em R$ · faixa automática de apresentação',94,gy+51,10,400,C.muted);
+
+  const plot={x:154,y:gy+72,w:1618,h:205};
+  const low=pm.range.lowPct,high=pm.range.highPct;
+  const xpPct=v=>plot.x+(v-low)/(high-low)*plot.w;
+  const yp=v=>plot.y+(pm.ymax-v)/(pm.ymax-pm.ymin)*plot.h;
+  ctx.strokeStyle=C.line;ctx.lineWidth=1;
+
+  const xticks=[low,(low+0)/2,0,(0+high)/2,high];
+  xticks.forEach(v=>{
+    const px=xpPct(v),spot=m.S*(1+v/100);
+    ctx.beginPath();ctx.moveTo(px,plot.y);ctx.lineTo(px,plot.y+plot.h);ctx.stroke();
+    cText(ctx,brl(spot),px,gy+gh-22,9,400,C.muted,'center');
+  });
+  for(let i=0;i<=4;i++){
+    const val=pm.ymin+(pm.ymax-pm.ymin)*i/4,py=yp(val);
+    ctx.beginPath();ctx.moveTo(plot.x,py);ctx.lineTo(plot.x+plot.w,py);ctx.stroke();
+    cText(ctx,(val>=0?'+':'')+brl(val),plot.x-14,py+4,9,400,C.muted,'right');
+  }
+  ctx.strokeStyle='#7C8993';ctx.beginPath();ctx.moveTo(plot.x,yp(0));ctx.lineTo(plot.x+plot.w,yp(0));ctx.stroke();
+
+  function chartLine(arr,col,dash){
+    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=3.2;ctx.setLineDash(dash||[]);ctx.beginPath();
+    arr.forEach((v,i)=>{if(!i)ctx.moveTo(xpPct(pm.xs[i]),yp(v));else ctx.lineTo(xpPct(pm.xs[i]),yp(v))});
+    ctx.stroke();ctx.restore();
+  }
+  chartLine(pm.expiry,C.gold2);
+  if(pm.mtm)chartLine(pm.mtm,C.text,[10,7]);
+
+  ctx.fillStyle=C.gold2;ctx.fillRect(1210,gy+27,22,3);cText(ctx,'Vencimento',1240,gy+32,9,700,C.text);
+  if(pm.mtm){ctx.strokeStyle=C.text;ctx.setLineDash([10,7]);ctx.beginPath();ctx.moveTo(1360,gy+28);ctx.lineTo(1382,gy+28);ctx.stroke();ctx.setLineDash([]);cText(ctx,'MTM cenário',1392,gy+32,9,700,C.text)}
+  cText(ctx,'Faixa: '+pct(low)+' a '+pct(high)+' · '+brl(m.S*(1+low/100))+' a '+brl(m.S*(1+high/100)),1770,gy+52,9,400,C.muted,'right');
+
+  // Rodapé.
+  ctx.fillStyle=C.gold;ctx.fillRect(72,1026,1774,1);
+  cText(ctx,m.pricingComplete?'SIMULAÇÃO ILUSTRATIVA · APRESENTAÇÃO AO CLIENTE':'SIMULAÇÃO INCOMPLETA · PRÊMIOS PENDENTES',72,1050,9,700,m.pricingComplete?C.gold2:C.amber);
+  cText(ctx,'Valores nominais. Confirme Bid/Ask, códigos, liquidez, estilo de exercício, custos, impostos e margem antes de qualquer execução.',72,1069,9,400,C.muted);
+  cText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1846,1060,9,400,C.muted,'right');
+}
+function openFactsheet(){syncStateFromLegInputs();updateAll();drawFactsheet();$('exportOverlay').classList.add('open')}
+function closeFactsheet(){$('exportOverlay').classList.remove('open')}
+function factsheetFilename(){return 'Estruturadas_Jacaranda_'+state.asset+'_'+state.strategyId+'_'+$('entryDate').value+'.jpg'}
+function isAppleMobile(){return /iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)}
+function dataUrlToJpegFile(dataUrl,name){
+  const parts=dataUrl.split(','),meta=parts[0],b64=parts[1],mime=(meta.match(/data:([^;]+)/)||[])[1]||'image/jpeg';
+  const bin=atob(b64),bytes=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new File([bytes],name,{type:mime,lastModified:Date.now()});
+}
+async function downloadFactsheet(){
+  syncStateFromLegInputs();updateAll();drawFactsheet();
+  const filename=factsheetFilename(),canvas=$('factsheetCanvas');
+  const dataUrl=canvas.toDataURL('image/jpeg',.95);
+  const file=dataUrlToJpegFile(dataUrl,filename);
+  const shareData={files:[file],title:'Estruturadas Jacarandá'};
+  const apple=isAppleMobile();
+
+  if(apple&&navigator.share&&(!navigator.canShare||navigator.canShare(shareData))){
+    try{
+      await navigator.share(shareData);
+      return;
+    }catch(err){
+      if(err&&err.name==='AbortError')return;
+      console.warn('Falha no compartilhamento nativo do JPG; usando fallback.',err);
+    }
+  }
+
+  if(apple){
+    const win=window.open('about:blank','_blank');
+    if(win){
+      win.document.title=filename;
+      win.location.href=dataUrl;
+      return;
+    }
+  }
+
+  const blobUrl=URL.createObjectURL(file),a=document.createElement('a');
+  a.download=filename;a.href=blobUrl;a.rel='noopener';a.style.display='none';
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(blobUrl),15000);
+}
+
+function changeAsset(symbol){
+  const hit=universeAssets().find(a=>a.symbol===symbol);if(!hit)return;
+  state.asset=symbol;state.quote=null;buildAssetControls();applyQuote(true);
+}
+$('assetSelect').addEventListener('change',e=>changeAsset(e.target.value));
+$('assetSearch').addEventListener('change',e=>changeAsset((e.target.value||'').trim().toUpperCase()));
+$('strategySelect').addEventListener('change',e=>selectStrategy(e.target.value));
+$('refreshQuote').onclick=refreshSnapshot;
+$('suggestStrikes').onclick=suggestLegsFromStrategy;
+$('clearPrices').onclick=()=>{state.legs.forEach(l=>l.price=0);renderLegs();updateAll()};
+$('addComparator').onclick=addToComparator;
+$('generateJpg').onclick=openFactsheet;$('downloadJpg').onclick=downloadFactsheet;$('closeExport').onclick=closeFactsheet;$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheet()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
+['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep'){renderStockLeg();renderLegs()}updateAll()}));
+$('pricingMode').addEventListener('change',()=>{localStorage.setItem('jacaranda.options.pricingMode',$('pricingMode').value);applyPricingModeUI();renderLegs();updateAll()});
+$('moveRange').addEventListener('input',()=>updateScenario(model()));
+$('ivRatio').addEventListener('input',updateAll);
+window.addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(updateAll,100)});
+
+async function init(){
+  setStatus('','Carregando…','Universo B3, catálogo e cotações.');
+  await Promise.all([loadUniverse(),loadStrategies(),loadQuotesPayload()]);
+  const savedMode=localStorage.getItem('jacaranda.options.pricingMode');if(savedMode==='book'||savedMode==='spot_pct')$('pricingMode').value=savedMode;
+  buildAssetControls();buildStrategySelect();renderCatalog();
+  applyQuote(true);
+  selectStrategy(state.strategyId);
+  applyPricingModeUI();
+  updateComparatorButton();
+  if(isAppleMobile())$('downloadJpg').textContent='Salvar / Compartilhar JPG';
+}
+init();
+</script>
+</body>
+</html>+(ratioInfo.custom?'  |  razão padrão '+ratioInfo.standard:''),lx+22,top+127,10,400,ratioInfo.custom?C.amber:C.muted);
 
   const gap=14,cardW=(lw-gap)/2,cardH=78;
   function card(x,y,label,value,sub,color){
