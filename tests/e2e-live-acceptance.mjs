@@ -151,6 +151,51 @@ await selectStrategy(page,'iron_condor',4,false);
 await selectStrategy(page,'covered_call',1,true);
 console.log('PASS estruturas 1,2,3,4 pernas + estrutura com ativo');
 
+// 4b. Auditoria específica do Strangle 1:1 versus razão customizada 10:1.
+await selectStrategy(page,'long_strangle',2,false);
+await page.locator('#spotInput').fill('23.72');
+await page.locator('#lotSize').fill('100');
+await page.locator('#lots').fill('10');
+await fillLeg(page,0,{strike:24.50,price:0.47,code:'CALLTEST'});
+await fillLeg(page,1,{strike:23.00,price:0.12,code:'PUTTEST'});
+let strangleAudit=await page.evaluate(()=>{
+  updateAll();
+  const m=model(),risk=analyzeRisk(m);
+  const lowA=expiryPnlTotal(18,m),lowB=expiryPnlTotal(19,m);
+  const highA=expiryPnlTotal(30,m),highB=expiryPnlTotal(31,m);
+  return {
+    units:m.units,flow:m.optionCashflowTotal,maxLoss:risk.maxLoss,bes:risk.bes,
+    lowSlope:(lowB-lowA)/(19-18),highSlope:(highB-highA)/(31-30),
+    ratio:strategyRatioInfo(),warning:document.querySelector('#ratioStatus').innerText
+  };
+});
+assert(strangleAudit.units===1000,'Strangle 1:1: unidades-base deveriam ser 1.000');
+assert(near(strangleAudit.flow,-590,0.01),'Strangle 1:1: débito inicial esperado R$ 590');
+assert(near(Math.abs(strangleAudit.lowSlope),Math.abs(strangleAudit.highSlope),.01),'Strangle 1:1: inclinações das caudas deveriam ter mesma magnitude');
+assert(!strangleAudit.ratio.custom,'Strangle 1:1 foi marcado como customizado');
+
+const callRatio=page.locator('.leg-card').nth(0).locator('[data-f="qty"]');
+await callRatio.fill('10');
+strangleAudit=await page.evaluate(()=>{
+  updateAll();
+  const m=model(),risk=analyzeRisk(m);
+  const lowA=expiryPnlTotal(18,m),lowB=expiryPnlTotal(19,m);
+  const highA=expiryPnlTotal(30,m),highB=expiryPnlTotal(31,m);
+  drawFactsheet();
+  return {
+    flow:m.optionCashflowTotal,maxLoss:risk.maxLoss,
+    lowSlope:(lowB-lowA),highSlope:(highB-highA),
+    ratio:strategyRatioInfo(),warning:document.querySelector('#ratioStatus').innerText
+  };
+});
+assert(strangleAudit.ratio.custom&&strangleAudit.ratio.current==='10:1','Strangle 10:1 não foi reconhecido como razão customizada');
+assert(strangleAudit.warning.includes('Razão customizada 10:1'),'alerta de razão 10:1 ausente');
+assert(strangleAudit.warning.includes('Número de lotes'),'alerta não orienta a escalar pela quantidade de lotes');
+assert(near(strangleAudit.flow,-4820,0.01),'Strangle 10:1: débito inicial deve reproduzir aproximadamente R$ 4.820 da captura');
+assert(near(Math.abs(strangleAudit.highSlope/strangleAudit.lowSlope),10,.01),'Strangle 10:1: inclinação alta/baixa deveria ser 10x');
+await page.screenshot({path:path.join(OUT,'strangle-ratio-warning.png'),fullPage:false});
+console.log('PASS auditoria Strangle: 1:1 simétrico nas caudas; 10:1 reproduz assimetria e gera alerta');
+
 // Exercita render/cálculo/factsheet para as seis estruturas definidas no aceite.
 const acceptance=[
   ['long_call',1,false],
@@ -278,5 +323,41 @@ console.log('SCREEN_KPIS',JSON.stringify(compare.screenTexts));
 console.log('JPEG',JSON.stringify({bytes:buf.length,width:dim.width,height:dim.height}));
 
 if(pageErrors.length)throw new Error('Erros JavaScript no navegador: '+pageErrors.join(' | '));
+
+// 7. Caminho específico do Safari/iPhone: arquivo JPEG via Web Share.
+const iphoneContext=await browser.newContext({
+  viewport:{width:390,height:844},
+  userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1',
+  isMobile:true,
+  hasTouch:true,
+  locale:'pt-BR'
+});
+await iphoneContext.addInitScript(()=>{
+  Object.defineProperty(Navigator.prototype,'canShare',{configurable:true,value:function(data){return !!(data&&data.files&&data.files.length)}});
+  Object.defineProperty(Navigator.prototype,'share',{configurable:true,value:async function(data){
+    const f=data.files&&data.files[0];
+    window.__shareProbe=f?{name:f.name,type:f.type,size:f.size}:null;
+  }});
+});
+const iphone=await iphoneContext.newPage();
+await iphone.route('**/data/quotes.json*',async route=>{
+  const body={generated_at_utc:'2026-10-04T20:00:00Z',universe_count:368,quotes:{PETR4:{symbol:'PETR4',price:50,provider:'E2E fixed quote',market_time_utc:'2026-10-04T19:55:00Z'}},errors:{}};
+  await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});
+});
+await iphone.goto(BASE+'?e2e=iphone-'+Date.now(),{waitUntil:'domcontentloaded',timeout:45000});
+await waitReady(iphone);
+await selectStrategy(iphone,'long_call',1,false);
+await iphone.locator('#spotInput').fill('50');
+await fillLeg(iphone,0,{strike:52.5,price:1.25,code:'IPHONECALL'});
+await iphone.click('#generateJpg');
+assert((await iphone.locator('#downloadJpg').innerText()).includes('Salvar / Compartilhar JPG'),'iPhone não recebeu CTA de salvar/compartilhar');
+await iphone.click('#downloadJpg');
+await iphone.waitForFunction(()=>window.__shareProbe&&window.__shareProbe.size>50000,{timeout:10000});
+const shareProbe=await iphone.evaluate(()=>window.__shareProbe);
+assert(shareProbe.type==='image/jpeg','Web Share iPhone não recebeu JPEG');
+assert(shareProbe.name.endsWith('.jpg'),'Web Share iPhone não recebeu nome .jpg');
+console.log('PASS Safari/iPhone: JPG enviado ao Web Share nativo',JSON.stringify(shareProbe));
+await iphoneContext.close();
+
 await browser.close();
 console.log('E2E ACCEPTANCE PASS');
