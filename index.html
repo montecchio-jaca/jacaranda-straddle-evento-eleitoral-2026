@@ -454,6 +454,16 @@ function getSpotQuote(){
   if(q&&Number(q.price)>0)return q;
   return null;
 }
+function quoteFreshness(q){
+  if(!q||!q.market_time_utc)return {stale:false,ageHours:null};
+  const t=new Date(q.market_time_utc),now=new Date();
+  if(Number.isNaN(t.getTime()))return {stale:false,ageHours:null};
+  const ageHours=(now.getTime()-t.getTime())/3600000;
+  const spNow=new Date(now.toLocaleString('en-US',{timeZone:'America/Sao_Paulo'}));
+  const dow=spNow.getDay(),hour=spNow.getHours()+spNow.getMinutes()/60;
+  const marketWindow=dow>=1&&dow<=5&&hour>=9&&hour<=18.75;
+  return {stale:marketWindow&&ageHours>2,ageHours};
+}
 function applyQuote(resetLegs){
   const q=getSpotQuote();
   if(q){
@@ -461,8 +471,13 @@ function applyQuote(resetLegs){
     state.quote=q;
     let when='horário não informado';
     if(q.market_time_utc){const d=new Date(q.market_time_utc);if(!Number.isNaN(d.getTime()))when=d.toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'})}
-    $('quotePill').textContent='Spot · '+brl(price);
-    setStatus('ok','Snapshot carregado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when);
+    const fresh=quoteFreshness(q);
+    $('quotePill').textContent=(fresh.stale?'Spot desatualizado · ':'Spot · ')+brl(price);
+    if(fresh.stale){
+      setStatus('err','Snapshot desatualizado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when+' · recarregue ou informe o spot manualmente');
+    }else{
+      setStatus('ok','Snapshot carregado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when);
+    }
   }else{
     state.quote=null;
     const fb=CORE[state.asset]?.fallbackSpot;
