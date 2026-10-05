@@ -81,6 +81,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <span id="universePill" class="pill">Universo B3 · carregando</span>
       <span id="quotePill" class="pill">Spot · carregando</span>
+      <span id="dayChangePill" class="pill">Var. dia · —</span>
       <span class="pill gold">BETA</span>
     </div>
   </div>
@@ -454,6 +455,12 @@ function getSpotQuote(){
   if(q&&Number(q.price)>0)return q;
   return null;
 }
+function quoteDayChange(q){
+  const price=Number(q?.price),prev=Number(q?.previous_close);
+  if(!(price>0&&prev>0))return null;
+  const abs=price-prev,pctChange=(price/prev-1)*100;
+  return {abs,pct:pctChange,previousClose:prev};
+}
 function quoteFreshness(q){
   if(!q||!q.market_time_utc)return {stale:false,ageHours:null};
   const t=new Date(q.market_time_utc),now=new Date();
@@ -471,18 +478,31 @@ function applyQuote(resetLegs){
     state.quote=q;
     let when='horário não informado';
     if(q.market_time_utc){const d=new Date(q.market_time_utc);if(!Number.isNaN(d.getTime()))when=d.toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'})}
-    const fresh=quoteFreshness(q);
+    const fresh=quoteFreshness(q),chg=quoteDayChange(q);
     $('quotePill').textContent=(fresh.stale?'Spot desatualizado · ':'Spot · ')+brl(price);
-    if(fresh.stale){
-      setStatus('err','Snapshot desatualizado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when+' · recarregue ou informe o spot manualmente');
+    if(chg){
+      const sign=chg.pct>=0?'+':'';
+      $('dayChangePill').textContent='Var. dia · '+sign+fmt(chg.pct)+'%';
+      $('dayChangePill').className='pill '+(chg.pct>=0?'green':'red');
+      $('dayChangePill').title='Fechamento anterior '+brl(chg.previousClose)+' · variação '+(chg.abs>=0?'+':'')+brl(chg.abs);
     }else{
-      setStatus('ok','Snapshot carregado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when);
+      $('dayChangePill').textContent='Var. dia · —';
+      $('dayChangePill').className='pill';
+      $('dayChangePill').removeAttribute('title');
+    }
+    if(fresh.stale){
+      setStatus('err','Snapshot desatualizado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when+(chg?' · var. dia '+(chg.pct>=0?'+':'')+fmt(chg.pct)+'%':'')+' · recarregue ou informe o spot manualmente');
+    }else{
+      setStatus('ok','Snapshot carregado · '+(q.provider||'fonte indicativa'),state.asset+' · '+(CORE[state.asset]?.name||'')+' · mercado '+when+(chg?' · var. dia '+(chg.pct>=0?'+':'')+fmt(chg.pct)+'%':''));
     }
   }else{
     state.quote=null;
     const fb=CORE[state.asset]?.fallbackSpot;
     $('spotInput').value=fb?Number(fb).toFixed(2):'';
     $('quotePill').textContent='Spot · manual';
+    $('dayChangePill').textContent='Var. dia · —';
+    $('dayChangePill').className='pill';
+    $('dayChangePill').removeAttribute('title');
     setStatus('err','Spot automático indisponível','Mantido spot manual/editável para '+state.asset+'.');
   }
   if(resetLegs||!state.legs.length)suggestLegsFromStrategy();
