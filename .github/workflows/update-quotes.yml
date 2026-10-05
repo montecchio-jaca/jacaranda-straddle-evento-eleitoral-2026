@@ -10,8 +10,9 @@ on:
       - "scripts/update_quotes.py"
       - "data/universe-b3.json"
   schedule:
-    # Dias úteis, 09:00–18:30 de Brasília, a cada 30 minutos.
-    - cron: "*/30 12-21 * * 1-5"
+    # Dias úteis, 09:07–18:37 de Brasília, a cada 30 minutos.
+    # Minutos deslocados de 00/30 para reduzir contenção dos schedules do GitHub.
+    - cron: "7,37 12-21 * * 1-5"
 
 permissions:
   contents: write
