@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-08T23:42:44.285033Z",
+  "generated_at_utc": "2026-10-09T18:17:08.718038Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 373,
   "quotes": {
@@ -10,8 +10,8 @@
       "provider_symbol": "AALR3.SA",
       "price": 3.06,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.21,
+      "market_time_utc": "2026-10-09T17:54:14Z",
+      "previous_close": 3.4,
       "market_state": null
     },
     "ABCB4": {
@@ -19,10 +19,10 @@
       "name": "BCO ABC BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ABCB4.SA",
-      "price": 28.72,
+      "price": 29.39,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 25.7,
+      "market_time_utc": "2026-10-09T18:01:34Z",
+      "previous_close": 26.15,
       "market_state": null
     },
     "ABEV3": {
@@ -30,10 +30,10 @@
       "name": "AMBEV S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ABEV3.SA",
-      "price": 16.15,
+      "price": 15.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 15.37,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 15.84,
       "market_state": null
     },
     "AERI3": {
@@ -41,9 +41,9 @@
       "name": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "AERI3.SA",
-      "price": 2.21,
+      "price": 2.24,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:30Z",
+      "market_time_utc": "2026-10-09T17:50:40Z",
       "previous_close": 2.22,
       "market_state": null
     },
@@ -52,9 +52,9 @@
       "name": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "AFLT3.SA",
-      "price": 7.01,
+      "price": 7.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
+      "market_time_utc": "2026-10-09T17:44:13Z",
       "previous_close": 7.0,
       "market_state": null
     },
@@ -63,10 +63,10 @@
       "name": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "AGRO3.SA",
-      "price": 19.07,
+      "price": 19.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 17.7,
+      "market_time_utc": "2026-10-09T17:57:57Z",
+      "previous_close": 18.06,
       "market_state": null
     },
     "AGXY3": {
@@ -77,7 +77,7 @@
       "price": 0.62,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 0.68,
+      "previous_close": 0.67,
       "market_state": null
     },
     "AHEB3": {
@@ -85,9 +85,9 @@
       "name": "SAO PAULO TURISMO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AHEB3.SA",
-      "price": 23.01,
+      "price": 23.0,
       "currency": "BRL",
-      "market_time_utc": "2026-09-28T17:21:18Z",
+      "market_time_utc": "2026-10-09T17:07:20Z",
       "previous_close": 23.01,
       "market_state": null
     },
@@ -96,10 +96,10 @@
       "name": "ALLIED TECNOLOGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALLD3.SA",
-      "price": 5.44,
+      "price": 6.12,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.31,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 5.28,
       "market_state": null
     },
     "ALOS3": {
@@ -107,10 +107,10 @@
       "name": "ALLOS S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALOS3.SA",
-      "price": 35.13,
+      "price": 35.96,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:53Z",
-      "previous_close": 29.65,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 30.51,
       "market_state": null
     },
     "ALPA3": {
@@ -118,10 +118,10 @@
       "name": "ALPARGATAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALPA3.SA",
-      "price": 11.53,
+      "price": 12.1,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 10.6,
+      "market_time_utc": "2026-10-09T17:07:46Z",
+      "previous_close": 11.38,
       "market_state": null
     },
     "ALPA4": {
@@ -129,10 +129,10 @@
       "name": "ALPARGATAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALPA4.SA",
-      "price": 15.82,
+      "price": 16.68,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:54Z",
-      "previous_close": 14.57,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 15.17,
       "market_state": null
     },
     "ALPK3": {
@@ -140,10 +140,10 @@
       "name": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALPK3.SA",
-      "price": 5.79,
+      "price": 5.92,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 4.46,
+      "market_time_utc": "2026-10-09T18:01:35Z",
+      "previous_close": 4.6,
       "market_state": null
     },
     "ALUP11": {
@@ -151,10 +151,10 @@
       "name": "ALUPAR INVESTIMENTO S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALUP11.SA",
-      "price": 39.36,
+      "price": 39.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 32.75,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 33.51,
       "market_state": null
     },
     "ALUP3": {
@@ -162,10 +162,10 @@
       "name": "ALUPAR INVESTIMENTO S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALUP3.SA",
-      "price": 14.09,
+      "price": 14.14,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:42:50Z",
-      "previous_close": 11.5,
+      "market_time_utc": "2026-10-09T17:59:47Z",
+      "previous_close": 11.75,
       "market_state": null
     },
     "ALUP4": {
@@ -173,10 +173,10 @@
       "name": "ALUPAR INVESTIMENTO S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ALUP4.SA",
-      "price": 12.83,
+      "price": 12.86,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:30Z",
-      "previous_close": 10.6,
+      "market_time_utc": "2026-10-09T17:59:47Z",
+      "previous_close": 10.85,
       "market_state": null
     },
     "AMAR3": {
@@ -184,9 +184,9 @@
       "name": "MARISA LOJAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AMAR3.SA",
-      "price": 0.79,
+      "price": 0.82,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:01:39Z",
       "previous_close": 0.8,
       "market_state": null
     },
@@ -198,7 +198,7 @@
       "price": 0.16,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 0.17,
+      "previous_close": 0.11,
       "market_state": null
     },
     "AMER3": {
@@ -206,10 +206,10 @@
       "name": "AMERICANAS S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "AMER3.SA",
-      "price": 6.1,
+      "price": 6.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.28,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 5.48,
       "market_state": null
     },
     "AMOB3": {
@@ -217,10 +217,10 @@
       "name": "AUTOMOB PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AMOB3.SA",
-      "price": 15.36,
+      "price": 16.44,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 12.38,
+      "market_time_utc": "2026-10-09T18:01:30Z",
+      "previous_close": 12.0,
       "market_state": null
     },
     "ANIM3": {
@@ -228,10 +228,10 @@
       "name": "ANIMA HOLDING S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ANIM3.SA",
-      "price": 4.7,
+      "price": 5.15,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:53Z",
-      "previous_close": 3.08,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 3.34,
       "market_state": null
     },
     "ARML3": {
@@ -239,10 +239,10 @@
       "name": "ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ARML3.SA",
-      "price": 5.92,
+      "price": 6.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 4.32,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 4.46,
       "market_state": null
     },
     "ARND3": {
@@ -261,10 +261,10 @@
       "name": "SENDAS DISTRIBUIDORA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ASAI3.SA",
-      "price": 12.96,
+      "price": 13.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:55Z",
-      "previous_close": 11.16,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 11.15,
       "market_state": null
     },
     "ATED3": {
@@ -274,8 +274,8 @@
       "provider_symbol": "ATED3.SA",
       "price": 1.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:59:23Z",
-      "previous_close": 1.09,
+      "market_time_utc": "2026-10-09T17:12:53Z",
+      "previous_close": 1.11,
       "market_state": null
     },
     "AUAU3": {
@@ -283,10 +283,10 @@
       "name": "PET CENTER COMERCIO  E PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AUAU3.SA",
-      "price": 4.95,
+      "price": 5.01,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 4.5,
+      "market_time_utc": "2026-10-09T18:01:48Z",
+      "previous_close": 4.45,
       "market_state": null
     },
     "AURE3": {
@@ -294,10 +294,10 @@
       "name": "AUREN ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AURE3.SA",
-      "price": 16.06,
+      "price": 15.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 13.14,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 13.82,
       "market_state": null
     },
     "AVLL3": {
@@ -305,9 +305,9 @@
       "name": "ALPHAVILLE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AVLL3.SA",
-      "price": 5.76,
+      "price": 6.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T17:41:33Z",
+      "market_time_utc": "2026-10-09T14:37:47Z",
       "previous_close": 5.64,
       "market_state": null
     },
@@ -316,10 +316,10 @@
       "name": "AXIA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AXIA3.SA",
-      "price": 59.38,
+      "price": 59.42,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 55.15,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 56.9,
       "market_state": null
     },
     "AXIA7": {
@@ -327,10 +327,10 @@
       "name": "AXIA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AXIA7.SA",
-      "price": 60.0,
+      "price": 59.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:54Z",
-      "previous_close": 55.37,
+      "market_time_utc": "2026-10-09T18:01:07Z",
+      "previous_close": 56.69,
       "market_state": null
     },
     "AZEV3": {
@@ -338,10 +338,10 @@
       "name": "AZEVEDO E TRAVASSOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AZEV3.SA",
-      "price": 7.19,
+      "price": 9.78,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:51Z",
-      "previous_close": 6.81,
+      "market_time_utc": "2026-10-09T18:01:50Z",
+      "previous_close": 6.84,
       "market_state": null
     },
     "AZEV4": {
@@ -349,9 +349,9 @@
       "name": "AZEVEDO E TRAVASSOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AZEV4.SA",
-      "price": 1.39,
+      "price": 1.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:01:58Z",
       "previous_close": 1.16,
       "market_state": null
     },
@@ -360,10 +360,10 @@
       "name": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AZTE3.SA",
-      "price": 1.37,
+      "price": 1.46,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 1.22,
+      "market_time_utc": "2026-10-09T18:00:26Z",
+      "previous_close": 1.24,
       "market_state": null
     },
     "AZUL3": {
@@ -371,10 +371,10 @@
       "name": "AZUL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AZUL3.SA",
-      "price": 18.1,
+      "price": 18.18,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 18.21,
+      "market_time_utc": "2026-10-09T18:00:42Z",
+      "previous_close": 18.51,
       "market_state": null
     },
     "AZZA3": {
@@ -382,10 +382,10 @@
       "name": "AZZAS 2154 S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "AZZA3.SA",
-      "price": 25.28,
+      "price": 25.96,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 18.61,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 19.54,
       "market_state": null
     },
     "BALM3": {
@@ -404,9 +404,9 @@
       "name": "BAUMER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BALM4.SA",
-      "price": 14.5,
+      "price": 15.93,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
+      "market_time_utc": "2026-10-09T14:15:40Z",
       "previous_close": 14.5,
       "market_state": null
     },
@@ -426,10 +426,10 @@
       "name": "BCO AMAZONIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BAZA3.SA",
-      "price": 77.96,
+      "price": 78.6,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:36:39Z",
-      "previous_close": 69.29,
+      "market_time_utc": "2026-10-09T17:39:02Z",
+      "previous_close": 69.76,
       "market_state": null
     },
     "BBAS3": {
@@ -437,10 +437,10 @@
       "name": "BCO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BBAS3.SA",
-      "price": 24.26,
+      "price": 24.78,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:10:16Z",
-      "previous_close": 23.08,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 23.72,
       "market_state": null
     },
     "BBDC3": {
@@ -448,10 +448,10 @@
       "name": "BCO BRADESCO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BBDC3.SA",
-      "price": 18.95,
+      "price": 19.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 16.25,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 16.83,
       "market_state": null
     },
     "BBDC4": {
@@ -459,10 +459,10 @@
       "name": "BCO BRADESCO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BBDC4.SA",
-      "price": 21.51,
+      "price": 21.65,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:09:00Z",
-      "previous_close": 18.53,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 19.23,
       "market_state": null
     },
     "BBSE3": {
@@ -470,10 +470,10 @@
       "name": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BBSE3.SA",
-      "price": 40.81,
+      "price": 40.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:36Z",
-      "previous_close": 39.32,
+      "market_time_utc": "2026-10-09T18:01:54Z",
+      "previous_close": 40.45,
       "market_state": null
     },
     "BDLL3": {
@@ -494,7 +494,7 @@
       "provider_symbol": "BDLL4.SA",
       "price": 3.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:55:52Z",
+      "market_time_utc": "2026-10-09T14:04:31Z",
       "previous_close": 3.2,
       "market_state": null
     },
@@ -503,10 +503,10 @@
       "name": "MINERVA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BEEF3.SA",
-      "price": 4.42,
+      "price": 4.36,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 3.92,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 3.88,
       "market_state": null
     },
     "BEES3": {
@@ -514,10 +514,10 @@
       "name": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
       "provider": "Yahoo Finance",
       "provider_symbol": "BEES3.SA",
-      "price": 9.58,
+      "price": 9.75,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:16Z",
-      "previous_close": 9.3,
+      "market_time_utc": "2026-10-09T17:51:22Z",
+      "previous_close": 9.23,
       "market_state": null
     },
     "BEES4": {
@@ -525,10 +525,10 @@
       "name": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
       "provider": "Yahoo Finance",
       "provider_symbol": "BEES4.SA",
-      "price": 9.53,
+      "price": 9.6,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:23Z",
-      "previous_close": 9.3,
+      "market_time_utc": "2026-10-09T17:16:47Z",
+      "previous_close": 9.17,
       "market_state": null
     },
     "BGIP3": {
@@ -536,10 +536,10 @@
       "name": "BCO ESTADO DE SERGIPE S.A. - BANESE",
       "provider": "Yahoo Finance",
       "provider_symbol": "BGIP3.SA",
-      "price": 48.06,
+      "price": 48.74,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T16:22:05Z",
-      "previous_close": 48.76,
+      "market_time_utc": "2026-10-09T13:41:03Z",
+      "previous_close": 48.07,
       "market_state": null
     },
     "BGIP4": {
@@ -549,8 +549,8 @@
       "provider_symbol": "BGIP4.SA",
       "price": 36.14,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T16:31:06Z",
-      "previous_close": 34.14,
+      "market_time_utc": "2026-10-09T17:43:29Z",
+      "previous_close": 34.1,
       "market_state": null
     },
     "BHIA3": {
@@ -558,10 +558,10 @@
       "name": "GRUPO CASAS BAHIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BHIA3.SA",
-      "price": 1.45,
+      "price": 1.59,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 1.33,
+      "market_time_utc": "2026-10-09T17:49:32Z",
+      "previous_close": 1.38,
       "market_state": null
     },
     "BIED3": {
@@ -569,10 +569,10 @@
       "name": "BIOMA EDUCAÇÃO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BIED3.SA",
-      "price": 5.52,
+      "price": 5.49,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:27:49Z",
-      "previous_close": 5.59,
+      "market_time_utc": "2026-10-09T17:58:22Z",
+      "previous_close": 5.54,
       "market_state": null
     },
     "BIOM3": {
@@ -580,10 +580,10 @@
       "name": "BIOMM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BIOM3.SA",
-      "price": 7.09,
+      "price": 7.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 6.06,
+      "market_time_utc": "2026-10-09T17:59:24Z",
+      "previous_close": 6.45,
       "market_state": null
     },
     "BLAU3": {
@@ -591,10 +591,10 @@
       "name": "BLAU FARMACÊUTICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BLAU3.SA",
-      "price": 12.48,
+      "price": 12.73,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 10.69,
+      "market_time_utc": "2026-10-09T18:00:51Z",
+      "previous_close": 10.82,
       "market_state": null
     },
     "BMEB3": {
@@ -602,10 +602,10 @@
       "name": "BCO MERCANTIL DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BMEB3.SA",
-      "price": 59.0,
+      "price": 59.25,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 49.42,
+      "market_time_utc": "2026-10-09T17:58:34Z",
+      "previous_close": 50.79,
       "market_state": null
     },
     "BMEB4": {
@@ -613,10 +613,10 @@
       "name": "BCO MERCANTIL DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BMEB4.SA",
-      "price": 73.81,
+      "price": 75.52,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 59.0,
+      "market_time_utc": "2026-10-09T18:00:56Z",
+      "previous_close": 60.92,
       "market_state": null
     },
     "BMGB4": {
@@ -624,10 +624,10 @@
       "name": "BANCO BMG S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BMGB4.SA",
-      "price": 6.82,
+      "price": 6.97,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 6.5,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 6.59,
       "market_state": null
     },
     "BMIN3": {
@@ -657,10 +657,10 @@
       "name": "BICICLETAS MONARK S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BMKS3.SA",
-      "price": 376.02,
+      "price": 390.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:35:53Z",
-      "previous_close": 378.0,
+      "market_time_utc": "2026-10-09T17:37:42Z",
+      "previous_close": 377.0,
       "market_state": null
     },
     "BMOB3": {
@@ -668,10 +668,10 @@
       "name": "BEMOBI MOBILE TECH S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BMOB3.SA",
-      "price": 32.34,
+      "price": 34.31,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 27.9,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 28.34,
       "market_state": null
     },
     "BNBR3": {
@@ -679,10 +679,10 @@
       "name": "BCO NORDESTE DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BNBR3.SA",
-      "price": 114.75,
+      "price": 115.24,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:28:24Z",
-      "previous_close": 110.0,
+      "market_time_utc": "2026-10-09T13:56:32Z",
+      "previous_close": 112.0,
       "market_state": null
     },
     "BOBR4": {
@@ -692,7 +692,7 @@
       "provider_symbol": "BOBR4.SA",
       "price": 1.61,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T17:58:27Z",
+      "market_time_utc": "2026-10-09T17:27:29Z",
       "previous_close": 1.6,
       "market_state": null
     },
@@ -701,10 +701,10 @@
       "name": "BCO BTG PACTUAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BPAC11.SA",
-      "price": 77.47,
+      "price": 81.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 63.72,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 66.02,
       "market_state": null
     },
     "BPAC3": {
@@ -712,10 +712,10 @@
       "name": "BCO BTG PACTUAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BPAC3.SA",
-      "price": 26.54,
+      "price": 27.74,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:44:33Z",
-      "previous_close": 24.77,
+      "market_time_utc": "2026-10-09T17:56:26Z",
+      "previous_close": 24.97,
       "market_state": null
     },
     "BPAC5": {
@@ -723,10 +723,10 @@
       "name": "BCO BTG PACTUAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BPAC5.SA",
-      "price": 25.9,
+      "price": 26.67,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:30:41Z",
-      "previous_close": 20.46,
+      "market_time_utc": "2026-10-09T17:56:26Z",
+      "previous_close": 20.99,
       "market_state": null
     },
     "BRAP3": {
@@ -734,10 +734,10 @@
       "name": "BRADESPAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRAP3.SA",
-      "price": 18.75,
+      "price": 18.65,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 18.0,
+      "market_time_utc": "2026-10-09T17:59:49Z",
+      "previous_close": 18.13,
       "market_state": null
     },
     "BRAP4": {
@@ -745,10 +745,10 @@
       "name": "BRADESPAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRAP4.SA",
-      "price": 20.67,
+      "price": 20.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 20.33,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 20.76,
       "market_state": null
     },
     "BRAV3": {
@@ -756,10 +756,10 @@
       "name": "BRAVA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRAV3.SA",
-      "price": 20.57,
+      "price": 20.84,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 18.25,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 18.9,
       "market_state": null
     },
     "BRBI11": {
@@ -767,10 +767,10 @@
       "name": "BRBI BR PARTNERS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRBI11.SA",
-      "price": 18.53,
+      "price": 19.09,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 14.63,
+      "market_time_utc": "2026-10-09T18:01:53Z",
+      "previous_close": 15.14,
       "market_state": null
     },
     "BRKM3": {
@@ -778,10 +778,10 @@
       "name": "BRASKEM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRKM3.SA",
-      "price": 4.49,
+      "price": 4.38,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 4.13,
+      "market_time_utc": "2026-10-09T18:01:51Z",
+      "previous_close": 3.93,
       "market_state": null
     },
     "BRKM5": {
@@ -789,10 +789,10 @@
       "name": "BRASKEM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRKM5.SA",
-      "price": 4.38,
+      "price": 4.32,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 4.06,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 4.03,
       "market_state": null
     },
     "BRKM6": {
@@ -800,10 +800,10 @@
       "name": "BRASKEM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRKM6.SA",
-      "price": 4.0,
+      "price": 3.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:09:52Z",
-      "previous_close": 5.3,
+      "market_time_utc": "2026-10-09T17:36:12Z",
+      "previous_close": 4.6,
       "market_state": null
     },
     "BRSR3": {
@@ -811,10 +811,10 @@
       "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRSR3.SA",
-      "price": 18.95,
+      "price": 19.25,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:52:50Z",
-      "previous_close": 17.84,
+      "market_time_utc": "2026-10-09T18:00:57Z",
+      "previous_close": 18.23,
       "market_state": null
     },
     "BRSR5": {
@@ -824,7 +824,7 @@
       "provider_symbol": "BRSR5.SA",
       "price": 17.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T15:13:58Z",
+      "market_time_utc": "2026-10-09T13:18:54Z",
       "previous_close": 16.01,
       "market_state": null
     },
@@ -833,10 +833,10 @@
       "name": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRSR6.SA",
-      "price": 18.15,
+      "price": 18.87,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 15.25,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 15.92,
       "market_state": null
     },
     "BRST3": {
@@ -844,10 +844,10 @@
       "name": "BRISANET SERVIÇOS DE TELECOMUNICAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "BRST3.SA",
-      "price": 3.45,
+      "price": 3.71,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 2.87,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 2.95,
       "market_state": null
     },
     "BSLI3": {
@@ -877,9 +877,9 @@
       "name": "CAMBUCI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CAMB3.SA",
-      "price": 8.0,
+      "price": 8.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:41Z",
+      "market_time_utc": "2026-10-09T18:01:22Z",
       "previous_close": 7.83,
       "market_state": null
     },
@@ -888,10 +888,10 @@
       "name": "CAMIL ALIMENTOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CAML3.SA",
-      "price": 7.08,
+      "price": 7.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.39,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 5.6,
       "market_state": null
     },
     "CASH3": {
@@ -899,10 +899,10 @@
       "name": "MÉLIUZ S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CASH3.SA",
-      "price": 4.96,
+      "price": 4.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 5.33,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 5.26,
       "market_state": null
     },
     "CBAV3": {
@@ -910,10 +910,10 @@
       "name": "COMPANHIA BRASILEIRA DE ALUMÍNIO",
       "provider": "Yahoo Finance",
       "provider_symbol": "CBAV3.SA",
-      "price": 11.17,
+      "price": 11.19,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 11.21,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 11.24,
       "market_state": null
     },
     "CBEE3": {
@@ -921,9 +921,9 @@
       "name": "AMPLA ENERGIA E SERVICOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CBEE3.SA",
-      "price": 8.7,
+      "price": 8.53,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:57:58Z",
+      "market_time_utc": "2026-10-09T15:07:06Z",
       "previous_close": 8.62,
       "market_state": null
     },
@@ -943,10 +943,10 @@
       "name": "CEA MODAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEAB3.SA",
-      "price": 12.53,
+      "price": 13.33,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 9.89,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 10.3,
       "market_state": null
     },
     "CEBR3": {
@@ -954,10 +954,10 @@
       "name": "CIA ENERGETICA DE BRASILIA",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEBR3.SA",
-      "price": 25.88,
+      "price": 26.67,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:44:54Z",
-      "previous_close": 23.36,
+      "market_time_utc": "2026-10-09T17:57:36Z",
+      "previous_close": 23.99,
       "market_state": null
     },
     "CEBR5": {
@@ -965,10 +965,10 @@
       "name": "CIA ENERGETICA DE BRASILIA",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEBR5.SA",
-      "price": 25.05,
+      "price": 25.1,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:19:50Z",
-      "previous_close": 23.32,
+      "market_time_utc": "2026-10-09T17:40:26Z",
+      "previous_close": 23.47,
       "market_state": null
     },
     "CEBR6": {
@@ -976,10 +976,10 @@
       "name": "CIA ENERGETICA DE BRASILIA",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEBR6.SA",
-      "price": 28.45,
+      "price": 28.39,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:08Z",
-      "previous_close": 27.8,
+      "market_time_utc": "2026-10-09T17:20:27Z",
+      "previous_close": 27.5,
       "market_state": null
     },
     "CEDO3": {
@@ -998,9 +998,9 @@
       "name": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEDO4.SA",
-      "price": 5.74,
+      "price": 5.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:39:01Z",
+      "market_time_utc": "2026-10-09T17:45:33Z",
       "previous_close": 5.2,
       "market_state": null
     },
@@ -1009,10 +1009,10 @@
       "name": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
       "provider": "Yahoo Finance",
       "provider_symbol": "CEEB3.SA",
-      "price": 46.15,
+      "price": 47.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 46.0,
+      "market_time_utc": "2026-10-09T17:12:10Z",
+      "previous_close": 46.45,
       "market_state": null
     },
     "CEEB5": {
@@ -1042,10 +1042,10 @@
       "name": "CIA GAS DE SAO PAULO - COMGAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "CGAS5.SA",
-      "price": 124.0,
+      "price": 124.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T17:24:14Z",
-      "previous_close": 123.98,
+      "market_time_utc": "2026-10-09T15:36:06Z",
+      "previous_close": 122.7,
       "market_state": null
     },
     "CGRA3": {
@@ -1053,10 +1053,10 @@
       "name": "GRAZZIOTIN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CGRA3.SA",
-      "price": 25.25,
+      "price": 26.37,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:50:30Z",
-      "previous_close": 23.99,
+      "market_time_utc": "2026-10-09T17:34:27Z",
+      "previous_close": 24.0,
       "market_state": null
     },
     "CGRA4": {
@@ -1064,10 +1064,10 @@
       "name": "GRAZZIOTIN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CGRA4.SA",
-      "price": 25.35,
+      "price": 25.81,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:33:20Z",
-      "previous_close": 23.08,
+      "market_time_utc": "2026-10-09T17:55:04Z",
+      "previous_close": 23.3,
       "market_state": null
     },
     "CLSC3": {
@@ -1075,10 +1075,10 @@
       "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CLSC3.SA",
-      "price": 160.0,
+      "price": 168.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T13:43:37Z",
-      "previous_close": 149.99,
+      "market_time_utc": "2026-10-09T18:01:07Z",
+      "previous_close": 141.88,
       "market_state": null
     },
     "CLSC4": {
@@ -1086,10 +1086,10 @@
       "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CLSC4.SA",
-      "price": 190.94,
+      "price": 192.46,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 162.79,
+      "market_time_utc": "2026-10-09T17:49:57Z",
+      "previous_close": 164.89,
       "market_state": null
     },
     "CMIG3": {
@@ -1097,10 +1097,10 @@
       "name": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
       "provider": "Yahoo Finance",
       "provider_symbol": "CMIG3.SA",
-      "price": 18.31,
+      "price": 18.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 17.02,
+      "market_time_utc": "2026-10-09T17:59:08Z",
+      "previous_close": 17.18,
       "market_state": null
     },
     "CMIG4": {
@@ -1108,10 +1108,10 @@
       "name": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
       "provider": "Yahoo Finance",
       "provider_symbol": "CMIG4.SA",
-      "price": 12.07,
+      "price": 12.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:36Z",
-      "previous_close": 11.18,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 11.41,
       "market_state": null
     },
     "CMIN3": {
@@ -1119,10 +1119,10 @@
       "name": "CSN MINERAÇÃO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CMIN3.SA",
-      "price": 5.06,
+      "price": 5.03,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:33Z",
-      "previous_close": 4.93,
+      "market_time_utc": "2026-10-09T18:01:49Z",
+      "previous_close": 4.97,
       "market_state": null
     },
     "COCE3": {
@@ -1132,7 +1132,7 @@
       "provider_symbol": "COCE3.SA",
       "price": 32.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T15:32:14Z",
+      "market_time_utc": "2026-10-09T15:06:25Z",
       "previous_close": 29.41,
       "market_state": null
     },
@@ -1141,10 +1141,10 @@
       "name": "CIA ENERGETICA DO CEARA - COELCE",
       "provider": "Yahoo Finance",
       "provider_symbol": "COCE5.SA",
-      "price": 36.73,
+      "price": 37.05,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 31.56,
+      "market_time_utc": "2026-10-09T17:43:18Z",
+      "previous_close": 33.25,
       "market_state": null
     },
     "COGN3": {
@@ -1152,10 +1152,10 @@
       "name": "COGNA EDUCAÇÃO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "COGN3.SA",
-      "price": 2.93,
+      "price": 3.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:37Z",
-      "previous_close": 2.34,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 2.43,
       "market_state": null
     },
     "CPFE3": {
@@ -1163,10 +1163,10 @@
       "name": "CPFL ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CPFE3.SA",
-      "price": 50.36,
+      "price": 52.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:53Z",
-      "previous_close": 46.56,
+      "market_time_utc": "2026-10-09T18:01:41Z",
+      "previous_close": 48.09,
       "market_state": null
     },
     "CPLE3": {
@@ -1174,10 +1174,10 @@
       "name": "CIA PARANAENSE DE ENERGIA - COPEL",
       "provider": "Yahoo Finance",
       "provider_symbol": "CPLE3.SA",
-      "price": 17.65,
+      "price": 17.77,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:49Z",
-      "previous_close": 16.07,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 16.61,
       "market_state": null
     },
     "CRPG5": {
@@ -1185,10 +1185,10 @@
       "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CRPG5.SA",
-      "price": 8.12,
+      "price": 8.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 7.6,
+      "market_time_utc": "2026-10-09T17:50:44Z",
+      "previous_close": 7.69,
       "market_state": null
     },
     "CRPG6": {
@@ -1199,7 +1199,7 @@
       "price": 8.89,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T13:01:39Z",
-      "previous_close": 7.7,
+      "previous_close": 7.55,
       "market_state": null
     },
     "CSAN3": {
@@ -1207,10 +1207,10 @@
       "name": "COSAN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CSAN3.SA",
-      "price": 5.24,
+      "price": 5.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:56Z",
-      "previous_close": 3.98,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 4.12,
       "market_state": null
     },
     "CSED3": {
@@ -1218,10 +1218,10 @@
       "name": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CSED3.SA",
-      "price": 6.81,
+      "price": 7.02,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 5.29,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 5.42,
       "market_state": null
     },
     "CSMG3": {
@@ -1229,10 +1229,10 @@
       "name": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
       "provider": "Yahoo Finance",
       "provider_symbol": "CSMG3.SA",
-      "price": 63.69,
+      "price": 64.52,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 56.78,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 56.25,
       "market_state": null
     },
     "CSNA3": {
@@ -1240,10 +1240,10 @@
       "name": "CIA SIDERURGICA NACIONAL",
       "provider": "Yahoo Finance",
       "provider_symbol": "CSNA3.SA",
-      "price": 6.36,
+      "price": 6.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:49Z",
-      "previous_close": 6.0,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 6.17,
       "market_state": null
     },
     "CSUD3": {
@@ -1251,10 +1251,10 @@
       "name": "CSU DIGITAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CSUD3.SA",
-      "price": 16.97,
+      "price": 17.33,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 15.44,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 15.79,
       "market_state": null
     },
     "CTAX3": {
@@ -1264,8 +1264,19 @@
       "provider_symbol": "CTAX3.SA",
       "price": 1.21,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T16:14:44Z",
-      "previous_close": 1.84,
+      "market_time_utc": "2026-10-09T17:40:11Z",
+      "previous_close": 1.2,
+      "market_state": null
+    },
+    "CTKA3": {
+      "symbol": "CTKA3",
+      "name": "KARSTEN S.A.",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CTKA3.SA",
+      "price": 40.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-09T17:10:04Z",
+      "previous_close": 40.01,
       "market_state": null
     },
     "CTKA4": {
@@ -1273,9 +1284,9 @@
       "name": "KARSTEN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CTKA4.SA",
-      "price": 36.74,
+      "price": 42.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:14:43Z",
+      "market_time_utc": "2026-10-09T17:20:05Z",
       "previous_close": 33.15,
       "market_state": null
     },
@@ -1284,10 +1295,10 @@
       "name": "CURY CONSTRUTORA E INCORPORADORA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CURY3.SA",
-      "price": 31.48,
+      "price": 34.77,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:47Z",
-      "previous_close": 27.3,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 28.13,
       "market_state": null
     },
     "CVCB3": {
@@ -1295,10 +1306,10 @@
       "name": "CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CVCB3.SA",
-      "price": 1.68,
+      "price": 1.7,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.47,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 1.38,
       "market_state": null
     },
     "CXSE3": {
@@ -1306,10 +1317,10 @@
       "name": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "CXSE3.SA",
-      "price": 21.4,
+      "price": 20.89,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:45Z",
-      "previous_close": 19.91,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 20.41,
       "market_state": null
     },
     "CYRE3": {
@@ -1317,10 +1328,10 @@
       "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
       "provider": "Yahoo Finance",
       "provider_symbol": "CYRE3.SA",
-      "price": 33.1,
+      "price": 35.5,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:59Z",
-      "previous_close": 27.13,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 27.99,
       "market_state": null
     },
     "CYRE4": {
@@ -1328,10 +1339,10 @@
       "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
       "provider": "Yahoo Finance",
       "provider_symbol": "CYRE4.SA",
-      "price": 31.3,
+      "price": 33.53,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 25.72,
+      "market_time_utc": "2026-10-09T18:01:49Z",
+      "previous_close": 26.5,
       "market_state": null
     },
     "DASA3": {
@@ -1339,10 +1350,10 @@
       "name": "DIAGNOSTICOS DA AMERICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DASA3.SA",
-      "price": 4.89,
+      "price": 5.23,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.98,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 3.95,
       "market_state": null
     },
     "DESK3": {
@@ -1350,10 +1361,10 @@
       "name": "DESKTOP S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DESK3.SA",
-      "price": 19.37,
+      "price": 19.29,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 19.49,
+      "market_time_utc": "2026-10-09T18:01:54Z",
+      "previous_close": 19.28,
       "market_state": null
     },
     "DEXP3": {
@@ -1361,10 +1372,10 @@
       "name": "DEXXOS PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DEXP3.SA",
-      "price": 7.97,
+      "price": 8.23,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 7.39,
+      "market_time_utc": "2026-10-09T18:01:01Z",
+      "previous_close": 7.56,
       "market_state": null
     },
     "DEXP4": {
@@ -1372,9 +1383,9 @@
       "name": "DEXXOS PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DEXP4.SA",
-      "price": 7.85,
+      "price": 8.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:35:03Z",
+      "market_time_utc": "2026-10-09T16:32:12Z",
       "previous_close": 7.3,
       "market_state": null
     },
@@ -1383,10 +1394,10 @@
       "name": "DIRECIONAL ENGENHARIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DIRR3.SA",
-      "price": 11.56,
+      "price": 12.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:51Z",
-      "previous_close": 10.03,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 10.51,
       "market_state": null
     },
     "DMVF3": {
@@ -1394,10 +1405,10 @@
       "name": "D1000 VAREJO FARMA PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DMVF3.SA",
-      "price": 6.57,
+      "price": 6.69,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:30Z",
-      "previous_close": 6.06,
+      "market_time_utc": "2026-10-09T17:59:42Z",
+      "previous_close": 6.12,
       "market_state": null
     },
     "DOHL4": {
@@ -1405,9 +1416,9 @@
       "name": "DOHLER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DOHL4.SA",
-      "price": 3.6,
+      "price": 3.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:43:13Z",
+      "market_time_utc": "2026-10-09T15:34:19Z",
       "previous_close": 3.69,
       "market_state": null
     },
@@ -1416,10 +1427,10 @@
       "name": "DOTZ S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DOTZ3.SA",
-      "price": 11.5,
+      "price": 12.17,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 10.23,
+      "market_time_utc": "2026-10-09T17:32:38Z",
+      "previous_close": 10.7,
       "market_state": null
     },
     "DTCY3": {
@@ -1438,10 +1449,10 @@
       "name": "DEXCO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "DXCO3.SA",
-      "price": 7.39,
+      "price": 7.62,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 5.87,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 6.17,
       "market_state": null
     },
     "EALT3": {
@@ -1449,9 +1460,9 @@
       "name": "ELECTRO ACO ALTONA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EALT3.SA",
-      "price": 13.99,
+      "price": 13.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:43:32Z",
+      "market_time_utc": "2026-10-09T17:13:21Z",
       "previous_close": 12.85,
       "market_state": null
     },
@@ -1460,10 +1471,10 @@
       "name": "ELECTRO ACO ALTONA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EALT4.SA",
-      "price": 12.15,
+      "price": 12.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:16:44Z",
-      "previous_close": 11.23,
+      "market_time_utc": "2026-10-09T16:03:26Z",
+      "previous_close": 11.45,
       "market_state": null
     },
     "ECOM3": {
@@ -1471,10 +1482,10 @@
       "name": "ECONOMATICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ECOM3.SA",
-      "price": 1.4,
+      "price": 1.44,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:43:32Z",
-      "previous_close": 1.3,
+      "market_time_utc": "2026-10-09T17:45:35Z",
+      "previous_close": 1.33,
       "market_state": null
     },
     "ECOR3": {
@@ -1482,10 +1493,10 @@
       "name": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ECOR3.SA",
-      "price": 13.77,
+      "price": 14.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:31Z",
-      "previous_close": 9.31,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 9.89,
       "market_state": null
     },
     "EGIE3": {
@@ -1493,10 +1504,10 @@
       "name": "ENGIE BRASIL ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EGIE3.SA",
-      "price": 31.79,
+      "price": 31.69,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:58Z",
-      "previous_close": 29.33,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 30.7,
       "market_state": null
     },
     "EKTR4": {
@@ -1504,10 +1515,10 @@
       "name": "ELEKTRO REDES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EKTR4.SA",
-      "price": 39.92,
+      "price": 39.91,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:20:58Z",
-      "previous_close": 36.74,
+      "market_time_utc": "2026-10-09T17:47:33Z",
+      "previous_close": 37.0,
       "market_state": null
     },
     "EMAE4": {
@@ -1515,10 +1526,10 @@
       "name": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EMAE4.SA",
-      "price": 42.93,
+      "price": 43.08,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 36.0,
+      "market_time_utc": "2026-10-09T16:51:50Z",
+      "previous_close": 36.69,
       "market_state": null
     },
     "EMBJ3": {
@@ -1526,10 +1537,10 @@
       "name": "EMBRAER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EMBJ3.SA",
-      "price": 89.7,
+      "price": 88.33,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 96.81,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 98.25,
       "market_state": null
     },
     "ENEV3": {
@@ -1537,10 +1548,10 @@
       "name": "ENEVA S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENEV3.SA",
-      "price": 30.81,
+      "price": 31.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:35Z",
-      "previous_close": 28.13,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 28.71,
       "market_state": null
     },
     "ENGI11": {
@@ -1548,10 +1559,10 @@
       "name": "ENERGISA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENGI11.SA",
-      "price": 66.25,
+      "price": 68.61,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 53.37,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 55.15,
       "market_state": null
     },
     "ENGI3": {
@@ -1559,9 +1570,9 @@
       "name": "ENERGISA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENGI3.SA",
-      "price": 13.5,
+      "price": 13.86,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:00:56Z",
       "previous_close": 12.6,
       "market_state": null
     },
@@ -1570,10 +1581,10 @@
       "name": "ENERGISA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENGI4.SA",
-      "price": 13.13,
+      "price": 13.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:53:03Z",
-      "previous_close": 10.19,
+      "market_time_utc": "2026-10-09T18:00:48Z",
+      "previous_close": 10.67,
       "market_state": null
     },
     "ENJU3": {
@@ -1581,10 +1592,10 @@
       "name": "ENJOEI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENJU3.SA",
-      "price": 0.8,
+      "price": 7.75,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 0.7,
+      "market_time_utc": "2026-10-09T17:57:41Z",
+      "previous_close": 0.75,
       "market_state": null
     },
     "ENMT3": {
@@ -1592,10 +1603,10 @@
       "name": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENMT3.SA",
-      "price": 36.24,
+      "price": 36.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:49Z",
-      "previous_close": 37.25,
+      "market_time_utc": "2026-10-09T13:16:18Z",
+      "previous_close": 37.67,
       "market_state": null
     },
     "ENMT4": {
@@ -1603,10 +1614,10 @@
       "name": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ENMT4.SA",
-      "price": 36.88,
+      "price": 37.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T19:54:00Z",
-      "previous_close": 37.49,
+      "market_time_utc": "2026-10-09T14:51:09Z",
+      "previous_close": 38.31,
       "market_state": null
     },
     "EPAR3": {
@@ -1614,10 +1625,10 @@
       "name": "EMBPAR PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EPAR3.SA",
-      "price": 1.22,
+      "price": 1.24,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:01:36Z",
-      "previous_close": 1.22,
+      "market_time_utc": "2026-10-09T17:44:33Z",
+      "previous_close": 1.25,
       "market_state": null
     },
     "EQPA3": {
@@ -1625,10 +1636,10 @@
       "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EQPA3.SA",
-      "price": 5.67,
+      "price": 5.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:37:37Z",
-      "previous_close": 5.54,
+      "market_time_utc": "2026-10-09T17:52:55Z",
+      "previous_close": 5.58,
       "market_state": null
     },
     "EQTL3": {
@@ -1636,10 +1647,10 @@
       "name": "EQUATORIAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EQTL3.SA",
-      "price": 49.66,
+      "price": 51.08,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:35Z",
-      "previous_close": 41.0,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 41.91,
       "market_state": null
     },
     "ESPA3": {
@@ -1647,10 +1658,10 @@
       "name": "MPM CORPÓREOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ESPA3.SA",
-      "price": 7.58,
+      "price": 7.5,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 7.47,
+      "market_time_utc": "2026-10-09T18:00:25Z",
+      "previous_close": 7.57,
       "market_state": null
     },
     "ESTR4": {
@@ -1658,9 +1669,9 @@
       "name": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ESTR4.SA",
-      "price": 2.0,
+      "price": 2.15,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T13:00:00Z",
+      "market_time_utc": "2026-10-09T17:51:18Z",
       "previous_close": 1.9,
       "market_state": null
     },
@@ -1680,10 +1691,10 @@
       "name": "ETERNIT S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ETER3.SA",
-      "price": 3.62,
+      "price": 3.7,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 3.56,
+      "market_time_utc": "2026-10-09T18:01:56Z",
+      "previous_close": 3.58,
       "market_state": null
     },
     "EUCA3": {
@@ -1694,7 +1705,7 @@
       "price": 24.6,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T18:52:23Z",
-      "previous_close": 21.31,
+      "previous_close": 21.3,
       "market_state": null
     },
     "EUCA4": {
@@ -1702,10 +1713,10 @@
       "name": "EUCATEX S.A. INDUSTRIA E COMERCIO",
       "provider": "Yahoo Finance",
       "provider_symbol": "EUCA4.SA",
-      "price": 25.8,
+      "price": 26.12,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 21.8,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 22.83,
       "market_state": null
     },
     "EVEN3": {
@@ -1713,10 +1724,10 @@
       "name": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EVEN3.SA",
-      "price": 5.86,
+      "price": 6.09,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 4.57,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 4.76,
       "market_state": null
     },
     "EZTC3": {
@@ -1724,10 +1735,10 @@
       "name": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "EZTC3.SA",
-      "price": 18.27,
+      "price": 19.81,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 14.02,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 14.6,
       "market_state": null
     },
     "FASA3": {
@@ -1735,10 +1746,10 @@
       "name": "FASA3",
       "provider": "Yahoo Finance",
       "provider_symbol": "FASA3.SA",
-      "price": 0.38,
+      "price": 0.36,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 0.25,
+      "market_time_utc": "2026-10-09T17:44:49Z",
+      "previous_close": 0.26,
       "market_state": null
     },
     "FESA3": {
@@ -1746,9 +1757,9 @@
       "name": "CIA FERRO LIGAS DA BAHIA - FERBASA",
       "provider": "Yahoo Finance",
       "provider_symbol": "FESA3.SA",
-      "price": 10.89,
+      "price": 10.11,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:49:47Z",
+      "market_time_utc": "2026-10-09T14:33:51Z",
       "previous_close": 9.79,
       "market_state": null
     },
@@ -1757,10 +1768,10 @@
       "name": "CIA FERRO LIGAS DA BAHIA - FERBASA",
       "provider": "Yahoo Finance",
       "provider_symbol": "FESA4.SA",
-      "price": 6.38,
+      "price": 6.58,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 5.42,
+      "market_time_utc": "2026-10-09T18:01:34Z",
+      "previous_close": 5.75,
       "market_state": null
     },
     "FHER3": {
@@ -1768,10 +1779,10 @@
       "name": "FERTILIZANTES HERINGER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "FHER3.SA",
-      "price": 2.9,
+      "price": 2.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 2.62,
+      "market_time_utc": "2026-10-09T17:47:57Z",
+      "previous_close": 2.66,
       "market_state": null
     },
     "FIEI3": {
@@ -1779,9 +1790,9 @@
       "name": "FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "FIEI3.SA",
-      "price": 6.38,
+      "price": 6.37,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:03:16Z",
+      "market_time_utc": "2026-10-09T17:29:01Z",
       "previous_close": 6.5,
       "market_state": null
     },
@@ -1790,10 +1801,10 @@
       "name": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "FIQE3.SA",
-      "price": 6.1,
+      "price": 6.23,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:56Z",
-      "previous_close": 4.99,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 5.44,
       "market_state": null
     },
     "FLRY3": {
@@ -1801,10 +1812,10 @@
       "name": "FLEURY S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "FLRY3.SA",
-      "price": 26.35,
+      "price": 27.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:41Z",
-      "previous_close": 23.8,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 23.5,
       "market_state": null
     },
     "FRAS3": {
@@ -1812,10 +1823,10 @@
       "name": "FRASLE MOBILITY S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "FRAS3.SA",
-      "price": 26.89,
+      "price": 27.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:58Z",
-      "previous_close": 22.68,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 23.19,
       "market_state": null
     },
     "GEPA3": {
@@ -1823,9 +1834,9 @@
       "name": "RIO PARANAPANEMA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GEPA3.SA",
-      "price": 34.0,
+      "price": 36.71,
       "currency": "BRL",
-      "market_time_utc": "2026-10-01T19:49:10Z",
+      "market_time_utc": "2026-10-09T13:05:16Z",
       "previous_close": 34.0,
       "market_state": null
     },
@@ -1836,7 +1847,7 @@
       "provider_symbol": "GEPA4.SA",
       "price": 40.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:12Z",
+      "market_time_utc": "2026-10-09T13:11:29Z",
       "previous_close": 36.06,
       "market_state": null
     },
@@ -1845,10 +1856,10 @@
       "name": "GAFISA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GFSA3.SA",
-      "price": 0.45,
+      "price": 0.46,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:11:15Z",
-      "previous_close": 0.25,
+      "market_time_utc": "2026-10-09T18:01:51Z",
+      "previous_close": 0.27,
       "market_state": null
     },
     "GGBR3": {
@@ -1856,10 +1867,10 @@
       "name": "GERDAU S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GGBR3.SA",
-      "price": 21.19,
+      "price": 21.78,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 21.5,
+      "market_time_utc": "2026-10-09T17:55:31Z",
+      "previous_close": 22.55,
       "market_state": null
     },
     "GGBR4": {
@@ -1867,10 +1878,10 @@
       "name": "GERDAU S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GGBR4.SA",
-      "price": 24.77,
+      "price": 25.22,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 24.97,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 26.1,
       "market_state": null
     },
     "GGPS3": {
@@ -1878,10 +1889,10 @@
       "name": "GPS PARTICIPACOES E EMPREENDIMENTOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GGPS3.SA",
-      "price": 17.0,
+      "price": 17.93,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 12.64,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 12.79,
       "market_state": null
     },
     "GMAT3": {
@@ -1889,10 +1900,10 @@
       "name": "GRUPO MATEUS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GMAT3.SA",
-      "price": 5.55,
+      "price": 5.76,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.08,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 4.94,
       "market_state": null
     },
     "GOAU3": {
@@ -1900,10 +1911,10 @@
       "name": "METALURGICA GERDAU S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GOAU3.SA",
-      "price": 10.1,
+      "price": 10.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 10.13,
+      "market_time_utc": "2026-10-09T18:01:49Z",
+      "previous_close": 10.42,
       "market_state": null
     },
     "GOAU4": {
@@ -1911,10 +1922,10 @@
       "name": "METALURGICA GERDAU S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GOAU4.SA",
-      "price": 11.2,
+      "price": 11.47,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 11.24,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 11.75,
       "market_state": null
     },
     "GPAR3": {
@@ -1922,9 +1933,9 @@
       "name": "CIA CELG DE PARTICIPACOES - CELGPAR",
       "provider": "Yahoo Finance",
       "provider_symbol": "GPAR3.SA",
-      "price": 19.95,
+      "price": 19.96,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T13:30:00Z",
+      "market_time_utc": "2026-10-09T13:10:02Z",
       "previous_close": 10.51,
       "market_state": null
     },
@@ -1933,10 +1944,10 @@
       "name": "GRENDENE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GRND3.SA",
-      "price": 4.54,
+      "price": 4.65,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:51Z",
-      "previous_close": 3.86,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 4.03,
       "market_state": null
     },
     "GSHP3": {
@@ -1944,9 +1955,9 @@
       "name": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "GSHP3.SA",
-      "price": 4.01,
+      "price": 3.76,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T15:54:42Z",
+      "market_time_utc": "2026-10-09T17:38:35Z",
       "previous_close": 2.77,
       "market_state": null
     },
@@ -1955,10 +1966,10 @@
       "name": "HAGA S.A. INDUSTRIA E COMERCIO",
       "provider": "Yahoo Finance",
       "provider_symbol": "HAGA3.SA",
-      "price": 2.51,
+      "price": 2.55,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:52:24Z",
-      "previous_close": 2.56,
+      "market_time_utc": "2026-10-09T17:36:13Z",
+      "previous_close": 2.51,
       "market_state": null
     },
     "HAGA4": {
@@ -1966,10 +1977,10 @@
       "name": "HAGA S.A. INDUSTRIA E COMERCIO",
       "provider": "Yahoo Finance",
       "provider_symbol": "HAGA4.SA",
-      "price": 1.88,
+      "price": 1.95,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:11:15Z",
-      "previous_close": 1.75,
+      "market_time_utc": "2026-10-09T16:11:42Z",
+      "previous_close": 1.81,
       "market_state": null
     },
     "HAPV3": {
@@ -1977,10 +1988,10 @@
       "name": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
       "provider": "Yahoo Finance",
       "provider_symbol": "HAPV3.SA",
-      "price": 8.82,
+      "price": 8.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 6.94,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 7.8,
       "market_state": null
     },
     "HBOR3": {
@@ -1988,10 +1999,10 @@
       "name": "HELBOR EMPREENDIMENTOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "HBOR3.SA",
-      "price": 2.64,
+      "price": 2.75,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 2.11,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 2.12,
       "market_state": null
     },
     "HBRE3": {
@@ -1999,10 +2010,10 @@
       "name": "HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "HBRE3.SA",
-      "price": 3.17,
+      "price": 3.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 2.62,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 2.65,
       "market_state": null
     },
     "HBSA3": {
@@ -2010,10 +2021,10 @@
       "name": "HIDROVIAS DO BRASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "HBSA3.SA",
-      "price": 4.09,
+      "price": 4.1,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:36Z",
-      "previous_close": 3.39,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 3.48,
       "market_state": null
     },
     "HETA4": {
@@ -2032,10 +2043,10 @@
       "name": "HOTEIS OTHON S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "HOOT4.SA",
-      "price": 8.17,
+      "price": 8.14,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 7.22,
+      "market_time_utc": "2026-10-09T13:53:57Z",
+      "previous_close": 7.3,
       "market_state": null
     },
     "HYPE3": {
@@ -2043,10 +2054,10 @@
       "name": "HYPERA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "HYPE3.SA",
-      "price": 26.7,
+      "price": 26.9,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:39Z",
-      "previous_close": 24.65,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 25.16,
       "market_state": null
     },
     "IFCM3": {
@@ -2054,9 +2065,9 @@
       "name": "INFRACOMMERCE CXAAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "IFCM3.SA",
-      "price": 1.48,
+      "price": 1.54,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
+      "market_time_utc": "2026-10-09T17:46:16Z",
       "previous_close": 1.29,
       "market_state": null
     },
@@ -2065,10 +2076,10 @@
       "name": "IGUATEMI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "IGTI11.SA",
-      "price": 32.38,
+      "price": 33.27,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 27.32,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 28.47,
       "market_state": null
     },
     "IGTI3": {
@@ -2076,10 +2087,10 @@
       "name": "IGUATEMI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "IGTI3.SA",
-      "price": 4.0,
+      "price": 4.21,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 3.28,
+      "market_time_utc": "2026-10-09T17:59:13Z",
+      "previous_close": 3.42,
       "market_state": null
     },
     "IGTI4": {
@@ -2090,7 +2101,7 @@
       "price": 14.03,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T16:03:05Z",
-      "previous_close": 11.82,
+      "previous_close": 12.38,
       "market_state": null
     },
     "INEP3": {
@@ -2098,10 +2109,10 @@
       "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
       "provider": "Yahoo Finance",
       "provider_symbol": "INEP3.SA",
-      "price": 1.28,
+      "price": 1.33,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 1.24,
+      "market_time_utc": "2026-10-09T16:51:08Z",
+      "previous_close": 1.22,
       "market_state": null
     },
     "INEP4": {
@@ -2109,9 +2120,9 @@
       "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
       "provider": "Yahoo Finance",
       "provider_symbol": "INEP4.SA",
-      "price": 1.27,
+      "price": 1.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
+      "market_time_utc": "2026-10-09T16:18:04Z",
       "previous_close": 1.22,
       "market_state": null
     },
@@ -2120,10 +2131,10 @@
       "name": "INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA",
       "provider": "Yahoo Finance",
       "provider_symbol": "INTB3.SA",
-      "price": 19.03,
+      "price": 19.82,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 14.92,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 15.98,
       "market_state": null
     },
     "IRBR3": {
@@ -2131,10 +2142,10 @@
       "name": "IRB - BRASIL RESSEGUROS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "IRBR3.SA",
-      "price": 70.47,
+      "price": 70.38,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 62.33,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 63.32,
       "market_state": null
     },
     "ISAE3": {
@@ -2142,10 +2153,10 @@
       "name": "ISA ENERGIA BRASIL S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ISAE3.SA",
-      "price": 35.1,
+      "price": 36.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 33.02,
+      "market_time_utc": "2026-10-09T17:41:08Z",
+      "previous_close": 33.49,
       "market_state": null
     },
     "ISAE4": {
@@ -2153,10 +2164,10 @@
       "name": "ISA ENERGIA BRASIL S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "ISAE4.SA",
-      "price": 29.98,
+      "price": 29.57,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:49Z",
-      "previous_close": 27.67,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 28.19,
       "market_state": null
     },
     "ITSA3": {
@@ -2164,10 +2175,10 @@
       "name": "ITAUSA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ITSA3.SA",
-      "price": 16.14,
+      "price": 16.28,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 14.61,
+      "market_time_utc": "2026-10-09T18:00:56Z",
+      "previous_close": 14.79,
       "market_state": null
     },
     "ITSA4": {
@@ -2175,10 +2186,10 @@
       "name": "ITAUSA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ITSA4.SA",
-      "price": 16.05,
+      "price": 16.26,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:59Z",
-      "previous_close": 14.44,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 14.67,
       "market_state": null
     },
     "ITUB3": {
@@ -2186,10 +2197,10 @@
       "name": "ITAU UNIBANCO HOLDING S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ITUB3.SA",
-      "price": 53.5,
+      "price": 54.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 48.33,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 48.92,
       "market_state": null
     },
     "ITUB4": {
@@ -2197,10 +2208,10 @@
       "name": "ITAU UNIBANCO HOLDING S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ITUB4.SA",
-      "price": 49.35,
+      "price": 50.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 44.14,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 44.83,
       "market_state": null
     },
     "JALL3": {
@@ -2208,10 +2219,10 @@
       "name": "JALLES MACHADO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "JALL3.SA",
-      "price": 2.94,
+      "price": 3.08,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 2.47,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 2.63,
       "market_state": null
     },
     "JFEN3": {
@@ -2219,10 +2230,10 @@
       "name": "JOAO FORTES ENGENHARIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "JFEN3.SA",
-      "price": 2.16,
+      "price": 2.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:30Z",
-      "previous_close": 2.09,
+      "market_time_utc": "2026-10-09T17:18:49Z",
+      "previous_close": 2.03,
       "market_state": null
     },
     "JHSF3": {
@@ -2230,10 +2241,10 @@
       "name": "JHSF PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "JHSF3.SA",
-      "price": 13.31,
+      "price": 14.54,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 11.72,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 12.05,
       "market_state": null
     },
     "JOPA3": {
@@ -2243,7 +2254,7 @@
       "provider_symbol": "JOPA3.SA",
       "price": 19.95,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T17:55:20Z",
+      "market_time_utc": "2026-10-09T15:53:38Z",
       "previous_close": 17.9,
       "market_state": null
     },
@@ -2252,10 +2263,10 @@
       "name": "JSL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "JSLG3.SA",
-      "price": 11.5,
+      "price": 12.51,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 7.73,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 8.39,
       "market_state": null
     },
     "KEPL3": {
@@ -2263,10 +2274,10 @@
       "name": "KEPLER WEBER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "KEPL3.SA",
-      "price": 7.44,
+      "price": 7.73,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 6.53,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 6.78,
       "market_state": null
     },
     "KLBN11": {
@@ -2274,10 +2285,10 @@
       "name": "KLABIN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "KLBN11.SA",
-      "price": 18.5,
+      "price": 18.21,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:34Z",
-      "previous_close": 18.02,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 18.62,
       "market_state": null
     },
     "KLBN3": {
@@ -2285,10 +2296,10 @@
       "name": "KLABIN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "KLBN3.SA",
-      "price": 3.8,
+      "price": 3.74,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.73,
+      "market_time_utc": "2026-10-09T18:01:49Z",
+      "previous_close": 3.8,
       "market_state": null
     },
     "KLBN4": {
@@ -2296,10 +2307,10 @@
       "name": "KLABIN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "KLBN4.SA",
-      "price": 3.67,
+      "price": 3.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:54Z",
-      "previous_close": 3.59,
+      "market_time_utc": "2026-10-09T18:01:50Z",
+      "previous_close": 3.69,
       "market_state": null
     },
     "LAND3": {
@@ -2307,10 +2318,10 @@
       "name": "TERRA SANTA PROPRIEDADES AGRICOLAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LAND3.SA",
-      "price": 11.03,
+      "price": 11.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 9.16,
+      "market_time_utc": "2026-10-09T18:00:33Z",
+      "previous_close": 9.85,
       "market_state": null
     },
     "LAVV3": {
@@ -2318,10 +2329,10 @@
       "name": "LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LAVV3.SA",
-      "price": 14.68,
+      "price": 16.08,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 10.97,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 11.51,
       "market_state": null
     },
     "LEVE3": {
@@ -2329,10 +2340,10 @@
       "name": "MAHLE-METAL LEVE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LEVE3.SA",
-      "price": 37.91,
+      "price": 37.89,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 33.97,
+      "market_time_utc": "2026-10-09T18:01:56Z",
+      "previous_close": 34.43,
       "market_state": null
     },
     "LIGT3": {
@@ -2340,10 +2351,10 @@
       "name": "LIGHT S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LIGT3.SA",
-      "price": 3.85,
+      "price": 3.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 3.62,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 3.77,
       "market_state": null
     },
     "LJQQ3": {
@@ -2351,10 +2362,10 @@
       "name": "LOJAS QUERO-QUERO S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "LJQQ3.SA",
-      "price": 2.41,
+      "price": 2.79,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:58Z",
-      "previous_close": 1.46,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 1.54,
       "market_state": null
     },
     "LOGG3": {
@@ -2362,10 +2373,10 @@
       "name": "LOG COMMERCIAL PROPERTIES",
       "provider": "Yahoo Finance",
       "provider_symbol": "LOGG3.SA",
-      "price": 29.89,
+      "price": 30.92,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 24.85,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 25.59,
       "market_state": null
     },
     "LOGN3": {
@@ -2373,10 +2384,10 @@
       "name": "LOG-IN LOGISTICA INTERMODAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LOGN3.SA",
-      "price": 31.0,
+      "price": 30.91,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 27.99,
+      "market_time_utc": "2026-10-09T17:59:57Z",
+      "previous_close": 28.0,
       "market_state": null
     },
     "LPSB3": {
@@ -2384,10 +2395,10 @@
       "name": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LPSB3.SA",
-      "price": 1.59,
+      "price": 1.65,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.33,
+      "market_time_utc": "2026-10-09T18:00:40Z",
+      "previous_close": 1.34,
       "market_state": null
     },
     "LREN3": {
@@ -2395,10 +2406,10 @@
       "name": "LOJAS RENNER S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LREN3.SA",
-      "price": 13.5,
+      "price": 14.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:35Z",
-      "previous_close": 11.46,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 11.76,
       "market_state": null
     },
     "LUPA3": {
@@ -2406,10 +2417,10 @@
       "name": "LUPATECH S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LUPA3.SA",
-      "price": 3.95,
+      "price": 4.02,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 3.65,
+      "market_time_utc": "2026-10-09T17:17:44Z",
+      "previous_close": 3.82,
       "market_state": null
     },
     "LUXM4": {
@@ -2417,10 +2428,10 @@
       "name": "TREVISA INVESTIMENTOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LUXM4.SA",
-      "price": 3.21,
+      "price": 3.34,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T18:24:07Z",
-      "previous_close": 2.94,
+      "market_time_utc": "2026-10-09T17:43:10Z",
+      "previous_close": 3.1,
       "market_state": null
     },
     "LWSA3": {
@@ -2428,10 +2439,10 @@
       "name": "LWSA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "LWSA3.SA",
-      "price": 5.21,
+      "price": 5.77,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 4.02,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 4.01,
       "market_state": null
     },
     "MAPT3": {
@@ -2453,7 +2464,7 @@
       "price": 2.0,
       "currency": "BRL",
       "market_time_utc": "2026-10-05T20:03:00Z",
-      "previous_close": 3.0,
+      "previous_close": 2.5,
       "market_state": null
     },
     "MATD3": {
@@ -2461,10 +2472,10 @@
       "name": "HOSPITAL MATER DEI S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "MATD3.SA",
-      "price": 6.62,
+      "price": 6.72,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 5.11,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 5.19,
       "market_state": null
     },
     "MBRF3": {
@@ -2472,10 +2483,10 @@
       "name": "BRF S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MBRF3.SA",
-      "price": 18.69,
+      "price": 18.79,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:44Z",
-      "previous_close": 16.78,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 16.98,
       "market_state": null
     },
     "MDIA3": {
@@ -2483,10 +2494,10 @@
       "name": "M.DIAS BRANCO S.A. IND COM DE ALIMENTOS",
       "provider": "Yahoo Finance",
       "provider_symbol": "MDIA3.SA",
-      "price": 19.86,
+      "price": 20.46,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 16.6,
+      "market_time_utc": "2026-10-09T18:01:38Z",
+      "previous_close": 17.04,
       "market_state": null
     },
     "MDNE3": {
@@ -2494,10 +2505,10 @@
       "name": "MOURA DUBEUX ENGENHARIA S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "MDNE3.SA",
-      "price": 30.24,
+      "price": 32.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 24.93,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 25.85,
       "market_state": null
     },
     "MEAL3": {
@@ -2505,9 +2516,9 @@
       "name": "INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MEAL3.SA",
-      "price": 0.97,
+      "price": 1.01,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:01:48Z",
       "previous_close": 0.93,
       "market_state": null
     },
@@ -2516,10 +2527,10 @@
       "name": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MELK3.SA",
-      "price": 3.5,
+      "price": 3.62,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.02,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 3.03,
       "market_state": null
     },
     "MGEL4": {
@@ -2527,10 +2538,10 @@
       "name": "MANGELS INDUSTRIAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MGEL4.SA",
-      "price": 6.5,
+      "price": 6.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 6.0,
+      "market_time_utc": "2026-10-09T16:36:48Z",
+      "previous_close": 5.7,
       "market_state": null
     },
     "MGLU3": {
@@ -2538,10 +2549,10 @@
       "name": "MAGAZINE LUIZA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MGLU3.SA",
-      "price": 10.25,
+      "price": 11.88,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 7.63,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 7.61,
       "market_state": null
     },
     "MILS3": {
@@ -2549,10 +2560,10 @@
       "name": "MILLS LOCAÇÃO. SERVIÇOS E LOGÍSTICA S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "MILS3.SA",
-      "price": 16.11,
+      "price": 16.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 15.98,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 16.03,
       "market_state": null
     },
     "MLAS3": {
@@ -2560,10 +2571,10 @@
       "name": "GRUPO MULTI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MLAS3.SA",
-      "price": 2.29,
+      "price": 2.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.93,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 1.97,
       "market_state": null
     },
     "MNDL3": {
@@ -2574,7 +2585,7 @@
       "price": 16.99,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T17:46:15Z",
-      "previous_close": 18.25,
+      "previous_close": 18.3,
       "market_state": null
     },
     "MNPR3": {
@@ -2584,8 +2595,8 @@
       "provider_symbol": "MNPR3.SA",
       "price": 4.03,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:50:23Z",
-      "previous_close": 3.75,
+      "market_time_utc": "2026-10-09T17:52:42Z",
+      "previous_close": 3.69,
       "market_state": null
     },
     "MOTV3": {
@@ -2593,10 +2604,10 @@
       "name": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MOTV3.SA",
-      "price": 20.26,
+      "price": 20.48,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 17.02,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 17.49,
       "market_state": null
     },
     "MOVI3": {
@@ -2604,10 +2615,10 @@
       "name": "MOVIDA PARTICIPACOES SA",
       "provider": "Yahoo Finance",
       "provider_symbol": "MOVI3.SA",
-      "price": 16.73,
+      "price": 18.55,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 10.14,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 10.85,
       "market_state": null
     },
     "MRVE3": {
@@ -2615,10 +2626,10 @@
       "name": "MRV ENGENHARIA E PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MRVE3.SA",
-      "price": 6.43,
+      "price": 7.53,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 5.44,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 5.63,
       "market_state": null
     },
     "MTRE3": {
@@ -2626,10 +2637,10 @@
       "name": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MTRE3.SA",
-      "price": 3.94,
+      "price": 4.08,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.46,
+      "market_time_utc": "2026-10-09T18:01:48Z",
+      "previous_close": 3.51,
       "market_state": null
     },
     "MTSA4": {
@@ -2637,9 +2648,9 @@
       "name": "METISA METALURGICA TIMBOENSE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MTSA4.SA",
-      "price": 44.92,
+      "price": 45.05,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T17:22:07Z",
+      "market_time_utc": "2026-10-09T16:55:38Z",
       "previous_close": 44.9,
       "market_state": null
     },
@@ -2648,10 +2659,10 @@
       "name": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MULT3.SA",
-      "price": 37.74,
+      "price": 39.16,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 31.91,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 32.97,
       "market_state": null
     },
     "MYPK3": {
@@ -2659,10 +2670,10 @@
       "name": "IOCHPE MAXION S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "MYPK3.SA",
-      "price": 10.62,
+      "price": 10.77,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 9.13,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 9.39,
       "market_state": null
     },
     "NATU3": {
@@ -2670,10 +2681,10 @@
       "name": "NATURA COSMETICOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "NATU3.SA",
-      "price": 7.37,
+      "price": 7.57,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 6.82,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 7.45,
       "market_state": null
     },
     "NEXP3": {
@@ -2681,9 +2692,9 @@
       "name": "NEXPE PARTICIPAÇÕES S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "NEXP3.SA",
-      "price": 2.3,
+      "price": 2.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:02:58Z",
+      "market_time_utc": "2026-10-09T17:59:43Z",
       "previous_close": 2.41,
       "market_state": null
     },
@@ -2692,9 +2703,9 @@
       "name": "NORDON INDUSTRIAS METALURGICAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "NORD3.SA",
-      "price": 1.24,
+      "price": 1.25,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
+      "market_time_utc": "2026-10-09T17:49:43Z",
       "previous_close": 1.26,
       "market_state": null
     },
@@ -2703,10 +2714,10 @@
       "name": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "NUTR3.SA",
-      "price": 2.56,
+      "price": 2.69,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:16:33Z",
-      "previous_close": 2.56,
+      "market_time_utc": "2026-10-09T17:14:19Z",
+      "previous_close": 2.43,
       "market_state": null
     },
     "OBTC3": {
@@ -2714,10 +2725,10 @@
       "name": "ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO",
       "provider": "Yahoo Finance",
       "provider_symbol": "OBTC3.SA",
-      "price": 6.59,
+      "price": 6.6,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:47Z",
-      "previous_close": 7.89,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 7.82,
       "market_state": null
     },
     "OFSA3": {
@@ -2725,10 +2736,10 @@
       "name": "OUROFINO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "OFSA3.SA",
-      "price": 29.5,
+      "price": 30.05,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 27.4,
+      "market_time_utc": "2026-10-09T17:16:09Z",
+      "previous_close": 27.89,
       "market_state": null
     },
     "ONCO11": {
@@ -2738,7 +2749,7 @@
       "provider_symbol": "ONCO11",
       "price": 0.21,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T17:52:27.914491Z",
+      "market_time_utc": "2026-10-09T17:26:21.688681Z",
       "previous_close": null,
       "market_state": null
     },
@@ -2747,9 +2758,9 @@
       "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ONCO3.SA",
-      "price": 1.06,
+      "price": 1.09,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:59Z",
+      "market_time_utc": "2026-10-09T18:01:54Z",
       "previous_close": 1.01,
       "market_state": null
     },
@@ -2758,10 +2769,10 @@
       "name": "OCEANPACT SERVICOS MARITIMOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "OPCT3.SA",
-      "price": 10.4,
+      "price": 10.89,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:55Z",
-      "previous_close": 8.43,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 8.81,
       "market_state": null
     },
     "ORVR3": {
@@ -2769,10 +2780,10 @@
       "name": "ORIZON VALORIZACAO DE RESIDUOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ORVR3.SA",
-      "price": 21.26,
+      "price": 21.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 17.43,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 17.85,
       "market_state": null
     },
     "OSXB3": {
@@ -2783,7 +2794,7 @@
       "price": 1.6,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.25,
+      "previous_close": 1.45,
       "market_state": null
     },
     "PASS3": {
@@ -2791,10 +2802,10 @@
       "name": "COMPASS GAS E ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PASS3.SA",
-      "price": 27.72,
+      "price": 28.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 23.21,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 23.83,
       "market_state": null
     },
     "PATI3": {
@@ -2805,7 +2816,7 @@
       "price": 28.99,
       "currency": "BRL",
       "market_time_utc": "2026-10-08T19:26:31Z",
-      "previous_close": 27.5,
+      "previous_close": 28.0,
       "market_state": null
     },
     "PATI4": {
@@ -2816,7 +2827,7 @@
       "price": 29.48,
       "currency": "BRL",
       "market_time_utc": "2026-10-05T13:16:18Z",
-      "previous_close": 29.1,
+      "previous_close": 29.48,
       "market_state": null
     },
     "PCAR3": {
@@ -2824,10 +2835,10 @@
       "name": "CIA BRASILEIRA DE DISTRIBUICAO",
       "provider": "Yahoo Finance",
       "provider_symbol": "PCAR3.SA",
-      "price": 3.42,
+      "price": 3.52,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 3.42,
+      "market_time_utc": "2026-10-09T18:01:51Z",
+      "previous_close": 3.1,
       "market_state": null
     },
     "PDGR3": {
@@ -2835,9 +2846,9 @@
       "name": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
       "provider": "Yahoo Finance",
       "provider_symbol": "PDGR3.SA",
-      "price": 1.14,
+      "price": 1.22,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:46:56Z",
+      "market_time_utc": "2026-10-09T17:57:40Z",
       "previous_close": 1.07,
       "market_state": null
     },
@@ -2846,9 +2857,9 @@
       "name": "PADTEC HOLDING S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PDTC3.SA",
-      "price": 1.93,
+      "price": 1.85,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T17:54:31Z",
       "previous_close": 1.59,
       "market_state": null
     },
@@ -2868,10 +2879,10 @@
       "name": "PETROLEO BRASILEIRO S.A. PETROBRAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "PETR3.SA",
-      "price": 61.93,
+      "price": 63.32,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 55.05,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 56.62,
       "market_state": null
     },
     "PETR4": {
@@ -2879,10 +2890,10 @@
       "name": "PETROLEO BRASILEIRO S.A. PETROBRAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "PETR4.SA",
-      "price": 55.48,
+      "price": 56.15,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 49.9,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 51.17,
       "market_state": null
     },
     "PFRM3": {
@@ -2890,10 +2901,10 @@
       "name": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PFRM3.SA",
-      "price": 9.06,
+      "price": 9.14,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 7.47,
+      "market_time_utc": "2026-10-09T18:01:07Z",
+      "previous_close": 7.7,
       "market_state": null
     },
     "PGMN3": {
@@ -2901,10 +2912,10 @@
       "name": "EMPREENDIMENTOS PAGUE MENOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PGMN3.SA",
-      "price": 5.23,
+      "price": 5.53,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:37Z",
-      "previous_close": 3.49,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 3.7,
       "market_state": null
     },
     "PINE3": {
@@ -2912,10 +2923,10 @@
       "name": "BCO PINE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PINE3.SA",
-      "price": 12.77,
+      "price": 13.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 11.42,
+      "market_time_utc": "2026-10-09T18:01:23Z",
+      "previous_close": 11.47,
       "market_state": null
     },
     "PINE4": {
@@ -2923,10 +2934,10 @@
       "name": "BCO PINE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PINE4.SA",
-      "price": 14.73,
+      "price": 15.57,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 12.35,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 12.63,
       "market_state": null
     },
     "PLAS3": {
@@ -2934,10 +2945,10 @@
       "name": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PLAS3.SA",
-      "price": 3.75,
+      "price": 3.9,
       "currency": "BRL",
-      "market_time_utc": "2026-10-06T15:26:48Z",
-      "previous_close": 2.9,
+      "market_time_utc": "2026-10-09T16:25:48Z",
+      "previous_close": 3.27,
       "market_state": null
     },
     "PLPL3": {
@@ -2945,10 +2956,10 @@
       "name": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PLPL3.SA",
-      "price": 8.26,
+      "price": 9.09,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 6.86,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 7.09,
       "market_state": null
     },
     "PMAM3": {
@@ -2956,10 +2967,10 @@
       "name": "PARANAPANEMA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PMAM3.SA",
-      "price": 0.4,
+      "price": 0.41,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 0.38,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 0.4,
       "market_state": null
     },
     "PNVL3": {
@@ -2967,10 +2978,10 @@
       "name": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
       "provider": "Yahoo Finance",
       "provider_symbol": "PNVL3.SA",
-      "price": 15.53,
+      "price": 16.04,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 12.66,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 13.12,
       "market_state": null
     },
     "POMO3": {
@@ -2978,10 +2989,10 @@
       "name": "MARCOPOLO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "POMO3.SA",
-      "price": 4.45,
+      "price": 4.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 3.94,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 4.06,
       "market_state": null
     },
     "POMO4": {
@@ -2989,10 +3000,10 @@
       "name": "MARCOPOLO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "POMO4.SA",
-      "price": 4.83,
+      "price": 4.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 4.18,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 4.33,
       "market_state": null
     },
     "POSI3": {
@@ -3000,10 +3011,10 @@
       "name": "POSITIVO TECNOLOGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "POSI3.SA",
-      "price": 4.4,
+      "price": 4.83,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.64,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 3.75,
       "market_state": null
     },
     "PRIO3": {
@@ -3011,10 +3022,10 @@
       "name": "PRIO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PRIO3.SA",
-      "price": 63.75,
+      "price": 64.71,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:36Z",
-      "previous_close": 61.46,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 63.01,
       "market_state": null
     },
     "PRNR3": {
@@ -3022,10 +3033,10 @@
       "name": "PRINER SERVIÇOS INDUSTRIAIS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PRNR3.SA",
-      "price": 21.28,
+      "price": 22.67,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:49Z",
-      "previous_close": 18.8,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 19.0,
       "market_state": null
     },
     "PSSA3": {
@@ -3033,10 +3044,10 @@
       "name": "PORTO SEGURO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "PSSA3.SA",
-      "price": 53.56,
+      "price": 53.32,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 47.66,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 49.47,
       "market_state": null
     },
     "PTBL3": {
@@ -3044,10 +3055,10 @@
       "name": "PBG S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "PTBL3.SA",
-      "price": 2.78,
+      "price": 2.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.9,
+      "market_time_utc": "2026-10-09T17:57:43Z",
+      "previous_close": 1.99,
       "market_state": null
     },
     "QUAL3": {
@@ -3055,10 +3066,10 @@
       "name": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "QUAL3.SA",
-      "price": 2.1,
+      "price": 2.34,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 1.64,
+      "market_time_utc": "2026-10-09T18:01:58Z",
+      "previous_close": 1.69,
       "market_state": null
     },
     "RADL3": {
@@ -3066,10 +3077,10 @@
       "name": "RAIA DROGASIL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RADL3.SA",
-      "price": 20.82,
+      "price": 21.28,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:59Z",
-      "previous_close": 18.75,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 19.5,
       "market_state": null
     },
     "RAIL3": {
@@ -3077,10 +3088,10 @@
       "name": "RUMO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RAIL3.SA",
-      "price": 18.58,
+      "price": 18.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:09:00Z",
-      "previous_close": 16.53,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 16.88,
       "market_state": null
     },
     "RAIZ4": {
@@ -3088,10 +3099,10 @@
       "name": "RAIZEN S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RAIZ4.SA",
-      "price": 0.34,
+      "price": 0.36,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 0.33,
+      "market_time_utc": "2026-10-09T18:01:17Z",
+      "previous_close": 0.35,
       "market_state": null
     },
     "RANI3": {
@@ -3099,10 +3110,10 @@
       "name": "IRANI PAPEL E EMBALAGEM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RANI3.SA",
-      "price": 8.26,
+      "price": 8.41,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 7.71,
+      "market_time_utc": "2026-10-09T18:01:55Z",
+      "previous_close": 7.94,
       "market_state": null
     },
     "RAPT3": {
@@ -3110,10 +3121,10 @@
       "name": "RANDONCORP S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RAPT3.SA",
-      "price": 9.92,
+      "price": 10.31,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 8.38,
+      "market_time_utc": "2026-10-09T17:08:55Z",
+      "previous_close": 8.61,
       "market_state": null
     },
     "RAPT4": {
@@ -3121,10 +3132,10 @@
       "name": "RANDONCORP S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RAPT4.SA",
-      "price": 7.31,
+      "price": 7.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.19,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 5.47,
       "market_state": null
     },
     "RCSL3": {
@@ -3132,10 +3143,10 @@
       "name": "RECRUSUL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RCSL3.SA",
-      "price": 2.01,
+      "price": 2.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 2.0,
+      "market_time_utc": "2026-10-09T17:54:14Z",
+      "previous_close": 1.72,
       "market_state": null
     },
     "RCSL4": {
@@ -3145,8 +3156,8 @@
       "provider_symbol": "RCSL4.SA",
       "price": 0.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 1.16,
+      "market_time_utc": "2026-10-09T18:01:27Z",
+      "previous_close": 1.08,
       "market_state": null
     },
     "RDOR3": {
@@ -3154,10 +3165,10 @@
       "name": "REDE DOR SÃO LUIZ S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RDOR3.SA",
-      "price": 45.55,
+      "price": 45.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:56Z",
-      "previous_close": 38.36,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 39.82,
       "market_state": null
     },
     "RECV3": {
@@ -3165,10 +3176,10 @@
       "name": "PETRORECÔNCAVO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RECV3.SA",
-      "price": 12.1,
+      "price": 12.25,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 11.04,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 11.2,
       "market_state": null
     },
     "REDE3": {
@@ -3176,10 +3187,10 @@
       "name": "REDE ENERGIA PARTICIPAÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "REDE3.SA",
-      "price": 5.48,
+      "price": 5.57,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:29:10Z",
-      "previous_close": 5.39,
+      "market_time_utc": "2026-10-09T17:09:59Z",
+      "previous_close": 5.43,
       "market_state": null
     },
     "RENT3": {
@@ -3187,10 +3198,10 @@
       "name": "LOCALIZA RENT A CAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RENT3.SA",
-      "price": 52.32,
+      "price": 54.17,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:41Z",
-      "previous_close": 40.24,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 41.48,
       "market_state": null
     },
     "RENT4": {
@@ -3198,10 +3209,10 @@
       "name": "LOCALIZA RENT A CAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RENT4.SA",
-      "price": 51.0,
+      "price": 53.39,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 39.21,
+      "market_time_utc": "2026-10-09T17:57:30Z",
+      "previous_close": 40.95,
       "market_state": null
     },
     "RIAA3": {
@@ -3209,10 +3220,10 @@
       "name": "GUARARAPES CONFECCOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RIAA3.SA",
-      "price": 9.45,
+      "price": 10.57,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 7.3,
+      "market_time_utc": "2026-10-09T18:01:52Z",
+      "previous_close": 7.57,
       "market_state": null
     },
     "RNEW3": {
@@ -3220,10 +3231,10 @@
       "name": "RENOVA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RNEW3.SA",
-      "price": 0.95,
+      "price": 0.93,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 0.79,
+      "market_time_utc": "2026-10-09T17:48:37Z",
+      "previous_close": 0.81,
       "market_state": null
     },
     "RNEW4": {
@@ -3231,10 +3242,10 @@
       "name": "RENOVA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RNEW4.SA",
-      "price": 0.96,
+      "price": 0.93,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 0.79,
+      "market_time_utc": "2026-10-09T18:01:23Z",
+      "previous_close": 0.81,
       "market_state": null
     },
     "ROMI3": {
@@ -3242,10 +3253,10 @@
       "name": "ROMI S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "ROMI3.SA",
-      "price": 7.45,
+      "price": 7.64,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 6.02,
+      "market_time_utc": "2026-10-09T18:01:08Z",
+      "previous_close": 6.36,
       "market_state": null
     },
     "RPAD3": {
@@ -3255,7 +3266,7 @@
       "provider_symbol": "RPAD3.SA",
       "price": 7.5,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T14:25:00Z",
+      "market_time_utc": "2026-10-09T13:12:31Z",
       "previous_close": 7.5,
       "market_state": null
     },
@@ -3270,26 +3281,15 @@
       "previous_close": 8.0,
       "market_state": null
     },
-    "RPAD6": {
-      "symbol": "RPAD6",
-      "name": "ALFA HOLDINGS S.A.",
-      "provider": "Yahoo Finance",
-      "provider_symbol": "RPAD6.SA",
-      "price": 7.5,
-      "currency": "BRL",
-      "market_time_utc": "2026-09-25T19:35:13Z",
-      "previous_close": 7.5,
-      "market_state": null
-    },
     "RSUL4": {
       "symbol": "RSUL4",
       "name": "METALURGICA RIOSULENSE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "RSUL4.SA",
-      "price": 46.99,
+      "price": 49.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 41.71,
+      "market_time_utc": "2026-10-09T17:53:25Z",
+      "previous_close": 42.99,
       "market_state": null
     },
     "RVEE3": {
@@ -3308,10 +3308,10 @@
       "name": "BCO SANTANDER (BRASIL) S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SANB11.SA",
-      "price": 29.08,
+      "price": 28.96,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:00Z",
-      "previous_close": 27.79,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 28.09,
       "market_state": null
     },
     "SANB3": {
@@ -3319,10 +3319,10 @@
       "name": "BCO SANTANDER (BRASIL) S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SANB3.SA",
-      "price": 14.62,
+      "price": 14.55,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:36Z",
-      "previous_close": 13.92,
+      "market_time_utc": "2026-10-09T18:01:05Z",
+      "previous_close": 14.16,
       "market_state": null
     },
     "SANB4": {
@@ -3330,10 +3330,10 @@
       "name": "BCO SANTANDER (BRASIL) S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SANB4.SA",
-      "price": 14.43,
+      "price": 14.37,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:59Z",
-      "previous_close": 13.84,
+      "market_time_utc": "2026-10-09T18:01:44Z",
+      "previous_close": 13.97,
       "market_state": null
     },
     "SAPR11": {
@@ -3341,10 +3341,10 @@
       "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
       "provider": "Yahoo Finance",
       "provider_symbol": "SAPR11.SA",
-      "price": 43.05,
+      "price": 45.43,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 33.64,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 35.21,
       "market_state": null
     },
     "SAPR3": {
@@ -3352,10 +3352,10 @@
       "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
       "provider": "Yahoo Finance",
       "provider_symbol": "SAPR3.SA",
-      "price": 9.96,
+      "price": 10.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 7.26,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 7.57,
       "market_state": null
     },
     "SAPR4": {
@@ -3363,10 +3363,10 @@
       "name": "CIA SANEAMENTO DO PARANA - SANEPAR",
       "provider": "Yahoo Finance",
       "provider_symbol": "SAPR4.SA",
-      "price": 8.22,
+      "price": 8.72,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 6.63,
+      "market_time_utc": "2026-10-09T18:01:54Z",
+      "previous_close": 6.89,
       "market_state": null
     },
     "SAUD3": {
@@ -3374,10 +3374,10 @@
       "name": "BRADSAUDE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SAUD3.SA",
-      "price": 15.65,
+      "price": 15.94,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:30Z",
-      "previous_close": 13.42,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 14.02,
       "market_state": null
     },
     "SBFG3": {
@@ -3385,10 +3385,10 @@
       "name": "GRUPO SBF SA",
       "provider": "Yahoo Finance",
       "provider_symbol": "SBFG3.SA",
-      "price": 10.36,
+      "price": 11.23,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 8.08,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 8.22,
       "market_state": null
     },
     "SBSP3": {
@@ -3396,10 +3396,10 @@
       "name": "CIA SANEAMENTO BASICO EST SAO PAULO",
       "provider": "Yahoo Finance",
       "provider_symbol": "SBSP3.SA",
-      "price": 33.36,
+      "price": 33.95,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:54Z",
-      "previous_close": 27.58,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 28.23,
       "market_state": null
     },
     "SCAR3": {
@@ -3407,10 +3407,10 @@
       "name": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SCAR3.SA",
-      "price": 13.0,
+      "price": 13.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 12.37,
+      "market_time_utc": "2026-10-09T17:53:14Z",
+      "previous_close": 12.56,
       "market_state": null
     },
     "SEER3": {
@@ -3418,10 +3418,10 @@
       "name": "SER EDUCACIONAL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SEER3.SA",
-      "price": 16.92,
+      "price": 17.73,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 14.26,
+      "market_time_utc": "2026-10-09T18:01:56Z",
+      "previous_close": 14.6,
       "market_state": null
     },
     "SEQL3": {
@@ -3431,7 +3431,7 @@
       "provider_symbol": "SEQL3.SA",
       "price": 0.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
+      "market_time_utc": "2026-10-09T17:52:09Z",
       "previous_close": 0.07,
       "market_state": null
     },
@@ -3440,10 +3440,10 @@
       "name": "SCHULZ S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SHUL4.SA",
-      "price": 5.28,
+      "price": 5.32,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 4.51,
+      "market_time_utc": "2026-10-09T18:01:54Z",
+      "previous_close": 4.7,
       "market_state": null
     },
     "SIMH3": {
@@ -3451,10 +3451,10 @@
       "name": "SIMPAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SIMH3.SA",
-      "price": 15.71,
+      "price": 16.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 10.14,
+      "market_time_utc": "2026-10-09T18:02:00Z",
+      "previous_close": 10.8,
       "market_state": null
     },
     "SLCE3": {
@@ -3462,10 +3462,10 @@
       "name": "SLC AGRICOLA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SLCE3.SA",
-      "price": 17.52,
+      "price": 17.7,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 16.62,
+      "market_time_utc": "2026-10-09T18:01:47Z",
+      "previous_close": 17.2,
       "market_state": null
     },
     "SMFT3": {
@@ -3473,10 +3473,10 @@
       "name": "SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SMFT3.SA",
-      "price": 23.57,
+      "price": 25.21,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:37Z",
-      "previous_close": 17.15,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 17.63,
       "market_state": null
     },
     "SMTO3": {
@@ -3484,10 +3484,10 @@
       "name": "SAO MARTINHO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SMTO3.SA",
-      "price": 19.81,
+      "price": 20.96,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:31Z",
-      "previous_close": 18.43,
+      "market_time_utc": "2026-10-09T18:01:37Z",
+      "previous_close": 19.34,
       "market_state": null
     },
     "SNSY3": {
@@ -3506,10 +3506,10 @@
       "name": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
       "provider": "Yahoo Finance",
       "provider_symbol": "SNSY5.SA",
-      "price": 2.84,
+      "price": 2.8,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:11:40Z",
-      "previous_close": 2.25,
+      "market_time_utc": "2026-10-09T17:00:59Z",
+      "previous_close": 2.29,
       "market_state": null
     },
     "SOJA3": {
@@ -3517,10 +3517,10 @@
       "name": "BOA SAFRA SEMENTES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SOJA3.SA",
-      "price": 8.43,
+      "price": 8.59,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 7.43,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 7.63,
       "market_state": null
     },
     "SOND5": {
@@ -3531,7 +3531,7 @@
       "price": 80.0,
       "currency": "BRL",
       "market_time_utc": "2026-10-07T14:44:08Z",
-      "previous_close": 78.0,
+      "previous_close": 89.4,
       "market_state": null
     },
     "SOND6": {
@@ -3550,10 +3550,10 @@
       "name": "SUZANO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SUZB3.SA",
-      "price": 42.77,
+      "price": 42.47,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 43.26,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 44.35,
       "market_state": null
     },
     "SYNE3": {
@@ -3561,9 +3561,9 @@
       "name": "SYN PROP E TECH S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "SYNE3.SA",
-      "price": 3.99,
+      "price": 4.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:02:01Z",
       "previous_close": 3.52,
       "market_state": null
     },
@@ -3572,10 +3572,10 @@
       "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TAEE11.SA",
-      "price": 45.63,
+      "price": 46.56,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:51Z",
-      "previous_close": 41.84,
+      "market_time_utc": "2026-10-09T18:01:51Z",
+      "previous_close": 42.85,
       "market_state": null
     },
     "TAEE3": {
@@ -3583,10 +3583,10 @@
       "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TAEE3.SA",
-      "price": 14.92,
+      "price": 15.27,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 13.76,
+      "market_time_utc": "2026-10-09T18:00:48Z",
+      "previous_close": 14.03,
       "market_state": null
     },
     "TAEE4": {
@@ -3594,10 +3594,10 @@
       "name": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TAEE4.SA",
-      "price": 15.12,
+      "price": 15.6,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 14.01,
+      "market_time_utc": "2026-10-09T18:01:05Z",
+      "previous_close": 14.3,
       "market_state": null
     },
     "TASA3": {
@@ -3605,10 +3605,10 @@
       "name": "TAURUS ARMAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TASA3.SA",
-      "price": 9.56,
+      "price": 11.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:59Z",
-      "previous_close": 8.16,
+      "market_time_utc": "2026-10-09T18:01:12Z",
+      "previous_close": 8.49,
       "market_state": null
     },
     "TASA4": {
@@ -3616,10 +3616,10 @@
       "name": "TAURUS ARMAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TASA4.SA",
-      "price": 8.48,
+      "price": 9.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 8.12,
+      "market_time_utc": "2026-10-09T18:01:22Z",
+      "previous_close": 8.58,
       "market_state": null
     },
     "TCSA3": {
@@ -3627,9 +3627,9 @@
       "name": "TECNISA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TCSA3.SA",
-      "price": 0.65,
+      "price": 0.68,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:29Z",
+      "market_time_utc": "2026-10-09T17:59:51Z",
       "previous_close": 0.63,
       "market_state": null
     },
@@ -3638,10 +3638,10 @@
       "name": "TECHNOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TECN3.SA",
-      "price": 11.0,
+      "price": 11.11,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 10.2,
+      "market_time_utc": "2026-10-09T18:00:11Z",
+      "previous_close": 10.5,
       "market_state": null
     },
     "TELB3": {
@@ -3649,10 +3649,10 @@
       "name": "TELEC BRASILEIRAS S.A. TELEBRAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "TELB3.SA",
-      "price": 28.65,
+      "price": 33.6,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:49:22Z",
-      "previous_close": 19.35,
+      "market_time_utc": "2026-10-09T17:40:20Z",
+      "previous_close": 19.8,
       "market_state": null
     },
     "TELB4": {
@@ -3660,10 +3660,10 @@
       "name": "TELEC BRASILEIRAS S.A. TELEBRAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "TELB4.SA",
-      "price": 12.0,
+      "price": 13.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 8.75,
+      "market_time_utc": "2026-10-09T17:47:01Z",
+      "previous_close": 9.33,
       "market_state": null
     },
     "TEND3": {
@@ -3671,10 +3671,10 @@
       "name": "CONSTRUTORA TENDA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TEND3.SA",
-      "price": 29.49,
+      "price": 31.38,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:52Z",
-      "previous_close": 27.46,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 28.12,
       "market_state": null
     },
     "TFCO4": {
@@ -3682,10 +3682,10 @@
       "name": "TRACK & FIELD CO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TFCO4.SA",
-      "price": 15.9,
+      "price": 15.45,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 13.13,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 13.4,
       "market_state": null
     },
     "TGMA3": {
@@ -3693,10 +3693,10 @@
       "name": "TEGMA GESTAO LOGISTICA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TGMA3.SA",
-      "price": 45.25,
+      "price": 44.98,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:40Z",
-      "previous_close": 38.36,
+      "market_time_utc": "2026-10-09T18:01:49Z",
+      "previous_close": 39.5,
       "market_state": null
     },
     "TIMS3": {
@@ -3704,10 +3704,10 @@
       "name": "TIM S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TIMS3.SA",
-      "price": 18.89,
+      "price": 18.17,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:08:00Z",
-      "previous_close": 18.18,
+      "market_time_utc": "2026-10-09T18:02:04Z",
+      "previous_close": 18.55,
       "market_state": null
     },
     "TOKY3": {
@@ -3715,10 +3715,10 @@
       "name": "GRUPO TOKY S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TOKY3.SA",
-      "price": 10.17,
+      "price": 9.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:46:18Z",
-      "previous_close": 10.33,
+      "market_time_utc": "2026-10-09T17:28:35Z",
+      "previous_close": 10.24,
       "market_state": null
     },
     "TOTS3": {
@@ -3726,10 +3726,10 @@
       "name": "TOTVS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TOTS3.SA",
-      "price": 40.81,
+      "price": 42.22,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:31Z",
-      "previous_close": 34.5,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 35.35,
       "market_state": null
     },
     "TPIS3": {
@@ -3737,10 +3737,10 @@
       "name": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TPIS3.SA",
-      "price": 11.47,
+      "price": 12.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 11.1,
+      "market_time_utc": "2026-10-09T17:57:05Z",
+      "previous_close": 11.08,
       "market_state": null
     },
     "TRIS3": {
@@ -3748,10 +3748,10 @@
       "name": "TRISUL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TRIS3.SA",
-      "price": 6.46,
+      "price": 6.77,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 5.08,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 5.35,
       "market_state": null
     },
     "TTEN3": {
@@ -3759,10 +3759,10 @@
       "name": "TRÊS TENTOS AGROINDUSTRIAL S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "TTEN3.SA",
-      "price": 12.98,
+      "price": 13.67,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:38Z",
-      "previous_close": 10.42,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 10.82,
       "market_state": null
     },
     "TUPY3": {
@@ -3770,10 +3770,10 @@
       "name": "TUPY S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TUPY3.SA",
-      "price": 19.68,
+      "price": 20.37,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 16.76,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 16.69,
       "market_state": null
     },
     "TXRX4": {
@@ -3781,9 +3781,9 @@
       "name": "TEXTIL RENAUXVIEW S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "TXRX4.SA",
-      "price": 2.19,
+      "price": 2.2,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
+      "market_time_utc": "2026-10-09T15:04:57Z",
       "previous_close": 1.96,
       "market_state": null
     },
@@ -3792,9 +3792,9 @@
       "name": "UNICASA INDÚSTRIA DE MÓVEIS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "UCAS3.SA",
-      "price": 1.24,
+      "price": 1.28,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
+      "market_time_utc": "2026-10-09T18:00:34Z",
       "previous_close": 1.12,
       "market_state": null
     },
@@ -3803,10 +3803,10 @@
       "name": "ULTRAPAR PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "UGPA3.SA",
-      "price": 39.06,
+      "price": 39.82,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:37Z",
-      "previous_close": 38.19,
+      "market_time_utc": "2026-10-09T18:02:03Z",
+      "previous_close": 38.61,
       "market_state": null
     },
     "UNIP3": {
@@ -3814,10 +3814,10 @@
       "name": "UNIPAR CARBOCLORO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "UNIP3.SA",
-      "price": 56.7,
+      "price": 57.86,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 54.52,
+      "market_time_utc": "2026-10-09T17:51:57Z",
+      "previous_close": 54.56,
       "market_state": null
     },
     "UNIP5": {
@@ -3836,10 +3836,10 @@
       "name": "UNIPAR CARBOCLORO S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "UNIP6.SA",
-      "price": 60.5,
+      "price": 61.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:46Z",
-      "previous_close": 56.32,
+      "market_time_utc": "2026-10-09T18:01:47Z",
+      "previous_close": 57.02,
       "market_state": null
     },
     "USIM3": {
@@ -3847,10 +3847,10 @@
       "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "USIM3.SA",
-      "price": 6.85,
+      "price": 7.05,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 6.65,
+      "market_time_utc": "2026-10-09T18:00:03Z",
+      "previous_close": 7.02,
       "market_state": null
     },
     "USIM5": {
@@ -3858,10 +3858,10 @@
       "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
       "provider": "Yahoo Finance",
       "provider_symbol": "USIM5.SA",
-      "price": 7.21,
+      "price": 7.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:10:16Z",
-      "previous_close": 7.13,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 7.48,
       "market_state": null
     },
     "USIM6": {
@@ -3880,10 +3880,10 @@
       "name": "VALE S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VALE3.SA",
-      "price": 67.64,
+      "price": 67.65,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:50Z",
-      "previous_close": 70.38,
+      "market_time_utc": "2026-10-09T18:02:05Z",
+      "previous_close": 72.1,
       "market_state": null
     },
     "VAMO3": {
@@ -3891,10 +3891,10 @@
       "name": "VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VAMO3.SA",
-      "price": 6.5,
+      "price": 6.87,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:57Z",
-      "previous_close": 4.47,
+      "market_time_utc": "2026-10-09T18:01:59Z",
+      "previous_close": 4.74,
       "market_state": null
     },
     "VBBR3": {
@@ -3902,10 +3902,10 @@
       "name": "VIBRA ENERGIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VBBR3.SA",
-      "price": 37.55,
+      "price": 37.83,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:32Z",
-      "previous_close": 37.8,
+      "market_time_utc": "2026-10-09T18:02:07Z",
+      "previous_close": 38.15,
       "market_state": null
     },
     "VITT3": {
@@ -3913,10 +3913,10 @@
       "name": "VITTIA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VITT3.SA",
-      "price": 3.8,
+      "price": 3.76,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 3.08,
+      "market_time_utc": "2026-10-09T17:59:41Z",
+      "previous_close": 3.2,
       "market_state": null
     },
     "VIVA3": {
@@ -3924,10 +3924,10 @@
       "name": "VIVARA PARTICIPAÇOES S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "VIVA3.SA",
-      "price": 28.9,
+      "price": 29.39,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:47Z",
-      "previous_close": 23.78,
+      "market_time_utc": "2026-10-09T18:01:50Z",
+      "previous_close": 25.0,
       "market_state": null
     },
     "VIVR3": {
@@ -3935,10 +3935,10 @@
       "name": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VIVR3.SA",
-      "price": 1.8,
+      "price": 2.46,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 1.55,
+      "market_time_utc": "2026-10-09T18:01:00Z",
+      "previous_close": 1.54,
       "market_state": null
     },
     "VIVT3": {
@@ -3946,10 +3946,10 @@
       "name": "TELEFÔNICA BRASIL S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "VIVT3.SA",
-      "price": 32.03,
+      "price": 30.55,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 29.61,
+      "market_time_utc": "2026-10-09T18:02:07Z",
+      "previous_close": 30.14,
       "market_state": null
     },
     "VLID3": {
@@ -3957,10 +3957,10 @@
       "name": "VALID SOLUÇÕES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VLID3.SA",
-      "price": 19.6,
+      "price": 20.12,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 17.36,
+      "market_time_utc": "2026-10-09T18:01:54Z",
+      "previous_close": 17.97,
       "market_state": null
     },
     "VSTE3": {
@@ -3968,10 +3968,10 @@
       "name": "VESTE S.A. ESTILO",
       "provider": "Yahoo Finance",
       "provider_symbol": "VSTE3.SA",
-      "price": 3.0,
+      "price": 3.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:54:59Z",
-      "previous_close": 2.67,
+      "market_time_utc": "2026-10-09T17:58:12Z",
+      "previous_close": 2.71,
       "market_state": null
     },
     "VTRU3": {
@@ -3979,10 +3979,10 @@
       "name": "VITRU EDUCAÇÃO S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "VTRU3.SA",
-      "price": 18.75,
+      "price": 19.59,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 15.26,
+      "market_time_utc": "2026-10-09T18:01:57Z",
+      "previous_close": 15.65,
       "market_state": null
     },
     "VULC3": {
@@ -3990,10 +3990,10 @@
       "name": "VULCABRAS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VULC3.SA",
-      "price": 15.46,
+      "price": 16.47,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:04:00Z",
-      "previous_close": 13.6,
+      "market_time_utc": "2026-10-09T18:02:06Z",
+      "previous_close": 13.87,
       "market_state": null
     },
     "VVEO3": {
@@ -4001,10 +4001,10 @@
       "name": "CM HOSPITALAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VVEO3.SA",
-      "price": 0.91,
+      "price": 1.04,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 0.77,
+      "market_time_utc": "2026-10-09T17:59:48Z",
+      "previous_close": 0.81,
       "market_state": null
     },
     "WDCN3": {
@@ -4012,10 +4012,10 @@
       "name": "LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A",
       "provider": "Yahoo Finance",
       "provider_symbol": "WDCN3.SA",
-      "price": 2.89,
+      "price": 2.97,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:43Z",
-      "previous_close": 3.05,
+      "market_time_utc": "2026-10-09T17:45:08Z",
+      "previous_close": 3.06,
       "market_state": null
     },
     "WEGE3": {
@@ -4023,10 +4023,10 @@
       "name": "WEG S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WEGE3.SA",
-      "price": 51.77,
+      "price": 51.56,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:42Z",
-      "previous_close": 49.64,
+      "market_time_utc": "2026-10-09T18:02:07Z",
+      "previous_close": 51.45,
       "market_state": null
     },
     "WEST3": {
@@ -4034,10 +4034,10 @@
       "name": "WESTWING COMERCIO VAREJISTA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WEST3.SA",
-      "price": 4.12,
+      "price": 5.28,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:00:00Z",
-      "previous_close": 3.25,
+      "market_time_utc": "2026-10-09T17:54:09Z",
+      "previous_close": 3.6,
       "market_state": null
     },
     "WHRL3": {
@@ -4045,10 +4045,10 @@
       "name": "WHIRLPOOL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WHRL3.SA",
-      "price": 3.61,
+      "price": 3.73,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 3.32,
+      "market_time_utc": "2026-10-09T17:14:02Z",
+      "previous_close": 3.34,
       "market_state": null
     },
     "WHRL4": {
@@ -4056,10 +4056,10 @@
       "name": "WHIRLPOOL S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WHRL4.SA",
-      "price": 3.82,
+      "price": 3.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:50:22Z",
-      "previous_close": 3.57,
+      "market_time_utc": "2026-10-09T16:57:30Z",
+      "previous_close": 3.6,
       "market_state": null
     },
     "WIZC3": {
@@ -4067,10 +4067,10 @@
       "name": "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WIZC3.SA",
-      "price": 8.81,
+      "price": 9.07,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:03:00Z",
-      "previous_close": 7.92,
+      "market_time_utc": "2026-10-09T18:02:01Z",
+      "previous_close": 8.19,
       "market_state": null
     },
     "WLMM3": {
@@ -4078,9 +4078,9 @@
       "name": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WLMM3.SA",
-      "price": 18.5,
+      "price": 18.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-07T15:24:41Z",
+      "market_time_utc": "2026-10-09T17:44:16Z",
       "previous_close": 17.8,
       "market_state": null
     },
@@ -4089,10 +4089,10 @@
       "name": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "WLMM4.SA",
-      "price": 17.42,
+      "price": 17.4,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T19:51:13Z",
-      "previous_close": 15.63,
+      "market_time_utc": "2026-10-09T18:01:31Z",
+      "previous_close": 15.9,
       "market_state": null
     },
     "YDUQ3": {
@@ -4100,10 +4100,10 @@
       "name": "YDUQS PARTICIPACOES S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "YDUQ3.SA",
-      "price": 13.54,
+      "price": 14.63,
       "currency": "BRL",
-      "market_time_utc": "2026-10-08T20:05:34Z",
-      "previous_close": 11.04,
+      "market_time_utc": "2026-10-09T18:02:02Z",
+      "previous_close": 11.08,
       "market_state": null
     }
   },
