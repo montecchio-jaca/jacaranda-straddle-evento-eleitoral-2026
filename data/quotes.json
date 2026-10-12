@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-09T22:50:21.743053Z",
+  "generated_at_utc": "2026-10-12T21:12:17.323348Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
-  "universe_count": 373,
+  "universe_count": 374,
   "quotes": {
     "AALR3": {
       "symbol": "AALR3",
@@ -1595,7 +1595,7 @@
       "price": 8.24,
       "currency": "BRL",
       "market_time_utc": "2026-10-09T20:04:00Z",
-      "previous_close": 0.75,
+      "previous_close": 7.5,
       "market_state": null
     },
     "ENMT3": {
@@ -1640,6 +1640,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-09T19:52:50Z",
       "previous_close": 5.58,
+      "market_state": null
+    },
+    "EQPA5": {
+      "symbol": "EQPA5",
+      "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EQPA5.SA",
+      "price": 7.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-09T20:03:00Z",
+      "previous_close": 7.9,
       "market_state": null
     },
     "EQTL3": {
@@ -2747,9 +2758,9 @@
       "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
       "provider": "brapi.dev · universo",
       "provider_symbol": "ONCO11",
-      "price": 0.21,
+      "price": 0.22,
       "currency": "BRL",
-      "market_time_utc": "2026-10-09T17:26:21.688681Z",
+      "market_time_utc": "2026-10-12T20:17:21.606499Z",
       "previous_close": null,
       "market_state": null
     },
