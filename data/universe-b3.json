@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-13T18:17:23.911000Z",
+  "generated_at_utc": "2026-10-14T15:49:33.975877Z",
   "source": "brapi.dev /api/quote/list?type=stock",
   "scope": "Ações e units no mercado padrão (sufixos 3–8 e 11); fracionário, direitos/recibos, fundos e BDRs excluídos.",
   "count": 375,
@@ -10,10 +10,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 2.97,
-      "change": -1.98,
-      "volume": 47000,
-      "market_cap": 461374040,
+      "close": 2.95,
+      "change": -0.67,
+      "volume": 12500,
+      "market_cap": 452237929,
       "yahoo": "AALR3.SA"
     },
     {
@@ -22,10 +22,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 29.31,
-      "change": -0.85,
-      "volume": 481100,
-      "market_cap": 7676327846,
+      "close": 28.22,
+      "change": -3.19,
+      "volume": 264600,
+      "market_cap": 7569856489,
       "yahoo": "ABCB4.SA"
     },
     {
@@ -34,10 +34,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 16.24,
-      "change": 1.56,
-      "volume": 33093200,
-      "market_cap": 247531036554,
+      "close": 16.36,
+      "change": 0.25,
+      "volume": 14517800,
+      "market_cap": 252639555901,
       "yahoo": "ABEV3.SA"
     },
     {
@@ -46,10 +46,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 2.22,
-      "change": -0.89,
-      "volume": 38500,
-      "market_cap": 139149234,
+      "close": 2.63,
+      "change": 16.37,
+      "volume": 121400,
+      "market_cap": 140391637,
       "yahoo": "AERI3.SA"
     },
     {
@@ -58,10 +58,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 7.03,
-      "change": 0.43,
-      "volume": 300,
-      "market_cap": 441592884,
+      "close": 7,
+      "change": -0.99,
+      "volume": 500,
+      "market_cap": 446008824,
       "yahoo": "AFLT3.SA"
     },
     {
@@ -70,10 +70,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 19.15,
-      "change": 0.37,
-      "volume": 317800,
-      "market_cap": 1891062038,
+      "close": 18.5,
+      "change": -3.5,
+      "volume": 195800,
+      "market_cap": 1899982157,
       "yahoo": "AGRO3.SA"
     },
     {
@@ -84,7 +84,7 @@
       "subType": "stock",
       "close": 0.62,
       "change": 0,
-      "volume": 47700,
+      "volume": 16900,
       "market_cap": 12150030,
       "yahoo": "AGXY3.SA"
     },
@@ -97,7 +97,7 @@
       "close": 23,
       "change": -0.04,
       "volume": 200,
-      "market_cap": 200498952,
+      "market_cap": 197435864,
       "yahoo": "AHEB3.SA"
     },
     {
@@ -106,10 +106,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 6.48,
-      "change": 4.18,
-      "volume": 2005400,
-      "market_cap": 596880760,
+      "close": 6.21,
+      "change": -4.46,
+      "volume": 861600,
+      "market_cap": 623750011,
       "yahoo": "ALLD3.SA"
     },
     {
@@ -118,10 +118,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 34.85,
-      "change": -2.74,
-      "volume": 4166400,
-      "market_cap": 18042101855,
+      "close": 34.35,
+      "change": -1.29,
+      "volume": 2497000,
+      "market_cap": 17523446796,
       "yahoo": "ALOS3.SA"
     },
     {
@@ -130,10 +130,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 12.29,
-      "change": 3.98,
-      "volume": 9000,
-      "market_cap": 9589260029,
+      "close": 12.11,
+      "change": -0.74,
+      "volume": 1900,
+      "market_cap": 9949084643,
       "yahoo": "ALPA3.SA"
     },
     {
@@ -142,10 +142,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 17.05,
-      "change": 2.28,
-      "volume": 4188000,
-      "market_cap": 9589260029,
+      "close": 17.21,
+      "change": -0.86,
+      "volume": 1051200,
+      "market_cap": 9949084643,
       "yahoo": "ALPA4.SA"
     },
     {
@@ -154,10 +154,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 5.59,
-      "change": -7.6,
-      "volume": 171400,
-      "market_cap": 1326799771,
+      "close": 5.36,
+      "change": -5.13,
+      "volume": 103400,
+      "market_cap": 1239077454,
       "yahoo": "ALPK3.SA"
     },
     {
@@ -166,9 +166,9 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "unit",
-      "close": 39.6,
-      "change": -0.3,
-      "volume": 1000900,
+      "close": 39.47,
+      "change": -0.45,
+      "volume": 516100,
       "market_cap": null,
       "yahoo": "ALUP11.SA"
     },
@@ -178,10 +178,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 13.88,
-      "change": -2.18,
-      "volume": 4500,
-      "market_cap": 13092778879,
+      "close": 13.7,
+      "change": -0.29,
+      "volume": 2100,
+      "market_cap": 13069704999,
       "yahoo": "ALUP3.SA"
     },
     {
@@ -190,10 +190,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 12.85,
-      "change": 1.98,
-      "volume": 5100,
-      "market_cap": 13092778879,
+      "close": 12.9,
+      "change": 1.57,
+      "volume": 5000,
+      "market_cap": 13069704999,
       "yahoo": "ALUP4.SA"
     },
     {
@@ -202,10 +202,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 0.81,
-      "change": -1.22,
-      "volume": 203800,
-      "market_cap": 421072349,
+      "close": 0.79,
+      "change": -1.25,
+      "volume": 75600,
+      "market_cap": 410802301,
       "yahoo": "AMAR3.SA"
     },
     {
@@ -215,8 +215,8 @@
       "type": "stock",
       "subType": "stock",
       "close": 0.15,
-      "change": -6.25,
-      "volume": 4268600,
+      "change": 0,
+      "volume": 2290300,
       "market_cap": 250562815,
       "yahoo": "AMBP3.SA"
     },
@@ -226,10 +226,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 6.56,
-      "change": -0.61,
-      "volume": 996200,
-      "market_cap": 1321618459,
+      "close": 5.84,
+      "change": -8.75,
+      "volume": 1271500,
+      "market_cap": 1281569453,
       "yahoo": "AMER3.SA"
     },
     {
@@ -238,10 +238,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 16,
-      "change": -6.16,
-      "volume": 29200,
-      "market_cap": 645957274,
+      "close": 14.53,
+      "change": -6.92,
+      "volume": 26600,
+      "market_cap": 591401365,
       "yahoo": "AMOB3.SA"
     },
     {
@@ -250,10 +250,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 5.1,
-      "change": -3.59,
-      "volume": 15218700,
-      "market_cap": 2107598106,
+      "close": 4.95,
+      "change": -1.59,
+      "volume": 6446200,
+      "market_cap": 2004011152,
       "yahoo": "ANIM3.SA"
     },
     {
@@ -262,10 +262,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 6.1,
-      "change": -5.86,
-      "volume": 1163800,
-      "market_cap": 2245281642,
+      "close": 5.87,
+      "change": -2.98,
+      "volume": 582200,
+      "market_cap": 2096289248,
       "yahoo": "ARML3.SA"
     },
     {
@@ -274,10 +274,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 0.62,
-      "change": 0,
-      "volume": 10300,
-      "market_cap": 87414920,
+      "close": 0.66,
+      "change": 6.45,
+      "volume": 8100,
+      "market_cap": 93054596,
       "yahoo": "ARND3.SA"
     },
     {
@@ -286,10 +286,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 12.68,
-      "change": -4.45,
-      "volume": 11957800,
-      "market_cap": 17972801471,
+      "close": 12.38,
+      "change": -2.06,
+      "volume": 7273700,
+      "market_cap": 17119533453,
       "yahoo": "ASAI3.SA"
     },
     {
@@ -299,9 +299,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 1.12,
-      "change": -1.75,
-      "volume": 1400,
-      "market_cap": 27137585,
+      "change": 2.75,
+      "volume": 1300,
+      "market_cap": 25947341,
       "yahoo": "ATED3.SA"
     },
     {
@@ -311,9 +311,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 4.83,
-      "change": -2.82,
-      "volume": 2524400,
-      "market_cap": 4220493346,
+      "change": -1.43,
+      "volume": 1205800,
+      "market_cap": 4161049635.0000005,
       "yahoo": "AUAU3.SA"
     },
     {
@@ -322,10 +322,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 15.44,
-      "change": -0.96,
-      "volume": 2624300,
-      "market_cap": 16375393987,
+      "close": 14.92,
+      "change": -2.48,
+      "volume": 2416900,
+      "market_cap": 16070784392,
       "yahoo": "AURE3.SA"
     },
     {
@@ -337,7 +337,7 @@
       "close": 5.6,
       "change": 1.63,
       "volume": 2000,
-      "market_cap": 43049121,
+      "market_cap": 43752280,
       "yahoo": "AVLL3.SA"
     },
     {
@@ -346,10 +346,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 59.67,
-      "change": -0.28,
-      "volume": 9322400,
-      "market_cap": 142981091536,
+      "close": 59.58,
+      "change": 1.24,
+      "volume": 6367800,
+      "market_cap": 140615591532,
       "yahoo": "AXIA3.SA"
     },
     {
@@ -358,10 +358,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 59.83,
-      "change": -0.08,
-      "volume": 657000,
-      "market_cap": 142981091536,
+      "close": 59.73,
+      "change": 0.42,
+      "volume": 628000,
+      "market_cap": 140615591532,
       "yahoo": "AXIA7.SA"
     },
     {
@@ -370,10 +370,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 10.91,
-      "change": 6.23,
-      "volume": 622700,
-      "market_cap": 491150140,
+      "close": 10.17,
+      "change": -7.12,
+      "volume": 286700,
+      "market_cap": 509589175,
       "yahoo": "AZEV3.SA"
     },
     {
@@ -382,10 +382,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.32,
-      "change": -5.04,
-      "volume": 3670400,
-      "market_cap": 491150140,
+      "close": 1.21,
+      "change": -6.2,
+      "volume": 2170900,
+      "market_cap": 509589175,
       "yahoo": "AZEV4.SA"
     },
     {
@@ -394,10 +394,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 1.37,
-      "change": -6.8,
-      "volume": 432700,
-      "market_cap": 58816931,
+      "close": 1.3,
+      "change": -2.99,
+      "volume": 215700,
+      "market_cap": 53615434,
       "yahoo": "AZTE3.SA"
     },
     {
@@ -406,10 +406,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 18.05,
-      "change": -0.44,
-      "volume": 129000,
-      "market_cap": 6681954823,
+      "close": 17.79,
+      "change": -3.58,
+      "volume": 36800,
+      "market_cap": 6799893949,
       "yahoo": "AZUL3.SA"
     },
     {
@@ -418,10 +418,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 25.13,
-      "change": -4.08,
-      "volume": 3367600,
-      "market_cap": 5405975734,
+      "close": 24.13,
+      "change": -4.62,
+      "volume": 2838600,
+      "market_cap": 5220273968,
       "yahoo": "AZZA3.SA"
     },
     {
@@ -433,7 +433,7 @@
       "close": 22,
       "change": 0,
       "volume": 100,
-      "market_cap": 185538066,
+      "market_cap": 181523015,
       "yahoo": "BALM3.SA"
     },
     {
@@ -442,10 +442,10 @@
       "sector": "Health Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 15.11,
-      "change": -5.15,
-      "volume": 100,
-      "market_cap": 185538066,
+      "close": 15.89,
+      "change": 5.16,
+      "volume": 400,
+      "market_cap": 181523015,
       "yahoo": "BALM4.SA"
     },
     {
@@ -466,10 +466,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 76.33,
-      "change": -1.76,
-      "volume": 5700,
-      "market_cap": 4355730926,
+      "close": 75.94,
+      "change": -0.5,
+      "volume": 1300,
+      "market_cap": 4278370605,
       "yahoo": "BAZA3.SA"
     },
     {
@@ -478,10 +478,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 24.28,
-      "change": -1.46,
-      "volume": 19717300,
-      "market_cap": 140911632760,
+      "close": 23.9,
+      "change": -1.44,
+      "volume": 23457800,
+      "market_cap": 138681297852,
       "yahoo": "BBAS3.SA"
     },
     {
@@ -490,10 +490,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 18.72,
-      "change": -1.58,
-      "volume": 8425400,
-      "market_cap": 226849621012,
+      "close": 18.23,
+      "change": -3.24,
+      "volume": 4885000,
+      "market_cap": 224672154213,
       "yahoo": "BBDC3.SA"
     },
     {
@@ -502,10 +502,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 21.24,
-      "change": -1.71,
-      "volume": 35102000,
-      "market_cap": 226849621012,
+      "close": 20.7,
+      "change": -3.27,
+      "volume": 17971400,
+      "market_cap": 224672154213,
       "yahoo": "BBDC4.SA"
     },
     {
@@ -514,10 +514,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 41.2,
-      "change": 0.93,
-      "volume": 3152600,
-      "market_cap": 79112692292,
+      "close": 41.21,
+      "change": 0.07,
+      "volume": 2423900,
+      "market_cap": 79810404632,
       "yahoo": "BBSE3.SA"
     },
     {
@@ -526,10 +526,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 5.1,
-      "change": -8.93,
+      "close": 5.02,
+      "change": -1.57,
       "volume": 200,
-      "market_cap": 6402730,
+      "market_cap": 6225090,
       "yahoo": "BDLL3.SA"
     },
     {
@@ -538,10 +538,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 3.2,
-      "change": -3.9,
-      "volume": 900,
-      "market_cap": 6402730,
+      "close": 3.28,
+      "change": 2.5,
+      "volume": 200,
+      "market_cap": 6225090,
       "yahoo": "BDLL4.SA"
     },
     {
@@ -550,10 +550,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 4.42,
-      "change": -1.78,
-      "volume": 15545400,
-      "market_cap": 4417131500,
+      "close": 4.28,
+      "change": -1.83,
+      "volume": 10061100,
+      "market_cap": 4279709762.0000005,
       "yahoo": "BEEF3.SA"
     },
     {
@@ -562,10 +562,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 9.75,
-      "change": 0.93,
-      "volume": 4700,
-      "market_cap": 3346616268,
+      "close": 9.54,
+      "change": -2.35,
+      "volume": 15600,
+      "market_cap": 3387643748,
       "yahoo": "BEES3.SA"
     },
     {
@@ -574,10 +574,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 9.77,
-      "change": 2.3,
-      "volume": 3800,
-      "market_cap": 3346616268,
+      "close": 9.7,
+      "change": 0.1,
+      "volume": 3700,
+      "market_cap": 3387643748,
       "yahoo": "BEES4.SA"
     },
     {
@@ -586,10 +586,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 48.74,
-      "change": 1.41,
+      "close": 49.46,
+      "change": 1.48,
       "volume": 100,
-      "market_cap": 979589034,
+      "market_cap": 985705680,
       "yahoo": "BGIP3.SA"
     },
     {
@@ -598,10 +598,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 36.68,
-      "change": 1.49,
-      "volume": 600,
-      "market_cap": 979589034,
+      "close": 35.6,
+      "change": -2.92,
+      "volume": 300,
+      "market_cap": 985705680,
       "yahoo": "BGIP4.SA"
     },
     {
@@ -610,10 +610,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 1.47,
-      "change": -8.13,
-      "volume": 11012100,
-      "market_cap": 1561359691,
+      "close": 1.15,
+      "change": -20.14,
+      "volume": 13413500,
+      "market_cap": 1405223757,
       "yahoo": "BHIA3.SA"
     },
     {
@@ -625,7 +625,7 @@
       "close": 5.48,
       "change": -0.18,
       "volume": 900,
-      "market_cap": 150042269,
+      "market_cap": 149768975,
       "yahoo": "BIED3.SA"
     },
     {
@@ -634,10 +634,10 @@
       "sector": "Health Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 6.81,
-      "change": -7.22,
-      "volume": 53600,
-      "market_cap": 1004497210,
+      "close": 6.51,
+      "change": -1.51,
+      "volume": 21200,
+      "market_cap": 904594898,
       "yahoo": "BIOM3.SA"
     },
     {
@@ -646,10 +646,10 @@
       "sector": "Health Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 12.35,
-      "change": -2.06,
-      "volume": 128800,
-      "market_cap": 2940804850,
+      "close": 12.39,
+      "change": 0.73,
+      "volume": 158200,
+      "market_cap": 2868509215,
       "yahoo": "BLAU3.SA"
     },
     {
@@ -658,10 +658,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 59.15,
-      "change": 0.7,
-      "volume": 3900,
-      "market_cap": 7948656806,
+      "close": 58.35,
+      "change": -2.47,
+      "volume": 900,
+      "market_cap": 8162872542,
       "yahoo": "BMEB3.SA"
     },
     {
@@ -670,10 +670,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 78.3,
-      "change": 3.16,
-      "volume": 48800,
-      "market_cap": 7948656806,
+      "close": 76.82,
+      "change": -2.75,
+      "volume": 16300,
+      "market_cap": 8162872542,
       "yahoo": "BMEB4.SA"
     },
     {
@@ -682,10 +682,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 6.95,
-      "change": -0.71,
-      "volume": 662700,
-      "market_cap": 1636648621,
+      "close": 6.9,
+      "change": -2.13,
+      "volume": 587200,
+      "market_cap": 1648339012,
       "yahoo": "BMGB4.SA"
     },
     {
@@ -718,10 +718,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 406.01,
-      "change": -2.16,
-      "volume": 59,
-      "market_cap": 188716699,
+      "close": 382.11,
+      "change": -6.8,
+      "volume": 45,
+      "market_cap": 186447501,
       "yahoo": "BMKS3.SA"
     },
     {
@@ -730,10 +730,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 33.69,
-      "change": -2.49,
-      "volume": 1051700,
-      "market_cap": 2886942233,
+      "close": 32.03,
+      "change": -2.94,
+      "volume": 405200,
+      "market_cap": 2757426796,
       "yahoo": "BMOB3.SA"
     },
     {
@@ -742,9 +742,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 115.24,
-      "change": 0.43,
-      "volume": 200,
+      "close": 121.5,
+      "change": 5.43,
+      "volume": 900,
       "market_cap": 11374159303,
       "yahoo": "BNBR3.SA"
     },
@@ -754,10 +754,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 1.59,
-      "change": -3.64,
-      "volume": 3400,
-      "market_cap": 361033464,
+      "close": 1.55,
+      "change": 0,
+      "volume": 1000,
+      "market_cap": 348744015,
       "yahoo": "BOBR4.SA"
     },
     {
@@ -766,9 +766,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "unit",
-      "close": 81.46,
-      "change": -0.05,
-      "volume": 10792500,
+      "close": 78.17,
+      "change": -2.97,
+      "volume": 5015100,
       "market_cap": null,
       "yahoo": "BPAC11.SA"
     },
@@ -778,10 +778,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 27.45,
-      "change": -1.79,
-      "volume": 40600,
-      "market_cap": 317036727800,
+      "close": 26.34,
+      "change": -1.35,
+      "volume": 15200,
+      "market_cap": 313380107872,
       "yahoo": "BPAC3.SA"
     },
     {
@@ -790,10 +790,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 28,
-      "change": 5.94,
-      "volume": 26000,
-      "market_cap": 317036727800,
+      "close": 25.84,
+      "change": -3.22,
+      "volume": 3900,
+      "market_cap": 313380107872,
       "yahoo": "BPAC5.SA"
     },
     {
@@ -802,10 +802,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 18.41,
-      "change": -0.75,
-      "volume": 65700,
-      "market_cap": 7820013012,
+      "close": 17.95,
+      "change": -1.81,
+      "volume": 150200,
+      "market_cap": 7726632154,
       "yahoo": "BRAP3.SA"
     },
     {
@@ -814,10 +814,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 20.28,
-      "change": -1.65,
-      "volume": 1980400,
-      "market_cap": 7820013012,
+      "close": 19.93,
+      "change": -2.3,
+      "volume": 1729000,
+      "market_cap": 7726632154,
       "yahoo": "BRAP4.SA"
     },
     {
@@ -826,10 +826,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 20.89,
-      "change": 1.56,
-      "volume": 2888900,
-      "market_cap": 9555943139,
+      "close": 20.83,
+      "change": -0.38,
+      "volume": 1703600,
+      "market_cap": 9713892685,
       "yahoo": "BRAV3.SA"
     },
     {
@@ -838,9 +838,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "unit",
-      "close": 18.59,
-      "change": -3.68,
-      "volume": 393600,
+      "close": 18.1,
+      "change": -2.43,
+      "volume": 242500,
       "market_cap": null,
       "yahoo": "BRBI11.SA"
     },
@@ -850,10 +850,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 4.28,
-      "change": -2.51,
-      "volume": 62800,
-      "market_cap": 3489741571,
+      "close": 4.24,
+      "change": -3.42,
+      "volume": 23200,
+      "market_cap": 3531068927,
       "yahoo": "BRKM3.SA"
     },
     {
@@ -862,10 +862,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 4.45,
-      "change": 1.83,
-      "volume": 5166600,
-      "market_cap": 3489741571,
+      "close": 4.43,
+      "change": -1.34,
+      "volume": 3551900,
+      "market_cap": 3531068927,
       "yahoo": "BRKM5.SA"
     },
     {
@@ -877,7 +877,7 @@
       "close": 3.99,
       "change": 0,
       "volume": 100,
-      "market_cap": 3489741571,
+      "market_cap": 3531068927,
       "yahoo": "BRKM6.SA"
     },
     {
@@ -886,10 +886,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 19.31,
-      "change": -0.05,
-      "volume": 5700,
-      "market_cap": 7808419513,
+      "close": 18.8,
+      "change": -2.69,
+      "volume": 2200,
+      "market_cap": 7743607495,
       "yahoo": "BRSR3.SA"
     },
     {
@@ -901,7 +901,7 @@
       "close": 17.99,
       "change": 0,
       "volume": 200,
-      "market_cap": 7808419513,
+      "market_cap": 7743607495,
       "yahoo": "BRSR5.SA"
     },
     {
@@ -910,10 +910,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 18.64,
-      "change": -1.22,
-      "volume": 1335400,
-      "market_cap": 7808419513,
+      "close": 18.08,
+      "change": -2.53,
+      "volume": 1130700,
+      "market_cap": 7743607495,
       "yahoo": "BRSR6.SA"
     },
     {
@@ -922,10 +922,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 3.45,
-      "change": -3.9,
-      "volume": 195200,
-      "market_cap": 1572447023,
+      "close": 3.3,
+      "change": -0.3,
+      "volume": 106400,
+      "market_cap": 1449804925,
       "yahoo": "BRST3.SA"
     },
     {
@@ -934,10 +934,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 2.12,
-      "change": 1.44,
-      "volume": 24600,
-      "market_cap": 1073879451,
+      "close": 2.15,
+      "change": 1.42,
+      "volume": 26600,
+      "market_cap": 1070198329,
       "yahoo": "BSLI3.SA"
     },
     {
@@ -946,10 +946,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 2.38,
-      "change": -0.83,
-      "volume": 21800,
-      "market_cap": 1073879451,
+      "close": 2.3,
+      "change": -3.36,
+      "volume": 25300,
+      "market_cap": 1070198329,
       "yahoo": "BSLI4.SA"
     },
     {
@@ -958,10 +958,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 8.66,
-      "change": 5.74,
-      "volume": 58900,
-      "market_cap": 346232870,
+      "close": 8.67,
+      "change": -0.23,
+      "volume": 16400,
+      "market_cap": 367370409,
       "yahoo": "CAMB3.SA"
     },
     {
@@ -970,10 +970,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 6.69,
-      "change": -7.08,
-      "volume": 2298800,
-      "market_cap": 2462497054,
+      "close": 6.43,
+      "change": -3.45,
+      "volume": 780700,
+      "market_cap": 2277809783,
       "yahoo": "CAML3.SA"
     },
     {
@@ -982,10 +982,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 5.14,
-      "change": 1.98,
-      "volume": 894200,
-      "market_cap": 525592454,
+      "close": 4.92,
+      "change": -3.15,
+      "volume": 654400,
+      "market_cap": 529950124.99999994,
       "yahoo": "CASH3.SA"
     },
     {
@@ -995,9 +995,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 11.28,
-      "change": 0.36,
-      "volume": 4587900,
-      "market_cap": 7318056919,
+      "change": -0.18,
+      "volume": 820900,
+      "market_cap": 7357121554,
       "yahoo": "CBAV3.SA"
     },
     {
@@ -1018,10 +1018,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 5.5,
-      "change": 10,
-      "volume": 100,
-      "market_cap": 767320,
+      "close": 5.56,
+      "change": 11.2,
+      "volume": 800,
+      "market_cap": 853260,
       "yahoo": "CCTY3.SA"
     },
     {
@@ -1030,10 +1030,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 12.87,
-      "change": -5.23,
-      "volume": 11605900,
-      "market_cap": 4185967839,
+      "close": 12.44,
+      "change": -2.58,
+      "volume": 5156400,
+      "market_cap": 3936289508,
       "yahoo": "CEAB3.SA"
     },
     {
@@ -1042,10 +1042,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 25.7,
-      "change": -1.57,
-      "volume": 1800,
-      "market_cap": 1943104041,
+      "close": 24.9,
+      "change": -2.2,
+      "volume": 2900,
+      "market_cap": 1918901961,
       "yahoo": "CEBR3.SA"
     },
     {
@@ -1054,10 +1054,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 25.15,
-      "change": 0.08,
-      "volume": 4100,
-      "market_cap": 1943104041,
+      "close": 25.04,
+      "change": 0.16,
+      "volume": 4800,
+      "market_cap": 1918901961,
       "yahoo": "CEBR5.SA"
     },
     {
@@ -1066,10 +1066,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 28.46,
-      "change": 0.25,
-      "volume": 1600,
-      "market_cap": 1943104041,
+      "close": 28.4,
+      "change": 0.04,
+      "volume": 100,
+      "market_cap": 1918901961,
       "yahoo": "CEBR6.SA"
     },
     {
@@ -1081,7 +1081,7 @@
       "close": 7,
       "change": -0.14,
       "volume": 100,
-      "market_cap": 63617729,
+      "market_cap": 63560656,
       "yahoo": "CEDO3.SA"
     },
     {
@@ -1093,7 +1093,7 @@
       "close": 5.5,
       "change": 0,
       "volume": 100,
-      "market_cap": 63617729,
+      "market_cap": 63560656,
       "yahoo": "CEDO4.SA"
     },
     {
@@ -1102,10 +1102,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 46.95,
-      "change": 1.62,
-      "volume": 1200,
-      "market_cap": 8084700873,
+      "close": 46.51,
+      "change": -0.94,
+      "volume": 100,
+      "market_cap": 8198699076.000001,
       "yahoo": "CEEB3.SA"
     },
     {
@@ -1117,7 +1117,7 @@
       "close": 39,
       "change": -2.5,
       "volume": 300,
-      "market_cap": 8084700873,
+      "market_cap": 8198699076.000001,
       "yahoo": "CEEB5.SA"
     },
     {
@@ -1126,10 +1126,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 124.21,
-      "change": -1.41,
-      "volume": 100,
-      "market_cap": 16480155359,
+      "close": 124.08,
+      "change": -0.1,
+      "volume": 300,
+      "market_cap": 16475856643,
       "yahoo": "CGAS3.SA"
     },
     {
@@ -1138,10 +1138,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 125.47,
-      "change": 0.46,
-      "volume": 600,
-      "market_cap": 16480155359,
+      "close": 124.5,
+      "change": -0.2,
+      "volume": 700,
+      "market_cap": 16475856643,
       "yahoo": "CGAS5.SA"
     },
     {
@@ -1150,10 +1150,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 25.52,
-      "change": 0.08,
-      "volume": 2300,
-      "market_cap": 654235998,
+      "close": 26,
+      "change": -1.81,
+      "volume": 2100,
+      "market_cap": 671494564,
       "yahoo": "CGRA3.SA"
     },
     {
@@ -1162,10 +1162,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 26.35,
-      "change": 1.31,
-      "volume": 5700,
-      "market_cap": 654235998,
+      "close": 26.1,
+      "change": -1.4,
+      "volume": 1100,
+      "market_cap": 671494564,
       "yahoo": "CGRA4.SA"
     },
     {
@@ -1174,10 +1174,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 170,
-      "change": 6.25,
-      "volume": 1600,
-      "market_cap": 7045712536,
+      "close": 167.11,
+      "change": -1.7,
+      "volume": 100,
+      "market_cap": 7027046586,
       "yahoo": "CLSC3.SA"
     },
     {
@@ -1186,10 +1186,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 191.9,
-      "change": 0.37,
-      "volume": 1500,
-      "market_cap": 7045712536,
+      "close": 190.5,
+      "change": 0.06,
+      "volume": 3700,
+      "market_cap": 7027046586,
       "yahoo": "CLSC4.SA"
     },
     {
@@ -1198,10 +1198,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 18.13,
-      "change": -1.52,
-      "volume": 87600,
-      "market_cap": 40712978223,
+      "close": 17.88,
+      "change": -0.67,
+      "volume": 28000,
+      "market_cap": 39882728973,
       "yahoo": "CMIG3.SA"
     },
     {
@@ -1210,10 +1210,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 11.92,
-      "change": -1.73,
-      "volume": 13328200,
-      "market_cap": 40712978223,
+      "close": 11.84,
+      "change": -0.5,
+      "volume": 5229100,
+      "market_cap": 39882728973,
       "yahoo": "CMIG4.SA"
     },
     {
@@ -1222,10 +1222,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 4.99,
-      "change": -0.4,
-      "volume": 4234100,
-      "market_cap": 27063284903,
+      "close": 4.91,
+      "change": -1.21,
+      "volume": 2774500,
+      "market_cap": 26847210988,
       "yahoo": "CMIN3.SA"
     },
     {
@@ -1236,8 +1236,8 @@
       "subType": "stock",
       "close": 34,
       "change": 0,
-      "volume": 400,
-      "market_cap": 2970457813,
+      "volume": 600,
+      "market_cap": 3001356275,
       "yahoo": "COCE3.SA"
     },
     {
@@ -1246,10 +1246,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 36.72,
-      "change": -0.76,
-      "volume": 900,
-      "market_cap": 2970457813,
+      "close": 37.27,
+      "change": -1.9,
+      "volume": 5300,
+      "market_cap": 3001356275,
       "yahoo": "COCE5.SA"
     },
     {
@@ -1258,10 +1258,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 3.08,
-      "change": -3.14,
-      "volume": 38767400,
-      "market_cap": 6554741754,
+      "close": 2.93,
+      "change": -2.01,
+      "volume": 33738800,
+      "market_cap": 6163106130,
       "yahoo": "COGN3.SA"
     },
     {
@@ -1270,10 +1270,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 51.12,
-      "change": -2.91,
-      "volume": 1139300,
-      "market_cap": 60666202057,
+      "close": 50.04,
+      "change": -1.11,
+      "volume": 451200,
+      "market_cap": 58304076782,
       "yahoo": "CPFE3.SA"
     },
     {
@@ -1282,10 +1282,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 17.54,
-      "change": -0.62,
-      "volume": 21876700,
-      "market_cap": 52421752828,
+      "close": 17.28,
+      "change": -1.31,
+      "volume": 5667000,
+      "market_cap": 52005944694,
       "yahoo": "CPLE3.SA"
     },
     {
@@ -1294,10 +1294,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 7.92,
-      "change": -3.06,
-      "volume": 22900,
-      "market_cap": 331474872,
+      "close": 7.95,
+      "change": 0.13,
+      "volume": 100,
+      "market_cap": 230099693,
       "yahoo": "CRPG5.SA"
     },
     {
@@ -1309,7 +1309,7 @@
       "close": 8.89,
       "change": 5.83,
       "volume": 100,
-      "market_cap": 331474872,
+      "market_cap": 230099693,
       "yahoo": "CRPG6.SA"
     },
     {
@@ -1318,10 +1318,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 5.18,
-      "change": -4.07,
-      "volume": 16174100,
-      "market_cap": 21376852233,
+      "close": 4.95,
+      "change": -3.13,
+      "volume": 20414200,
+      "market_cap": 20228836266,
       "yahoo": "CSAN3.SA"
     },
     {
@@ -1330,10 +1330,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 6.84,
-      "change": -2.43,
-      "volume": 304100,
-      "market_cap": 2555443513,
+      "close": 6.56,
+      "change": -2.96,
+      "volume": 137800,
+      "market_cap": 2464307870,
       "yahoo": "CSED3.SA"
     },
     {
@@ -1342,10 +1342,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 62.98,
-      "change": -2.45,
-      "volume": 3098700,
-      "market_cap": 24479928359,
+      "close": 61.88,
+      "change": -0.79,
+      "volume": 6765300,
+      "market_cap": 23649522357,
       "yahoo": "CSMG3.SA"
     },
     {
@@ -1354,10 +1354,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 6.51,
-      "change": -1.51,
-      "volume": 10340500,
-      "market_cap": 8716504379,
+      "close": 6.08,
+      "change": -5.74,
+      "volume": 7894700,
+      "market_cap": 8505514440.000001,
       "yahoo": "CSNA3.SA"
     },
     {
@@ -1366,10 +1366,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 17.1,
-      "change": -2.06,
-      "volume": 31000,
-      "market_cap": 718374020,
+      "close": 16.66,
+      "change": -0.89,
+      "volume": 28700,
+      "market_cap": 691630443,
       "yahoo": "CSUD3.SA"
     },
     {
@@ -1378,10 +1378,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.22,
-      "change": 0,
-      "volume": 5300,
-      "market_cap": 9773171,
+      "close": 1.21,
+      "change": -0.82,
+      "volume": 22500,
+      "market_cap": 9693063,
       "yahoo": "CTAX3.SA"
     },
     {
@@ -1393,7 +1393,7 @@
       "close": 40,
       "change": -0.02,
       "volume": 400,
-      "market_cap": 241627435,
+      "market_cap": 236670243,
       "yahoo": "CTKA3.SA"
     },
     {
@@ -1402,10 +1402,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 38.02,
-      "change": 0,
-      "volume": 500,
-      "market_cap": 241627435,
+      "close": 35.04,
+      "change": -4.08,
+      "volume": 2000,
+      "market_cap": 236670243,
       "yahoo": "CTKA4.SA"
     },
     {
@@ -1414,10 +1414,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 33.68,
-      "change": -2.43,
-      "volume": 2905600,
-      "market_cap": 10633803549,
+      "close": 31.96,
+      "change": -4.8,
+      "volume": 2503900,
+      "market_cap": 10341158087,
       "yahoo": "CURY3.SA"
     },
     {
@@ -1426,10 +1426,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.63,
-      "change": -5.23,
-      "volume": 8670200,
-      "market_cap": 904002159,
+      "close": 1.54,
+      "change": -5.52,
+      "volume": 7492900,
+      "market_cap": 856699703,
       "yahoo": "CVCB3.SA"
     },
     {
@@ -1438,10 +1438,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 20.99,
-      "change": 0.57,
-      "volume": 2835400,
-      "market_cap": 62610002518,
+      "close": 20.68,
+      "change": -0.77,
+      "volume": 2305800,
+      "market_cap": 62520000458,
       "yahoo": "CXSE3.SA"
     },
     {
@@ -1450,10 +1450,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 34.1,
-      "change": -3.21,
-      "volume": 5982300,
-      "market_cap": 15234368604,
+      "close": 32.24,
+      "change": -4.92,
+      "volume": 8295800,
+      "market_cap": 14644585011,
       "yahoo": "CYRE3.SA"
     },
     {
@@ -1462,10 +1462,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 32.25,
-      "change": -3.85,
-      "volume": 88800,
-      "market_cap": 15234368604,
+      "close": 31.13,
+      "change": -2.75,
+      "volume": 128500,
+      "market_cap": 14644585011,
       "yahoo": "CYRE4.SA"
     },
     {
@@ -1474,10 +1474,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 4.88,
-      "change": -6.51,
-      "volume": 1100800,
-      "market_cap": 6523148014,
+      "close": 4.89,
+      "change": -1.81,
+      "volume": 613700,
+      "market_cap": 6223233437,
       "yahoo": "DASA3.SA"
     },
     {
@@ -1486,10 +1486,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 19.37,
-      "change": -0.36,
-      "volume": 286900,
-      "market_cap": 2259830502,
+      "close": 19.16,
+      "change": -0.67,
+      "volume": 127600,
+      "market_cap": 2242393583,
       "yahoo": "DESK3.SA"
     },
     {
@@ -1498,10 +1498,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 8.08,
-      "change": -1.94,
-      "volume": 94400,
-      "market_cap": 1009373788,
+      "close": 7.86,
+      "change": -3.2,
+      "volume": 87200,
+      "market_cap": 994187064,
       "yahoo": "DEXP3.SA"
     },
     {
@@ -1510,10 +1510,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 8.2,
-      "change": 4.46,
-      "volume": 2000,
-      "market_cap": 1009373788,
+      "close": 7.87,
+      "change": -1.62,
+      "volume": 3800,
+      "market_cap": 994187064,
       "yahoo": "DEXP4.SA"
     },
     {
@@ -1522,10 +1522,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 12.02,
-      "change": -2.28,
-      "volume": 8409900,
-      "market_cap": 6396160756,
+      "close": 11.56,
+      "change": -3.1,
+      "volume": 3793700,
+      "market_cap": 6203755983,
       "yahoo": "DIRR3.SA"
     },
     {
@@ -1534,10 +1534,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 6.54,
-      "change": -2.39,
-      "volume": 33600,
-      "market_cap": 339039047,
+      "close": 6.49,
+      "change": -0.15,
+      "volume": 16300,
+      "market_cap": 328918488,
       "yahoo": "DMVF3.SA"
     },
     {
@@ -1546,9 +1546,9 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 3.64,
-      "change": 0,
-      "volume": 400,
+      "close": 3.63,
+      "change": -0.27,
+      "volume": 1100,
       "market_cap": 428948086,
       "yahoo": "DOHL4.SA"
     },
@@ -1558,10 +1558,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 12.49,
-      "change": -4.29,
-      "volume": 16000,
-      "market_cap": 173851810,
+      "close": 12.3,
+      "change": 0.82,
+      "volume": 5500,
+      "market_cap": 162528124,
       "yahoo": "DOTZ3.SA"
     },
     {
@@ -1573,7 +1573,7 @@
       "close": 2.1,
       "change": 0.48,
       "volume": 200,
-      "market_cap": 22407817,
+      "market_cap": 22514621,
       "yahoo": "DTCY3.SA"
     },
     {
@@ -1582,10 +1582,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 7.6,
-      "change": -0.78,
-      "volume": 2679400,
-      "market_cap": 6836893030,
+      "close": 7.41,
+      "change": -2.88,
+      "volume": 1649400,
+      "market_cap": 6810116925,
       "yahoo": "DXCO3.SA"
     },
     {
@@ -1594,10 +1594,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 13.8,
-      "change": -1.36,
-      "volume": 600,
-      "market_cap": 303311053,
+      "close": 13.11,
+      "change": -5,
+      "volume": 100,
+      "market_cap": 297232303,
       "yahoo": "EALT3.SA"
     },
     {
@@ -1606,10 +1606,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 12,
-      "change": -3.23,
-      "volume": 14900,
-      "market_cap": 303311053,
+      "close": 11.95,
+      "change": 0.08,
+      "volume": 5700,
+      "market_cap": 297232303,
       "yahoo": "EALT4.SA"
     },
     {
@@ -1618,10 +1618,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.4,
+      "close": 1.39,
       "change": 0,
-      "volume": 23700,
-      "market_cap": 55088379,
+      "volume": 100,
+      "market_cap": 54694891,
       "yahoo": "ECOM3.SA"
     },
     {
@@ -1630,10 +1630,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 14.01,
-      "change": -5.02,
-      "volume": 7626800,
-      "market_cap": 10260413834,
+      "close": 13.47,
+      "change": -1.89,
+      "volume": 7092300,
+      "market_cap": 9550879813,
       "yahoo": "ECOR3.SA"
     },
     {
@@ -1642,10 +1642,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 31.14,
-      "change": -1.86,
-      "volume": 1738700,
-      "market_cap": 44941783386,
+      "close": 31.06,
+      "change": -0.83,
+      "volume": 993600,
+      "market_cap": 44361067200,
       "yahoo": "EGIE3.SA"
     },
     {
@@ -1654,9 +1654,9 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 39.91,
+      "close": 39.9,
       "change": -0.03,
-      "volume": 400,
+      "volume": 200,
       "market_cap": 9119416334,
       "yahoo": "EKTR4.SA"
     },
@@ -1666,10 +1666,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 41.77,
-      "change": -2.18,
-      "volume": 1000,
-      "market_cap": 3155523062,
+      "close": 41.1,
+      "change": -3.16,
+      "volume": 1300,
+      "market_cap": 3149740173,
       "yahoo": "EMAE4.SA"
     },
     {
@@ -1678,10 +1678,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 90.58,
-      "change": 1.54,
-      "volume": 3246700,
-      "market_cap": 64477964304,
+      "close": 90.92,
+      "change": -0.1,
+      "volume": 2684600,
+      "market_cap": 65778945514.00001,
       "yahoo": "EMBJ3.SA"
     },
     {
@@ -1690,10 +1690,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 31.38,
-      "change": -0.1,
-      "volume": 6095600,
-      "market_cap": 59944527702,
+      "close": 31.53,
+      "change": 0.57,
+      "volume": 3827000,
+      "market_cap": 59830021504,
       "yahoo": "ENEV3.SA"
     },
     {
@@ -1702,9 +1702,9 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "unit",
-      "close": 67.32,
-      "change": -2.02,
-      "volume": 2071900,
+      "close": 65.84,
+      "change": -1.89,
+      "volume": 1380600,
       "market_cap": null,
       "yahoo": "ENGI11.SA"
     },
@@ -1714,10 +1714,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 13.93,
-      "change": -1.35,
-      "volume": 11700,
-      "market_cap": 26325679949,
+      "close": 13.59,
+      "change": -2.44,
+      "volume": 4000,
+      "market_cap": 25712652909,
       "yahoo": "ENGI3.SA"
     },
     {
@@ -1726,10 +1726,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 13.26,
-      "change": -2.93,
-      "volume": 4000,
-      "market_cap": 26325679949,
+      "close": 12.86,
+      "change": -3.31,
+      "volume": 1300,
+      "market_cap": 25712652909,
       "yahoo": "ENGI4.SA"
     },
     {
@@ -1738,10 +1738,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 7.52,
-      "change": -8.74,
-      "volume": 153000,
-      "market_cap": 168934816,
+      "close": 7.65,
+      "change": -3.16,
+      "volume": 53300,
+      "market_cap": 161964211,
       "yahoo": "ENJU3.SA"
     },
     {
@@ -1750,10 +1750,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 37,
-      "change": -2.09,
+      "close": 39,
+      "change": 5.41,
       "volume": 600,
-      "market_cap": 8275250006,
+      "market_cap": 8100851791,
       "yahoo": "ENMT3.SA"
     },
     {
@@ -1762,10 +1762,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 37,
-      "change": -2.12,
-      "volume": 400,
-      "market_cap": 8275250006,
+      "close": 37.9,
+      "change": 2.43,
+      "volume": 200,
+      "market_cap": 8100851791,
       "yahoo": "ENMT4.SA"
     },
     {
@@ -1774,10 +1774,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 1.19,
-      "change": -2.46,
-      "volume": 107400,
-      "market_cap": 18129893,
+      "close": 1.18,
+      "change": 0,
+      "volume": 6300,
+      "market_cap": 17535471,
       "yahoo": "EPAR3.SA"
     },
     {
@@ -1786,10 +1786,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 5.8,
-      "change": 2.65,
-      "volume": 23600,
-      "market_cap": 12488164811,
+      "close": 5.74,
+      "change": -0.69,
+      "volume": 7800,
+      "market_cap": 12774764690,
       "yahoo": "EQPA3.SA"
     },
     {
@@ -1801,7 +1801,7 @@
       "close": 7.9,
       "change": 0,
       "volume": 100,
-      "market_cap": 12488164811,
+      "market_cap": 12774764690,
       "yahoo": "EQPA5.SA"
     },
     {
@@ -1810,10 +1810,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 49.35,
-      "change": -2.76,
-      "volume": 9616600,
-      "market_cap": 62451350433,
+      "close": 48.67,
+      "change": -1.08,
+      "volume": 7135500,
+      "market_cap": 60543970226,
       "yahoo": "EQTL3.SA"
     },
     {
@@ -1822,10 +1822,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 8.03,
-      "change": 1.13,
-      "volume": 65800,
-      "market_cap": 286969892,
+      "close": 7.79,
+      "change": -3.47,
+      "volume": 12500,
+      "market_cap": 291668378,
       "yahoo": "ESPA3.SA"
     },
     {
@@ -1835,9 +1835,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 2.1,
-      "change": 5,
-      "volume": 800,
-      "market_cap": 27483899,
+      "change": 0,
+      "volume": 2300,
+      "market_cap": 11343844,
       "yahoo": "ESTR4.SA"
     },
     {
@@ -1858,10 +1858,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 3.65,
-      "change": -1.88,
-      "volume": 83200,
-      "market_cap": 229772441,
+      "close": 3.62,
+      "change": -1.36,
+      "volume": 45800,
+      "market_cap": 226684104,
       "yahoo": "ETER3.SA"
     },
     {
@@ -1873,7 +1873,7 @@
       "close": 24.58,
       "change": -0.08,
       "volume": 100,
-      "market_cap": 2370312052,
+      "market_cap": 2377014893,
       "yahoo": "EUCA3.SA"
     },
     {
@@ -1882,10 +1882,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 26.22,
-      "change": -0.27,
-      "volume": 50800,
-      "market_cap": 2370312052,
+      "close": 25.3,
+      "change": -4.17,
+      "volume": 19600,
+      "market_cap": 2377014893,
       "yahoo": "EUCA4.SA"
     },
     {
@@ -1894,10 +1894,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 6.04,
-      "change": -2.74,
-      "volume": 973400,
-      "market_cap": 1193112935,
+      "close": 5.76,
+      "change": -2.87,
+      "volume": 613700,
+      "market_cap": 1139317142,
       "yahoo": "EVEN3.SA"
     },
     {
@@ -1906,10 +1906,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 18.96,
-      "change": -4.05,
-      "volume": 3758100,
-      "market_cap": 5448156733,
+      "close": 18.4,
+      "change": -2.59,
+      "volume": 1955000,
+      "market_cap": 5208283207,
       "yahoo": "EZTC3.SA"
     },
     {
@@ -1919,9 +1919,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 0.35,
-      "change": -2.78,
-      "volume": 32000,
-      "market_cap": 15790393,
+      "change": 0,
+      "volume": 81800,
+      "market_cap": 15351770,
       "yahoo": "FASA3.SA"
     },
     {
@@ -1930,10 +1930,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 11.18,
-      "change": 10.58,
-      "volume": 14000,
-      "market_cap": 2722755538,
+      "close": 11.16,
+      "change": 10.39,
+      "volume": 16600,
+      "market_cap": 2806839450,
       "yahoo": "FESA3.SA"
     },
     {
@@ -1942,10 +1942,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 6.54,
-      "change": -0.91,
-      "volume": 1149000,
-      "market_cap": 2722755538,
+      "close": 6.19,
+      "change": -3.73,
+      "volume": 661300,
+      "market_cap": 2806839450,
       "yahoo": "FESA4.SA"
     },
     {
@@ -1954,10 +1954,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 3.04,
-      "change": 3.05,
-      "volume": 22700,
-      "market_cap": 158878992,
+      "close": 2.98,
+      "change": -1.97,
+      "volume": 17200,
+      "market_cap": 163726143,
       "yahoo": "FHER3.SA"
     },
     {
@@ -1966,10 +1966,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 6.46,
-      "change": 1.41,
-      "volume": 200,
-      "market_cap": 15429114,
+      "close": 6,
+      "change": -5.81,
+      "volume": 2700,
+      "market_cap": 14532918,
       "yahoo": "FIEI3.SA"
     },
     {
@@ -1978,10 +1978,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 6.11,
-      "change": -1.45,
-      "volume": 2131300,
-      "market_cap": 2474337277,
+      "close": 6.07,
+      "change": -0.98,
+      "volume": 1185200,
+      "market_cap": 2446401332,
       "yahoo": "FIQE3.SA"
     },
     {
@@ -1990,10 +1990,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 27.23,
-      "change": -1.8,
-      "volume": 3089600,
-      "market_cap": 15146564447,
+      "close": 27.09,
+      "change": 0.33,
+      "volume": 2667000,
+      "market_cap": 14747827148,
       "yahoo": "FLRY3.SA"
     },
     {
@@ -2002,10 +2002,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 28.15,
-      "change": 0.82,
-      "volume": 201300,
-      "market_cap": 7743195539,
+      "close": 28.06,
+      "change": -0.32,
+      "volume": 296600,
+      "market_cap": 7806982481,
       "yahoo": "FRAS3.SA"
     },
     {
@@ -2017,7 +2017,7 @@
       "close": 36.71,
       "change": 7.97,
       "volume": 100,
-      "market_cap": 3673769378,
+      "market_cap": 3668103371,
       "yahoo": "GEPA3.SA"
     },
     {
@@ -2029,7 +2029,7 @@
       "close": 39.91,
       "change": -0.23,
       "volume": 200,
-      "market_cap": 3673769378,
+      "market_cap": 3668103371,
       "yahoo": "GEPA4.SA"
     },
     {
@@ -2038,10 +2038,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 0.41,
-      "change": -6.82,
-      "volume": 8229600,
-      "market_cap": 69241623,
+      "close": 0.39,
+      "change": 0,
+      "volume": 6928200,
+      "market_cap": 61373254,
       "yahoo": "GFSA3.SA"
     },
     {
@@ -2050,10 +2050,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 21.73,
-      "change": -0.91,
-      "volume": 15000,
-      "market_cap": 47378608445,
+      "close": 21.95,
+      "change": -0.77,
+      "volume": 31500,
+      "market_cap": 47872185853,
       "yahoo": "GGBR3.SA"
     },
     {
@@ -2062,10 +2062,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 25.53,
-      "change": -0.62,
-      "volume": 5540900,
-      "market_cap": 47378608445,
+      "close": 25.69,
+      "change": -1.12,
+      "volume": 4367500,
+      "market_cap": 47872185853,
       "yahoo": "GGBR4.SA"
     },
     {
@@ -2074,10 +2074,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 16.5,
-      "change": -7.3,
-      "volume": 8158300,
-      "market_cap": 13391838769,
+      "close": 16.15,
+      "change": -1.52,
+      "volume": 5717900,
+      "market_cap": 12338548321,
       "yahoo": "GGPS3.SA"
     },
     {
@@ -2086,10 +2086,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 5.48,
-      "change": -3.86,
-      "volume": 5575500,
-      "market_cap": 13131046143,
+      "close": 5.29,
+      "change": -2.58,
+      "volume": 3226700,
+      "market_cap": 12509049243,
       "yahoo": "GMAT3.SA"
     },
     {
@@ -2098,10 +2098,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 10.46,
-      "change": 0.29,
-      "volume": 32500,
-      "market_cap": 14684434454,
+      "close": 10.37,
+      "change": -1.98,
+      "volume": 20500,
+      "market_cap": 14898491349,
       "yahoo": "GOAU3.SA"
     },
     {
@@ -2110,10 +2110,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 11.62,
-      "change": 0.35,
-      "volume": 7988800,
-      "market_cap": 14684434454,
+      "close": 11.56,
+      "change": -1.62,
+      "volume": 2876900,
+      "market_cap": 14898491349,
       "yahoo": "GOAU4.SA"
     },
     {
@@ -2134,10 +2134,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 4.6,
-      "change": -2.13,
-      "volume": 2079800,
-      "market_cap": 4240151702,
+      "close": 4.48,
+      "change": -1.32,
+      "volume": 1180000,
+      "market_cap": 4095806244,
       "yahoo": "GRND3.SA"
     },
     {
@@ -2158,10 +2158,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 2.53,
-      "change": 0,
-      "volume": 1700,
-      "market_cap": 25109000,
+      "close": 2.71,
+      "change": 7.54,
+      "volume": 11500,
+      "market_cap": 25228000,
       "yahoo": "HAGA3.SA"
     },
     {
@@ -2170,10 +2170,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 1.94,
-      "change": 2.11,
-      "volume": 16000,
-      "market_cap": 25109000,
+      "close": 1.91,
+      "change": -0.52,
+      "volume": 400,
+      "market_cap": 25228000,
       "yahoo": "HAGA4.SA"
     },
     {
@@ -2182,10 +2182,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 8.65,
-      "change": -2.7,
-      "volume": 10963600,
-      "market_cap": 4422864972,
+      "close": 8.27,
+      "change": -5.27,
+      "volume": 4762200,
+      "market_cap": 4343262957,
       "yahoo": "HAPV3.SA"
     },
     {
@@ -2194,10 +2194,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 2.68,
-      "change": -1.11,
-      "volume": 433900,
-      "market_cap": 359600952,
+      "close": 2.54,
+      "change": -2.31,
+      "volume": 339600,
+      "market_cap": 345004586,
       "yahoo": "HBOR3.SA"
     },
     {
@@ -2206,10 +2206,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 3.32,
-      "change": -1.78,
-      "volume": 693500,
-      "market_cap": 348778790,
+      "close": 3.12,
+      "change": -0.95,
+      "volume": 275900,
+      "market_cap": 325045321,
       "yahoo": "HBRE3.SA"
     },
     {
@@ -2218,10 +2218,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 4.15,
-      "change": 1.72,
-      "volume": 1453600,
-      "market_cap": 5550360775,
+      "close": 4.06,
+      "change": -2.4,
+      "volume": 855700,
+      "market_cap": 5659191277,
       "yahoo": "HBSA3.SA"
     },
     {
@@ -2230,10 +2230,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 35.52,
-      "change": 2.96,
-      "volume": 100,
-      "market_cap": 205317806,
+      "close": 35.5,
+      "change": 2.9,
+      "volume": 200,
+      "market_cap": 211268133,
       "yahoo": "HBTS5.SA"
     },
     {
@@ -2254,9 +2254,9 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 8.14,
-      "change": 0,
-      "volume": 100,
+      "close": 8.11,
+      "change": -0.37,
+      "volume": 1400,
       "market_cap": 64365967,
       "yahoo": "HOOT4.SA"
     },
@@ -2266,10 +2266,10 @@
       "sector": "Health Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 25.8,
-      "change": -4.2,
-      "volume": 3414100,
-      "market_cap": 18944602675,
+      "close": 25.53,
+      "change": -1.81,
+      "volume": 2430800,
+      "market_cap": 18290369995,
       "yahoo": "HYPE3.SA"
     },
     {
@@ -2278,10 +2278,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.51,
-      "change": -3.21,
-      "volume": 77300,
-      "market_cap": 42991646,
+      "close": 1.32,
+      "change": -8.33,
+      "volume": 89000,
+      "market_cap": 39684599,
       "yahoo": "IFCM3.SA"
     },
     {
@@ -2290,9 +2290,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "unit",
-      "close": 32.33,
-      "change": -2.8,
-      "volume": 4656700,
+      "close": 31.68,
+      "change": -1.86,
+      "volume": 996200,
       "market_cap": null,
       "yahoo": "IGTI11.SA"
     },
@@ -2302,10 +2302,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 4.18,
-      "change": -0.48,
-      "volume": 18500,
-      "market_cap": 9346272737,
+      "close": 4.2,
+      "change": -0.24,
+      "volume": 10800,
+      "market_cap": 9414934329,
       "yahoo": "IGTI3.SA"
     },
     {
@@ -2317,7 +2317,7 @@
       "close": 14.17,
       "change": 1,
       "volume": 700,
-      "market_cap": 9346272737,
+      "market_cap": 9414934329,
       "yahoo": "IGTI4.SA"
     },
     {
@@ -2327,9 +2327,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 1.26,
-      "change": -3.08,
-      "volume": 35300,
-      "market_cap": 70340475,
+      "change": -0.79,
+      "volume": 20400,
+      "market_cap": 68582221,
       "yahoo": "INEP3.SA"
     },
     {
@@ -2338,10 +2338,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 1.24,
-      "change": -2.36,
-      "volume": 24500,
-      "market_cap": 70340475,
+      "close": 1.2,
+      "change": -2.44,
+      "volume": 16000,
+      "market_cap": 68582221,
       "yahoo": "INEP4.SA"
     },
     {
@@ -2350,10 +2350,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 18.63,
-      "change": -5.81,
-      "volume": 864600,
-      "market_cap": 6480148070,
+      "close": 17.66,
+      "change": -4.07,
+      "volume": 1403600,
+      "market_cap": 6031320568,
       "yahoo": "INTB3.SA"
     },
     {
@@ -2362,10 +2362,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 70.84,
-      "change": 0.93,
-      "volume": 481500,
-      "market_cap": 5685575018,
+      "close": 68.88,
+      "change": -3.15,
+      "volume": 392700,
+      "market_cap": 5760907491,
       "yahoo": "IRBR3.SA"
     },
     {
@@ -2374,10 +2374,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 35.12,
-      "change": -2.44,
-      "volume": 800,
-      "market_cap": 22212544886,
+      "close": 35.1,
+      "change": -0.06,
+      "volume": 300,
+      "market_cap": 21951787397,
       "yahoo": "ISAE3.SA"
     },
     {
@@ -2386,10 +2386,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 29.35,
-      "change": 0.1,
-      "volume": 1438200,
-      "market_cap": 22212544886,
+      "close": 28.77,
+      "change": -1.51,
+      "volume": 1202400,
+      "market_cap": 21951787397,
       "yahoo": "ISAE4.SA"
     },
     {
@@ -2398,10 +2398,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 16.04,
-      "change": -1.6,
-      "volume": 99300,
-      "market_cap": 182719685565,
+      "close": 15.69,
+      "change": -1.75,
+      "volume": 71300,
+      "market_cap": 179095463641,
       "yahoo": "ITSA3.SA"
     },
     {
@@ -2410,10 +2410,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 15.95,
-      "change": -2.21,
-      "volume": 22200900,
-      "market_cap": 182719685565,
+      "close": 15.64,
+      "change": -2.19,
+      "volume": 15178400,
+      "market_cap": 179095463641,
       "yahoo": "ITSA4.SA"
     },
     {
@@ -2422,10 +2422,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 53.87,
-      "change": -0.65,
-      "volume": 1264600,
-      "market_cap": 576368836898,
+      "close": 52.57,
+      "change": -2.03,
+      "volume": 688200,
+      "market_cap": 568968834517,
       "yahoo": "ITUB3.SA"
     },
     {
@@ -2434,10 +2434,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 49.76,
-      "change": -1.41,
-      "volume": 16449200,
-      "market_cap": 576368836898,
+      "close": 48.64,
+      "change": -2.09,
+      "volume": 8727900,
+      "market_cap": 568968834517,
       "yahoo": "ITUB4.SA"
     },
     {
@@ -2446,10 +2446,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 3.16,
-      "change": 4.64,
-      "volume": 1269600,
-      "market_cap": 916696442,
+      "close": 3,
+      "change": -3.85,
+      "volume": 565700,
+      "market_cap": 947050600,
       "yahoo": "JALL3.SA"
     },
     {
@@ -2458,10 +2458,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 2.54,
-      "change": 17.59,
-      "volume": 49100,
-      "market_cap": 5530786,
+      "close": 4.09,
+      "change": 29.02,
+      "volume": 48700,
+      "market_cap": 8116941.000000001,
       "yahoo": "JFEN3.SA"
     },
     {
@@ -2470,10 +2470,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 13.83,
-      "change": -5.21,
-      "volume": 3344500,
-      "market_cap": 9905969832,
+      "close": 13.26,
+      "change": -2.79,
+      "volume": 1820300,
+      "market_cap": 9260961652,
       "yahoo": "JHSF3.SA"
     },
     {
@@ -2494,10 +2494,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 11.47,
-      "change": -10.67,
-      "volume": 1743400,
-      "market_cap": 3655905563,
+      "close": 11.09,
+      "change": -3.82,
+      "volume": 894400,
+      "market_cap": 3282911968,
       "yahoo": "JSLG3.SA"
     },
     {
@@ -2506,10 +2506,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 7.5,
-      "change": -2.47,
-      "volume": 1358700,
-      "market_cap": 1381932413,
+      "close": 7.32,
+      "change": -0.41,
+      "volume": 2424100,
+      "market_cap": 1320832644,
       "yahoo": "KEPL3.SA"
     },
     {
@@ -2518,9 +2518,9 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "unit",
-      "close": 18.05,
-      "change": -0.44,
-      "volume": 2676000,
+      "close": 18.12,
+      "change": -0.28,
+      "volume": 1209000,
       "market_cap": null,
       "yahoo": "KLBN11.SA"
     },
@@ -2531,9 +2531,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 3.68,
-      "change": -1.6,
-      "volume": 577700,
-      "market_cap": 21979045337,
+      "change": 0.27,
+      "volume": 237600,
+      "market_cap": 21855571103,
       "yahoo": "KLBN3.SA"
     },
     {
@@ -2542,10 +2542,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 3.6,
-      "change": -0.83,
-      "volume": 4791300,
-      "market_cap": 21979045337,
+      "close": 3.62,
+      "change": -0.55,
+      "volume": 836800,
+      "market_cap": 21855571103,
       "yahoo": "KLBN4.SA"
     },
     {
@@ -2554,10 +2554,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 11.3,
-      "change": -2.08,
-      "volume": 48600,
-      "market_cap": 1110459106,
+      "close": 11.08,
+      "change": -3.15,
+      "volume": 4900,
+      "market_cap": 1100836373,
       "yahoo": "LAND3.SA"
     },
     {
@@ -2566,10 +2566,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 15.8,
-      "change": -1.86,
-      "volume": 1444500,
-      "market_cap": 3119727114,
+      "close": 14.89,
+      "change": -4.86,
+      "volume": 838500,
+      "market_cap": 3032529627,
       "yahoo": "LAVV3.SA"
     },
     {
@@ -2578,10 +2578,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 36.72,
-      "change": -2.13,
-      "volume": 300600,
-      "market_cap": 5085423397,
+      "close": 36.17,
+      "change": -1.44,
+      "volume": 140400,
+      "market_cap": 4974281457,
       "yahoo": "LEVE3.SA"
     },
     {
@@ -2590,10 +2590,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 3.79,
-      "change": -3.81,
-      "volume": 2279700,
-      "market_cap": 6346089604,
+      "close": 3.69,
+      "change": -2.89,
+      "volume": 687700,
+      "market_cap": 6120593869,
       "yahoo": "LIGT3.SA"
     },
     {
@@ -2602,10 +2602,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 2.76,
-      "change": -5.8,
-      "volume": 6891000,
-      "market_cap": 606267606,
+      "close": 2.46,
+      "change": -8.21,
+      "volume": 4630000,
+      "market_cap": 554538289,
       "yahoo": "LJQQ3.SA"
     },
     {
@@ -2614,10 +2614,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 30.03,
-      "change": -4.15,
-      "volume": 695700,
-      "market_cap": 2717725710,
+      "close": 29.01,
+      "change": -3.65,
+      "volume": 256400,
+      "market_cap": 2611896680,
       "yahoo": "LOGG3.SA"
     },
     {
@@ -2626,10 +2626,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 30.99,
-      "change": 0,
-      "volume": 16300,
-      "market_cap": 3287658032,
+      "close": 30.52,
+      "change": -1.55,
+      "volume": 5800,
+      "market_cap": 3288718933,
       "yahoo": "LOGN3.SA"
     },
     {
@@ -2638,10 +2638,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.62,
-      "change": -2.41,
-      "volume": 176900,
-      "market_cap": 241605267,
+      "close": 1.52,
+      "change": -2.56,
+      "volume": 151800,
+      "market_cap": 227050712,
       "yahoo": "LPSB3.SA"
     },
     {
@@ -2650,10 +2650,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 14.04,
-      "change": -6.77,
-      "volume": 38462000,
-      "market_cap": 15115509353,
+      "close": 13.57,
+      "change": -2.02,
+      "volume": 10096600,
+      "market_cap": 13901049434,
       "yahoo": "LREN3.SA"
     },
     {
@@ -2662,10 +2662,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 4.9,
-      "change": 18.64,
-      "volume": 46100,
-      "market_cap": 19542376,
+      "close": 4.94,
+      "change": 3.35,
+      "volume": 31800,
+      "market_cap": 22618053,
       "yahoo": "LUPA3.SA"
     },
     {
@@ -2674,10 +2674,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 3.28,
-      "change": -1.8,
-      "volume": 4400,
-      "market_cap": 95818559,
+      "close": 3.25,
+      "change": -4.13,
+      "volume": 300,
+      "market_cap": 96977758,
       "yahoo": "LUXM4.SA"
     },
     {
@@ -2686,10 +2686,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 5.53,
-      "change": -3.49,
-      "volume": 3317100,
-      "market_cap": 3149356157,
+      "close": 5.26,
+      "change": -4.36,
+      "volume": 1671100,
+      "market_cap": 3022942200,
       "yahoo": "LWSA3.SA"
     },
     {
@@ -2722,10 +2722,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 6.53,
-      "change": -4.67,
-      "volume": 374300,
-      "market_cap": 2284809232,
+      "close": 6.29,
+      "change": -3.97,
+      "volume": 211800,
+      "market_cap": 2184744688,
       "yahoo": "MATD3.SA"
     },
     {
@@ -2734,10 +2734,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 18.75,
-      "change": 0,
-      "volume": 3151900,
-      "market_cap": 25871987915,
+      "close": 18.64,
+      "change": -1.01,
+      "volume": 1100400,
+      "market_cap": 25982374958,
       "yahoo": "MBRF3.SA"
     },
     {
@@ -2746,10 +2746,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 19.96,
-      "change": -3.15,
-      "volume": 1407500,
-      "market_cap": 6959037025,
+      "close": 19.5,
+      "change": -0.46,
+      "volume": 408300,
+      "market_cap": 6614630390,
       "yahoo": "MDIA3.SA"
     },
     {
@@ -2758,10 +2758,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 31.55,
-      "change": -3.78,
-      "volume": 1530300,
-      "market_cap": 3406488131,
+      "close": 30.71,
+      "change": -2.48,
+      "volume": 986900,
+      "market_cap": 3271433592,
       "yahoo": "MDNE3.SA"
     },
     {
@@ -2770,10 +2770,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 0.99,
-      "change": -3.88,
-      "volume": 66500,
-      "market_cap": 294322523,
+      "close": 0.94,
+      "change": -4.08,
+      "volume": 105000,
+      "market_cap": 280035035,
       "yahoo": "MEAL3.SA"
     },
     {
@@ -2782,10 +2782,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 3.48,
-      "change": -4.13,
-      "volume": 661500,
-      "market_cap": 727758526,
+      "close": 3.39,
+      "change": -3.14,
+      "volume": 508000,
+      "market_cap": 701695526,
       "yahoo": "MELK3.SA"
     },
     {
@@ -2794,10 +2794,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 6.75,
-      "change": -3.57,
+      "close": 6.52,
+      "change": -5.51,
       "volume": 2800,
-      "market_cap": 179132499,
+      "market_cap": 178760902,
       "yahoo": "MGEL4.SA"
     },
     {
@@ -2806,10 +2806,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 11.21,
-      "change": -8.27,
-      "volume": 50262400,
-      "market_cap": 8613398159,
+      "close": 10.41,
+      "change": -8.36,
+      "volume": 35190600,
+      "market_cap": 8007217512,
       "yahoo": "MGLU3.SA"
     },
     {
@@ -2818,9 +2818,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 16.2,
-      "change": 0.12,
-      "volume": 595900,
+      "close": 16.1,
+      "change": -0.49,
+      "volume": 358800,
       "market_cap": 3712951343,
       "yahoo": "MILS3.SA"
     },
@@ -2830,10 +2830,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 2.42,
-      "change": 1.26,
-      "volume": 2528100,
-      "market_cap": 1942227031,
+      "close": 2.25,
+      "change": -5.46,
+      "volume": 836400,
+      "market_cap": 1934100760,
       "yahoo": "MLAS3.SA"
     },
     {
@@ -2842,10 +2842,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 16.6,
-      "change": -2.3,
-      "volume": 4200,
-      "market_cap": 168545206,
+      "close": 16.99,
+      "change": -0.06,
+      "volume": 500,
+      "market_cap": 168644411,
       "yahoo": "MNDL3.SA"
     },
     {
@@ -2857,7 +2857,7 @@
       "close": 3.99,
       "change": -0.25,
       "volume": 2500,
-      "market_cap": 284003998,
+      "market_cap": 283293988,
       "yahoo": "MNPR3.SA"
     },
     {
@@ -2866,10 +2866,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 19.96,
-      "change": -2.63,
-      "volume": 5758800,
-      "market_cap": 41409959961,
+      "close": 19.62,
+      "change": -1.9,
+      "volume": 4573300,
+      "market_cap": 40399960938,
       "yahoo": "MOTV3.SA"
     },
     {
@@ -2878,10 +2878,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 17.64,
-      "change": -6.86,
-      "volume": 21999000,
-      "market_cap": 8051172389,
+      "close": 16.6,
+      "change": -5.14,
+      "volume": 10434900,
+      "market_cap": 7439045029,
       "yahoo": "MOVI3.SA"
     },
     {
@@ -2890,10 +2890,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 7.58,
-      "change": -3.07,
-      "volume": 24096900,
-      "market_cap": 4401365195,
+      "close": 7.39,
+      "change": -1.2,
+      "volume": 8381600,
+      "market_cap": 4210001410,
       "yahoo": "MRVE3.SA"
     },
     {
@@ -2902,10 +2902,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 3.98,
-      "change": -2.69,
-      "volume": 558100,
-      "market_cap": 432618992,
+      "close": 3.85,
+      "change": -2.04,
+      "volume": 329300,
+      "market_cap": 415695013,
       "yahoo": "MTRE3.SA"
     },
     {
@@ -2914,10 +2914,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 45.25,
-      "change": 0.44,
-      "volume": 500,
-      "market_cap": 510698758,
+      "close": 45.55,
+      "change": 0.91,
+      "volume": 400,
+      "market_cap": 339840091,
       "yahoo": "MTSA4.SA"
     },
     {
@@ -2926,10 +2926,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 38.3,
-      "change": -1.57,
-      "volume": 3363300,
-      "market_cap": 11735553051,
+      "close": 37.82,
+      "change": -0.89,
+      "volume": 2355400,
+      "market_cap": 11509347325,
       "yahoo": "MULT3.SA"
     },
     {
@@ -2938,10 +2938,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 10.7,
-      "change": -1.02,
-      "volume": 605600,
-      "market_cap": 1647117237,
+      "close": 10.64,
+      "change": -0.56,
+      "volume": 403100,
+      "market_cap": 1630356470,
       "yahoo": "MYPK3.SA"
     },
     {
@@ -2950,10 +2950,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 7.15,
-      "change": -4.03,
-      "volume": 8489400,
-      "market_cap": 10239014368,
+      "close": 6.89,
+      "change": -2.13,
+      "volume": 4918300,
+      "market_cap": 9675525182,
       "yahoo": "NATU3.SA"
     },
     {
@@ -2962,10 +2962,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 2.59,
-      "change": 4.02,
-      "volume": 1400,
-      "market_cap": 5142203,
+      "close": 2.41,
+      "change": -6.95,
+      "volume": 100,
+      "market_cap": 5348717,
       "yahoo": "NEXP3.SA"
     },
     {
@@ -2974,10 +2974,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 1.25,
-      "change": -4.58,
-      "volume": 4000,
-      "market_cap": 8674146,
+      "close": 1.29,
+      "change": 3.2,
+      "volume": 200,
+      "market_cap": 8276857,
       "yahoo": "NORD3.SA"
     },
     {
@@ -2986,9 +2986,9 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 2.41,
-      "change": -3.6,
-      "volume": 3600,
+      "close": 2.53,
+      "change": 4.98,
+      "volume": 2200,
       "market_cap": 33110726,
       "yahoo": "NUTR3.SA"
     },
@@ -2998,10 +2998,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 7.03,
-      "change": 4.61,
-      "volume": 923400,
-      "market_cap": 835305641,
+      "close": 6.86,
+      "change": -3.38,
+      "volume": 425200,
+      "market_cap": 882540139,
       "yahoo": "OBTC3.SA"
     },
     {
@@ -3010,10 +3010,10 @@
       "sector": "Health Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 30,
-      "change": 0,
-      "volume": 6100,
-      "market_cap": 1618470268,
+      "close": 29,
+      "change": -1.02,
+      "volume": 1000,
+      "market_cap": 1580705921,
       "yahoo": "OFSA3.SA"
     },
     {
@@ -3022,10 +3022,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 0.21,
-      "change": -4.55,
-      "volume": 291900,
-      "market_cap": 1380955743,
+      "close": 0.19,
+      "change": -5,
+      "volume": 550700,
+      "market_cap": 1270692056,
       "yahoo": "ONCO11.SA"
     },
     {
@@ -3034,10 +3034,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.07,
-      "change": -6.14,
-      "volume": 5496300,
-      "market_cap": 1380955743,
+      "close": 1.01,
+      "change": -3.81,
+      "volume": 1467400,
+      "market_cap": 1270692056,
       "yahoo": "ONCO3.SA"
     },
     {
@@ -3046,10 +3046,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 10.55,
-      "change": -3.12,
-      "volume": 717500,
-      "market_cap": 5146358994,
+      "close": 10.59,
+      "change": 1.83,
+      "volume": 752500,
+      "market_cap": 4914796133,
       "yahoo": "OPCT3.SA"
     },
     {
@@ -3058,10 +3058,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 21.34,
-      "change": -3.09,
-      "volume": 2426700,
-      "market_cap": 12095506687,
+      "close": 20.58,
+      "change": -3.79,
+      "volume": 1016500,
+      "market_cap": 11749449377,
       "yahoo": "ORVR3.SA"
     },
     {
@@ -3070,10 +3070,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 1.8,
-      "change": 12.5,
-      "volume": 5300,
-      "market_cap": 5666469,
+      "close": 1.76,
+      "change": -2.22,
+      "volume": 200,
+      "market_cap": 5540547,
       "yahoo": "OSXB3.SA"
     },
     {
@@ -3082,10 +3082,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 28.44,
-      "change": -2.2,
-      "volume": 601200,
-      "market_cap": 20768648766,
+      "close": 27.57,
+      "change": -1.89,
+      "volume": 308100,
+      "market_cap": 20068742771,
       "yahoo": "PASS3.SA"
     },
     {
@@ -3094,10 +3094,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 28,
-      "change": -3.41,
+      "close": 28.11,
+      "change": 0.39,
       "volume": 200,
-      "market_cap": 694301720,
+      "market_cap": 671623715,
       "yahoo": "PATI3.SA"
     },
     {
@@ -3109,7 +3109,7 @@
       "close": 29.48,
       "change": 0,
       "volume": 100,
-      "market_cap": 694301720,
+      "market_cap": 671623715,
       "yahoo": "PATI4.SA"
     },
     {
@@ -3118,10 +3118,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 3.46,
-      "change": -3.35,
-      "volume": 6516000,
-      "market_cap": 1760107705,
+      "close": 3.17,
+      "change": -6.49,
+      "volume": 1895600,
+      "market_cap": 1666694138,
       "yahoo": "PCAR3.SA"
     },
     {
@@ -3130,10 +3130,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 1.28,
-      "change": 6.67,
-      "volume": 261700,
-      "market_cap": 32633898.000000004,
+      "close": 1.31,
+      "change": 4.8,
+      "volume": 148300,
+      "market_cap": 33993642,
       "yahoo": "PDGR3.SA"
     },
     {
@@ -3142,10 +3142,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 1.81,
-      "change": -4.23,
-      "volume": 33400,
-      "market_cap": 150197595,
+      "close": 1.85,
+      "change": 1.09,
+      "volume": 6900,
+      "market_cap": 145429412,
       "yahoo": "PDTC3.SA"
     },
     {
@@ -3166,10 +3166,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 63.72,
-      "change": 1.05,
-      "volume": 6800700,
-      "market_cap": 766737901324,
+      "close": 64.7,
+      "change": 1.44,
+      "volume": 4548400,
+      "market_cap": 776610907757,
       "yahoo": "PETR3.SA"
     },
     {
@@ -3178,10 +3178,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 56.54,
-      "change": 0.96,
-      "volume": 22767200,
-      "market_cap": 766737901324,
+      "close": 57.6,
+      "change": 1.32,
+      "volume": 18942400,
+      "market_cap": 776610907757,
       "yahoo": "PETR4.SA"
     },
     {
@@ -3190,10 +3190,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 8.96,
-      "change": -0.78,
-      "volume": 172900,
-      "market_cap": 1107175231,
+      "close": 9.18,
+      "change": 1.44,
+      "volume": 85500,
+      "market_cap": 1109627503,
       "yahoo": "PFRM3.SA"
     },
     {
@@ -3202,10 +3202,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 5.15,
-      "change": -6.36,
-      "volume": 13297700,
-      "market_cap": 3960812042,
+      "close": 5.03,
+      "change": -1.76,
+      "volume": 4598800,
+      "market_cap": 3687155855,
       "yahoo": "PGMN3.SA"
     },
     {
@@ -3214,10 +3214,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 13.64,
-      "change": -1.87,
-      "volume": 2200,
-      "market_cap": 3736957710,
+      "close": 13.61,
+      "change": -1.73,
+      "volume": 4600,
+      "market_cap": 3736668128,
       "yahoo": "PINE3.SA"
     },
     {
@@ -3226,10 +3226,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 15.54,
-      "change": -0.06,
-      "volume": 929300,
-      "market_cap": 3736957710,
+      "close": 14.99,
+      "change": -3.91,
+      "volume": 562700,
+      "market_cap": 3736668128,
       "yahoo": "PINE4.SA"
     },
     {
@@ -3250,10 +3250,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 8.54,
-      "change": -4.79,
-      "volume": 3401400,
-      "market_cap": 1828978346,
+      "close": 8.13,
+      "change": -3.67,
+      "volume": 1591300,
+      "market_cap": 1720911484,
       "yahoo": "PLPL3.SA"
     },
     {
@@ -3262,10 +3262,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 0.39,
-      "change": -4.88,
-      "volume": 5861300,
-      "market_cap": 152845329,
+      "close": 0.37,
+      "change": -5.13,
+      "volume": 5296600,
+      "market_cap": 145389455,
       "yahoo": "PMAM3.SA"
     },
     {
@@ -3274,10 +3274,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 15.55,
-      "change": -3.3,
-      "volume": 1221600,
-      "market_cap": 2390848615,
+      "close": 15.24,
+      "change": -0.65,
+      "volume": 747100,
+      "market_cap": 2280822033,
       "yahoo": "PNVL3.SA"
     },
     {
@@ -3286,10 +3286,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 4.5,
-      "change": -2.6,
-      "volume": 1614800,
-      "market_cap": 6003517932,
+      "close": 4.36,
+      "change": -2.24,
+      "volume": 913800,
+      "market_cap": 5764720667,
       "yahoo": "POMO3.SA"
     },
     {
@@ -3298,10 +3298,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 4.79,
-      "change": -3.04,
-      "volume": 9432200,
-      "market_cap": 6003517932,
+      "close": 4.66,
+      "change": -1.48,
+      "volume": 6079000,
+      "market_cap": 5764720667,
       "yahoo": "POMO4.SA"
     },
     {
@@ -3310,10 +3310,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 4.74,
-      "change": -5.95,
-      "volume": 1507100,
-      "market_cap": 704437356,
+      "close": 4.53,
+      "change": -4.83,
+      "volume": 479300,
+      "market_cap": 665301984,
       "yahoo": "POSI3.SA"
     },
     {
@@ -3322,10 +3322,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 66.7,
-      "change": 3.49,
-      "volume": 8114400,
-      "market_cap": 53713765874,
+      "close": 68.79,
+      "change": 3.04,
+      "volume": 5244800,
+      "market_cap": 55638965001,
       "yahoo": "PRIO3.SA"
     },
     {
@@ -3334,10 +3334,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 21.75,
-      "change": -3.76,
-      "volume": 820200,
-      "market_cap": 1276587158,
+      "close": 20.65,
+      "change": -5.28,
+      "volume": 589700,
+      "market_cap": 1231659790,
       "yahoo": "PRNR3.SA"
     },
     {
@@ -3346,10 +3346,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 52.61,
-      "change": -1.03,
-      "volume": 1011400,
-      "market_cap": 34140741252,
+      "close": 52.72,
+      "change": -0.08,
+      "volume": 678900,
+      "market_cap": 33883849818.000004,
       "yahoo": "PSSA3.SA"
     },
     {
@@ -3358,10 +3358,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 2.85,
-      "change": -13.11,
-      "volume": 943100,
-      "market_cap": 440976517,
+      "close": 2.7,
+      "change": -3.57,
+      "volume": 450900,
+      "market_cap": 376443365,
       "yahoo": "PTBL3.SA"
     },
     {
@@ -3370,10 +3370,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 2.25,
-      "change": -7.41,
-      "volume": 4153500,
-      "market_cap": 674614679,
+      "close": 2.14,
+      "change": -5.73,
+      "volume": 2047700,
+      "market_cap": 630195582,
       "yahoo": "QUAL3.SA"
     },
     {
@@ -3382,10 +3382,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 20.79,
-      "change": -3.12,
-      "volume": 6870400,
-      "market_cap": 37503431005,
+      "close": 20.49,
+      "change": -0.92,
+      "volume": 3636200,
+      "market_cap": 36140307443,
       "yahoo": "RADL3.SA"
     },
     {
@@ -3394,10 +3394,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 18.97,
-      "change": 0.64,
-      "volume": 25423800,
-      "market_cap": 35022403309,
+      "close": 18.59,
+      "change": -2.05,
+      "volume": 9407200,
+      "market_cap": 35263935561,
       "yahoo": "RAIL3.SA"
     },
     {
@@ -3407,9 +3407,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 0.35,
-      "change": -7.89,
-      "volume": 39306400,
-      "market_cap": 3933953551,
+      "change": -2.78,
+      "volume": 6769200,
+      "market_cap": 3726903559,
       "yahoo": "RAIZ4.SA"
     },
     {
@@ -3418,10 +3418,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 8.16,
-      "change": -2.63,
-      "volume": 505800,
-      "market_cap": 1911688421,
+      "close": 8.13,
+      "change": -0.73,
+      "volume": 459900,
+      "market_cap": 1868344529,
       "yahoo": "RANI3.SA"
     },
     {
@@ -3430,10 +3430,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 9.93,
-      "change": -3.59,
-      "volume": 37000,
-      "market_cap": 2934930024,
+      "close": 10.1,
+      "change": -2.7,
+      "volume": 200,
+      "market_cap": 2845427256,
       "yahoo": "RAPT3.SA"
     },
     {
@@ -3442,10 +3442,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 7.47,
-      "change": -5.44,
-      "volume": 3097500,
-      "market_cap": 2934930024,
+      "close": 7.23,
+      "change": -2.56,
+      "volume": 1721500,
+      "market_cap": 2845427256,
       "yahoo": "RAPT4.SA"
     },
     {
@@ -3454,10 +3454,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 2.43,
-      "change": 22.73,
-      "volume": 782600,
-      "market_cap": 40791803,
+      "close": 2.14,
+      "change": -0.47,
+      "volume": 116800,
+      "market_cap": 43451000,
       "yahoo": "RCSL3.SA"
     },
     {
@@ -3466,10 +3466,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 1.02,
-      "change": 9.68,
-      "volume": 1942000,
-      "market_cap": 40791803,
+      "close": 0.95,
+      "change": -2.06,
+      "volume": 594800,
+      "market_cap": 43451000,
       "yahoo": "RCSL4.SA"
     },
     {
@@ -3478,10 +3478,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 44.34,
-      "change": -3.08,
-      "volume": 3920400,
-      "market_cap": 100713073792,
+      "close": 43.56,
+      "change": -2.18,
+      "volume": 3469300,
+      "market_cap": 98027389137,
       "yahoo": "RDOR3.SA"
     },
     {
@@ -3490,10 +3490,10 @@
       "sector": "Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 12.46,
-      "change": 1.96,
-      "volume": 1439100,
-      "market_cap": 3585710114,
+      "close": 12.29,
+      "change": -2.07,
+      "volume": 692700,
+      "market_cap": 3682541868,
       "yahoo": "RECV3.SA"
     },
     {
@@ -3502,10 +3502,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 5.52,
-      "change": 0.36,
+      "close": 5.44,
+      "change": -1.45,
       "volume": 1000,
-      "market_cap": 14125125244,
+      "market_cap": 14176489287,
       "yahoo": "REDE3.SA"
     },
     {
@@ -3514,10 +3514,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 51.35,
-      "change": -5.8,
-      "volume": 13393300,
-      "market_cap": 58671582509,
+      "close": 49.7,
+      "change": -3.29,
+      "volume": 6289800,
+      "market_cap": 55313386207,
       "yahoo": "RENT3.SA"
     },
     {
@@ -3526,10 +3526,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 49.92,
-      "change": -5.99,
-      "volume": 129900,
-      "market_cap": 58671582509,
+      "close": 49.2,
+      "change": -1.99,
+      "volume": 40900,
+      "market_cap": 55313386207,
       "yahoo": "RENT4.SA"
     },
     {
@@ -3538,10 +3538,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 10.39,
-      "change": -3.53,
-      "volume": 2584700,
-      "market_cap": 5407218942,
+      "close": 10.16,
+      "change": 0.4,
+      "volume": 1154800,
+      "market_cap": 5080877693,
       "yahoo": "RIAA3.SA"
     },
     {
@@ -3550,10 +3550,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 0.92,
-      "change": 0,
-      "volume": 27800,
-      "market_cap": 344513623,
+      "close": 0.87,
+      "change": -1.14,
+      "volume": 14500,
+      "market_cap": 328965288,
       "yahoo": "RNEW3.SA"
     },
     {
@@ -3562,10 +3562,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 0.92,
-      "change": -2.13,
-      "volume": 34100,
-      "market_cap": 344513623,
+      "close": 0.89,
+      "change": 0,
+      "volume": 16700,
+      "market_cap": 328965288,
       "yahoo": "RNEW4.SA"
     },
     {
@@ -3574,10 +3574,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 7.73,
-      "change": -1.65,
-      "volume": 326700,
-      "market_cap": 732322135,
+      "close": 7.62,
+      "change": -1.04,
+      "volume": 226600,
+      "market_cap": 717414784,
       "yahoo": "ROMI3.SA"
     },
     {
@@ -3610,10 +3610,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 48.51,
-      "change": -0.76,
-      "volume": 3600,
-      "market_cap": 122503145,
+      "close": 49.64,
+      "change": 1.85,
+      "volume": 4600,
+      "market_cap": 122153815,
       "yahoo": "RSUL4.SA"
     },
     {
@@ -3622,10 +3622,10 @@
       "sector": "Miscellaneous",
       "type": "stock",
       "subType": "stock",
-      "close": 0.69,
-      "change": 4.55,
-      "volume": 3100,
-      "market_cap": 6712959,
+      "close": 0.65,
+      "change": -5.8,
+      "volume": 6500,
+      "market_cap": 7018094,
       "yahoo": "RVEE3.SA"
     },
     {
@@ -3634,9 +3634,9 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "unit",
-      "close": 28.7,
-      "change": -0.45,
-      "volume": 2216700,
+      "close": 28.35,
+      "change": -1.84,
+      "volume": 2516100,
       "market_cap": null,
       "yahoo": "SANB11.SA"
     },
@@ -3646,10 +3646,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 14.31,
-      "change": -0.49,
-      "volume": 74900,
-      "market_cap": 108091327248,
+      "close": 14.2,
+      "change": -1.59,
+      "volume": 52000,
+      "market_cap": 108278790528,
       "yahoo": "SANB3.SA"
     },
     {
@@ -3658,10 +3658,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 14.36,
-      "change": 0.14,
-      "volume": 146700,
-      "market_cap": 108091327248,
+      "close": 14.17,
+      "change": -1.6,
+      "volume": 110700,
+      "market_cap": 108278790528,
       "yahoo": "SANB4.SA"
     },
     {
@@ -3670,9 +3670,9 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "unit",
-      "close": 41.62,
-      "change": -7.65,
-      "volume": 2482300,
+      "close": 40.41,
+      "change": -2.15,
+      "volume": 925400,
       "market_cap": null,
       "yahoo": "SAPR11.SA"
     },
@@ -3682,10 +3682,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 9.39,
-      "change": -9.28,
-      "volume": 295100,
-      "market_cap": 13928277635,
+      "close": 9.09,
+      "change": -2.47,
+      "volume": 118700,
+      "market_cap": 12724350837,
       "yahoo": "SAPR3.SA"
     },
     {
@@ -3694,10 +3694,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 8.03,
-      "change": -7.17,
-      "volume": 1613300,
-      "market_cap": 13928277635,
+      "close": 7.81,
+      "change": -2.01,
+      "volume": 571600,
+      "market_cap": 12724350837,
       "yahoo": "SAPR4.SA"
     },
     {
@@ -3706,10 +3706,10 @@
       "sector": "Health Services",
       "type": "stock",
       "subType": "stock",
-      "close": 15.81,
-      "change": 0.64,
-      "volume": 5346200,
-      "market_cap": 45927678832,
+      "close": 15.73,
+      "change": -1.38,
+      "volume": 2569200,
+      "market_cap": 46629310429,
       "yahoo": "SAUD3.SA"
     },
     {
@@ -3718,10 +3718,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 10.92,
-      "change": -4.13,
-      "volume": 4101000,
-      "market_cap": 2627263056,
+      "close": 10.48,
+      "change": -3.23,
+      "volume": 2653500,
+      "market_cap": 2498091118,
       "yahoo": "SBFG3.SA"
     },
     {
@@ -3730,10 +3730,10 @@
       "sector": "Utilities",
       "type": "stock",
       "subType": "stock",
-      "close": 32.52,
-      "change": -3.21,
-      "volume": 19554100,
-      "market_cap": 118424334856,
+      "close": 32.14,
+      "change": -1.23,
+      "volume": 8298800,
+      "market_cap": 114688337490,
       "yahoo": "SBSP3.SA"
     },
     {
@@ -3742,10 +3742,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 12.83,
-      "change": -0.54,
-      "volume": 17300,
-      "market_cap": 729718282,
+      "close": 12.79,
+      "change": -1.92,
+      "volume": 1700,
+      "market_cap": 737637725,
       "yahoo": "SCAR3.SA"
     },
     {
@@ -3754,10 +3754,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 17.11,
-      "change": -1.95,
-      "volume": 517600,
-      "market_cap": 2246191279,
+      "close": 16.81,
+      "change": -1.93,
+      "volume": 389600,
+      "market_cap": 2206287419,
       "yahoo": "SEER3.SA"
     },
     {
@@ -3768,7 +3768,7 @@
       "subType": "stock",
       "close": 0.07,
       "change": 0,
-      "volume": 896500,
+      "volume": 986800,
       "market_cap": 445934182,
       "yahoo": "SEQL3.SA"
     },
@@ -3778,10 +3778,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 5.07,
-      "change": -4.16,
-      "volume": 570300,
-      "market_cap": 5335511006,
+      "close": 5.04,
+      "change": -2.14,
+      "volume": 278000,
+      "market_cap": 5306878207,
       "yahoo": "SHUL4.SA"
     },
     {
@@ -3790,10 +3790,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 15.97,
-      "change": -7.47,
-      "volume": 6509700,
-      "market_cap": 9837913587,
+      "close": 14.94,
+      "change": -5.56,
+      "volume": 5768000,
+      "market_cap": 9017137189,
       "yahoo": "SIMH3.SA"
     },
     {
@@ -3802,10 +3802,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 18.06,
-      "change": 2.61,
-      "volume": 1942500,
-      "market_cap": 8713849994,
+      "close": 17.55,
+      "change": -2.5,
+      "volume": 856600,
+      "market_cap": 8911891846,
       "yahoo": "SLCE3.SA"
     },
     {
@@ -3814,10 +3814,10 @@
       "sector": "Consumer Services",
       "type": "stock",
       "subType": "stock",
-      "close": 24.84,
-      "change": -2.13,
-      "volume": 10861200,
-      "market_cap": 15637375909,
+      "close": 24.39,
+      "change": -1.85,
+      "volume": 6600700,
+      "market_cap": 15310827823,
       "yahoo": "SMFT3.SA"
     },
     {
@@ -3826,10 +3826,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 21.75,
-      "change": 5.07,
-      "volume": 2036800,
-      "market_cap": 6723342307,
+      "close": 20.9,
+      "change": -3.24,
+      "volume": 580500,
+      "market_cap": 7015661403,
       "yahoo": "SMTO3.SA"
     },
     {
@@ -3841,7 +3841,7 @@
       "close": 9.89,
       "change": 8.32,
       "volume": 100,
-      "market_cap": 39950924,
+      "market_cap": 38838059,
       "yahoo": "SNSY3.SA"
     },
     {
@@ -3850,10 +3850,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 2.54,
-      "change": -5.93,
-      "volume": 9500,
-      "market_cap": 39950924,
+      "close": 2.48,
+      "change": 0,
+      "volume": 2000,
+      "market_cap": 38838059,
       "yahoo": "SNSY5.SA"
     },
     {
@@ -3862,10 +3862,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 8.53,
-      "change": -1.73,
-      "volume": 550700,
-      "market_cap": 1231715433,
+      "close": 8.24,
+      "change": -2.25,
+      "volume": 427700,
+      "market_cap": 1196239760,
       "yahoo": "SOJA3.SA"
     },
     {
@@ -3874,10 +3874,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 80,
-      "change": 5.26,
-      "volume": 300,
-      "market_cap": 167783997,
+      "close": 82,
+      "change": 2.5,
+      "volume": 100,
+      "market_cap": 161342397,
       "yahoo": "SOND5.SA"
     },
     {
@@ -3889,7 +3889,7 @@
       "close": 90,
       "change": 7.14,
       "volume": 300,
-      "market_cap": 167783997,
+      "market_cap": 161342397,
       "yahoo": "SOND6.SA"
     },
     {
@@ -3898,10 +3898,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 42.98,
-      "change": 0.73,
-      "volume": 2947500,
-      "market_cap": 53426067126,
+      "close": 42.91,
+      "change": -0.69,
+      "volume": 1980800,
+      "market_cap": 54102189142,
       "yahoo": "SUZB3.SA"
     },
     {
@@ -3910,10 +3910,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 4,
-      "change": -2.2,
-      "volume": 197300,
-      "market_cap": 624315782,
+      "close": 3.92,
+      "change": -2.97,
+      "volume": 93800,
+      "market_cap": 616683531,
       "yahoo": "SYNE3.SA"
     },
     {
@@ -3922,9 +3922,9 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "unit",
-      "close": 46.18,
-      "change": -0.58,
-      "volume": 1045600,
+      "close": 45.37,
+      "change": -1.05,
+      "volume": 807200,
       "market_cap": null,
       "yahoo": "TAEE11.SA"
     },
@@ -3934,10 +3934,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 15.15,
-      "change": -1.05,
-      "volume": 95700,
-      "market_cap": 16001973905,
+      "close": 14.88,
+      "change": -1.33,
+      "volume": 28300,
+      "market_cap": 15795274565,
       "yahoo": "TAEE3.SA"
     },
     {
@@ -3946,10 +3946,10 @@
       "sector": "Industrial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 15.47,
-      "change": -0.13,
-      "volume": 153300,
-      "market_cap": 16001973905,
+      "close": 15.19,
+      "change": -1.36,
+      "volume": 94000,
+      "market_cap": 15795274565,
       "yahoo": "TAEE4.SA"
     },
     {
@@ -3958,10 +3958,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 9.94,
-      "change": -9.96,
-      "volume": 171500,
-      "market_cap": 1393187328,
+      "close": 10.07,
+      "change": -0.69,
+      "volume": 26400,
+      "market_cap": 1307512891,
       "yahoo": "TASA3.SA"
     },
     {
@@ -3970,10 +3970,10 @@
       "sector": "Electronic Technology",
       "type": "stock",
       "subType": "stock",
-      "close": 8.74,
-      "change": -7.02,
-      "volume": 2174900,
-      "market_cap": 1393187328,
+      "close": 8.88,
+      "change": -0.78,
+      "volume": 574800,
+      "market_cap": 1307512891,
       "yahoo": "TASA4.SA"
     },
     {
@@ -3982,10 +3982,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 0.75,
-      "change": 13.64,
-      "volume": 947600,
-      "market_cap": 48588695,
+      "close": 0.87,
+      "change": 19.18,
+      "volume": 687600,
+      "market_cap": 53742041,
       "yahoo": "TCSA3.SA"
     },
     {
@@ -3994,10 +3994,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 11.08,
-      "change": -1.07,
-      "volume": 4300,
-      "market_cap": 629128792,
+      "close": 10.84,
+      "change": -0.18,
+      "volume": 9500,
+      "market_cap": 610030230,
       "yahoo": "TECN3.SA"
     },
     {
@@ -4006,10 +4006,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 32.11,
-      "change": 5.63,
-      "volume": 1400,
-      "market_cap": 2779999276,
+      "close": 32.4,
+      "change": -2.7,
+      "volume": 3300,
+      "market_cap": 3031572582,
       "yahoo": "TELB3.SA"
     },
     {
@@ -4018,10 +4018,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 13.15,
-      "change": 1.15,
-      "volume": 9600,
-      "market_cap": 2779999276,
+      "close": 13,
+      "change": -3.7,
+      "volume": 9500,
+      "market_cap": 3031572582,
       "yahoo": "TELB4.SA"
     },
     {
@@ -4030,10 +4030,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 29.98,
-      "change": -2.98,
-      "volume": 1816200,
-      "market_cap": 3536447811,
+      "close": 28.81,
+      "change": -4.13,
+      "volume": 2103700,
+      "market_cap": 3439166839,
       "yahoo": "TEND3.SA"
     },
     {
@@ -4042,10 +4042,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 14.35,
-      "change": -7.36,
-      "volume": 1265100,
-      "market_cap": 2326680020,
+      "close": 13.92,
+      "change": -2.25,
+      "volume": 683800,
+      "market_cap": 2138923398.9999998,
       "yahoo": "TFCO4.SA"
     },
     {
@@ -4054,10 +4054,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 44.57,
-      "change": -1.37,
-      "volume": 211600,
-      "market_cap": 2979727946,
+      "close": 46.89,
+      "change": 3.92,
+      "volume": 919800,
+      "market_cap": 2975112322,
       "yahoo": "TGMA3.SA"
     },
     {
@@ -4066,10 +4066,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 18.24,
-      "change": 0.77,
-      "volume": 6165000,
-      "market_cap": 43297260141,
+      "close": 18.23,
+      "change": 0.16,
+      "volume": 2359600,
+      "market_cap": 43536472431,
       "yahoo": "TIMS3.SA"
     },
     {
@@ -4079,9 +4079,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 9.4,
-      "change": -5.34,
-      "volume": 4400,
-      "market_cap": 26908687,
+      "change": 0,
+      "volume": 300,
+      "market_cap": 25472471,
       "yahoo": "TOKY3.SA"
     },
     {
@@ -4090,10 +4090,10 @@
       "sector": "Technology Services",
       "type": "stock",
       "subType": "stock",
-      "close": 42.01,
-      "change": -0.45,
-      "volume": 3761400,
-      "market_cap": 24066520833,
+      "close": 40.09,
+      "change": -4.66,
+      "volume": 2886600,
+      "market_cap": 23980975459,
       "yahoo": "TOTS3.SA"
     },
     {
@@ -4102,10 +4102,10 @@
       "sector": "Transportation",
       "type": "stock",
       "subType": "stock",
-      "close": 11.91,
-      "change": -2.78,
-      "volume": 22900,
-      "market_cap": 508455890,
+      "close": 12,
+      "change": 0,
+      "volume": 8700,
+      "market_cap": 498079239,
       "yahoo": "TPIS3.SA"
     },
     {
@@ -4114,10 +4114,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 6.69,
-      "change": -2.76,
-      "volume": 429500,
-      "market_cap": 1543985153,
+      "close": 6.35,
+      "change": -4.8,
+      "volume": 214000,
+      "market_cap": 1496857691,
       "yahoo": "TRIS3.SA"
     },
     {
@@ -4126,10 +4126,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 13.34,
-      "change": -1.62,
-      "volume": 1779200,
-      "market_cap": 6790003028,
+      "close": 12.91,
+      "change": -1.53,
+      "volume": 1284800,
+      "market_cap": 6564670694,
       "yahoo": "TTEN3.SA"
     },
     {
@@ -4138,10 +4138,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 19.89,
-      "change": -2.5,
-      "volume": 586400,
-      "market_cap": 2701988603,
+      "close": 19.1,
+      "change": -4.79,
+      "volume": 462200,
+      "market_cap": 2656955439,
       "yahoo": "TUPY3.SA"
     },
     {
@@ -4153,7 +4153,7 @@
       "close": 2.19,
       "change": 0,
       "volume": 200,
-      "market_cap": 19247293,
+      "market_cap": 9065637,
       "yahoo": "TXRX4.SA"
     },
     {
@@ -4162,10 +4162,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 1.26,
-      "change": -0.79,
-      "volume": 14100,
-      "market_cap": 83929682,
+      "close": 1.24,
+      "change": -0.8,
+      "volume": 2500,
+      "market_cap": 82607956,
       "yahoo": "UCAS3.SA"
     },
     {
@@ -4174,10 +4174,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 38.76,
-      "change": -0.84,
-      "volume": 8394000,
-      "market_cap": 42651499037,
+      "close": 38.89,
+      "change": 0.23,
+      "volume": 3942600,
+      "market_cap": 42335076072,
       "yahoo": "UGPA3.SA"
     },
     {
@@ -4186,10 +4186,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 57.9,
+      "close": 57.21,
       "change": -1.19,
-      "volume": 5000,
-      "market_cap": 6826689745,
+      "volume": 900,
+      "market_cap": 6798630087,
       "yahoo": "UNIP3.SA"
     },
     {
@@ -4199,9 +4199,9 @@
       "type": "stock",
       "subType": "stock",
       "close": 63.5,
-      "change": 9.18,
-      "volume": 800,
-      "market_cap": 6826689745,
+      "change": 0,
+      "volume": 100,
+      "market_cap": 6798630087,
       "yahoo": "UNIP5.SA"
     },
     {
@@ -4210,10 +4210,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 61.03,
-      "change": -0.25,
-      "volume": 215600,
-      "market_cap": 6826689745,
+      "close": 60.2,
+      "change": -1.59,
+      "volume": 96000,
+      "market_cap": 6798630087,
       "yahoo": "UNIP6.SA"
     },
     {
@@ -4222,10 +4222,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 6.84,
-      "change": -2.56,
-      "volume": 458700,
-      "market_cap": 8786697572,
+      "close": 6.44,
+      "change": -6.53,
+      "volume": 584900,
+      "market_cap": 8616169211,
       "yahoo": "USIM3.SA"
     },
     {
@@ -4234,10 +4234,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 7.11,
-      "change": -2.6,
-      "volume": 7056600,
-      "market_cap": 8786697572,
+      "close": 6.71,
+      "change": -6.15,
+      "volume": 9207100,
+      "market_cap": 8616169211,
       "yahoo": "USIM5.SA"
     },
     {
@@ -4249,7 +4249,7 @@
       "close": 6.46,
       "change": -0.92,
       "volume": 100,
-      "market_cap": 8786697572,
+      "market_cap": 8616169211,
       "yahoo": "USIM6.SA"
     },
     {
@@ -4258,10 +4258,10 @@
       "sector": "Non-Energy Minerals",
       "type": "stock",
       "subType": "stock",
-      "close": 66.78,
-      "change": -1.65,
-      "volume": 14218600,
-      "market_cap": 270617761119.99997,
+      "close": 66.12,
+      "change": -1.55,
+      "volume": 8342000,
+      "market_cap": 267668474513,
       "yahoo": "VALE3.SA"
     },
     {
@@ -4270,10 +4270,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 6.12,
-      "change": -10.79,
-      "volume": 25809900,
-      "market_cap": 8264210842,
+      "close": 5.89,
+      "change": -3.28,
+      "volume": 14913500,
+      "market_cap": 7336595380,
       "yahoo": "VAMO3.SA"
     },
     {
@@ -4282,10 +4282,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 36.38,
-      "change": -1.36,
-      "volume": 14652000,
-      "market_cap": 42355465699,
+      "close": 36.74,
+      "change": 0.41,
+      "volume": 3066800,
+      "market_cap": 42022409206,
       "yahoo": "VBBR3.SA"
     },
     {
@@ -4294,10 +4294,10 @@
       "sector": "Process Industries",
       "type": "stock",
       "subType": "stock",
-      "close": 3.68,
-      "change": -4.17,
-      "volume": 114000,
-      "market_cap": 605145514,
+      "close": 3.56,
+      "change": -3,
+      "volume": 87700,
+      "market_cap": 578355243,
       "yahoo": "VITT3.SA"
     },
     {
@@ -4306,10 +4306,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 29.39,
-      "change": -0.2,
-      "volume": 1673500,
-      "market_cap": 6956024931,
+      "close": 27.87,
+      "change": -3.36,
+      "volume": 1487900,
+      "market_cap": 6811944139,
       "yahoo": "VIVA3.SA"
     },
     {
@@ -4318,10 +4318,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 4.11,
-      "change": 74.15,
-      "volume": 277300,
-      "market_cap": 11516895,
+      "close": 5,
+      "change": 22.25,
+      "volume": 299000,
+      "market_cap": 19959365,
       "yahoo": "VIVR3.SA"
     },
     {
@@ -4330,10 +4330,10 @@
       "sector": "Communications",
       "type": "stock",
       "subType": "stock",
-      "close": 30.73,
-      "change": 1.25,
-      "volume": 5572800,
-      "market_cap": 97571531573,
+      "close": 30.79,
+      "change": 0.33,
+      "volume": 1671400,
+      "market_cap": 98664590394,
       "yahoo": "VIVT3.SA"
     },
     {
@@ -4342,10 +4342,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 19.54,
-      "change": -3.98,
-      "volume": 237900,
-      "market_cap": 1522437974,
+      "close": 18.92,
+      "change": -3.52,
+      "volume": 138600,
+      "market_cap": 1467076612,
       "yahoo": "VLID3.SA"
     },
     {
@@ -4354,10 +4354,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 3.25,
-      "change": 2.2,
-      "volume": 70900,
-      "market_cap": 364111633,
+      "close": 3.29,
+      "change": 1.23,
+      "volume": 11200,
+      "market_cap": 372126661,
       "yahoo": "VSTE3.SA"
     },
     {
@@ -4366,10 +4366,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 19.54,
-      "change": -2.79,
-      "volume": 1198900,
-      "market_cap": 3001119660,
+      "close": 19.63,
+      "change": 0.67,
+      "volume": 919600,
+      "market_cap": 2911533943,
       "yahoo": "VTRU3.SA"
     },
     {
@@ -4378,10 +4378,10 @@
       "sector": "Consumer Non-Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 15.93,
-      "change": -3.57,
-      "volume": 1924500,
-      "market_cap": 5189146509,
+      "close": 15.59,
+      "change": -2.32,
+      "volume": 1011300,
+      "market_cap": 5013243110,
       "yahoo": "VULC3.SA"
     },
     {
@@ -4390,10 +4390,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 0.97,
-      "change": 0,
-      "volume": 2006400,
-      "market_cap": 306334079,
+      "close": 0.99,
+      "change": 4.21,
+      "volume": 366200,
+      "market_cap": 300017899,
       "yahoo": "VVEO3.SA"
     },
     {
@@ -4402,10 +4402,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 2.91,
-      "change": -2.68,
-      "volume": 6300,
-      "market_cap": 189749778,
+      "close": 2.98,
+      "change": 1.36,
+      "volume": 2400,
+      "market_cap": 186576708,
       "yahoo": "WDCN3.SA"
     },
     {
@@ -4414,10 +4414,10 @@
       "sector": "Producer Manufacturing",
       "type": "stock",
       "subType": "stock",
-      "close": 50.97,
-      "change": -0.97,
-      "volume": 6828500,
-      "market_cap": 215968728286,
+      "close": 50.74,
+      "change": -0.14,
+      "volume": 2692600,
+      "market_cap": 213199361192,
       "yahoo": "WEGE3.SA"
     },
     {
@@ -4426,10 +4426,10 @@
       "sector": "Retail Trade",
       "type": "stock",
       "subType": "stock",
-      "close": 5.2,
-      "change": -5.45,
-      "volume": 23000,
-      "market_cap": 61162701,
+      "close": 4.86,
+      "change": -5.63,
+      "volume": 800,
+      "market_cap": 57270530,
       "yahoo": "WEST3.SA"
     },
     {
@@ -4438,10 +4438,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 3.94,
-      "change": 4.23,
-      "volume": 2000,
-      "market_cap": 5780089085,
+      "close": 3.7,
+      "change": 0.82,
+      "volume": 5800,
+      "market_cap": 5576855892,
       "yahoo": "WHRL3.SA"
     },
     {
@@ -4450,10 +4450,10 @@
       "sector": "Consumer Durables",
       "type": "stock",
       "subType": "stock",
-      "close": 3.93,
-      "change": -1.5,
-      "volume": 1100,
-      "market_cap": 5780089085,
+      "close": 3.91,
+      "change": 2.89,
+      "volume": 8600,
+      "market_cap": 5576855892,
       "yahoo": "WHRL4.SA"
     },
     {
@@ -4462,10 +4462,10 @@
       "sector": "Finance",
       "type": "stock",
       "subType": "stock",
-      "close": 8.79,
-      "change": -3.62,
-      "volume": 381500,
-      "market_cap": 1458354445,
+      "close": 8.67,
+      "change": -2.03,
+      "volume": 150900,
+      "market_cap": 1415179556,
       "yahoo": "WIZC3.SA"
     },
     {
@@ -4477,7 +4477,7 @@
       "close": 18.15,
       "change": -1.89,
       "volume": 1000,
-      "market_cap": 645448363,
+      "market_cap": 636121918,
       "yahoo": "WLMM3.SA"
     },
     {
@@ -4486,10 +4486,10 @@
       "sector": "Distribution Services",
       "type": "stock",
       "subType": "stock",
-      "close": 16.9,
-      "change": -2.71,
-      "volume": 3000,
-      "market_cap": 645448363,
+      "close": 17.1,
+      "change": 1.18,
+      "volume": 1200,
+      "market_cap": 636121918,
       "yahoo": "WLMM4.SA"
     },
     {
@@ -4498,10 +4498,10 @@
       "sector": "Commercial Services",
       "type": "stock",
       "subType": "stock",
-      "close": 13.94,
-      "change": -4.19,
-      "volume": 3000800,
-      "market_cap": 3783426319,
+      "close": 12.99,
+      "change": -2.48,
+      "volume": 3241100,
+      "market_cap": 3463590155,
       "yahoo": "YDUQ3.SA"
     }
   ]
