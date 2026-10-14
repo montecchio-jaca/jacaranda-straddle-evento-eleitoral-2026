@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-14T20:33:03.871523Z",
+  "generated_at_utc": "2026-10-14T23:23:31.837056Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 375,
   "quotes": {
@@ -703,7 +703,7 @@
       "provider_symbol": "BPAC11.SA",
       "price": 78.3,
       "currency": "BRL",
-      "market_time_utc": "2026-10-14T20:05:34Z",
+      "market_time_utc": "2026-10-14T21:24:05Z",
       "previous_close": 78.62,
       "market_state": null
     },
