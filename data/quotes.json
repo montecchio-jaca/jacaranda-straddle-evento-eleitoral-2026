@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T20:25:38.980310Z",
+  "generated_at_utc": "2026-10-20T23:19:45.374295Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 371,
   "quotes": {
@@ -3979,9 +3979,9 @@
       "name": "CM HOSPITALAR S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "VVEO3.SA",
-      "price": 1.07,
+      "price": 1.02,
       "currency": "BRL",
-      "market_time_utc": "2026-10-20T19:54:59Z",
+      "market_time_utc": "2026-10-20T20:11:09Z",
       "previous_close": 0.95,
       "market_state": null
     },
