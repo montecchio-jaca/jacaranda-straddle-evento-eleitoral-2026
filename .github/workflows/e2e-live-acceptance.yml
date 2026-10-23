@@ -36,8 +36,8 @@ jobs:
 
       - name: Wait for published page
         run: |
-          for i in {1..30}; do
-            if curl -fsS --max-time 15 "https://montecchio-jaca.github.io/jacaranda-straddle-evento-eleitoral-2026/" | grep -q "Estruturadas Jacarandá"; then
+          for i in {1..45}; do
+            if curl -fsS --max-time 15 "https://montecchio-jaca.github.io/jacaranda-straddle-evento-eleitoral-2026/?validation=put-risk-20261023" | grep -q "invalidLegs"; then
               exit 0
             fi
             sleep 5
