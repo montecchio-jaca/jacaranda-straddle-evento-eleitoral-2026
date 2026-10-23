@@ -169,7 +169,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
       </div>
       <div class="kpis" style="margin-top:10px">
         <div class="kpi accent"><div class="label">Perda máxima</div><div id="maxLoss" class="value">—</div><div class="sub">no vencimento</div></div>
-        <div class="kpi"><div class="label">Ganho máximo</div><div id="maxGain" class="value">—</div><div class="sub">no vencimento</div></div>
+        <div class="kpi"><div class="label" id="maxGainLabel">Ganho máximo</div><div id="maxGain" class="value">—</div><div class="sub">no vencimento</div></div>
         <div class="kpi"><div class="label">Break-even(s)</div><div id="breakevens" class="value">—</div><div id="breakevensSub" class="sub">preço do ativo</div></div>
         <div class="kpi"><div class="label">IV por perna</div><div id="ivSummary" class="value">—</div><div class="sub">BSM a partir do prêmio informado</div></div>
       </div>
@@ -587,10 +587,14 @@ function model(){
   const stockNotional=Math.abs(stockQty)*S*units;
   const legIV=state.legs.map(l=>impliedVolLeg(l.type,S,num(l.strike),T,num(l.price),r,q));
   const missingPrices=state.legs.filter(l=>!(num(l.price)>0)).length;
-  const pricingComplete=state.legs.length>0&&missingPrices===0;
+  const invalidLegs=state.legs.map((l,i)=>({i,price:num(l.price),strike:num(l.strike),type:l.type}))
+    .filter(l=>l.price>0)
+    .map(l=>({...l,check:OptionEngine.validateLegPrice(l.type,S,l.strike,T,l.price,r,q)}))
+    .filter(l=>!l.check.valid);
+  const pricingComplete=state.legs.length>0&&missingPrices===0&&invalidLegs.length===0;
   const grossPremiumPctSpot=S>0?grossAbsPrem/S*100:0;
   const netPremiumPctSpot=S>0?optionCashflowPerUnit/S*100:0;
-  return {st,S,lot,lots,units,r,q,T,grossAbsPrem,grossPremiumPctSpot,netPremiumPctSpot,optionCashflowPerUnit,optionCashflowTotal:optionCashflowPerUnit*units,entryCost,stockQty,stockNotional,legIV,missingPrices,pricingComplete};
+  return {st,S,lot,lots,units,r,q,T,grossAbsPrem,grossPremiumPctSpot,netPremiumPctSpot,optionCashflowPerUnit,optionCashflowTotal:optionCashflowPerUnit*units,entryCost,stockQty,stockNotional,legIV,missingPrices,invalidLegs,pricingComplete};
 }
 function enginePayload(m){
   return {
@@ -646,6 +650,8 @@ function serializeCurrent(){
   };
 }
 function addToComparator(){
+  const m=model();
+  if(!m.pricingComplete){alert('Corrija os preços inválidos ou pendentes antes de enviar ao Comparador.');return}
   const item=serializeCurrent();
   if(!(item.spot>0)){alert('Informe um spot válido antes de adicionar ao Comparador.');return}
   if(item.legs.some(l=>!(l.strike>0))){alert('Revise os strikes antes de adicionar ao Comparador.');return}
@@ -669,20 +675,22 @@ function updateAll(){
   }else{
     $('initialFlow').textContent='—';
     $('initialFlow').className='value';
-    $('initialFlowSub').textContent='preencha Bid/Ask das '+m.missingPrices+' perna(s) pendente(s)';
-    $('flowPill').textContent='Prêmios pendentes';
-    $('pricingStatus').innerHTML='<div class="warning"><strong>Simulação incompleta:</strong> '+m.missingPrices+' perna(s) ainda sem prêmio. O desenho estrutural pode ser visualizado, mas P/L, break-even, risco e MTM só são econômicos após preencher Bid/Ask.</div>';
+    $('initialFlowSub').textContent=m.invalidLegs.length?'Prêmios inválidos · corrija as pernas indicadas':'preencha Bid/Ask das '+m.missingPrices+' perna(s) pendente(s)';
+    $('flowPill').textContent=m.invalidLegs.length?'Prêmios inválidos':'Prêmios pendentes';
+    const invalidMessage=m.invalidLegs.map(l=>'Perna '+(l.i+1)+': '+l.check.reason).join(' ');
+    $('pricingStatus').innerHTML='<div class="warning"><strong>Simulação econômica não validada:</strong> '+invalidMessage+(m.missingPrices?' '+m.missingPrices+' perna(s) sem prêmio.':'')+' Confira Bid/Ask, strike e vencimento. O gráfico continua apenas estrutural; resultados de risco, P/L e MTM ficam suspensos.</div>';
   }
   $('feeTotal').textContent=brl(m.entryCost);
   $('stockNotional').textContent=m.stockNotional>0?brl(m.stockNotional):'—';
   $('stockNotionalSub').textContent=m.stockQty?'posição '+(m.stockQty>0?'comprada':'vendida')+' no ativo':'sem perna no ativo';
   $('units').textContent=fmt0(m.units);
   $('maxLoss').textContent=m.pricingComplete?(risk.maxLoss===-Infinity?'Ilimitada':(risk.maxLoss==null?'—':brl(Math.abs(Math.min(0,risk.maxLoss))))):'—';
-  $('maxGain').textContent=m.pricingComplete?(risk.maxGain===Infinity?'Ilimitado':(risk.maxGain==null?'—':brl(Math.max(0,risk.maxGain)))):'—';
+  $('maxGainLabel').textContent=m.pricingComplete&&risk.maxGain!=null&&risk.maxGain<0?'Melhor resultado (perda)':'Ganho máximo';
+  $('maxGain').textContent=m.pricingComplete?(risk.maxGain===Infinity?'Ilimitado':(risk.maxGain==null?'—':(risk.maxGain<0?'-':'')+brl(Math.abs(risk.maxGain)))):'—';
   $('breakevens').textContent=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,4).map(brl).join(' · '):'—';
   $('breakevensSub').textContent=m.pricingComplete?(risk.bes.length?risk.bes.map(v=>pct((v/m.S-1)*100)).join(' / '):'sem raiz no range econômico'):'aguardando prêmios';
-  const ivs=m.legIV.filter(v=>v>0);$('ivSummary').textContent=ivs.length?ivs.map(v=>fmt1(v*100)+'%').join(' · '):'—';
-  state.legs.forEach((l,i)=>{const el=$('legIv'+i);if(el)el.textContent=m.legIV[i]>0?fmt1(m.legIV[i]*100)+'%':'—'});
+  const ivs=m.legIV.filter(v=>v>0);$('ivSummary').textContent=m.invalidLegs.length?'IV não calibrável':(ivs.length?ivs.map(v=>fmt1(v*100)+'%').join(' · '):(m.missingPrices?'—':'IV não calibrável'));
+  state.legs.forEach((l,i)=>{const el=$('legIv'+i);if(el)el.textContent=m.invalidLegs.some(x=>x.i===i)?'Preço inválido':(m.legIV[i]>0?fmt1(m.legIV[i]*100)+'%':(num(l.price)>0?'IV não calibrável':'—'))});
   updateScenarioDateLabel();
   updateSlider(m,risk);
   updateScenario(m);
@@ -838,7 +846,7 @@ function drawFactsheet(){
   function finiteGain(){
     if(!m.pricingComplete)return '—';
     if(risk.maxGain===Infinity)return 'Ilimitado';
-    return brl(Math.max(0,risk.maxGain));
+    return (risk.maxGain<0?'-':'')+brl(Math.abs(risk.maxGain));
   }
   function legSummary(){
     const parts=[];
@@ -891,7 +899,7 @@ function drawFactsheet(){
   card(lx+cardW+gap,cy,'Fluxo inicial',m.pricingComplete?(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal)):'—',m.pricingComplete?((m.optionCashflowTotal>=0?'crédito':'débito')+' · '+fmt(Math.abs(m.netPremiumPctSpot))+'% do spot'):'prêmios pendentes',m.pricingComplete?(m.optionCashflowTotal>=0?C.green:C.red):C.amber);
   cy+=91;
   card(lx,cy,'Risco máximo',finiteLoss(),m.pricingComplete?st.risk:'aguardando Bid/Ask',m.pricingComplete?C.red:C.amber);
-  card(lx+cardW+gap,cy,'Lucro máximo',finiteGain(),m.pricingComplete?'no vencimento':'aguardando Bid/Ask',m.pricingComplete?C.green:C.amber);
+  card(lx+cardW+gap,cy,risk.maxGain<0?'Melhor resultado (perda)':'Lucro máximo',finiteGain(),m.pricingComplete?'no vencimento':'aguardando Bid/Ask',m.pricingComplete?C.green:C.amber);
   cy+=91;
   const beMain=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(brl).join(' / '):'—';
   const beSub=m.pricingComplete&&risk.bes.length?risk.bes.slice(0,2).map(v=>fmt(v/m.S*100)+'% do spot').join(' / '):(m.pricingComplete?'sem break-even':'prêmios pendentes');
@@ -986,7 +994,7 @@ function drawFactsheet(){
   cText(ctx,'Valores nominais. Confirme Bid/Ask, códigos, liquidez, estilo de exercício, custos, impostos e margem antes de qualquer execução.',72,1069,9,400,C.muted);
   cText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1846,1060,9,400,C.muted,'right');
 }
-function openFactsheet(){syncStateFromLegInputs();updateAll();drawFactsheet();$('exportOverlay').classList.add('open')}
+function openFactsheet(){syncStateFromLegInputs();updateAll();if(!model().pricingComplete){alert('Corrija prêmios inválidos ou pendentes antes de gerar Factsheet para o cliente.');return}drawFactsheet();$('exportOverlay').classList.add('open')}
 function closeFactsheet(){$('exportOverlay').classList.remove('open')}
 function factsheetFilename(){return 'Estruturadas_Jacaranda_'+state.asset+'_'+state.strategyId+'_'+$('entryDate').value+'.jpg'}
 function isAppleMobile(){return /iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)}
@@ -997,7 +1005,7 @@ function dataUrlToJpegFile(dataUrl,name){
   return new File([bytes],name,{type:mime,lastModified:Date.now()});
 }
 async function downloadFactsheet(){
-  syncStateFromLegInputs();updateAll();drawFactsheet();
+  syncStateFromLegInputs();updateAll();if(!model().pricingComplete){alert('Revise preços das opções antes de exportar o JPG.');return}drawFactsheet();
   const filename=factsheetFilename(),canvas=$('factsheetCanvas');
   const dataUrl=canvas.toDataURL('image/jpeg',.95);
   const file=dataUrlToJpegFile(dataUrl,filename);
