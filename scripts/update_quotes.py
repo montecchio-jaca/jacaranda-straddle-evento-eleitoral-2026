@@ -77,6 +77,39 @@ def yahoo_quote(item):
         "market_state": meta.get("marketState"),
     }
 
+# A API brapi permite quatro tickers publicos sem credencial.
+# Nao extrapolar esta regra ao universo completo nem registrar token em codigo.
+FREE_DIRECT = {"PETR4", "VALE3", "ITUB4", "MGLU3"}
+
+def public_brapi_quote(item):
+    symbol = item["symbol"]
+    if symbol not in FREE_DIRECT:
+        return None
+    url = "https://brapi.dev/api/v2/stocks/quote?" + urllib.parse.urlencode({"symbols": symbol})
+    payload = http_json(url)
+    row = next((r for r in payload.get("results", []) if r.get("symbol") == symbol or r.get("requestedSymbol") == symbol), None)
+    data = (row or {}).get("data") or row or {}
+    price = data.get("regularMarketPrice")
+    stamp = data.get("regularMarketTime")
+    if not isinstance(price, (int, float)) or price <= 0 or not stamp:
+        return None
+    dt = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+    previous = data.get("regularMarketPreviousClose") or data.get("previousClose")
+    return {"symbol": symbol, "name": item.get("name") or symbol,
+            "provider": "brapi.dev", "provider_symbol": symbol,
+            "price": round(float(price),4), "currency": "BRL",
+            "market_time_utc": dt.astimezone(timezone.utc).isoformat().replace("+00:00","Z"),
+            "previous_close": previous, "market_state": None}
+
+def fresher_quote(item, yahoo):
+    try:
+        brapi = public_brapi_quote(item)
+        if brapi and (not yahoo or (brapi.get("market_time_utc") or "") > (yahoo.get("market_time_utc") or "")):
+            return brapi
+    except Exception as exc:
+        print(f"brapi {item['symbol']}: {exc}")
+    return yahoo
+
 def universe_fallback(item, universe_stamp):
     price = item.get("close")
     if not isinstance(price, (int, float)) or price <= 0:
@@ -115,8 +148,12 @@ def main():
             item = future_map[future]
             symbol = item["symbol"]
             try:
-                quotes[symbol] = future.result()
+                quotes[symbol] = fresher_quote(item, future.result())
             except Exception as exc:
+                direct = fresher_quote(item, None)
+                if direct:
+                    quotes[symbol] = direct
+                    continue
                 fb = universe_fallback(item, universe_stamp)
                 if fb:
                     quotes[symbol] = fb
