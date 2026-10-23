@@ -285,7 +285,9 @@ async function loadUniverse(){
     const res=await fetch('data/universe-b3.json?v='+Date.now(),{cache:'no-store'});
     if(!res.ok)throw new Error('HTTP '+res.status);
     const p=await res.json();state.universe=Array.isArray(p.assets)?p.assets:[];
-    state.universe.forEach(a=>{CORE[a.symbol]={name:a.name||a.symbol,fallbackSpot:Number(a.close)>0?Number(a.close):null}});
+    if(!state.universe.some(a=>a.symbol==='BOVA11'))state.universe.push({symbol:'BOVA11',name:'iShares Ibovespa ETF',type:'fund',subType:'etf',close:null,yahoo:'BOVA11.SA'});
+    state.universe.sort((a,b)=>a.symbol.localeCompare(b.symbol));
+    state.universe.forEach(a=>{CORE[a.symbol]={name:a.name||a.symbol,fallbackSpot:Number(a.close)>0?Number(a.close):null,subType:a.subType}});
     const groups=state.universe.reduce((o,a)=>(o[a.subType]=(o[a.subType]||0)+1,o),{});
     $('universePill').textContent='B3 · '+state.universe.length+' ativos (ações/units, ETFs, FIIs)';
   }catch(e){$('universePill').textContent='Universo B3 · fallback'}
