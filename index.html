@@ -76,7 +76,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
   <div class="panel-head">
     <div>
       <h2>Ativo e estratégia</h2>
-      <div class="note">A liquidez pertence às séries que compõem a estrutura, não ao nome da estratégia. Confirme Bid/Ask, spread e volume de cada perna antes de executar.</div>
+      <div class="note">Ações, ETFs e FIIs podem ser utilizados como ativos de referência. <strong>Um ativo negociado na B3 não necessariamente possui opções listadas.</strong> Confirme a existência da série, Bid/Ask, spread e volume antes de executar.</div>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <span id="universePill" class="pill">Universo B3 · carregando</span>
@@ -238,7 +238,8 @@ const CORE={
   VALE3:{name:'Vale ON',fallbackSpot:null},
   ITUB4:{name:'Itaú Unibanco PN',fallbackSpot:null},
   B3SA3:{name:'B3 S.A.',fallbackSpot:19.00},
-  BBAS3:{name:'Banco do Brasil ON',fallbackSpot:23.72}
+  BBAS3:{name:'Banco do Brasil ON',fallbackSpot:23.72},
+  BOVA11:{name:'iShares Ibovespa ETF',fallbackSpot:null,subType:'etf'}
 };
 let state={asset:'PETR4',strategyId:'long_strangle',universe:[],strategies:[],backlog:[],quote:null,quotesPayload:null,legs:[]};
 const $=id=>document.getElementById(id);
@@ -285,7 +286,8 @@ async function loadUniverse(){
     if(!res.ok)throw new Error('HTTP '+res.status);
     const p=await res.json();state.universe=Array.isArray(p.assets)?p.assets:[];
     state.universe.forEach(a=>{CORE[a.symbol]={name:a.name||a.symbol,fallbackSpot:Number(a.close)>0?Number(a.close):null}});
-    $('universePill').textContent='Universo B3 · '+state.universe.length+' ativos';
+    const groups=state.universe.reduce((o,a)=>(o[a.subType]=(o[a.subType]||0)+1,o),{});
+    $('universePill').textContent='B3 · '+state.universe.length+' ativos (ações/units, ETFs, FIIs)';
   }catch(e){$('universePill').textContent='Universo B3 · fallback'}
 }
 async function loadStrategies(){
@@ -302,7 +304,8 @@ async function loadQuotesPayload(){
 }
 function buildAssetControls(){
   const assets=universeAssets();
-  $('assetSelect').innerHTML=assets.map(a=>'<option value="'+a.symbol+'" '+(a.symbol===state.asset?'selected':'')+'>'+a.symbol+' · '+(a.name||a.symbol)+'</option>').join('');
+  const category=a=>a.subType==='etf'?'ETF':a.subType==='fii'?'FII':a.subType==='unit'?'UNIT':'AÇÃO';
+  $('assetSelect').innerHTML=assets.map(a=>'<option value="'+a.symbol+'" '+(a.symbol===state.asset?'selected':'')+'>'+a.symbol+' · '+category(a)+' · '+(a.name||a.symbol)+'</option>').join('');
   $('assetList').innerHTML=assets.map(a=>'<option value="'+a.symbol+'" label="'+String(a.name||a.symbol).replace(/"/g,'&quot;')+'"></option>').join('');
   $('assetSearch').value=state.asset;
 }
