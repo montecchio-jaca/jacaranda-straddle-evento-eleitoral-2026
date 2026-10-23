@@ -19,6 +19,7 @@ FALLBACK = [
     {"symbol":"B3SA3","name":"B3SA3","yahoo":"B3SA3.SA","close":None},
     {"symbol":"PETR4","name":"PETR4","yahoo":"PETR4.SA","close":51.17},
     {"symbol":"CEAB3","name":"CEAB3","yahoo":"CEAB3.SA","close":10.30},
+    {"symbol":"BOVA11","name":"iShares Ibovespa ETF","yahoo":"BOVA11.SA","close":None},
 ]
 
 def http_json(url, timeout=12):
