@@ -110,6 +110,31 @@ await waitReady(page);
 assert(await page.locator('#entryDate').inputValue()===todayBr,'Novo carregamento não restaurou data-base de hoje');
 console.log('PASS data-base Brasília + edição manual preservada no snapshot');
 
+// Regressão BOVA11: Put com prêmio acima do limite teórico não é validada.
+await selectStrategy(page,'long_put',1,false);
+await page.locator('#spotInput').fill('201.12');
+await page.locator('#entryDate').fill('2026-10-23');
+await page.locator('#expiryDate').fill('2027-03-19');
+await fillLeg(page,0,{strike:201,price:201,code:'PUTINVALID'});
+const putAudit=await page.evaluate(()=>{
+  updateAll();const m=model(),risk=analyzeRisk(m);
+  return {complete:m.pricingComplete,issues:m.invalidLegs.length,iv:m.legIV[0],
+    ivLabel:document.querySelector('#ivSummary').textContent,
+    warning:document.querySelector('#pricingStatus').innerText,
+    maxGain:risk.maxGain,maxGainUI:document.querySelector('#maxGain').textContent};
+});
+assert(!putAudit.complete&&putAudit.issues===1,'Put com prêmio absurdo deveria ser inválida');
+assert(putAudit.iv===0&&putAudit.ivLabel.includes('não calibrável'),'IV 500% inválida foi exibida');
+assert(putAudit.warning.includes('limite teórico'),'Aviso de limite econômico ausente');
+page.once('dialog',d=>d.accept());
+await page.click('#generateJpg');
+assert(!(await page.locator('#exportOverlay').evaluate(el=>el.classList.contains('open'))),'Exportação inválida deveria ser bloqueada');
+await fillLeg(page,0,{strike:201,price:2.01,code:'PUTVALID'});
+const validPut=await page.evaluate(()=>{updateAll();const m=model(),r=analyzeRisk(m);return {ok:m.pricingComplete,iv:m.legIV[0],maxGain:r.maxGain};});
+assert(validPut.ok&&validPut.iv>0&&validPut.iv<5,'Put plausível deveria calibrar IV sem teto artificial');
+assert(validPut.maxGain>0,'Put plausível deveria permitir ganho no cenário de queda');
+console.log('PASS Put BOVA11 inválida bloqueada / Put válida precificada');
+
 // 1. Book <-> Spot 100% e persistência.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
