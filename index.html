@@ -513,10 +513,61 @@ function applyQuote(resetLegs){
   if(resetLegs||!state.legs.length)suggestLegsFromStrategy();
   else{renderLegs();updateAll()}
 }
+const DIRECT_QUOTE_PUBLIC=new Set(['PETR4','VALE3','ITUB4','MGLU3']);
+function brapiToQuote(symbol,item){
+  const data=item?.data||item;
+  const price=Number(data?.regularMarketPrice);
+  if(!(price>0))return null;
+  const marketTime=data?.regularMarketTime||data?.marketTime||null;
+  const stamp=marketTime?new Date(marketTime):null;
+  if(!stamp||Number.isNaN(stamp.getTime()))return null;
+  const previous=Number(data?.regularMarketPreviousClose||data?.previousClose);
+  return {symbol,name:data?.longName||data?.shortName||symbol,provider:'brapi.dev · consulta individual',
+    provider_symbol:symbol,price,currency:data?.currency||'BRL',
+    market_time_utc:stamp.toISOString(),previous_close:previous>0?previous:null,market_state:null};
+}
+async function fetchSelectedQuote(symbol){
+  if(!DIRECT_QUOTE_PUBLIC.has(symbol))return {quote:null,reason:'Consulta direta sem chave indisponível para este ticker; mantendo snapshot GitHub.'};
+  const ctrl=new AbortController(),timeout=setTimeout(()=>ctrl.abort(),9000);
+  try{
+    const url='https://brapi.dev/api/v2/stocks/quote?symbols='+encodeURIComponent(symbol)+'&t='+Date.now();
+    const res=await fetch(url,{cache:'no-store',signal:ctrl.signal});
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const data=await res.json();
+    const item=(data.results||[]).find(x=>x.symbol===symbol||x.requestedSymbol===symbol);
+    const quote=brapiToQuote(symbol,item);
+    return quote?{quote}:{quote:null,reason:'Fonte individual sem horário de negociação confiável.'};
+  }catch(err){
+    return {quote:null,reason:'Fonte individual indisponível ('+(err?.name==='AbortError'?'timeout':err.message)+').'};
+  }finally{clearTimeout(timeout)}
+}
 async function refreshSnapshot(){
   syncStateFromLegInputs();
-  setStatus('','Recarregando snapshot…','Atualizando o spot sem apagar strikes, códigos ou prêmios já preenchidos.');
-  await loadQuotesPayload();applyQuote(false);
+  const asset=state.asset;
+  const button=$('refreshQuote');button.disabled=true;
+  setStatus('','Consultando '+asset+'…','Buscando apenas o ticker selecionado, com fallback no arquivo GitHub.');
+  try{
+    const direct=await fetchSelectedQuote(asset);
+    if(asset!==state.asset)return;
+    if(direct.quote){
+      const before=state.quotesPayload?.quotes?.[asset];
+      const td=Date.parse(direct.quote.market_time_utc),tb=Date.parse(before?.market_time_utc||'');
+      if(!before||!Number.isFinite(tb)||td>tb){
+        state.quotesPayload=state.quotesPayload||{quotes:{}};
+        state.quotesPayload.quotes=state.quotesPayload.quotes||{};
+        state.quotesPayload.quotes[asset]=direct.quote;
+        applyQuote(false);
+        return;
+      }
+    }
+    await loadQuotesPayload();
+    if(asset!==state.asset)return;
+    applyQuote(false);
+    if(quoteFreshness(getSpotQuote()).stale){
+      setStatus('err','Cotação ainda defasada · '+asset,
+        (direct.reason||'Consulta direta não trouxe negociação posterior.')+' O botão não atualiza o JSON no servidor. Confira o preço ou informe o spot manualmente.');
+    }
+  }finally{button.disabled=false}
 }
 
 function impliedVolLeg(type,S,K,T,price,r,q){return OptionEngine.impliedVolLeg(type,S,K,T,price,r,q)}
