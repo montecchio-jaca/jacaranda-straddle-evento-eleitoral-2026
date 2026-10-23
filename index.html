@@ -650,6 +650,7 @@ function serializeCurrent(){
   };
 }
 function addToComparator(){
+  if($('sizingMode').value==='budget'&&$('budgetBox').dataset.valid!=='true'){alert('Orçamento de risco não dimensionado. Revise o valor e os prêmios.');return}
   const m=model();
   if(!m.pricingComplete){alert('Corrija os preços inválidos ou pendentes antes de enviar ao Comparador.');return}
   const item=serializeCurrent();
@@ -665,6 +666,7 @@ function addToComparator(){
 function budgetCandidate(lots){const old=$('lots').value;$('lots').value=lots;const m=model(),r=analyzeRisk(m);$('lots').value=old;return {m,r,loss:Number.isFinite(r.maxLoss)?-Math.min(0,r.maxLoss):Infinity}}
 function updateBudgetSizing(){
  const budget=$('sizingMode').value==='budget';$('budgetBox').hidden=!budget;$('manualUnits').hidden=budget;
+ $('budgetBox').dataset.valid=budget?'false':'true';
  if(!budget)return;
  const target=num($('budgetTarget').value),first=budgetCandidate(1);
  const valid=target>0&&first.m.pricingComplete&&first.m.T>0&&first.m.optionCashflowPerUnit<0&&first.m.stockQty===0&&Number.isFinite(first.loss)&&first.loss>0;
@@ -674,6 +676,7 @@ function updateBudgetSizing(){
  if(hi===1000000&&budgetCandidate(hi).loss<=target)lo=hi;
  if(lo===0){$('budgetStatus').textContent='Orçamento insuficiente para um lote; operação não dimensionada.';return}
  $('lots').value=lo;const x=budgetCandidate(lo);$('simpleUnits').value=x.m.units;
+ $('budgetBox').dataset.valid='true';
  $('budgetStatus').textContent='Lotes '+fmt0(lo)+' · Risco '+brl(x.loss)+' · Saldo '+brl(Math.max(0,target-x.loss));
 }
 function calculateReturnMilestones(m,risk){
@@ -1025,7 +1028,7 @@ function drawFactsheet(){
   cText(ctx,'Valores nominais. Confirme Bid/Ask, códigos, liquidez, estilo de exercício, custos, impostos e margem antes de qualquer execução.',72,1069,9,400,C.muted);
   cText(ctx,'Jacarandá Investimentos · '+formatDateBr($('entryDate').value),1846,1060,9,400,C.muted,'right');
 }
-function openFactsheet(){syncStateFromLegInputs();updateAll();if(!model().pricingComplete){alert('Corrija prêmios inválidos ou pendentes antes de gerar Factsheet para o cliente.');return}drawFactsheet();$('exportOverlay').classList.add('open')}
+function openFactsheet(){syncStateFromLegInputs();updateAll();if($('sizingMode').value==='budget'&&$('budgetBox').dataset.valid!=='true'){alert('Orçamento de risco não dimensionado.');return}if(!model().pricingComplete){alert('Corrija prêmios inválidos ou pendentes antes de gerar Factsheet para o cliente.');return}drawFactsheet();$('exportOverlay').classList.add('open')}
 function closeFactsheet(){$('exportOverlay').classList.remove('open')}
 function factsheetFilename(){return 'Estruturadas_Jacaranda_'+state.asset+'_'+state.strategyId+'_'+$('entryDate').value+'.jpg'}
 function isAppleMobile(){return /iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)}
@@ -1036,7 +1039,7 @@ function dataUrlToJpegFile(dataUrl,name){
   return new File([bytes],name,{type:mime,lastModified:Date.now()});
 }
 async function downloadFactsheet(){
-  syncStateFromLegInputs();updateAll();if(!model().pricingComplete){alert('Revise preços das opções antes de exportar o JPG.');return}drawFactsheet();
+  syncStateFromLegInputs();updateAll();if($('sizingMode').value==='budget'&&$('budgetBox').dataset.valid!=='true'){alert('Orçamento de risco não dimensionado.');return}if(!model().pricingComplete){alert('Revise preços das opções antes de exportar o JPG.');return}drawFactsheet();
   const filename=factsheetFilename(),canvas=$('factsheetCanvas');
   const dataUrl=canvas.toDataURL('image/jpeg',.95);
   const file=dataUrlToJpegFile(dataUrl,filename);
