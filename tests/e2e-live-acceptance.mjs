@@ -162,6 +162,28 @@ assert(await page.locator('.leg-card').count()===4,'Modo simples perdeu pernas')
 assert(await page.locator('.leg-card').nth(3).locator('[data-f="price"]').isVisible(),'Quarta perna ficou oculta');
 console.log('PASS UX simples/avançada, quantidade, conversão e quatro pernas');
 
+// Dimensionamento em orçamento (prêmio + custos) e marcos no vencimento.
+await selectStrategy(page,'long_put',1,false);
+await page.locator('#spotInput').fill('201.12');
+await page.locator('#entryDate').fill('2026-10-23');
+await page.locator('#expiryDate').fill('2027-03-19');
+await page.locator('#feeType').selectOption('premium');
+await page.locator('#feeValue').fill('1');
+await page.locator('.leg-card').first().locator('[data-f="strike"]').fill('181');
+await page.locator('.leg-card').first().locator('[data-f="price"]').fill('2.01');
+await page.selectOption('#sizingMode','budget');
+await page.locator('#budgetTarget').fill('10000');
+const sized=await page.evaluate(()=>{
+ updateAll();const m=model(),risk=analyzeRisk(m);
+ const milestones=calculateReturnMilestones(m,risk);
+ return {lots:m.lots,risk:-risk.maxLoss,units:m.units,milestones,display:document.querySelector('#budgetStatus').textContent};
+});
+assert(sized.risk<=10000,'Orçamento foi ultrapassado');
+assert(sized.lots===49&&sized.units===4900,'Lotes esperados: 49');
+assert(sized.milestones.length===3,'Faltam os marcos 100/200/300');
+for(const item of sized.milestones)for(const spot of item.spots)assert(spot>=0,'Preço de retorno negativo');
+await page.selectOption('#sizingMode','manual');
+console.log('PASS orçamento com fees + marcos 100/200/300');
 // 1. Book <-> Spot 100% e persistência.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
