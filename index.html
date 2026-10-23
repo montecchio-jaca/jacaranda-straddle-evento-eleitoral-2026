@@ -47,7 +47,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
 .export-overlay{position:fixed;inset:0;background:rgba(11,23,34,.84);z-index:9999;display:none;align-items:center;justify-content:center;padding:16px}.export-overlay.open{display:flex}.export-dialog{width:min(1500px,98vw);max-height:96vh;background:#132436;border:1px solid rgba(186,135,88,.38);border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.42);overflow:hidden;display:flex;flex-direction:column}.export-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid rgba(186,135,88,.28);color:#fff}.export-actions{display:flex;gap:8px;flex-wrap:wrap}.export-preview{background:#0B1722;padding:12px;overflow:auto;flex:1}#factsheetCanvas{display:block;width:100%;height:auto;background:#0B1722;box-shadow:0 8px 28px rgba(0,0,0,.4)}.export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
 @media(max-width:1050px){.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.strategy-grid{grid-template-columns:repeat(2,1fr)}.leg-grid{grid-template-columns:repeat(4,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.inputs,.layout3,.strategy-summary,.rangegrid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}.leg-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}.chart-wrap{height:340px}}
-.advanced-only{display:none!important}body.advanced-ui .advanced-only{display:block!important}body:not(.advanced-ui) .advanced-mini{display:none!important}.ux-switch{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}.ux-switch button{background:#eef1f3;color:var(--blue)}.ux-switch button.active{background:var(--blue);color:#fff}.simple-qty{max-width:300px;margin-top:12px}.simple-qty input{width:100%;padding:10px;border:1px solid #cfd6dc;border-radius:10px}.quick-summary{background:#eef5f1;border-left:4px solid var(--green);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px;line-height:1.55}body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:650px){body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
+.advanced-only{display:none!important}body.advanced-ui .advanced-only{display:block!important}body:not(.advanced-ui) .advanced-mini{display:none!important}.ux-switch{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}.ux-switch button{background:#eef1f3;color:var(--blue)}.ux-switch button.active{background:var(--blue);color:#fff}.simple-qty{max-width:300px;margin-top:12px}.simple-qty input{width:100%;padding:10px;border:1px solid #cfd6dc;border-radius:10px}.quick-summary{background:#eef5f1;border-left:4px solid var(--green);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px;line-height:1.55}body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:650px){body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}body:not(.advanced-ui) .layout2{grid-template-columns:minmax(0,1fr)}body:not(.advanced-ui) .layout2>.panel:first-child{display:none}</style>
 </head>
 <body>
 <div class="topbar"></div>
@@ -613,11 +613,17 @@ function analyzeRisk(m){return OptionEngine.analyzeRisk(enginePayload(m))}
 function autoRange(m,risk){return OptionEngine.autoRange(enginePayload(m))}
 function chartRange(m,risk){const v=$('rangeMode').value;return v==='auto'?autoRange(m,risk):num(v)}
 
+function evaluateScenario(spot,m,ratio=num($('ivRatio').value)/100){
+  return {spot,expiry:m.pricingComplete?expiryPnlTotal(spot,m):null,
+    mtm:m.pricingComplete?mtmPnlTotal(spot,m,ratio):null,
+    optionValue:m.pricingComplete?scenarioOptionNetValuePerUnit(spot,m,ratio)*m.units:null};
+}
 function chartSeries(m,risk){
   const R=chartRange(m,risk),lo=-Math.min(99,R),ratio=num($('ivRatio').value)/100,xs=[];
   for(let x=lo;x<=R+.001;x+=(R-lo)/180)xs.push(x);
-  const expiry=xs.map(x=>expiryPnlTotal(Math.max(.0001,m.S*(1+x/100)),m));
-  const mtm=m.pricingComplete?xs.map(x=>mtmPnlTotal(Math.max(.0001,m.S*(1+x/100)),m,ratio)):null;
+  const scenarios=xs.map(x=>evaluateScenario(Math.max(.0001,m.S*(1+x/100)),m,ratio));
+  const expiry=scenarios.map(x=>x.expiry??expiryPnlTotal(x.spot,m));
+  const mtm=m.pricingComplete?scenarios.map(x=>x.mtm):null;
   const values=mtm?[...expiry,...mtm]:expiry.slice();
   let ymin=Math.min(0,...values),ymax=Math.max(0,...values),extra=(ymax-ymin||1)*.12;
   ymin-=extra;ymax+=extra;
@@ -692,6 +698,7 @@ function calculateReturnMilestones(m,risk){
  });
 }
 function updateAll(){
+ reconcileScenarioDate();
  updateBudgetSizing();
   applyPricingModeUI();
   const m=model(),risk=analyzeRisk(m);
@@ -729,6 +736,13 @@ function updateAll(){
   drawChart(m,risk);
   renderTable(m,risk);
 }
+function reconcileScenarioDate(){
+ const date=$('scenarioDate'),entry=$('entryDate').value,expiry=$('expiryDate').value;
+ if(!entry||!expiry)return;
+ date.min=entry;date.max=expiry;
+ if(!date.value||date.value<entry)date.value=entry;
+ if(date.value>expiry)date.value=expiry;
+}
 function updateScenarioDateLabel(){
   const v=$('scenarioDate').value;if(!v){$('scenarioDateLabel').textContent='editável';return}
   const a=v.split('-');$('scenarioDateLabel').textContent=a.length===3?(a[2]+'/'+a[1]+'/'+a[0]):v;
@@ -741,7 +755,7 @@ function updateSlider(m,risk){
 }
 function updateScenario(m){
   const mv=num($('moveRange').value),Sf=Math.max(.0001,m.S*(1+mv/100)),ratio=num($('ivRatio').value)/100;
-  const exp=m.pricingComplete?expiryPnlTotal(Sf,m):null,mtm=m.pricingComplete?mtmPnlTotal(Sf,m,ratio):null,netOpt=m.pricingComplete?scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units:null;
+  const values=evaluateScenario(Sf,m,ratio),exp=values.expiry,mtm=values.mtm,netOpt=values.optionValue;
   $('moveLabel').textContent=isSpotPercentMode()?fmt1(100+mv)+'% do spot':pct(mv);$('ivRatioLabel').textContent=fmt0(num($('ivRatio').value))+'%';
   $('simSpot').textContent=brl(Sf);$('simSpotSub').textContent=isSpotPercentMode()?fmt1(100+mv)+'% do spot':pct(mv);
   $('simExpiryPnl').textContent=exp==null?'—':(exp>=0?'+':'')+brl(exp);$('simExpiryPnl').className='value '+(exp==null?'':(exp>=0?'positive':'negative'));
@@ -764,14 +778,41 @@ function drawChart(m,risk){
   ctx.fillStyle='#1F3249';ctx.fillRect(W-290,17,16,3);ctx.fillStyle='#56636e';ctx.fillText(m.pricingComplete?'Vencimento':'Estrutural · prêmios pendentes',W-268,22);
   if(d.mtm){ctx.strokeStyle='#BA8758';ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(W-138,18);ctx.lineTo(W-122,18);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#56636e';ctx.fillText('MTM cenário',W-116,22)}
 }
+function adaptiveScenarioRows(m,risk,low,high,limit=11){
+ const anchors=[];
+ const add=(spot,tag,priority=2)=>{
+  if(!(spot>=0&&m.S>0))return;
+  const move=(spot/m.S-1)*100;
+  if(move<low-.001||move>high+.001)return;
+  const existing=anchors.find(x=>Math.abs(x.spot-spot)<m.S*.001);
+  if(existing){if(priority<existing.priority){existing.spot=spot;existing.priority=priority}if(tag&&!existing.tags.includes(tag))existing.tags.push(tag);return}
+  anchors.push({spot,move,tags:tag?[tag]:[],priority});
+ };
+ const byMove=(pct,tag,priority)=>add(m.S*(1+pct/100),tag,priority);
+ byMove(0,'SPOT',0);byMove(num($('moveRange').value),'CEN.',0);
+ (risk.bes||[]).forEach(v=>add(v,'BE',0));
+ state.legs.forEach(l=>add(num(l.strike),l.type.toUpperCase(),1));
+ calculateReturnMilestones(m,risk).forEach(item=>item.spots.forEach(v=>add(v,'+'+item.pct+'%',0)));
+ const targets=[-30,-25,-20,-15,-10,-5,5,10,15,20,25,30];
+ const slope=OptionEngine.highSlope(enginePayload(m));
+ const downside=state.legs.some(l=>l.type==='put'&&l.side==='buy')&&slope<=0;
+ const upside=state.legs.some(l=>l.type==='call'&&l.side==='buy')&&slope>=0;
+ const preferred=downside&&!upside?[-30,-25,-20,-15,-10,-5,10]:upside&&!downside?[30,25,20,15,10,5,-10]:targets;
+ preferred.forEach((v,i)=>byMove(v,'',3+i*.01));
+ byMove(low,'',4);byMove(high,'',4);
+ const sorted=anchors.sort((a,b)=>a.priority-b.priority||Math.abs(a.move)-Math.abs(b.move));
+ const chosen=sorted.slice(0,limit).sort((a,b)=>a.spot-b.spot);
+ return chosen.map(a=>({movePct:a.move,spot:a.spot,tag:a.tags.join('/'),...evaluateScenario(Math.max(.0001,a.spot),m)}));
+}
 function renderTable(m,risk){
-  const R=chartRange(m,risk),lo=-Math.min(99,R),moves=[lo,lo*.75,lo*.5,lo*.25,0,R*.25,R*.5,R*.75,R].map(x=>Math.round(x*10)/10);
-  const ratio=num($('ivRatio').value)/100;
-  const firstHead=isSpotPercentMode()?'Ativo (% do spot)':'Movimento';
-  let h='<thead><tr><th>'+firstHead+'</th><th>Spot (R$)</th><th>'+(m.pricingComplete?'P/L vencimento':'Payoff estrutural')+'</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
-  moves.forEach(mv=>{const Sf=Math.max(.0001,m.S*(1+mv/100)),e=expiryPnlTotal(Sf,m),x=m.pricingComplete?mtmPnlTotal(Sf,m,ratio):null,v=m.pricingComplete?scenarioOptionNetValuePerUnit(Sf,m,ratio)*m.units:null;
-    h+='<tr><td>'+(isSpotPercentMode()?fmt1(100+mv)+'%':pct(mv))+'</td><td>'+brl(Sf)+'</td><td class="'+(e>=0?'positive':'negative')+'">'+(e>=0?'+':'')+brl(e)+'</td><td class="'+(x==null?'':(x>=0?'positive':'negative'))+'">'+(x==null?'—':(x>=0?'+':'')+brl(x))+'</td><td>'+(v==null?'—':(v>=0?'+':'')+brl(v))+'</td></tr>'});
-  $('scenarioTable').innerHTML=h+'</tbody>';
+ const R=chartRange(m,risk),lo=-Math.min(99,R),ratio=num($('ivRatio').value)/100;
+ const rows=adaptiveScenarioRows(m,risk,lo,R,11);
+ const firstHead=isSpotPercentMode()?'Ativo (% do spot)':'Movimento';
+ let h='<thead><tr><th>'+firstHead+'</th><th>Spot (R$)</th><th>'+(m.pricingComplete?'P/L vencimento':'Payoff estrutural')+'</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
+ rows.forEach(row=>{const e=row.expiry??expiryPnlTotal(row.spot,m),x=row.mtm,v=row.optionValue;
+  const label=(isSpotPercentMode()?fmt1(100+row.movePct)+'%':pct(row.movePct))+(row.tag?' · '+row.tag:'');
+  h+='<tr><td>'+label+'</td><td>'+brl(row.spot)+'</td><td class="'+(e>=0?'positive':'negative')+'">'+(e>=0?'+':'')+brl(e)+'</td><td class="'+(x==null?'':(x>=0?'positive':'negative'))+'">'+(x==null?'—':(x>=0?'+':'')+brl(x))+'</td><td>'+(v==null?'—':(v>=0?'+':'')+brl(v))+'</td></tr>'});
+ $('scenarioTable').innerHTML=h+'</tbody>';
 }
 
 const PRESENTATION_MODE='nominal';
@@ -783,16 +824,17 @@ function buildPresentationModel(){
   const low=range.lowPct,high=range.highPct,ratio=num($('ivRatio').value)/100;
   const xs=[];
   for(let x=low;x<=high+.001;x+=(high-low)/260)xs.push(x);
-  const expiry=xs.map(x=>expiryPnlTotal(Math.max(.0001,m.S*(1+x/100)),m));
-  const mtm=m.pricingComplete?xs.map(x=>mtmPnlTotal(Math.max(.0001,m.S*(1+x/100)),m,ratio)):null;
+  const scenarios=xs.map(x=>evaluateScenario(Math.max(.0001,m.S*(1+x/100)),m,ratio));
+  const expiry=scenarios.map(x=>x.expiry??expiryPnlTotal(x.spot,m));
+  const mtm=m.pricingComplete?scenarios.map(x=>x.mtm):null;
   const allY=mtm?[...expiry,...mtm]:expiry.slice();
   let ymin=Math.min(0,...allY),ymax=Math.max(0,...allY),ypad=(ymax-ymin||1)*.12;
   ymin-=ypad;ymax+=ypad;
 
   const move=num($('moveRange').value);
   const scenarioSpot=Math.max(.0001,m.S*(1+move/100));
-  const scenarioExpiry=m.pricingComplete?expiryPnlTotal(scenarioSpot,m):null;
-  const scenarioMtm=m.pricingComplete?mtmPnlTotal(scenarioSpot,m,ratio):null;
+  const scenarioResult=evaluateScenario(scenarioSpot,m,ratio);
+  const scenarioExpiry=scenarioResult.expiry,scenarioMtm=scenarioResult.mtm;
 
   const legs=state.legs.map((l,i)=>({
     side:l.side,type:l.type,qty:Math.max(1,num(l.qty)),strike:num(l.strike),
@@ -800,49 +842,10 @@ function buildPresentationModel(){
     price:num(l.price),pricePct:m.S>0?valuePctSpot(l.price,m.S):0,iv:m.legIV[i]||0
   }));
 
-  const anchors=[];
-  legs.forEach(l=>{if(m.S>0&&l.strike>0)anchors.push({mv:(l.strike/m.S-1)*100,tag:l.type.toUpperCase()})});
-  if(m.pricingComplete)(risk.bes||[]).forEach(be=>{if(m.S>0&&be>0)anchors.push({mv:(be/m.S-1)*100,tag:'BE'})});
-  anchors.push({mv:0,tag:'SPOT'});
-  if(Number.isFinite(move))anchors.push({mv:move,tag:'CEN.'});
-
-  const base=[low,-30,-20,-10,0,10,20,30,high,move].filter(v=>Number.isFinite(v)&&v>=low-.01&&v<=high+.01);
-  anchors.forEach(a=>{if(a.mv>=low-.01&&a.mv<=high+.01)base.push(a.mv)});
-  const clean=[];
-  base.sort((a,b)=>a-b).forEach(v=>{
-    const x=Math.round(v*10)/10;
-    if(!clean.length||Math.abs(x-clean[clean.length-1])>.15)clean.push(x);
-  });
-
-  let rows=clean;
-  if(rows.length>11){
-    const priority=[];
-    [low,high,0,move].forEach(v=>{if(Number.isFinite(v))priority.push(v)});
-    anchors.forEach(a=>priority.push(a.mv));
-    [-30,-20,-10,10,20,30].forEach(v=>priority.push(v));
-    const picked=[];
-    priority.filter(v=>v>=low-.01&&v<=high+.01).forEach(v=>{
-      const x=Math.round(v*10)/10;
-      if(!picked.some(p=>Math.abs(p-x)<=.15)&&picked.length<11)picked.push(x);
-    });
-    rows=picked.sort((a,b)=>a-b);
-  }
-
-  function tagFor(mv){
-    const matches=anchors.filter(a=>Math.abs(a.mv-mv)<=.16).map(a=>a.tag);
-    return [...new Set(matches)].join('/');
-  }
+  const rows=adaptiveScenarioRows(m,risk,low,high,11);
 
   const riskBase=m.pricingComplete&&risk.maxLoss!==-Infinity?Math.abs(Math.min(0,risk.maxLoss)):0;
-  const tableRows=rows.map(mv=>{
-    const spot=Math.max(.0001,m.S*(1+mv/100));
-    const pExp=m.pricingComplete?expiryPnlTotal(spot,m):null;
-    const pMtm=m.pricingComplete?mtmPnlTotal(spot,m,ratio):null;
-    return {
-      movePct:mv,spot,pExp,pMtm,tag:tagFor(mv),
-      returnPct:riskBase>0&&pExp!=null?pExp/riskBase*100:null
-    };
-  });
+  const tableRows=rows.map(row=>({...row,pExp:row.expiry,pMtm:row.mtm,returnPct:riskBase>0&&row.expiry!=null?row.expiry/riskBase*100:null}));
 
   return {
     presentationMode:PRESENTATION_MODE,m,risk,st,milestones:calculateReturnMilestones(m,risk),range:{lowPct:low,highPct:high},
@@ -1117,6 +1120,8 @@ function initializeOperationDates(){
   if(!$('expiryDate').value||$('expiryDate').value<=today){
     $('expiryDate').value=datePlusCalendarDays(today,30);
   }
+  $('scenarioDate').value=today;
+  reconcileScenarioDate();
 }
 async function init(){
   initializeOperationDates();
