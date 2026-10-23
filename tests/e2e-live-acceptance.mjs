@@ -122,8 +122,9 @@ await waitReady(page);
 assert(await page.locator('#entryDate').inputValue()===todayBr,'Novo carregamento não restaurou data-base de hoje');
 console.log('PASS data-base Brasília + edição manual preservada no snapshot');
 
-// Regressão BOVA11: Put com prêmio acima do limite teórico não é validada.
+// Regressão BOVA11: prêmio acima do limite de opção europeia com taxa positiva.
 await selectStrategy(page,'long_put',1,false);
+await fillControl(page,'#rateInput','12');
 await page.locator('#spotInput').fill('201.12');
 await fillControl(page,'#entryDate','2026-10-23');
 await page.locator('#expiryDate').fill('2027-03-19');
@@ -146,6 +147,7 @@ const validPut=await page.evaluate(()=>{updateAll();const m=model(),r=analyzeRis
 assert(validPut.ok&&validPut.iv>0&&validPut.iv<5,'Put plausível deveria calibrar IV sem teto artificial');
 assert(validPut.maxGain>0,'Put plausível deveria permitir ganho no cenário de queda');
 console.log('PASS Put BOVA11 inválida bloqueada / Put válida precificada');
+await fillControl(page,'#rateInput','0'); // restaura premissa padrão aos demais cenários
 
 // UX simples: campos centrais visíveis e técnico recolhido; alternância reversível.
 assert(await page.locator('#simpleUi').count()===1,'Botão de montagem simples ausente');
@@ -176,6 +178,8 @@ console.log('PASS UX simples/avançada, quantidade, conversão e quatro pernas')
 
 // Dimensionamento em orçamento (prêmio + custos) e marcos no vencimento.
 await selectStrategy(page,'long_put',1,false);
+await fillControl(page,'#lotSize','100');
+await fillControl(page,'#lots','1');
 await page.locator('#spotInput').fill('201.12');
 await fillControl(page,'#entryDate','2026-10-23');
 await page.locator('#expiryDate').fill('2027-03-19');
