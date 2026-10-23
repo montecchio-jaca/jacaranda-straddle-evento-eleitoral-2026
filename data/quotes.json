@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-22T20:28:04.838600Z",
+  "generated_at_utc": "2026-10-23T12:57:34.955846Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
-  "universe_count": 366,
+  "universe_count": 904,
   "quotes": {
     "AALR3": {
       "symbol": "AALR3",
@@ -25,6 +25,17 @@
       "previous_close": 28.94,
       "market_state": null
     },
+    "ABCP11": {
+      "symbol": "ABCP11",
+      "name": "ABCP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ABCP11.SA",
+      "price": 77.18,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:27Z",
+      "previous_close": 77.5,
+      "market_state": null
+    },
     "ABEV3": {
       "symbol": "ABEV3",
       "name": "AMBEV S.A.",
@@ -34,6 +45,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:58Z",
       "previous_close": 16.69,
+      "market_state": null
+    },
+    "ABTC11": {
+      "symbol": "ABTC11",
+      "name": "ABTC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ABTC11.SA",
+      "price": 123.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 125.28,
+      "market_state": null
+    },
+    "ACWI11": {
+      "symbol": "ACWI11",
+      "name": "ACWI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ACWI11.SA",
+      "price": 16.73,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 17.08,
+      "market_state": null
+    },
+    "ADSH11": {
+      "symbol": "ADSH11",
+      "name": "ADSH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ADSH11.SA",
+      "price": 10.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:41:04Z",
+      "previous_close": 10.07,
       "market_state": null
     },
     "AERI3": {
@@ -47,6 +91,28 @@
       "previous_close": 2.63,
       "market_state": null
     },
+    "AFHF11": {
+      "symbol": "AFHF11",
+      "name": "AFHF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AFHF11.SA",
+      "price": 10.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:45:14Z",
+      "previous_close": 10.43,
+      "market_state": null
+    },
+    "AFHI11": {
+      "symbol": "AFHI11",
+      "name": "AFHI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AFHI11.SA",
+      "price": 96.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 97.56,
+      "market_state": null
+    },
     "AFLT3": {
       "symbol": "AFLT3",
       "name": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
@@ -56,6 +122,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T17:35:50Z",
       "previous_close": 7.0,
+      "market_state": null
+    },
+    "AGGX11": {
+      "symbol": "AGGX11",
+      "name": "AGGX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AGGX11.SA",
+      "price": 48.59,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 48.286,
+      "market_state": null
+    },
+    "AGRI11": {
+      "symbol": "AGRI11",
+      "name": "AGRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AGRI11.SA",
+      "price": 48.22,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:30Z",
+      "previous_close": 47.22,
       "market_state": null
     },
     "AGRO3": {
@@ -91,6 +179,28 @@
       "previous_close": 23.0,
       "market_state": null
     },
+    "AIEC11": {
+      "symbol": "AIEC11",
+      "name": "AIEC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AIEC11.SA",
+      "price": 73.24,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 69.28,
+      "market_state": null
+    },
+    "AJFI11": {
+      "symbol": "AJFI11",
+      "name": "AJFI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AJFI11.SA",
+      "price": 8.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:39Z",
+      "previous_close": 8.6,
+      "market_state": null
+    },
     "ALLD3": {
       "symbol": "ALLD3",
       "name": "ALLIED TECNOLOGIA S.A.",
@@ -100,6 +210,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:00Z",
       "previous_close": 6.3,
+      "market_state": null
+    },
+    "ALMI11": {
+      "symbol": "ALMI11",
+      "name": "ALMI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ALMI11.SA",
+      "price": 640.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:16:16Z",
+      "previous_close": 640.0,
       "market_state": null
     },
     "ALOS3": {
@@ -146,6 +267,17 @@
       "previous_close": 5.37,
       "market_state": null
     },
+    "ALUG11": {
+      "symbol": "ALUG11",
+      "name": "ALUG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ALUG11.SA",
+      "price": 40.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 39.95,
+      "market_state": null
+    },
     "ALUP11": {
       "symbol": "ALUP11",
       "name": "ALUPAR INVESTIMENTO S/A",
@@ -177,6 +309,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:54:30Z",
       "previous_close": 12.3,
+      "market_state": null
+    },
+    "ALZC11": {
+      "symbol": "ALZC11",
+      "name": "ALZC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ALZC11.SA",
+      "price": 7.22,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 7.31,
+      "market_state": null
+    },
+    "ALZR11": {
+      "symbol": "ALZR11",
+      "name": "ALZR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ALZR11.SA",
+      "price": 10.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 10.39,
+      "market_state": null
+    },
+    "AMAB11": {
+      "symbol": "AMAB11",
+      "name": "AMAB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AMAB11.SA",
+      "price": 10.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 10.22,
       "market_state": null
     },
     "AMAR3": {
@@ -223,6 +388,17 @@
       "previous_close": 13.6,
       "market_state": null
     },
+    "ANCR11": {
+      "symbol": "ANCR11",
+      "name": "ANCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ANCR11.SA",
+      "price": 200.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:38:06Z",
+      "previous_close": 240.0,
+      "market_state": null
+    },
     "ANIM3": {
       "symbol": "ANIM3",
       "name": "ANIMA HOLDING S.A.",
@@ -232,6 +408,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:40Z",
       "previous_close": 5.25,
+      "market_state": null
+    },
+    "APTO11": {
+      "symbol": "APTO11",
+      "name": "APTO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "APTO11.SA",
+      "price": 6.51,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 6.6,
+      "market_state": null
+    },
+    "APXM11": {
+      "symbol": "APXM11",
+      "name": "APXM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "APXM11.SA",
+      "price": 49.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:27Z",
+      "previous_close": 61.0,
+      "market_state": null
+    },
+    "APXR11": {
+      "symbol": "APXR11",
+      "name": "APXR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "APXR11.SA",
+      "price": 95.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T13:30:58Z",
+      "previous_close": 95.0,
+      "market_state": null
+    },
+    "AREA11": {
+      "symbol": "AREA11",
+      "name": "AREA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AREA11.SA",
+      "price": 113.76,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 112.43,
+      "market_state": null
+    },
+    "ARGE11": {
+      "symbol": "ARGE11",
+      "name": "ARGE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ARGE11.SA",
+      "price": 11.44,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 11.92,
       "market_state": null
     },
     "ARML3": {
@@ -256,6 +487,50 @@
       "previous_close": 0.67,
       "market_state": null
     },
+    "AROA11": {
+      "symbol": "AROA11",
+      "name": "AROA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AROA11.SA",
+      "price": 1.17,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 1.17,
+      "market_state": null
+    },
+    "ARRI11": {
+      "symbol": "ARRI11",
+      "name": "ARRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ARRI11.SA",
+      "price": 4.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 4.62,
+      "market_state": null
+    },
+    "ARTE11": {
+      "symbol": "ARTE11",
+      "name": "ARTE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ARTE11.SA",
+      "price": 6.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:24:43Z",
+      "previous_close": 6.7,
+      "market_state": null
+    },
+    "ARXD11": {
+      "symbol": "ARXD11",
+      "name": "ARXD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ARXD11.SA",
+      "price": 8.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:54:37Z",
+      "previous_close": 7.9,
+      "market_state": null
+    },
     "ASAI3": {
       "symbol": "ASAI3",
       "name": "SENDAS DISTRIBUIDORA S.A.",
@@ -278,6 +553,17 @@
       "previous_close": 1.04,
       "market_state": null
     },
+    "ATSA11": {
+      "symbol": "ATSA11",
+      "name": "ATSA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ATSA11.SA",
+      "price": 60.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T19:26:39Z",
+      "previous_close": 58.49,
+      "market_state": null
+    },
     "AUAU3": {
       "symbol": "AUAU3",
       "name": "UNIÃO PET PARTICIPAÇÕES S.A.",
@@ -287,6 +573,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:56Z",
       "previous_close": 5.01,
+      "market_state": null
+    },
+    "AUPO11": {
+      "symbol": "AUPO11",
+      "name": "AUPO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AUPO11.SA",
+      "price": 112.64,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:17:00Z",
+      "previous_close": 112.16,
       "market_state": null
     },
     "AURE3": {
@@ -300,6 +597,28 @@
       "previous_close": 14.85,
       "market_state": null
     },
+    "AURO11": {
+      "symbol": "AURO11",
+      "name": "AURO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AURO11.SA",
+      "price": 86.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 90.55,
+      "market_state": null
+    },
+    "AUVP11": {
+      "symbol": "AUVP11",
+      "name": "AUVP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AUVP11.SA",
+      "price": 150.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 150.12,
+      "market_state": null
+    },
     "AVLL3": {
       "symbol": "AVLL3",
       "name": "ALPHAVILLE S.A.",
@@ -309,6 +628,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T14:03:15Z",
       "previous_close": 5.51,
+      "market_state": null
+    },
+    "AVUR11": {
+      "symbol": "AVUR11",
+      "name": "AVUR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AVUR11.SA",
+      "price": 87.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T16:40:21Z",
+      "previous_close": 87.57,
       "market_state": null
     },
     "AXIA3": {
@@ -353,6 +683,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:06:00Z",
       "previous_close": 1.15,
+      "market_state": null
+    },
+    "AZPL11": {
+      "symbol": "AZPL11",
+      "name": "AZPL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "AZPL11.SA",
+      "price": 7.25,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 7.2,
       "market_state": null
     },
     "AZTE3": {
@@ -454,6 +795,72 @@
       "previous_close": 20.73,
       "market_state": null
     },
+    "BBFO11": {
+      "symbol": "BBFO11",
+      "name": "BBFO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBFO11.SA",
+      "price": 68.74,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:45Z",
+      "previous_close": 68.66,
+      "market_state": null
+    },
+    "BBIG11": {
+      "symbol": "BBIG11",
+      "name": "BBIG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBIG11.SA",
+      "price": 5.81,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 5.81,
+      "market_state": null
+    },
+    "BBOI11": {
+      "symbol": "BBOI11",
+      "name": "BBOI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBOI11.SA",
+      "price": 12.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:39:40Z",
+      "previous_close": 12.67,
+      "market_state": null
+    },
+    "BBOV11": {
+      "symbol": "BBOV11",
+      "name": "BBOV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBOV11.SA",
+      "price": 107.33,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 107.62,
+      "market_state": null
+    },
+    "BBRC11": {
+      "symbol": "BBRC11",
+      "name": "BBRC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBRC11.SA",
+      "price": 102.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:51Z",
+      "previous_close": 101.03,
+      "market_state": null
+    },
+    "BBSD11": {
+      "symbol": "BBSD11",
+      "name": "BBSD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BBSD11.SA",
+      "price": 156.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:58:33Z",
+      "previous_close": 153.48,
+      "market_state": null
+    },
     "BBSE3": {
       "symbol": "BBSE3",
       "name": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
@@ -463,6 +870,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:52Z",
       "previous_close": 41.57,
+      "market_state": null
+    },
+    "BCIA11": {
+      "symbol": "BCIA11",
+      "name": "BCIA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BCIA11.SA",
+      "price": 89.83,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:11Z",
+      "previous_close": 91.05,
+      "market_state": null
+    },
+    "BCIC11": {
+      "symbol": "BCIC11",
+      "name": "BCIC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BCIC11.SA",
+      "price": 157.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 155.53,
+      "market_state": null
+    },
+    "BCRI11": {
+      "symbol": "BCRI11",
+      "name": "BCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BCRI11.SA",
+      "price": 58.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 56.8,
+      "market_state": null
+    },
+    "BDAP11": {
+      "symbol": "BDAP11",
+      "name": "BDAP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BDAP11.SA",
+      "price": 13.66,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:33:45Z",
+      "previous_close": 13.64,
+      "market_state": null
+    },
+    "BDEF11": {
+      "symbol": "BDEF11",
+      "name": "BDEF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BDEF11.SA",
+      "price": 191.18,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 188.55,
       "market_state": null
     },
     "BDLL3": {
@@ -485,6 +947,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T17:37:30Z",
       "previous_close": 3.02,
+      "market_state": null
+    },
+    "BDOM11": {
+      "symbol": "BDOM11",
+      "name": "BDOM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BDOM11.SA",
+      "price": 162.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 160.25,
       "market_state": null
     },
     "BEEF3": {
@@ -520,6 +993,17 @@
       "previous_close": 9.8,
       "market_state": null
     },
+    "BEST11": {
+      "symbol": "BEST11",
+      "name": "BEST11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BEST11.SA",
+      "price": 130.31,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 129.66,
+      "market_state": null
+    },
     "BGIP3": {
       "symbol": "BGIP3",
       "name": "BCO ESTADO DE SERGIPE S.A. - BANESE",
@@ -542,6 +1026,17 @@
       "previous_close": 36.12,
       "market_state": null
     },
+    "BGRB11": {
+      "symbol": "BGRB11",
+      "name": "BGRB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BGRB11.SA",
+      "price": 131.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-16T15:08:47Z",
+      "previous_close": 131.99,
+      "market_state": null
+    },
     "BHIA3": {
       "symbol": "BHIA3",
       "name": "GRUPO CASAS BAHIA S.A.",
@@ -551,6 +1046,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 1.11,
+      "market_state": null
+    },
+    "BICE11": {
+      "symbol": "BICE11",
+      "name": "BICE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BICE11.SA",
+      "price": 400.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-15T18:26:43Z",
+      "previous_close": 400.0,
       "market_state": null
     },
     "BIED3": {
@@ -564,6 +1070,17 @@
       "previous_close": 5.35,
       "market_state": null
     },
+    "BIME11": {
+      "symbol": "BIME11",
+      "name": "BIME11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BIME11.SA",
+      "price": 5.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 4.98,
+      "market_state": null
+    },
     "BIOM3": {
       "symbol": "BIOM3",
       "name": "BIOMM S.A.",
@@ -575,6 +1092,50 @@
       "previous_close": 6.1,
       "market_state": null
     },
+    "BITC11": {
+      "symbol": "BITC11",
+      "name": "BITC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BITC11.SA",
+      "price": 66.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 68.14,
+      "market_state": null
+    },
+    "BITH11": {
+      "symbol": "BITH11",
+      "name": "BITH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BITH11.SA",
+      "price": 92.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:18:35Z",
+      "previous_close": 94.63,
+      "market_state": null
+    },
+    "BITI11": {
+      "symbol": "BITI11",
+      "name": "BITI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BITI11.SA",
+      "price": 36.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 37.54,
+      "market_state": null
+    },
+    "BIZD11": {
+      "symbol": "BIZD11",
+      "name": "BIZD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BIZD11.SA",
+      "price": 70.73,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 72.36,
+      "market_state": null
+    },
     "BLAU3": {
       "symbol": "BLAU3",
       "name": "BLAU FARMACÊUTICA S.A.",
@@ -584,6 +1145,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:33Z",
       "previous_close": 12.5,
+      "market_state": null
+    },
+    "BLCA11": {
+      "symbol": "BLCA11",
+      "name": "BLCA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BLCA11.SA",
+      "price": 97.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:19:06Z",
+      "previous_close": 98.89,
+      "market_state": null
+    },
+    "BLFT11": {
+      "symbol": "BLFT11",
+      "name": "BLFT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BLFT11.SA",
+      "price": 114.46,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 114.15,
+      "market_state": null
+    },
+    "BLMG11": {
+      "symbol": "BLMG11",
+      "name": "BLMG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BLMG11.SA",
+      "price": 32.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 32.33,
+      "market_state": null
+    },
+    "BLMO11": {
+      "symbol": "BLMO11",
+      "name": "BLMO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BLMO11.SA",
+      "price": 96.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T16:49:38Z",
+      "previous_close": 96.0,
+      "market_state": null
+    },
+    "BLOG11": {
+      "symbol": "BLOG11",
+      "name": "BLOG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BLOG11.SA",
+      "price": 6.06,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T20:00:00Z",
+      "previous_close": 5.99,
       "market_state": null
     },
     "BMEB3": {
@@ -630,6 +1246,39 @@
       "previous_close": 388.99,
       "market_state": null
     },
+    "BMLC11": {
+      "symbol": "BMLC11",
+      "name": "BMLC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BMLC11.SA",
+      "price": 99.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T13:00:00Z",
+      "previous_close": 98.98,
+      "market_state": null
+    },
+    "BMLT11": {
+      "symbol": "BMLT11",
+      "name": "BMLT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BMLT11.SA",
+      "price": 106.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:05:47Z",
+      "previous_close": 109.0,
+      "market_state": null
+    },
+    "BMMT11": {
+      "symbol": "BMMT11",
+      "name": "BMMT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BMMT11.SA",
+      "price": 176.64,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 175.67,
+      "market_state": null
+    },
     "BMOB3": {
       "symbol": "BMOB3",
       "name": "BEMOBI MOBILE TECH S.A.",
@@ -652,6 +1301,39 @@
       "previous_close": 114.01,
       "market_state": null
     },
+    "BNDX11": {
+      "symbol": "BNDX11",
+      "name": "BNDX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BNDX11.SA",
+      "price": 95.26,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 96.09,
+      "market_state": null
+    },
+    "BNFS11": {
+      "symbol": "BNFS11",
+      "name": "BNFS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BNFS11.SA",
+      "price": 36.2,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:27:28Z",
+      "previous_close": 36.3,
+      "market_state": null
+    },
+    "BNKS11": {
+      "symbol": "BNKS11",
+      "name": "BNKS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BNKS11.SA",
+      "price": 57.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 57.52,
+      "market_state": null
+    },
     "BOBR4": {
       "symbol": "BOBR4",
       "name": "BOMBRIL S.A.",
@@ -661,6 +1343,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:00Z",
       "previous_close": 1.66,
+      "market_state": null
+    },
+    "BOVA11": {
+      "symbol": "BOVA11",
+      "name": "BOVA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BOVA11.SA",
+      "price": 200.96,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:18:30Z",
+      "previous_close": 201.39,
+      "market_state": null
+    },
+    "BOVB11": {
+      "symbol": "BOVB11",
+      "name": "BOVB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BOVB11.SA",
+      "price": 209.4,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 209.62,
+      "market_state": null
+    },
+    "BOVS11": {
+      "symbol": "BOVS11",
+      "name": "BOVS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BOVS11.SA",
+      "price": 156.16,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 157.64,
+      "market_state": null
+    },
+    "BOVV11": {
+      "symbol": "BOVV11",
+      "name": "BOVV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BOVV11.SA",
+      "price": 210.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 211.24,
+      "market_state": null
+    },
+    "BOVX11": {
+      "symbol": "BOVX11",
+      "name": "BOVX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BOVX11.SA",
+      "price": 21.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 21.02,
       "market_state": null
     },
     "BPAC11": {
@@ -696,6 +1433,28 @@
       "previous_close": 25.98,
       "market_state": null
     },
+    "BPML11": {
+      "symbol": "BPML11",
+      "name": "BPML11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BPML11.SA",
+      "price": 91.16,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 92.5,
+      "market_state": null
+    },
+    "BPRE11": {
+      "symbol": "BPRE11",
+      "name": "BPRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BPRE11.SA",
+      "price": 115.74,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 115.37,
+      "market_state": null
+    },
     "BRAP3": {
       "symbol": "BRAP3",
       "name": "BRADESPAR S.A.",
@@ -729,6 +1488,28 @@
       "previous_close": 20.69,
       "market_state": null
     },
+    "BRAX11": {
+      "symbol": "BRAX11",
+      "name": "BRAX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRAX11.SA",
+      "price": 171.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 170.89,
+      "market_state": null
+    },
+    "BRAZ11": {
+      "symbol": "BRAZ11",
+      "name": "BRAZ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRAZ11.SA",
+      "price": 13.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 13.73,
+      "market_state": null
+    },
     "BRBI11": {
       "symbol": "BRBI11",
       "name": "BRBI BR PARTNERS S.A.",
@@ -738,6 +1519,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 18.2,
+      "market_state": null
+    },
+    "BRCO11": {
+      "symbol": "BRCO11",
+      "name": "BRCO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRCO11.SA",
+      "price": 113.96,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 111.51,
+      "market_state": null
+    },
+    "BRCR11": {
+      "symbol": "BRCR11",
+      "name": "BRCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRCR11.SA",
+      "price": 45.76,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 45.85,
+      "market_state": null
+    },
+    "BREW11": {
+      "symbol": "BREW11",
+      "name": "BREW11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BREW11.SA",
+      "price": 167.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 165.89,
+      "market_state": null
+    },
+    "BRIA11": {
+      "symbol": "BRIA11",
+      "name": "BRIA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRIA11.SA",
+      "price": 97.31,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 99.29,
+      "market_state": null
+    },
+    "BRIP11": {
+      "symbol": "BRIP11",
+      "name": "BRIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRIP11.SA",
+      "price": 400.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-16T13:08:40Z",
+      "previous_close": 400.0,
       "market_state": null
     },
     "BRKM3": {
@@ -771,6 +1607,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-21T18:49:27Z",
       "previous_close": 3.99,
+      "market_state": null
+    },
+    "BROF11": {
+      "symbol": "BROF11",
+      "name": "BROF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BROF11.SA",
+      "price": 62.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 63.45,
       "market_state": null
     },
     "BRSR3": {
@@ -817,6 +1664,17 @@
       "previous_close": 3.18,
       "market_state": null
     },
+    "BRXC11": {
+      "symbol": "BRXC11",
+      "name": "BRXC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BRXC11.SA",
+      "price": 155.38,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 155.76,
+      "market_state": null
+    },
     "BSLI3": {
       "symbol": "BSLI3",
       "name": "BRB BCO DE BRASILIA S.A.",
@@ -839,6 +1697,138 @@
       "previous_close": 2.26,
       "market_state": null
     },
+    "BSLT11": {
+      "symbol": "BSLT11",
+      "name": "BSLT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BSLT11.SA",
+      "price": 59.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 60.03,
+      "market_state": null
+    },
+    "BTCI11": {
+      "symbol": "BTCI11",
+      "name": "BTCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTCI11.SA",
+      "price": 9.07,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 9.1,
+      "market_state": null
+    },
+    "BTER11": {
+      "symbol": "BTER11",
+      "name": "BTER11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTER11.SA",
+      "price": 23.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 23.83,
+      "market_state": null
+    },
+    "BTHF11": {
+      "symbol": "BTHF11",
+      "name": "BTHF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTHF11.SA",
+      "price": 9.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:39Z",
+      "previous_close": 9.03,
+      "market_state": null
+    },
+    "BTHI11": {
+      "symbol": "BTHI11",
+      "name": "BTHI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTHI11.SA",
+      "price": 47.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:14Z",
+      "previous_close": 47.32,
+      "market_state": null
+    },
+    "BTLG11": {
+      "symbol": "BTLG11",
+      "name": "BTLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTLG11.SA",
+      "price": 104.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:00Z",
+      "previous_close": 104.4,
+      "market_state": null
+    },
+    "BTRU11": {
+      "symbol": "BTRU11",
+      "name": "BTRU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTRU11.SA",
+      "price": 83.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 83.5,
+      "market_state": null
+    },
+    "BTSI11": {
+      "symbol": "BTSI11",
+      "name": "BTSI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BTSI11.SA",
+      "price": 109.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-09T16:21:00Z",
+      "previous_close": 109.15,
+      "market_state": null
+    },
+    "BVBR11": {
+      "symbol": "BVBR11",
+      "name": "BVBR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BVBR11.SA",
+      "price": 24.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 24.65,
+      "market_state": null
+    },
+    "BXPO11": {
+      "symbol": "BXPO11",
+      "name": "BXPO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BXPO11.SA",
+      "price": 152.56,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 155.89,
+      "market_state": null
+    },
+    "BZEQ11": {
+      "symbol": "BZEQ11",
+      "name": "BZEQ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "BZEQ11.SA",
+      "price": 115.46,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 115.947,
+      "market_state": null
+    },
+    "CACR11": {
+      "symbol": "CACR11",
+      "name": "CACR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CACR11.SA",
+      "price": 14.51,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 14.7,
+      "market_state": null
+    },
     "CAMB3": {
       "symbol": "CAMB3",
       "name": "CAMBUCI S.A.",
@@ -859,6 +1849,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 6.42,
+      "market_state": null
+    },
+    "CAPE11": {
+      "symbol": "CAPE11",
+      "name": "CAPE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CAPE11.SA",
+      "price": 162.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 163.1,
+      "market_state": null
+    },
+    "CARE11": {
+      "symbol": "CARE11",
+      "name": "CARE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CARE11.SA",
+      "price": 3.94,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 5.5,
+      "market_state": null
+    },
+    "CASA11": {
+      "symbol": "CASA11",
+      "name": "CASA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CASA11.SA",
+      "price": 79.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:51:16Z",
+      "previous_close": 80.5,
       "market_state": null
     },
     "CASH3": {
@@ -894,6 +1917,28 @@
       "previous_close": 8.7,
       "market_state": null
     },
+    "CBOP11": {
+      "symbol": "CBOP11",
+      "name": "CBOP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CBOP11.SA",
+      "price": 28.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:18:34Z",
+      "previous_close": 27.65,
+      "market_state": null
+    },
+    "CCME11": {
+      "symbol": "CCME11",
+      "name": "CCME11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CCME11.SA",
+      "price": 9.29,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 9.24,
+      "market_state": null
+    },
     "CCTY3": {
       "symbol": "CCTY3",
       "name": "BELORA RDVC CITY DESENVOLVIMENTO  IMOBILIÁRIO S.A.",
@@ -903,6 +1948,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T17:38:28Z",
       "previous_close": 5.16,
+      "market_state": null
+    },
+    "CDIB11": {
+      "symbol": "CDIB11",
+      "name": "CDIB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CDIB11.SA",
+      "price": 53.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 52.89,
       "market_state": null
     },
     "CEAB3": {
@@ -982,6 +2038,17 @@
       "previous_close": 47.0,
       "market_state": null
     },
+    "CEOC11": {
+      "symbol": "CEOC11",
+      "name": "CEOC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CEOC11.SA",
+      "price": 42.4,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:44Z",
+      "previous_close": 43.14,
+      "market_state": null
+    },
     "CGAS3": {
       "symbol": "CGAS3",
       "name": "CIA GAS DE SAO PAULO - COMGAS",
@@ -1026,6 +2093,50 @@
       "previous_close": 24.64,
       "market_state": null
     },
+    "CHIP11": {
+      "symbol": "CHIP11",
+      "name": "CHIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CHIP11.SA",
+      "price": 32.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 34.88,
+      "market_state": null
+    },
+    "CJCT11": {
+      "symbol": "CJCT11",
+      "name": "CJCT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CJCT11.SA",
+      "price": 79.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:17:21Z",
+      "previous_close": 76.99,
+      "market_state": null
+    },
+    "CLIN11": {
+      "symbol": "CLIN11",
+      "name": "CLIN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CLIN11.SA",
+      "price": 93.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 89.0,
+      "market_state": null
+    },
+    "CLOB11": {
+      "symbol": "CLOB11",
+      "name": "CLOB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CLOB11.SA",
+      "price": 92.93,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 93.94,
+      "market_state": null
+    },
     "CLSC3": {
       "symbol": "CLSC3",
       "name": "CENTRAIS ELET DE SANTA CATARINA S.A.",
@@ -1046,6 +2157,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:48:28Z",
       "previous_close": 189.79,
+      "market_state": null
+    },
+    "CMDB11": {
+      "symbol": "CMDB11",
+      "name": "CMDB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CMDB11.SA",
+      "price": 17.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 18.0,
       "market_state": null
     },
     "CMIG3": {
@@ -1081,6 +2203,17 @@
       "previous_close": 4.86,
       "market_state": null
     },
+    "CNES11": {
+      "symbol": "CNES11",
+      "name": "CNES11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CNES11.SA",
+      "price": 1.58,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 1.65,
+      "market_state": null
+    },
     "COCE3": {
       "symbol": "COCE3",
       "name": "CIA ENERGETICA DO CEARA - COELCE",
@@ -1114,6 +2247,28 @@
       "previous_close": 2.9,
       "market_state": null
     },
+    "COIN11": {
+      "symbol": "COIN11",
+      "name": "COIN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "COIN11.SA",
+      "price": 42.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 44.5,
+      "market_state": null
+    },
+    "CORN11": {
+      "symbol": "CORN11",
+      "name": "CORN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CORN11.SA",
+      "price": 6.61,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:53:18Z",
+      "previous_close": 6.79,
+      "market_state": null
+    },
     "CPFE3": {
       "symbol": "CPFE3",
       "name": "CPFL ENERGIA S.A.",
@@ -1136,6 +2291,72 @@
       "previous_close": 17.37,
       "market_state": null
     },
+    "CPLG11": {
+      "symbol": "CPLG11",
+      "name": "CPLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CPLG11.SA",
+      "price": 11.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 11.13,
+      "market_state": null
+    },
+    "CPOF11": {
+      "symbol": "CPOF11",
+      "name": "CPOF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CPOF11.SA",
+      "price": 118.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:14:48Z",
+      "previous_close": 118.0,
+      "market_state": null
+    },
+    "CPSH11": {
+      "symbol": "CPSH11",
+      "name": "CPSH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CPSH11.SA",
+      "price": 10.09,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 10.13,
+      "market_state": null
+    },
+    "CPTS11": {
+      "symbol": "CPTS11",
+      "name": "CPTS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CPTS11.SA",
+      "price": 7.71,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 7.93,
+      "market_state": null
+    },
+    "CPUR11": {
+      "symbol": "CPUR11",
+      "name": "CPUR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CPUR11.SA",
+      "price": 10.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 10.49,
+      "market_state": null
+    },
+    "CRFF11": {
+      "symbol": "CRFF11",
+      "name": "CRFF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CRFF11.SA",
+      "price": 67.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:39:13Z",
+      "previous_close": 66.99,
+      "market_state": null
+    },
     "CRPG5": {
       "symbol": "CRPG5",
       "name": "TRONOX PIGMENTOS DO BRASIL S.A.",
@@ -1156,6 +2377,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T18:54:32Z",
       "previous_close": 8.89,
+      "market_state": null
+    },
+    "CRPT11": {
+      "symbol": "CRPT11",
+      "name": "CRPT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CRPT11.SA",
+      "price": 14.52,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:05Z",
+      "previous_close": 14.61,
       "market_state": null
     },
     "CSAN3": {
@@ -1246,6 +2478,17 @@
       "previous_close": 33.83,
       "market_state": null
     },
+    "CTXT11": {
+      "symbol": "CTXT11",
+      "name": "CTXT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CTXT11.SA",
+      "price": 4.38,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:06:00Z",
+      "previous_close": 4.49,
+      "market_state": null
+    },
     "CURY3": {
       "symbol": "CURY3",
       "name": "CURY CONSTRUTORA E INCORPORADORA S.A.",
@@ -1268,6 +2511,61 @@
       "previous_close": 1.47,
       "market_state": null
     },
+    "CXAG11": {
+      "symbol": "CXAG11",
+      "name": "CXAG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXAG11.SA",
+      "price": 73.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:30Z",
+      "previous_close": 73.21,
+      "market_state": null
+    },
+    "CXCE11": {
+      "symbol": "CXCE11",
+      "name": "CXCE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXCE11.SA",
+      "price": 41.09,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:26Z",
+      "previous_close": 40.85,
+      "market_state": null
+    },
+    "CXCI11": {
+      "symbol": "CXCI11",
+      "name": "CXCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXCI11.SA",
+      "price": 67.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:02:48Z",
+      "previous_close": 66.73,
+      "market_state": null
+    },
+    "CXCO11": {
+      "symbol": "CXCO11",
+      "name": "CXCO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXCO11.SA",
+      "price": 72.52,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:49:15Z",
+      "previous_close": 71.58,
+      "market_state": null
+    },
+    "CXRI11": {
+      "symbol": "CXRI11",
+      "name": "CXRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXRI11.SA",
+      "price": 70.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:31:25Z",
+      "previous_close": 67.52,
+      "market_state": null
+    },
     "CXSE3": {
       "symbol": "CXSE3",
       "name": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
@@ -1277,6 +2575,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:59Z",
       "previous_close": 21.21,
+      "market_state": null
+    },
+    "CXTL11": {
+      "symbol": "CXTL11",
+      "name": "CXTL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CXTL11.SA",
+      "price": 340.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T16:11:38Z",
+      "previous_close": 350.0,
+      "market_state": null
+    },
+    "CYCR11": {
+      "symbol": "CYCR11",
+      "name": "CYCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "CYCR11.SA",
+      "price": 8.67,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.72,
       "market_state": null
     },
     "CYRE3": {
@@ -1301,6 +2621,28 @@
       "previous_close": 30.69,
       "market_state": null
     },
+    "DAMA11": {
+      "symbol": "DAMA11",
+      "name": "DAMA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DAMA11.SA",
+      "price": 5.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:16:02Z",
+      "previous_close": 6.33,
+      "market_state": null
+    },
+    "DAMT11": {
+      "symbol": "DAMT11",
+      "name": "DAMT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DAMT11.SA",
+      "price": 15.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:44:12Z",
+      "previous_close": 16.2,
+      "market_state": null
+    },
     "DASA3": {
       "symbol": "DASA3",
       "name": "DIAGNOSTICOS DA AMERICA S.A.",
@@ -1312,6 +2654,39 @@
       "previous_close": 4.54,
       "market_state": null
     },
+    "DAYM11": {
+      "symbol": "DAYM11",
+      "name": "DAYM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DAYM11.SA",
+      "price": 4.09,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 4.07,
+      "market_state": null
+    },
+    "DEBB11": {
+      "symbol": "DEBB11",
+      "name": "DEBB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DEBB11.SA",
+      "price": 17.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:17:00Z",
+      "previous_close": 17.22,
+      "market_state": null
+    },
+    "DEFI11": {
+      "symbol": "DEFI11",
+      "name": "DEFI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DEFI11.SA",
+      "price": 17.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:35:02Z",
+      "previous_close": 18.64,
+      "market_state": null
+    },
     "DESK3": {
       "symbol": "DESK3",
       "name": "DESKTOP S.A.",
@@ -1321,6 +2696,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:45Z",
       "previous_close": 19.34,
+      "market_state": null
+    },
+    "DEVA11": {
+      "symbol": "DEVA11",
+      "name": "DEVA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DEVA11.SA",
+      "price": 18.19,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:43Z",
+      "previous_close": 17.9,
       "market_state": null
     },
     "DEXP3": {
@@ -1345,6 +2731,28 @@
       "previous_close": 7.97,
       "market_state": null
     },
+    "DIGY11": {
+      "symbol": "DIGY11",
+      "name": "DIGY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DIGY11.SA",
+      "price": 10.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 10.11,
+      "market_state": null
+    },
+    "DINF11": {
+      "symbol": "DINF11",
+      "name": "DINF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DINF11.SA",
+      "price": 11.46,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 11.434,
+      "market_state": null
+    },
     "DIRR3": {
       "symbol": "DIRR3",
       "name": "DIRECIONAL ENGENHARIA S.A.",
@@ -1354,6 +2762,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:35Z",
       "previous_close": 10.58,
+      "market_state": null
+    },
+    "DIVD11": {
+      "symbol": "DIVD11",
+      "name": "DIVD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DIVD11.SA",
+      "price": 69.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 69.67,
+      "market_state": null
+    },
+    "DIVO11": {
+      "symbol": "DIVO11",
+      "name": "DIVO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DIVO11.SA",
+      "price": 145.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 144.3,
       "market_state": null
     },
     "DMVF3": {
@@ -1378,6 +2808,39 @@
       "previous_close": 3.64,
       "market_state": null
     },
+    "DOLA11": {
+      "symbol": "DOLA11",
+      "name": "DOLA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DOLA11.SA",
+      "price": 10.17,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:18:00Z",
+      "previous_close": 10.16,
+      "market_state": null
+    },
+    "DOLB11": {
+      "symbol": "DOLB11",
+      "name": "DOLB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DOLB11.SA",
+      "price": 95.81,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 96.61,
+      "market_state": null
+    },
+    "DOLX11": {
+      "symbol": "DOLX11",
+      "name": "DOLX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DOLX11.SA",
+      "price": 47.07,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 47.29,
+      "market_state": null
+    },
     "DOTZ3": {
       "symbol": "DOTZ3",
       "name": "DOTZ S.A.",
@@ -1389,6 +2852,17 @@
       "previous_close": 12.59,
       "market_state": null
     },
+    "DPRO11": {
+      "symbol": "DPRO11",
+      "name": "DPRO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DPRO11.SA",
+      "price": 5.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T18:17:36Z",
+      "previous_close": 5.21,
+      "market_state": null
+    },
     "DTCY3": {
       "symbol": "DTCY3",
       "name": "DTCOM - DIRECT TO COMPANY S.A.",
@@ -1398,6 +2872,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T16:16:38Z",
       "previous_close": 2.1,
+      "market_state": null
+    },
+    "DVER11": {
+      "symbol": "DVER11",
+      "name": "DVER11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DVER11.SA",
+      "price": 15.26,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 15.03,
+      "market_state": null
+    },
+    "DVFF11": {
+      "symbol": "DVFF11",
+      "name": "DVFF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "DVFF11.SA",
+      "price": 5.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:13Z",
+      "previous_close": 5.58,
       "market_state": null
     },
     "DXCO3": {
@@ -1433,6 +2929,17 @@
       "previous_close": 11.8,
       "market_state": null
     },
+    "EBIT11": {
+      "symbol": "EBIT11",
+      "name": "EBIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EBIT11.SA",
+      "price": 70.38,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T18:57:31Z",
+      "previous_close": 69.1,
+      "market_state": null
+    },
     "ECOM3": {
       "symbol": "ECOM3",
       "name": "ECONOMATICA S.A.",
@@ -1442,6 +2949,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:46:06Z",
       "previous_close": 1.46,
+      "market_state": null
+    },
+    "ECOO11": {
+      "symbol": "ECOO11",
+      "name": "ECOO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ECOO11.SA",
+      "price": 176.77,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T16:57:14Z",
+      "previous_close": 176.5,
       "market_state": null
     },
     "ECOR3": {
@@ -1455,6 +2973,50 @@
       "previous_close": 12.76,
       "market_state": null
     },
+    "EDFO11": {
+      "symbol": "EDFO11",
+      "name": "EDFO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EDFO11.SA",
+      "price": 134.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:21:10Z",
+      "previous_close": 136.99,
+      "market_state": null
+    },
+    "EDGA11": {
+      "symbol": "EDGA11",
+      "name": "EDGA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EDGA11.SA",
+      "price": 13.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:31:35Z",
+      "previous_close": 13.06,
+      "market_state": null
+    },
+    "EETH11": {
+      "symbol": "EETH11",
+      "name": "EETH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EETH11.SA",
+      "price": 48.24,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 49.7,
+      "market_state": null
+    },
+    "EGDB11": {
+      "symbol": "EGDB11",
+      "name": "EGDB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EGDB11.SA",
+      "price": 1299.19,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:42:10Z",
+      "previous_close": 1295.66,
+      "market_state": null
+    },
     "EGIE3": {
       "symbol": "EGIE3",
       "name": "ENGIE BRASIL ENERGIA S.A.",
@@ -1466,6 +3028,17 @@
       "previous_close": 31.36,
       "market_state": null
     },
+    "EIRA11": {
+      "symbol": "EIRA11",
+      "name": "EIRA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EIRA11.SA",
+      "price": 103.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T13:41:57Z",
+      "previous_close": 100.0,
+      "market_state": null
+    },
     "EKTR4": {
       "symbol": "EKTR4",
       "name": "ELEKTRO REDES S.A.",
@@ -1475,6 +3048,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:45:15Z",
       "previous_close": 39.9,
+      "market_state": null
+    },
+    "ELAS11": {
+      "symbol": "ELAS11",
+      "name": "ELAS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ELAS11.SA",
+      "price": 203.67,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 203.01,
       "market_state": null
     },
     "EMAE4": {
@@ -1497,6 +3081,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:45Z",
       "previous_close": 92.3,
+      "market_state": null
+    },
+    "EMET11": {
+      "symbol": "EMET11",
+      "name": "EMET11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EMET11.SA",
+      "price": 10.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T13:00:00Z",
+      "previous_close": 9.57,
       "market_state": null
     },
     "ENEV3": {
@@ -1587,6 +3182,17 @@
       "previous_close": 1.17,
       "market_state": null
     },
+    "EQIR11": {
+      "symbol": "EQIR11",
+      "name": "EQIR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EQIR11.SA",
+      "price": 8.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.53,
+      "market_state": null
+    },
     "EQPA3": {
       "symbol": "EQPA3",
       "name": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
@@ -1618,6 +3224,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:44Z",
       "previous_close": 48.15,
+      "market_state": null
+    },
+    "ERPA11": {
+      "symbol": "ERPA11",
+      "name": "ERPA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ERPA11.SA",
+      "price": 125.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T14:02:19Z",
+      "previous_close": 126.0,
+      "market_state": null
+    },
+    "ESGB11": {
+      "symbol": "ESGB11",
+      "name": "ESGB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ESGB11.SA",
+      "price": 143.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 140.13,
       "market_state": null
     },
     "ESPA3": {
@@ -1653,6 +3281,39 @@
       "previous_close": 3.6,
       "market_state": null
     },
+    "ETHE11": {
+      "symbol": "ETHE11",
+      "name": "ETHE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ETHE11.SA",
+      "price": 35.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 36.0,
+      "market_state": null
+    },
+    "ETHY11": {
+      "symbol": "ETHY11",
+      "name": "ETHY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ETHY11.SA",
+      "price": 54.51,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 58.0,
+      "market_state": null
+    },
+    "EUAT11": {
+      "symbol": "EUAT11",
+      "name": "EUAT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EUAT11.SA",
+      "price": 96.71,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T19:39:32Z",
+      "previous_close": 96.09,
+      "market_state": null
+    },
     "EUCA3": {
       "symbol": "EUCA3",
       "name": "EUCATEX S.A. INDUSTRIA E COMERCIO",
@@ -1675,6 +3336,17 @@
       "previous_close": 24.2,
       "market_state": null
     },
+    "EURO11": {
+      "symbol": "EURO11",
+      "name": "EURO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EURO11.SA",
+      "price": 309.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:20Z",
+      "previous_close": 319.99,
+      "market_state": null
+    },
     "EVEN3": {
       "symbol": "EVEN3",
       "name": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
@@ -1684,6 +3356,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 5.6,
+      "market_state": null
+    },
+    "EWBZ11": {
+      "symbol": "EWBZ11",
+      "name": "EWBZ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EWBZ11.SA",
+      "price": 151.93,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 148.85,
+      "market_state": null
+    },
+    "EXES11": {
+      "symbol": "EXES11",
+      "name": "EXES11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "EXES11.SA",
+      "price": 9.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 9.57,
       "market_state": null
     },
     "EZTC3": {
@@ -1697,6 +3391,28 @@
       "previous_close": 18.1,
       "market_state": null
     },
+    "FAED11": {
+      "symbol": "FAED11",
+      "name": "FAED11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FAED11.SA",
+      "price": 158.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:31:33Z",
+      "previous_close": 156.5,
+      "market_state": null
+    },
+    "FAMB11": {
+      "symbol": "FAMB11",
+      "name": "FAMB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FAMB11.SA",
+      "price": 700.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T19:08:30Z",
+      "previous_close": 705.0,
+      "market_state": null
+    },
     "FASA3": {
       "symbol": "FASA3",
       "name": "FASA3",
@@ -1706,6 +3422,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:00:00Z",
       "previous_close": 0.34,
+      "market_state": null
+    },
+    "FATN11": {
+      "symbol": "FATN11",
+      "name": "FATN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FATN11.SA",
+      "price": 89.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 87.45,
+      "market_state": null
+    },
+    "FCFL11": {
+      "symbol": "FCFL11",
+      "name": "FCFL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FCFL11.SA",
+      "price": 121.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:19:42Z",
+      "previous_close": 125.0,
+      "market_state": null
+    },
+    "FDES11": {
+      "symbol": "FDES11",
+      "name": "FDES11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FDES11.SA",
+      "price": 0.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T14:38:00Z",
+      "previous_close": 0.32,
       "market_state": null
     },
     "FESA3": {
@@ -1763,6 +3512,50 @@
       "previous_close": 32.94,
       "market_state": null
     },
+    "FIGS11": {
+      "symbol": "FIGS11",
+      "name": "FIGS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIGS11.SA",
+      "price": 51.33,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 50.56,
+      "market_state": null
+    },
+    "FIIB11": {
+      "symbol": "FIIB11",
+      "name": "FIIB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIIB11.SA",
+      "price": 447.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:19Z",
+      "previous_close": 440.0,
+      "market_state": null
+    },
+    "FIIP11": {
+      "symbol": "FIIP11",
+      "name": "FIIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIIP11.SA",
+      "price": 150.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 141.92,
+      "market_state": null
+    },
+    "FIND11": {
+      "symbol": "FIND11",
+      "name": "FIND11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIND11.SA",
+      "price": 222.54,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 220.85,
+      "market_state": null
+    },
     "FIQE3": {
       "symbol": "FIQE3",
       "name": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
@@ -1772,6 +3565,83 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:55Z",
       "previous_close": 6.2,
+      "market_state": null
+    },
+    "FISC11": {
+      "symbol": "FISC11",
+      "name": "FISC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FISC11.SA",
+      "price": 70.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:14:29Z",
+      "previous_close": 70.0,
+      "market_state": null
+    },
+    "FIVN11": {
+      "symbol": "FIVN11",
+      "name": "FIVN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIVN11.SA",
+      "price": 2.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:38:33Z",
+      "previous_close": 2.55,
+      "market_state": null
+    },
+    "FIXA11": {
+      "symbol": "FIXA11",
+      "name": "FIXA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIXA11.SA",
+      "price": 20.72,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:40:46Z",
+      "previous_close": 20.69,
+      "market_state": null
+    },
+    "FIXX11": {
+      "symbol": "FIXX11",
+      "name": "FIXX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FIXX11.SA",
+      "price": 92.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:29:40Z",
+      "previous_close": 93.91,
+      "market_state": null
+    },
+    "FLCR11": {
+      "symbol": "FLCR11",
+      "name": "FLCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FLCR11.SA",
+      "price": 91.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 90.8,
+      "market_state": null
+    },
+    "FLMA11": {
+      "symbol": "FLMA11",
+      "name": "FLMA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FLMA11.SA",
+      "price": 160.47,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:40:44Z",
+      "previous_close": 160.11,
+      "market_state": null
+    },
+    "FLRP11": {
+      "symbol": "FLRP11",
+      "name": "FLRP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FLRP11.SA",
+      "price": 21.82,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:34Z",
+      "previous_close": 21.5,
       "market_state": null
     },
     "FLRY3": {
@@ -1785,6 +3655,72 @@
       "previous_close": 27.25,
       "market_state": null
     },
+    "FMOF11": {
+      "symbol": "FMOF11",
+      "name": "FMOF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FMOF11.SA",
+      "price": 21.26,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:06:27Z",
+      "previous_close": 21.0,
+      "market_state": null
+    },
+    "FNAM11": {
+      "symbol": "FNAM11",
+      "name": "FNAM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FNAM11.SA",
+      "price": 0.47,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:00Z",
+      "previous_close": 0.47,
+      "market_state": null
+    },
+    "FNOR11": {
+      "symbol": "FNOR11",
+      "name": "FNOR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FNOR11.SA",
+      "price": 0.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:23:39Z",
+      "previous_close": 0.45,
+      "market_state": null
+    },
+    "FOMO11": {
+      "symbol": "FOMO11",
+      "name": "FOMO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FOMO11.SA",
+      "price": 20.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:01:45Z",
+      "previous_close": 21.08,
+      "market_state": null
+    },
+    "FPAB11": {
+      "symbol": "FPAB11",
+      "name": "FPAB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FPAB11.SA",
+      "price": 201.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:37:10Z",
+      "previous_close": 199.99,
+      "market_state": null
+    },
+    "FPNG11": {
+      "symbol": "FPNG11",
+      "name": "FPNG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FPNG11.SA",
+      "price": 344.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-15T17:20:44Z",
+      "previous_close": 344.99,
+      "market_state": null
+    },
     "FRAS3": {
       "symbol": "FRAS3",
       "name": "FRASLE MOBILITY S.A.",
@@ -1794,6 +3730,138 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 27.6,
+      "market_state": null
+    },
+    "FSPE11": {
+      "symbol": "FSPE11",
+      "name": "FSPE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FSPE11.SA",
+      "price": 0.27,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-15T18:21:19Z",
+      "previous_close": 0.27,
+      "market_state": null
+    },
+    "FSRF11": {
+      "symbol": "FSRF11",
+      "name": "FSRF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FSRF11.SA",
+      "price": 0.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:58:50Z",
+      "previous_close": 0.09,
+      "market_state": null
+    },
+    "FVPQ11": {
+      "symbol": "FVPQ11",
+      "name": "FVPQ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FVPQ11.SA",
+      "price": 48.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:45:18Z",
+      "previous_close": 48.04,
+      "market_state": null
+    },
+    "FYTO11": {
+      "symbol": "FYTO11",
+      "name": "FYTO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "FYTO11.SA",
+      "price": 8.19,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.27,
+      "market_state": null
+    },
+    "GAME11": {
+      "symbol": "GAME11",
+      "name": "GAME11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GAME11.SA",
+      "price": 8.53,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.76,
+      "market_state": null
+    },
+    "GARE11": {
+      "symbol": "GARE11",
+      "name": "GARE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GARE11.SA",
+      "price": 8.72,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.76,
+      "market_state": null
+    },
+    "GBIT11": {
+      "symbol": "GBIT11",
+      "name": "GBIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GBIT11.SA",
+      "price": 80.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T14:35:41Z",
+      "previous_close": 78.74,
+      "market_state": null
+    },
+    "GBTC11": {
+      "symbol": "GBTC11",
+      "name": "GBTC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GBTC11.SA",
+      "price": 27.29,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 28.2,
+      "market_state": null
+    },
+    "GCDL11": {
+      "symbol": "GCDL11",
+      "name": "GCDL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GCDL11.SA",
+      "price": 127.57,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:08:01Z",
+      "previous_close": 127.22,
+      "market_state": null
+    },
+    "GCRI11": {
+      "symbol": "GCRI11",
+      "name": "GCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GCRI11.SA",
+      "price": 70.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 71.03,
+      "market_state": null
+    },
+    "GDIV11": {
+      "symbol": "GDIV11",
+      "name": "GDIV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GDIV11.SA",
+      "price": 93.27,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 95.18,
+      "market_state": null
+    },
+    "GENB11": {
+      "symbol": "GENB11",
+      "name": "GENB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GENB11.SA",
+      "price": 18.51,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 19.33,
       "market_state": null
     },
     "GEPA3": {
@@ -1816,6 +3884,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:06:23Z",
       "previous_close": 38.21,
+      "market_state": null
+    },
+    "GFDL11": {
+      "symbol": "GFDL11",
+      "name": "GFDL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GFDL11.SA",
+      "price": 120.71,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T19:31:30Z",
+      "previous_close": 120.42,
       "market_state": null
     },
     "GFSA3": {
@@ -1862,6 +3941,94 @@
       "previous_close": 16.19,
       "market_state": null
     },
+    "GGRC11": {
+      "symbol": "GGRC11",
+      "name": "GGRC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GGRC11.SA",
+      "price": 9.18,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:53Z",
+      "previous_close": 9.2,
+      "market_state": null
+    },
+    "GICP11": {
+      "symbol": "GICP11",
+      "name": "GICP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GICP11.SA",
+      "price": 11.35,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:25:53Z",
+      "previous_close": 11.3,
+      "market_state": null
+    },
+    "GLCR11": {
+      "symbol": "GLCR11",
+      "name": "GLCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLCR11.SA",
+      "price": 95.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-15T23:48:25Z",
+      "previous_close": 95.98,
+      "market_state": null
+    },
+    "GLDI11": {
+      "symbol": "GLDI11",
+      "name": "GLDI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLDI11.SA",
+      "price": 53.19,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 54.9,
+      "market_state": null
+    },
+    "GLDX11": {
+      "symbol": "GLDX11",
+      "name": "GLDX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLDX11.SA",
+      "price": 94.63,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 98.98,
+      "market_state": null
+    },
+    "GLFT11": {
+      "symbol": "GLFT11",
+      "name": "GLFT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLFT11.SA",
+      "price": 114.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T13:38:36Z",
+      "previous_close": 114.57,
+      "market_state": null
+    },
+    "GLMP11": {
+      "symbol": "GLMP11",
+      "name": "GLMP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLMP11.SA",
+      "price": 112.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:53:25Z",
+      "previous_close": 115.2,
+      "market_state": null
+    },
+    "GLPF11": {
+      "symbol": "GLPF11",
+      "name": "GLPF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GLPF11.SA",
+      "price": 111.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:37:31Z",
+      "previous_close": 109.14,
+      "market_state": null
+    },
     "GMAT3": {
       "symbol": "GMAT3",
       "name": "GRUPO MATEUS S.A.",
@@ -1871,6 +4038,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 5.15,
+      "market_state": null
+    },
+    "GOAT11": {
+      "symbol": "GOAT11",
+      "name": "GOAT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GOAT11.SA",
+      "price": 61.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:30Z",
+      "previous_close": 60.83,
       "market_state": null
     },
     "GOAU3": {
@@ -1895,6 +4073,50 @@
       "previous_close": 11.6,
       "market_state": null
     },
+    "GOLB11": {
+      "symbol": "GOLB11",
+      "name": "GOLB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GOLB11.SA",
+      "price": 102.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 105.97,
+      "market_state": null
+    },
+    "GOLD11": {
+      "symbol": "GOLD11",
+      "name": "GOLD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GOLD11.SA",
+      "price": 21.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 22.03,
+      "market_state": null
+    },
+    "GOLX11": {
+      "symbol": "GOLX11",
+      "name": "GOLX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GOLX11.SA",
+      "price": 48.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 49.96,
+      "market_state": null
+    },
+    "GOVE11": {
+      "symbol": "GOVE11",
+      "name": "GOVE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GOVE11.SA",
+      "price": 88.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 89.04,
+      "market_state": null
+    },
     "GPAR3": {
       "symbol": "GPAR3",
       "name": "CIA CELG DE PARTICIPACOES - CELGPAR",
@@ -1904,6 +4126,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-09T13:10:02Z",
       "previous_close": 19.96,
+      "market_state": null
+    },
+    "GPCA11": {
+      "symbol": "GPCA11",
+      "name": "GPCA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GPCA11.SA",
+      "price": 26.93,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:53Z",
+      "previous_close": 26.87,
+      "market_state": null
+    },
+    "GPOS11": {
+      "symbol": "GPOS11",
+      "name": "GPOS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GPOS11.SA",
+      "price": 25.82,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 25.616,
+      "market_state": null
+    },
+    "GPUS11": {
+      "symbol": "GPUS11",
+      "name": "GPUS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GPUS11.SA",
+      "price": 116.83,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 119.1,
+      "market_state": null
+    },
+    "GRAV11": {
+      "symbol": "GRAV11",
+      "name": "GRAV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GRAV11.SA",
+      "price": 38.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T14:16:57Z",
+      "previous_close": 38.0,
       "market_state": null
     },
     "GRND3": {
@@ -1917,6 +4183,28 @@
       "previous_close": 4.48,
       "market_state": null
     },
+    "GRUL11": {
+      "symbol": "GRUL11",
+      "name": "GRUL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GRUL11.SA",
+      "price": 8.24,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.29,
+      "market_state": null
+    },
+    "GSFI11": {
+      "symbol": "GSFI11",
+      "name": "GSFI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GSFI11.SA",
+      "price": 12.44,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 12.49,
+      "market_state": null
+    },
     "GSHP3": {
       "symbol": "GSHP3",
       "name": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
@@ -1926,6 +4214,72 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:00:00Z",
       "previous_close": 3.76,
+      "market_state": null
+    },
+    "GSRF11": {
+      "symbol": "GSRF11",
+      "name": "GSRF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GSRF11.SA",
+      "price": 119.76,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T16:05:46Z",
+      "previous_close": 119.35,
+      "market_state": null
+    },
+    "GTWR11": {
+      "symbol": "GTWR11",
+      "name": "GTWR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GTWR11.SA",
+      "price": 81.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 80.85,
+      "market_state": null
+    },
+    "GXUS11": {
+      "symbol": "GXUS11",
+      "name": "GXUS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GXUS11.SA",
+      "price": 105.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:28Z",
+      "previous_close": 108.4,
+      "market_state": null
+    },
+    "GZIT11": {
+      "symbol": "GZIT11",
+      "name": "GZIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "GZIT11.SA",
+      "price": 41.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:42Z",
+      "previous_close": 38.01,
+      "market_state": null
+    },
+    "HAAA11": {
+      "symbol": "HAAA11",
+      "name": "HAAA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HAAA11.SA",
+      "price": 59.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T17:55:22Z",
+      "previous_close": 58.0,
+      "market_state": null
+    },
+    "HABT11": {
+      "symbol": "HABT11",
+      "name": "HABT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HABT11.SA",
+      "price": 70.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 69.87,
       "market_state": null
     },
     "HAGA3": {
@@ -1959,6 +4313,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:40Z",
       "previous_close": 8.52,
+      "market_state": null
+    },
+    "HASH11": {
+      "symbol": "HASH11",
+      "name": "HASH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HASH11.SA",
+      "price": 52.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 54.29,
+      "market_state": null
+    },
+    "HBCR11": {
+      "symbol": "HBCR11",
+      "name": "HBCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HBCR11.SA",
+      "price": 144.86,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T13:00:00Z",
+      "previous_close": 144.86,
       "market_state": null
     },
     "HBOR3": {
@@ -2005,6 +4381,215 @@
       "previous_close": 35.5,
       "market_state": null
     },
+    "HCRI11": {
+      "symbol": "HCRI11",
+      "name": "HCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HCRI11.SA",
+      "price": 278.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:51:15Z",
+      "previous_close": 276.0,
+      "market_state": null
+    },
+    "HCTR11": {
+      "symbol": "HCTR11",
+      "name": "HCTR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HCTR11.SA",
+      "price": 13.72,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 13.49,
+      "market_state": null
+    },
+    "HDEL11": {
+      "symbol": "HDEL11",
+      "name": "HDEL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HDEL11.SA",
+      "price": 3.27,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T19:34:38Z",
+      "previous_close": 3.27,
+      "market_state": null
+    },
+    "HDOF11": {
+      "symbol": "HDOF11",
+      "name": "HDOF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HDOF11.SA",
+      "price": 75.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T13:06:02Z",
+      "previous_close": 75.0,
+      "market_state": null
+    },
+    "HERT11": {
+      "symbol": "HERT11",
+      "name": "HERT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HERT11.SA",
+      "price": 22.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:05Z",
+      "previous_close": 22.09,
+      "market_state": null
+    },
+    "HFOF11": {
+      "symbol": "HFOF11",
+      "name": "HFOF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HFOF11.SA",
+      "price": 6.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 6.54,
+      "market_state": null
+    },
+    "HGBL11": {
+      "symbol": "HGBL11",
+      "name": "HGBL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGBL11.SA",
+      "price": 9.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 9.31,
+      "market_state": null
+    },
+    "HGBS11": {
+      "symbol": "HGBS11",
+      "name": "HGBS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGBS11.SA",
+      "price": 19.42,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 19.2,
+      "market_state": null
+    },
+    "HGCR11": {
+      "symbol": "HGCR11",
+      "name": "HGCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGCR11.SA",
+      "price": 98.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 97.89,
+      "market_state": null
+    },
+    "HGIC11": {
+      "symbol": "HGIC11",
+      "name": "HGIC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGIC11.SA",
+      "price": 47.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:27:07Z",
+      "previous_close": 48.4,
+      "market_state": null
+    },
+    "HGLG11": {
+      "symbol": "HGLG11",
+      "name": "HGLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGLG11.SA",
+      "price": 157.04,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 156.6,
+      "market_state": null
+    },
+    "HGRE11": {
+      "symbol": "HGRE11",
+      "name": "HGRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGRE11.SA",
+      "price": 129.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 123.7,
+      "market_state": null
+    },
+    "HGRU11": {
+      "symbol": "HGRU11",
+      "name": "HGRU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HGRU11.SA",
+      "price": 124.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 123.9,
+      "market_state": null
+    },
+    "HIGH11": {
+      "symbol": "HIGH11",
+      "name": "HIGH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HIGH11.SA",
+      "price": 112.04,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 105.05,
+      "market_state": null
+    },
+    "HJCT11": {
+      "symbol": "HJCT11",
+      "name": "HJCT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HJCT11.SA",
+      "price": 130.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T14:23:04Z",
+      "previous_close": 130.0,
+      "market_state": null
+    },
+    "HLOG11": {
+      "symbol": "HLOG11",
+      "name": "HLOG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HLOG11.SA",
+      "price": 9.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:41:57Z",
+      "previous_close": 9.33,
+      "market_state": null
+    },
+    "HODL11": {
+      "symbol": "HODL11",
+      "name": "HODL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HODL11.SA",
+      "price": 68.91,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 70.32,
+      "market_state": null
+    },
+    "HOFC11": {
+      "symbol": "HOFC11",
+      "name": "HOFC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HOFC11.SA",
+      "price": 36.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:05Z",
+      "previous_close": 37.9,
+      "market_state": null
+    },
+    "HOMS11": {
+      "symbol": "HOMS11",
+      "name": "HOMS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HOMS11.SA",
+      "price": 135.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:08:01Z",
+      "previous_close": 135.49,
+      "market_state": null
+    },
     "HOOT4": {
       "symbol": "HOOT4",
       "name": "HOTEIS OTHON S.A.",
@@ -2016,6 +4601,138 @@
       "previous_close": 8.74,
       "market_state": null
     },
+    "HOSI11": {
+      "symbol": "HOSI11",
+      "name": "HOSI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HOSI11.SA",
+      "price": 73.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:39:36Z",
+      "previous_close": 75.0,
+      "market_state": null
+    },
+    "HPDP11": {
+      "symbol": "HPDP11",
+      "name": "HPDP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HPDP11.SA",
+      "price": 93.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T13:00:00Z",
+      "previous_close": 90.99,
+      "market_state": null
+    },
+    "HRDF11": {
+      "symbol": "HRDF11",
+      "name": "HRDF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HRDF11.SA",
+      "price": 3.96,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T18:10:18Z",
+      "previous_close": 3.96,
+      "market_state": null
+    },
+    "HREC11": {
+      "symbol": "HREC11",
+      "name": "HREC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HREC11.SA",
+      "price": 8.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.4,
+      "market_state": null
+    },
+    "HSAF11": {
+      "symbol": "HSAF11",
+      "name": "HSAF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HSAF11.SA",
+      "price": 77.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 78.48,
+      "market_state": null
+    },
+    "HSLG11": {
+      "symbol": "HSLG11",
+      "name": "HSLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HSLG11.SA",
+      "price": 83.35,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 87.12,
+      "market_state": null
+    },
+    "HSML11": {
+      "symbol": "HSML11",
+      "name": "HSML11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HSML11.SA",
+      "price": 94.38,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 93.76,
+      "market_state": null
+    },
+    "HTEK11": {
+      "symbol": "HTEK11",
+      "name": "HTEK11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HTEK11.SA",
+      "price": 77.05,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 80.27,
+      "market_state": null
+    },
+    "HTMX11": {
+      "symbol": "HTMX11",
+      "name": "HTMX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HTMX11.SA",
+      "price": 142.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:43Z",
+      "previous_close": 139.9,
+      "market_state": null
+    },
+    "HUCG11": {
+      "symbol": "HUCG11",
+      "name": "HUCG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HUCG11.SA",
+      "price": 86.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-20T16:19:19Z",
+      "previous_close": 86.03,
+      "market_state": null
+    },
+    "HUSC11": {
+      "symbol": "HUSC11",
+      "name": "HUSC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HUSC11.SA",
+      "price": 98.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:35:18Z",
+      "previous_close": 98.0,
+      "market_state": null
+    },
+    "HYBR11": {
+      "symbol": "HYBR11",
+      "name": "HYBR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "HYBR11.SA",
+      "price": 55.67,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 55.6,
+      "market_state": null
+    },
     "HYPE3": {
       "symbol": "HYPE3",
       "name": "HYPERA S.A.",
@@ -2025,6 +4742,72 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:47Z",
       "previous_close": 25.45,
+      "market_state": null
+    },
+    "IBBP11": {
+      "symbol": "IBBP11",
+      "name": "IBBP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IBBP11.SA",
+      "price": 8.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.25,
+      "market_state": null
+    },
+    "IBCR11": {
+      "symbol": "IBCR11",
+      "name": "IBCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IBCR11.SA",
+      "price": 46.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:32Z",
+      "previous_close": 48.26,
+      "market_state": null
+    },
+    "IBOB11": {
+      "symbol": "IBOB11",
+      "name": "IBOB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IBOB11.SA",
+      "price": 168.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 168.5,
+      "market_state": null
+    },
+    "ICDI11": {
+      "symbol": "ICDI11",
+      "name": "ICDI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ICDI11.SA",
+      "price": 100.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:33:22Z",
+      "previous_close": 100.25,
+      "market_state": null
+    },
+    "ICRI11": {
+      "symbol": "ICRI11",
+      "name": "ICRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ICRI11.SA",
+      "price": 94.37,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:53:29Z",
+      "previous_close": 93.26,
+      "market_state": null
+    },
+    "IDKA11": {
+      "symbol": "IDKA11",
+      "name": "IDKA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IDKA11.SA",
+      "price": 64.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:46:25Z",
+      "previous_close": 64.14,
       "market_state": null
     },
     "IFCM3": {
@@ -2071,6 +4854,50 @@
       "previous_close": 13.97,
       "market_state": null
     },
+    "IMAB11": {
+      "symbol": "IMAB11",
+      "name": "IMAB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IMAB11.SA",
+      "price": 125.78,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 124.26,
+      "market_state": null
+    },
+    "IMBB11": {
+      "symbol": "IMBB11",
+      "name": "IMBB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IMBB11.SA",
+      "price": 164.81,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 162.98,
+      "market_state": null
+    },
+    "IMMB11": {
+      "symbol": "IMMB11",
+      "name": "IMMB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IMMB11.SA",
+      "price": 165.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T17:37:48Z",
+      "previous_close": 165.0,
+      "market_state": null
+    },
+    "INDE11": {
+      "symbol": "INDE11",
+      "name": "INDE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "INDE11.SA",
+      "price": 59.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T18:42:39Z",
+      "previous_close": 59.99,
+      "market_state": null
+    },
     "INEP3": {
       "symbol": "INEP3",
       "name": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
@@ -2091,6 +4918,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:26:40Z",
       "previous_close": 1.24,
+      "market_state": null
+    },
+    "INHF11": {
+      "symbol": "INHF11",
+      "name": "INTER HOLDING FINANCEIRA S.A.",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "INHF11.SA",
+      "price": 8.06,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 10.5,
+      "market_state": null
+    },
+    "INLG11": {
+      "symbol": "INLG11",
+      "name": "INLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "INLG11.SA",
+      "price": 65.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:05Z",
+      "previous_close": 65.39,
       "market_state": null
     },
     "INTB3": {
@@ -2115,6 +4964,28 @@
       "previous_close": 69.75,
       "market_state": null
     },
+    "IRFM11": {
+      "symbol": "IRFM11",
+      "name": "IRFM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IRFM11.SA",
+      "price": 109.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:27Z",
+      "previous_close": 108.84,
+      "market_state": null
+    },
+    "IRIM11": {
+      "symbol": "IRIM11",
+      "name": "IRIM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IRIM11.SA",
+      "price": 67.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 66.71,
+      "market_state": null
+    },
     "ISAE3": {
       "symbol": "ISAE3",
       "name": "ISA ENERGIA BRASIL S.A",
@@ -2135,6 +5006,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:50Z",
       "previous_close": 28.72,
+      "market_state": null
+    },
+    "ISUS11": {
+      "symbol": "ISUS11",
+      "name": "ISUS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ISUS11.SA",
+      "price": 51.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 50.48,
+      "market_state": null
+    },
+    "ITIT11": {
+      "symbol": "ITIT11",
+      "name": "ITIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ITIT11.SA",
+      "price": 65.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:36:28Z",
+      "previous_close": 65.52,
+      "market_state": null
+    },
+    "ITRI11": {
+      "symbol": "ITRI11",
+      "name": "ITRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ITRI11.SA",
+      "price": 82.27,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:39Z",
+      "previous_close": 80.73,
       "market_state": null
     },
     "ITSA3": {
@@ -2181,6 +5085,39 @@
       "previous_close": 48.35,
       "market_state": null
     },
+    "IVVB11": {
+      "symbol": "IVVB11",
+      "name": "IVVB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IVVB11.SA",
+      "price": 436.55,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 444.45,
+      "market_state": null
+    },
+    "IVWO11": {
+      "symbol": "IVWO11",
+      "name": "IVWO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IVWO11.SA",
+      "price": 19.93,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 20.86,
+      "market_state": null
+    },
+    "IWMI11": {
+      "symbol": "IWMI11",
+      "name": "IWMI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "IWMI11.SA",
+      "price": 74.59,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 76.06,
+      "market_state": null
+    },
     "JALL3": {
       "symbol": "JALL3",
       "name": "JALLES MACHADO S.A.",
@@ -2190,6 +5127,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 3.04,
+      "market_state": null
+    },
+    "JASC11": {
+      "symbol": "JASC11",
+      "name": "JASC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JASC11.SA",
+      "price": 100.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-09T14:33:19Z",
+      "previous_close": 100.0,
+      "market_state": null
+    },
+    "JCCJ11": {
+      "symbol": "JCCJ11",
+      "name": "JCCJ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JCCJ11.SA",
+      "price": 145.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:31Z",
+      "previous_close": 142.31,
       "market_state": null
     },
     "JFEN3": {
@@ -2203,6 +5162,17 @@
       "previous_close": 5.09,
       "market_state": null
     },
+    "JFLL11": {
+      "symbol": "JFLL11",
+      "name": "JFLL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JFLL11.SA",
+      "price": 50.51,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:33:54Z",
+      "previous_close": 51.02,
+      "market_state": null
+    },
     "JHSF3": {
       "symbol": "JHSF3",
       "name": "JHSF PARTICIPACOES S.A.",
@@ -2212,6 +5182,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:48Z",
       "previous_close": 13.15,
+      "market_state": null
+    },
+    "JOGO11": {
+      "symbol": "JOGO11",
+      "name": "JOGO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JOGO11.SA",
+      "price": 125.41,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 127.86,
       "market_state": null
     },
     "JOPA3": {
@@ -2225,6 +5206,50 @@
       "previous_close": 19.95,
       "market_state": null
     },
+    "JPPA11": {
+      "symbol": "JPPA11",
+      "name": "JPPA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JPPA11.SA",
+      "price": 81.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:04Z",
+      "previous_close": 78.19,
+      "market_state": null
+    },
+    "JPRD11": {
+      "symbol": "JPRD11",
+      "name": "JPRD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JPRD11.SA",
+      "price": 99.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:32:39Z",
+      "previous_close": 99.99,
+      "market_state": null
+    },
+    "JSAF11": {
+      "symbol": "JSAF11",
+      "name": "JSAF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JSAF11.SA",
+      "price": 7.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 7.48,
+      "market_state": null
+    },
+    "JSCR11": {
+      "symbol": "JSCR11",
+      "name": "JSCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JSCR11.SA",
+      "price": 8.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:53:03Z",
+      "previous_close": 8.03,
+      "market_state": null
+    },
     "JSLG3": {
       "symbol": "JSLG3",
       "name": "JSL S.A.",
@@ -2236,6 +5261,28 @@
       "previous_close": 10.68,
       "market_state": null
     },
+    "JSRE11": {
+      "symbol": "JSRE11",
+      "name": "JSRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "JSRE11.SA",
+      "price": 69.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:39Z",
+      "previous_close": 66.5,
+      "market_state": null
+    },
+    "KCRE11": {
+      "symbol": "KCRE11",
+      "name": "KCRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KCRE11.SA",
+      "price": 8.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 8.84,
+      "market_state": null
+    },
     "KEPL3": {
       "symbol": "KEPL3",
       "name": "KEPLER WEBER S.A.",
@@ -2245,6 +5292,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 7.4,
+      "market_state": null
+    },
+    "KFOF11": {
+      "symbol": "KFOF11",
+      "name": "KFOF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KFOF11.SA",
+      "price": 83.09,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 81.94,
+      "market_state": null
+    },
+    "KISU11": {
+      "symbol": "KISU11",
+      "name": "KISU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KISU11.SA",
+      "price": 6.2,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T20:03:00Z",
+      "previous_close": 6.2,
+      "market_state": null
+    },
+    "KIVO11": {
+      "symbol": "KIVO11",
+      "name": "KIVO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KIVO11.SA",
+      "price": 57.83,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 57.6,
       "market_state": null
     },
     "KLBN11": {
@@ -2280,6 +5360,105 @@
       "previous_close": 3.63,
       "market_state": null
     },
+    "KNCR11": {
+      "symbol": "KNCR11",
+      "name": "KNCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNCR11.SA",
+      "price": 105.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 105.1,
+      "market_state": null
+    },
+    "KNHF11": {
+      "symbol": "KNHF11",
+      "name": "KNHF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNHF11.SA",
+      "price": 95.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:32Z",
+      "previous_close": 96.6,
+      "market_state": null
+    },
+    "KNHY11": {
+      "symbol": "KNHY11",
+      "name": "KNHY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNHY11.SA",
+      "price": 100.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 98.71,
+      "market_state": null
+    },
+    "KNIP11": {
+      "symbol": "KNIP11",
+      "name": "KNIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNIP11.SA",
+      "price": 93.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:32Z",
+      "previous_close": 93.35,
+      "market_state": null
+    },
+    "KNRE11": {
+      "symbol": "KNRE11",
+      "name": "KNRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNRE11.SA",
+      "price": 0.21,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:41:23Z",
+      "previous_close": 0.2,
+      "market_state": null
+    },
+    "KNRI11": {
+      "symbol": "KNRI11",
+      "name": "KNRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNRI11.SA",
+      "price": 162.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:00Z",
+      "previous_close": 163.02,
+      "market_state": null
+    },
+    "KNSC11": {
+      "symbol": "KNSC11",
+      "name": "KNSC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNSC11.SA",
+      "price": 9.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 9.15,
+      "market_state": null
+    },
+    "KNUQ11": {
+      "symbol": "KNUQ11",
+      "name": "KNUQ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KNUQ11.SA",
+      "price": 101.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 102.68,
+      "market_state": null
+    },
+    "KORE11": {
+      "symbol": "KORE11",
+      "name": "KORE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "KORE11.SA",
+      "price": 73.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 73.15,
+      "market_state": null
+    },
     "LAND3": {
       "symbol": "LAND3",
       "name": "TERRA SANTA PROPRIEDADES AGRICOLAS S.A.",
@@ -2289,6 +5468,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 10.95,
+      "market_state": null
+    },
+    "LASC11": {
+      "symbol": "LASC11",
+      "name": "LASC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LASC11.SA",
+      "price": 109.63,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 110.96,
       "market_state": null
     },
     "LAVV3": {
@@ -2313,6 +5503,83 @@
       "previous_close": 36.39,
       "market_state": null
     },
+    "LFIN11": {
+      "symbol": "LFIN11",
+      "name": "LFIN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFIN11.SA",
+      "price": 115.31,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 115.29,
+      "market_state": null
+    },
+    "LFIX11": {
+      "symbol": "LFIX11",
+      "name": "LFIX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFIX11.SA",
+      "price": 21.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 21.93,
+      "market_state": null
+    },
+    "LFTB11": {
+      "symbol": "LFTB11",
+      "name": "LFTB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFTB11.SA",
+      "price": 129.47,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 128.89,
+      "market_state": null
+    },
+    "LFTI11": {
+      "symbol": "LFTI11",
+      "name": "LFTI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFTI11.SA",
+      "price": 55.83,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 55.7,
+      "market_state": null
+    },
+    "LFTS11": {
+      "symbol": "LFTS11",
+      "name": "LFTS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFTS11.SA",
+      "price": 161.76,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 161.34,
+      "market_state": null
+    },
+    "LFTX11": {
+      "symbol": "LFTX11",
+      "name": "LFTX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LFTX11.SA",
+      "price": 26.94,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 26.87,
+      "market_state": null
+    },
+    "LIFE11": {
+      "symbol": "LIFE11",
+      "name": "LIFE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LIFE11.SA",
+      "price": 7.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 7.19,
+      "market_state": null
+    },
     "LIGT3": {
       "symbol": "LIGT3",
       "name": "LIGHT S.A.",
@@ -2324,6 +5591,17 @@
       "previous_close": 3.84,
       "market_state": null
     },
+    "LIQB11": {
+      "symbol": "LIQB11",
+      "name": "LIQB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LIQB11.SA",
+      "price": 104.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 104.26,
+      "market_state": null
+    },
     "LJQQ3": {
       "symbol": "LJQQ3",
       "name": "LOJAS QUERO-QUERO S/A",
@@ -2333,6 +5611,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 2.49,
+      "market_state": null
+    },
+    "LLFT11": {
+      "symbol": "LLFT11",
+      "name": "LLFT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LLFT11.SA",
+      "price": 120.33,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 120.04,
+      "market_state": null
+    },
+    "LMAI11": {
+      "symbol": "LMAI11",
+      "name": "LMAI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LMAI11.SA",
+      "price": 34.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T20:03:00Z",
+      "previous_close": 34.1,
       "market_state": null
     },
     "LOGG3": {
@@ -2357,6 +5657,17 @@
       "previous_close": 30.85,
       "market_state": null
     },
+    "LPLP11": {
+      "symbol": "LPLP11",
+      "name": "LPLP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LPLP11.SA",
+      "price": 284.2,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T20:00:00Z",
+      "previous_close": 284.2,
+      "market_state": null
+    },
     "LPSB3": {
       "symbol": "LPSB3",
       "name": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
@@ -2368,6 +5679,17 @@
       "previous_close": 1.46,
       "market_state": null
     },
+    "LRDI11": {
+      "symbol": "LRDI11",
+      "name": "LRDI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LRDI11.SA",
+      "price": 184.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:43:05Z",
+      "previous_close": 194.0,
+      "market_state": null
+    },
     "LREN3": {
       "symbol": "LREN3",
       "name": "LOJAS RENNER S.A.",
@@ -2377,6 +5699,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:33Z",
       "previous_close": 13.61,
+      "market_state": null
+    },
+    "LTBX11": {
+      "symbol": "LTBX11",
+      "name": "LTBX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LTBX11.SA",
+      "price": 27.19,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 27.05,
+      "market_state": null
+    },
+    "LTNB11": {
+      "symbol": "LTNB11",
+      "name": "LTNB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LTNB11.SA",
+      "price": 120.74,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 120.49,
       "market_state": null
     },
     "LUPA3": {
@@ -2401,6 +5745,28 @@
       "previous_close": 3.7,
       "market_state": null
     },
+    "LVBI11": {
+      "symbol": "LVBI11",
+      "name": "LVBI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LVBI11.SA",
+      "price": 107.05,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 103.69,
+      "market_state": null
+    },
+    "LVOL11": {
+      "symbol": "LVOL11",
+      "name": "LVOL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "LVOL11.SA",
+      "price": 153.25,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 153.38,
+      "market_state": null
+    },
     "LWSA3": {
       "symbol": "LWSA3",
       "name": "LWSA S.A.",
@@ -2410,6 +5776,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 5.17,
+      "market_state": null
+    },
+    "MAGM11": {
+      "symbol": "MAGM11",
+      "name": "MAGM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MAGM11.SA",
+      "price": 9.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:51:23Z",
+      "previous_close": 9.97,
+      "market_state": null
+    },
+    "MANA11": {
+      "symbol": "MANA11",
+      "name": "MANA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MANA11.SA",
+      "price": 9.26,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 9.23,
+      "market_state": null
+    },
+    "MARG11": {
+      "symbol": "MARG11",
+      "name": "MARG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MARG11.SA",
+      "price": 124.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 124.69,
+      "market_state": null
+    },
+    "MATB11": {
+      "symbol": "MATB11",
+      "name": "MATB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MATB11.SA",
+      "price": 60.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 61.89,
       "market_state": null
     },
     "MATD3": {
@@ -2423,6 +5833,17 @@
       "previous_close": 6.07,
       "market_state": null
     },
+    "MAXR11": {
+      "symbol": "MAXR11",
+      "name": "MAXR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MAXR11.SA",
+      "price": 54.92,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:22:47Z",
+      "previous_close": 53.49,
+      "market_state": null
+    },
     "MBRF3": {
       "symbol": "MBRF3",
       "name": "MARFRIG GLOBAL FOODS S.A.",
@@ -2432,6 +5853,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:53Z",
       "previous_close": 18.5,
+      "market_state": null
+    },
+    "MCCI11": {
+      "symbol": "MCCI11",
+      "name": "MCCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MCCI11.SA",
+      "price": 94.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 95.23,
+      "market_state": null
+    },
+    "MCLO11": {
+      "symbol": "MCLO11",
+      "name": "MCLO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MCLO11.SA",
+      "price": 10.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 10.7,
+      "market_state": null
+    },
+    "MCRE11": {
+      "symbol": "MCRE11",
+      "name": "MCRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MCRE11.SA",
+      "price": 8.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.69,
       "market_state": null
     },
     "MDIA3": {
@@ -2478,6 +5932,17 @@
       "previous_close": 3.13,
       "market_state": null
     },
+    "MFII11": {
+      "symbol": "MFII11",
+      "name": "MFII11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MFII11.SA",
+      "price": 37.46,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 37.0,
+      "market_state": null
+    },
     "MGEL4": {
       "symbol": "MGEL4",
       "name": "MANGELS INDUSTRIAL S.A.",
@@ -2489,6 +5954,17 @@
       "previous_close": 6.6,
       "market_state": null
     },
+    "MGHT11": {
+      "symbol": "MGHT11",
+      "name": "MGHT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MGHT11.SA",
+      "price": 12.25,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:17:10Z",
+      "previous_close": 12.72,
+      "market_state": null
+    },
     "MGLU3": {
       "symbol": "MGLU3",
       "name": "MAGAZINE LUIZA S.A.",
@@ -2498,6 +5974,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:34Z",
       "previous_close": 10.39,
+      "market_state": null
+    },
+    "MIDB11": {
+      "symbol": "MIDB11",
+      "name": "MIDB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MIDB11.SA",
+      "price": 113.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 113.3,
+      "market_state": null
+    },
+    "MIDW11": {
+      "symbol": "MIDW11",
+      "name": "MIDW11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MIDW11.SA",
+      "price": 11.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:40:50Z",
+      "previous_close": 10.0,
+      "market_state": null
+    },
+    "MILL11": {
+      "symbol": "MILL11",
+      "name": "MILL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MILL11.SA",
+      "price": 85.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 87.9,
       "market_state": null
     },
     "MILS3": {
@@ -2520,6 +6029,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 2.38,
+      "market_state": null
+    },
+    "MMVE11": {
+      "symbol": "MMVE11",
+      "name": "MMVE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MMVE11.SA",
+      "price": 70.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T18:09:21Z",
+      "previous_close": 70.0,
       "market_state": null
     },
     "MNDL3": {
@@ -2610,6 +6130,28 @@
       "previous_close": 37.55,
       "market_state": null
     },
+    "MUND11": {
+      "symbol": "MUND11",
+      "name": "MUND11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MUND11.SA",
+      "price": 95.82,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 97.71,
+      "market_state": null
+    },
+    "MXRF11": {
+      "symbol": "MXRF11",
+      "name": "MXRF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "MXRF11.SA",
+      "price": 9.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 9.36,
+      "market_state": null
+    },
     "MYPK3": {
       "symbol": "MYPK3",
       "name": "IOCHPE MAXION S.A.",
@@ -2621,6 +6163,17 @@
       "previous_close": 10.75,
       "market_state": null
     },
+    "NASD11": {
+      "symbol": "NASD11",
+      "name": "NASD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NASD11.SA",
+      "price": 20.37,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 21.24,
+      "market_state": null
+    },
     "NATU3": {
       "symbol": "NATU3",
       "name": "NATURA COSMETICOS S.A.",
@@ -2630,6 +6183,72 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:49Z",
       "previous_close": 6.94,
+      "market_state": null
+    },
+    "NBIT11": {
+      "symbol": "NBIT11",
+      "name": "NBIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NBIT11.SA",
+      "price": 32.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 32.65,
+      "market_state": null
+    },
+    "NBOV11": {
+      "symbol": "NBOV11",
+      "name": "NBOV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NBOV11.SA",
+      "price": 136.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 137.77,
+      "market_state": null
+    },
+    "NCRI11": {
+      "symbol": "NCRI11",
+      "name": "NCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NCRI11.SA",
+      "price": 8.35,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:08Z",
+      "previous_close": 8.35,
+      "market_state": null
+    },
+    "NDIV11": {
+      "symbol": "NDIV11",
+      "name": "NDIV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NDIV11.SA",
+      "price": 132.36,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 132.32,
+      "market_state": null
+    },
+    "NEWL11": {
+      "symbol": "NEWL11",
+      "name": "NEWL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NEWL11.SA",
+      "price": 111.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:49:17Z",
+      "previous_close": 109.49,
+      "market_state": null
+    },
+    "NEWU11": {
+      "symbol": "NEWU11",
+      "name": "NEWU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NEWU11.SA",
+      "price": 110.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:37:07Z",
+      "previous_close": 109.99,
       "market_state": null
     },
     "NEXP3": {
@@ -2654,6 +6273,61 @@
       "previous_close": 1.2,
       "market_state": null
     },
+    "NSDV11": {
+      "symbol": "NSDV11",
+      "name": "NSDV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NSDV11.SA",
+      "price": 166.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 166.93,
+      "market_state": null
+    },
+    "NSLU11": {
+      "symbol": "NSLU11",
+      "name": "NSLU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NSLU11.SA",
+      "price": 191.88,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:43:28Z",
+      "previous_close": 187.0,
+      "market_state": null
+    },
+    "NTNF11": {
+      "symbol": "NTNF11",
+      "name": "NTNF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NTNF11.SA",
+      "price": 54.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 54.0,
+      "market_state": null
+    },
+    "NTNS11": {
+      "symbol": "NTNS11",
+      "name": "NTNS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NTNS11.SA",
+      "price": 69.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 69.78,
+      "market_state": null
+    },
+    "NUCL11": {
+      "symbol": "NUCL11",
+      "name": "NUCL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NUCL11.SA",
+      "price": 55.82,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 59.81,
+      "market_state": null
+    },
     "NUTR3": {
       "symbol": "NUTR3",
       "name": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
@@ -2663,6 +6337,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T19:48:28Z",
       "previous_close": 2.4,
+      "market_state": null
+    },
+    "NVHO11": {
+      "symbol": "NVHO11",
+      "name": "NVHO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "NVHO11.SA",
+      "price": 11.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T16:59:09Z",
+      "previous_close": 13.7,
+      "market_state": null
+    },
+    "OBRA11": {
+      "symbol": "OBRA11",
+      "name": "OBRA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OBRA11.SA",
+      "price": 60.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 59.57,
       "market_state": null
     },
     "OBTC3": {
@@ -2676,6 +6372,17 @@
       "previous_close": 7.02,
       "market_state": null
     },
+    "OCRE11": {
+      "symbol": "OCRE11",
+      "name": "OCRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OCRE11.SA",
+      "price": 85.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T19:23:46Z",
+      "previous_close": 85.0,
+      "market_state": null
+    },
     "OFSA3": {
       "symbol": "OFSA3",
       "name": "OUROFINO S.A.",
@@ -2687,14 +6394,25 @@
       "previous_close": 29.68,
       "market_state": null
     },
+    "OLEO11": {
+      "symbol": "OLEO11",
+      "name": "OLEO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OLEO11.SA",
+      "price": 19.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 19.944,
+      "market_state": null
+    },
     "ONCO11": {
       "symbol": "ONCO11",
       "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
       "provider": "brapi.dev · universo",
       "provider_symbol": "ONCO11",
-      "price": 0.17,
+      "price": 0.16,
       "currency": "BRL",
-      "market_time_utc": "2026-10-22T15:52:38.231000Z",
+      "market_time_utc": "2026-10-23T12:56:07.397394Z",
       "previous_close": null,
       "market_state": null
     },
@@ -2709,6 +6427,17 @@
       "previous_close": 0.99,
       "market_state": null
     },
+    "ONDA11": {
+      "symbol": "ONDA11",
+      "name": "ONDA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ONDA11.SA",
+      "price": 7.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:19:28Z",
+      "previous_close": 7.66,
+      "market_state": null
+    },
     "OPCT3": {
       "symbol": "OPCT3",
       "name": "OCEANPACT SERVICOS MARITIMOS S.A.",
@@ -2718,6 +6447,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:34Z",
       "previous_close": 10.0,
+      "market_state": null
+    },
+    "OROF11": {
+      "symbol": "OROF11",
+      "name": "OROF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OROF11.SA",
+      "price": 92.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:48:12Z",
+      "previous_close": 93.97,
       "market_state": null
     },
     "ORVR3": {
@@ -2742,6 +6482,94 @@
       "previous_close": 1.8,
       "market_state": null
     },
+    "OUJP11": {
+      "symbol": "OUJP11",
+      "name": "OUJP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OUJP11.SA",
+      "price": 70.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 70.14,
+      "market_state": null
+    },
+    "OURO11": {
+      "symbol": "OURO11",
+      "name": "OURO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OURO11.SA",
+      "price": 91.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 94.88,
+      "market_state": null
+    },
+    "OXRL11": {
+      "symbol": "OXRL11",
+      "name": "OXRL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "OXRL11.SA",
+      "price": 131.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:30:00Z",
+      "previous_close": 131.4,
+      "market_state": null
+    },
+    "PABY11": {
+      "symbol": "PABY11",
+      "name": "PABY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PABY11.SA",
+      "price": 20.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:19Z",
+      "previous_close": 24.76,
+      "market_state": null
+    },
+    "PACB11": {
+      "symbol": "PACB11",
+      "name": "PACB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PACB11.SA",
+      "price": 12.36,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 11.98,
+      "market_state": null
+    },
+    "PACC11": {
+      "symbol": "PACC11",
+      "name": "PACC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PACC11.SA",
+      "price": 126.58,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 126.25,
+      "market_state": null
+    },
+    "PACG11": {
+      "symbol": "PACG11",
+      "name": "PACG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PACG11.SA",
+      "price": 127.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 125.66,
+      "market_state": null
+    },
+    "PACL11": {
+      "symbol": "PACL11",
+      "name": "PACL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PACL11.SA",
+      "price": 122.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 120.1,
+      "market_state": null
+    },
     "PASS3": {
       "symbol": "PASS3",
       "name": "COMPASS GAS E ENERGIA S.A.",
@@ -2751,6 +6579,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 27.31,
+      "market_state": null
+    },
+    "PATA11": {
+      "symbol": "PATA11",
+      "name": "PATA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PATA11.SA",
+      "price": 10.1,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T13:00:00Z",
+      "previous_close": 10.1,
+      "market_state": null
+    },
+    "PATC11": {
+      "symbol": "PATC11",
+      "name": "PATC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PATC11.SA",
+      "price": 33.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 33.45,
       "market_state": null
     },
     "PATI3": {
@@ -2786,6 +6636,17 @@
       "previous_close": 2.91,
       "market_state": null
     },
+    "PCIP11": {
+      "symbol": "PCIP11",
+      "name": "PCIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PCIP11.SA",
+      "price": 81.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 81.41,
+      "market_state": null
+    },
     "PDGR3": {
       "symbol": "PDGR3",
       "name": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
@@ -2806,6 +6667,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 1.96,
+      "market_state": null
+    },
+    "PEMA11": {
+      "symbol": "PEMA11",
+      "name": "PEMA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PEMA11.SA",
+      "price": 24.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T13:47:52Z",
+      "previous_close": 24.5,
       "market_state": null
     },
     "PETR3": {
@@ -2830,6 +6702,28 @@
       "previous_close": 57.36,
       "market_state": null
     },
+    "PEVC11": {
+      "symbol": "PEVC11",
+      "name": "PEVC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PEVC11.SA",
+      "price": 146.92,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 141.54,
+      "market_state": null
+    },
+    "PFJR11": {
+      "symbol": "PFJR11",
+      "name": "PFJR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PFJR11.SA",
+      "price": 110.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:40:10Z",
+      "previous_close": 110.07,
+      "market_state": null
+    },
     "PFRM3": {
       "symbol": "PFRM3",
       "name": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
@@ -2850,6 +6744,28 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:35Z",
       "previous_close": 4.88,
+      "market_state": null
+    },
+    "PHIP11": {
+      "symbol": "PHIP11",
+      "name": "PHIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PHIP11.SA",
+      "price": 129.37,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 128.01,
+      "market_state": null
+    },
+    "PIBB11": {
+      "symbol": "PIBB11",
+      "name": "PIBB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PIBB11.SA",
+      "price": 365.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 366.4,
       "market_state": null
     },
     "PINE3": {
@@ -2874,6 +6790,39 @@
       "previous_close": 15.26,
       "market_state": null
     },
+    "PIPE11": {
+      "symbol": "PIPE11",
+      "name": "PIPE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PIPE11.SA",
+      "price": 89.25,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:51:10Z",
+      "previous_close": 89.2,
+      "market_state": null
+    },
+    "PKIN11": {
+      "symbol": "PKIN11",
+      "name": "PKIN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PKIN11.SA",
+      "price": 102.4,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 106.09,
+      "market_state": null
+    },
+    "PLAG11": {
+      "symbol": "PLAG11",
+      "name": "PLAG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PLAG11.SA",
+      "price": 62.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 63.54,
+      "market_state": null
+    },
     "PLAS3": {
       "symbol": "PLAS3",
       "name": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
@@ -2896,6 +6845,17 @@
       "previous_close": 7.37,
       "market_state": null
     },
+    "PLRI11": {
+      "symbol": "PLRI11",
+      "name": "PLRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PLRI11.SA",
+      "price": 5.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:34:43Z",
+      "previous_close": 5.49,
+      "market_state": null
+    },
     "PMAM3": {
       "symbol": "PMAM3",
       "name": "PARANAPANEMA S.A.",
@@ -2905,6 +6865,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:37Z",
       "previous_close": 0.37,
+      "market_state": null
+    },
+    "PMFO11": {
+      "symbol": "PMFO11",
+      "name": "PMFO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PMFO11.SA",
+      "price": 88.07,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:02Z",
+      "previous_close": 83.78,
+      "market_state": null
+    },
+    "PMIS11": {
+      "symbol": "PMIS11",
+      "name": "PMIS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PMIS11.SA",
+      "price": 8.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:43:15Z",
+      "previous_close": 8.04,
+      "market_state": null
+    },
+    "PMLL11": {
+      "symbol": "PMLL11",
+      "name": "PMLL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PMLL11.SA",
+      "price": 109.86,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 108.75,
+      "market_state": null
+    },
+    "PMRL11": {
+      "symbol": "PMRL11",
+      "name": "PMRL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PMRL11.SA",
+      "price": 111.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:37:31Z",
+      "previous_close": 111.14,
       "market_state": null
     },
     "PNVL3": {
@@ -2940,6 +6944,28 @@
       "previous_close": 4.66,
       "market_state": null
     },
+    "PORD11": {
+      "symbol": "PORD11",
+      "name": "PORD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PORD11.SA",
+      "price": 8.58,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.59,
+      "market_state": null
+    },
+    "POSB11": {
+      "symbol": "POSB11",
+      "name": "POSB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "POSB11.SA",
+      "price": 109.16,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 108.62,
+      "market_state": null
+    },
     "POSI3": {
       "symbol": "POSI3",
       "name": "POSITIVO TECNOLOGIA S.A.",
@@ -2949,6 +6975,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 4.64,
+      "market_state": null
+    },
+    "PQAG11": {
+      "symbol": "PQAG11",
+      "name": "PQAG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PQAG11.SA",
+      "price": 56.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T13:05:15Z",
+      "previous_close": 56.51,
+      "market_state": null
+    },
+    "PQDP11": {
+      "symbol": "PQDP11",
+      "name": "PQDP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PQDP11.SA",
+      "price": 2570.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 2598.55,
+      "market_state": null
+    },
+    "PRAF11": {
+      "symbol": "PRAF11",
+      "name": "PRAF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PRAF11.SA",
+      "price": 81.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:09:08Z",
+      "previous_close": 85.57,
+      "market_state": null
+    },
+    "PREX11": {
+      "symbol": "PREX11",
+      "name": "PREX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PREX11.SA",
+      "price": 54.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 54.2,
       "market_state": null
     },
     "PRIO3": {
@@ -2973,6 +7043,39 @@
       "previous_close": 20.244,
       "market_state": null
     },
+    "PRSN11": {
+      "symbol": "PRSN11",
+      "name": "PRSN11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PRSN11.SA",
+      "price": 4.81,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T18:12:29Z",
+      "previous_close": 4.81,
+      "market_state": null
+    },
+    "PRSV11": {
+      "symbol": "PRSV11",
+      "name": "PRSV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PRSV11.SA",
+      "price": 25.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:09:55Z",
+      "previous_close": 27.76,
+      "market_state": null
+    },
+    "PSEC11": {
+      "symbol": "PSEC11",
+      "name": "PSEC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PSEC11.SA",
+      "price": 53.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:39Z",
+      "previous_close": 55.4,
+      "market_state": null
+    },
     "PSSA3": {
       "symbol": "PSSA3",
       "name": "PORTO SEGURO S.A.",
@@ -2984,6 +7087,17 @@
       "previous_close": 52.74,
       "market_state": null
     },
+    "PSVM11": {
+      "symbol": "PSVM11",
+      "name": "PORTO SUDESTE V.M. S.A.",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PSVM11.SA",
+      "price": 14.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:59:15Z",
+      "previous_close": 14.0,
+      "market_state": null
+    },
     "PTBL3": {
       "symbol": "PTBL3",
       "name": "PBG S/A",
@@ -2993,6 +7107,94 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 2.52,
+      "market_state": null
+    },
+    "PVBI11": {
+      "symbol": "PVBI11",
+      "name": "PVBI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "PVBI11.SA",
+      "price": 76.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:32Z",
+      "previous_close": 72.1,
+      "market_state": null
+    },
+    "QBTC11": {
+      "symbol": "QBTC11",
+      "name": "QBTC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QBTC11.SA",
+      "price": 24.61,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 25.14,
+      "market_state": null
+    },
+    "QDFI11": {
+      "symbol": "QDFI11",
+      "name": "QDFI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QDFI11.SA",
+      "price": 2.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 2.34,
+      "market_state": null
+    },
+    "QETH11": {
+      "symbol": "QETH11",
+      "name": "QETH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QETH11.SA",
+      "price": 8.44,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:37Z",
+      "previous_close": 8.79,
+      "market_state": null
+    },
+    "QLBR11": {
+      "symbol": "QLBR11",
+      "name": "QLBR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QLBR11.SA",
+      "price": 142.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 138.85,
+      "market_state": null
+    },
+    "QQQI11": {
+      "symbol": "QQQI11",
+      "name": "QQQI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QQQI11.SA",
+      "price": 90.05,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 95.24,
+      "market_state": null
+    },
+    "QQQQ11": {
+      "symbol": "QQQQ11",
+      "name": "QQQQ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QQQQ11.SA",
+      "price": 122.56,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:02Z",
+      "previous_close": 134.3,
+      "market_state": null
+    },
+    "QSOL11": {
+      "symbol": "QSOL11",
+      "name": "QSOL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "QSOL11.SA",
+      "price": 6.31,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 6.46,
       "market_state": null
     },
     "QUAL3": {
@@ -3072,6 +7274,237 @@
       "previous_close": 7.25,
       "market_state": null
     },
+    "RARA11": {
+      "symbol": "RARA11",
+      "name": "RARA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RARA11.SA",
+      "price": 11.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 12.67,
+      "market_state": null
+    },
+    "RBDS11": {
+      "symbol": "RBDS11",
+      "name": "RBDS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBDS11.SA",
+      "price": 2.05,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:02:53Z",
+      "previous_close": 1.9,
+      "market_state": null
+    },
+    "RBFM11": {
+      "symbol": "RBFM11",
+      "name": "RBFM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBFM11.SA",
+      "price": 10.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:47:20Z",
+      "previous_close": 10.37,
+      "market_state": null
+    },
+    "RBHG11": {
+      "symbol": "RBHG11",
+      "name": "RBHG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBHG11.SA",
+      "price": 62.03,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 60.77,
+      "market_state": null
+    },
+    "RBHY11": {
+      "symbol": "RBHY11",
+      "name": "RBHY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBHY11.SA",
+      "price": 62.26,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:39Z",
+      "previous_close": 61.98,
+      "market_state": null
+    },
+    "RBIR11": {
+      "symbol": "RBIR11",
+      "name": "RBIR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBIR11.SA",
+      "price": 74.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:46:34Z",
+      "previous_close": 73.0,
+      "market_state": null
+    },
+    "RBLG11": {
+      "symbol": "RBLG11",
+      "name": "RBLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBLG11.SA",
+      "price": 16.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:48:37Z",
+      "previous_close": 17.69,
+      "market_state": null
+    },
+    "RBOP11": {
+      "symbol": "RBOP11",
+      "name": "RBOP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBOP11.SA",
+      "price": 186.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:42:03Z",
+      "previous_close": 201.14,
+      "market_state": null
+    },
+    "RBRD11": {
+      "symbol": "RBRD11",
+      "name": "RBRD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRD11.SA",
+      "price": 39.18,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:40:26Z",
+      "previous_close": 39.15,
+      "market_state": null
+    },
+    "RBRI11": {
+      "symbol": "RBRI11",
+      "name": "RBRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRI11.SA",
+      "price": 225.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T19:28:56Z",
+      "previous_close": 225.02,
+      "market_state": null
+    },
+    "RBRL11": {
+      "symbol": "RBRL11",
+      "name": "RBRL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRL11.SA",
+      "price": 84.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 84.94,
+      "market_state": null
+    },
+    "RBRP11": {
+      "symbol": "RBRP11",
+      "name": "RBRP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRP11.SA",
+      "price": 52.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 53.0,
+      "market_state": null
+    },
+    "RBRR11": {
+      "symbol": "RBRR11",
+      "name": "RBRR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRR11.SA",
+      "price": 74.86,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 73.62,
+      "market_state": null
+    },
+    "RBRS11": {
+      "symbol": "RBRS11",
+      "name": "RBRS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRS11.SA",
+      "price": 46.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:57Z",
+      "previous_close": 45.65,
+      "market_state": null
+    },
+    "RBRX11": {
+      "symbol": "RBRX11",
+      "name": "RBRX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRX11.SA",
+      "price": 7.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 7.73,
+      "market_state": null
+    },
+    "RBRY11": {
+      "symbol": "RBRY11",
+      "name": "RBRY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBRY11.SA",
+      "price": 86.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:32Z",
+      "previous_close": 88.99,
+      "market_state": null
+    },
+    "RBTS11": {
+      "symbol": "RBTS11",
+      "name": "RBTS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBTS11.SA",
+      "price": 209.12,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:37:04Z",
+      "previous_close": 210.17,
+      "market_state": null
+    },
+    "RBVA11": {
+      "symbol": "RBVA11",
+      "name": "RBVA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RBVA11.SA",
+      "price": 9.07,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.87,
+      "market_state": null
+    },
+    "RCFA11": {
+      "symbol": "RCFA11",
+      "name": "RCFA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RCFA11.SA",
+      "price": 0.52,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-15T20:03:00Z",
+      "previous_close": 0.52,
+      "market_state": null
+    },
+    "RCRB11": {
+      "symbol": "RCRB11",
+      "name": "RCRB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RCRB11.SA",
+      "price": 146.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 138.5,
+      "market_state": null
+    },
+    "RCRI11": {
+      "symbol": "RCRI11",
+      "name": "RCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RCRI11.SA",
+      "price": 102.59,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:44:56Z",
+      "previous_close": 101.2,
+      "market_state": null
+    },
     "RCSL3": {
       "symbol": "RCSL3",
       "name": "RECRUSUL S.A.",
@@ -3103,6 +7536,61 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:36Z",
       "previous_close": 42.85,
+      "market_state": null
+    },
+    "REAL11": {
+      "symbol": "REAL11",
+      "name": "REAL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "REAL11.SA",
+      "price": 50.53,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 50.65,
+      "market_state": null
+    },
+    "RECD11": {
+      "symbol": "RECD11",
+      "name": "RECD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RECD11.SA",
+      "price": 5.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:41:09Z",
+      "previous_close": 5.93,
+      "market_state": null
+    },
+    "RECM11": {
+      "symbol": "RECM11",
+      "name": "RECM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RECM11.SA",
+      "price": 7.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 6.91,
+      "market_state": null
+    },
+    "RECR11": {
+      "symbol": "RECR11",
+      "name": "RECR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RECR11.SA",
+      "price": 76.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 75.95,
+      "market_state": null
+    },
+    "RECT11": {
+      "symbol": "RECT11",
+      "name": "RECT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RECT11.SA",
+      "price": 35.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:49:41Z",
+      "previous_close": 35.19,
       "market_state": null
     },
     "RECV3": {
@@ -3149,6 +7637,28 @@
       "previous_close": 48.64,
       "market_state": null
     },
+    "RENV11": {
+      "symbol": "RENV11",
+      "name": "RENV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RENV11.SA",
+      "price": 5.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:36:34Z",
+      "previous_close": 6.04,
+      "market_state": null
+    },
+    "REVE11": {
+      "symbol": "REVE11",
+      "name": "REVE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "REVE11.SA",
+      "price": 72.81,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 73.9,
+      "market_state": null
+    },
     "RIAA3": {
       "symbol": "RIAA3",
       "name": "GUARARAPES CONFECCOES S.A.",
@@ -3158,6 +7668,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:45Z",
       "previous_close": 9.96,
+      "market_state": null
+    },
+    "RICO11": {
+      "symbol": "RICO11",
+      "name": "RICO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RICO11.SA",
+      "price": 30.22,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:05Z",
+      "previous_close": 30.56,
+      "market_state": null
+    },
+    "RINV11": {
+      "symbol": "RINV11",
+      "name": "RINV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RINV11.SA",
+      "price": 106.44,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:41:34Z",
+      "previous_close": 107.3,
+      "market_state": null
+    },
+    "RJDA11": {
+      "symbol": "RJDA11",
+      "name": "RJDA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RJDA11.SA",
+      "price": 120.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 120.75,
+      "market_state": null
+    },
+    "RMBS11": {
+      "symbol": "RMBS11",
+      "name": "RMBS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RMBS11.SA",
+      "price": 7.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:38:18Z",
+      "previous_close": 7.7,
       "market_state": null
     },
     "RNEW3": {
@@ -3180,6 +7734,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 0.93,
+      "market_state": null
+    },
+    "RNGO11": {
+      "symbol": "RNGO11",
+      "name": "RNGO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RNGO11.SA",
+      "price": 54.28,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 54.0,
       "market_state": null
     },
     "ROMI3": {
@@ -3215,6 +7780,39 @@
       "previous_close": 7.5,
       "market_state": null
     },
+    "RPRI11": {
+      "symbol": "RPRI11",
+      "name": "RPRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RPRI11.SA",
+      "price": 80.65,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 79.86,
+      "market_state": null
+    },
+    "RSPD11": {
+      "symbol": "RSPD11",
+      "name": "RSPD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RSPD11.SA",
+      "price": 650.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:13:25Z",
+      "previous_close": 640.0,
+      "market_state": null
+    },
+    "RSRV11": {
+      "symbol": "RSRV11",
+      "name": "RSRV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RSRV11.SA",
+      "price": 105.42,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T18:26:53Z",
+      "previous_close": 105.22,
+      "market_state": null
+    },
     "RSUL4": {
       "symbol": "RSUL4",
       "name": "METALURGICA RIOSULENSE S.A.",
@@ -3226,6 +7824,17 @@
       "previous_close": 48.99,
       "market_state": null
     },
+    "RVDI11": {
+      "symbol": "RVDI11",
+      "name": "RVDI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RVDI11.SA",
+      "price": 50.73,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 50.62,
+      "market_state": null
+    },
     "RVEE3": {
       "symbol": "RVEE3",
       "name": "REVEE S.A.",
@@ -3235,6 +7844,72 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T13:32:03Z",
       "previous_close": 0.67,
+      "market_state": null
+    },
+    "RZAK11": {
+      "symbol": "RZAK11",
+      "name": "RZAK11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZAK11.SA",
+      "price": 79.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 81.27,
+      "market_state": null
+    },
+    "RZAT11": {
+      "symbol": "RZAT11",
+      "name": "RZAT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZAT11.SA",
+      "price": 85.34,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 90.78,
+      "market_state": null
+    },
+    "RZLC11": {
+      "symbol": "RZLC11",
+      "name": "RZLC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZLC11.SA",
+      "price": 1008.29,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T13:56:50Z",
+      "previous_close": 1005.53,
+      "market_state": null
+    },
+    "RZTR11": {
+      "symbol": "RZTR11",
+      "name": "RZTR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZTR11.SA",
+      "price": 79.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 82.23,
+      "market_state": null
+    },
+    "RZZI11": {
+      "symbol": "RZZI11",
+      "name": "RZZI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZZI11.SA",
+      "price": 1300.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T19:11:00Z",
+      "previous_close": 1050.0,
+      "market_state": null
+    },
+    "RZZR11": {
+      "symbol": "RZZR11",
+      "name": "RZZR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "RZZR11.SA",
+      "price": 131.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 130.05,
       "market_state": null
     },
     "SANB11": {
@@ -3268,6 +7943,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:42Z",
       "previous_close": 14.19,
+      "market_state": null
+    },
+    "SAPI11": {
+      "symbol": "SAPI11",
+      "name": "SAPI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SAPI11.SA",
+      "price": 8.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.72,
       "market_state": null
     },
     "SAPR11": {
@@ -3347,6 +8033,39 @@
       "previous_close": 13.03,
       "market_state": null
     },
+    "SCPF11": {
+      "symbol": "SCPF11",
+      "name": "SCPF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SCPF11.SA",
+      "price": 2.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:01:04Z",
+      "previous_close": 2.84,
+      "market_state": null
+    },
+    "SCVB11": {
+      "symbol": "SCVB11",
+      "name": "SCVB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SCVB11.SA",
+      "price": 112.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 106.3,
+      "market_state": null
+    },
+    "SEED11": {
+      "symbol": "SEED11",
+      "name": "SEED11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SEED11.SA",
+      "price": 100.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T13:40:00Z",
+      "previous_close": 100.0,
+      "market_state": null
+    },
     "SEER3": {
       "symbol": "SEER3",
       "name": "SER EDUCACIONAL S.A.",
@@ -3356,6 +8075,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:42Z",
       "previous_close": 17.6,
+      "market_state": null
+    },
+    "SELI11": {
+      "symbol": "SELI11",
+      "name": "SELI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SELI11.SA",
+      "price": 102.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:25:20Z",
+      "previous_close": 101.85,
       "market_state": null
     },
     "SEQL3": {
@@ -3369,6 +8099,50 @@
       "previous_close": 0.06,
       "market_state": null
     },
+    "SEQR11": {
+      "symbol": "SEQR11",
+      "name": "SEQR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SEQR11.SA",
+      "price": 52.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 55.0,
+      "market_state": null
+    },
+    "SFIX11": {
+      "symbol": "SFIX11",
+      "name": "SFIX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SFIX11.SA",
+      "price": 117.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 117.28,
+      "market_state": null
+    },
+    "SHPH11": {
+      "symbol": "SHPH11",
+      "name": "SHPH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SHPH11.SA",
+      "price": 970.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:09:00Z",
+      "previous_close": 935.0,
+      "market_state": null
+    },
+    "SHPP11": {
+      "symbol": "SHPP11",
+      "name": "SHPP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SHPP11.SA",
+      "price": 13.11,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:44Z",
+      "previous_close": 12.92,
+      "market_state": null
+    },
     "SHUL4": {
       "symbol": "SHUL4",
       "name": "SCHULZ S.A.",
@@ -3378,6 +8152,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 5.0,
+      "market_state": null
+    },
+    "SILK11": {
+      "symbol": "SILK11",
+      "name": "SILK11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SILK11.SA",
+      "price": 53.14,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 56.03,
       "market_state": null
     },
     "SIMH3": {
@@ -3391,6 +8176,17 @@
       "previous_close": 14.49,
       "market_state": null
     },
+    "SJAU11": {
+      "symbol": "SJAU11",
+      "name": "SJAU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SJAU11.SA",
+      "price": 0.84,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:46Z",
+      "previous_close": 0.75,
+      "market_state": null
+    },
     "SLCE3": {
       "symbol": "SLCE3",
       "name": "SLC AGRICOLA S.A.",
@@ -3400,6 +8196,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 17.33,
+      "market_state": null
+    },
+    "SLVR11": {
+      "symbol": "SLVR11",
+      "name": "SLVR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SLVR11.SA",
+      "price": 33.75,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 35.82,
+      "market_state": null
+    },
+    "SMAB11": {
+      "symbol": "SMAB11",
+      "name": "SMAB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SMAB11.SA",
+      "price": 9.78,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 9.49,
+      "market_state": null
+    },
+    "SMAC11": {
+      "symbol": "SMAC11",
+      "name": "SMAC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SMAC11.SA",
+      "price": 70.17,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 68.13,
+      "market_state": null
+    },
+    "SMAL11": {
+      "symbol": "SMAL11",
+      "name": "SMAL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SMAL11.SA",
+      "price": 134.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T21:48:12Z",
+      "previous_close": 130.83,
       "market_state": null
     },
     "SMFT3": {
@@ -3413,6 +8253,17 @@
       "previous_close": 24.19,
       "market_state": null
     },
+    "SMRE11": {
+      "symbol": "SMRE11",
+      "name": "SMRE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SMRE11.SA",
+      "price": 55.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:20:15Z",
+      "previous_close": 56.2,
+      "market_state": null
+    },
     "SMTO3": {
       "symbol": "SMTO3",
       "name": "SAO MARTINHO S.A.",
@@ -3422,6 +8273,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 21.17,
+      "market_state": null
+    },
+    "SNCI11": {
+      "symbol": "SNCI11",
+      "name": "SNCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SNCI11.SA",
+      "price": 85.94,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 88.25,
+      "market_state": null
+    },
+    "SNEL11": {
+      "symbol": "SNEL11",
+      "name": "SNEL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SNEL11.SA",
+      "price": 7.96,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 8.07,
+      "market_state": null
+    },
+    "SNFF11": {
+      "symbol": "SNFF11",
+      "name": "SNFF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SNFF11.SA",
+      "price": 74.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T20:03:00Z",
+      "previous_close": 74.0,
+      "market_state": null
+    },
+    "SNME11": {
+      "symbol": "SNME11",
+      "name": "SNME11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SNME11.SA",
+      "price": 9.61,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 9.61,
       "market_state": null
     },
     "SNSY5": {
@@ -3446,6 +8341,17 @@
       "previous_close": 8.16,
       "market_state": null
     },
+    "SOLH11": {
+      "symbol": "SOLH11",
+      "name": "SOLH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SOLH11.SA",
+      "price": 14.52,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:50:45Z",
+      "previous_close": 15.04,
+      "market_state": null
+    },
     "SOND5": {
       "symbol": "SOND5",
       "name": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
@@ -3468,6 +8374,160 @@
       "previous_close": 90.0,
       "market_state": null
     },
+    "SPBZ11": {
+      "symbol": "SPBZ11",
+      "name": "SPBZ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPBZ11.SA",
+      "price": 123.52,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 124.57,
+      "market_state": null
+    },
+    "SPMO11": {
+      "symbol": "SPMO11",
+      "name": "SPMO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPMO11.SA",
+      "price": 120.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-13T13:51:52Z",
+      "previous_close": 120.0,
+      "market_state": null
+    },
+    "SPTW11": {
+      "symbol": "SPTW11",
+      "name": "SPTW11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPTW11.SA",
+      "price": 34.77,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:19:55Z",
+      "previous_close": 33.6,
+      "market_state": null
+    },
+    "SPUB11": {
+      "symbol": "SPUB11",
+      "name": "SPUB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPUB11.SA",
+      "price": 74.07,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 74.0,
+      "market_state": null
+    },
+    "SPVT11": {
+      "symbol": "SPVT11",
+      "name": "SPVT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPVT11.SA",
+      "price": 71.88,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 74.24,
+      "market_state": null
+    },
+    "SPXB11": {
+      "symbol": "SPXB11",
+      "name": "SPXB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXB11.SA",
+      "price": 17.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 17.34,
+      "market_state": null
+    },
+    "SPXH11": {
+      "symbol": "SPXH11",
+      "name": "SPXH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXH11.SA",
+      "price": 59.27,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 59.82,
+      "market_state": null
+    },
+    "SPXI11": {
+      "symbol": "SPXI11",
+      "name": "SPXI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXI11.SA",
+      "price": 53.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 54.11,
+      "market_state": null
+    },
+    "SPXR11": {
+      "symbol": "SPXR11",
+      "name": "SPXR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXR11.SA",
+      "price": 76.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 76.7,
+      "market_state": null
+    },
+    "SPXS11": {
+      "symbol": "SPXS11",
+      "name": "SPXS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXS11.SA",
+      "price": 7.92,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:56Z",
+      "previous_close": 7.88,
+      "market_state": null
+    },
+    "SPXU11": {
+      "symbol": "SPXU11",
+      "name": "SPXU11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPXU11.SA",
+      "price": 16.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 16.88,
+      "market_state": null
+    },
+    "SPYI11": {
+      "symbol": "SPYI11",
+      "name": "SPYI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPYI11.SA",
+      "price": 105.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 107.71,
+      "market_state": null
+    },
+    "SPYR11": {
+      "symbol": "SPYR11",
+      "name": "SPYR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SPYR11.SA",
+      "price": 117.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 118.97,
+      "market_state": null
+    },
+    "STYI11": {
+      "symbol": "STYI11",
+      "name": "STYI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "STYI11.SA",
+      "price": 805.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:08:00Z",
+      "previous_close": 795.0,
+      "market_state": null
+    },
     "SUZB3": {
       "symbol": "SUZB3",
       "name": "SUZANO S.A.",
@@ -3477,6 +8537,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:39Z",
       "previous_close": 42.4,
+      "market_state": null
+    },
+    "SVAL11": {
+      "symbol": "SVAL11",
+      "name": "SVAL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "SVAL11.SA",
+      "price": 145.69,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 145.0,
       "market_state": null
     },
     "SYNE3": {
@@ -3556,6 +8627,17 @@
       "previous_close": 0.9,
       "market_state": null
     },
+    "TECK11": {
+      "symbol": "TECK11",
+      "name": "TECK11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TECK11.SA",
+      "price": 119.88,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 126.1,
+      "market_state": null
+    },
     "TECN3": {
       "symbol": "TECN3",
       "name": "TECHNOS S.A.",
@@ -3565,6 +8647,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 10.6,
+      "market_state": null
+    },
+    "TECX11": {
+      "symbol": "TECX11",
+      "name": "TECX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TECX11.SA",
+      "price": 123.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 133.24,
       "market_state": null
     },
     "TELB3": {
@@ -3589,6 +8682,17 @@
       "previous_close": 13.1,
       "market_state": null
     },
+    "TELM11": {
+      "symbol": "TELM11",
+      "name": "TELM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TELM11.SA",
+      "price": 9.47,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:04:40Z",
+      "previous_close": 9.4,
+      "market_state": null
+    },
     "TEND3": {
       "symbol": "TEND3",
       "name": "CONSTRUTORA TENDA S.A.",
@@ -3600,6 +8704,17 @@
       "previous_close": 27.66,
       "market_state": null
     },
+    "TEPP11": {
+      "symbol": "TEPP11",
+      "name": "TEPP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TEPP11.SA",
+      "price": 7.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:54:43Z",
+      "previous_close": 7.59,
+      "market_state": null
+    },
     "TFCO4": {
       "symbol": "TFCO4",
       "name": "TRACK & FIELD CO S.A.",
@@ -3609,6 +8724,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 13.65,
+      "market_state": null
+    },
+    "TGAR11": {
+      "symbol": "TGAR11",
+      "name": "TGAR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TGAR11.SA",
+      "price": 51.96,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 49.83,
       "market_state": null
     },
     "TGMA3": {
@@ -3633,6 +8759,28 @@
       "previous_close": 18.64,
       "market_state": null
     },
+    "TJKB11": {
+      "symbol": "TJKB11",
+      "name": "TJKB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TJKB11.SA",
+      "price": 258.93,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 256.87,
+      "market_state": null
+    },
+    "TMPS11": {
+      "symbol": "TMPS11",
+      "name": "TMPS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TMPS11.SA",
+      "price": 73.44,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:14Z",
+      "previous_close": 73.3,
+      "market_state": null
+    },
     "TOKY3": {
       "symbol": "TOKY3",
       "name": "GRUPO TOKY S.A.",
@@ -3642,6 +8790,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T17:30:41Z",
       "previous_close": 9.0,
+      "market_state": null
+    },
+    "TOPP11": {
+      "symbol": "TOPP11",
+      "name": "TOPP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TOPP11.SA",
+      "price": 72.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:35Z",
+      "previous_close": 70.45,
+      "market_state": null
+    },
+    "TOPY11": {
+      "symbol": "TOPY11",
+      "name": "TOPY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TOPY11.SA",
+      "price": 112.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 113.7,
+      "market_state": null
+    },
+    "TORD11": {
+      "symbol": "TORD11",
+      "name": "TORD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TORD11.SA",
+      "price": 0.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 1.0,
       "market_state": null
     },
     "TOTS3": {
@@ -3666,6 +8847,28 @@
       "previous_close": 11.65,
       "market_state": null
     },
+    "TRBL11": {
+      "symbol": "TRBL11",
+      "name": "TRBL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRBL11.SA",
+      "price": 54.08,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 52.99,
+      "market_state": null
+    },
+    "TRIG11": {
+      "symbol": "TRIG11",
+      "name": "TRIG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRIG11.SA",
+      "price": 57.61,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 55.45,
+      "market_state": null
+    },
     "TRIS3": {
       "symbol": "TRIS3",
       "name": "TRISUL S.A.",
@@ -3675,6 +8878,72 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 6.31,
+      "market_state": null
+    },
+    "TRNT11": {
+      "symbol": "TRNT11",
+      "name": "TRNT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRNT11.SA",
+      "price": 139.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:00:37Z",
+      "previous_close": 129.99,
+      "market_state": null
+    },
+    "TRPL11": {
+      "symbol": "TRPL11",
+      "name": "TRPL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRPL11.SA",
+      "price": 1.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T15:42:04Z",
+      "previous_close": 1.15,
+      "market_state": null
+    },
+    "TRUE11": {
+      "symbol": "TRUE11",
+      "name": "TRUE11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRUE11.SA",
+      "price": 27.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:01:09Z",
+      "previous_close": 27.02,
+      "market_state": null
+    },
+    "TRXB11": {
+      "symbol": "TRXB11",
+      "name": "TRXB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRXB11.SA",
+      "price": 195.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:38:23Z",
+      "previous_close": 190.79,
+      "market_state": null
+    },
+    "TRXF11": {
+      "symbol": "TRXF11",
+      "name": "TRXF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRXF11.SA",
+      "price": 71.89,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 71.9,
+      "market_state": null
+    },
+    "TRXY11": {
+      "symbol": "TRXY11",
+      "name": "TRXY11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TRXY11.SA",
+      "price": 7.73,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 7.7,
       "market_state": null
     },
     "TTEN3": {
@@ -3697,6 +8966,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:44Z",
       "previous_close": 20.37,
+      "market_state": null
+    },
+    "TVRI11": {
+      "symbol": "TVRI11",
+      "name": "TVRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "TVRI11.SA",
+      "price": 87.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 90.1,
       "market_state": null
     },
     "TXRX4": {
@@ -3765,6 +9045,39 @@
       "previous_close": 60.09,
       "market_state": null
     },
+    "URHF11": {
+      "symbol": "URHF11",
+      "name": "URHF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "URHF11.SA",
+      "price": 54.15,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:48:11Z",
+      "previous_close": 54.16,
+      "market_state": null
+    },
+    "URPR11": {
+      "symbol": "URPR11",
+      "name": "URPR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "URPR11.SA",
+      "price": 21.98,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 21.31,
+      "market_state": null
+    },
+    "USDB11": {
+      "symbol": "USDB11",
+      "name": "USDB11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "USDB11.SA",
+      "price": 96.06,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 96.15,
+      "market_state": null
+    },
     "USIM3": {
       "symbol": "USIM3",
       "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
@@ -3796,6 +9109,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T14:35:12Z",
       "previous_close": 6.46,
+      "market_state": null
+    },
+    "USTK11": {
+      "symbol": "USTK11",
+      "name": "USTK11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "USTK11.SA",
+      "price": 21.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 22.25,
+      "market_state": null
+    },
+    "UTEC11": {
+      "symbol": "UTEC11",
+      "name": "UTEC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "UTEC11.SA",
+      "price": 28.37,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 29.47,
+      "market_state": null
+    },
+    "UTLI11": {
+      "symbol": "UTLI11",
+      "name": "UTLI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "UTLI11.SA",
+      "price": 58.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 58.72,
+      "market_state": null
+    },
+    "UTLL11": {
+      "symbol": "UTLL11",
+      "name": "UTLL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "UTLL11.SA",
+      "price": 140.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 140.65,
       "market_state": null
     },
     "VALE3": {
@@ -3831,6 +9188,138 @@
       "previous_close": 36.25,
       "market_state": null
     },
+    "VCJR11": {
+      "symbol": "VCJR11",
+      "name": "VCJR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VCJR11.SA",
+      "price": 75.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 75.24,
+      "market_state": null
+    },
+    "VCRI11": {
+      "symbol": "VCRI11",
+      "name": "VCRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VCRI11.SA",
+      "price": 7.46,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:00Z",
+      "previous_close": 7.54,
+      "market_state": null
+    },
+    "VCRR11": {
+      "symbol": "VCRR11",
+      "name": "VCRR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VCRR11.SA",
+      "price": 58.22,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:39:49Z",
+      "previous_close": 55.3,
+      "market_state": null
+    },
+    "VGHF11": {
+      "symbol": "VGHF11",
+      "name": "VGHF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGHF11.SA",
+      "price": 5.79,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 5.69,
+      "market_state": null
+    },
+    "VGII11": {
+      "symbol": "VGII11",
+      "name": "VGII11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGII11.SA",
+      "price": 64.06,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-19T17:24:00Z",
+      "previous_close": 64.06,
+      "market_state": null
+    },
+    "VGIP11": {
+      "symbol": "VGIP11",
+      "name": "VGIP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGIP11.SA",
+      "price": 77.02,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 76.77,
+      "market_state": null
+    },
+    "VGIR11": {
+      "symbol": "VGIR11",
+      "name": "VGIR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGIR11.SA",
+      "price": 9.58,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 9.75,
+      "market_state": null
+    },
+    "VGRH11": {
+      "symbol": "VGRH11",
+      "name": "VGRH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGRH11.SA",
+      "price": 100.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T18:13:46Z",
+      "previous_close": 100.0,
+      "market_state": null
+    },
+    "VGRI11": {
+      "symbol": "VGRI11",
+      "name": "VGRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VGRI11.SA",
+      "price": 6.2,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 6.24,
+      "market_state": null
+    },
+    "VILG11": {
+      "symbol": "VILG11",
+      "name": "VILG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VILG11.SA",
+      "price": 102.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 98.77,
+      "market_state": null
+    },
+    "VINO11": {
+      "symbol": "VINO11",
+      "name": "VINO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VINO11.SA",
+      "price": 4.66,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 4.69,
+      "market_state": null
+    },
+    "VISC11": {
+      "symbol": "VISC11",
+      "name": "VISC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VISC11.SA",
+      "price": 113.55,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 113.75,
+      "market_state": null
+    },
     "VITT3": {
       "symbol": "VITT3",
       "name": "VITTIA S.A.",
@@ -3840,6 +9329,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:04:00Z",
       "previous_close": 3.45,
+      "market_state": null
+    },
+    "VIUR11": {
+      "symbol": "VIUR11",
+      "name": "VIUR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VIUR11.SA",
+      "price": 2.43,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 2.4,
       "market_state": null
     },
     "VIVA3": {
@@ -3886,6 +9386,72 @@
       "previous_close": 18.85,
       "market_state": null
     },
+    "VOTS11": {
+      "symbol": "VOTS11",
+      "name": "VOTS11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VOTS11.SA",
+      "price": 100.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T16:38:50Z",
+      "previous_close": 82.0,
+      "market_state": null
+    },
+    "VPPR11": {
+      "symbol": "VPPR11",
+      "name": "VPPR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VPPR11.SA",
+      "price": 22.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 22.6,
+      "market_state": null
+    },
+    "VRTA11": {
+      "symbol": "VRTA11",
+      "name": "VRTA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VRTA11.SA",
+      "price": 76.23,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 76.45,
+      "market_state": null
+    },
+    "VRTM11": {
+      "symbol": "VRTM11",
+      "name": "VRTM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VRTM11.SA",
+      "price": 6.85,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 6.75,
+      "market_state": null
+    },
+    "VSHO11": {
+      "symbol": "VSHO11",
+      "name": "VSHO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VSHO11.SA",
+      "price": 76.91,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:51:50Z",
+      "previous_close": 78.0,
+      "market_state": null
+    },
+    "VSLH11": {
+      "symbol": "VSLH11",
+      "name": "VSLH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VSLH11.SA",
+      "price": 1.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 1.67,
+      "market_state": null
+    },
     "VSTE3": {
       "symbol": "VSTE3",
       "name": "VESTE S.A. ESTILO",
@@ -3895,6 +9461,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:00Z",
       "previous_close": 3.79,
+      "market_state": null
+    },
+    "VTOT11": {
+      "symbol": "VTOT11",
+      "name": "VTOT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VTOT11.SA",
+      "price": 67.49,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:54:55Z",
+      "previous_close": 68.0,
       "market_state": null
     },
     "VTRU3": {
@@ -3919,6 +9496,39 @@
       "previous_close": 15.15,
       "market_state": null
     },
+    "VVCO11": {
+      "symbol": "VVCO11",
+      "name": "VVCO11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VVCO11.SA",
+      "price": 11.5,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:12:07Z",
+      "previous_close": 12.7,
+      "market_state": null
+    },
+    "VVCR11": {
+      "symbol": "VVCR11",
+      "name": "VVCR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VVCR11.SA",
+      "price": 8.8,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:36:48Z",
+      "previous_close": 8.85,
+      "market_state": null
+    },
+    "VVDI11": {
+      "symbol": "VVDI11",
+      "name": "VVDI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VVDI11.SA",
+      "price": 9.9,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-14T13:46:23Z",
+      "previous_close": 9.9,
+      "market_state": null
+    },
     "VVEO3": {
       "symbol": "VVEO3",
       "name": "CM HOSPITALAR S.A.",
@@ -3928,6 +9538,50 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:43Z",
       "previous_close": 1.02,
+      "market_state": null
+    },
+    "VVMR11": {
+      "symbol": "VVMR11",
+      "name": "VVMR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VVMR11.SA",
+      "price": 84.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T17:41:54Z",
+      "previous_close": 79.08,
+      "market_state": null
+    },
+    "VVRI11": {
+      "symbol": "VVRI11",
+      "name": "VVRI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VVRI11.SA",
+      "price": 7.54,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T14:34:28Z",
+      "previous_close": 8.06,
+      "market_state": null
+    },
+    "VWRA11": {
+      "symbol": "VWRA11",
+      "name": "VWRA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VWRA11.SA",
+      "price": 109.48,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 112.08,
+      "market_state": null
+    },
+    "VXXV11": {
+      "symbol": "VXXV11",
+      "name": "VXXV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VXXV11.SA",
+      "price": 826.38,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T14:32:00Z",
+      "previous_close": 815.03,
       "market_state": null
     },
     "WDCN3": {
@@ -3952,6 +9606,17 @@
       "previous_close": 49.09,
       "market_state": null
     },
+    "WEJR11": {
+      "symbol": "WEJR11",
+      "name": "WEJR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "WEJR11.SA",
+      "price": 118.86,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:39:56Z",
+      "previous_close": 118.0,
+      "market_state": null
+    },
     "WEST3": {
       "symbol": "WEST3",
       "name": "WESTWING COMERCIO VAREJISTA S.A.",
@@ -3961,6 +9626,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:03:00Z",
       "previous_close": 4.76,
+      "market_state": null
+    },
+    "WHGR11": {
+      "symbol": "WHGR11",
+      "name": "WHGR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "WHGR11.SA",
+      "price": 9.09,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:00:00Z",
+      "previous_close": 8.99,
       "market_state": null
     },
     "WHRL3": {
@@ -4018,6 +9694,215 @@
       "previous_close": 16.99,
       "market_state": null
     },
+    "WPLZ11": {
+      "symbol": "WPLZ11",
+      "name": "WPLZ11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "WPLZ11.SA",
+      "price": 51.3,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:48:12Z",
+      "previous_close": 49.1,
+      "market_state": null
+    },
+    "WRLD11": {
+      "symbol": "WRLD11",
+      "name": "WRLD11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "WRLD11.SA",
+      "price": 142.87,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 145.71,
+      "market_state": null
+    },
+    "WTSP11": {
+      "symbol": "WTSP11",
+      "name": "WTSP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "WTSP11.SA",
+      "price": 67.99,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T17:57:27Z",
+      "previous_close": 61.02,
+      "market_state": null
+    },
+    "XBCI11": {
+      "symbol": "XBCI11",
+      "name": "XBCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XBCI11.SA",
+      "price": 91.95,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 93.98,
+      "market_state": null
+    },
+    "XBIT11": {
+      "symbol": "XBIT11",
+      "name": "XBIT11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XBIT11.SA",
+      "price": 39.86,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 40.66,
+      "market_state": null
+    },
+    "XBOV11": {
+      "symbol": "XBOV11",
+      "name": "XBOV11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XBOV11.SA",
+      "price": 198.31,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 198.56,
+      "market_state": null
+    },
+    "XCAP11": {
+      "symbol": "XCAP11",
+      "name": "XCAP11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XCAP11.SA",
+      "price": 63.32,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:16:00Z",
+      "previous_close": 61.42,
+      "market_state": null
+    },
+    "XETH11": {
+      "symbol": "XETH11",
+      "name": "XETH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XETH11.SA",
+      "price": 32.13,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 33.34,
+      "market_state": null
+    },
+    "XFIX11": {
+      "symbol": "XFIX11",
+      "name": "XFIX11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XFIX11.SA",
+      "price": 14.01,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 13.95,
+      "market_state": null
+    },
+    "XINA11": {
+      "symbol": "XINA11",
+      "name": "XINA11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XINA11.SA",
+      "price": 6.39,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:17:00Z",
+      "previous_close": 6.85,
+      "market_state": null
+    },
+    "XLPR11": {
+      "symbol": "XLPR11",
+      "name": "XLPR11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XLPR11.SA",
+      "price": 74.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-21T16:54:23Z",
+      "previous_close": 71.0,
+      "market_state": null
+    },
+    "XPCI11": {
+      "symbol": "XPCI11",
+      "name": "XPCI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XPCI11.SA",
+      "price": 81.45,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:36Z",
+      "previous_close": 81.3,
+      "market_state": null
+    },
+    "XPCM11": {
+      "symbol": "XPCM11",
+      "name": "XPCM11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XPCM11.SA",
+      "price": 7.62,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:54:32Z",
+      "previous_close": 7.58,
+      "market_state": null
+    },
+    "XPLG11": {
+      "symbol": "XPLG11",
+      "name": "XPLG11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XPLG11.SA",
+      "price": 100.67,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:04:00Z",
+      "previous_close": 101.4,
+      "market_state": null
+    },
+    "XPML11": {
+      "symbol": "XPML11",
+      "name": "XPML11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XPML11.SA",
+      "price": 104.7,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:05:38Z",
+      "previous_close": 107.39,
+      "market_state": null
+    },
+    "XPSF11": {
+      "symbol": "XPSF11",
+      "name": "XPSF11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XPSF11.SA",
+      "price": 6.6,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:03:00Z",
+      "previous_close": 6.56,
+      "market_state": null
+    },
+    "XRPH11": {
+      "symbol": "XRPH11",
+      "name": "XRPH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XRPH11.SA",
+      "price": 10.25,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:53:17Z",
+      "previous_close": 10.6,
+      "market_state": null
+    },
+    "XSPI11": {
+      "symbol": "XSPI11",
+      "name": "XSPI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XSPI11.SA",
+      "price": 102.47,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:37:05Z",
+      "previous_close": 104.37,
+      "market_state": null
+    },
+    "XVAL11": {
+      "symbol": "XVAL11",
+      "name": "XVAL11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "XVAL11.SA",
+      "price": 60.59,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T20:15:00Z",
+      "previous_close": 57.86,
+      "market_state": null
+    },
     "YDUQ3": {
       "symbol": "YDUQ3",
       "name": "YDUQS PARTICIPACOES S.A.",
@@ -4027,6 +9912,39 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-22T20:05:39Z",
       "previous_close": 13.46,
+      "market_state": null
+    },
+    "ZAGH11": {
+      "symbol": "ZAGH11",
+      "name": "ZAGH11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ZAGH11.SA",
+      "price": 7.68,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:08:33Z",
+      "previous_close": 7.4,
+      "market_state": null
+    },
+    "ZAVC11": {
+      "symbol": "ZAVC11",
+      "name": "ZAVC11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ZAVC11.SA",
+      "price": 9.4,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T18:19:50Z",
+      "previous_close": 9.39,
+      "market_state": null
+    },
+    "ZAVI11": {
+      "symbol": "ZAVI11",
+      "name": "ZAVI11",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "ZAVI11.SA",
+      "price": 9.92,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-22T19:52:41Z",
+      "previous_close": 9.98,
       "market_state": null
     }
   },
