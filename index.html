@@ -110,7 +110,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
     </div>
 
     <div id="pricingModeNote" class="mode-note advanced-only"></div>
-    <div class="simple-qty field"><label>Quantidade total (unidades-base)</label><input type="number" id="simpleUnits" min="1" step="1" value="100"><div class="hint">Para várias pernas, a proporção fica em configurações avançadas.</div></div><div id="strategySummary" class="strategy-summary advanced-only" style="margin-top:14px"></div>
+    <div class="simple-qty field"><label>Dimensionamento</label><select id="sizingMode"><option value="manual">Quantidade manual</option><option value="budget">Orçamento de risco</option></select><div id="budgetBox" hidden style="margin-top:10px"><label>Risco máximo desejado (R$)</label><input id="budgetTarget" type="number" min="0" step="100" value="10000"><div id="budgetStatus" class="hint">Preencha os prêmios para dimensionar.</div></div><div id="manualUnits"><label>Quantidade total (unidades-base)</label><input type="number" id="simpleUnits" min="1" step="1" value="100"><div class="hint">Para várias pernas, a proporção fica em configurações avançadas.</div></div></div><div id="strategySummary" class="strategy-summary advanced-only" style="margin-top:14px"></div>
     <div id="quickSummary" class="quick-summary">Informe strike, prêmio e quantidade para visualizar custo e risco.</div><div id="riskWarning" style="margin-top:12px"></div><div id="pricingStatus" style="margin-top:10px"></div>
   </div>
 </section>
@@ -662,7 +662,34 @@ function addToComparator(){
   if(go)location.href='comparador.html';
 }
 
+function budgetCandidate(lots){const old=$('lots').value;$('lots').value=lots;const m=model(),r=analyzeRisk(m);$('lots').value=old;return {m,r,loss:Number.isFinite(r.maxLoss)?-Math.min(0,r.maxLoss):Infinity}}
+function updateBudgetSizing(){
+ const budget=$('sizingMode').value==='budget';$('budgetBox').hidden=!budget;$('manualUnits').hidden=budget;
+ if(!budget)return;
+ const target=num($('budgetTarget').value),first=budgetCandidate(1);
+ const valid=target>0&&first.m.pricingComplete&&first.m.T>0&&first.m.optionCashflowPerUnit<0&&first.m.stockQty===0&&Number.isFinite(first.loss)&&first.loss>0;
+ if(!valid){$('budgetStatus').textContent='Indisponível: exige estrutura debitada, risco finito e prêmios válidos.';return}
+ let lo=0,hi=1;while(hi<1000000&&budgetCandidate(hi).loss<=target){lo=hi;hi=Math.min(1000000,hi*2);if(hi===lo)break}
+ while(lo+1<hi){const mid=Math.floor((lo+hi)/2);if(budgetCandidate(mid).loss<=target)lo=mid;else hi=mid}
+ if(hi===1000000&&budgetCandidate(hi).loss<=target)lo=hi;
+ if(lo===0){$('budgetStatus').textContent='Orçamento insuficiente para um lote; operação não dimensionada.';return}
+ $('lots').value=lo;const x=budgetCandidate(lo);$('simpleUnits').value=x.m.units;
+ $('budgetStatus').textContent='Lotes '+fmt0(lo)+' · Risco '+brl(x.loss)+' · Saldo '+brl(Math.max(0,target-x.loss));
+}
+function calculateReturnMilestones(m,risk){
+ if(!m.pricingComplete||!Number.isFinite(risk.maxLoss)||risk.maxLoss>=0)return [];
+ const base=-risk.maxLoss,pts=[...new Set([0,...state.legs.map(l=>num(l.strike))])].filter(v=>v>=0).sort((a,b)=>a-b);
+ const high=Math.max(m.S*8,pts[pts.length-1]*4,m.S+100);pts.push(high);
+ return [100,200,300].map(pctGoal=>{
+  const target=base*pctGoal/100,roots=[];
+  for(let i=0;i<pts.length-1;i++){const a=pts[i],b=pts[i+1],ya=expiryPnlTotal(a,m)-target,yb=expiryPnlTotal(b,m)-target;if(Math.abs(ya)<.001)roots.push(a);if(ya*yb<0||Math.abs(yb)<.001)roots.push(a-ya*(b-a)/(yb-ya))}
+  const slope=OptionEngine.highSlope(enginePayload(m))*m.units;
+  if(slope>0){const x=high+(target-expiryPnlTotal(high,m))/slope;if(x>high)roots.push(x)}
+  return {pct:pctGoal,spots:roots.filter((v,i,arr)=>Number.isFinite(v)&&v>=0&&arr.findIndex(w=>Math.abs(w-v)<.01)===i)};
+ });
+}
 function updateAll(){
+ updateBudgetSizing();
   applyPricingModeUI();
   const m=model(),risk=analyzeRisk(m);
   const quick=$('quickSummary');
@@ -815,7 +842,7 @@ function buildPresentationModel(){
   });
 
   return {
-    presentationMode:PRESENTATION_MODE,m,risk,st,range:{lowPct:low,highPct:high},
+    presentationMode:PRESENTATION_MODE,m,risk,st,milestones:calculateReturnMilestones(m,risk),range:{lowPct:low,highPct:high},
     ratio,movePct:move,scenarioSpot,scenarioExpiry,scenarioMtm,
     xs,expiry,mtm,ymin,ymax,legs,tableRows,riskBase
   };
@@ -985,10 +1012,12 @@ function drawFactsheet(){
   }
   chartLine(pm.expiry,C.gold2);
   if(pm.mtm)chartLine(pm.mtm,C.text,[10,7]);
+  pm.milestones.forEach(item=>item.spots.forEach(spot=>{const move=(spot/m.S-1)*100;if(move<low||move>high)return;const x=xpPct(move),y=yp(expiryPnlTotal(spot,m));ctx.save();ctx.fillStyle=C.gold2;ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fill();cText(ctx,'+'+item.pct+'% '+brl(spot),x,Math.max(plot.y+13,y-13),9,700,C.gold2,'center');ctx.restore()}));
 
   ctx.fillStyle=C.gold2;ctx.fillRect(1210,gy+27,22,3);cText(ctx,'Vencimento',1240,gy+32,9,700,C.text);
   if(pm.mtm){ctx.strokeStyle=C.text;ctx.setLineDash([10,7]);ctx.beginPath();ctx.moveTo(1360,gy+28);ctx.lineTo(1382,gy+28);ctx.stroke();ctx.setLineDash([]);cText(ctx,'MTM cenário',1392,gy+32,9,700,C.text)}
-  cText(ctx,'Faixa: '+pct(low)+' a '+pct(high)+' · '+brl(m.S*(1+low/100))+' a '+brl(m.S*(1+high/100)),1770,gy+52,9,400,C.muted,'right');
+  cText(ctx,'Faixa: '+pct(low)+' a '+pct(high),1770,gy+52,9,400,C.muted,'right');
+  cText(ctx,pm.milestones.map(x=>'+'+x.pct+'%: '+(x.spots.length?x.spots.map(brl).join(' / '):'não atingível')).join('  ·  '),94,gy+gh-7,10,700,C.gold2);
 
   // Rodapé.
   ctx.fillStyle=C.gold;ctx.fillRect(72,1026,1774,1);
@@ -1056,6 +1085,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
 function setUiMode(advanced){document.body.classList.toggle('advanced-ui',advanced);$('simpleUi').classList.toggle('active',!advanced);$('advancedUi').classList.toggle('active',advanced)}
 $('simpleUi').onclick=()=>setUiMode(false);
 $('advancedUi').onclick=()=>setUiMode(true);
+$('sizingMode').addEventListener('change',updateAll);
+$('budgetTarget').addEventListener('input',updateAll);
 $('simpleUnits').addEventListener('input',()=>{const value=Math.max(1,Math.floor(num($('simpleUnits').value)||1));$('lotSize').value=value;$('lots').value=1;updateAll()});
 ['lotSize','lots'].forEach(id=>$(id).addEventListener('input',()=>{$('simpleUnits').value=Math.max(1,num($('lotSize').value))*Math.max(1,num($('lots').value))}));
 $('pricingMode').addEventListener('change',()=>{localStorage.setItem('jacaranda.options.pricingMode',$('pricingMode').value);applyPricingModeUI();renderLegs();updateAll()});
