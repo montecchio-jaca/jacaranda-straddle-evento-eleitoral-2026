@@ -135,6 +135,33 @@ assert(validPut.ok&&validPut.iv>0&&validPut.iv<5,'Put plausível deveria calibra
 assert(validPut.maxGain>0,'Put plausível deveria permitir ganho no cenário de queda');
 console.log('PASS Put BOVA11 inválida bloqueada / Put válida precificada');
 
+// UX simples: campos centrais visíveis e técnico recolhido; alternância reversível.
+assert(await page.locator('#simpleUi').count()===1,'Botão de montagem simples ausente');
+assert(await page.locator('#simpleUnits').isVisible(),'Quantidade simples não visível');
+assert(!(await page.locator('#feeValue').isVisible()),'Fee deveria começar recolhida');
+await selectStrategy(page,'long_put',1,false);
+await page.locator('#spotInput').fill('201.12');
+await page.locator('#simpleUnits').fill('50');
+assert(await page.locator('#lotSize').inputValue()==='50','Quantidade rápida não atualizou o multiplicador');
+assert(await page.locator('#lots').inputValue()==='1','Quantidade rápida não normalizou lotes');
+const simpleCard=page.locator('.leg-card').first();
+assert(await simpleCard.locator('[data-f="strikePct"]').isVisible(),'Strike % oculto');
+assert(await simpleCard.locator('[data-f="pricePct"]').isVisible(),'Custo % oculto');
+assert(!(await simpleCard.locator('[data-f="qty"]').isVisible()),'Razão deveria estar recolhida');
+await simpleCard.locator('[data-f="strikePct"]').fill('90');
+await simpleCard.locator('[data-f="pricePct"]').fill('1');
+assert(Number(await simpleCard.locator('[data-f="price"]').inputValue())>0,'Conversão percentual para R$ falhou');
+assert((await page.locator('#quickSummary').innerText()).includes('Você paga'),'Resumo de montagem rápida ausente');
+await page.click('#advancedUi');
+assert(await page.locator('#feeValue').isVisible(),'Configuração de fee indisponível');
+assert(await simpleCard.locator('[data-f="code"]').isVisible(),'Código da série indisponível');
+await page.click('#simpleUi');
+assert(!(await page.locator('#feeValue').isVisible()),'Modo simples não recolheu fee');
+await selectStrategy(page,'iron_condor',4,false);
+assert(await page.locator('.leg-card').count()===4,'Modo simples perdeu pernas');
+assert(await page.locator('.leg-card').nth(3).locator('[data-f="price"]').isVisible(),'Quarta perna ficou oculta');
+console.log('PASS UX simples/avançada, quantidade, conversão e quatro pernas');
+
 // 1. Book <-> Spot 100% e persistência.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
