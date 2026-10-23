@@ -805,8 +805,11 @@ function adaptiveScenarioRows(m,risk,low,high,limit=11){
  return chosen.map(a=>({movePct:a.move,spot:a.spot,tag:a.tags.join('/'),...evaluateScenario(Math.max(.0001,a.spot),m)}));
 }
 function renderTable(m,risk){
- const R=chartRange(m,risk),lo=-Math.min(99,R),ratio=num($('ivRatio').value)/100;
- const rows=adaptiveScenarioRows(m,risk,lo,R,11);
+ const R=chartRange(m,risk),lo=-Math.min(99,R);
+ const milestones=calculateReturnMilestones(m,risk).flatMap(x=>x.spots).map(x=>(x/m.S-1)*100).filter(Number.isFinite);
+ const low=Math.max(-80,Math.min(lo,...milestones.filter(v=>v<0),0)),high=Math.min(80,Math.max(R,...milestones.filter(v=>v>0),0));
+ const rows=adaptiveScenarioRows(m,risk,low,high,11);
+ $('matrixRange').textContent=isSpotPercentMode()?(fmt1(100+low)+'%–'+fmt1(100+high)+'% spot'):(fmt1(low)+'% / +'+fmt1(high)+'%');
  const firstHead=isSpotPercentMode()?'Ativo (% do spot)':'Movimento';
  let h='<thead><tr><th>'+firstHead+'</th><th>Spot (R$)</th><th>'+(m.pricingComplete?'P/L vencimento':'Payoff estrutural')+'</th><th>P/L MTM</th><th>Valor líquido opções MTM</th></tr></thead><tbody>';
  rows.forEach(row=>{const e=row.expiry??expiryPnlTotal(row.spot,m),x=row.mtm,v=row.optionValue;
