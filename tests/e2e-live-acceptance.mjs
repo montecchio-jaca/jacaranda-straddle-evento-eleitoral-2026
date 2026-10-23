@@ -44,10 +44,22 @@ async function selectStrategy(page,id,count,hasStock=false){
   });
   assert(result.legs===count,id+': model() não preservou contagem de pernas');
 }
+// A montagem simples oculta campos tecnicos. Exercite a UI avancada ao editá-los,
+// restaurando o modo simples ao fim, sem contornar eventos de usuario.
+async function withVisibleControl(page, target, action){
+  const locator=typeof target==='string'?page.locator(target):target;
+  const wasHidden=!(await locator.isVisible());
+  if(wasHidden)await page.click('#advancedUi');
+  assert(await locator.isVisible(),'Campo não ficou visível no modo avançado');
+  try{return await action(locator)}finally{if(wasHidden)await page.click('#simpleUi')}
+}
+async function fillControl(page,target,value){return withVisibleControl(page,target,loc=>loc.fill(String(value)))}
+async function selectControl(page,target,value){return withVisibleControl(page,target,loc=>loc.selectOption(value))}
+
 async function fillLeg(page,i,values){
   const card=page.locator('.leg-card').nth(i);
   if(values.strike!=null)await card.locator('[data-f="strike"]').fill(String(values.strike));
-  if(values.code!=null)await card.locator('[data-f="code"]').fill(values.code);
+  if(values.code!=null)await fillControl(page,card.locator('[data-f="code"]'),values.code);
   if(values.price!=null)await card.locator('[data-f="price"]').fill(String(values.price));
 }
 async function canvasStats(page,id){
@@ -102,7 +114,7 @@ await page.evaluate(()=>localStorage.removeItem('jacaranda.options.comparator.v1
 const todayBr=await page.evaluate(()=>todayInBrasilia());
 assert(await page.locator('#entryDate').inputValue()===todayBr,'Data-base não iniciou no dia de Brasília');
 assert((await page.locator('#expiryDate').inputValue())>todayBr,'Vencimento inicial já expirou');
-await page.locator('#entryDate').fill('2026-10-02');
+await fillControl(page,'#entryDate','2026-10-02');
 await page.click('#refreshQuote');
 assert(await page.locator('#entryDate').inputValue()==='2026-10-02','Refresh de spot alterou data-base manual');
 await page.reload({waitUntil:'domcontentloaded'});
@@ -113,7 +125,7 @@ console.log('PASS data-base Brasília + edição manual preservada no snapshot')
 // Regressão BOVA11: Put com prêmio acima do limite teórico não é validada.
 await selectStrategy(page,'long_put',1,false);
 await page.locator('#spotInput').fill('201.12');
-await page.locator('#entryDate').fill('2026-10-23');
+await fillControl(page,'#entryDate','2026-10-23');
 await page.locator('#expiryDate').fill('2027-03-19');
 await fillLeg(page,0,{strike:201,price:201,code:'PUTINVALID'});
 const putAudit=await page.evaluate(()=>{
@@ -165,10 +177,10 @@ console.log('PASS UX simples/avançada, quantidade, conversão e quatro pernas')
 // Dimensionamento em orçamento (prêmio + custos) e marcos no vencimento.
 await selectStrategy(page,'long_put',1,false);
 await page.locator('#spotInput').fill('201.12');
-await page.locator('#entryDate').fill('2026-10-23');
+await fillControl(page,'#entryDate','2026-10-23');
 await page.locator('#expiryDate').fill('2027-03-19');
-await page.locator('#feeType').selectOption('premium');
-await page.locator('#feeValue').fill('1');
+await selectControl(page,'#feeType','premium');
+await fillControl(page,'#feeValue','1');
 await page.locator('.leg-card').first().locator('[data-f="strike"]').fill('181');
 await page.locator('.leg-card').first().locator('[data-f="price"]').fill('2.01');
 await page.selectOption('#sizingMode','budget');
@@ -186,7 +198,7 @@ await page.selectOption('#sizingMode','manual');
 console.log('PASS orçamento com fees + marcos 100/200/300');
 // Regressão: datas MTM e consistência card, matriz e factsheet.
 await selectStrategy(page,'long_put',1,false);
-await page.locator('#entryDate').fill('2026-10-23');
+await fillControl(page,'#entryDate','2026-10-23');
 await page.locator('#expiryDate').fill('2027-03-30');
 await page.locator('#scenarioDate').fill('2026-10-05');
 await page.locator('#scenarioDate').dispatchEvent('input');
@@ -223,11 +235,11 @@ await page.click('#simpleUi');
 console.log('PASS MTM compartilhado, datas válidas, matriz adaptativa, grid simples');
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
-await page.selectOption('#pricingMode','book');
+await selectControl(page,'#pricingMode','book');
 assert(await page.locator('#pricingMode').inputValue()==='book','modo Book não selecionou');
-await page.selectOption('#pricingMode','spot_pct');
+await selectControl(page,'#pricingMode','spot_pct');
 assert(await page.locator('#pricingMode').inputValue()==='spot_pct','modo Spot 100 não selecionou');
-assert((await page.locator('#pricingModeNote').innerText()).includes('Spot = 100%'),'nota Spot 100 ausente');
+assert((await page.locator('#pricingModeNote').textContent()).includes('Spot = 100%'),'nota Spot 100 ausente');
 await page.reload({waitUntil:'domcontentloaded'});
 await waitReady(page);
 assert(await page.locator('#pricingMode').inputValue()==='spot_pct','preferência Spot 100 não persistiu após reload');
@@ -236,13 +248,13 @@ console.log('PASS toggle Book <-> Spot 100 + persistência');
 // 2. Conversão bidirecional strike/prêmio.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
-await page.selectOption('#pricingMode','book');
+await selectControl(page,'#pricingMode','book');
 let leg=page.locator('.leg-card').first();
 await leg.locator('[data-f="strike"]').fill('52.50');
 assert(near(await leg.locator('[data-f="strikePct"]').inputValue(),105,0.01),'Strike R$ -> % incorreto');
 await leg.locator('[data-f="price"]').fill('1.25');
 assert(near(await leg.locator('[data-f="pricePct"]').inputValue(),2.5,0.01),'Prêmio R$ -> % incorreto');
-await page.selectOption('#pricingMode','spot_pct');
+await selectControl(page,'#pricingMode','spot_pct');
 await leg.locator('[data-f="strikePct"]').fill('110');
 await leg.locator('[data-f="strikePct"]').dispatchEvent('change');
 assert(near(await leg.locator('[data-f="strike"]').inputValue(),55,0.01),'Strike % -> R$ incorreto');
@@ -253,7 +265,7 @@ console.log('PASS edição bidirecional R$ <-> %');
 
 // 3. Refresh do spot preserva série/código/prêmio.
 await leg.locator('[data-f="strike"]').fill('52');
-await leg.locator('[data-f="code"]').fill('PETRTEST');
+await fillControl(page,leg.locator('[data-f="code"]'),'PETRTEST');
 await leg.locator('[data-f="price"]').fill('1.10');
 quotePrice=51.25;
 await page.click('#refreshQuote');
@@ -276,8 +288,8 @@ console.log('PASS estruturas 1,2,3,4 pernas + estrutura com ativo');
 // 4b. Auditoria específica do Strangle 1:1 versus razão customizada 10:1.
 await selectStrategy(page,'long_strangle',2,false);
 await page.locator('#spotInput').fill('23.72');
-await page.locator('#lotSize').fill('100');
-await page.locator('#lots').fill('10');
+await fillControl(page,'#lotSize','100');
+await fillControl(page,'#lots','10');
 await fillLeg(page,0,{strike:24.50,price:0.47,code:'CALLTEST'});
 await fillLeg(page,1,{strike:23.00,price:0.12,code:'PUTTEST'});
 let strangleAudit=await page.evaluate(()=>{
@@ -297,7 +309,7 @@ assert(near(Math.abs(strangleAudit.lowSlope),Math.abs(strangleAudit.highSlope),.
 assert(!strangleAudit.ratio.custom,'Strangle 1:1 foi marcado como customizado');
 
 const callRatio=page.locator('.leg-card').nth(0).locator('[data-f="qty"]');
-await callRatio.fill('10');
+await fillControl(page,callRatio,'10');
 strangleAudit=await page.evaluate(()=>{
   updateAll();
   const m=model(),risk=analyzeRisk(m);
@@ -337,7 +349,7 @@ for(const entry of acceptance){
     const type=await c.locator('[data-f="type"]').inputValue();
     const strike=Number(await c.locator('[data-f="strike"]').inputValue());
     await c.locator('[data-f="price"]').fill(String((0.65+i*.20).toFixed(2)));
-    await c.locator('[data-f="code"]').fill(id.toUpperCase().slice(0,6)+(i+1));
+    await fillControl(page,c.locator('[data-f="code"]'),id.toUpperCase().slice(0,6)+(i+1));
     assert(strike>0,id+': strike sugerido inválido');
     assert(['buy','sell'].includes(side)&&['call','put'].includes(type),id+': perna inválida');
   }
@@ -361,7 +373,7 @@ console.log('PASS render/calculo/factsheet em Call, Put, Covered Call, Trava, Bo
 // 5. Envio ao Comparador.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
-await page.selectOption('#pricingMode','spot_pct');
+await selectControl(page,'#pricingMode','spot_pct');
 await fillLeg(page,0,{strike:52.5,price:1.25,code:'PETRTEST'});
 page.once('dialog',d=>d.dismiss());
 await page.click('#addComparator');
@@ -380,7 +392,7 @@ await page.goto(BASE+'?e2e=final-'+Date.now(),{waitUntil:'domcontentloaded',time
 await waitReady(page);
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
-await page.selectOption('#pricingMode','spot_pct');
+await selectControl(page,'#pricingMode','spot_pct');
 await fillLeg(page,0,{strike:52.5,price:1.25,code:'PETRTEST'});
 await page.locator('#moveRange').evaluate((el)=>{el.value='20';el.dispatchEvent(new Event('input',{bubbles:true}))});
 await page.waitForTimeout(100);
