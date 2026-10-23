@@ -47,7 +47,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
 .export-overlay{position:fixed;inset:0;background:rgba(11,23,34,.84);z-index:9999;display:none;align-items:center;justify-content:center;padding:16px}.export-overlay.open{display:flex}.export-dialog{width:min(1500px,98vw);max-height:96vh;background:#132436;border:1px solid rgba(186,135,88,.38);border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.42);overflow:hidden;display:flex;flex-direction:column}.export-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 15px;border-bottom:1px solid rgba(186,135,88,.28);color:#fff}.export-actions{display:flex;gap:8px;flex-wrap:wrap}.export-preview{background:#0B1722;padding:12px;overflow:auto;flex:1}#factsheetCanvas{display:block;width:100%;height:auto;background:#0B1722;box-shadow:0 8px 28px rgba(0,0,0,.4)}.export-close{background:#eef1f3;color:var(--blue);border:1px solid #dbe0e4}
 @media(max-width:1050px){.layout2{grid-template-columns:1fr}.inputs{grid-template-columns:repeat(2,1fr)}.strategy-grid{grid-template-columns:repeat(2,1fr)}.leg-grid{grid-template-columns:repeat(4,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.shell{padding:0 12px 30px}header{padding:22px 18px 24px}h1{font-size:27px}.inputs,.layout3,.strategy-summary,.rangegrid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}.leg-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}.chart-wrap{height:340px}}
-</style>
+.advanced-only{display:none!important}body.advanced-ui .advanced-only{display:block!important}body:not(.advanced-ui) .advanced-mini{display:none!important}.ux-switch{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}.ux-switch button{background:#eef1f3;color:var(--blue)}.ux-switch button.active{background:var(--blue);color:#fff}.simple-qty{max-width:300px;margin-top:12px}.simple-qty input{width:100%;padding:10px;border:1px solid #cfd6dc;border-radius:10px}.quick-summary{background:#eef5f1;border-left:4px solid var(--green);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px;line-height:1.55}body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:650px){body:not(.advanced-ui) .leg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
 </head>
 <body>
 <div class="topbar"></div>
@@ -97,29 +97,29 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
       <button id="refreshQuote">Recarregar snapshot</button>
     </div>
 
-    <div class="inputs" style="margin-top:14px">
+    <div class="ux-switch"><button type="button" id="simpleUi" class="active">Montagem simples</button><button type="button" id="advancedUi">Configurações avançadas</button><span class="note">Comece pelo strike, prêmio e quantidade.</span></div><div class="inputs" style="margin-top:14px">
       <div class="field"><label>Buscar ativo B3</label><input id="assetSearch" list="assetList" type="text" placeholder="Ticker ou nome"><datalist id="assetList"></datalist></div>
       <div class="field"><label>Ativo</label><select id="assetSelect"></select></div>
       <div class="field"><label>Estratégia</label><select id="strategySelect"></select></div>
-      <div class="field"><label>Modo de precificação</label><select id="pricingMode"><option value="book">R$ / Book</option><option value="spot_pct">% do Spot · Spot = 100%</option></select><div class="hint">Os dois formatos permanecem sincronizados.</div></div>
+      <div class="field advanced-only"><label>Modo de precificação</label><select id="pricingMode"><option value="book">R$ / Book</option><option value="spot_pct">% do Spot · Spot = 100%</option></select><div class="hint">Os dois formatos permanecem sincronizados.</div></div>
       <div class="field"><label>Spot atual (R$)</label><input id="spotInput" type="number" step="0.01"><div class="hint">Snapshot delayed e editável. No modo percentual, este valor representa 100%.</div></div>
-      <div class="field"><label>Data-base</label><input id="entryDate" type="date"><div class="hint">Inicia na data de hoje (Brasília); edite para simular operações anteriores.</div></div>
+      <div class="field advanced-only"><label>Data-base</label><input id="entryDate" type="date"><div class="hint">Inicia na data de hoje (Brasília); edite para simular operações anteriores.</div></div>
       <div class="field"><label>Vencimento</label><input id="expiryDate" type="date" value="2026-10-16"></div>
-      <div class="field"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"></div>
-      <div class="field"><label>Lote / multiplicador</label><input id="lotSize" type="number" step="1" min="1" value="100"></div>
+      <div class="field advanced-only"><label>Passo de strike (R$)</label><input id="strikeStep" type="number" step="0.01" min="0.01" value="0.50"></div>
+      <div class="field advanced-only"><label>Lote / multiplicador</label><input id="lotSize" type="number" step="1" min="1" value="100"></div>
     </div>
 
-    <div id="pricingModeNote" class="mode-note"></div>
-    <div id="strategySummary" class="strategy-summary" style="margin-top:14px"></div>
-    <div id="riskWarning" style="margin-top:12px"></div><div id="pricingStatus" style="margin-top:10px"></div>
+    <div id="pricingModeNote" class="mode-note advanced-only"></div>
+    <div class="simple-qty field"><label>Quantidade total (unidades-base)</label><input type="number" id="simpleUnits" min="1" step="1" value="100"><div class="hint">Para várias pernas, a proporção fica em configurações avançadas.</div></div><div id="strategySummary" class="strategy-summary advanced-only" style="margin-top:14px"></div>
+    <div id="quickSummary" class="quick-summary">Informe strike, prêmio e quantidade para visualizar custo e risco.</div><div id="riskWarning" style="margin-top:12px"></div><div id="pricingStatus" style="margin-top:10px"></div>
   </div>
 </section>
 
 <section class="section panel">
   <div class="panel-head">
     <div>
-      <h3>Pernas da estrutura</h3>
-      <div class="note">Cada perna mantém strike/prêmio em R$ e em % do spot. <strong>Razão</strong> define a proporção entre as pernas (ex.: Strangle padrão = 1:1); para aumentar o tamanho da operação, mantenha a razão e use <strong>Número de lotes</strong>. Para compra use Ask; para venda, Bid.</div>
+      <h3>Montagem da operação</h3>
+      <div class="note advanced-only">Cada perna mantém strike/prêmio em R$ e em % do spot. <strong>Razão</strong> define a proporção entre as pernas (ex.: Strangle padrão = 1:1); para aumentar o tamanho da operação, mantenha a razão e use <strong>Número de lotes</strong>. Para compra use Ask; para venda, Bid.</div>
     </div>
     <div class="inline-actions" style="margin-top:0">
       <button id="suggestStrikes">Sugerir strikes</button>
@@ -137,8 +137,8 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
 
 <section class="section layout2">
   <div class="panel">
-    <div class="panel-head"><h3>Quantidade, fee e modelo</h3><span class="pill">CONFIGURAÇÃO</span></div>
-    <div class="panel-body">
+    <div class="panel-head advanced-only"><h3>Quantidade, fee e modelo</h3><span class="pill">CONFIGURAÇÃO</span></div>
+    <div class="panel-body advanced-only">
       <div class="inputs">
         <div class="field"><label>Número de lotes</label><input id="lots" type="number" step="1" min="1" value="1"></div>
         <div class="field"><label>Fee</label><select id="feeType">
@@ -171,7 +171,7 @@ button{border:0;border-radius:10px;padding:10px 13px;font-weight:700;font-size:1
         <div class="kpi accent"><div class="label">Perda máxima</div><div id="maxLoss" class="value">—</div><div class="sub">no vencimento</div></div>
         <div class="kpi"><div class="label" id="maxGainLabel">Ganho máximo</div><div id="maxGain" class="value">—</div><div class="sub">no vencimento</div></div>
         <div class="kpi"><div class="label">Break-even(s)</div><div id="breakevens" class="value">—</div><div id="breakevensSub" class="sub">preço do ativo</div></div>
-        <div class="kpi"><div class="label">IV por perna</div><div id="ivSummary" class="value">—</div><div class="sub">BSM a partir do prêmio informado</div></div>
+        <div class="kpi"><div class="label">IV por perna</div><div id="ivSummary" class="value">—</div><div class="sub">IV calculada pelo modelo; não é cotação de mercado</div></div>
       </div>
     </div>
   </div>
@@ -385,15 +385,15 @@ function renderLegs(){
     return '<div class="leg-card '+l.side+'" data-leg="'+i+'">'+
       '<div class="leg-head"><div class="leg-title">Perna '+(i+1)+' · '+(l.side==='buy'?'COMPRA':'VENDA')+' '+l.type.toUpperCase()+'</div><span class="pill '+(l.side==='buy'?'green':'red')+'">'+(l.side==='buy'?'long':'short')+'</span></div>'+
       '<div class="leg-grid">'+
-      '<div class="mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
-      '<div class="mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
-      '<div class="mini"><label>Razão</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'" title="Proporção desta perna. Para escalar a operação, use Número de lotes."></div>'+
+      '<div class="mini advanced-mini"><label>Operação</label><select data-f="side"><option value="buy" '+(l.side==='buy'?'selected':'')+'>Compra</option><option value="sell" '+(l.side==='sell'?'selected':'')+'>Venda</option></select></div>'+
+      '<div class="mini advanced-mini"><label>Tipo</label><select data-f="type"><option value="call" '+(l.type==='call'?'selected':'')+'>Call</option><option value="put" '+(l.type==='put'?'selected':'')+'>Put</option></select></div>'+
+      '<div class="mini advanced-mini"><label>Razão</label><input data-f="qty" type="number" min="1" step="1" value="'+l.qty+'" title="Proporção desta perna. Para escalar a operação, use Número de lotes."></div>'+
       '<div class="mini"><label>Strike % Spot</label><input data-f="strikePct" type="number" min="0" step="0.01" value="'+Number(strikePct||0).toFixed(2)+'"></div>'+
       '<div class="mini"><label>Strike (R$)</label><input data-f="strike" type="number" min="0" step="0.01" value="'+Number(l.strike||0).toFixed(2)+'"></div>'+
-      '<div class="mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
-      '<div class="mini"><label>Prêmio % Spot</label><input data-f="pricePct" type="number" min="0" step="0.01" value="'+(num(l.price)>0?Number(pricePct).toFixed(2):'')+'" placeholder="0,00"></div>'+
+      '<div class="mini advanced-mini"><label>Código</label><input data-f="code" type="text" value="'+(l.code||'')+'" placeholder="Opcional"></div>'+
+      '<div class="mini"><label>'+(l.side==='buy'?'Custo da opção (% spot)':'Prêmio recebido (% spot)')+'</label><input data-f="pricePct" type="number" min="0" step="0.01" value="'+(num(l.price)>0?Number(pricePct).toFixed(2):'')+'" placeholder="0,00"></div>'+
       '<div class="mini"><label>'+priceLabel+' (R$)</label><input data-f="price" type="number" min="0" step="0.01" value="'+(l.price||'')+'" placeholder="0,00"></div>'+
-      '<div class="mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
+      '<div class="mini advanced-mini"><label>IV modelo</label><div class="ivbox" id="legIv'+i+'">—</div></div>'+
       '</div></div>';
   }).join('');
 
@@ -665,6 +665,8 @@ function addToComparator(){
 function updateAll(){
   applyPricingModeUI();
   const m=model(),risk=analyzeRisk(m);
+  const quick=$('quickSummary');
+  if(quick){const legs=state.legs.map(l=>(l.side==='buy'?'Compra ':'Venda ')+l.type.toUpperCase()+' strike '+brl(l.strike)).join(' + ');quick.textContent=m.pricingComplete?legs+'. '+(m.optionCashflowTotal<0?'Você paga ':'Você recebe ')+brl(Math.abs(m.optionCashflowTotal))+' em prêmios para '+fmt0(m.units)+' unidades-base. '+(risk.maxLoss===-Infinity?'Risco de perda ilimitada.':'Perda máxima estimada: '+brl(Math.abs(Math.min(0,risk.maxLoss)))+'.'):legs+'. Informe o prêmio negociável de cada opção para calcular custo e risco. IV modelo não é IV observada no mercado.';}
   const debitCredit=m.optionCashflowTotal>=0?'Crédito':'Débito';
   if(m.pricingComplete){
     $('initialFlow').textContent=(m.optionCashflowTotal>=0?'+':'-')+brl(Math.abs(m.optionCashflowTotal));
@@ -1051,6 +1053,11 @@ $('addComparator').onclick=addToComparator;
 $('generateJpg').onclick=openFactsheet;$('downloadJpg').onclick=downloadFactsheet;$('closeExport').onclick=closeFactsheet;$('exportOverlay').addEventListener('click',e=>{if(e.target===$('exportOverlay'))closeFactsheet()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFactsheet()});
 ['spotInput','entryDate','expiryDate','strikeStep','lotSize','lots','feeType','feeValue','entryFixedCost','exitFixedCost','rateInput','divInput','ivFallback','rangeMode','scenarioDate'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='spotInput'||id==='strikeStep'){renderStockLeg();renderLegs()}updateAll()}));
+function setUiMode(advanced){document.body.classList.toggle('advanced-ui',advanced);$('simpleUi').classList.toggle('active',!advanced);$('advancedUi').classList.toggle('active',advanced)}
+$('simpleUi').onclick=()=>setUiMode(false);
+$('advancedUi').onclick=()=>setUiMode(true);
+$('simpleUnits').addEventListener('input',()=>{const value=Math.max(1,Math.floor(num($('simpleUnits').value)||1));$('lotSize').value=value;$('lots').value=1;updateAll()});
+['lotSize','lots'].forEach(id=>$(id).addEventListener('input',()=>{$('simpleUnits').value=Math.max(1,num($('lotSize').value))*Math.max(1,num($('lots').value))}));
 $('pricingMode').addEventListener('change',()=>{localStorage.setItem('jacaranda.options.pricingMode',$('pricingMode').value);applyPricingModeUI();renderLegs();updateAll()});
 $('moveRange').addEventListener('input',()=>updateScenario(model()));
 $('ivRatio').addEventListener('input',updateAll);
@@ -1086,6 +1093,8 @@ async function init(){
   applyQuote(true);
   selectStrategy(state.strategyId);
   applyPricingModeUI();
+  setUiMode(false);
+  $('simpleUnits').value=Math.max(1,num($('lotSize').value))*Math.max(1,num($('lots').value));
   updateComparatorButton();
   if(isAppleMobile())$('downloadJpg').textContent='Salvar / Compartilhar JPG';
 }
