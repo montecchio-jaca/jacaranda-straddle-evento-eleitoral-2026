@@ -54,7 +54,7 @@ A página **Estratégias** oferece dois modos sincronizados:
 - editar o prêmio percentual converte para R$;
 - alterar o spot não desloca automaticamente uma série já escolhida: o strike real permanece canônico e o percentual é recalculado.
 
-O resumo econômico mostra também o prêmio líquido e bruto em % do spot. No modo percentual, gráficos, matriz de cenários e factsheet usam o eixo normalizado com **Spot = 100%**, mantendo os valores em R$ em paralelo.
+O resumo econômico mostra também o prêmio líquido e bruto em % do spot. No modo percentual, gráficos e matriz de cenários usam o eixo normalizado com **Spot = 100%**. O factsheet para cliente permanece nominal em R$.
 
 ## Modo de apresentação ao cliente
 
@@ -122,12 +122,12 @@ Calendar e Diagonal permanecem em backlog porque exigem múltiplos vencimentos p
 
 ## Universo e market data
 
-- `data/universe-b3.json`: universo diário de ações/units B3.
+- `data/universe-b3.json`: universo diário de ações, units, ETFs e FIIs B3, com tipo/subtipo explícito da brapi.dev. Um ticker terminado em 11 não é classificado automaticamente como FII.
 - `data/quotes.json`: snapshot indicativo de spot.
 - `.github/workflows/update-universe.yml`: atualiza o universo.
 - `.github/workflows/update-quotes.yml`: atualiza cotações delayed server-side.
 
-Yahoo Finance é a fonte primária do spot e o snapshot do universo atua como fallback.
+Yahoo Finance (`TICKER.SA`) é a fonte primária do spot e o snapshot do universo atua como fallback. O ticker BOVA11 também está garantido como entrada de referência na lista, sem inventar preço quando o mercado estiver indisponível. **A presença de ETF/FII no seletor não implica existência, liquidez ou disponibilidade de séries de opções**. Prêmios, estilo e código de opções devem ser confirmados manualmente no book.
 
 ## Estudos arquivados
 
