@@ -32,17 +32,32 @@
     return type==='call'?Math.max(S-K,0):Math.max(K-S,0);
   }
 
+  function optionPriceBounds(type,S,K,T,r,q){
+    const discS=S*Math.exp(-q*T),discK=K*Math.exp(-r*T);
+    return {lower:type==='call'?Math.max(0,discS-discK):Math.max(0,discK-discS),
+      upper:type==='call'?discS:discK};
+  }
+  function validateLegPrice(type,S,K,T,price,r,q){
+    if(!(S>0&&K>0&&T>0&&price>0))return {valid:false,reason:'Informe spot, strike, prazo e prêmio positivos.'};
+    const {lower,upper}=optionPriceBounds(type,S,K,T,r,q),tol=Math.max(.0001,upper*1e-7);
+    if(price>upper+tol)return {valid:false,reason:'Prêmio acima do limite teórico (R$ '+upper.toFixed(2)+') para opção europeia.'};
+    if(price<lower-tol)return {valid:false,reason:'Prêmio abaixo do limite teórico (R$ '+lower.toFixed(2)+') para opção europeia.'};
+    // No vencimento, puts compradas não podem ser lucrativas quando prêmio+custos >= K.
+    return {valid:true,lower,upper};
+  }
   function impliedVolLeg(type,S,K,T,price,r,q){
     S=n(S);K=n(K);T=n(T);price=n(price);r=n(r);q=n(q);
-    if(!(price>0&&S>0&&K>0&&T>0))return 0;
-    const intr=intrinsic(type,S,K);
-    if(price<intr-1e-8)return 0;
+    const validation=validateLegPrice(type,S,K,T,price,r,q);
+    if(!validation.valid)return 0;
     let lo=.0001,hi=5;
+    const minV=bsm(type,S,K,T,r,q,lo),maxV=bsm(type,S,K,T,r,q,hi);
+    if(price<minV-1e-5||price>maxV+1e-5)return 0;
     for(let i=0;i<90;i++){
       const mid=(lo+hi)/2,v=bsm(type,S,K,T,r,q,mid);
       if(v>price)hi=mid;else lo=mid;
     }
-    return (lo+hi)/2;
+    const iv=(lo+hi)/2;
+    return iv>0&&iv<5-1e-5?iv:0;
   }
 
   function normalizeStrategy(raw){
@@ -195,7 +210,7 @@ function presentationRange(raw){
   }
 
   global.OptionEngine={
-    sideSign,years,normCDF,bsm,intrinsic,impliedVolLeg,normalizeStrategy,
+    sideSign,years,normCDF,bsm,intrinsic,optionPriceBounds,validateLegPrice,impliedVolLeg,normalizeStrategy,
     expiryPnlPerUnit,expiryPnlTotal,highSlope,analyzeRisk,calibrateLegIVs,
     scenarioOptionNetValuePerUnit,mtmPnlTotal,autoRange,presentationRange
   };
