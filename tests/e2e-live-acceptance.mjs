@@ -98,6 +98,18 @@ await page.goto(BASE+'?e2e='+Date.now(),{waitUntil:'domcontentloaded',timeout:45
 await waitReady(page);
 await page.evaluate(()=>localStorage.removeItem('jacaranda.options.comparator.v1'));
 
+// Data-base padrão: hoje em Brasília; alteração manual não pode ser sobrescrita pelo snapshot.
+const todayBr=await page.evaluate(()=>todayInBrasilia());
+assert(await page.locator('#entryDate').inputValue()===todayBr,'Data-base não iniciou no dia de Brasília');
+assert((await page.locator('#expiryDate').inputValue())>todayBr,'Vencimento inicial já expirou');
+await page.locator('#entryDate').fill('2026-10-02');
+await page.click('#refreshQuote');
+assert(await page.locator('#entryDate').inputValue()==='2026-10-02','Refresh de spot alterou data-base manual');
+await page.reload({waitUntil:'domcontentloaded'});
+await waitReady(page);
+assert(await page.locator('#entryDate').inputValue()===todayBr,'Novo carregamento não restaurou data-base de hoje');
+console.log('PASS data-base Brasília + edição manual preservada no snapshot');
+
 // 1. Book <-> Spot 100% e persistência.
 await selectStrategy(page,'long_call',1,false);
 await page.locator('#spotInput').fill('50');
