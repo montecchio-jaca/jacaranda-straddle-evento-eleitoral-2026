@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-30T22:11:59.449992Z",
+  "generated_at_utc": "2026-11-02T21:39:20.592083Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
-  "universe_count": 941,
+  "universe_count": 943,
   "quotes": {
     "AALR3": {
       "symbol": "AALR3",
@@ -443,6 +443,17 @@
       "previous_close": 95.95,
       "market_state": null
     },
+    "APXU11": {
+      "symbol": "APXU11",
+      "name": "APEX URB FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "APXU11.SA",
+      "price": 99.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-30T18:40:17Z",
+      "previous_close": 99.0,
+      "market_state": null
+    },
     "AREA11": {
       "symbol": "AREA11",
       "name": "BTG PACTUAL TEVA AUVP RENDA AUTOMÁTICA ITBR IPCA RENDIMENTO FUNDO DE ÍNDICE",
@@ -583,7 +594,7 @@
       "price": 100.0,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T19:53:26Z",
-      "previous_close": null,
+      "previous_close": 0.0,
       "market_state": null
     },
     "AUPO11": {
@@ -1595,7 +1606,7 @@
       "price": 101.52,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:15:00Z",
-      "previous_close": 105.149,
+      "previous_close": 105.16,
       "market_state": null
     },
     "BRIP11": {
@@ -2546,7 +2557,7 @@
     },
     "CTAX3": {
       "symbol": "CTAX3",
-      "name": "CTAX3",
+      "name": "CONTAX PARTICIPAÇÕES S.A",
       "provider": "Yahoo Finance",
       "provider_symbol": "CTAX3.SA",
       "price": 0.86,
@@ -3145,7 +3156,7 @@
       "provider_symbol": "EGIE3.SA",
       "price": 26.26,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T20:05:49Z",
+      "market_time_utc": "2026-10-30T20:05:48Z",
       "previous_close": 30.79,
       "market_state": null
     },
@@ -3189,7 +3200,7 @@
       "provider_symbol": "EMAE4",
       "price": 41.99,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T17:00:22.100506Z",
+      "market_time_utc": "2026-11-02T20:45:48.814123Z",
       "previous_close": null,
       "market_state": null
     },
@@ -3547,7 +3558,7 @@
     },
     "FASA3": {
       "symbol": "FASA3",
-      "name": "FASA3",
+      "name": "FASA S.A.",
       "provider": "Yahoo Finance",
       "provider_symbol": "FASA3.SA",
       "price": 0.29,
@@ -5301,7 +5312,7 @@
       "provider_symbol": "ITUB4",
       "price": 38.69,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T21:34:26Z",
+      "market_time_utc": "2026-11-02T21:31:30Z",
       "previous_close": 39.54,
       "market_state": null
     },
@@ -5852,7 +5863,7 @@
       "price": 100.27,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:15:00Z",
-      "previous_close": 100.78,
+      "previous_close": 100.2,
       "market_state": null
     },
     "LLFT11": {
@@ -5962,7 +5973,7 @@
       "price": 100.68,
       "currency": "BRL",
       "market_time_utc": "2026-10-21T13:41:40Z",
-      "previous_close": 100.733,
+      "previous_close": 100.673,
       "market_state": null
     },
     "LTNB11": {
@@ -6247,7 +6258,7 @@
       "provider_symbol": "MGLU3",
       "price": 5.35,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T21:34:26Z",
+      "market_time_utc": "2026-11-02T21:31:30Z",
       "previous_close": 5.13,
       "market_state": null
     },
@@ -6424,7 +6435,7 @@
       "price": 102.73,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:15:00Z",
-      "previous_close": 102.7,
+      "previous_close": 102.42,
       "market_state": null
     },
     "MWET4": {
@@ -6729,9 +6740,9 @@
       "name": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.",
       "provider": "brapi.dev · universo",
       "provider_symbol": "ONCO11",
-      "price": 0.12,
+      "price": 0.13,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T17:00:22.100506Z",
+      "market_time_utc": "2026-11-02T20:45:48.814123Z",
       "previous_close": null,
       "market_state": null
     },
@@ -7028,7 +7039,7 @@
       "provider_symbol": "PETR4",
       "price": 52.71,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T21:34:26Z",
+      "market_time_utc": "2026-11-02T21:31:30Z",
       "previous_close": 52.2,
       "market_state": null
     },
@@ -8481,7 +8492,7 @@
       "price": 0.04,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:09:45Z",
-      "previous_close": 0.06,
+      "previous_close": 9.0,
       "market_state": null
     },
     "SEQR11": {
@@ -8755,7 +8766,7 @@
       "provider_symbol": "SOND5.SA",
       "price": 76.0,
       "currency": "BRL",
-      "market_time_utc": "2026-10-26T19:07:22Z",
+      "market_time_utc": "2026-10-26T19:07:21Z",
       "previous_close": 82.0,
       "market_state": null
     },
@@ -9020,7 +9031,7 @@
       "price": 0.57,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:00:00Z",
-      "previous_close": 0.85,
+      "previous_close": 8.5,
       "market_state": null
     },
     "TECK11": {
@@ -9537,7 +9548,7 @@
       "price": 46.1,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:15:00Z",
-      "previous_close": 46.54,
+      "previous_close": 58.89,
       "market_state": null
     },
     "UTLL11": {
@@ -9558,7 +9569,7 @@
       "provider_symbol": "VALE3",
       "price": 62.02,
       "currency": "BRL",
-      "market_time_utc": "2026-10-30T21:34:26Z",
+      "market_time_utc": "2026-11-02T21:31:30Z",
       "previous_close": 60.05,
       "market_state": null
     },
@@ -9692,6 +9703,17 @@
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:03:00Z",
       "previous_close": 103.02,
+      "market_state": null
+    },
+    "VIML11": {
+      "symbol": "VIML11",
+      "name": "VINCI MALLS II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+      "provider": "Yahoo Finance",
+      "provider_symbol": "VIML11.SA",
+      "price": 48.0,
+      "currency": "BRL",
+      "market_time_utc": "2026-10-30T18:00:00Z",
+      "previous_close": 48.9,
       "market_state": null
     },
     "VINO11": {
@@ -9861,7 +9883,7 @@
     },
     "VTOT11": {
       "symbol": "VTOT11",
-      "name": "VTOT11",
+      "name": "VINCI IMOBILIÁRIO TOTAL RETURN FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
       "provider": "Yahoo Finance",
       "provider_symbol": "VTOT11.SA",
       "price": 60.0,
@@ -10164,7 +10186,7 @@
       "price": 43.33,
       "currency": "BRL",
       "market_time_utc": "2026-10-30T20:16:00Z",
-      "previous_close": 45.0,
+      "previous_close": 34.97,
       "market_state": null
     },
     "XETH11": {
