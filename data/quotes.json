@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-20T01:51:27.460383Z",
+  "generated_at_utc": "2026-11-20T19:56:34.665428Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 969,
   "quotes": {
@@ -3233,7 +3233,7 @@
       "provider_symbol": "EMAE4",
       "price": 41.99,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T19:28:35.218390Z",
+      "market_time_utc": "2026-11-20T19:05:37.731062Z",
       "previous_close": null,
       "market_state": null
     },
@@ -5389,7 +5389,7 @@
       "provider_symbol": "ITUB4",
       "price": 40.07,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T21:30:30Z",
+      "market_time_utc": "2026-11-20T19:55:30Z",
       "previous_close": 40.19,
       "market_state": null
     },
@@ -6368,7 +6368,7 @@
       "provider_symbol": "MGLU3",
       "price": 8.2,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T21:30:30Z",
+      "market_time_utc": "2026-11-20T19:55:30Z",
       "previous_close": 8.32,
       "market_state": null
     },
@@ -6874,7 +6874,7 @@
       "provider_symbol": "ONCO11",
       "price": 0.12,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T19:28:35.218390Z",
+      "market_time_utc": "2026-11-20T19:05:37.731062Z",
       "previous_close": null,
       "market_state": null
     },
@@ -7182,7 +7182,7 @@
       "provider_symbol": "PETR4",
       "price": 42.67,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T21:30:30Z",
+      "market_time_utc": "2026-11-20T19:55:30Z",
       "previous_close": 43.17,
       "market_state": null
     },
@@ -7996,7 +7996,7 @@
       "provider_symbol": "RBRR11",
       "price": 63.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T19:28:35.218390Z",
+      "market_time_utc": "2026-11-20T19:05:37.731062Z",
       "previous_close": null,
       "market_state": null
     },
@@ -8381,7 +8381,7 @@
       "provider_symbol": "RPRI11",
       "price": 68.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T19:28:35.218390Z",
+      "market_time_utc": "2026-11-20T19:05:37.731062Z",
       "previous_close": null,
       "market_state": null
     },
@@ -9833,7 +9833,7 @@
       "provider_symbol": "VALE3",
       "price": 58.48,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T21:30:30Z",
+      "market_time_utc": "2026-11-20T19:55:30Z",
       "previous_close": 59,
       "market_state": null
     },
@@ -9866,7 +9866,7 @@
       "provider_symbol": "VCJR11",
       "price": 63.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-19T19:28:35.218390Z",
+      "market_time_utc": "2026-11-20T19:05:37.731062Z",
       "previous_close": null,
       "market_state": null
     },
