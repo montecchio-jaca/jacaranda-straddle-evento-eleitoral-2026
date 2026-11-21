@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-20T19:56:34.665428Z",
+  "generated_at_utc": "2026-11-21T01:19:22.637644Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 969,
   "quotes": {
@@ -3608,7 +3608,7 @@
       "price": 0.22,
       "currency": "BRL",
       "market_time_utc": "2026-11-19T20:51:42Z",
-      "previous_close": 0.25,
+      "previous_close": 9.25,
       "market_state": null
     },
     "FATN11": {
@@ -5389,7 +5389,7 @@
       "provider_symbol": "ITUB4",
       "price": 40.07,
       "currency": "BRL",
-      "market_time_utc": "2026-11-20T19:55:30Z",
+      "market_time_utc": "2026-11-20T21:30:30Z",
       "previous_close": 40.19,
       "market_state": null
     },
@@ -6368,7 +6368,7 @@
       "provider_symbol": "MGLU3",
       "price": 8.2,
       "currency": "BRL",
-      "market_time_utc": "2026-11-20T19:55:30Z",
+      "market_time_utc": "2026-11-20T21:30:30Z",
       "previous_close": 8.32,
       "market_state": null
     },
@@ -7182,7 +7182,7 @@
       "provider_symbol": "PETR4",
       "price": 42.67,
       "currency": "BRL",
-      "market_time_utc": "2026-11-20T19:55:30Z",
+      "market_time_utc": "2026-11-20T21:30:30Z",
       "previous_close": 43.17,
       "market_state": null
     },
@@ -7898,7 +7898,7 @@
       "price": 74.7,
       "currency": "BRL",
       "market_time_utc": "2026-11-19T20:50:43Z",
-      "previous_close": 75.0,
+      "previous_close": 77.05,
       "market_state": null
     },
     "RBIR11": {
@@ -9833,7 +9833,7 @@
       "provider_symbol": "VALE3",
       "price": 58.48,
       "currency": "BRL",
-      "market_time_utc": "2026-11-20T19:55:30Z",
+      "market_time_utc": "2026-11-20T21:30:30Z",
       "previous_close": 59,
       "market_state": null
     },
