@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-25T21:33:24.643439Z",
+  "generated_at_utc": "2026-11-26T03:43:32.206304Z",
   "source_note": "Snapshot indicativo. Yahoo Finance é a fonte primária server-side; o snapshot diário do universo é fallback.",
   "universe_count": 972,
   "quotes": {
@@ -175,7 +175,7 @@
       "provider_symbol": "AHEB3.SA",
       "price": 23.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:39Z",
+      "market_time_utc": "2026-11-26T01:31:30Z",
       "previous_close": 23.0,
       "market_state": null
     },
@@ -1163,9 +1163,9 @@
       "name": "BITCOIN HASH",
       "provider": "Yahoo Finance",
       "provider_symbol": "BITH11.SA",
-      "price": 78.78,
+      "price": 79.5,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T20:54:56Z",
+      "market_time_utc": "2026-11-25T21:18:49Z",
       "previous_close": 83.48,
       "market_state": null
     },
@@ -1416,9 +1416,9 @@
       "name": "ISHARES BOVA",
       "provider": "Yahoo Finance",
       "provider_symbol": "BOVA11.SA",
-      "price": 164.31,
+      "price": 164.01,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T20:54:59Z",
+      "market_time_utc": "2026-11-25T21:18:53Z",
       "previous_close": 167.42,
       "market_state": null
     },
@@ -1449,9 +1449,9 @@
       "name": "IT NOW IBOV",
       "provider": "Yahoo Finance",
       "provider_symbol": "BOVV11.SA",
-      "price": 172.3,
+      "price": 172.37,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T20:53:30Z",
+      "market_time_utc": "2026-11-25T21:18:56Z",
       "previous_close": 175.46,
       "market_state": null
     },
@@ -1847,7 +1847,7 @@
       "provider_symbol": "BTSI11.SA",
       "price": 109.15,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:44Z",
+      "market_time_utc": "2026-11-26T01:31:35Z",
       "previous_close": 109.15,
       "market_state": null
     },
@@ -2122,7 +2122,7 @@
       "provider_symbol": "CEDO3.SA",
       "price": 7.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:45Z",
+      "market_time_utc": "2026-11-26T01:31:36Z",
       "previous_close": 7.0,
       "market_state": null
     },
@@ -2606,7 +2606,7 @@
       "provider_symbol": "CTKA3.SA",
       "price": 34.16,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:46Z",
+      "market_time_utc": "2026-11-26T01:31:37Z",
       "previous_close": 34.16,
       "market_state": null
     },
@@ -2958,7 +2958,7 @@
       "provider_symbol": "DOHL3.SA",
       "price": 6.46,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:47Z",
+      "market_time_utc": "2026-11-26T01:31:39Z",
       "previous_close": 6.46,
       "market_state": null
     },
@@ -3728,7 +3728,7 @@
       "provider_symbol": "FIGE3.SA",
       "price": 32.94,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:50Z",
+      "market_time_utc": "2026-11-26T01:31:41Z",
       "previous_close": 32.94,
       "market_state": null
     },
@@ -4377,7 +4377,7 @@
       "provider_symbol": "GPAR3.SA",
       "price": 19.96,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:51Z",
+      "market_time_utc": "2026-11-26T01:31:42Z",
       "previous_close": 19.96,
       "market_state": null
     },
@@ -4432,7 +4432,7 @@
       "provider_symbol": "GRAV11.SA",
       "price": 38.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:51Z",
+      "market_time_utc": "2026-11-26T01:31:42Z",
       "previous_close": 38.0,
       "market_state": null
     },
@@ -4696,7 +4696,7 @@
       "provider_symbol": "HDOF11.SA",
       "price": 75.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:52Z",
+      "market_time_utc": "2026-11-26T01:31:43Z",
       "previous_close": 75.0,
       "market_state": null
     },
@@ -4850,7 +4850,7 @@
       "provider_symbol": "HJCT11.SA",
       "price": 130.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:52Z",
+      "market_time_utc": "2026-11-26T01:31:43Z",
       "previous_close": 130.0,
       "market_state": null
     },
@@ -5323,7 +5323,7 @@
       "provider_symbol": "ISAE3.SA",
       "price": 35.63,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:03:00Z",
+      "market_time_utc": "2026-11-25T23:46:05Z",
       "previous_close": 35.8,
       "market_state": null
     },
@@ -5334,7 +5334,7 @@
       "provider_symbol": "ISAE4.SA",
       "price": 26.16,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:05:50Z",
+      "market_time_utc": "2026-11-25T23:45:53Z",
       "previous_close": 26.41,
       "market_state": null
     },
@@ -5411,7 +5411,7 @@
       "provider_symbol": "ITUB4",
       "price": 40.01,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:30:30Z",
+      "market_time_utc": "2026-11-26T03:11:17Z",
       "previous_close": 39.74,
       "market_state": null
     },
@@ -5554,7 +5554,7 @@
       "provider_symbol": "JOPA4.SA",
       "price": 18.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:54Z",
+      "market_time_utc": "2026-11-26T01:31:45Z",
       "previous_close": 18.0,
       "market_state": null
     },
@@ -6390,7 +6390,7 @@
       "provider_symbol": "MGLU3",
       "price": 9.29,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:30:30Z",
+      "market_time_utc": "2026-11-26T03:11:17Z",
       "previous_close": 8.75,
       "market_state": null
     },
@@ -6456,7 +6456,7 @@
       "provider_symbol": "MMVE11.SA",
       "price": 70.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:31:57Z",
+      "market_time_utc": "2026-11-26T01:31:48Z",
       "previous_close": 70.0,
       "market_state": null
     },
@@ -7215,7 +7215,7 @@
       "provider_symbol": "PETR4",
       "price": 41.36,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:30:30Z",
+      "market_time_utc": "2026-11-26T03:11:17Z",
       "previous_close": 40.55,
       "market_state": null
     },
@@ -7380,7 +7380,7 @@
       "provider_symbol": "PLTB11.SA",
       "price": 1.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:32:00Z",
+      "market_time_utc": "2026-11-26T01:31:51Z",
       "previous_close": 0.992,
       "market_state": null
     },
@@ -7931,7 +7931,7 @@
       "price": 73.25,
       "currency": "BRL",
       "market_time_utc": "2026-11-25T20:50:53Z",
-      "previous_close": 73.07,
+      "previous_close": 75.5,
       "market_state": null
     },
     "RBIR11": {
@@ -7952,7 +7952,7 @@
       "provider_symbol": "RBLG11.SA",
       "price": 16.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:32:01Z",
+      "market_time_utc": "2026-11-26T01:31:52Z",
       "previous_close": 16.0,
       "market_state": null
     },
@@ -8546,7 +8546,7 @@
       "provider_symbol": "RZZI11.SA",
       "price": 1300.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:32:02Z",
+      "market_time_utc": "2026-11-26T01:31:53Z",
       "previous_close": 1300.0,
       "market_state": null
     },
@@ -8896,9 +8896,9 @@
       "name": "ISHARES SMAL",
       "provider": "Yahoo Finance",
       "provider_symbol": "SMAL11.SA",
-      "price": 100.85,
+      "price": 100.55,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T20:54:56Z",
+      "market_time_utc": "2026-11-25T21:18:50Z",
       "previous_close": 98.94,
       "market_state": null
     },
@@ -9052,7 +9052,7 @@
       "provider_symbol": "SPMO11.SA",
       "price": 120.0,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:32:04Z",
+      "market_time_utc": "2026-11-26T01:31:55Z",
       "previous_close": 120.0,
       "market_state": null
     },
@@ -9866,7 +9866,7 @@
       "provider_symbol": "VALE3",
       "price": 56.9,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T21:30:30Z",
+      "market_time_utc": "2026-11-26T03:11:17Z",
       "previous_close": 55.19,
       "market_state": null
     },
@@ -9943,7 +9943,7 @@
       "provider_symbol": "VGII11.SA",
       "price": 64.06,
       "currency": "BRL",
-      "market_time_utc": "2026-11-25T01:32:09Z",
+      "market_time_utc": "2026-11-26T01:32:00Z",
       "previous_close": 64.06,
       "market_state": null
     },
